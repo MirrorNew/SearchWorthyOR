@@ -1,0 +1,320 @@
+{
+  "base": {
+    "checks": {
+      "all_optimal": true,
+      "integrality_pass": true,
+      "objectives_agree": true,
+      "passed": true,
+      "residuals_pass": true,
+      "solver_actions_in_exact_set": true
+    },
+    "copt": {
+      "assignment": {
+        "x_0": 1.0,
+        "x_1": 1.0,
+        "x_2": 1.0,
+        "x_3": 0.0,
+        "x_4": 0.0,
+        "x_5": 0.0
+      },
+      "bound_violation": 0.0,
+      "constraint_residuals": {
+        "cover_service_zone_1": {
+          "lhs": 2.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "cover_service_zone_2": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "open_exactly_three_facilities": {
+          "lhs": 3.0,
+          "rhs": 3.0,
+          "sense": "==",
+          "violation": 0.0
+        },
+        "variant_core_service_floor": {
+          "lhs": 3.0,
+          "rhs": 2.0,
+          "sense": ">=",
+          "violation": 0.0
+        }
+      },
+      "integrality_violation": 0.0,
+      "max_constraint_violation": 0.0,
+      "objective": 2869.0,
+      "objective_recomputed": 2869.0,
+      "projected_action": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "solver": "copt",
+      "status": "OPTIMAL",
+      "version": "8.0.5"
+    },
+    "exact_enumeration": {
+      "complete": true,
+      "feasible_assignment_count": 9,
+      "objective": 2869.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "status": "OPTIMAL"
+    },
+    "gurobi": {
+      "assignment": {
+        "x_0": 1.0,
+        "x_1": 1.0,
+        "x_2": 1.0,
+        "x_3": 0.0,
+        "x_4": 0.0,
+        "x_5": 0.0
+      },
+      "bound_violation": 0.0,
+      "constraint_residuals": {
+        "cover_service_zone_1": {
+          "lhs": 2.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "cover_service_zone_2": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "open_exactly_three_facilities": {
+          "lhs": 3.0,
+          "rhs": 3.0,
+          "sense": "==",
+          "violation": 0.0
+        },
+        "variant_core_service_floor": {
+          "lhs": 3.0,
+          "rhs": 2.0,
+          "sense": ">=",
+          "violation": 0.0
+        }
+      },
+      "integrality_violation": 0.0,
+      "max_constraint_violation": 0.0,
+      "objective": 2869.0,
+      "objective_recomputed": 2869.0,
+      "projected_action": [
+        1,
+        1,
+        1,
+        0,
+        0,
+        0
+      ],
+      "solver": "gurobi",
+      "status": "OPTIMAL",
+      "version": "12.0.2"
+    }
+  },
+  "base_acceptable_actions": [
+    [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ]
+  ],
+  "certificate_method": "complete_binary_enumeration",
+  "complete_action_sets": true,
+  "epsilon": 1e-06,
+  "intersection": [],
+  "intersection_empty": true,
+  "passed": true,
+  "patched": {
+    "checks": {
+      "all_optimal": true,
+      "integrality_pass": true,
+      "objectives_agree": true,
+      "passed": true,
+      "residuals_pass": true,
+      "solver_actions_in_exact_set": true
+    },
+    "copt": {
+      "assignment": {
+        "x_0": 1.0,
+        "x_1": 0.0,
+        "x_2": 1.0,
+        "x_3": 1.0,
+        "x_4": 0.0,
+        "x_5": 0.0
+      },
+      "bound_violation": 0.0,
+      "constraint_residuals": {
+        "cover_service_zone_1": {
+          "lhs": 2.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "cover_service_zone_2": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "evidence_nonoverlap": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": "<=",
+          "violation": 0.0
+        },
+        "open_exactly_three_facilities": {
+          "lhs": 3.0,
+          "rhs": 3.0,
+          "sense": "==",
+          "violation": 0.0
+        },
+        "variant_core_service_floor": {
+          "lhs": 2.0,
+          "rhs": 2.0,
+          "sense": ">=",
+          "violation": 0.0
+        }
+      },
+      "integrality_violation": 0.0,
+      "max_constraint_violation": 0.0,
+      "objective": 2766.0,
+      "objective_recomputed": 2766.0,
+      "projected_action": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "solver": "copt",
+      "status": "OPTIMAL",
+      "version": "8.0.5"
+    },
+    "exact_enumeration": {
+      "complete": true,
+      "feasible_assignment_count": 5,
+      "objective": 2766.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "status": "OPTIMAL"
+    },
+    "gurobi": {
+      "assignment": {
+        "x_0": 1.0,
+        "x_1": 0.0,
+        "x_2": 1.0,
+        "x_3": 1.0,
+        "x_4": 0.0,
+        "x_5": 0.0
+      },
+      "bound_violation": 0.0,
+      "constraint_residuals": {
+        "cover_service_zone_1": {
+          "lhs": 2.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "cover_service_zone_2": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": ">=",
+          "violation": 0.0
+        },
+        "evidence_nonoverlap": {
+          "lhs": 1.0,
+          "rhs": 1.0,
+          "sense": "<=",
+          "violation": 0.0
+        },
+        "open_exactly_three_facilities": {
+          "lhs": 3.0,
+          "rhs": 3.0,
+          "sense": "==",
+          "violation": 0.0
+        },
+        "variant_core_service_floor": {
+          "lhs": 2.0,
+          "rhs": 2.0,
+          "sense": ">=",
+          "violation": 0.0
+        }
+      },
+      "integrality_violation": 0.0,
+      "max_constraint_violation": 0.0,
+      "objective": 2766.0,
+      "objective_recomputed": 2766.0,
+      "projected_action": [
+        1,
+        0,
+        1,
+        1,
+        0,
+        0
+      ],
+      "solver": "gurobi",
+      "status": "OPTIMAL",
+      "version": "12.0.2"
+    }
+  },
+  "patched_acceptable_actions": [
+    [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ]
+  ]
+}

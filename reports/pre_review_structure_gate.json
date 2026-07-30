@@ -1,0 +1,516 @@
+﻿{
+  "errors": [
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:1.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:2.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:3.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:4.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:5.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:6.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:7.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:8.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:9.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:10.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:11.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:12.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:13.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:14.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:15.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:16.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:17.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:18.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:19.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:20.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:21.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:22.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:23.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:24.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:25.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:26.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:27.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:28.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:29.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:30.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:31.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:32.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:33.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:34.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:35.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:36.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:37.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:38.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:39.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:40.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:41.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:42.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:43.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:44.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:45.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:46.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:47.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:48.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:49.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:50.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:51.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:52.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:53.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:54.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:55.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:56.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:57.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:58.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:59.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:60.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:61.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:62.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:63.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:64.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:65.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:66.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:67.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:68.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:69.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:70.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:71.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:72.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:73.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:74.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:75.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:76.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:77.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:78.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:79.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:80.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:81.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:82.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:83.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:84.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:85.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:86.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:87.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:88.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:89.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:90.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:91.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:92.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:93.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:94.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:95.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:96.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:97.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:98.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:99.base_audit.status"
+    },
+    {
+      "code": "provenance.base_not_certified",
+      "message": "base audit status 'pending_independent_review' is not a certified pass state",
+      "path": "private/gold.jsonl:100.base_audit.status"
+    }
+  ],
+  "ok": false,
+  "stats": {
+    "all_collision_groups": [],
+    "family_collision_groups": {},
+    "gold_records": 100,
+    "max_enum_binary_vars": 20,
+    "public_base_binding_errors": 0,
+    "staging_records": 100,
+    "unique_structural_fingerprints": 100,
+    "valid_base_fingerprints": 100
+  },
+  "warnings": []
+}

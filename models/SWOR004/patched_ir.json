@@ -1,0 +1,165 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5",
+    "x_6"
+  ],
+  "base_id": "BASE-9BEC990395DC21B0",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 + 1*x_6 == 3",
+      "name": "use_exactly_three_replenishment_blocks",
+      "requirement_zh": "必须采用3个补货或供应块",
+      "rhs": 3,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1,
+        "x_6": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_3 + 1*x_6 >= 1",
+      "name": "early_horizon_supply",
+      "requirement_zh": "计划前段至少从补货包A、补货包B、补货包D、补货包G中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_3": 1,
+        "x_6": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_2 + 1*x_4 >= 1",
+      "name": "late_horizon_supply",
+      "requirement_zh": "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_2": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 >= 2",
+      "name": "variant_core_service_floor",
+      "requirement_zh": "前三个核心候选补货包A、补货包B、补货包C中至少启用两个",
+      "rhs": 2,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1
+      }
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "metadata": {
+    "base_requirements_zh": [
+      "必须采用3个补货或供应块",
+      "计划前段至少从补货包A、补货包B、补货包D、补货包G中安排一个可到货的供应块",
+      "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "前三个核心候选补货包A、补货包B、补货包C中至少启用两个"
+    ],
+    "capacity": 6,
+    "family_template": "inventory_supply_chain",
+    "family_zh": "库存与供应链",
+    "item_count": 7,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 2
+  },
+  "model_id": "SWOR004_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_replenishment_value",
+    "terms": {
+      "x_0": 1010,
+      "x_1": 949,
+      "x_2": 907,
+      "x_3": 846,
+      "x_4": 804,
+      "x_5": 743,
+      "x_6": 682
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR004",
+  "variables": [
+    {
+      "domain_expression": "x_0 = 0",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "补货包A",
+      "ub": 0,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "补货包B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "补货包C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "补货包D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "补货包E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "补货包F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_6 in {0,1}",
+      "lb": 0,
+      "name": "x_6",
+      "semantic_name": "补货包G",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

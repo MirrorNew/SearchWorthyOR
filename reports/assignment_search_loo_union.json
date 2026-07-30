@@ -1,0 +1,636 @@
+{
+  "seed": 20260730,
+  "iterations_requested": 20000,
+  "exhaustive_single_swap": true,
+  "single_swap_candidates_evaluated": 2400,
+  "accepted_swaps": 0,
+  "stress_features": [
+    "id_mod_11",
+    "prefix_minus_decision_rank_mod_4",
+    "entity_minus_decision_rank_mod_5",
+    "prefix_minus_decision_rank_mod_8",
+    "physical_minus_entity_rank_mod_9",
+    "entity_lex_rank_mod_12",
+    "prefix_minus_decision_rank_mod_12",
+    "prefix_minus_decision_rank_mod_13",
+    "entity_lex_rank_mod_14",
+    "entity_lex_rank_mod_15",
+    "prefix_minus_decision_rank_mod_16",
+    "physical_minus_entity_rank_mod_16",
+    "entity_rank_bucket_13",
+    "prefix_decision_diff_bucket_15",
+    "id_last_digit",
+    "id_mod_10",
+    "entity_lex_rank_mod_6",
+    "prefix_minus_decision_rank_mod_7",
+    "prefix_minus_decision_rank_mod_14",
+    "entity_lex_rank_mod_13",
+    "prefix_decision_diff_bucket_7",
+    "prefix_decision_diff_bucket_16",
+    "prefix_decision_diff_bucket_18"
+  ],
+  "leave_one_out_features": [
+    "prefix_minus_decision_rank_mod_16",
+    "id_last_digit",
+    "id_mod_10",
+    "entity_lex_rank_mod_3",
+    "entity_lex_rank_mod_6",
+    "prefix_minus_decision_rank_mod_7",
+    "physical_minus_entity_rank_mod_3",
+    "decision_rank_mod_4",
+    "entity_minus_decision_rank_mod_9",
+    "entity_lex_rank_mod_13",
+    "prefix_decision_diff_bucket_7"
+  ],
+  "interactions": [
+    [
+      "release_row_mod_9",
+      "release_row_mod_15"
+    ],
+    [
+      "release_row_mod_5",
+      "release_row_mod_9"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_16"
+    ],
+    [
+      "id_mod_10",
+      "release_row_mod_3"
+    ],
+    [
+      "id_last_digit",
+      "release_row_mod_3"
+    ],
+    [
+      "entity_digit_signature",
+      "release_row_mod_9",
+      "release_row_mod_15"
+    ],
+    [
+      "entity_digit_signature",
+      "release_row_mod_5",
+      "release_row_mod_9"
+    ],
+    [
+      "retrieval_interface",
+      "release_row_mod_9",
+      "release_row_mod_15"
+    ],
+    [
+      "retrieval_interface",
+      "release_row_mod_5",
+      "release_row_mod_9"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_2",
+      "release_row_mod_16"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_10",
+      "release_row_mod_3"
+    ],
+    [
+      "retrieval_interface",
+      "id_last_digit",
+      "release_row_mod_3"
+    ],
+    [
+      "release_row_mod_5",
+      "release_row_mod_9",
+      "release_row_mod_15"
+    ],
+    [
+      "release_row_mod_3",
+      "release_row_mod_9",
+      "release_row_mod_15"
+    ],
+    [
+      "release_row_mod_3",
+      "release_row_mod_5",
+      "release_row_mod_9"
+    ],
+    [
+      "id_mod_5",
+      "id_mod_10",
+      "release_row_mod_3"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_8",
+      "release_row_mod_16"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_4",
+      "release_row_mod_16"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_2",
+      "release_row_mod_16"
+    ],
+    [
+      "id_mod_2",
+      "id_mod_5",
+      "release_row_mod_3"
+    ],
+    [
+      "id_mod_2",
+      "id_mod_10",
+      "release_row_mod_3"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_5",
+      "release_row_mod_3"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_2",
+      "release_row_mod_3"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_10",
+      "release_row_mod_3"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_2",
+      "release_row_mod_16"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_10"
+    ],
+    [
+      "entity_digit_signature",
+      "id_last_digit"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_8"
+    ],
+    [
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "release_row_mod_7",
+      "release_row_mod_8"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "id_last_digit"
+    ],
+    [
+      "id_mod_5",
+      "id_mod_10"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_3"
+    ],
+    [
+      "id_mod_2",
+      "id_mod_5"
+    ],
+    [
+      "id_mod_2",
+      "id_mod_10"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_5"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_2"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "entity_digit_signature",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "entity_digit_signature",
+      "id_last_digit"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_5",
+      "id_mod_10"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_2",
+      "id_mod_5"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_2",
+      "id_mod_10"
+    ],
+    [
+      "entity_digit_signature",
+      "id_last_digit",
+      "id_mod_5"
+    ],
+    [
+      "entity_digit_signature",
+      "id_last_digit",
+      "id_mod_2"
+    ],
+    [
+      "entity_digit_signature",
+      "id_last_digit",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_2",
+      "release_row_mod_8"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_4",
+      "release_row_mod_8"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_2",
+      "release_row_mod_8"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_2",
+      "release_row_mod_8"
+    ],
+    [
+      "retrieval_interface",
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "retrieval_interface",
+      "release_row_mod_7",
+      "release_row_mod_8"
+    ],
+    [
+      "release_row_mod_7",
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "release_row_mod_4",
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "release_row_mod_4",
+      "release_row_mod_7",
+      "release_row_mod_8"
+    ],
+    [
+      "release_row_mod_2",
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "release_row_mod_2",
+      "release_row_mod_7",
+      "release_row_mod_8"
+    ],
+    [
+      "entity_digit_signature",
+      "release_row_mod_8",
+      "release_row_mod_14"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_12"
+    ],
+    [
+      "id_mod_6",
+      "id_mod_15"
+    ],
+    [
+      "id_mod_6",
+      "id_mod_10"
+    ],
+    [
+      "id_mod_5",
+      "id_mod_6"
+    ],
+    [
+      "id_mod_3",
+      "id_mod_10"
+    ],
+    [
+      "id_mod_2",
+      "id_mod_15"
+    ],
+    [
+      "id_mod_10",
+      "id_mod_15"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_6"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_3"
+    ],
+    [
+      "id_last_digit",
+      "id_mod_15"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_2",
+      "release_row_mod_12"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_6",
+      "release_row_mod_12"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_4",
+      "release_row_mod_6"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_4",
+      "release_row_mod_12"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_3",
+      "release_row_mod_4"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_3",
+      "release_row_mod_12"
+    ],
+    [
+      "id_mod_2",
+      "release_row_mod_2",
+      "release_row_mod_12"
+    ],
+    [
+      "entity_digit_signature",
+      "id_mod_2",
+      "release_row_mod_12"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_6",
+      "id_mod_15"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_6",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_5",
+      "id_mod_6"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_3",
+      "id_mod_10"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_2",
+      "id_mod_15"
+    ],
+    [
+      "retrieval_interface",
+      "id_mod_10",
+      "id_mod_15"
+    ],
+    [
+      "retrieval_interface",
+      "id_last_digit",
+      "id_mod_6"
+    ],
+    [
+      "retrieval_interface",
+      "id_last_digit",
+      "id_mod_3"
+    ],
+    [
+      "retrieval_interface",
+      "id_last_digit",
+      "id_mod_15"
+    ],
+    [
+      "id_mod_6",
+      "id_mod_15",
+      "release_row_mod_2"
+    ],
+    [
+      "id_mod_6",
+      "id_mod_10",
+      "release_row_mod_2"
+    ],
+    [
+      "prefix_minus_decision_rank_mod_16"
+    ],
+    [
+      "id_last_digit"
+    ],
+    [
+      "id_mod_10"
+    ],
+    [
+      "entity_lex_rank_mod_3"
+    ],
+    [
+      "entity_lex_rank_mod_6"
+    ],
+    [
+      "prefix_minus_decision_rank_mod_7"
+    ],
+    [
+      "physical_minus_entity_rank_mod_3"
+    ],
+    [
+      "decision_rank_mod_4"
+    ],
+    [
+      "entity_minus_decision_rank_mod_9"
+    ],
+    [
+      "entity_lex_rank_mod_13"
+    ],
+    [
+      "prefix_decision_diff_bucket_7"
+    ]
+  ],
+  "start_objective": [
+    37,
+    67,
+    3675
+  ],
+  "best_objective": [
+    33,
+    5,
+    3546
+  ],
+  "best_assignment": "2033311201031103222302310121010312131323031222310132000312232310313001022202012300212001013331213023",
+  "best_target_audit": {
+    "objective": [
+      33,
+      5,
+      3546
+    ],
+    "stress_p95_correct": {
+      "id_mod_11": 32,
+      "prefix_minus_decision_rank_mod_4": 32,
+      "entity_minus_decision_rank_mod_5": 30,
+      "prefix_minus_decision_rank_mod_8": 25,
+      "physical_minus_entity_rank_mod_9": 29,
+      "entity_lex_rank_mod_12": 28,
+      "prefix_minus_decision_rank_mod_12": 30,
+      "prefix_minus_decision_rank_mod_13": 29,
+      "entity_lex_rank_mod_14": 32,
+      "entity_lex_rank_mod_15": 25,
+      "prefix_minus_decision_rank_mod_16": 30,
+      "physical_minus_entity_rank_mod_16": 30,
+      "entity_rank_bucket_13": 32,
+      "prefix_decision_diff_bucket_15": 31,
+      "id_last_digit": 31,
+      "id_mod_10": 31,
+      "entity_lex_rank_mod_6": 27,
+      "prefix_minus_decision_rank_mod_7": 31,
+      "prefix_minus_decision_rank_mod_14": 31,
+      "entity_lex_rank_mod_13": 29,
+      "prefix_decision_diff_bucket_7": 30,
+      "prefix_decision_diff_bucket_16": 29,
+      "prefix_decision_diff_bucket_18": 27
+    },
+    "interaction_correct": {
+      "release_row_mod_9+release_row_mod_15": 29,
+      "release_row_mod_5+release_row_mod_9": 29,
+      "id_mod_2+release_row_mod_16": 22,
+      "id_mod_10+release_row_mod_3": 28,
+      "id_last_digit+release_row_mod_3": 28,
+      "entity_digit_signature+release_row_mod_9+release_row_mod_15": 31,
+      "entity_digit_signature+release_row_mod_5+release_row_mod_9": 31,
+      "retrieval_interface+release_row_mod_9+release_row_mod_15": 29,
+      "retrieval_interface+release_row_mod_5+release_row_mod_9": 29,
+      "retrieval_interface+id_mod_2+release_row_mod_16": 22,
+      "retrieval_interface+id_mod_10+release_row_mod_3": 28,
+      "retrieval_interface+id_last_digit+release_row_mod_3": 28,
+      "release_row_mod_5+release_row_mod_9+release_row_mod_15": 29,
+      "release_row_mod_3+release_row_mod_9+release_row_mod_15": 29,
+      "release_row_mod_3+release_row_mod_5+release_row_mod_9": 29,
+      "id_mod_5+id_mod_10+release_row_mod_3": 28,
+      "id_mod_2+release_row_mod_8+release_row_mod_16": 22,
+      "id_mod_2+release_row_mod_4+release_row_mod_16": 22,
+      "id_mod_2+release_row_mod_2+release_row_mod_16": 22,
+      "id_mod_2+id_mod_5+release_row_mod_3": 28,
+      "id_mod_2+id_mod_10+release_row_mod_3": 28,
+      "id_last_digit+id_mod_5+release_row_mod_3": 28,
+      "id_last_digit+id_mod_2+release_row_mod_3": 28,
+      "id_last_digit+id_mod_10+release_row_mod_3": 28,
+      "entity_digit_signature+id_mod_2+release_row_mod_16": 22,
+      "entity_digit_signature+id_mod_10": 29,
+      "entity_digit_signature+id_last_digit": 29,
+      "id_mod_2+release_row_mod_8": 33,
+      "release_row_mod_8+release_row_mod_14": 32,
+      "release_row_mod_7+release_row_mod_8": 32,
+      "retrieval_interface+id_mod_10": 25,
+      "retrieval_interface+id_last_digit": 25,
+      "id_mod_5+id_mod_10": 25,
+      "id_mod_2+release_row_mod_3": 26,
+      "id_mod_2+id_mod_5": 25,
+      "id_mod_2+id_mod_10": 25,
+      "id_last_digit+id_mod_5": 25,
+      "id_last_digit+id_mod_2": 25,
+      "id_last_digit+id_mod_10": 25,
+      "retrieval_interface+entity_digit_signature+id_mod_10": 29,
+      "retrieval_interface+entity_digit_signature+id_last_digit": 29,
+      "entity_digit_signature+id_mod_5+id_mod_10": 29,
+      "entity_digit_signature+id_mod_2+id_mod_5": 29,
+      "entity_digit_signature+id_mod_2+id_mod_10": 29,
+      "entity_digit_signature+id_last_digit+id_mod_5": 29,
+      "entity_digit_signature+id_last_digit+id_mod_2": 29,
+      "entity_digit_signature+id_last_digit+id_mod_10": 29,
+      "retrieval_interface+id_mod_2+release_row_mod_8": 33,
+      "id_mod_2+release_row_mod_4+release_row_mod_8": 33,
+      "id_mod_2+release_row_mod_2+release_row_mod_8": 33,
+      "entity_digit_signature+id_mod_2+release_row_mod_8": 33,
+      "retrieval_interface+release_row_mod_8+release_row_mod_14": 32,
+      "retrieval_interface+release_row_mod_7+release_row_mod_8": 32,
+      "release_row_mod_7+release_row_mod_8+release_row_mod_14": 32,
+      "release_row_mod_4+release_row_mod_8+release_row_mod_14": 32,
+      "release_row_mod_4+release_row_mod_7+release_row_mod_8": 32,
+      "release_row_mod_2+release_row_mod_8+release_row_mod_14": 32,
+      "release_row_mod_2+release_row_mod_7+release_row_mod_8": 32,
+      "entity_digit_signature+release_row_mod_8+release_row_mod_14": 32,
+      "id_mod_2+release_row_mod_12": 31,
+      "id_mod_6+id_mod_15": 32,
+      "id_mod_6+id_mod_10": 32,
+      "id_mod_5+id_mod_6": 32,
+      "id_mod_3+id_mod_10": 32,
+      "id_mod_2+id_mod_15": 32,
+      "id_mod_10+id_mod_15": 32,
+      "id_last_digit+id_mod_6": 32,
+      "id_last_digit+id_mod_3": 32,
+      "id_last_digit+id_mod_15": 32,
+      "retrieval_interface+id_mod_2+release_row_mod_12": 31,
+      "id_mod_2+release_row_mod_6+release_row_mod_12": 31,
+      "id_mod_2+release_row_mod_4+release_row_mod_6": 31,
+      "id_mod_2+release_row_mod_4+release_row_mod_12": 31,
+      "id_mod_2+release_row_mod_3+release_row_mod_4": 31,
+      "id_mod_2+release_row_mod_3+release_row_mod_12": 31,
+      "id_mod_2+release_row_mod_2+release_row_mod_12": 31,
+      "entity_digit_signature+id_mod_2+release_row_mod_12": 31,
+      "retrieval_interface+id_mod_6+id_mod_15": 32,
+      "retrieval_interface+id_mod_6+id_mod_10": 32,
+      "retrieval_interface+id_mod_5+id_mod_6": 32,
+      "retrieval_interface+id_mod_3+id_mod_10": 32,
+      "retrieval_interface+id_mod_2+id_mod_15": 32,
+      "retrieval_interface+id_mod_10+id_mod_15": 32,
+      "retrieval_interface+id_last_digit+id_mod_6": 32,
+      "retrieval_interface+id_last_digit+id_mod_3": 32,
+      "retrieval_interface+id_last_digit+id_mod_15": 32,
+      "id_mod_6+id_mod_15+release_row_mod_2": 31,
+      "id_mod_6+id_mod_10+release_row_mod_2": 31,
+      "prefix_minus_decision_rank_mod_16": 26,
+      "id_last_digit": 25,
+      "id_mod_10": 25,
+      "entity_lex_rank_mod_3": 23,
+      "entity_lex_rank_mod_6": 25,
+      "prefix_minus_decision_rank_mod_7": 24,
+      "physical_minus_entity_rank_mod_3": 10,
+      "decision_rank_mod_4": 23,
+      "entity_minus_decision_rank_mod_9": 29,
+      "entity_lex_rank_mod_13": 29,
+      "prefix_decision_diff_bucket_7": 31
+    }
+  },
+  "requires_full_verification": true
+}

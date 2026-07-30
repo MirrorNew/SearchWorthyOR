@@ -1,0 +1,61 @@
+{
+  "extractor_findings": [
+    "Gurobi结构检查能识别quadratic/general/SOS和非单目标结构，当前43个线性IR均有当前audit哈希。",
+    "当前13个大线性IR在restricted Gurobi许可下失败，不能算双求解器证书；它们不是stale文件。",
+    "AST筛查只是副作用启发式，不是安全沙箱；允许numpy和间接builtins访问仍可绕过。",
+    "提取器没有可发布的显式规模上限；超过2000变量或约束时尝试Gurobi presolve，但无法为原变量提供完整行动证书。"
+  ],
+  "generated_at": "2026-07-30T01:35:36.355676+08:00",
+  "global_blockers": [
+    "57个OptMiner候选均缺题面到IR的互盲逐句语义映射；30个只通过结构/双求解器门，27个还在非线性或规模/许可门失败。",
+    "OptMiner存储证书不含完整assignment，COPT version为unknown；action_projection机械排除连续变量，OMB073甚至为空。",
+    "主supplemental新增发现2个无题面依据的变量上界错误；连同原5个拒绝，仅36/43通过。",
+    "主supplemental脚本在模型冻结循环之前加载legacy answers，虽未观察到流向建模函数，仍不满足严格先冻结后加载顺序。",
+    "主supplemental认证产物未由独立manifest逐文件绑定；reserve的40条则已逐文件hash绑定。",
+    "当前可释放来源仅76条（36主supplemental+40 reserve），不足100；不得用未语义认证的OptMiner补数。"
+  ],
+  "independent_solver_cache_counts": {
+    "fail": 13,
+    "pass": 108
+  },
+  "new_redteam_rejects": [
+    "SWOR-BASE-076",
+    "SWOR-BASE-080"
+  ],
+  "optminer_semantic_sample_ids": [
+    "OMB001",
+    "OMB003",
+    "OMB006",
+    "OMB007",
+    "OMB011",
+    "OMB017",
+    "OMB022",
+    "OMB030",
+    "OMB073",
+    "OMB107",
+    "OMB123"
+  ],
+  "optminer_structural_gate_counts": {
+    "pass": 30,
+    "reject": 27
+  },
+  "release_eligible_unique_sources": 76,
+  "row_count": 140,
+  "schema_version": "searchworthyor.source-redteam-summary.v1",
+  "source_redteam_jsonl_sha256": "510bb14566c1cda3c7d8113f2ce32a7e04d20dff4e932cb03c847bea327099fb",
+  "supplemental_reject_ids": [
+    "SWOR-BASE-066",
+    "SWOR-BASE-073",
+    "SWOR-BASE-076",
+    "SWOR-BASE-080",
+    "SWOR-BASE-092",
+    "SWOR-BASE-093",
+    "SWOR-BASE-098"
+  ],
+  "verdict_counts": {
+    "optminer_reject": 57,
+    "supplemental_pass": 36,
+    "supplemental_reject": 7,
+    "supplemental_reserve_pass": 40
+  }
+}

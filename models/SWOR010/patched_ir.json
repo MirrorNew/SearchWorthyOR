@@ -1,0 +1,183 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "base_id": "BASE-34C051E71D96CA6F",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 == 3",
+      "name": "use_exactly_three_replenishment_blocks",
+      "requirement_zh": "必须采用3个补货或供应块",
+      "rhs": 3,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_3 >= 1",
+      "name": "early_horizon_supply",
+      "requirement_zh": "计划前段至少从补货包A、补货包B、补货包D中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_2 + 1*x_4 >= 1",
+      "name": "late_horizon_supply",
+      "requirement_zh": "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_2": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 >= 2",
+      "name": "variant_core_service_floor",
+      "requirement_zh": "前三个核心候选补货包A、补货包B、补货包C中至少启用两个",
+      "rhs": 2,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + -1*z_trigger == 0",
+      "name": "evidence_trigger_link",
+      "rhs": 0,
+      "sense": "==",
+      "source": "CLAIM-E01E734D1184C6D9",
+      "terms": {
+        "x_0": 1,
+        "z_trigger": -1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*z_trigger <= 1",
+      "name": "evidence_trigger_exclusion",
+      "rhs": 1,
+      "sense": "<=",
+      "source": "CLAIM-E01E734D1184C6D9",
+      "terms": {
+        "x_1": 1,
+        "z_trigger": 1
+      }
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "metadata": {
+    "base_requirements_zh": [
+      "必须采用3个补货或供应块",
+      "计划前段至少从补货包A、补货包B、补货包D中安排一个可到货的供应块",
+      "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "前三个核心候选补货包A、补货包B、补货包C中至少启用两个"
+    ],
+    "capacity": 7,
+    "family_template": "inventory_supply_chain",
+    "family_zh": "库存与供应链",
+    "item_count": 6,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 2
+  },
+  "model_id": "SWOR010_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_replenishment_value",
+    "terms": {
+      "x_0": 1000,
+      "x_1": 958,
+      "x_2": 897,
+      "x_3": 855,
+      "x_4": 794,
+      "x_5": 752
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR010",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "补货包A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "补货包B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "补货包C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "补货包D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "补货包E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "补货包F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "z_trigger in {0,1}",
+      "lb": 0,
+      "name": "z_trigger",
+      "semantic_name": "外部规则触发状态",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

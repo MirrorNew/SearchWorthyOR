@@ -1,0 +1,193 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "base_id": "BASE-90BFC116160A892A",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 == 3",
+      "name": "staff_exactly_three_shift_blocks",
+      "requirement_zh": "本轮必须启用3个班次块",
+      "rhs": 3,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "cover_period_1",
+      "requirement_zh": "时段1至少由班次A、班次D中的一个班次块覆盖",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_4 >= 1",
+      "name": "cover_period_2",
+      "requirement_zh": "时段2至少由班次B、班次E中的一个班次块覆盖",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_2 + 1*x_5 >= 1",
+      "name": "cover_period_3",
+      "requirement_zh": "时段3至少由班次C、班次F中的一个班次块覆盖",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_2": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "variant_first_fallback",
+      "requirement_zh": "第一核心候选班次A与其备用项班次D中至少启用一个",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + -1*z_trigger == 0",
+      "name": "evidence_trigger_link",
+      "rhs": 0,
+      "sense": "==",
+      "source": "CLAIM-E179525B1D8F727E",
+      "terms": {
+        "x_0": 1,
+        "z_trigger": -1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*z_trigger <= 1",
+      "name": "evidence_trigger_exclusion",
+      "rhs": 1,
+      "sense": "<=",
+      "source": "CLAIM-E179525B1D8F727E",
+      "terms": {
+        "x_1": 1,
+        "z_trigger": 1
+      }
+    }
+  ],
+  "family": "scheduling_workforce",
+  "metadata": {
+    "base_requirements_zh": [
+      "本轮必须启用3个班次块",
+      "时段1至少由班次A、班次D中的一个班次块覆盖",
+      "时段2至少由班次B、班次E中的一个班次块覆盖",
+      "时段3至少由班次C、班次F中的一个班次块覆盖",
+      "第一核心候选班次A与其备用项班次D中至少启用一个"
+    ],
+    "capacity": 8,
+    "family_template": "scheduling_workforce",
+    "family_zh": "排班与劳动力",
+    "item_count": 6,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 3
+  },
+  "model_id": "SWOR042_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_covered_shift_value",
+    "terms": {
+      "x_0": 1002,
+      "x_1": 960,
+      "x_2": 899,
+      "x_3": 857,
+      "x_4": 796,
+      "x_5": 735
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR042",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "班次A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "班次B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "班次C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "班次D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "班次E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "班次F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "z_trigger in {0,1}",
+      "lb": 0,
+      "name": "z_trigger",
+      "semantic_name": "外部规则触发状态",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

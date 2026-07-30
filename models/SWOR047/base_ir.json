@@ -1,0 +1,165 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5",
+    "x_6",
+    "x_7"
+  ],
+  "base_id": "BASE-01DEC095587390C1",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 + 1*x_6 + 1*x_7 <= 3",
+      "name": "activate_at_most_three_modes",
+      "requirement_zh": "最多启用3个生产模式",
+      "rhs": 3,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1,
+        "x_6": 1,
+        "x_7": 1
+      }
+    },
+    {
+      "expression": "2*x_0 + 3*x_1 + 4*x_2 + 1*x_3 + 2*x_4 + 3*x_5 + 4*x_6 + 1*x_7 <= 9",
+      "name": "production_resource_capacity",
+      "requirement_zh": "各模式生产资源占用为模式A=2、模式B=3、模式C=4、模式D=1、模式E=2、模式F=3、模式G=4、模式H=1；总占用不得超过9",
+      "rhs": 9,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 2,
+        "x_1": 3,
+        "x_2": 4,
+        "x_3": 1,
+        "x_4": 2,
+        "x_5": 3,
+        "x_6": 4,
+        "x_7": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "variant_first_fallback",
+      "requirement_zh": "第一核心候选模式A与其备用项模式D中至少启用一个",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    }
+  ],
+  "family": "production_capacity",
+  "metadata": {
+    "base_requirements_zh": [
+      "最多启用3个生产模式",
+      "各模式生产资源占用为模式A=2、模式B=3、模式C=4、模式D=1、模式E=2、模式F=3、模式G=4、模式H=1；总占用不得超过9",
+      "第一核心候选模式A与其备用项模式D中至少启用一个"
+    ],
+    "capacity": 9,
+    "family_template": "production_capacity",
+    "family_zh": "生产与容量规划",
+    "item_count": 8,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 3
+  },
+  "model_id": "SWOR047_base",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_production_contribution",
+    "terms": {
+      "x_0": 1011,
+      "x_1": 950,
+      "x_2": 908,
+      "x_3": 847,
+      "x_4": 805,
+      "x_5": 744,
+      "x_6": 683,
+      "x_7": 641
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR047",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "模式A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "模式B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "模式C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "模式D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "模式E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "模式F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_6 in {0,1}",
+      "lb": 0,
+      "name": "x_6",
+      "semantic_name": "模式G",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_7 in {0,1}",
+      "lb": 0,
+      "name": "x_7",
+      "semantic_name": "模式H",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "base"
+}

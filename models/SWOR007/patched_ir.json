@@ -1,0 +1,157 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "base_id": "BASE-69D86CDF44D5BB3B",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_3 == 1",
+      "name": "choose_one_leg_stage_1",
+      "requirement_zh": "运输链第1段必须且只能从路径包A、路径包D中采用一个候选路径包",
+      "rhs": 1,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_4 == 1",
+      "name": "choose_one_leg_stage_2",
+      "requirement_zh": "运输链第2段必须且只能从路径包B、路径包E中采用一个候选路径包",
+      "rhs": 1,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_2 + 1*x_5 == 1",
+      "name": "choose_one_leg_stage_3",
+      "requirement_zh": "运输链第3段必须且只能从路径包C、路径包F中采用一个候选路径包",
+      "rhs": 1,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_2": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "variant_first_fallback",
+      "requirement_zh": "第一核心候选路径包A与其备用项路径包D中至少启用一个",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_4 + 1*x_5 >= 1",
+      "name": "evidence_service_quota",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "CLAIM-2B7528EC2F213A29",
+      "terms": {
+        "x_4": 1,
+        "x_5": 1
+      }
+    }
+  ],
+  "family": "routing_transport",
+  "metadata": {
+    "base_requirements_zh": [
+      "运输链第1段必须且只能从路径包A、路径包D中采用一个候选路径包",
+      "运输链第2段必须且只能从路径包B、路径包E中采用一个候选路径包",
+      "运输链第3段必须且只能从路径包C、路径包F中采用一个候选路径包",
+      "第一核心候选路径包A与其备用项路径包D中至少启用一个"
+    ],
+    "capacity": 9,
+    "family_template": "routing_transport",
+    "family_zh": "路径与运输",
+    "item_count": 6,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 3
+  },
+  "model_id": "SWOR007_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_route_service_value",
+    "terms": {
+      "x_0": 1013,
+      "x_1": 952,
+      "x_2": 910,
+      "x_3": 849,
+      "x_4": 788,
+      "x_5": 746
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR007",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "路径包A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "路径包B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "路径包C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "路径包D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "路径包E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "路径包F",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

@@ -1,0 +1,190 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "base_id": "BASE-F7F249D286A65D2B",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 <= 3",
+      "name": "activate_at_most_three_service_modules",
+      "requirement_zh": "最多启用3个通信服务模块",
+      "rhs": 3,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "connect_zone_1",
+      "requirement_zh": "通信区1至少由服务模块A、服务模块D中的一个模块连通",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_4 >= 1",
+      "name": "connect_zone_2",
+      "requirement_zh": "通信区2至少由服务模块B、服务模块E中的一个模块连通",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_2 + 1*x_5 >= 1",
+      "name": "connect_zone_3",
+      "requirement_zh": "通信区3至少由服务模块C、服务模块F中的一个模块连通",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_2": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + -1*x_1 + -1*x_4 <= 0",
+      "name": "primary_requires_backhaul",
+      "requirement_zh": "启用主接入模块服务模块A时，必须同时启用主回传服务模块B或备用回传服务模块E",
+      "rhs": 0,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": -1,
+        "x_4": -1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_4 + 1*x_5 == 1",
+      "name": "variant_second_fallback",
+      "requirement_zh": "第二核心候选服务模块B、其备用项服务模块E与末端应急项服务模块F中恰好启用一个",
+      "rhs": 1,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_4 + 1*x_5 + -1*x_0 >= 0",
+      "name": "evidence_service_quota",
+      "rhs": 0,
+      "sense": ">=",
+      "source": "CLAIM-A9C0C44D8CACE419",
+      "terms": {
+        "x_0": -1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    }
+  ],
+  "family": "telecom_service",
+  "metadata": {
+    "base_requirements_zh": [
+      "最多启用3个通信服务模块",
+      "通信区1至少由服务模块A、服务模块D中的一个模块连通",
+      "通信区2至少由服务模块B、服务模块E中的一个模块连通",
+      "通信区3至少由服务模块C、服务模块F中的一个模块连通",
+      "启用主接入模块服务模块A时，必须同时启用主回传服务模块B或备用回传服务模块E",
+      "第二核心候选服务模块B、其备用项服务模块E与末端应急项服务模块F中恰好启用一个"
+    ],
+    "capacity": 9,
+    "family_template": "telecom_service",
+    "family_zh": "通信与服务系统",
+    "item_count": 6,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 4
+  },
+  "model_id": "SWOR038_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_service_connectivity_value",
+    "terms": {
+      "x_0": 1011,
+      "x_1": 950,
+      "x_2": 908,
+      "x_3": 847,
+      "x_4": 805,
+      "x_5": 744
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR038",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "服务模块A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "服务模块B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "服务模块C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "服务模块D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "服务模块E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "服务模块F",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

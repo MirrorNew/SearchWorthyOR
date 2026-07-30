@@ -1,0 +1,41 @@
+{
+  "completed_at_utc": "2026-07-29T17:45:27.675157Z",
+  "decisions": {
+    "pass": 40,
+    "reject": 0,
+    "rejected_source_keys": []
+  },
+  "review_boundaries": {
+    "generator_status_used_as_decision": false,
+    "historical_answer_used": false,
+    "historical_code_used": false,
+    "original_78_review_modified": false,
+    "other_source_redteam_reviews_read": false
+  },
+  "reviewer": "independent_blind_source_review_b",
+  "schema_version": "1.0",
+  "scope": {
+    "located_rows": 40,
+    "reserve_rank_max": 40,
+    "reserve_rank_min": 1,
+    "reviewed_rows": 40,
+    "source_group": "supplemental_reserve2",
+    "unique_source_keys": 40
+  },
+  "verification": {
+    "benchmark_snapshot_exact_matches": 40,
+    "independent_copt_resolves_passed": 40,
+    "independent_gurobi_resolves_passed": 40,
+    "manifest_artifacts_checked": 205,
+    "manifest_artifacts_passed": 205,
+    "manifest_inputs_checked": 3,
+    "manifest_inputs_passed": 3,
+    "mechanical_certificate_rows_passed": 40,
+    "review_jsonl_sha256": "7421de4acf6b1a3416128706fb6ac8f4071e5682799f5ea3f715d63e07db2919",
+    "row_artifact_files_hash_verified": 160,
+    "solver_versions": {
+      "copt": "8.0.5",
+      "gurobi": "12.0.2"
+    }
+  }
+}

@@ -1,0 +1,59 @@
+{
+  "completed_at_utc": "2026-07-29T17:38:05.166150Z",
+  "decisions": {
+    "pass": 75,
+    "reject": 3,
+    "rejected_source_keys": [
+      {
+        "source_dataset": "NLP4LP",
+        "source_id": "nlp4lp_000220"
+      },
+      {
+        "source_dataset": "MAMO-ComplexLP",
+        "source_id": "mamo_complexlp_000001"
+      },
+      {
+        "source_dataset": "NLP4LP",
+        "source_id": "nlp4lp_000215"
+      }
+    ]
+  },
+  "review_boundaries": {
+    "generator_status_used_as_decision": false,
+    "historical_answer_used": false,
+    "historical_code_used": false,
+    "optminer_artifacts_in_scope": false,
+    "other_source_redteam_reviews_read": false
+  },
+  "reviewer": "independent_blind_source_review_b",
+  "schema_version": "1.0",
+  "scope": {
+    "base_pass_rows_located": 38,
+    "reserve_pass_rows_located": 40,
+    "reviewed_rows": 78,
+    "unique_source_keys": 78
+  },
+  "verification": {
+    "artifact_files_hash_verified": 312,
+    "benchmark_snapshot_exact_matches": 78,
+    "continuous_projection_rows_passed": 6,
+    "continuous_projection_rows_rechecked": [
+      "nlp4lp_000108",
+      "nlp4lp_000122",
+      "nlp4lp_000166",
+      "nlp4lp_000242",
+      "nlp4lp_000234",
+      "nlp4lp_000208"
+    ],
+    "independent_copt_resolves_passed": 78,
+    "independent_gurobi_resolves_passed": 78,
+    "manifest_inputs_checked": 5,
+    "manifest_inputs_passed": 5,
+    "mechanical_certificate_rows_passed": 78,
+    "review_jsonl_sha256": "fdacd541dd3ebca47bf026d58d2592bc0e5e97c0b9fe030213ff7b637228f2dd",
+    "solver_versions": {
+      "copt": "8.0.5",
+      "gurobi": "12.0.2"
+    }
+  }
+}

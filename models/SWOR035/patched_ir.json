@@ -1,0 +1,206 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5",
+    "x_6"
+  ],
+  "base_id": "BASE-008CD70620C41187",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 + 1*x_6 == 3",
+      "name": "use_exactly_three_replenishment_blocks",
+      "requirement_zh": "必须采用3个补货或供应块",
+      "rhs": 3,
+      "sense": "==",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1,
+        "x_6": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_3 + 1*x_6 >= 1",
+      "name": "early_horizon_supply",
+      "requirement_zh": "计划前段至少从补货包A、补货包B、补货包D、补货包G中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_3": 1,
+        "x_6": 1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*x_2 + 1*x_4 >= 1",
+      "name": "late_horizon_supply",
+      "requirement_zh": "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_1": 1,
+        "x_2": 1,
+        "x_4": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + 1*x_3 >= 1",
+      "name": "variant_first_fallback",
+      "requirement_zh": "第一核心候选补货包A与其备用项补货包D中至少启用一个",
+      "rhs": 1,
+      "sense": ">=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_3": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + -1*z_trigger == 0",
+      "name": "evidence_trigger_link",
+      "rhs": 0,
+      "sense": "==",
+      "source": "CLAIM-7215187455EB0CA0",
+      "terms": {
+        "x_0": 1,
+        "z_trigger": -1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*z_trigger <= 1",
+      "name": "evidence_trigger_exclusion",
+      "rhs": 1,
+      "sense": "<=",
+      "source": "CLAIM-7215187455EB0CA0",
+      "terms": {
+        "x_1": 1,
+        "z_trigger": 1
+      }
+    },
+    {
+      "expression": "1*x_5 + 1*x_6 + -1*z_trigger >= 0",
+      "name": "evidence_trigger_service",
+      "rhs": 0,
+      "sense": ">=",
+      "source": "CLAIM-7215187455EB0CA0",
+      "terms": {
+        "x_5": 1,
+        "x_6": 1,
+        "z_trigger": -1
+      }
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "metadata": {
+    "base_requirements_zh": [
+      "必须采用3个补货或供应块",
+      "计划前段至少从补货包A、补货包B、补货包D、补货包G中安排一个可到货的供应块",
+      "计划后段至少从补货包B、补货包C、补货包E中安排一个可到货的供应块",
+      "第一核心候选补货包A与其备用项补货包D中至少启用一个"
+    ],
+    "capacity": 8,
+    "family_template": "inventory_supply_chain",
+    "family_zh": "库存与供应链",
+    "item_count": 7,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 3
+  },
+  "model_id": "SWOR035_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_replenishment_value",
+    "terms": {
+      "x_0": 1017,
+      "x_1": 956,
+      "x_2": 895,
+      "x_3": 853,
+      "x_4": 792,
+      "x_5": 750,
+      "x_6": 689
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR035",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "补货包A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "补货包B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "补货包C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "补货包D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "补货包E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "补货包F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_6 in {0,1}",
+      "lb": 0,
+      "name": "x_6",
+      "semantic_name": "补货包G",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "z_trigger in {0,1}",
+      "lb": 0,
+      "name": "z_trigger",
+      "semantic_name": "外部规则触发状态",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

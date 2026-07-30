@@ -1,0 +1,171 @@
+{
+  "action_projection": [
+    "x_0",
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "base_id": "BASE-879B0F62E1C938BF",
+  "constraints": [
+    {
+      "expression": "1*x_0 + 1*x_1 + 1*x_2 + 1*x_3 + 1*x_4 + 1*x_5 <= 3",
+      "name": "activate_at_most_three_modes",
+      "requirement_zh": "最多启用3个生产模式",
+      "rhs": 3,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 1,
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "4*x_0 + 1*x_1 + 2*x_2 + 3*x_3 + 4*x_4 + 1*x_5 <= 7",
+      "name": "production_resource_capacity",
+      "requirement_zh": "各模式生产资源占用为模式A=4、模式B=1、模式C=2、模式D=3、模式E=4、模式F=1；总占用不得超过7",
+      "rhs": 7,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_0": 4,
+        "x_1": 1,
+        "x_2": 2,
+        "x_3": 3,
+        "x_4": 4,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_4 + 1*x_5 <= 1",
+      "name": "variant_tail_exclusivity",
+      "requirement_zh": "末端两个备用候选模式E、模式F不得同时启用",
+      "rhs": 1,
+      "sense": "<=",
+      "source": "public_problem",
+      "terms": {
+        "x_4": 1,
+        "x_5": 1
+      }
+    },
+    {
+      "expression": "1*x_0 + -1*z_trigger == 0",
+      "name": "evidence_trigger_link",
+      "rhs": 0,
+      "sense": "==",
+      "source": "CLAIM-AFEB7DE69790B3D2",
+      "terms": {
+        "x_0": 1,
+        "z_trigger": -1
+      }
+    },
+    {
+      "expression": "1*x_1 + 1*z_trigger <= 1",
+      "name": "evidence_trigger_exclusion",
+      "rhs": 1,
+      "sense": "<=",
+      "source": "CLAIM-AFEB7DE69790B3D2",
+      "terms": {
+        "x_1": 1,
+        "z_trigger": 1
+      }
+    }
+  ],
+  "family": "production_capacity",
+  "metadata": {
+    "base_requirements_zh": [
+      "最多启用3个生产模式",
+      "各模式生产资源占用为模式A=4、模式B=1、模式C=2、模式D=3、模式E=4、模式F=1；总占用不得超过7",
+      "末端两个备用候选模式E、模式F不得同时启用"
+    ],
+    "capacity": 7,
+    "family_template": "production_capacity",
+    "family_zh": "生产与容量规划",
+    "item_count": 6,
+    "selection_count": 3,
+    "source_semantics": "public_problem",
+    "structural_variant": 1
+  },
+  "model_id": "SWOR001_patched",
+  "objective": {
+    "constant": 0,
+    "name": "maximize_production_contribution",
+    "terms": {
+      "x_0": 1015,
+      "x_1": 954,
+      "x_2": 912,
+      "x_3": 851,
+      "x_4": 790,
+      "x_5": 748
+    },
+    "unit": "value_point"
+  },
+  "schema_version": "1.0",
+  "sense": "max",
+  "single_objective": true,
+  "task_id": "SWOR001",
+  "variables": [
+    {
+      "domain_expression": "x_0 in {0,1}",
+      "lb": 0,
+      "name": "x_0",
+      "semantic_name": "模式A",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_1 in {0,1}",
+      "lb": 0,
+      "name": "x_1",
+      "semantic_name": "模式B",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_2 in {0,1}",
+      "lb": 0,
+      "name": "x_2",
+      "semantic_name": "模式C",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_3 in {0,1}",
+      "lb": 0,
+      "name": "x_3",
+      "semantic_name": "模式D",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_4 in {0,1}",
+      "lb": 0,
+      "name": "x_4",
+      "semantic_name": "模式E",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "x_5 in {0,1}",
+      "lb": 0,
+      "name": "x_5",
+      "semantic_name": "模式F",
+      "ub": 1,
+      "vartype": "B"
+    },
+    {
+      "domain_expression": "z_trigger in {0,1}",
+      "lb": 0,
+      "name": "z_trigger",
+      "semantic_name": "外部规则触发状态",
+      "ub": 1,
+      "vartype": "B"
+    }
+  ],
+  "world": "patched"
+}

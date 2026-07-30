@@ -1,0 +1,632 @@
+{
+  "disqualification_reason_counts": {
+    "artifact:semantic_mapping:path_missing": 30,
+    "artifact:source_snapshot:path_missing": 30,
+    "review_b:decision_not_pass": 3,
+    "review_b:missing": 30,
+    "review_b:reasons_not_empty": 3,
+    "review_b:semantic_mapping_verified_not_true": 3,
+    "review_redteam:reason_codes_not_empty": 32,
+    "review_redteam:semantic_mapping_not_pass": 32,
+    "review_redteam:verdict_not_pass": 32
+  },
+  "disqualified_count": 35,
+  "eligible_after_all_gates": 113,
+  "family_candidate_and_assignment_report": null,
+  "family_counts": {
+    "null": 100
+  },
+  "mode": "inspiration_only",
+  "preferred_selected": 34,
+  "reserve1_selected": 39,
+  "reserve2_selected": 27,
+  "reserve_selected": 66,
+  "role": "reviewed_background_inspiration_only",
+  "schema_version": "1.0",
+  "selected_candidate_ids": [
+    "SWOR-BASE-058",
+    "SWOR-BASE-059",
+    "SWOR-BASE-060",
+    "SWOR-BASE-061",
+    "SWOR-BASE-062",
+    "SWOR-BASE-063",
+    "SWOR-BASE-064",
+    "SWOR-BASE-065",
+    "SWOR-BASE-067",
+    "SWOR-BASE-068",
+    "SWOR-BASE-069",
+    "SWOR-BASE-070",
+    "SWOR-BASE-071",
+    "SWOR-BASE-072",
+    "SWOR-BASE-074",
+    "SWOR-BASE-075",
+    "SWOR-BASE-077",
+    "SWOR-BASE-078",
+    "SWOR-BASE-079",
+    "SWOR-BASE-081",
+    "SWOR-BASE-082",
+    "SWOR-BASE-083",
+    "SWOR-BASE-084",
+    "SWOR-BASE-085",
+    "SWOR-BASE-086",
+    "SWOR-BASE-088",
+    "SWOR-BASE-089",
+    "SWOR-BASE-090",
+    "SWOR-BASE-094",
+    "SWOR-BASE-095",
+    "SWOR-BASE-096",
+    "SWOR-BASE-097",
+    "SWOR-BASE-099",
+    "SWOR-BASE-100",
+    "RESERVE-NLP4LP-000033",
+    "RESERVE-NLP4LP-000080",
+    "RESERVE-NLP4LP-000009",
+    "RESERVE-NLP4LP-000014",
+    "RESERVE-NLP4LP-000038",
+    "RESERVE-NLP4LP-000035",
+    "RESERVE-NLP4LP-000100",
+    "RESERVE-NLP4LP-000216",
+    "RESERVE-NLP4LP-000225",
+    "RESERVE-NLP4LP-000119",
+    "RESERVE-NLP4LP-000040",
+    "RESERVE-NLP4LP-000210",
+    "RESERVE-NLP4LP-000127",
+    "RESERVE-NLP4LP-000209",
+    "RESERVE-NLP4LP-000233",
+    "RESERVE-NLP4LP-000234",
+    "RESERVE-NLP4LP-000212",
+    "RESERVE-NLP4LP-000084",
+    "RESERVE-NLP4LP-000105",
+    "RESERVE-NLP4LP-000222",
+    "RESERVE-NLP4LP-000124",
+    "RESERVE-NLP4LP-000116",
+    "RESERVE-NLP4LP-000203",
+    "RESERVE-NLP4LP-000078",
+    "RESERVE-NLP4LP-000137",
+    "RESERVE-NLP4LP-000010",
+    "RESERVE-NLP4LP-000028",
+    "RESERVE-NLP4LP-000114",
+    "RESERVE-NLP4LP-000150",
+    "RESERVE-NLP4LP-000186",
+    "RESERVE-NLP4LP-000231",
+    "RESERVE-NLP4LP-000230",
+    "RESERVE-NLP4LP-000110",
+    "RESERVE-NLP4LP-000065",
+    "RESERVE-NLP4LP-000204",
+    "RESERVE-NLP4LP-000072",
+    "RESERVE-NLP4LP-000098",
+    "RESERVE-NLP4LP-000056",
+    "RESERVE-NLP4LP-000208",
+    "RESERVE2-NLP4LP-000031",
+    "RESERVE2-NLP4LP-000132",
+    "RESERVE2-NLP4LP-000083",
+    "RESERVE2-NLP4LP-000089",
+    "RESERVE2-NLP4LP-000193",
+    "RESERVE2-NLP4LP-000025",
+    "RESERVE2-NLP4LP-000229",
+    "RESERVE2-NLP4LP-000232",
+    "RESERVE2-NLP4LP-000131",
+    "RESERVE2-NLP4LP-000154",
+    "RESERVE2-NLP4LP-000241",
+    "RESERVE2-NLP4LP-000094",
+    "RESERVE2-NLP4LP-000066",
+    "RESERVE2-NLP4LP-000104",
+    "RESERVE2-NLP4LP-000226",
+    "RESERVE2-NLP4LP-000060",
+    "RESERVE2-NLP4LP-000240",
+    "RESERVE2-NLP4LP-000076",
+    "RESERVE2-NLP4LP-000182",
+    "RESERVE2-NLP4LP-000169",
+    "RESERVE2-NLP4LP-000171",
+    "RESERVE2-NLP4LP-000016",
+    "RESERVE2-NLP4LP-000121",
+    "RESERVE2-NLP4LP-000238",
+    "RESERVE2-NLP4LP-000075",
+    "RESERVE2-NLP4LP-000185",
+    "RESERVE2-NLP4LP-000058"
+  ],
+  "selected_count": 100,
+  "selected_reserve2_ranks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27
+  ],
+  "selected_reserve_ranks": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24,
+    25,
+    26,
+    27,
+    28,
+    29,
+    30,
+    31,
+    32,
+    33,
+    34,
+    35,
+    36,
+    38,
+    39,
+    40
+  ],
+  "selected_source_keys": [
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000001"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000008"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000015"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000023"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000030"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000037"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000046"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000055"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000070"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000077"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000085"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000092"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000099"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000108"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000122"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000129"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000144"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000151"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000158"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000173"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000181"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000189"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000197"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000205"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000213"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000228"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000235"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000242"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000060"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000140"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000179"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000186"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000200"
+    },
+    {
+      "source_dataset": "MAMO-ComplexLP",
+      "source_id": "mamo_complexlp_000207"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000033"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000080"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000009"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000014"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000038"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000035"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000100"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000216"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000225"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000119"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000040"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000210"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000127"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000209"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000233"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000234"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000212"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000084"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000105"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000222"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000124"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000116"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000203"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000078"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000137"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000010"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000028"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000114"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000150"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000186"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000231"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000230"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000110"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000065"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000204"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000072"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000098"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000056"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000208"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000031"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000132"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000083"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000089"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000193"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000025"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000229"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000232"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000131"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000154"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000241"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000094"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000066"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000104"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000226"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000060"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000240"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000076"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000182"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000169"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000171"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000016"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000121"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000238"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000075"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000185"
+    },
+    {
+      "source_dataset": "NLP4LP",
+      "source_id": "nlp4lp_000058"
+    }
+  ],
+  "selection_policy": {
+    "family_assignment": "disabled; family is null for every background-inspiration row",
+    "priority": [
+      "optminer certified rows in base-candidate order",
+      "main supplemental unchanged_pass rows in candidate order",
+      "supplemental reserve unchanged_pass rows in reserve_rank order",
+      "supplemental reserve2 unchanged_pass rows in reserve_rank order"
+    ],
+    "required_gates": [
+      "frozen source audit pass",
+      "current source and artifact hashes match",
+      "stored solver certificate recomputes and passes",
+      "source_redteam verdict pass",
+      "source_review_b decision pass"
+    ],
+    "threshold_relaxation_allowed": false
+  },
+  "source_correspondence_claim": false,
+  "source_mix": {
+    "by_source_dataset": {
+      "MAMO-ComplexLP": 6,
+      "NLP4LP": 94
+    },
+    "by_source_group": {
+      "supplemental_base": 34,
+      "supplemental_reserve": 39,
+      "supplemental_reserve2": 27
+    }
+  },
+  "status": "pass",
+  "target_size": 100
+}

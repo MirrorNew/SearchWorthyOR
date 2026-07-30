@@ -1,0 +1,43 @@
+{
+  "all_decision_certificates_pass": true,
+  "background_inspiration_mix": {
+    "by_source_dataset": {
+      "MAMO-ComplexLP": 6,
+      "NLP4LP": 94
+    },
+    "by_source_group": {
+      "supplemental_base": 34,
+      "supplemental_reserve": 39,
+      "supplemental_reserve2": 27
+    }
+  },
+  "base_origin": "100 independently authored public tasks",
+  "evidence_documents": 400,
+  "evidence_modes": {
+    "fresh-private": 80,
+    "real-web": 20
+  },
+  "families": {
+    "assignment_matching": 10,
+    "energy_environment": 10,
+    "facility_network": 10,
+    "finance_portfolio": 10,
+    "healthcare_resources": 10,
+    "inventory_supply_chain": 10,
+    "production_capacity": 10,
+    "routing_transport": 10,
+    "scheduling_workforce": 10,
+    "telecom_service": 10
+  },
+  "gold_rows": 100,
+  "patch_classes": {
+    "conditional_auxiliary": 25,
+    "eligibility_domain": 25,
+    "quota_risk_service_objective": 25,
+    "temporal_coupling": 25
+  },
+  "reviews_pending": true,
+  "source_correspondence_claim": false,
+  "tasks": 100,
+  "unique_base_ids": 100
+}
