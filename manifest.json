@@ -1159,8 +1159,8 @@
       "bytes": 4714
     },
     "experiments/20260731_searchworthyor_baselines/PUBLIC_BUNDLE_MANIFEST.json": {
-      "sha256": "d2a5b79a42c78001fcad11fa9bd3ec8aad9f168f03cf7e05a8707cf407a5b0af",
-      "bytes": 212779
+      "sha256": "f575076f204ce60b0488bd4800e4b5e5a76752310aef1934c5b9c7b6c4356c60",
+      "bytes": 212780
     },
     "experiments/20260731_searchworthyor_baselines/public_run_snapshot_v3/coe/shard0/SWOR001/failure.json": {
       "sha256": "3bc1d399c3a878e6b523f07949c95e71635ece3d859cd0ef9f41fb00e469e049",
@@ -5347,8 +5347,8 @@
       "bytes": 3298
     },
     "experiments/20260731_searchworthyor_baselines/scripts/test_scorer_regressions.py": {
-      "sha256": "7e00574a05381211adf52989cddc3e04ddc8f94753c4cb8eb90560c2721a1312",
-      "bytes": 8417
+      "sha256": "1636ff30e58deae9a86adef1a570e126ca9c45b900304ab8c69d690e52052c54",
+      "bytes": 10112
     },
     "experiments/20260731_searchworthyor_baselines/scripts/verify_pilot_artifacts.py": {
       "sha256": "e735ca7a729cd6f5944424e86b34fc5ea631878bb7e2c9e232a8ffc2bb8ea861",

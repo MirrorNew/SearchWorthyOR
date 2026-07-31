@@ -8,17 +8,64 @@ from pathlib import Path
 import score_submissions
 
 
+def build_oracle_fixture(dataset_root: Path) -> dict:
+    gold = score_submissions.read_jsonl(
+        dataset_root / "private" / "gold.jsonl"
+    )[0]
+    task_id = gold["id"]
+    model_dir = dataset_root / "models" / task_id
+    base_ir = json.loads(
+        (model_dir / "base_ir.json").read_text(encoding="utf-8")
+    )
+    patched_ir = json.loads(
+        (model_dir / "patched_ir.json").read_text(encoding="utf-8")
+    )
+    solver = json.loads(
+        (model_dir / "solver_results.json").read_text(encoding="utf-8")
+    )
+    evidence_id = gold["applicability"]["selected_evidence_id"]
+    return {
+        "task_id": task_id,
+        "baseline": "oracle_scorer_fixture_not_a_baseline",
+        "condition": "oracle_evidence",
+        "requested_model": "fixture",
+        "actual_model": "fixture",
+        "requested_reasoning_effort": "high",
+        "reasoning_fallback": False,
+        "generated_once": True,
+        "search_trace": [
+            {
+                "query": "<oracle-fixture>",
+                "results": [{"rank": 1, "id": evidence_id, "score": 1.0}],
+            }
+        ],
+        "selected_evidence_ids": [evidence_id],
+        "applicability": gold["applicability"],
+        "base_ir": base_ir,
+        "typed_patch": gold["typed_patch"],
+        "patched_ir": patched_ir,
+        "gurobi_code": str(model_dir / "gurobi_model.py"),
+        "gurobi_result": solver["patched"]["gurobi"],
+        "claim_to_model_mapping": gold["claim_to_model_mapping"],
+        "usage": {"fixture": True},
+    }
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("--dataset-root", required=True, type=Path)
     parser.add_argument(
         "--fixture",
-        default=Path("runs/oracle_scorer_fixture.jsonl"),
         type=Path,
+        help="optional fixture JSONL; defaults to a fixture derived from Gold",
     )
     args = parser.parse_args()
 
-    fixture = score_submissions.read_jsonl(args.fixture)[0]
+    fixture = (
+        score_submissions.read_jsonl(args.fixture)[0]
+        if args.fixture
+        else build_oracle_fixture(args.dataset_root)
+    )
     gold_rows = score_submissions.read_jsonl(
         args.dataset_root / "private" / "gold.jsonl"
     )

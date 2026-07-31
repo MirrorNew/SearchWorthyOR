@@ -3,7 +3,7 @@
   "hash_algorithm": "sha256",
   "manifest_self_excluded": true,
   "file_count": 1060,
-  "total_bytes": 12603782,
+  "total_bytes": 12605477,
   "files": [
     {
       "path": "README.md",
@@ -5287,8 +5287,8 @@
     },
     {
       "path": "scripts/test_scorer_regressions.py",
-      "bytes": 8417,
-      "sha256": "7e00574a05381211adf52989cddc3e04ddc8f94753c4cb8eb90560c2721a1312"
+      "bytes": 10112,
+      "sha256": "1636ff30e58deae9a86adef1a570e126ca9c45b900304ab8c69d690e52052c54"
     },
     {
       "path": "scripts/verify_pilot_artifacts.py",
