@@ -776,6 +776,10 @@ python scripts/run_release_gate.py --root .
 `manifest.json` 反向哈希，避免报告与被验证清单形成不可满足的自引用；Git 提交仍固定该报告
 本身。临时 stdout/stderr、缓存和 `staging/` 同样不属于发布内容清单。
 
+`staging/` 是构建期候选池，不属于公开 release；结构与 provenance gate 在该目录存在时会追加
+构建期交叉检查，在新鲜克隆中则只使用已发布的公开题目、Gold 和模型产物，不把缺失 staging
+误报为发布文件缺失。
+
 为避免 Windows/Linux checkout 的 CRLF/LF 差异制造假哈希失败，`manifest.json` 对可解码的
 UTF-8 文本按 LF 规范化后计算 SHA-256 和字节数；冻结网页原始响应、拒绝快照和二进制文件仍按
 原始字节计算。具体策略写在 `manifest.json.file_hash_policy`，并由 schema validator 强制核对。

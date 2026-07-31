@@ -921,6 +921,15 @@ def audit_public_base_binding(
     return errors
 
 
+def load_optional_staging(
+    root: Path,
+) -> tuple[list[dict[str, Any]], list[Issue]]:
+    path = root / "staging" / "base_candidates.jsonl"
+    if not path.is_file():
+        return [], []
+    return load_jsonl(path, "staging/base_candidates.jsonl")
+
+
 def audit_structure_and_provenance(root: Path) -> StructuralReport:
     root = root.resolve()
     public, public_errors = load_jsonl(
@@ -929,10 +938,7 @@ def audit_structure_and_provenance(root: Path) -> StructuralReport:
     gold, gold_errors = load_jsonl(
         root / "private" / "gold.jsonl", "private/gold.jsonl"
     )
-    staging, staging_errors = load_jsonl(
-        root / "staging" / "base_candidates.jsonl",
-        "staging/base_candidates.jsonl",
-    )
+    staging, staging_errors = load_optional_staging(root)
     model_irs: dict[str, Mapping[str, Mapping[str, Any]]] = {}
     model_errors: list[Issue] = []
     for row in gold:

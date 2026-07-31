@@ -1,6 +1,7 @@
 from __future__ import annotations
 
 import sys
+import tempfile
 import unittest
 from copy import deepcopy
 from pathlib import Path
@@ -14,6 +15,7 @@ from audit_structure_and_provenance import (  # noqa: E402
     audit_public_base_binding,
     audit_structure_records,
     canonical_structural_fingerprint,
+    load_optional_staging,
     structurally_isomorphic,
 )
 
@@ -130,6 +132,13 @@ class StructuralFingerprintTests(unittest.TestCase):
 
 
 class ProvenanceTests(unittest.TestCase):
+    def test_staging_is_optional_in_a_public_release_checkout(self):
+        with tempfile.TemporaryDirectory() as raw_tmp:
+            staging, errors = load_optional_staging(Path(raw_tmp))
+
+        self.assertEqual(staging, [])
+        self.assertEqual(errors, [])
+
     def test_pending_source_certification_is_release_blocking(self):
         row = gold_row("SWOR001")
         row["base_audit"]["status"] = "pending_source_certification"

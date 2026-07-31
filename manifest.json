@@ -7471,8 +7471,8 @@
       "bytes": 256384
     },
     "README.md": {
-      "sha256": "962151ad7a38131890b6b526d301700b9775d3c57e211c3cddfd7fc12296271f",
-      "bytes": 36671
+      "sha256": "76186ab158b8d9a20234df4262010a918e9e92259959bf890620aa0ce7d9608a",
+      "bytes": 36946
     },
     "reports/assignment_search.json": {
       "sha256": "b1dcc86464e600ab7fedf753d41a70bb9888f6d108450274bb852f62cb532bc5",
@@ -7591,8 +7591,8 @@
       "bytes": 33447
     },
     "scripts/audit_structure_and_provenance.py": {
-      "sha256": "1a5646df26b5c4a3178de9c6572af07900aa64253b55279f5ad23f360822fc59",
-      "bytes": 37600
+      "sha256": "99d6efdaead5e8ed11a77d15ef100b3a26cfb4f14199d9ca7352da966e7d9eab",
+      "bytes": 37773
     },
     "scripts/build_base_candidates.py": {
       "sha256": "e6c92ca745b8b862dff92f818d3d29a4eb5b25e010500612795d06c74ed6dd7f",
@@ -7691,8 +7691,8 @@
       "bytes": 2121
     },
     "tests/test_structure_provenance_gate.py": {
-      "sha256": "0ec71324453e43710e0049e321b82725fb246d290cb65d1c2484426a3106c333",
-      "bytes": 11821
+      "sha256": "35b60a50011d2f0f4409f18e07e33224540d9bc2a576cca3398ab268f266d139",
+      "bytes": 12132
     },
     "tests/test_supplemental_reserve2_certification.py": {
       "sha256": "233ca1a8698b6bd174bf6ec25ce01d385f50944dc0d39cc6db3c64eae7cab3c8",
