@@ -2534,6 +2534,24 @@ def generated_model_code(
     )
 
 
+RAW_HASH_PREFIXES = (
+    "private/web_snapshots/raw/",
+    "reports/rejected_snapshots/",
+)
+
+
+def manifest_file_bytes(path: Path, root: Path) -> bytes:
+    data = path.read_bytes()
+    relative = path.relative_to(root).as_posix()
+    if relative.startswith(RAW_HASH_PREFIXES) or b"\x00" in data:
+        return data
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        return data
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
 def refresh_manifest(root: Path, build_summary: dict[str, Any]) -> dict[str, Any]:
     exclusions = {"manifest.json"}
     files = {}
@@ -2554,9 +2572,10 @@ def refresh_manifest(root: Path, build_summary: dict[str, Any]) -> dict[str, Any
             )
         ):
             continue
+        payload = manifest_file_bytes(path, root)
         files[relative] = {
-            "sha256": file_sha256(path),
-            "bytes": path.stat().st_size,
+            "sha256": hashlib.sha256(payload).hexdigest(),
+            "bytes": len(payload),
         }
     manifest = {
         "dataset": "SearchWorthyOR-100",
@@ -2568,6 +2587,10 @@ def refresh_manifest(root: Path, build_summary: dict[str, Any]) -> dict[str, Any
             "gurobi_expected": "12.0.2",
             "copt_expected": "8.0.5",
             "epsilon": TOL,
+        },
+        "file_hash_policy": {
+            "utf8_text_eol": "lf",
+            "raw_prefixes": list(RAW_HASH_PREFIXES),
         },
         "allowlists": {
             "families": FAMILIES,

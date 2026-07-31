@@ -7,14 +7,26 @@ from pathlib import Path
 
 
 EXCLUDED_TOP_LEVEL = {".git", ".pytest_cache", "staging"}
+RAW_HASH_PREFIXES = (
+    "private/web_snapshots/raw/",
+    "reports/rejected_snapshots/",
+)
+FILE_HASH_POLICY = {
+    "utf8_text_eol": "lf",
+    "raw_prefixes": list(RAW_HASH_PREFIXES),
+}
 
 
-def sha256_file(path: Path) -> str:
-    digest = hashlib.sha256()
-    with path.open("rb") as handle:
-        for chunk in iter(lambda: handle.read(1024 * 1024), b""):
-            digest.update(chunk)
-    return digest.hexdigest()
+def manifest_bytes(path: Path, root: Path) -> bytes:
+    data = path.read_bytes()
+    relative = path.relative_to(root).as_posix()
+    if relative.startswith(RAW_HASH_PREFIXES) or b"\x00" in data:
+        return data
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        return data
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
 
 
 def is_released(path: Path, root: Path) -> bool:
@@ -51,10 +63,12 @@ def main() -> int:
         if not path.is_file() or not is_released(path, root):
             continue
         relative = path.relative_to(root).as_posix()
+        payload = manifest_bytes(path, root)
         files[relative] = {
-            "sha256": sha256_file(path),
-            "bytes": path.stat().st_size,
+            "sha256": hashlib.sha256(payload).hexdigest(),
+            "bytes": len(payload),
         }
+    manifest["file_hash_policy"] = FILE_HASH_POLICY
     manifest["files"] = files
     manifest_path.write_text(
         json.dumps(manifest, ensure_ascii=False, indent=2) + "\n",

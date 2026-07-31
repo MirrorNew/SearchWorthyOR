@@ -135,6 +135,28 @@ def sha256_text(text: str) -> str:
     return hashlib.sha256(text.encode("utf-8")).hexdigest()
 
 
+MANIFEST_RAW_HASH_PREFIXES = (
+    "private/web_snapshots/raw/",
+    "reports/rejected_snapshots/",
+)
+EXPECTED_FILE_HASH_POLICY = {
+    "utf8_text_eol": "lf",
+    "raw_prefixes": list(MANIFEST_RAW_HASH_PREFIXES),
+}
+
+
+def manifest_file_bytes(path: Path, root: Path) -> bytes:
+    data = path.read_bytes()
+    relative = path.relative_to(root).as_posix()
+    if relative.startswith(MANIFEST_RAW_HASH_PREFIXES) or b"\x00" in data:
+        return data
+    try:
+        data.decode("utf-8")
+    except UnicodeDecodeError:
+        return data
+    return data.replace(b"\r\n", b"\n").replace(b"\r", b"\n")
+
+
 def _is_nonempty_string(value: Any) -> bool:
     return isinstance(value, str) and bool(value.strip())
 
@@ -3739,6 +3761,14 @@ def validate_manifest(
                 )
             )
     entries = _manifest_file_entries(manifest)
+    if manifest.get("file_hash_policy") != EXPECTED_FILE_HASH_POLICY:
+        errors.append(
+            issue(
+                "manifest.hash_policy_mismatch",
+                "manifest.json.file_hash_policy",
+                "manifest must use canonical LF for UTF-8 text and raw frozen snapshots",
+            )
+        )
     if not entries:
         errors.append(
             issue(
@@ -3800,7 +3830,8 @@ def validate_manifest(
                 )
             )
             continue
-        actual_hash = sha256_file(root / relative)
+        payload = manifest_file_bytes(root / relative, root)
+        actual_hash = hashlib.sha256(payload).hexdigest()
         if actual_hash != expected_hash.lower():
             errors.append(
                 issue(
@@ -3810,7 +3841,7 @@ def validate_manifest(
                 )
             )
         expected_bytes = entries[relative].get("bytes")
-        if expected_bytes is not None and expected_bytes != (root / relative).stat().st_size:
+        if expected_bytes is not None and expected_bytes != len(payload):
             errors.append(
                 issue(
                     "manifest.byte_count_mismatch",

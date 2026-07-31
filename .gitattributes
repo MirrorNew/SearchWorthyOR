@@ -1,0 +1,5 @@
+# Preserve frozen source bytes and make the public experiment bundle portable.
+private/web_snapshots/raw/** -text
+reports/rejected_snapshots/** -text
+*.pdf -text
+experiments/20260731_searchworthyor_baselines/** text eol=crlf
