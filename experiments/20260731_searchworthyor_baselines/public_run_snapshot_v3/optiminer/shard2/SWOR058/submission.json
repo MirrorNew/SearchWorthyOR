@@ -1,0 +1,776 @@
+{
+  "task_id": "SWOR058",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "美国联邦民航 FAA 2026年7月10日实际生效 Part 121 客运合格证持有人 正常排班 同一飞行机组成员 相邻飞行执勤期之间 最低连续休息时间 8小时 10小时 疲劳风险管理替代 紧急运行偏离 例外 官方规则",
+      "reason": "当前无任何外部证据，尚未裁决适用法规的权威性、2026-07-10时点效力、Part 121客运运行及机组成员适用范围、连续休息要求的触发条件，以及紧急偏离、疲劳风险管理替代等例外。上述规则可能直接改变A至F候选变量的可行域及跨运输段组合约束，因此必须继续检索官方来源。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-FF6B6AC3BFE3D9A3",
+          "score": 167.0853492260626
+        },
+        {
+          "rank": 2,
+          "id": "DOC-79F65EB4645DEC9C",
+          "score": 166.2658098954918
+        },
+        {
+          "rank": 3,
+          "id": "DOC-E3B1D6FF521F9AEB",
+          "score": 166.2658098954918
+        },
+        {
+          "rank": 4,
+          "id": "DOC-29A6928C53F65787",
+          "score": 149.2206707786219
+        },
+        {
+          "rank": 5,
+          "id": "DOC-9D36C639E00A3644",
+          "score": 85.87452148749458
+        }
+      ]
+    },
+    {
+      "query": "美国联邦民航 FAA eCFR 2026年7月10日现行规则 Part 121 客运合格证持有人 正常排班 同一飞行机组成员 前一飞行执勤期22:00结束 次日06:00开始 相邻飞行执勤期之间休息机会 最少连续小时 睡眠机会 休息定义 合格证持有人不得指派与机组成员不得接受 紧急运行延长 疲劳风险管理系统替代 例外 官方网页",
+      "reason": "现有结果已初步锁定正确日期、美国联邦民航辖区、Part 117覆盖的Part 121客运主体及“开始前至少10个连续小时”这一核心门槛，但尚不足以无漏洞地构造最终结构补丁：第一，未取得规则完整条件，尚需确认该门槛针对飞行执勤期、备份还是二者，以及“休息机会”和其中不受打扰睡眠机会的定义；第二，尚未明确义务同时约束合格证持有人的指派和机组成员的接受，因而不能确定应建候选禁用约束还是跨段组合约束；第三，需要确认22:00至次日06:00的8小时事实是否依法直接使A与B联用不可行，而非仅使B单独不可行；第四，E、F所称不少于10个连续小时是否满足“紧接开始之前”等时序条件仍待核验；第五，紧急运行、疲劳风险管理替代及其他例外的精确触发和审批边界尚未获得完整官方文本。上述未决项均可能改变变量作用域、条件逻辑及约束形式，因此应继续检索官方现行规则。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-FF6B6AC3BFE3D9A3",
+          "score": 274.7330644576471
+        },
+        {
+          "rank": 2,
+          "id": "DOC-79F65EB4645DEC9C",
+          "score": 273.1626841336187
+        },
+        {
+          "rank": 3,
+          "id": "DOC-E3B1D6FF521F9AEB",
+          "score": 273.1626841336187
+        },
+        {
+          "rank": 4,
+          "id": "DOC-29A6928C53F65787",
+          "score": 256.11754501674875
+        },
+        {
+          "rank": 5,
+          "id": "DOC-B4BC5F30F39BCA74",
+          "score": 139.33456640251694
+        }
+      ]
+    },
+    {
+      "query": "美国联邦民航局 2026年7月10日 美国联邦民航 Part 121 客运合格证持有人 正常排班 飞行机组成员 相邻飞行执勤期 前一段22:00结束 次日06:00开始 休息机会 连续休息 不受打扰睡眠机会 备份 飞行执勤开始前 合格证持有人指派 机组成员接受 紧急运行偏离 疲劳风险管理替代 批准条件 适用例外 官方网页现行全文",
+      "reason": "仍不能无漏洞地停止。两轮结果重复同一摘要，仅足以初步支持“开始前至少10个连续小时”，但尚未取得可唯一确定结构补丁的完整官方规则：未明确该义务分别覆盖飞行执勤期与备份的条件和作用域；未核实休息机会及其中连续、不受打扰睡眠机会的定义；未确认合格证持有人不得指派与机组成员不得接受的双向义务；未证明22:00至次日06:00应形成A与B的跨候选冲突，而不是B的单变量禁用；E、F的休息窗口是否紧接相关执勤开始之前仍未裁决；紧急运行偏离、获批疲劳风险管理替代及其他例外的触发、批准和记录边界也缺少全文证据。现有结果还存在一条被标为“行业信息来源”的记录及错误铁路辖区噪声，不能单凭重复摘要达到对权威性、适用范围和例外的事实性100%置信。因此应利用最后一轮检索完整官方文本及定义，以确定变量作用域、条件逻辑和约束形式。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-FF6B6AC3BFE3D9A3",
+          "score": 309.39891511167104
+        },
+        {
+          "rank": 2,
+          "id": "DOC-79F65EB4645DEC9C",
+          "score": 307.8285347876427
+        },
+        {
+          "rank": 3,
+          "id": "DOC-E3B1D6FF521F9AEB",
+          "score": 307.8285347876427
+        },
+        {
+          "rank": 4,
+          "id": "DOC-29A6928C53F65787",
+          "score": 273.7382565539027
+        },
+        {
+          "rank": 5,
+          "id": "DOC-B4BC5F30F39BCA74",
+          "score": 146.0527472495914
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-79F65EB4645DEC9C"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一采用 DOC-79F65EB4645DEC9C：其为 eCFR 正式监管来源，在决策日 2026-07-10 有效，辖区为美国联邦民航，主体覆盖受 Part 117 约束的 Part 121 客运机组与合格证持有人；题面已核实不存在紧急运行偏离、获批疲劳风险管理替代或其他例外。DOC-FF6B6AC3BFE3D9A3仅标为行业信息来源；DOC-E3B1D6FF521F9AEB在决策日前一日失效；DOC-29A6928C53F65787辖区为铁路；其余候选属于道路运输。规则要求相关执勤开始前紧接至少10个连续小时休息，而路径包B的已核实事实仅有8小时，因此增加x_1=0。路径包E、F未被证据证明不合规，故不作推定性禁用。"
+  },
+  "base_ir": {
+    "model_id": "SWOR058_base",
+    "world": {
+      "decision_date": "2026-07-10",
+      "entity": "云岬航空",
+      "jurisdiction": "美国联邦民航",
+      "operation": "Part 121客运正常排班",
+      "registered_exceptions": [],
+      "candidates": [
+        {
+          "name": "A",
+          "value": 1001,
+          "dispatch_resource_points": 4,
+          "local_fact": "同一机组成员的前一飞行执勤段于22:00结束"
+        },
+        {
+          "name": "B",
+          "value": 959,
+          "dispatch_resource_points": 1,
+          "local_fact": "同一机组成员的下一飞行执勤段拟于次日06:00开始，仅间隔8小时"
+        },
+        {
+          "name": "C",
+          "value": 898,
+          "dispatch_resource_points": 2,
+          "local_fact": "基础类别"
+        },
+        {
+          "name": "D",
+          "value": 856,
+          "dispatch_resource_points": 3,
+          "local_fact": "基础类别"
+        },
+        {
+          "name": "E",
+          "value": 795,
+          "dispatch_resource_points": 4,
+          "local_fact": "包含不少于10个连续小时的休息窗口"
+        },
+        {
+          "name": "F",
+          "value": 753,
+          "dispatch_resource_points": 1,
+          "local_fact": "包含不少于10个连续小时的休息窗口"
+        }
+      ],
+      "resource_capacity": "题面未给定，故资源点仅保留为候选属性，不虚构容量约束"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1001,
+        "x_1": 959,
+        "x_2": 898,
+        "x_3": 856,
+        "x_4": 795,
+        "x_5": 753
+      }
+    },
+    "constraints": [
+      {
+        "name": "chain_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "chain_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "chain_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_backup_emergency_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-79F65EB4645DEC9C",
+        "before_expression": "基础IR没有针对Part 117最低连续休息要求的候选资格约束",
+        "after_expression": "regulatory_rest_eligibility_B: x_1 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR058_patched",
+    "world": {
+      "decision_date": "2026-07-10",
+      "entity": "云岬航空",
+      "jurisdiction": "美国联邦民航",
+      "operation": "Part 121客运正常排班",
+      "registered_exceptions": [],
+      "candidates": [
+        {
+          "name": "A",
+          "value": 1001,
+          "dispatch_resource_points": 4,
+          "local_fact": "同一机组成员的前一飞行执勤段于22:00结束"
+        },
+        {
+          "name": "B",
+          "value": 959,
+          "dispatch_resource_points": 1,
+          "local_fact": "同一机组成员的下一飞行执勤段拟于次日06:00开始，仅间隔8小时"
+        },
+        {
+          "name": "C",
+          "value": 898,
+          "dispatch_resource_points": 2,
+          "local_fact": "基础类别"
+        },
+        {
+          "name": "D",
+          "value": 856,
+          "dispatch_resource_points": 3,
+          "local_fact": "基础类别"
+        },
+        {
+          "name": "E",
+          "value": 795,
+          "dispatch_resource_points": 4,
+          "local_fact": "包含不少于10个连续小时的休息窗口"
+        },
+        {
+          "name": "F",
+          "value": 753,
+          "dispatch_resource_points": 1,
+          "local_fact": "包含不少于10个连续小时的休息窗口"
+        }
+      ],
+      "resource_capacity": "题面未给定，故资源点仅保留为候选属性，不虚构容量约束"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "采用路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1001,
+        "x_1": 959,
+        "x_2": 898,
+        "x_3": 856,
+        "x_4": 795,
+        "x_5": 753
+      }
+    },
+    "constraints": [
+      {
+        "name": "chain_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "chain_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "chain_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_backup_emergency_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "regulatory_rest_eligibility_B",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2694.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2694.0,
+    "constraint_residuals": {
+      "chain_1_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "chain_2_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "chain_3_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_backup_emergency_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "regulatory_rest_eligibility_B": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-79F65EB4645DEC9C",
+      "claim": "2026-07-10当日有效的美国联邦民航正式监管规则适用于受Part 117覆盖的Part 121客运合格证持有人及机组，并要求相关执勤开始前紧接至少10个连续小时休息。",
+      "model_slot": "constraints.regulatory_rest_eligibility_B",
+      "equation": "x_1 = 0",
+      "code_region": "constraint_data中的regulatory_rest_eligibility_B"
+    },
+    {
+      "evidence_id": "DOC-79F65EB4645DEC9C",
+      "claim": "路径包B已核实仅提供8小时相邻间隔，低于10小时门槛，因此不得进入正常排班组合；该事实属于B自身登记属性，不能通过改选第一段候选而被规避。",
+      "model_slot": "constraints.regulatory_rest_eligibility_B",
+      "equation": "1*x_1 == 0",
+      "code_region": "model.addConstr为regulatory_rest_eligibility_B生成的等式"
+    },
+    {
+      "evidence_id": "DOC-79F65EB4645DEC9C",
+      "claim": "题面确认未触发紧急运行偏离、获批疲劳风险管理替代或其他登记例外，因此合规禁用约束不设置例外变量或松弛项。",
+      "model_slot": "constraints.regulatory_rest_eligibility_B",
+      "equation": "x_1 == 0（无例外松弛变量）",
+      "code_region": "regulatory_rest_eligibility_B的右端固定为0"
+    },
+    {
+      "evidence_id": "DOC-79F65EB4645DEC9C",
+      "claim": "新增合规约束与冻结业务等式共同推出x_1=0、x_4=1、x_5=0、x_2=1；第一段按收益选择x_0=1、x_3=0，故唯一最优投影为[1,0,1,0,1,0]，目标值2694。",
+      "model_slot": "derived_optimal_solution",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(1,0,1,0,1,0), z*=1001+898+795=2694",
+      "code_region": "model.optimize及result中的objective和projected_action"
+    }
+  ],
+  "usage": {
+    "input_tokens": 25293,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6692,
+    "reasoning_output_tokens": 3594,
+    "wall_seconds": 129.13367780001136,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2694.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2694.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15328,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 478,
+          "reasoning_output_tokens": 280
+        },
+        "wall_seconds": 17.000205099990126,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 17332,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1021,
+          "reasoning_output_tokens": 611
+        },
+        "wall_seconds": 25.878052599990042,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_3",
+        "usage": {
+          "input_tokens": 19539,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 898,
+          "reasoning_output_tokens": 487
+        },
+        "wall_seconds": 25.328486100013833,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_4",
+        "usage": {
+          "input_tokens": 21747,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1159,
+          "reasoning_output_tokens": 872
+        },
+        "wall_seconds": 31.032227999996394,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 4,
+    "search_call_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,556 @@
+{
+  "task_id": "SWOR029",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据，因此无法确认任何外部规则的发布权限、决策日效力、辖区适用性、主体适用性或例外条款。不得据模型记忆补充政策；最终模型保持题面基础模型不变。"
+  },
+  "base_ir": {
+    "model_id": "SWOR029",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687,
+        "x_7": 645
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "at_least_two_core_packages",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR029",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "路径包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687,
+        "x_7": 645
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "at_least_two_core_packages",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2881.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2881.0,
+    "constraint_residuals": {
+      "segment_1_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_2_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_3_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "at_least_two_core_packages": {
+        "lhs": 3.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包A至H分别对应二元启用决策，按题面顺序排列。",
+      "model_slot": "variables; action_projection",
+      "equation": "x_i ∈ {0,1}, i=0,...,7；投影顺序为(x_0,...,x_7)",
+      "code_region": "变量创建 x 与结果字段 projected_action"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包A的收益为1015。",
+      "model_slot": "objective.terms.x_0",
+      "equation": "1015 x_0",
+      "code_region": "model.setObjective 中的 1015 * x[0]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包B的收益为954。",
+      "model_slot": "objective.terms.x_1",
+      "equation": "954 x_1",
+      "code_region": "model.setObjective 中的 954 * x[1]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包C的收益为912。",
+      "model_slot": "objective.terms.x_2",
+      "equation": "912 x_2",
+      "code_region": "model.setObjective 中的 912 * x[2]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包D的收益为851。",
+      "model_slot": "objective.terms.x_3",
+      "equation": "851 x_3",
+      "code_region": "model.setObjective 中的 851 * x[3]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包E的收益为790。",
+      "model_slot": "objective.terms.x_4",
+      "equation": "790 x_4",
+      "code_region": "model.setObjective 中的 790 * x[4]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包F的收益为748。",
+      "model_slot": "objective.terms.x_5",
+      "equation": "748 x_5",
+      "code_region": "model.setObjective 中的 748 * x[5]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包G的收益为687。",
+      "model_slot": "objective.terms.x_6",
+      "equation": "687 x_6",
+      "code_region": "model.setObjective 中的 687 * x[6]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "路径包H的收益为645。",
+      "model_slot": "objective.terms.x_7",
+      "equation": "645 x_7",
+      "code_region": "model.setObjective 中的 645 * x[7]"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "唯一目标是最大化总运输服务收益。",
+      "model_slot": "sense; single_objective; objective",
+      "equation": "max 1015x_0+954x_1+912x_2+851x_3+790x_4+748x_5+687x_6+645x_7",
+      "code_region": "model.setObjective(..., gp.GRB.MAXIMIZE)"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "运输链第1段必须且只能从路径包A、D、G中采用一个。",
+      "model_slot": "constraints.segment_1_exactly_one",
+      "equation": "x_0+x_3+x_6=1",
+      "code_region": "model.addConstr(..., name=\"segment_1_exactly_one\")"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "运输链第2段必须且只能从路径包B、E、H中采用一个。",
+      "model_slot": "constraints.segment_2_exactly_one",
+      "equation": "x_1+x_4+x_7=1",
+      "code_region": "model.addConstr(..., name=\"segment_2_exactly_one\")"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "运输链第3段必须且只能从路径包C、F中采用一个。",
+      "model_slot": "constraints.segment_3_exactly_one",
+      "equation": "x_2+x_5=1",
+      "code_region": "model.addConstr(..., name=\"segment_3_exactly_one\")"
+    },
+    {
+      "evidence_id": "TASK_STATEMENT",
+      "claim": "核心候选路径包A、B、C中至少启用两个。",
+      "model_slot": "constraints.at_least_two_core_packages",
+      "equation": "x_0+x_1+x_2≥2",
+      "code_region": "model.addConstr(..., name=\"at_least_two_core_packages\")"
+    },
+    {
+      "evidence_id": "NO_EXTERNAL_EVIDENCE",
+      "claim": "no_search 条件下没有可追溯外部证据，不能增加、删除或修改任何模型槽。",
+      "model_slot": "typed_patch.ops; patched_ir",
+      "equation": "ops=[]；patched_ir=base_ir",
+      "code_region": "代码仅直接编码未修改的基础IR"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_MODEL",
+      "claim": "最优行动为启用路径包A、B、C，其余路径包不启用；总收益为2881。",
+      "model_slot": "optimal projected_action; objective value",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5,x_6,x_7)=(1,1,1,0,0,0,0,0)；z*=1015+954+912=2881",
+      "code_region": "model.optimize() 及 JSON 结果输出"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15903,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4000,
+    "reasoning_output_tokens": 951,
+    "wall_seconds": 87.4402318999928,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2881.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2881.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

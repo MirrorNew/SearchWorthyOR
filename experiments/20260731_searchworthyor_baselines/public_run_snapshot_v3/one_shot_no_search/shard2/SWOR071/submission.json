@@ -1,0 +1,498 @@
+{
+  "task_id": "SWOR071",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "no_search 条件禁止外部搜索，且未提供任何可追溯外部证据，因此无法确认外部规则的权限、时点、辖区、主体或例外适用性；不实施补丁，patched IR 与 base IR 完全相同。该模型的最优行动为启用服务单元 A、B、C，即 [1,1,1,0,0,0,0]，目标值为 2873。"
+  },
+  "base_ir": {
+    "model_id": "SWOR071_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1006,
+        "x_1": 964,
+        "x_2": 903,
+        "x_3": 842,
+        "x_4": 800,
+        "x_5": 739,
+        "x_6": 697
+      }
+    },
+    "constraints": [
+      {
+        "name": "activate_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "emergency_coverage_A_or_B",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage_B_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage_A_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_or_backup_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR071_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1006,
+        "x_1": 964,
+        "x_2": 903,
+        "x_3": 842,
+        "x_4": 800,
+        "x_5": 739,
+        "x_6": 697
+      }
+    },
+    "constraints": [
+      {
+        "name": "activate_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "emergency_coverage_A_or_B",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage_B_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage_A_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_or_backup_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2873.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2873.0,
+    "constraint_residuals": {
+      "activate_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "emergency_coverage_A_or_B": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "continuity_coverage_B_or_C": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "specialty_coverage_A_or_C": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_or_backup_A_or_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "服务单元A至G的效用分别为1006、964、903、842、800、739、697。题面虽给出各单元资源点需求与类别，但没有给出总资源点上限或类别配额，故不得据此虚构容量或类别约束。",
+      "model_slot": "objective.terms",
+      "equation": "max 1006*x_0 + 964*x_1 + 903*x_2 + 842*x_3 + 800*x_4 + 739*x_5 + 697*x_6",
+      "code_region": "objective_coefficients and model.setObjective"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "必须启用3个医疗资源块。",
+      "model_slot": "constraints.activate_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6 = 3",
+      "code_region": "constraint_specs[0]"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "紧急服务至少由服务单元A、B中的一个覆盖。",
+      "model_slot": "constraints.emergency_coverage_A_or_B",
+      "equation": "x_0+x_1 >= 1",
+      "code_region": "constraint_specs[1]"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "连续照护至少由服务单元B、C中的一个覆盖。",
+      "model_slot": "constraints.continuity_coverage_B_or_C",
+      "equation": "x_1+x_2 >= 1",
+      "code_region": "constraint_specs[2]"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "专科服务至少由服务单元A、C中的一个覆盖。",
+      "model_slot": "constraints.specialty_coverage_A_or_C",
+      "equation": "x_0+x_2 >= 1",
+      "code_region": "constraint_specs[3]"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "第一核心候选服务单元A与备用项服务单元D中至少启用一个。",
+      "model_slot": "constraints.core_or_backup_A_or_D",
+      "equation": "x_0+x_3 >= 1",
+      "code_region": "constraint_specs[4]"
+    },
+    {
+      "evidence_id": "TASK_SWOR071",
+      "claim": "每个服务单元均为启用或不启用的二元决策。",
+      "model_slot": "variables",
+      "equation": "x_i in {0,1}, i=0,...,6",
+      "code_region": "binary variable declarations"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15853,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4785,
+    "reasoning_output_tokens": 2070,
+    "wall_seconds": 117.948298599993,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2873.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2873.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 10,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

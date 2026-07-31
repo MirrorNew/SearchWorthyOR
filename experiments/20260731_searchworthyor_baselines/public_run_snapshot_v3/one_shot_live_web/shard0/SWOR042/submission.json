@@ -1,0 +1,482 @@
+{
+  "task_id": "SWOR042",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:dol.gov 29 CFR 785.19 bona fide meal periods completely relieved from duty on call official ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-785/section-785.19",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-29/subtitle-B/chapter-V/subchapter-B/part-785/section-785.19"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/current/title-29 \"§ 785.19 Meal\" \"completely relieved\" ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked"
+  ],
+  "selected_urls": [
+    "https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "美国劳工部工资与工时司的官方 FLSA Fact Sheet #22 适用于按小时计酬员工的工时认定。其规则是：通常至少30分钟的用餐时段只有在员工完全脱离职责时才可不计为工作时间；任何主动或被动职责均否定完全脱离。班次A把同一时段登记为不计工时，班次B却要求员工在该时段待命并随时复工，因此二者不能同时按题面方式实施，新增 x_0+x_1<=1。班次B单独启用时可作为计酬工作时间，故不将其禁用；E、F明确提供完全脱离职责或替补覆盖，不触发该限制。没有证据支持改变其他目标、变量或基础约束。补丁后最优解为班次B、C、D，投影动作[0,1,1,1,0,0]，目标值2716。"
+  },
+  "base_ir": {
+    "model_id": "SWOR042_base",
+    "world": "星桥现场服务排班；美国联邦FLSA；决策时点2026-04-16",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "cover_period_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "cover_period_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "cover_period_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked",
+        "before_expression": "TRUE",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR042_patched",
+    "world": "星桥现场服务排班；美国联邦FLSA；决策时点2026-04-16",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "cover_period_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "cover_period_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "cover_period_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "policy_unpaid_meal_no_oncall",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2716.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2716.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "cover_period_1": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "cover_period_2": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "cover_period_3": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_A_or_backup_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "policy_unpaid_meal_no_oncall": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.dol.gov/agencies/whd/fact-sheets/22-flsa-hours-worked",
+      "claim": "FLSA下，通常至少30分钟的用餐时段只有在员工完全脱离职责时才可不计为工作时间；要求员工承担任何主动或被动职责均不属于完全脱离。由于班次A把该时段登记为不计工时，而班次B在同一时段要求待命并随时复工，二者不能同时按题面方式启用。",
+      "model_slot": "constraints.policy_unpaid_meal_no_oncall",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "m.addConstr(x[0] + x[1] <= 1, name=\"policy_unpaid_meal_no_oncall\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 111109,
+    "cached_input_tokens": 71936,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6251,
+    "reasoning_output_tokens": 3505,
+    "wall_seconds": 155.0178620999941,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 3
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2716.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2716.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 3
+    },
+    "gold_available_to_model": false
+  }
+}

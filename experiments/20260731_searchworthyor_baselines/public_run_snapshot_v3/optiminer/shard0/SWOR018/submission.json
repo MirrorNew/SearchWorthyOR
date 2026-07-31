@@ -1,0 +1,670 @@
+{
+  "task_id": "SWOR018",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "青屿清洁能源环境有限公司 岚桥单元 2026年3月5日 东岚经营辖区 能源与环境方案 并网资源点 基础类别 保障类别1 保障类别2 清洁能力 备用能力 第二核心候选 备用项 末端应急项 启用资格 数量上限 容量约束 互斥 强制启用 条件例外 收益最大化",
+      "reason": "当前无外部证据，尚不能裁决决策日有效规则的权威性、时点效力、辖区覆盖、主体适用性及例外。尤其缺少可能改变方案可选变量及其取值域、类别触发的强制/禁用或互斥条件、清洁与备用能力作用域、并网资源约束以及目标结构的政策规则，因此必须检索。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0BD8B5B623E1B586",
+          "score": 141.09020939198336
+        },
+        {
+          "rank": 2,
+          "id": "DOC-516535004C06A5C3",
+          "score": 141.09020939198336
+        },
+        {
+          "rank": 3,
+          "id": "DOC-C60CCE43FCEE8C8B",
+          "score": 139.25783415249413
+        },
+        {
+          "rank": 4,
+          "id": "DOC-9B64F075A0C94986",
+          "score": 126.5231271062153
+        },
+        {
+          "rank": 5,
+          "id": "DOC-B70C4DDB1AAD2133",
+          "score": 118.26081727094419
+        }
+      ]
+    },
+    {
+      "query": "青屿清洁能源环境有限公司 岚桥单元 2026年3月5日 东岚经营辖区 正式能源与环境组合决策 基础类别 保障类别1 保障类别2 方案启用资格 禁止启用 强制启用 类别联动 条件触发 互斥 共存 清洁能力 备用能力 并网资源点 容量上限 单元数量上限 收益目标 应急例外",
+      "reason": "第1轮已找到一份在决策日有效、辖区与主体均匹配且无书面应急例外的正式规则，可确定最终组合新增“能源方案F、G至少启用一个”的约束；过期、异辖区及异主体文件均可排除。但现有结果只覆盖保障选项最低纳入要求，尚不能排除同一适用层级还存在会改变基础类别与保障类别的启用资格或变量域、类别联动的强制/禁用/互斥条件、清洁与备用能力口径、并网资源及数量约束作用域，或将单目标改造成分层/附条件目标的并行有效规则。为达到事实上的穷尽性，需进行一次面向这些未解决结构槽位的补充语义检索。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0BD8B5B623E1B586",
+          "score": 137.7513662033803
+        },
+        {
+          "rank": 2,
+          "id": "DOC-516535004C06A5C3",
+          "score": 137.7513662033803
+        },
+        {
+          "rank": 3,
+          "id": "DOC-C60CCE43FCEE8C8B",
+          "score": 135.91899096389108
+        },
+        {
+          "rank": 4,
+          "id": "DOC-9B64F075A0C94986",
+          "score": 123.18428391761222
+        },
+        {
+          "rank": 5,
+          "id": "DOC-B70C4DDB1AAD2133",
+          "score": 114.92197408234111
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-516535004C06A5C3"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-516535004C06A5C3属于正式监管来源，在决策日2026-03-05处于2025-12-05至2027-03-05的有效期内，适用于东岚经营辖区（合成）及指定青屿清洁能源环境有限公司岚桥单元，且未激活书面应急例外，故唯一适用。DOC-0BD8B5B623E1B586已于2026-03-04届满；其余候选分别存在辖区或主体不匹配。适用规则新增x_5+x_6>=1。结合基础约束可推出x_6=0、x_5=1，并须从x_1与x_4中恰选一个、从x_0与x_3中至少选一个；容量约束排除含x_3的组合。唯一最优行动为[1,1,0,0,0,1,0]，即启用A、B、F，目标值2706，并网资源点占用5。"
+  },
+  "base_ir": {
+    "model_id": "SWOR018_base",
+    "world": "public_task_base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_max_units",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_grid_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3
+        }
+      },
+      {
+        "name": "c_clean_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_backup_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_exactly_one_core_backup_emergency",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-516535004C06A5C3",
+        "before_expression": "ABSENT",
+        "after_expression": "x_5 + x_6 >= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR018_patched",
+    "world": "applicable_policy_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_max_units",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_grid_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3
+        }
+      },
+      {
+        "name": "c_clean_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_backup_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_exactly_one_core_backup_emergency",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_policy_safeguard_option",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_5": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2706.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 1.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2706.0,
+    "constraint_residuals": {
+      "c_max_units": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "c_grid_capacity": {
+        "lhs": 5.0,
+        "sense": "<=",
+        "rhs": 6.0,
+        "violation": 0.0
+      },
+      "c_clean_capability": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_backup_capability": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_exactly_one_core_backup_emergency": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_policy_safeguard_option": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-516535004C06A5C3",
+      "claim": "最终组合必须至少包含能源方案F、能源方案G中的一个保障选项。",
+      "model_slot": "constraints.c_policy_safeguard_option",
+      "equation": "x_5 + x_6 >= 1",
+      "code_region": "constraints列表中的c_policy_safeguard_option及其model.addConstr构造分支"
+    }
+  ],
+  "usage": {
+    "input_tokens": 21309,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4097,
+    "reasoning_output_tokens": 1451,
+    "wall_seconds": 94.06620689999545,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2706.0,
+        "projected_action": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2706.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 1.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15327,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 371,
+          "reasoning_output_tokens": 160
+        },
+        "wall_seconds": 16.6711484999978,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 16922,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 518,
+          "reasoning_output_tokens": 210
+        },
+        "wall_seconds": 27.132668100006413,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_3",
+        "usage": {
+          "input_tokens": 18618,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 402,
+          "reasoning_output_tokens": 98
+        },
+        "wall_seconds": 17.827585400023963,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 3,
+    "search_call_count": 2
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,641 @@
+{
+  "task_id": "SWOR049",
+  "baseline": "optimus_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡信产业投资管理有限公司（东岚经营辖区（合成）岚桥单元） 东岚经营辖区（合成） 2026-03-05",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0DD8481571202C8C",
+          "score": 91.93484848746834
+        },
+        {
+          "rank": 2,
+          "id": "DOC-CB71B08E2DBBEF42",
+          "score": 91.93484848746834
+        },
+        {
+          "rank": 3,
+          "id": "DOC-2751C1DC7FBCADFC",
+          "score": 88.46257163588214
+        },
+        {
+          "rank": 4,
+          "id": "DOC-907A33FD8834BF81",
+          "score": 78.38985455825507
+        },
+        {
+          "rank": 5,
+          "id": "DOC-04CED0DC68DD6A24",
+          "score": 70.9434364279493
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-CB71B08E2DBBEF42"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-CB71B08E2DBBEF42（SHA-256: 1525ccabecb1722c852eda231e1e7edf375bcb26245500c33c03a58d88c1dbe0）：其为正式监管来源，2026-03-05处于2025-12-05至2027-03-05的有效期内，辖区和责任主体完全匹配，且未激活书面应急例外。DOC-0DD8481571202C8C已于2026-03-04失效；DOC-2751C1DC7FBCADFC辖区不符；DOC-907A33FD8834BF81和DOC-04CED0DC68DD6A24主体不符。故不存在适用来源冲突。"
+  },
+  "base_ir": {
+    "model_id": "SWOR049_base",
+    "world": "衡信产业投资管理有限公司（东岚经营辖区（合成）岚桥单元）在2026-03-05的金融与组合选择计划",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1003,
+        "x_1": 961,
+        "x_2": 900,
+        "x_3": 858,
+        "x_4": 797,
+        "x_5": 736
+      }
+    },
+    "constraints": [
+      {
+        "name": "required_position_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "capital_capacity",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2
+        }
+      },
+      {
+        "name": "risk_capacity",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5
+        }
+      },
+      {
+        "name": "exact_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-CB71B08E2DBBEF42",
+        "before_expression": null,
+        "after_expression": {
+          "name": "policy_A_trigger_forbids_B",
+          "sense": "<=",
+          "rhs": 1,
+          "terms": {
+            "x_0": 1,
+            "x_1": 1
+          }
+        }
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR049_patched",
+    "world": "衡信产业投资管理有限公司（东岚经营辖区（合成）岚桥单元）在2026-03-05的金融与组合选择计划",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1003,
+        "x_1": 961,
+        "x_2": 900,
+        "x_3": 858,
+        "x_4": 797,
+        "x_5": 736
+      }
+    },
+    "constraints": [
+      {
+        "name": "required_position_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "capital_capacity",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2
+        }
+      },
+      {
+        "name": "risk_capacity",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5
+        }
+      },
+      {
+        "name": "exact_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "policy_A_trigger_forbids_B",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2719.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2719.0,
+    "constraint_residuals": {
+      "required_position_count": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "capital_capacity": {
+        "lhs": 9.0,
+        "sense": "<=",
+        "rhs": 12.0,
+        "violation": 0.0
+      },
+      "risk_capacity": {
+        "lhs": 7.0,
+        "sense": "<=",
+        "rhs": 15.0,
+        "violation": 0.0
+      },
+      "exact_one_B_E_F": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "policy_A_trigger_forbids_B": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK-SWOR049",
+      "claim": "唯一目标是最大化所选策略包的总风险调整收益。",
+      "model_slot": "objective",
+      "equation": "max 1003*x_0 + 961*x_1 + 900*x_2 + 858*x_3 + 797*x_4 + 736*x_5",
+      "code_region": "OBJECTIVE"
+    },
+    {
+      "evidence_id": "TASK-SWOR049",
+      "claim": "组合必须恰好持有3个策略头寸。",
+      "model_slot": "constraints.required_position_count",
+      "equation": "x_0 + x_1 + x_2 + x_3 + x_4 + x_5 == 3",
+      "code_region": "BASE_REQUIRED_POSITION_COUNT"
+    },
+    {
+      "evidence_id": "TASK-SWOR049",
+      "claim": "总资本占用不得超过12点。",
+      "model_slot": "constraints.capital_capacity",
+      "equation": "x_0 + 2*x_1 + 3*x_2 + 4*x_3 + x_4 + 2*x_5 <= 12",
+      "code_region": "BASE_CAPITAL_CAPACITY"
+    },
+    {
+      "evidence_id": "TASK-SWOR049",
+      "claim": "组合风险点数不得超过15点。",
+      "model_slot": "constraints.risk_capacity",
+      "equation": "5*x_0 + 2*x_1 + 4*x_2 + x_3 + 3*x_4 + 5*x_5 <= 15",
+      "code_region": "BASE_RISK_CAPACITY"
+    },
+    {
+      "evidence_id": "TASK-SWOR049",
+      "claim": "策略包B、E、F中恰好启用一个。",
+      "model_slot": "constraints.exact_one_B_E_F",
+      "equation": "x_1 + x_4 + x_5 == 1",
+      "code_region": "BASE_EXACT_ONE_B_E_F"
+    },
+    {
+      "evidence_id": "DOC-CB71B08E2DBBEF42",
+      "claim": "策略包A触发合规分支，且策略包B在该分支中不可采用。",
+      "model_slot": "constraints.policy_A_trigger_forbids_B",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "POLICY_DOC_CB71B08E2DBBEF42"
+    },
+    {
+      "evidence_id": "DERIVED-BY-MILP",
+      "claim": "补丁后模型的唯一最优组合为策略包B、C、D。",
+      "model_slot": "solution.projected_action",
+      "equation": "[x_0,x_1,x_2,x_3,x_4,x_5] = [0,1,1,1,0,0]; objective = 2719; capital = 9; risk = 7",
+      "code_region": "RESULT_EXTRACTION"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18841,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4303,
+    "reasoning_output_tokens": 1463,
+    "wall_seconds": 92.51112999999896,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "integrality_violation": 0.0,
+        "max_constraint_violation": 0.0,
+        "objective": 2719.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "status": "OPTIMAL"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2719.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 7,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "optimus_parameters",
+        "usage": {
+          "input_tokens": 33530,
+          "cached_input_tokens": 28160,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3489,
+          "reasoning_output_tokens": 2365
+        },
+        "wall_seconds": 88.06847070000367,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 2,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 2,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_objective",
+        "usage": {
+          "input_tokens": 17401,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 36,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 8.35953950000112,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_constraints",
+        "usage": {
+          "input_tokens": 17440,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 319,
+          "reasoning_output_tokens": 73
+        },
+        "wall_seconds": 12.801210600009654,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

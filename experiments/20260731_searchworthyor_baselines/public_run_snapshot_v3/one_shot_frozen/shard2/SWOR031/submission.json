@@ -1,0 +1,608 @@
+{
+  "task_id": "SWOR031",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "联岬通信服务有限公司（南浦经营辖区（合成）星湾单元） 南浦经营辖区（合成） 2026-03-26",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-4F670F9356A3E2D7",
+          "score": 76.37437098266753
+        },
+        {
+          "rank": 2,
+          "id": "DOC-82B25BAC834CA2C8",
+          "score": 76.37437098266753
+        },
+        {
+          "rank": 3,
+          "id": "DOC-AB81699459C7EECB",
+          "score": 73.03764504724377
+        },
+        {
+          "rank": 4,
+          "id": "DOC-656EE092D99286FB",
+          "score": 62.856504130300415
+        },
+        {
+          "rank": 5,
+          "id": "DOC-EE0529CF0A4B31F1",
+          "score": 58.50992764257057
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-82B25BAC834CA2C8"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-82B25BAC834CA2C8属于正式监管来源，有效期为2025-12-26至2027-03-26，覆盖决策日2026-03-26；其辖区与主体均与本任务精确一致，且未激活书面应急例外。DOC-4F670F9356A3E2D7已于2026-03-25失效；其余候选存在辖区或主体不匹配。因此仅该证据具有约束力。"
+  },
+  "base_ir": {
+    "model_id": "SWOR031_base",
+    "world": "联岬通信服务有限公司（南浦经营辖区（合成）星湾单元）于2026-03-26确定通信与服务系统组合",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_max_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_zone_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_zone_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_zone_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "c_core_at_least_two",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-82B25BAC834CA2C8",
+        "before_expression": "<absent>",
+        "after_expression": "c_policy_A_ineligible: x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR031_patched",
+    "world": "联岬通信服务有限公司（南浦经营辖区（合成）星湾单元）于2026-03-26确定通信与服务系统组合",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_max_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_zone_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_zone_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_zone_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "c_core_at_least_two",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "c_policy_A_ineligible",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2717.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2717.0,
+    "constraint_residuals": {
+      "c_max_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "c_zone_1": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_zone_2": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_zone_3": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_A_requires_B_or_E": {
+        "lhs": -1.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "c_core_at_least_two": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      },
+      "c_policy_A_ineligible": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "各服务模块的启用状态为二元决策，收益依次为1015、954、912、851、790、748、687，并最大化总收益。题面没有给出资源总容量，因此资源占用数据不产生容量约束。",
+      "model_slot": "variables; objective",
+      "equation": "x_i∈{0,1} (i=0,…,6); max 1015x_0+954x_1+912x_2+851x_3+790x_4+748x_5+687x_6",
+      "code_region": "VARIABLES; OBJECTIVE"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "最多启用3个通信服务模块。",
+      "model_slot": "constraints.c_max_modules",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6<=3",
+      "code_region": "C_BASE_01_MAX_MODULES"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区1至少由A、D、G中的一个模块连通。",
+      "model_slot": "constraints.c_zone_1",
+      "equation": "x_0+x_3+x_6>=1",
+      "code_region": "C_BASE_02_ZONE_1"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区2至少由B、E中的一个模块连通。",
+      "model_slot": "constraints.c_zone_2",
+      "equation": "x_1+x_4>=1",
+      "code_region": "C_BASE_03_ZONE_2"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区3至少由C、F中的一个模块连通。",
+      "model_slot": "constraints.c_zone_3",
+      "equation": "x_2+x_5>=1",
+      "code_region": "C_BASE_04_ZONE_3"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "启用A时必须同时启用B或E。",
+      "model_slot": "constraints.c_A_requires_B_or_E",
+      "equation": "x_0-x_1-x_4<=0",
+      "code_region": "C_BASE_05_A_REQUIRES_BACKHAUL"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "A、B、C中至少启用两个。",
+      "model_slot": "constraints.c_core_at_least_two",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "C_BASE_06_CORE_CANDIDATES"
+    },
+    {
+      "evidence_id": "DOC-82B25BAC834CA2C8",
+      "claim": "服务模块A在本次主体、辖区和决策日下不具备采用资格。",
+      "model_slot": "constraints.c_policy_A_ineligible",
+      "equation": "x_0==0",
+      "code_region": "C_PATCH_01_DOC_82B25BAC834CA2C8"
+    },
+    {
+      "evidence_id": "DERIVED_OPTIMUM",
+      "claim": "在x_0=0后，核心候选约束强制x_1=x_2=1；通信区1还须在D与G中选择一个。受最多3个模块约束，应选择收益较高的D。",
+      "model_slot": "optimal_solution; action_projection",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5,x_6)=(0,1,1,1,0,0,0); z*=954+912+851=2717",
+      "code_region": "model.optimize; result"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17642,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4942,
+    "reasoning_output_tokens": 1685,
+    "wall_seconds": 100.9497599999886,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2717.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "selected_modules": [
+          "服务模块B",
+          "服务模块C",
+          "服务模块D"
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2717.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

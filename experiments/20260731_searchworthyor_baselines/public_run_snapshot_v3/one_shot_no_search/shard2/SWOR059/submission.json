@@ -1,0 +1,533 @@
+{
+  "task_id": "SWOR059",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据，无法证明候选政策具有正式权限或覆盖当前实体、辖区、决策时点及路径运输活动。因此不采纳任何外部规则，typed patch 为空，patched IR 与 base IR 完全相同。基础模型的最优行动为依次选择路径包A、B、C，即 [1,1,1,0,0,0]，目标值为 2855。资源点数据仅作为冻结候选事实保留；题面未给出资源总量上限，故不得臆造资源容量约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR059_base",
+    "world": {
+      "decision_time": "2026-04-14",
+      "entity": "澄舟综合运输有限公司（西川经营辖区（合成）澄岳单元）",
+      "jurisdiction": "西川经营辖区（合成）",
+      "activity": "路径与运输决策",
+      "candidate_facts": [
+        {
+          "candidate": "路径包A",
+          "benefit": 1000,
+          "resource_points": 1,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包B",
+          "benefit": 958,
+          "resource_points": 2,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包C",
+          "benefit": 897,
+          "resource_points": 3,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包D",
+          "benefit": 855,
+          "resource_points": 4,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包E",
+          "benefit": 794,
+          "resource_points": 1,
+          "category": "保障类别1"
+        },
+        {
+          "candidate": "路径包F",
+          "benefit": 752,
+          "resource_points": 2,
+          "category": "保障类别2"
+        }
+      ],
+      "policy_evidence_state": "no_search; no external evidence provided"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752
+      }
+    },
+    "constraints": [
+      {
+        "name": "transport_chain_segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "transport_chain_segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "transport_chain_segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR059_base",
+    "world": {
+      "decision_time": "2026-04-14",
+      "entity": "澄舟综合运输有限公司（西川经营辖区（合成）澄岳单元）",
+      "jurisdiction": "西川经营辖区（合成）",
+      "activity": "路径与运输决策",
+      "candidate_facts": [
+        {
+          "candidate": "路径包A",
+          "benefit": 1000,
+          "resource_points": 1,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包B",
+          "benefit": 958,
+          "resource_points": 2,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包C",
+          "benefit": 897,
+          "resource_points": 3,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包D",
+          "benefit": 855,
+          "resource_points": 4,
+          "category": "基础类别"
+        },
+        {
+          "candidate": "路径包E",
+          "benefit": 794,
+          "resource_points": 1,
+          "category": "保障类别1"
+        },
+        {
+          "candidate": "路径包F",
+          "benefit": 752,
+          "resource_points": 2,
+          "category": "保障类别2"
+        }
+      ],
+      "policy_evidence_state": "no_search; no external evidence provided"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752
+      }
+    },
+    "constraints": [
+      {
+        "name": "transport_chain_segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "transport_chain_segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "transport_chain_segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2855.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2855.0,
+    "constraint_residuals": {
+      "transport_chain_segment_1_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "transport_chain_segment_2_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "transport_chain_segment_3_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包A的收益为1000、资源占用为1调度资源点、属性为基础类别。",
+      "model_slot": "world.candidate_facts[0]; objective.terms.x_0",
+      "equation": "目标函数包含1000*x_0；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[0]; objective_coeffs[x_0]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包B的收益为958、资源需求为2调度资源点、属性为基础类别。",
+      "model_slot": "world.candidate_facts[1]; objective.terms.x_1",
+      "equation": "目标函数包含958*x_1；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[1]; objective_coeffs[x_1]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包C的收益为897、资源需求为3调度资源点、属性为基础类别。",
+      "model_slot": "world.candidate_facts[2]; objective.terms.x_2",
+      "equation": "目标函数包含897*x_2；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[2]; objective_coeffs[x_2]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包D的效用为855、资源需求为4调度资源点、属性为基础类别。",
+      "model_slot": "world.candidate_facts[3]; objective.terms.x_3",
+      "equation": "目标函数包含855*x_3；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[3]; objective_coeffs[x_3]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包E的收益为794、资源占用为1调度资源点、属性为保障类别1。",
+      "model_slot": "world.candidate_facts[4]; objective.terms.x_4",
+      "equation": "目标函数包含794*x_4；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[4]; objective_coeffs[x_4]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "路径包F的收益为752、资源需求为2调度资源点、属性为保障类别2。",
+      "model_slot": "world.candidate_facts[5]; objective.terms.x_5",
+      "equation": "目标函数包含752*x_5；资源与类别作为冻结事实保留，因无资源上限或适用政策而不产生额外约束。",
+      "code_region": "[BASE_DATA] candidate_facts[5]; objective_coeffs[x_5]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "运输链第1段必须且只能从路径包A、路径包D中选择一个。",
+      "model_slot": "constraints.transport_chain_segment_1_exactly_one",
+      "equation": "x_0 + x_3 = 1",
+      "code_region": "[CONSTRAINT_SEGMENT_1]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "运输链第2段必须且只能从路径包B、路径包E中选择一个。",
+      "model_slot": "constraints.transport_chain_segment_2_exactly_one",
+      "equation": "x_1 + x_4 = 1",
+      "code_region": "[CONSTRAINT_SEGMENT_2]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "运输链第3段必须且只能从路径包C、路径包F中选择一个。",
+      "model_slot": "constraints.transport_chain_segment_3_exactly_one",
+      "equation": "x_2 + x_5 = 1",
+      "code_region": "[CONSTRAINT_SEGMENT_3]"
+    },
+    {
+      "evidence_id": "BASE_TASK_STIPULATION",
+      "claim": "唯一目标是最大化总运输服务收益。",
+      "model_slot": "sense; single_objective; objective",
+      "equation": "max z = 1000*x_0 + 958*x_1 + 897*x_2 + 855*x_3 + 794*x_4 + 752*x_5",
+      "code_region": "[OBJECTIVE]"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_BASE_MODEL",
+      "claim": "最优行动按A、B、C、D、E、F顺序为[1,1,1,0,0,0]，最优目标值为2855。",
+      "model_slot": "solution.projected_action; solution.objective",
+      "equation": "x*=(1,1,1,0,0,0), z*=1000+958+897=2855",
+      "code_region": "[SOLVE_AND_REPORT]"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15816,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5751,
+    "reasoning_output_tokens": 2070,
+    "wall_seconds": 113.78267590000178,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": 2,
+        "objective": 2855.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2855.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 8,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

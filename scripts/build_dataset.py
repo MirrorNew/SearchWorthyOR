@@ -2541,8 +2541,17 @@ def refresh_manifest(root: Path, build_summary: dict[str, Any]) -> dict[str, Any
         relative = path.relative_to(root).as_posix()
         if (
             relative in exclusions
+            or path.relative_to(root).parts[0]
+            in {".git", ".pytest_cache", "staging"}
             or "__pycache__" in path.parts
             or path.suffix == ".pyc"
+            or (
+                path.relative_to(root).parts[0] == "reports"
+                and (
+                    path.name == "release_gate.json"
+                    or path.name.endswith((".stdout.txt", ".stderr.txt"))
+                )
+            )
         ):
             continue
         files[relative] = {

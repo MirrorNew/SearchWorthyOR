@@ -1,0 +1,616 @@
+{
+  "task_id": "SWOR027",
+  "baseline": "optimus_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "麦辰多仓供应链有限公司（星港经营辖区（合成）镜川单元） 星港经营辖区（合成） 2026-07-09",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0689088A852569BC",
+          "score": 88.80953807020036
+        },
+        {
+          "rank": 2,
+          "id": "DOC-51870D5511BAACB6",
+          "score": 88.80953807020036
+        },
+        {
+          "rank": 3,
+          "id": "DOC-9B6389B5F64DFF49",
+          "score": 85.67264233400294
+        },
+        {
+          "rank": 4,
+          "id": "DOC-EC92DB0AA8999F8A",
+          "score": 72.99375907080614
+        },
+        {
+          "rank": 5,
+          "id": "DOC-26CD724EE25AD233",
+          "score": 57.67214750272652
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-51870D5511BAACB6"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-51870D5511BAACB6：其属于正式监管来源，有效期 2026-04-10 至 2027-07-09 覆盖决策日 2026-07-09，辖区、主体及正式组合决策业务均匹配，且未激活书面应急例外。DOC-0689088A852569BC 于 2026-07-08 失效；DOC-9B6389B5F64DFF49 辖区不符；DOC-EC92DB0AA8999F8A 主体不符；DOC-26CD724EE25AD233 已失效且辖区、主体均不符，故均不得改变模型。适用证据使补货包A不可选。最终最优选择为补货包B、C、D，对应行动 [0,1,1,1,0,0,0,0]，最大总保供收益为 2696。"
+  },
+  "base_ir": {
+    "model_id": "SWOR027",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741,
+        "x_6": 699,
+        "x_7": 638
+      }
+    },
+    "constraints": [
+      {
+        "name": "selection_count_exact",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "front_plan_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "back_plan_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "core_candidate_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-51870D5511BAACB6",
+        "before_expression": "true",
+        "after_expression": "x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR027",
+    "world": "evidence_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "补货包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741,
+        "x_6": 699,
+        "x_7": 638
+      }
+    },
+    "constraints": [
+      {
+        "name": "selection_count_exact",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "front_plan_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "back_plan_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "core_candidate_minimum",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "evidence_package_A_ineligible",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2696.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": -0.0,
+      "x_5": -0.0,
+      "x_6": -0.0,
+      "x_7": -0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2696.0,
+    "constraint_residuals": {
+      "selection_count_exact": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "front_plan_minimum": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "back_plan_minimum": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_candidate_minimum": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "evidence_package_A_ineligible": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-51870D5511BAACB6",
+      "claim": "补货包A在本主体、星港经营辖区及2026-07-09决策日下不具备采用资格，且无已激活的书面应急例外。",
+      "model_slot": "constraints.evidence_package_A_ineligible",
+      "equation": "x_0 = 0",
+      "code_region": "model.addConstr(x[0] == 0, name=\"evidence_package_A_ineligible\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 19708,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4485,
+    "reasoning_output_tokens": 2029,
+    "wall_seconds": 90.70051049999893,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2696.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2696.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 14,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "optimus_parameters",
+        "usage": {
+          "input_tokens": 16640,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 2689,
+          "reasoning_output_tokens": 697
+        },
+        "wall_seconds": 55.94729619999998,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_objective",
+        "usage": {
+          "input_tokens": 18268,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 37,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.425034399988363,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_constraints",
+        "usage": {
+          "input_tokens": 18307,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 477,
+          "reasoning_output_tokens": 226
+        },
+        "wall_seconds": 15.784752300009131,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

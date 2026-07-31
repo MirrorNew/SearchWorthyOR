@@ -1,0 +1,644 @@
+{
+  "task_id": "SWOR017",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡川多工序制造有限公司 2026年5月29日 海桥经营辖区 生产与容量规划资源重排 生产模式 基础类别 保障类别 设备容量 适用规则与例外",
+      "reason": "当前没有任何外部证据，尚无法裁决决策日有效的规则权威性、辖区适用性、主体及生产活动覆盖范围，也无法确认“保障类别1/2”是否引入强制启用、配额、互斥例外、条件约束或目标优先级等结构变化；需要按自然实体、日期、辖区和业务语义检索适用政策。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0194F4191AADFDFA",
+          "score": 68.81228258759548
+        },
+        {
+          "rank": 2,
+          "id": "DOC-5600FCFD7B819836",
+          "score": 68.81228258759548
+        },
+        {
+          "rank": 3,
+          "id": "DOC-50900DDC3339527A",
+          "score": 67.0845158583542
+        },
+        {
+          "rank": 4,
+          "id": "DOC-589C6184F362B090",
+          "score": 65.76679383919517
+        },
+        {
+          "rank": 5,
+          "id": "DOC-71AF15DC2E6BAF51",
+          "score": 65.76679383919517
+        }
+      ]
+    },
+    {
+      "query": "衡川多工序制造有限公司 2026年5月29日 海桥经营辖区 生产与容量规划资源重排 保障类别1 保障类别2 正式组合决策 强制保障 配额 互斥例外 条件约束 目标优先级 应急例外",
+      "reason": "现有证据已唯一支持一项当日适用的结构规则：DOC-0194F4191AADFDFA具备正式监管权限，覆盖决策日、海桥经营辖区及该主体，且未激活书面应急例外，因此可建模为条件约束 x_A≤1−x_B（即启用A时禁止B）；其余命中文件因过期、辖区不符或主体不符而不适用。但尚未排除同一时点、辖区和主体下存在另一项共同适用规则，尤其模式G、H分别登记为保障类别1、2，可能引入强制保障、最低配额、现有互斥关系的例外、条件作用域或目标优先级。该槽位会改变约束或目标结构，需进行一次针对保障类别语义的自然检索后才能停止。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-589C6184F362B090",
+          "score": 70.66429718017444
+        },
+        {
+          "rank": 2,
+          "id": "DOC-71AF15DC2E6BAF51",
+          "score": 70.66429718017444
+        },
+        {
+          "rank": 3,
+          "id": "DOC-DDD4CD502DCF00F6",
+          "score": 70.66429718017444
+        },
+        {
+          "rank": 4,
+          "id": "DOC-0194F4191AADFDFA",
+          "score": 66.818274581252
+        },
+        {
+          "rank": 5,
+          "id": "DOC-5600FCFD7B819836",
+          "score": 66.818274581252
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-0194F4191AADFDFA"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-0194F4191AADFDFA为正式监管来源，有效期2026-02-28至2027-05-29覆盖决策日2026-05-29，辖区与主体均精确匹配，且书面应急例外未激活。其余候选分别因截至2026-05-28已失效、辖区不符或主体不符而排除；云岭主体的保障规则不得跨主体、跨辖区类推。因此唯一适用的结构变化是模式A启用时禁止模式B。"
+  },
+  "base_ir": {
+    "model_id": "SWOR017",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696,
+        "x_7": 635
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 8,
+        "terms": {
+          "x_0": 3,
+          "x_1": 4,
+          "x_2": 1,
+          "x_3": 2,
+          "x_4": 3,
+          "x_5": 4,
+          "x_6": 1,
+          "x_7": 2
+        }
+      },
+      {
+        "name": "terminal_backup_mutex",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_6": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-0194F4191AADFDFA",
+        "before_expression": "absent",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR017",
+    "world": "patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696,
+        "x_7": 635
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 8,
+        "terms": {
+          "x_0": 3,
+          "x_1": 4,
+          "x_2": 1,
+          "x_3": 2,
+          "x_4": 3,
+          "x_5": 4,
+          "x_6": 1,
+          "x_7": 2
+        }
+      },
+      {
+        "name": "terminal_backup_mutex",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "external_A_excludes_B",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2748.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": -0.0,
+      "x_5": -0.0,
+      "x_6": -0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2748.0,
+    "constraint_residuals": {
+      "max_three_modes": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "equipment_capacity": {
+        "lhs": 6.0,
+        "sense": "<=",
+        "rhs": 8.0,
+        "violation": 0.0
+      },
+      "terminal_backup_mutex": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "external_A_excludes_B": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-0194F4191AADFDFA",
+      "claim": "在匹配的主体、海桥经营辖区及2026-05-29决策日内，且无已激活书面应急例外时，启用模式A将触发合规分支并禁止采用模式B。",
+      "model_slot": "constraints.external_A_excludes_B",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "model.addConstr(x[0] + x[1] <= 1, name=\"external_A_excludes_B\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 21376,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3167,
+    "reasoning_output_tokens": 1034,
+    "wall_seconds": 63.04486860000179,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2748.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2748.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 67,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15252,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 284,
+          "reasoning_output_tokens": 122
+        },
+        "wall_seconds": 13.838042899995344,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 16758,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 526,
+          "reasoning_output_tokens": 242
+        },
+        "wall_seconds": 17.2989284999785,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_3",
+        "usage": {
+          "input_tokens": 18389,
+          "cached_input_tokens": 14080,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 489,
+          "reasoning_output_tokens": 192
+        },
+        "wall_seconds": 15.945798100001412,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 3,
+    "search_call_count": 2
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

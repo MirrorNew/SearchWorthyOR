@@ -1,0 +1,744 @@
+{
+  "task_id": "SWOR013",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "FMCSA official current 2026-06-20 United States federal interstate property-carrying commercial motor vehicle driver 8 cumulative hours driving 30 consecutive minute non-driving interruption short-haul bees livestock explosives exceptions",
+      "reason": "尚无可追溯官方证据，无法唯一确定决策时点有效的联邦规则文本、适用主体、8小时触发条件、合格30分钟非驾驶中断的定义及所列例外；这些规则可能改变匹配A、B、G、H之间的条件约束与可行域。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-5FFD5E5BAC9CABC1",
+          "score": 30.188132655705367
+        },
+        {
+          "rank": 2,
+          "id": "DOC-9D36C639E00A3644",
+          "score": 30.188132655705367
+        },
+        {
+          "rank": 3,
+          "id": "DOC-C0FACB043F2DB687",
+          "score": 30.188132655705367
+        },
+        {
+          "rank": 4,
+          "id": "DOC-BD60DC8FC60AF7CF",
+          "score": 24.027541298938694
+        },
+        {
+          "rank": 5,
+          "id": "DOC-2F72BEE3ABB84A46",
+          "score": 19.89625888636585
+        }
+      ]
+    },
+    {
+      "query": "Electronic Code of Federal Regulations official HTTPS current 2026-06-20 United States federal interstate property-carrying commercial motor vehicle driver hours of service more than 8 cumulative hours driving 30 consecutive minute interruption non-driving status carrier prohibition short-haul commercial bees livestock explosives escort exceptions",
+      "reason": "仍缺足以完成最终逐项绑定的可追溯槽位：现有结果虽有一个在决策日、辖区和主体上匹配的正式监管来源，并给出核心8小时/连续30分钟规则，但未呈现明确的官方HTTPS落点、完整规范上下文、合格“非驾驶状态”的范围、承运人安排义务，以及各例外的现行适用边界。另有铁路辖区误命中和被标为行业信息的同文结果，不能替代上述核验。补齐这些信息可能决定A是否必须由G或H支持、B是否排除该唯一中断时段，以及相关条件约束的准确形式。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-5FFD5E5BAC9CABC1",
+          "score": 54.16133281849146
+        },
+        {
+          "rank": 2,
+          "id": "DOC-9D36C639E00A3644",
+          "score": 54.16133281849146
+        },
+        {
+          "rank": 3,
+          "id": "DOC-C0FACB043F2DB687",
+          "score": 54.16133281849146
+        },
+        {
+          "rank": 4,
+          "id": "DOC-BD60DC8FC60AF7CF",
+          "score": 48.000741461724786
+        },
+        {
+          "rank": 5,
+          "id": "DOC-2F72BEE3ABB84A46",
+          "score": 43.62442350785109
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-C0FACB043F2DB687"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一采用 DOC-C0FACB043F2DB687：其为 Electronic Code of Federal Regulations 正式监管来源，在 2026-06-20 当日有效，适用于美国联邦州际道路运输及 property-carrying CMV 的州际财产承运人与驾驶员，且题面已核实所有列举例外均不适用。DOC-5FFD5E5BAC9CABC1 属铁路辖区；DOC-9D36C639E00A3644 与 DOC-2F72BEE3ABB84A46 被标为行业信息来源；DOC-BD60DC8FC60AF7CF 于决策日前失效，故均不采用。规则使导致累计驾驶超过8小时的 A 必须获得 G 或 H 的连续30分钟非驾驶中断支持；B 占用唯一中断时段，故与 G、H 冲突。题面未给出协调资源总容量，因此不得据资源占用数值虚构容量约束。最终唯一最优行动为 [0,1,1,1,0,0,0,0]，即选择 B、C、D，目标值 2710。"
+  },
+  "base_ir": {
+    "model_id": "SWOR013_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_3",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "DOC-C0FACB043F2DB687",
+        "before_expression": "absent",
+        "after_expression": "hos_break_required_for_A: x_0 - x_6 - x_7 <= 0"
+      },
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "DOC-C0FACB043F2DB687",
+        "before_expression": "absent",
+        "after_expression": "unique_break_slot_B_vs_G: x_1 + x_6 <= 1"
+      },
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "DOC-C0FACB043F2DB687",
+        "before_expression": "absent",
+        "after_expression": "unique_break_slot_B_vs_H: x_1 + x_7 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR013_patched",
+    "world": "evidence_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_3",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "hos_break_required_for_A",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_6": -1,
+          "x_7": -1
+        }
+      },
+      {
+        "name": "unique_break_slot_B_vs_G",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "unique_break_slot_B_vs_H",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2710.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2710.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "resource_subject_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_2": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_3": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_A_or_backup_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "hos_break_required_for_A": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "unique_break_slot_B_vs_G": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "unique_break_slot_B_vs_H": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-C0FACB043F2DB687",
+      "claim": "对本题无适用例外的州际财产运输驾驶员，若自上次合规中断后累计驾驶将超过8小时，则继续驾驶前必须有连续30分钟的驾驶状态中断；A触发该情形，G或H提供题面核实的合格非驾驶中断。",
+      "model_slot": "constraints.hos_break_required_for_A",
+      "equation": "x_0 <= x_6 + x_7",
+      "code_region": "constraint_specs: hos_break_required_for_A"
+    },
+    {
+      "evidence_id": "DOC-C0FACB043F2DB687",
+      "claim": "合规中断必须占用连续30分钟非驾驶时段；B占用同一窗口内唯一可安排的中断时段，因此B与中断方案G不能同时启用。",
+      "model_slot": "constraints.unique_break_slot_B_vs_G",
+      "equation": "x_1 + x_6 <= 1",
+      "code_region": "constraint_specs: unique_break_slot_B_vs_G"
+    },
+    {
+      "evidence_id": "DOC-C0FACB043F2DB687",
+      "claim": "B占用同一窗口内唯一可安排的中断时段，因此B与中断方案H不能同时启用；该约束虽被基础资源主体2约束蕴含，仍显式保留以实现证据追踪。",
+      "model_slot": "constraints.unique_break_slot_B_vs_H",
+      "equation": "x_1 + x_7 <= 1",
+      "code_region": "constraint_specs: unique_break_slot_B_vs_H"
+    }
+  ],
+  "usage": {
+    "input_tokens": 22617,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6453,
+    "reasoning_output_tokens": 3409,
+    "wall_seconds": 124.73581679997733,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "integrality_violation": 0.0,
+        "max_constraint_violation": 0.0,
+        "objective": 2710.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "status": "OPTIMAL"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2710.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 8,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15393,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 332,
+          "reasoning_output_tokens": 194
+        },
+        "wall_seconds": 15.548491199995624,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 17379,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 722,
+          "reasoning_output_tokens": 490
+        },
+        "wall_seconds": 25.202158100000815,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_3",
+        "usage": {
+          "input_tokens": 19463,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 634,
+          "reasoning_output_tokens": 347
+        },
+        "wall_seconds": 20.71886260001338,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 3,
+    "search_call_count": 2
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

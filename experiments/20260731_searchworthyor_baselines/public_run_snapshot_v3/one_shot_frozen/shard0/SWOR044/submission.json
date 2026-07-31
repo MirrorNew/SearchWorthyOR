@@ -1,0 +1,572 @@
+{
+  "task_id": "SWOR044",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "云岬专业任务运营有限公司（南浦经营辖区（合成）星湾单元） 南浦经营辖区（合成） 2026-03-26",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-0FAC5010D12CA6C0",
+          "score": 85.07001041129755
+        },
+        {
+          "rank": 2,
+          "id": "DOC-196C7F975A8A694A",
+          "score": 85.07001041129755
+        },
+        {
+          "rank": 3,
+          "id": "DOC-00CA14EA65212E89",
+          "score": 81.73473591774375
+        },
+        {
+          "rank": 4,
+          "id": "DOC-150C6B3882174E97",
+          "score": 71.26315263713435
+        },
+        {
+          "rank": 5,
+          "id": "DOC-3237ED3CCF9DA764",
+          "score": 67.05794025665537
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-196C7F975A8A694A"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-196C7F975A8A694A：其属于正式监管来源；有效期为2025-12-26至2027-03-26，覆盖决策日2026-03-26；辖区、责任主体及正式组合决策活动均完全匹配；题面确认未激活书面应急例外。DOC-0FAC5010D12CA6C0于2026-03-25失效，DOC-00CA14EA65212E89辖区不符，DOC-150C6B3882174E97主体不符，DOC-3237ED3CCF9DA764责任单元不符，均不采纳。补丁仅新增匹配A与匹配B不得共同启用的约束。最终最优解为匹配A、匹配C、匹配E，即 projected_action=[1,0,1,0,1,0,0]，目标值2715。协调资源占用和类别属性未附带预算或类别规则，因此不虚构相应约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR044",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741,
+        "x_6": 699
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_subject1_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_subject2_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_subject3_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_core_backup_emergency_exactly_1",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-196C7F975A8A694A",
+        "before_expression": null,
+        "after_expression": {
+          "name": "c_policy_A_B_not_joint",
+          "sense": "<=",
+          "rhs": 1,
+          "terms": {
+            "x_0": 1,
+            "x_1": 1
+          }
+        }
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR044",
+    "world": "patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741,
+        "x_6": 699
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_subject1_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_subject2_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_subject3_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_core_backup_emergency_exactly_1",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "c_policy_A_B_not_joint",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2715.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2715.0,
+    "constraint_residuals": {
+      "c_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "c_subject1_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_subject2_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_subject3_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_core_backup_emergency_exactly_1": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_policy_A_B_not_joint": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "最大化七个候选匹配的总效用。",
+      "model_slot": "objective",
+      "equation": "max 1008x_0+947x_1+905x_2+844x_3+802x_4+741x_5+699x_6",
+      "code_region": "model.setObjective(...)"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "必须完成3个分配。",
+      "model_slot": "constraints.c_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6=3",
+      "code_region": "model.addConstr(..., name=\"c_exactly_3\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "匹配A、匹配D、匹配G中至多完成一个。",
+      "model_slot": "constraints.c_subject1_at_most_1",
+      "equation": "x_0+x_3+x_6<=1",
+      "code_region": "model.addConstr(..., name=\"c_subject1_at_most_1\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "匹配B、匹配E中至多完成一个。",
+      "model_slot": "constraints.c_subject2_at_most_1",
+      "equation": "x_1+x_4<=1",
+      "code_region": "model.addConstr(..., name=\"c_subject2_at_most_1\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "匹配C、匹配F中至多完成一个。",
+      "model_slot": "constraints.c_subject3_at_most_1",
+      "equation": "x_2+x_5<=1",
+      "code_region": "model.addConstr(..., name=\"c_subject3_at_most_1\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "匹配B、匹配E、匹配G中恰好启用一个。",
+      "model_slot": "constraints.c_core_backup_emergency_exactly_1",
+      "equation": "x_1+x_4+x_6=1",
+      "code_region": "model.addConstr(..., name=\"c_core_backup_emergency_exactly_1\")"
+    },
+    {
+      "evidence_id": "DOC-196C7F975A8A694A",
+      "claim": "匹配A与匹配B不得在同一决策窗口共同启用。",
+      "model_slot": "constraints.c_policy_A_B_not_joint",
+      "equation": "x_0+x_1<=1",
+      "code_region": "model.addConstr(..., name=\"c_policy_A_B_not_joint\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17595,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4755,
+    "reasoning_output_tokens": 1811,
+    "wall_seconds": 96.99562689999584,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2715.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2715.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,657 @@
+{
+  "task_id": "SWOR068",
+  "baseline": "optimus_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "和岚医疗健康运营有限公司（北湾经营辖区（合成）晨汐单元） 北湾经营辖区（合成） 2026-02-17",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-3E95D5DEC6271BB8",
+          "score": 89.59709820041412
+        },
+        {
+          "rank": 2,
+          "id": "DOC-A63787B62B53E085",
+          "score": 89.59709820041412
+        },
+        {
+          "rank": 3,
+          "id": "DOC-5F381F98041073CD",
+          "score": 85.82983364896792
+        },
+        {
+          "rank": 4,
+          "id": "DOC-14DAFAB140BA09AE",
+          "score": 78.99202422733572
+        },
+        {
+          "rank": 5,
+          "id": "DOC-28BFB40E9E04467F",
+          "score": 54.37628836452743
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-A63787B62B53E085"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一采用 DOC-A63787B62B53E085：其为正式监管来源，有效期2025-11-19至2027-02-17覆盖决策日2026-02-17，适用辖区、发布实体和受约束主体均与本任务完全匹配，且未激活书面应急例外。DOC-3E95D5DEC6271BB8于2026-02-16失效；DOC-5F381F98041073CD辖区不匹配；DOC-14DAFAB140BA09AE实体和主体不匹配；DOC-28BFB40E9E04467F辖区、发布实体和主体均不匹配。适用规则新增 x_0+x_1<=1。最终唯一最优行动为启用A、C、D，即[1,0,1,1,0,0]，目标值2757。"
+  },
+  "base_ir": {
+    "model_id": "SWOR068_base",
+    "world": {
+      "decision_date": "2026-02-17",
+      "entity": "和岚医疗健康运营有限公司（北湾经营辖区（合成）晨汐单元）",
+      "jurisdiction": "北湾经营辖区（合成）",
+      "candidates": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-A63787B62B53E085",
+        "before_expression": null,
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR068_patched",
+    "world": {
+      "decision_date": "2026-02-17",
+      "entity": "和岚医疗健康运营有限公司（北湾经营辖区（合成）晨汐单元）",
+      "jurisdiction": "北湾经营辖区（合成）",
+      "candidates": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "compliance_A_forbids_B",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2757.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2757.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "emergency_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "continuity_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "specialty_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_minimum": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      },
+      "compliance_A_forbids_B": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "最大化所启用服务单元的总服务效用。",
+      "model_slot": "objective",
+      "equation": "max 1008x_0+947x_1+905x_2+844x_3+802x_4+741x_5",
+      "code_region": "patched_ir.objective and model.setObjective"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "必须恰好启用3个服务单元。",
+      "model_slot": "constraints.select_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5=3",
+      "code_region": "patched_ir.constraints[select_exactly_3]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "紧急服务至少由A、B之一覆盖。",
+      "model_slot": "constraints.emergency_coverage",
+      "equation": "x_0+x_1>=1",
+      "code_region": "patched_ir.constraints[emergency_coverage]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "连续照护至少由B、C之一覆盖。",
+      "model_slot": "constraints.continuity_coverage",
+      "equation": "x_1+x_2>=1",
+      "code_region": "patched_ir.constraints[continuity_coverage]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "专科服务至少由A、C之一覆盖。",
+      "model_slot": "constraints.specialty_coverage",
+      "equation": "x_0+x_2>=1",
+      "code_region": "patched_ir.constraints[specialty_coverage]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "A、B、C中至少启用两个。",
+      "model_slot": "constraints.core_minimum",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "patched_ir.constraints[core_minimum]"
+    },
+    {
+      "evidence_id": "DOC-A63787B62B53E085",
+      "claim": "启用A触发合规分支，在该分支中B不可采用。",
+      "model_slot": "constraints.compliance_A_forbids_B",
+      "equation": "x_0+x_1<=1",
+      "code_region": "patched_ir.constraints[compliance_A_forbids_B]"
+    },
+    {
+      "evidence_id": "DOC-A63787B62B53E085",
+      "claim": "加入适用规则并保留全部冻结基础结构后，唯一最优行动是启用A、C、D。",
+      "model_slot": "action_projection",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(1,0,1,1,0,0), objective=2757",
+      "code_region": "model.optimize and projected_action construction"
+    }
+  ],
+  "usage": {
+    "input_tokens": 20258,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5281,
+    "reasoning_output_tokens": 1887,
+    "wall_seconds": 104.61758900000132,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2757.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2757.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "optimus_parameters",
+        "usage": {
+          "input_tokens": 33427,
+          "cached_input_tokens": 28160,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 4607,
+          "reasoning_output_tokens": 1984
+        },
+        "wall_seconds": 93.77142710000044,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 2,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_objective",
+        "usage": {
+          "input_tokens": 18738,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 38,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 7.45914819999598,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_constraints",
+        "usage": {
+          "input_tokens": 18777,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 402,
+          "reasoning_output_tokens": 146
+        },
+        "wall_seconds": 14.902613399986876,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

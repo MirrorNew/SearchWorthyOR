@@ -1,0 +1,618 @@
+{
+  "task_id": "SWOR036",
+  "baseline": "optimus_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡川多工序制造有限公司（南浦经营辖区（合成）星湾单元） 南浦经营辖区（合成） 2026-03-26",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-92A6963B4805A54C",
+          "score": 88.70572542804068
+        },
+        {
+          "rank": 2,
+          "id": "DOC-E77927F9FA0CA366",
+          "score": 88.70572542804068
+        },
+        {
+          "rank": 3,
+          "id": "DOC-04DF77E2C98E4D37",
+          "score": 85.36899949261692
+        },
+        {
+          "rank": 4,
+          "id": "DOC-952EAFFB79D2173A",
+          "score": 76.07266564592383
+        },
+        {
+          "rank": 5,
+          "id": "DOC-90BC71D7E19E3F1A",
+          "score": 70.94652156916904
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-E77927F9FA0CA366"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-E77927F9FA0CA366 属正式监管来源，有效期为 2025-12-26 至 2027-03-26，匹配决策日 2026-03-26、南浦经营辖区（合成）及指定主体，且题面明确未激活书面应急例外，因此是唯一适用证据。DOC-92A6963B4805A54C 已于 2026-03-25 失效；DOC-04DF77E2C98E4D37 辖区不匹配；DOC-952EAFFB79D2173A 与 DOC-90BC71D7E19E3F1A 主体不匹配。适用规则要求模式A不得启用。最终最优行动为启用模式B和C，即 [0,1,1,0,0,0]，目标值 1854，占用容量5，启用2个模式。"
+  },
+  "base_ir": {
+    "model_id": "SWOR036",
+    "world": {
+      "decision_date": "2026-03-26",
+      "entity": "衡川多工序制造有限公司（南浦经营辖区（合成）星湾单元）",
+      "jurisdiction": "南浦经营辖区（合成）",
+      "mode_order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1009,
+        "x_1": 948,
+        "x_2": 906,
+        "x_3": 845,
+        "x_4": 803,
+        "x_5": 742
+      }
+    },
+    "constraints": [
+      {
+        "name": "maximum_enabled_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2
+        }
+      },
+      {
+        "name": "exactly_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "linear_constraint",
+        "evidence_id": "DOC-E77927F9FA0CA366",
+        "before_expression": "constraint absent",
+        "after_expression": "x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR036",
+    "world": {
+      "decision_date": "2026-03-26",
+      "entity": "衡川多工序制造有限公司（南浦经营辖区（合成）星湾单元）",
+      "jurisdiction": "南浦经营辖区（合成）",
+      "mode_order": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "F"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1009,
+        "x_1": 948,
+        "x_2": 906,
+        "x_3": 845,
+        "x_4": 803,
+        "x_5": 742
+      }
+    },
+    "constraints": [
+      {
+        "name": "maximum_enabled_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2
+        }
+      },
+      {
+        "name": "exactly_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "mode_A_ineligible",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 1854.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 1854.0,
+    "constraint_residuals": {
+      "maximum_enabled_modes": {
+        "lhs": 2.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "equipment_capacity": {
+        "lhs": 5.0,
+        "sense": "<=",
+        "rhs": 6.0,
+        "violation": 0.0
+      },
+      "exactly_one_B_E_F": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "mode_A_ineligible": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK-SWOR036",
+      "claim": "最多启用3个生产模式",
+      "model_slot": "constraints.maximum_enabled_modes",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5 <= 3",
+      "code_region": "REGION_BASE_CONSTRAINTS"
+    },
+    {
+      "evidence_id": "TASK-SWOR036",
+      "claim": "设备容量总占用不得超过6",
+      "model_slot": "constraints.equipment_capacity",
+      "equation": "x_0+2x_1+3x_2+4x_3+x_4+2x_5 <= 6",
+      "code_region": "REGION_BASE_CONSTRAINTS"
+    },
+    {
+      "evidence_id": "TASK-SWOR036",
+      "claim": "模式B、模式E与模式F中恰好启用一个",
+      "model_slot": "constraints.exactly_one_B_E_F",
+      "equation": "x_1+x_4+x_5 == 1",
+      "code_region": "REGION_BASE_CONSTRAINTS"
+    },
+    {
+      "evidence_id": "TASK-SWOR036",
+      "claim": "最大化已启用模式的总价值贡献",
+      "model_slot": "objective",
+      "equation": "max 1009x_0+948x_1+906x_2+845x_3+803x_4+742x_5",
+      "code_region": "REGION_OBJECTIVE"
+    },
+    {
+      "evidence_id": "DOC-E77927F9FA0CA366",
+      "claim": "模式A在指定主体、辖区和决策日不具备采用资格",
+      "model_slot": "constraints.mode_A_ineligible",
+      "equation": "x_0 == 0",
+      "code_region": "REGION_EVIDENCE_PATCH_DOC_E77927F9FA0CA366"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_PATCHED_MODEL",
+      "claim": "最优行动是启用模式B和C，目标值为1854",
+      "model_slot": "solution.projected_action",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(0,1,1,0,0,0), z*=1854",
+      "code_region": "REGION_SOLVE_AND_REPORT"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18437,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4504,
+    "reasoning_output_tokens": 1905,
+    "wall_seconds": 102.88984980000532,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 1854.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 1854.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 9,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "optimus_parameters",
+        "usage": {
+          "input_tokens": 16516,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 1232,
+          "reasoning_output_tokens": 422
+        },
+        "wall_seconds": 29.67067209997913,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_objective",
+        "usage": {
+          "input_tokens": 17080,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 39,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 6.547521100001177,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_constraints",
+        "usage": {
+          "input_tokens": 17119,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 365,
+          "reasoning_output_tokens": 208
+        },
+        "wall_seconds": 15.719566099985968,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,483 @@
+{
+  "task_id": "SWOR095",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据，因此无法核验外部规则的权威性、2026-03-05 时点效力、东岚经营辖区适用性、主体适用性或例外。不得依据模型记忆补充政策；不生成补丁，patched IR 与 base IR 完全相同。"
+  },
+  "base_ir": {
+    "model_id": "SWOR095",
+    "world": {
+      "decision_time": "2026-03-05",
+      "entity": "澄舟综合运输有限公司（东岚经营辖区（合成）岚桥单元）",
+      "jurisdiction": "东岚经营辖区（合成）",
+      "activity": "路径与运输计划"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750,
+        "x_6": 689
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "terminal_reserves_incompatible",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_5": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR095",
+    "world": {
+      "decision_time": "2026-03-05",
+      "entity": "澄舟综合运输有限公司（东岚经营辖区（合成）岚桥单元）",
+      "jurisdiction": "东岚经营辖区（合成）",
+      "activity": "路径与运输计划"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750,
+        "x_6": 689
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "terminal_reserves_incompatible",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_5": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2868.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2868.0,
+    "constraint_residuals": {
+      "segment_1_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_2_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_3_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "terminal_reserves_incompatible": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "路径包A至G的收益依次为1017、956、895、853、792、750、689；模型最大化所选路径包的总收益。",
+      "model_slot": "objective.terms",
+      "equation": "max 1017x_0 + 956x_1 + 895x_2 + 853x_3 + 792x_4 + 750x_5 + 689x_6",
+      "code_region": "OBJECTIVE_TERMS"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "每个候选路径包仅有启用或不启用两种状态。",
+      "model_slot": "variables[*].vartype/lb/ub",
+      "equation": "x_i in {0,1}, i=0,...,6",
+      "code_region": "VARIABLES"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "运输链第1段必须且只能从路径包A、D、G中采用一个。",
+      "model_slot": "constraints.segment_1_exactly_one",
+      "equation": "x_0 + x_3 + x_6 = 1",
+      "code_region": "SEGMENT_1_EXACTLY_ONE"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "运输链第2段必须且只能从路径包B、E中采用一个。",
+      "model_slot": "constraints.segment_2_exactly_one",
+      "equation": "x_1 + x_4 = 1",
+      "code_region": "SEGMENT_2_EXACTLY_ONE"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "运输链第3段必须且只能从路径包C、F中采用一个。",
+      "model_slot": "constraints.segment_3_exactly_one",
+      "equation": "x_2 + x_5 = 1",
+      "code_region": "SEGMENT_3_EXACTLY_ONE"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "末端备用候选路径包F与G不得同时启用。",
+      "model_slot": "constraints.terminal_reserves_incompatible",
+      "equation": "x_5 + x_6 <= 1",
+      "code_region": "TERMINAL_RESERVES_INCOMPATIBLE"
+    },
+    {
+      "evidence_id": "NO_EXTERNAL_EVIDENCE",
+      "claim": "未提供可核验的外部规则，不能生成外部政策补丁。",
+      "model_slot": "typed_patch.ops",
+      "equation": "ops = []；patched_ir = base_ir",
+      "code_region": "无外部规则代码区域"
+    },
+    {
+      "evidence_id": "MODEL_SOLUTION",
+      "claim": "最终模型的最优行动为启用路径包A、B、C，其余不启用。",
+      "model_slot": "action_projection",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5,x_6)=(1,1,1,0,0,0,0)，目标值=2868",
+      "code_region": "求解器输出 projected_action 与 objective"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15879,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3738,
+    "reasoning_output_tokens": 1034,
+    "wall_seconds": 76.83469600000535,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2868.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2868.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 10,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

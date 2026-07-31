@@ -1,0 +1,5 @@
+{
+  "status": "submission_precedes_transport_failure",
+  "submission_retained": true,
+  "stale_failure_file_ignored": "failure.json"
+}

@@ -1,0 +1,510 @@
+{
+  "task_id": "SWOR008",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "净陆重型车队与站点网络（合成场景，公共服务车辆网络运营人） 美国联邦清洁重型车辆项目 2024-06-15",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-791FC48A31989884",
+          "score": 145.25266996119353
+        },
+        {
+          "rank": 2,
+          "id": "DOC-98A140C73E5E45D3",
+          "score": 145.25266996119353
+        },
+        {
+          "rank": 3,
+          "id": "DOC-A2E3D710FE9DBFE9",
+          "score": 145.25266996119353
+        },
+        {
+          "rank": 4,
+          "id": "DOC-2C51513FB3FA90C2",
+          "score": 133.55048756574396
+        },
+        {
+          "rank": 5,
+          "id": "DOC-34B03ACC3974A866",
+          "score": 69.87491221987625
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-A2E3D710FE9DBFE9"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一采用 DOC-A2E3D710FE9DBFE9：其为 EPA 正式监管来源，在决策日 2024-06-15 有效，辖区为美国联邦清洁重型车辆项目，主体范围覆盖以合格重型车辆置换零排放车辆并配置基础设施的申请人，且题面事实未触发例外。DOC-791FC48A31989884 已于 2024-06-14 失效；DOC-98A140C73E5E45D3 的权限属性仅为行业信息来源；DOC-2C51513FB3FA90C2 属于清洁轻型车辆项目；DOC-34B03ACC3974A866 属于联邦税收及充能财产规则。适用规则要求被替换车辆按项目指南处置。节点 A 将指定柴油车作为替换资产，而节点 B 要求该同一车辆在项目期后继续在役，两项不可同时启用，因此增加 x_0+x_1<=1。资源点虽是核实属性，但题面未给出资源上限，不能虚构容量约束。最终最优行动为 [0,1,1,1,0,0,0]，即启用 B、C、D，目标值 2701。"
+  },
+  "base_ir": {
+    "model_id": "SWOR008_base",
+    "world": {
+      "decision_time": "2024-06-15",
+      "entity": "净陆重型车队与站点网络（合成场景，公共服务车辆网络运营人）",
+      "jurisdiction": "美国联邦清洁重型车辆项目"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1016,
+        "x_1": 955,
+        "x_2": 894,
+        "x_3": 852,
+        "x_4": 791,
+        "x_5": 749,
+        "x_6": 688
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_G",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-A2E3D710FE9DBFE9",
+        "before_expression": "ABSENT",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR008_patched",
+    "world": {
+      "decision_time": "2024-06-15",
+      "entity": "净陆重型车队与站点网络（合成场景，公共服务车辆网络运营人）",
+      "jurisdiction": "美国联邦清洁重型车辆项目"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用节点G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1016,
+        "x_1": 955,
+        "x_2": 894,
+        "x_3": 852,
+        "x_4": 791,
+        "x_5": 749,
+        "x_6": 688
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_G",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "replacement_vehicle_disposition_incompatibility",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2701.0,
+    "assignment": {
+      "x_0": -0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": -0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2701.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "service_area_1_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "service_area_2_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "exactly_one_B_E_G": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "replacement_vehicle_disposition_incompatibility": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-A2E3D710FE9DBFE9",
+      "claim": "项目申请人必须用合格且可比的零排放车辆替换合格车辆，并按项目指南处置现有被替换车辆。节点A把指定的EMY 2010柴油重型车辆登记为替换资产；节点B则要求同一对应车辆在项目执行期后继续在役，因此A与B不能同时启用。",
+      "model_slot": "constraints.replacement_vehicle_disposition_incompatibility",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "constraint_specs 中 replacement_vehicle_disposition_incompatibility 条目及其 addConstr 构造循环"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18181,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5506,
+    "reasoning_output_tokens": 2705,
+    "wall_seconds": 129.5112569000048,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2701.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2701.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 12,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

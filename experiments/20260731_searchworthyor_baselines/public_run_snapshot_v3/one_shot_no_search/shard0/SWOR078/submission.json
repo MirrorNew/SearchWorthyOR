@@ -1,0 +1,520 @@
+{
+  "task_id": "SWOR078",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据；因此无法核验权威性、生效时点、辖区、主体或例外，不得据模型记忆猜测政策。最终模型不作政策补丁，patched_ir 与 base_ir 完全相同。"
+  },
+  "base_ir": {
+    "model_id": "SWOR078",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_enabled_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "communication_zone_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "communication_zone_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "communication_zone_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "module_A_requires_B_or_E",
+        "sense": ">=",
+        "rhs": 0,
+        "terms": {
+          "x_0": -1,
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "modules_E_F_mutually_exclusive",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR078",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_enabled_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "communication_zone_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "communication_zone_2",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "communication_zone_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "module_A_requires_B_or_E",
+        "sense": ">=",
+        "rhs": 0,
+        "terms": {
+          "x_0": -1,
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "modules_E_F_mutually_exclusive",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2868.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2868.0,
+    "constraint_residuals": {
+      "max_enabled_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "communication_zone_1": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "communication_zone_2": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "communication_zone_3": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "module_A_requires_B_or_E": {
+        "lhs": 0.0,
+        "sense": ">=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "modules_E_F_mutually_exclusive": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "这是单目标最大化问题；各模块效用依次为1017、956、895、853、792、750。",
+      "model_slot": "sense; single_objective; objective",
+      "equation": "max 1017*x_0 + 956*x_1 + 895*x_2 + 853*x_3 + 792*x_4 + 750*x_5",
+      "code_region": "objective"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "各候选模块为启用或不启用的0-1决策，且行动按A至F顺序投影。",
+      "model_slot": "variables; action_projection",
+      "equation": "x_i in {0,1}, i=0,...,5; action=(x_0,x_1,x_2,x_3,x_4,x_5)",
+      "code_region": "variables"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "最多启用3个通信服务模块。",
+      "model_slot": "constraints.max_enabled_modules",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5 <= 3",
+      "code_region": "constraint:max_enabled_modules"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "通信区1至少由服务模块A、服务模块D中的一个模块连通。",
+      "model_slot": "constraints.communication_zone_1",
+      "equation": "x_0+x_3 >= 1",
+      "code_region": "constraint:communication_zone_1"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "通信区2至少由服务模块B、服务模块E中的一个模块连通。",
+      "model_slot": "constraints.communication_zone_2",
+      "equation": "x_1+x_4 >= 1",
+      "code_region": "constraint:communication_zone_2"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "通信区3至少由服务模块C、服务模块F中的一个模块连通。",
+      "model_slot": "constraints.communication_zone_3",
+      "equation": "x_2+x_5 >= 1",
+      "code_region": "constraint:communication_zone_3"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "启用服务模块A时，必须同时启用服务模块B或服务模块E。",
+      "model_slot": "constraints.module_A_requires_B_or_E",
+      "equation": "-x_0+x_1+x_4 >= 0",
+      "code_region": "constraint:module_A_requires_B_or_E"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "服务模块E、服务模块F不得同时启用。",
+      "model_slot": "constraints.modules_E_F_mutually_exclusive",
+      "equation": "x_4+x_5 <= 1",
+      "code_region": "constraint:modules_E_F_mutually_exclusive"
+    },
+    {
+      "evidence_id": "NO_EXTERNAL_EVIDENCE",
+      "claim": "no_search 条件下没有可用于修改基础模型的外部政策证据。",
+      "model_slot": "typed_patch.ops",
+      "equation": "ops=[]; patched_ir=base_ir",
+      "code_region": "no policy patch applied"
+    },
+    {
+      "evidence_id": "TASK_INPUT",
+      "claim": "最优行动为启用服务模块A、B、C，不启用D、E、F。",
+      "model_slot": "action_projection solution",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(1,1,1,0,0,0); objective=2868",
+      "code_region": "model.optimize and result serialization"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15867,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3755,
+    "reasoning_output_tokens": 943,
+    "wall_seconds": 75.0879913999961,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2868.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2868.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

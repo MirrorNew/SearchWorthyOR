@@ -1,0 +1,563 @@
+{
+  "task_id": "SWOR092",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:lni.wa.gov workers rights rest breaks 10 minutes four hours Washington official ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "site:app.leg.wa.gov RCW 49.12.187 meal rest period construction trades collective bargaining official ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-092",
+    "https://app.leg.wa.gov/documents/Laws/WACArchive/2025/pdf/WAC%20296%20-126%20%20CHAPTER/WAC%20296%20-126%20-092.pdf",
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126&dispo=true&full=true",
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-130",
+    "https://www.lni.wa.gov/workers-rights/_docs/esc6.1.pdf"
+  ],
+  "selected_urls": [
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-092",
+    "https://app.leg.wa.gov/documents/Laws/WACArchive/2025/pdf/WAC%20296%20-126%20%20CHAPTER/WAC%20296%20-126%20-092.pdf",
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126&dispo=true&full=true",
+    "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-130",
+    "https://www.lni.wa.gov/workers-rights/_docs/esc6.1.pdf"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "华盛顿州法典编纂机关的 WAC 296-126-092 是直接规则来源；2025 官方归档与当前规则历史均显示第(4)-(5)款自 1976 年制定后未发生影响本题的变更，故在 2026-06-08 有效。WAC 296-126-001 及 L&I ES.C.6.1 表明规则覆盖华盛顿州内普通成年非农业员工；题面排除了未成年人、农业、医疗特殊场景和获批变通安排，且没有可构成等价间歇休息的其他空档。连续四小时工作触发至少十分钟、免除工作职责的休息要求，因此增加 x_5+x_6>=1。该约束表达排班模型可控制的休息安排；休息应在雇主计薪时间内并按规则在不迟于第三工作小时、尽可能接近中点安排。基础最优行动为[A,B,C]、目标值2855；补丁后最优行动为[A,B,F]、目标值2710。关键工时点只有占用系数而没有给定容量或上限，不能据此虚构资源约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR092",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "cover_period_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "cover_period_2_frozen",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "cover_period_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_G",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-092",
+        "before_expression": "absent",
+        "after_expression": "wa_paid_rest_break_for_four_hours: x_5 + x_6 >= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR092",
+    "world": "patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "cover_period_1",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "cover_period_2_frozen",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "cover_period_3",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_G",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "wa_paid_rest_break_for_four_hours",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_5": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2710.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 1.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2710.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "cover_period_1": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "cover_period_2_frozen": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "cover_period_3": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "exactly_one_B_E_G": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "wa_paid_rest_break_for_four_hours": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "唯一目标为最大化七个班次块的总覆盖收益。",
+      "model_slot": "objective",
+      "equation": "max 1000x_0+958x_1+897x_2+855x_3+794x_4+752x_5+691x_6",
+      "code_region": "OBJECTIVE_TOTAL_COVERAGE"
+    },
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "本轮必须启用三个班次块。",
+      "model_slot": "constraints.select_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6=3",
+      "code_region": "BASE_SELECT_EXACTLY_3"
+    },
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "时段1至少由A、D、G之一覆盖。",
+      "model_slot": "constraints.cover_period_1",
+      "equation": "x_0+x_3+x_6>=1",
+      "code_region": "BASE_COVER_PERIOD_1"
+    },
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "时段2至少由B、E之一覆盖。",
+      "model_slot": "constraints.cover_period_2_frozen",
+      "equation": "x_1+x_4>=1",
+      "code_region": "BASE_COVER_PERIOD_2_FROZEN"
+    },
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "时段3至少由C、F之一覆盖。",
+      "model_slot": "constraints.cover_period_3",
+      "equation": "x_2+x_5>=1",
+      "code_region": "BASE_COVER_PERIOD_3"
+    },
+    {
+      "evidence_id": "TASK_SWOR092",
+      "claim": "B、E、G中恰好启用一个。",
+      "model_slot": "constraints.exactly_one_B_E_G",
+      "equation": "x_1+x_4+x_6=1",
+      "code_region": "BASE_EXACTLY_ONE_B_E_G"
+    },
+    {
+      "evidence_id": "https://app.leg.wa.gov/wac/default.aspx?cite=296-126-092",
+      "claim": "WAC 296-126-092(4)要求每四小时工作时间至少提供十分钟休息；第(5)款只在存在合计等价十分钟的间歇休息时免除完整定时休息。题面排除该例外，且只有F、G记录了连续十分钟免除任务的安排。",
+      "model_slot": "constraints.wa_paid_rest_break_for_four_hours",
+      "equation": "x_5+x_6>=1",
+      "code_region": "PATCH_WAC_296_126_092_REST_BREAK"
+    },
+    {
+      "evidence_id": "https://www.lni.wa.gov/workers-rights/_docs/esc6.1.pdf",
+      "claim": "L&I ES.C.6.1 将休息定义为停止工作职责，并说明普通成年非农业员工不得放弃该休息；这支持把F、G而非A、B识别为本题的合格排班见证。",
+      "model_slot": "constraints.wa_paid_rest_break_for_four_hours",
+      "equation": "x_5+x_6>=1",
+      "code_region": "PATCH_WAC_296_126_092_REST_BREAK"
+    }
+  ],
+  "usage": {
+    "input_tokens": 129698,
+    "cached_input_tokens": 86016,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8182,
+    "reasoning_output_tokens": 4556,
+    "wall_seconds": 313.4899970999977,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 3
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2710.0,
+        "projected_action": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2710.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 1.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 4,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 3
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,801 @@
+{
+  "task_id": "SWOR081",
+  "baseline": "optimus_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "和岚医疗健康运营有限公司（星港经营辖区（合成）镜川单元） 星港经营辖区（合成） 2026-07-09",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-00B3F353BD21C1A0",
+          "score": 84.70962701182648
+        },
+        {
+          "rank": 2,
+          "id": "DOC-7715EAB0BB73824F",
+          "score": 84.70962701182648
+        },
+        {
+          "rank": 3,
+          "id": "DOC-B1F9CC69F5874FED",
+          "score": 81.96354246420468
+        },
+        {
+          "rank": 4,
+          "id": "DOC-AE66C3D5410DD764",
+          "score": 74.61824801385106
+        },
+        {
+          "rank": 5,
+          "id": "DOC-0F3E6D6A9D343F33",
+          "score": 65.59671776262344
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-7715EAB0BB73824F"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为DOC-7715EAB0BB73824F：其属于正式监管来源，有效期2026-04-10至2027-07-09覆盖决策日2026-07-09，辖区与星港经营辖区（合成）一致，主体与和岚医疗健康运营有限公司（星港经营辖区（合成）镜川单元）一致，且未激活书面应急例外。DOC-00B3F353BD21C1A0于2026-07-08失效；DOC-B1F9CC69F5874FED辖区不符；DOC-AE66C3D5410DD764主体不符；DOC-0F3E6D6A9D343F33主体及负责单元不符，均不得改变模型。"
+  },
+  "base_ir": {
+    "model_id": "SWOR081_base",
+    "world": {
+      "decision_date": "2026-07-09",
+      "entity": "和岚医疗健康运营有限公司（星港经营辖区（合成）镜川单元）",
+      "jurisdiction": "星港经营辖区（合成）",
+      "business_activity": "医疗资源配置组合",
+      "candidates": [
+        {
+          "semantic_name": "服务单元A",
+          "benefit": 1017,
+          "clinical_resource_usage": 4,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元B",
+          "benefit": 956,
+          "clinical_resource_usage": 1,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元C",
+          "benefit": 895,
+          "clinical_resource_usage": 2,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元D",
+          "benefit": 853,
+          "clinical_resource_usage": 3,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元E",
+          "benefit": 792,
+          "clinical_resource_usage": 4,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元F",
+          "benefit": 750,
+          "clinical_resource_usage": 1,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元G",
+          "benefit": 689,
+          "clinical_resource_usage": 2,
+          "business_attribute": "保障类别1"
+        },
+        {
+          "semantic_name": "服务单元H",
+          "benefit": 647,
+          "clinical_resource_usage": 3,
+          "business_attribute": "保障类别2"
+        }
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750,
+        "x_6": 689,
+        "x_7": 647
+      }
+    },
+    "constraints": [
+      {
+        "name": "enabled_count_eq",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-7715EAB0BB73824F",
+        "before_expression": "ABSENT",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR081_patched",
+    "world": {
+      "decision_date": "2026-07-09",
+      "entity": "和岚医疗健康运营有限公司（星港经营辖区（合成）镜川单元）",
+      "jurisdiction": "星港经营辖区（合成）",
+      "business_activity": "医疗资源配置组合",
+      "candidates": [
+        {
+          "semantic_name": "服务单元A",
+          "benefit": 1017,
+          "clinical_resource_usage": 4,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元B",
+          "benefit": 956,
+          "clinical_resource_usage": 1,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元C",
+          "benefit": 895,
+          "clinical_resource_usage": 2,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元D",
+          "benefit": 853,
+          "clinical_resource_usage": 3,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元E",
+          "benefit": 792,
+          "clinical_resource_usage": 4,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元F",
+          "benefit": 750,
+          "clinical_resource_usage": 1,
+          "business_attribute": "基础类别"
+        },
+        {
+          "semantic_name": "服务单元G",
+          "benefit": 689,
+          "clinical_resource_usage": 2,
+          "business_attribute": "保障类别1"
+        },
+        {
+          "semantic_name": "服务单元H",
+          "benefit": 647,
+          "clinical_resource_usage": 3,
+          "business_attribute": "保障类别2"
+        }
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1017,
+        "x_1": 956,
+        "x_2": 895,
+        "x_3": 853,
+        "x_4": 792,
+        "x_5": 750,
+        "x_6": 689,
+        "x_7": 647
+      }
+    },
+    "constraints": [
+      {
+        "name": "enabled_count_eq",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "policy_ab_mutex",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2765.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2765.0,
+    "constraint_residuals": {
+      "enabled_count_eq": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "emergency_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "continuity_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "specialty_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_minimum": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      },
+      "policy_ab_mutex": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "最大化已启用服务单元的总收益。",
+      "model_slot": "objective",
+      "equation": "max 1017*x_0 + 956*x_1 + 895*x_2 + 853*x_3 + 792*x_4 + 750*x_5 + 689*x_6 + 647*x_7",
+      "code_region": "model.setObjective"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "必须恰好启用3个服务单元。",
+      "model_slot": "constraints.enabled_count_eq",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6+x_7=3",
+      "code_region": "model.addConstr(..., name=\"enabled_count_eq\")"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "紧急服务至少由A、B之一覆盖。",
+      "model_slot": "constraints.emergency_coverage",
+      "equation": "x_0+x_1>=1",
+      "code_region": "model.addConstr(..., name=\"emergency_coverage\")"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "连续照护至少由B、C之一覆盖。",
+      "model_slot": "constraints.continuity_coverage",
+      "equation": "x_1+x_2>=1",
+      "code_region": "model.addConstr(..., name=\"continuity_coverage\")"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "专科服务至少由A、C之一覆盖。",
+      "model_slot": "constraints.specialty_coverage",
+      "equation": "x_0+x_2>=1",
+      "code_region": "model.addConstr(..., name=\"specialty_coverage\")"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "核心候选A、B、C中至少启用两个。",
+      "model_slot": "constraints.core_minimum",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "model.addConstr(..., name=\"core_minimum\")"
+    },
+    {
+      "evidence_id": "TASK-SWOR081",
+      "claim": "题面虽给出资源占用和业务类别，但未给出资源容量上限或类别配额，因此不得虚构相应限制。",
+      "model_slot": "world.candidates",
+      "equation": "no additional capacity or category constraint",
+      "code_region": "clinical_resource_usage and business_attributes declarations; no associated constraint"
+    },
+    {
+      "evidence_id": "DOC-7715EAB0BB73824F",
+      "claim": "适用政策规定服务单元A与B不得在同一决策窗口共同启用。",
+      "model_slot": "constraints.policy_ab_mutex",
+      "equation": "x_0+x_1<=1",
+      "code_region": "model.addConstr(..., name=\"policy_ab_mutex\")"
+    },
+    {
+      "evidence_id": "DOC-7715EAB0BB73824F",
+      "claim": "补丁前最优行动为A、B、C，目标值2868；加入A/B互斥后，覆盖与核心约束迫使C启用且A、B恰选一个，第三个单元选择剩余候选中收益最高的D。因A收益高于B，最终唯一最优行动为A、C、D。",
+      "model_slot": "solution",
+      "equation": "projected_action=[1,0,1,1,0,0,0,0], objective=1017+895+853=2765",
+      "code_region": "model.optimize and result JSON construction"
+    }
+  ],
+  "usage": {
+    "input_tokens": 19487,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7010,
+    "reasoning_output_tokens": 3213,
+    "wall_seconds": 160.6816933999944,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2765,
+        "projected_action": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2765.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 10,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "optimus_parameters",
+        "usage": {
+          "input_tokens": 33424,
+          "cached_input_tokens": 16128,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 3148,
+          "reasoning_output_tokens": 1351
+        },
+        "wall_seconds": 73.01144200000272,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 2,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_objective",
+        "usage": {
+          "input_tokens": 18008,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 61,
+          "reasoning_output_tokens": 0
+        },
+        "wall_seconds": 14.311370199997327,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "optimus_constraints",
+        "usage": {
+          "input_tokens": 18047,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 451,
+          "reasoning_output_tokens": 187
+        },
+        "wall_seconds": 17.661991700006183,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message"
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 3
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,754 @@
+{
+  "task_id": "SWOR099",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:ecfr.gov 7 CFR 210.10 reimbursable lunch fruit vegetable component offer versus serve ...",
+      "results": []
+    },
+    {
+      "query": "eCFR 7 CFR 210.10(a)(2) reimbursable lunch offer versus serve fruit vegetable 2026 ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-210/subpart-C/section-210.10",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-210/subpart-C/section-210.10"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/on/2026-03-25 \"§ 210.10\" ...",
+      "results": []
+    },
+    {
+      "query": "site:govinfo.gov/app/details/CFR-2025-title7-vol4 \"7 CFR § 210.10\" ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/developers/documentation/api/v1",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/developers/documentation/api/v1"
+        }
+      ]
+    },
+    {
+      "query": "https://www.ecfr.gov/api/versioner/v1/full/2026-03-25/title-7.xml?part=210 ...",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-03-25/title-7.xml?part=210 ..."
+        },
+        {
+          "rank": 2,
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-03-25/title-7.xml?part=210"
+        }
+      ]
+    },
+    {
+      "query": "https://www.ecfr.gov/api/versioner/v1/full/2026-03-25/title-7.xml",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-03-25/title-7.xml"
+        }
+      ]
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "'modified meal does not meet'",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/api/versioner/v1/versions/title-7.json",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/api/versioner/v1/versions/title-7.json"
+        }
+      ]
+    },
+    {
+      "query": "site:federalregister.gov/documents/2026 \"7 CFR Part 210\" \"Food and Nutrition Service\" ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "site:govinfo.gov/content/pkg/CFR-2026-title7-vol4/pdf/CFR-2026-title7-vol4.pdf 210.10 fruit vegetable ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title7-vol4/pdf/CFR-2025-title7-vol4.pdf",
+    "https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-210/subpart-C/section-210.10"
+  ],
+  "selected_urls": [
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title7-vol4/pdf/CFR-2025-title7-vol4.pdf",
+    "https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-210/subpart-C/section-210.10"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "官方7 CFR 210.10(b)(1)(ii)规定，每份由学生选择的可报销午餐必须包含至少一种水果或蔬菜。2025年官方CFR与决策日后的现行eCFR保留相同条文，检索未发现截至2026-03-25改变该要求的修订。主体是参加NSLP的SFA，辖区和业务对象匹配。题面未触发医疗修改餐或灾害临时豁免；仅G、H具有经核实的水果/蔬菜份额，且无计划外补充，因此增加x_6+x_7>=1。未给出仓储容量上限，资源点数据不能据此生成容量约束。最终最优行动为A、B、G，投影[1,1,0,0,0,0,1,0]，目标值2656。"
+  },
+  "base_ir": {
+    "model_id": "SWOR099",
+    "world": {
+      "decision_time": "2026-03-25",
+      "entity": "麦辰学区食品管理机构",
+      "jurisdiction": "美国联邦学校餐项目",
+      "program": "National School Lunch Program",
+      "candidates": [
+        {
+          "package": "A",
+          "utility": 1015,
+          "storage_points": 2,
+          "attribute": "普通菜单组件，本身不含水果或蔬菜"
+        },
+        {
+          "package": "B",
+          "utility": 954,
+          "storage_points": 3,
+          "attribute": "普通菜单组件，本身不含水果或蔬菜"
+        },
+        {
+          "package": "C",
+          "utility": 912,
+          "storage_points": 4,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "D",
+          "utility": 851,
+          "storage_points": 1,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "E",
+          "utility": 790,
+          "storage_points": 2,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "F",
+          "utility": 748,
+          "storage_points": 3,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "G",
+          "utility": 687,
+          "storage_points": 4,
+          "attribute": "包含一份经本地食材台账核实的水果或蔬菜"
+        },
+        {
+          "package": "H",
+          "utility": 645,
+          "storage_points": 1,
+          "attribute": "包含一份经本地食材台账核实的水果或蔬菜"
+        }
+      ],
+      "storage_capacity": null,
+      "local_facts": [
+        "每个最终组合是一份由参与NSLP的SFA提交报销的完整午餐",
+        "计划外没有其他水果或蔬菜组件"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687,
+        "x_7": 645
+      }
+    },
+    "constraints": [
+      {
+        "name": "choose_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "front_arrival_at_least_one",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "back_arrival_at_least_one",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "https://www.govinfo.gov/content/pkg/CFR-2025-title7-vol4/pdf/CFR-2025-title7-vol4.pdf",
+        "before_expression": "不存在可报销午餐的水果或蔬菜覆盖约束",
+        "after_expression": "x_6 + x_7 >= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR099",
+    "world": {
+      "decision_time": "2026-03-25",
+      "entity": "麦辰学区食品管理机构",
+      "jurisdiction": "美国联邦学校餐项目",
+      "program": "National School Lunch Program",
+      "candidates": [
+        {
+          "package": "A",
+          "utility": 1015,
+          "storage_points": 2,
+          "attribute": "普通菜单组件，本身不含水果或蔬菜"
+        },
+        {
+          "package": "B",
+          "utility": 954,
+          "storage_points": 3,
+          "attribute": "普通菜单组件，本身不含水果或蔬菜"
+        },
+        {
+          "package": "C",
+          "utility": 912,
+          "storage_points": 4,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "D",
+          "utility": 851,
+          "storage_points": 1,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "E",
+          "utility": 790,
+          "storage_points": 2,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "F",
+          "utility": 748,
+          "storage_points": 3,
+          "attribute": "基础类别"
+        },
+        {
+          "package": "G",
+          "utility": 687,
+          "storage_points": 4,
+          "attribute": "包含一份经本地食材台账核实的水果或蔬菜"
+        },
+        {
+          "package": "H",
+          "utility": 645,
+          "storage_points": 1,
+          "attribute": "包含一份经本地食材台账核实的水果或蔬菜"
+        }
+      ],
+      "storage_capacity": null,
+      "local_facts": [
+        "每个最终组合是一份由参与NSLP的SFA提交报销的完整午餐",
+        "计划外没有其他水果或蔬菜组件"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择补货包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748,
+        "x_6": 687,
+        "x_7": 645
+      }
+    },
+    "constraints": [
+      {
+        "name": "choose_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "front_arrival_at_least_one",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "back_arrival_at_least_one",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "nslp_fruit_or_vegetable_required",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_6": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2656.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": -0.0,
+      "x_4": 0.0,
+      "x_5": -0.0,
+      "x_6": 1.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2656.0,
+    "constraint_residuals": {
+      "choose_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "front_arrival_at_least_one": {
+        "lhs": 3.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "back_arrival_at_least_one": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "exactly_one_B_E_H": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "nslp_fruit_or_vegetable_required": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "prompt://SWOR099/public-task",
+      "claim": "A至H为按题面顺序排列的二元选择动作，其保供收益分别为1015、954、912、851、790、748、687、645。",
+      "model_slot": "variables; objective",
+      "equation": "x_i ∈ {0,1}; max 1015x_0+954x_1+912x_2+851x_3+790x_4+748x_5+687x_6+645x_7",
+      "code_region": "variables; objective"
+    },
+    {
+      "evidence_id": "prompt://SWOR099/public-task",
+      "claim": "必须恰好采用3个补货或供应块。",
+      "model_slot": "constraints.choose_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6+x_7=3",
+      "code_region": "constraint_specs['choose_exactly_3']"
+    },
+    {
+      "evidence_id": "prompt://SWOR099/public-task",
+      "claim": "计划前段至少安排A、B、D、G之一。",
+      "model_slot": "constraints.front_arrival_at_least_one",
+      "equation": "x_0+x_1+x_3+x_6>=1",
+      "code_region": "constraint_specs['front_arrival_at_least_one']"
+    },
+    {
+      "evidence_id": "prompt://SWOR099/public-task",
+      "claim": "计划后段至少安排B、C、E、H之一。",
+      "model_slot": "constraints.back_arrival_at_least_one",
+      "equation": "x_1+x_2+x_4+x_7>=1",
+      "code_region": "constraint_specs['back_arrival_at_least_one']"
+    },
+    {
+      "evidence_id": "prompt://SWOR099/public-task",
+      "claim": "B、E、H中恰好启用一个。",
+      "model_slot": "constraints.exactly_one_B_E_H",
+      "equation": "x_1+x_4+x_7=1",
+      "code_region": "constraint_specs['exactly_one_B_E_H']"
+    },
+    {
+      "evidence_id": "https://www.govinfo.gov/content/pkg/CFR-2025-title7-vol4/pdf/CFR-2025-title7-vol4.pdf",
+      "claim": "7 CFR 210.10(b)(1)(ii)要求每份由学生选择的可报销午餐包含至少一种水果或蔬菜；结合题面经核实的属性及无计划外水果蔬菜事实，只有G或H能够提供该覆盖。",
+      "model_slot": "constraints.nslp_fruit_or_vegetable_required",
+      "equation": "x_6+x_7>=1",
+      "code_region": "constraint_specs['nslp_fruit_or_vegetable_required']"
+    },
+    {
+      "evidence_id": "https://www.ecfr.gov/current/title-7/subtitle-B/chapter-II/subchapter-A/part-210/subpart-C/section-210.10",
+      "claim": "现行eCFR在决策日后仍保留同一可报销午餐水果或蔬菜要求，且医疗修改餐和灾害临时例外均需额外触发事实。",
+      "model_slot": "constraints.nslp_fruit_or_vegetable_required; applicability.exception_resolved",
+      "equation": "x_6+x_7>=1",
+      "code_region": "constraint_specs['nslp_fruit_or_vegetable_required']"
+    }
+  ],
+  "usage": {
+    "input_tokens": 1022100,
+    "cached_input_tokens": 912384,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 11564,
+    "reasoning_output_tokens": 6032,
+    "wall_seconds": 331.2807283000002,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 15
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2656.0,
+        "projected_action": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2656.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 1.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 17,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 15
+    },
+    "gold_available_to_model": false
+  }
+}

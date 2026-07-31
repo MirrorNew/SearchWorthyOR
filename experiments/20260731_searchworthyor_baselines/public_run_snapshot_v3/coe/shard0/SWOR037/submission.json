@@ -1,0 +1,822 @@
+{
+  "task_id": "SWOR037",
+  "baseline": "coe_inspired_cli_adapter",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "联岬通信地面机组（合成场景，加州非豁免现场员工雇主） 美国加利福尼亚州 2026-05-05",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-4A1854A60E51A543",
+          "score": 125.53788919198486
+        },
+        {
+          "rank": 2,
+          "id": "DOC-1B53EEE0074AEDA0",
+          "score": 125.14611500972434
+        },
+        {
+          "rank": 3,
+          "id": "DOC-D5BB9462982449FA",
+          "score": 125.14611500972434
+        },
+        {
+          "rank": 4,
+          "id": "DOC-787E8CE8ED550442",
+          "score": 112.25493535754075
+        },
+        {
+          "rank": 5,
+          "id": "DOC-044A2CD3B2BECDA1",
+          "score": 111.58617897413984
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": false,
+    "exception_resolved": true,
+    "reason": "没有候选证据同时通过全部采纳条件。DOC-1B53EEE0074AEDA0与DOC-D5BB9462982449FA虽为正式监管来源且在2026-05-05有效，但仅覆盖连续工作超过5小时的活动，题面只证明连续满4小时；DOC-4A1854A60E51A543还属于行业信息来源。DOC-787E8CE8ED550442虽在时点和地域上相关，但属于行业信息来源，且具体工资令覆盖及G/H与同一员工、同一工作段、同一休息窗口的关联均未证明。DOC-044A2CD3B2BECDA1于2026-05-04失效。所有候选均称本题未触发其例外，但这不能补足权限、时点或活动匹配缺口。因此不选择证据，补丁为NO-OP；在冻结证据范围内对此结论可以确定。"
+  },
+  "base_ir": {
+    "model_id": "SWOR037",
+    "world": {
+      "decision_time": "2026-05-05",
+      "entity": "联岬通信地面机组（合成场景，加州非豁免现场员工雇主）",
+      "jurisdiction": "美国加利福尼亚州"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "base_max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "base_zone_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "base_zone_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "base_zone_3_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "base_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR037",
+    "world": {
+      "decision_time": "2026-05-05",
+      "entity": "联岬通信地面机组（合成场景，加州非豁免现场员工雇主）",
+      "jurisdiction": "美国加利福尼亚州"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "base_max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "base_zone_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "base_zone_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "base_zone_3_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "base_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2875.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2875.0,
+    "constraint_residuals": {
+      "base_max_three_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "base_zone_1_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_zone_2_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_zone_3_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_A_requires_B_or_E": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "base_A_or_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "模块A至H的收益依次为1013、952、910、849、788、746、685、643。",
+      "model_slot": "objective.terms",
+      "equation": "max Z=1013x_0+952x_1+910x_2+849x_3+788x_4+746x_5+685x_6+643x_7",
+      "code_region": "OBJECTIVE_TERMS and model.setObjective"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "最多启用3个通信服务模块。",
+      "model_slot": "constraints.base_max_three_modules",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6+x_7<=3",
+      "code_region": "CONSTRAINTS[0]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "通信区1至少由A、D、G之一连通。",
+      "model_slot": "constraints.base_zone_1_coverage",
+      "equation": "x_0+x_3+x_6>=1",
+      "code_region": "CONSTRAINTS[1]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "通信区2至少由B、E、H之一连通。",
+      "model_slot": "constraints.base_zone_2_coverage",
+      "equation": "x_1+x_4+x_7>=1",
+      "code_region": "CONSTRAINTS[2]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "通信区3至少由C、F之一连通。",
+      "model_slot": "constraints.base_zone_3_coverage",
+      "equation": "x_2+x_5>=1",
+      "code_region": "CONSTRAINTS[3]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "启用A时必须同时启用B或E。",
+      "model_slot": "constraints.base_A_requires_B_or_E",
+      "equation": "x_0-x_1-x_4<=0",
+      "code_region": "CONSTRAINTS[4]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "A与D中至少启用一个。",
+      "model_slot": "constraints.base_A_or_D",
+      "equation": "x_0+x_3>=1",
+      "code_region": "CONSTRAINTS[5]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR037",
+      "claim": "题面给出模块资源占用，但未给出资源总容量。",
+      "model_slot": "none",
+      "equation": "不生成资源容量约束",
+      "code_region": "CONSTRAINTS中无资源容量行"
+    },
+    {
+      "evidence_id": "DOC-4A1854A60E51A543",
+      "claim": "行业信息来源的用餐期材料要求连续工作超过5小时；题面未证明该触发事实。",
+      "model_slot": "no_patch",
+      "equation": "Delta=empty set",
+      "code_region": "APPLIED_POLICY_EVIDENCE=[]; PATCH_OPS=[]"
+    },
+    {
+      "evidence_id": "DOC-1B53EEE0074AEDA0",
+      "claim": "正式监管材料在决策日有效，但超过5小时的主体/活动触发事实未成立。",
+      "model_slot": "no_patch",
+      "equation": "Delta=empty set",
+      "code_region": "APPLIED_POLICY_EVIDENCE=[]; PATCH_OPS=[]"
+    },
+    {
+      "evidence_id": "DOC-D5BB9462982449FA",
+      "claim": "正式监管材料在决策日有效，但重复来源不能补足超过5小时的触发事实。",
+      "model_slot": "no_patch",
+      "equation": "Delta=empty set",
+      "code_region": "APPLIED_POLICY_EVIDENCE=[]; PATCH_OPS=[]"
+    },
+    {
+      "evidence_id": "DOC-787E8CE8ED550442",
+      "claim": "四小时休息语义相关，但其规范权限、具体工资令覆盖以及G/H对同一员工、时段和窗口的替代关联未获证明。",
+      "model_slot": "no_patch",
+      "equation": "不加入x_0+x_1<=1+x_6+x_7",
+      "code_region": "CONSTRAINTS中无政策休息期约束"
+    },
+    {
+      "evidence_id": "DOC-044A2CD3B2BECDA1",
+      "claim": "正式监管来源于2026-05-04失效，不能覆盖2026-05-05决策。",
+      "model_slot": "no_patch",
+      "equation": "Delta=empty set",
+      "code_region": "APPLIED_POLICY_EVIDENCE=[]; PATCH_OPS=[]"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_PATCHED_IR",
+      "claim": "对全部256个二进制行动复核，基础暨最终模型有10个可行组合；唯一最优行动为启用A、B、C。",
+      "model_slot": "optimal_solution",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5,x_6,x_7)=(1,1,1,0,0,0,0,0), Z*=2875",
+      "code_region": "model.optimize and result serialization"
+    }
+  ],
+  "usage": {
+    "input_tokens": 25618,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7221,
+    "reasoning_output_tokens": 3278,
+    "wall_seconds": 140.93314969999483,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "applied_policy_evidence": [],
+        "integrality_violation": 0.0,
+        "max_constraint_violation": 0.0,
+        "objective": 2875.0,
+        "patch_ops": [],
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "status": "OPTIMAL"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2875.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 10,
+      "complete": true
+    },
+    "adapter_stages": [
+      {
+        "stage": "coe_ParameterExtractor",
+        "usage": {
+          "input_tokens": 162779,
+          "cached_input_tokens": 136704,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 7734,
+          "reasoning_output_tokens": 5870
+        },
+        "wall_seconds": 181.88659399998141,
+        "cli_timeout_seconds": 600,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 3,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 3,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "coe_TerminologyInterpreter",
+        "usage": {
+          "input_tokens": 132510,
+          "cached_input_tokens": 90880,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 6140,
+          "reasoning_output_tokens": 3277
+        },
+        "wall_seconds": 147.6941552000062,
+        "cli_timeout_seconds": 600,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 3,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 3,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "coe_ModelingExpert",
+        "usage": {
+          "input_tokens": 108873,
+          "cached_input_tokens": 84992,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5826,
+          "reasoning_output_tokens": 3279
+        },
+        "wall_seconds": 144.47500399997807,
+        "cli_timeout_seconds": 600,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 3,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 3,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "coe_ProgrammingExpert",
+        "usage": {
+          "input_tokens": 154273,
+          "cached_input_tokens": 111360,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5847,
+          "reasoning_output_tokens": 2871
+        },
+        "wall_seconds": 145.3318068999797,
+        "cli_timeout_seconds": 600,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 3,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 3,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "coe_CodeReviewer",
+        "usage": {
+          "input_tokens": 134187,
+          "cached_input_tokens": 113408,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 5790,
+          "reasoning_output_tokens": 4191
+        },
+        "wall_seconds": 140.7440736000135,
+        "cli_timeout_seconds": 600,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 3,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 3,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "adapter_stage_count": 5
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

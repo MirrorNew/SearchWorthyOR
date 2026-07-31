@@ -1,0 +1,564 @@
+{
+  "task_id": "SWOR080",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:irs.gov commercial clean vehicle credit business same vehicle new clean vehicle credit cannot claim both ...",
+      "results": []
+    },
+    {
+      "query": "site:uscode.house.gov commercial clean vehicle no double benefit credit allowed new clean vehicle ...",
+      "results": []
+    },
+    {
+      "query": "https://uscode.house.gov/view.xhtml?req=(title:26%20section:45W%20edition:prelim)",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://uscode.house.gov/view.xhtml?req=(title:26%20section:45W%20edition:prelim)"
+        }
+      ]
+    },
+    {
+      "query": "U.S. Code House Office of Law Revision Counsel qualified commercial clean vehicle credit no double benefit 30D ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.govinfo.gov/link/uscode/26/45W",
+    "https://www.irs.gov/instructions/i8936",
+    "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-obbb"
+  ],
+  "selected_urls": [
+    "https://www.govinfo.gov/link/uscode/26/45W",
+    "https://www.irs.gov/instructions/i8936",
+    "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-obbb"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "官方美国法典26 U.S.C. 45W(d)(3)及IRS 2025年Form 8936说明均规定：同一车辆若采用30D新清洁车辆抵免，就不能同时取得45W商业清洁车辆抵免，只能二选一。IRS关于Public Law 119-21的FAQ确认30D和45W均仅对2025-09-30之后取得的车辆终止；决策日2025-09-01尚未触发终止例外。题面明确A、B针对同一车辆，故增加x_0+x_1<=1；其他抵免资格事实不足以支持进一步删减。穷举B/E/H三个互斥分支后，最终唯一最优行动为[1,0,1,0,1,0,0,0]（A、C、E），目标值2727；资本占用10，风险点12。作为核对，基础模型最优值原为2872（A、B、C），正是新增防重复申领约束所排除的组合。"
+  },
+  "base_ir": {
+    "model_id": "SWOR080",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745,
+        "x_6": 684,
+        "x_7": 642
+      }
+    },
+    "constraints": [
+      {
+        "name": "hold_exactly_3_positions",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_occupancy_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "portfolio_risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5,
+          "x_6": 2,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "B_E_H_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.govinfo.gov/link/uscode/26/45W",
+        "before_expression": null,
+        "after_expression": {
+          "name": "federal_no_double_30D_45W_same_vehicle",
+          "sense": "<=",
+          "rhs": 1,
+          "terms": {
+            "x_0": 1,
+            "x_1": 1
+          }
+        }
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR080",
+    "world": "live_web",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745,
+        "x_6": 684,
+        "x_7": 642
+      }
+    },
+    "constraints": [
+      {
+        "name": "hold_exactly_3_positions",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_occupancy_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "portfolio_risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5,
+          "x_6": 2,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "B_E_H_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "federal_no_double_30D_45W_same_vehicle",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2727.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2727.0,
+    "constraint_residuals": {
+      "hold_exactly_3_positions": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "capital_occupancy_limit": {
+        "lhs": 10.0,
+        "sense": "<=",
+        "rhs": 12.0,
+        "violation": 0.0
+      },
+      "portfolio_risk_limit": {
+        "lhs": 12.0,
+        "sense": "<=",
+        "rhs": 15.0,
+        "violation": 0.0
+      },
+      "B_E_H_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "federal_no_double_30D_45W_same_vehicle": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.govinfo.gov/link/uscode/26/45W",
+      "claim": "26 U.S.C. 45W(d)(3)规定，同一车辆若已获30D抵免，不得再获45W抵免。",
+      "model_slot": "constraints.federal_no_double_30D_45W_same_vehicle",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "patched_ir.constraints[4]及约束构造循环"
+    },
+    {
+      "evidence_id": "https://www.irs.gov/instructions/i8936",
+      "claim": "IRS 2025年Form 8936说明确认商业或投资用途可涉及30D，并明确同一车辆若同时符合30D和45W，纳税人只能选择其中一种抵免。",
+      "model_slot": "constraints.federal_no_double_30D_45W_same_vehicle",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "patched_ir.constraints[4]及model.addConstr分支"
+    },
+    {
+      "evidence_id": "https://www.irs.gov/newsroom/faqs-for-modification-of-sections-25c-25d-25e-30c-30d-45l-45w-and-179d-under-public-law-119-21-139-stat-72-july-4-2025-commonly-known-as-the-one-big-beautiful-bill-obbb",
+      "claim": "Public Law 119-21实施FAQ确认30D与45W仅对2025-09-30之后取得的车辆终止；2025-09-01尚未因该截止日失效。",
+      "model_slot": "applicability.effective_at_decision_time",
+      "equation": "2025-09-01 <= 2025-09-30，因此不增加截止日排除约束",
+      "code_region": "适用性门控；Gurobi模型中无需增加额外行"
+    }
+  ],
+  "usage": {
+    "input_tokens": 181358,
+    "cached_input_tokens": 126976,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8778,
+    "reasoning_output_tokens": 4344,
+    "wall_seconds": 203.82916580000892,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 4
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2727.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2727.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 26,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 4
+    },
+    "gold_available_to_model": false
+  }
+}

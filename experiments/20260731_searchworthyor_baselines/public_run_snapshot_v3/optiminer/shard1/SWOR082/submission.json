@@ -1,0 +1,601 @@
+{
+  "task_id": "SWOR082",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "澄舟综合运输有限公司 晨汐单元 2026-02-17 北湾经营辖区 路径与运输资源重排 调度资源点 保障类别 适用政策 约束条件 例外",
+      "reason": "当前没有任何外部政策证据，尚未解决适用来源的权威性、生效时点、辖区覆盖、主体适用性及例外条款，无法判断是否应修改变量域、约束、条件逻辑或目标结构，因此必须检索。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-396E56E1068DB207",
+          "score": 84.01435365826188
+        },
+        {
+          "rank": 2,
+          "id": "DOC-EF738A44A6A5653F",
+          "score": 84.01435365826188
+        },
+        {
+          "rank": 3,
+          "id": "DOC-6C973112D9E4D82E",
+          "score": 82.15042624163927
+        },
+        {
+          "rank": 4,
+          "id": "DOC-5AD5D2BD1B2D90A7",
+          "score": 69.61851659230484
+        },
+        {
+          "rank": 5,
+          "id": "DOC-30C560E82AF98011",
+          "score": 68.83850519237943
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-EF738A44A6A5653F"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-EF738A44A6A5653F：其为正式监管来源；决策日 2026-02-17 落在有效期 2025-11-19 至 2027-02-17（含端点）内；辖区和主体均完全匹配；且未激活书面应急例外。DOC-396E56E1068DB207 已于决策日前失效；DOC-6C973112D9E4D82E 辖区不符；DOC-5AD5D2BD1B2D90A7 尚未生效且主体不符；DOC-30C560E82AF98011 主体不符。因此仅新增 x_0+x_1<=1。最终最优值为 2712，存在两个并列最优行动：[1,0,1,0,1,0]（A、C、E）和 [0,1,1,1,0,0]（B、C、D）；代码在并列解中确定性输出字典序最大的前者。台账虽给出资源占用量，但未给出资源容量，故不能虚构容量约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR082_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1007,
+        "x_1": 965,
+        "x_2": 904,
+        "x_3": 843,
+        "x_4": 801,
+        "x_5": 740
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "backup_mutual_exclusion",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-EF738A44A6A5653F",
+        "before_expression": "not present",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR082_patched",
+    "world": "policy_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用路径包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1007,
+        "x_1": 965,
+        "x_2": 904,
+        "x_3": 843,
+        "x_4": 801,
+        "x_5": 740
+      }
+    },
+    "constraints": [
+      {
+        "name": "segment_1_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "segment_2_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "segment_3_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "backup_mutual_exclusion",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "policy_A_B_mutual_exclusion",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2712.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2712.0,
+    "constraint_residuals": {
+      "segment_1_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_2_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "segment_3_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "backup_mutual_exclusion": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "policy_A_B_mutual_exclusion": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "以最大化路径包总运输服务收益为唯一目标。",
+      "model_slot": "objective",
+      "equation": "max z = 1007x_0 + 965x_1 + 904x_2 + 843x_3 + 801x_4 + 740x_5",
+      "code_region": "# MODEL_OBJECTIVE"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "每个路径包是否启用均为二元决策。",
+      "model_slot": "variables",
+      "equation": "x_i in {0,1}, i=0,...,5",
+      "code_region": "# MODEL_VARIABLES"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "运输链第1段必须且只能从路径包A、D中采用一个。",
+      "model_slot": "constraints.segment_1_exactly_one",
+      "equation": "x_0 + x_3 = 1",
+      "code_region": "# BASE_SEGMENT_1"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "运输链第2段必须且只能从路径包B、E中采用一个。",
+      "model_slot": "constraints.segment_2_exactly_one",
+      "equation": "x_1 + x_4 = 1",
+      "code_region": "# BASE_SEGMENT_2"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "运输链第3段必须且只能从路径包C、F中采用一个。",
+      "model_slot": "constraints.segment_3_exactly_one",
+      "equation": "x_2 + x_5 = 1",
+      "code_region": "# BASE_SEGMENT_3"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "路径包E和F不得同时启用。",
+      "model_slot": "constraints.backup_mutual_exclusion",
+      "equation": "x_4 + x_5 <= 1",
+      "code_region": "# BASE_BACKUP_EXCLUSION"
+    },
+    {
+      "evidence_id": "DOC-EF738A44A6A5653F",
+      "claim": "路径包A与路径包B不得在同一决策窗口共同启用。",
+      "model_slot": "constraints.policy_A_B_mutual_exclusion",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "# POLICY_DOC_EF738A44A6A5653F"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_PATCHED_MODEL",
+      "claim": "最优目标值为2712；并列最优行动为A、C、E和B、C、D，代码确定性投影为A、C、E。",
+      "model_slot": "solution.optimal_actions",
+      "equation": "z*=2712; X*={(1,0,1,0,1,0),(0,1,1,1,0,0)}",
+      "code_region": "# SOLUTION_SELECTION"
+    }
+  ],
+  "usage": {
+    "input_tokens": 19265,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5731,
+    "reasoning_output_tokens": 2699,
+    "wall_seconds": 110.25161649999791,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2712.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0,
+        "optimal_action_tie_count": 2,
+        "selection_rule": "lexicographically_largest_among_primary_optima"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2712.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        },
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 4,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15216,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 270,
+          "reasoning_output_tokens": 137
+        },
+        "wall_seconds": 14.420585699990625,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 16676,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 343,
+          "reasoning_output_tokens": 108
+        },
+        "wall_seconds": 16.554062899987912,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 2,
+    "search_call_count": 1
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,607 @@
+{
+  "task_id": "SWOR042",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "美国劳工部 2026年4月16日 联邦 FLSA 按小时计酬员工 雇主 排班 30分钟正式用餐时段 待命 随时恢复工作 完全脱离工作职责 是否计入工时 真实用餐时段 替补覆盖",
+      "reason": "当前没有任何搜索证据，尚无法裁决联邦 FLSA 对30分钟用餐时段的计时规则，尤其缺少官方来源对适用主体、有效日期、员工须完全解除职责的条件，以及待命或随时恢复工作是否使该时段成为可补偿工时的说明。这些规则可能改变班次A、B、E、F的可用性、条件逻辑或组合约束，因此必须继续检索。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-1A111BF90ED88FFD",
+          "score": 157.4369320457665
+        },
+        {
+          "rank": 2,
+          "id": "DOC-B4B92CE34740BBA8",
+          "score": 157.4369320457665
+        },
+        {
+          "rank": 3,
+          "id": "DOC-557E93176FBFD570",
+          "score": 157.34616212387039
+        },
+        {
+          "rank": 4,
+          "id": "DOC-DD3DE2713F5A6A0B",
+          "score": 153.25556168696394
+        },
+        {
+          "rank": 5,
+          "id": "DOC-1B53EEE0074AEDA0",
+          "score": 101.81310802079541
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-1A111BF90ED88FFD"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一采用 DOC-1A111BF90ED88FFD：其为 Electronic Code of Federal Regulations 的正式监管来源，在决策日 2026-04-16 有效，辖区为美国联邦 FLSA，主体覆盖本题按小时计酬现场服务员工的雇主，且已确认未触发例外。DOC-B4B92CE34740BBA8 于决策日前失效；DOC-557E93176FBFD570 仅为行业信息来源；DOC-DD3DE2713F5A6A0B 属 CCPA 错误辖区；DOC-1B53EEE0074AEDA0 属加州错误辖区。适用规则要求真实用餐期间员工完全解除职责；在本地事实完整的前提下，A 仅将时段登记为不计工时而未满足完全解除职责，B 明确要求待命并随时恢复工作，故二者不能作为所描述的不计工时用餐安排启用，添加 x_0=0、x_1=0。E、F 明确允许完全脱离职责，保持可选。关键工时点没有给出总容量，故不虚构容量约束。最终唯一最优解为 [0,0,1,1,1,0]，即启用 C、D、E，目标值 2552。"
+  },
+  "base_ir": {
+    "model_id": "SWOR042_base",
+    "world": "星桥现场服务排班；决策时间2026-04-16；美国联邦FLSA；证据补丁前",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735
+      }
+    },
+    "constraints": [
+      {
+        "name": "base_exactly_three_blocks",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_period1_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "base_period2_B_or_E",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "base_period3_C_or_F",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-1A111BF90ED88FFD",
+        "before_expression": "不存在针对班次A的政策可用性约束",
+        "after_expression": "policy_A_unavailable: x_0 == 0"
+      },
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-1A111BF90ED88FFD",
+        "before_expression": "不存在针对班次B的政策可用性约束",
+        "after_expression": "policy_B_unavailable: x_1 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR042_patched",
+    "world": "星桥现场服务排班；决策时间2026-04-16；美国联邦FLSA；采用DOC-1A111BF90ED88FFD",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735
+      }
+    },
+    "constraints": [
+      {
+        "name": "base_exactly_three_blocks",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_period1_A_or_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "base_period2_B_or_E",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "base_period3_C_or_F",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "base_core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "policy_A_unavailable",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      },
+      {
+        "name": "policy_B_unavailable",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2552.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 1.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      0,
+      0,
+      1,
+      1,
+      1,
+      0
+    ],
+    "objective_recomputed": 2552.0,
+    "constraint_residuals": {
+      "base_exactly_three_blocks": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "base_period1_A_or_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_period2_B_or_E": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_period3_C_or_F": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "base_core_A_or_backup_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "policy_A_unavailable": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "policy_B_unavailable": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-1A111BF90ED88FFD",
+      "claim": "正常用餐时段只有在员工完全解除职责时才符合所述不计工时用餐条件；班次A仅作不计工时登记，完整本地事实未显示完全解除职责，因此不可按描述启用。",
+      "model_slot": "constraints.policy_A_unavailable",
+      "equation": "x_0 = 0",
+      "code_region": "model.addConstr(x[\"x_0\"] == 0, name=\"policy_A_unavailable\")"
+    },
+    {
+      "evidence_id": "DOC-1A111BF90ED88FFD",
+      "claim": "班次B要求员工待命并随时恢复工作，未完全解除职责，因此不能作为所描述的用餐安排启用。",
+      "model_slot": "constraints.policy_B_unavailable",
+      "equation": "x_1 = 0",
+      "code_region": "model.addConstr(x[\"x_1\"] == 0, name=\"policy_B_unavailable\")"
+    },
+    {
+      "evidence_id": "DOC-1A111BF90ED88FFD",
+      "claim": "班次E提供可完全脱离职责的真实用餐或替补覆盖，满足证据中的必要条件，故不添加排除约束。",
+      "model_slot": "variables.x_4.domain",
+      "equation": "x_4 in {0,1}",
+      "code_region": "binary variable creation for x_4; no policy exclusion constraint"
+    },
+    {
+      "evidence_id": "DOC-1A111BF90ED88FFD",
+      "claim": "班次F提供可完全脱离职责的真实用餐或替补覆盖，满足证据中的必要条件，故不添加排除约束。",
+      "model_slot": "variables.x_5.domain",
+      "equation": "x_5 in {0,1}",
+      "code_region": "binary variable creation for x_5; no policy exclusion constraint"
+    }
+  ],
+  "usage": {
+    "input_tokens": 20384,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5809,
+    "reasoning_output_tokens": 2695,
+    "wall_seconds": 122.48740240000188,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2552.0,
+        "projected_action": [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2552.0,
+      "optimal_actions": [
+        [
+          0,
+          0,
+          1,
+          1,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 1.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15264,
+          "cached_input_tokens": 0,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 295,
+          "reasoning_output_tokens": 105
+        },
+        "wall_seconds": 13.517168199992739,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 17281,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 656,
+          "reasoning_output_tokens": 392
+        },
+        "wall_seconds": 20.36339300000691,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 2,
+    "search_call_count": 1
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

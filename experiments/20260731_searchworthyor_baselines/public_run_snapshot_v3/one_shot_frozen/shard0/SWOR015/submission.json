@@ -1,0 +1,515 @@
+{
+  "task_id": "SWOR015",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "麦辰多仓供应链有限公司（东岚经营辖区（合成）岚桥单元） 东岚经营辖区（合成） 2026-03-05",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-62892B8C9DB27A10",
+          "score": 93.54648372751717
+        },
+        {
+          "rank": 2,
+          "id": "DOC-98B5F7C460AD08EE",
+          "score": 93.54648372751717
+        },
+        {
+          "rank": 3,
+          "id": "DOC-56AB7B881ED69491",
+          "score": 90.08070169135016
+        },
+        {
+          "rank": 4,
+          "id": "DOC-F4F09702C13527C8",
+          "score": 77.83319082026017
+        },
+        {
+          "rank": 5,
+          "id": "DOC-FB436EB29FEC48D6",
+          "score": 72.40354372466284
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-98B5F7C460AD08EE"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-98B5F7C460AD08EE（SHA-256: 69380225078d60bc516cb19df99d3b71249bcc2d7c061a5eedaf4c59da730cfa）：正式监管来源；2026-03-05处于其2025-12-05至2027-03-05有效期内；辖区、主体均精确匹配；题面确认未激活书面应急例外。DOC-62892B8C9DB27A10已于2026-03-04失效；DOC-56AB7B881ED69491辖区不符；DOC-F4F09702C13527C8主体不符；DOC-FB436EB29FEC48D6主体不符且尚未生效。适用规则表示A启用时B不得启用，即x_0+x_1<=1。补丁后最优行动为[1,0,1,1,0,0]（A、C、D），目标值2769。资源占用数据未附总资源上限，故不虚构容量约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR015_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_front_supply",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "c_late_supply",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_terminal_mutex",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-98B5F7C460AD08EE",
+        "before_expression": "不存在该外部政策约束",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR015_patched",
+    "world": "policy_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用补货包F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_front_supply",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "c_late_supply",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_terminal_mutex",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_policy_A_implies_not_B",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2769.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2769.0,
+    "constraint_residuals": {
+      "c_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "c_front_supply": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_late_supply": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_terminal_mutex": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_policy_A_implies_not_B": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "每个候选补货包是否启用为0-1决策，顺序为A至F。",
+      "model_slot": "variables; action_projection",
+      "equation": "x_i in {0,1}, i=0,...,5",
+      "code_region": "x = [model.addVar(...)]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "唯一目标为最大化六个补货包的总保供收益。",
+      "model_slot": "objective",
+      "equation": "max 1012x_0+951x_1+909x_2+848x_3+806x_4+745x_5",
+      "code_region": "model.setObjective(..., gp.GRB.MAXIMIZE)"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "必须采用3个补货或供应块。",
+      "model_slot": "constraints.c_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5=3",
+      "code_region": "model.addConstr(gp.quicksum(x) == 3, name=\"c_exactly_3\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "计划前段至少从A、B、D中安排一个供应块。",
+      "model_slot": "constraints.c_front_supply",
+      "equation": "x_0+x_1+x_3>=1",
+      "code_region": "model.addConstr(x[0] + x[1] + x[3] >= 1, name=\"c_front_supply\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "计划后段至少从B、C、E中安排一个供应块。",
+      "model_slot": "constraints.c_late_supply",
+      "equation": "x_1+x_2+x_4>=1",
+      "code_region": "model.addConstr(x[1] + x[2] + x[4] >= 1, name=\"c_late_supply\")"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "补货包E和F不得同时启用。",
+      "model_slot": "constraints.c_terminal_mutex",
+      "equation": "x_4+x_5<=1",
+      "code_region": "model.addConstr(x[4] + x[5] <= 1, name=\"c_terminal_mutex\")"
+    },
+    {
+      "evidence_id": "DOC-98B5F7C460AD08EE",
+      "claim": "补货包A触发合规分支，且补货包B在该分支中不可采用。",
+      "model_slot": "constraints.c_policy_A_implies_not_B",
+      "equation": "x_0=1 implies x_1=0; equivalently x_0+x_1<=1",
+      "code_region": "model.addConstr(x[0] + x[1] <= 1, name=\"c_policy_A_implies_not_B\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17636,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4693,
+    "reasoning_output_tokens": 1988,
+    "wall_seconds": 112.74769730000116,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2769.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2769.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 11,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

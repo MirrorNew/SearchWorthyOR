@@ -1,0 +1,510 @@
+{
+  "task_id": "SWOR003",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:fda.gov menu labeling requirements 20 or more locations standard menu items calories menu boards temporary custom orders FDA ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/on/2026-05-18/title-21/chapter-I/subchapter-B/part-101/subpart-A/section-101.11",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/on/2026-05-18/title-21/chapter-I/subchapter-B/part-101/subpart-A/section-101.11"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/current/title-21 \"101.11\" \"Nutrition labeling of standard menu items\" ...",
+      "results": []
+    },
+    {
+      "query": "site:govinfo.gov/content/pkg/CFR-2025-title21-vol2 \"§ 101.11\" ...",
+      "results": []
+    },
+    {
+      "query": "site:fda.gov menu labeling enforcement discretion current policy ended COVID chain restaurants menu labeling 2026 ...",
+      "results": []
+    },
+    {
+      "query": "site:fda.gov \"Temporary Policy Regarding Nutrition Labeling of Standard Menu Items\" \"withdrawn\" ...",
+      "results": []
+    },
+    {
+      "query": "site:federalregister.gov/documents/2014/12/01 \"Nutrition Labeling of Standard Menu Items in Restaurants and Similar Retail Food Establishments\" ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol2/pdf/CFR-2025-title21-vol2.pdf",
+    "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/overview-fda-labeling-requirements-restaurants-similar-retail-food-establishments-and-vending",
+    "https://www.fda.gov/food/guidance-documents-regulatory-information-topic-food-and-dietary-supplements/foods-program-withdrawn-or-expired-guidance"
+  ],
+  "selected_urls": [
+    "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol2/pdf/CFR-2025-title21-vol2.pdf",
+    "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/overview-fda-labeling-requirements-restaurants-similar-retail-food-establishments-and-vending",
+    "https://www.fda.gov/food/guidance-documents-regulatory-information-topic-food-and-dietary-supplements/foods-program-withdrawn-or-expired-guidance"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "官方CFR与FDA资料表明，21 CFR 101.11适用于拥有至少20个同名地点且销售实质相同菜单项的连锁餐饮设施，并要求菜单或菜单板列出的标准菜单项显示热量。模式A涉及24个同名地点、实质相同菜单项和标准菜单板项目，符合主体与事项范围；其不显示热量的固定属性不合规。临时菜单项和定制点单例外已由题面事实明确排除。COVID-19菜单标签执法灵活政策已于2023-11-07后失效，不能在2026-05-18提供例外。模式B虽属非标准临时项目，但现有证据不支持禁止该模式；模式C至G也没有触发额外结构变更。故仅增加x_0=0，不改变其他基础结构。最终最优组合为模式B和模式D，行动向量[0,1,0,1,0,0,0]，目标值1815，总容量6，启用数量2。"
+  },
+  "base_ir": {
+    "model_id": "SWOR003",
+    "world": {
+      "decision_time": "2026-05-18",
+      "entity": "衡川连锁餐食生产网络",
+      "jurisdiction": "美国联邦食品标签监管"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1001,
+        "x_1": 959,
+        "x_2": 898,
+        "x_3": 856,
+        "x_4": 795,
+        "x_5": 753,
+        "x_6": 692
+      }
+    },
+    "constraints": [
+      {
+        "name": "mode_count_limit",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3
+        }
+      },
+      {
+        "name": "core_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol2/pdf/CFR-2025-title21-vol2.pdf",
+        "before_expression": "absent",
+        "after_expression": "x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR003",
+    "world": {
+      "decision_time": "2026-05-18",
+      "entity": "衡川连锁餐食生产网络",
+      "jurisdiction": "美国联邦食品标签监管"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用模式G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1001,
+        "x_1": 959,
+        "x_2": 898,
+        "x_3": 856,
+        "x_4": 795,
+        "x_5": 753,
+        "x_6": 692
+      }
+    },
+    "constraints": [
+      {
+        "name": "mode_count_limit",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3
+        }
+      },
+      {
+        "name": "core_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "reg_mode_A_calorie_disclosure",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 1815.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 1815.0,
+    "constraint_residuals": {
+      "mode_count_limit": {
+        "lhs": 2.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "equipment_capacity": {
+        "lhs": 6.0,
+        "sense": "<=",
+        "rhs": 6.0,
+        "violation": 0.0
+      },
+      "core_or_backup": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "reg_mode_A_calorie_disclosure": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.govinfo.gov/content/pkg/CFR-2025-title21-vol2/pdf/CFR-2025-title21-vol2.pdf",
+      "claim": "21 CFR 101.11适用于覆盖机构销售的标准菜单项，要求菜单或菜单板列出每个标准菜单项的热量；临时菜单项和定制点单等非标准项目属于例外。模式A的固定属性满足覆盖条件且明确不显示热量，并且题面排除了相关例外。",
+      "model_slot": "constraints.reg_mode_A_calorie_disclosure",
+      "equation": "x_0 = 0",
+      "code_region": "model.addConstr(x[\"x_0\"] == 0, name=\"reg_mode_A_calorie_disclosure\")"
+    },
+    {
+      "evidence_id": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/overview-fda-labeling-requirements-restaurants-similar-retail-food-establishments-and-vending",
+      "claim": "FDA确认覆盖机构须属于至少20个地点、同名经营并销售实质相同菜单项的连锁，且须在菜单和菜单板列示标准菜单项热量；模式A的24个地点及业务属性逐项匹配。",
+      "model_slot": "constraints.reg_mode_A_calorie_disclosure",
+      "equation": "x_0 = 0",
+      "code_region": "reg_mode_A_calorie_disclosure constraint and its subject-coverage rationale"
+    },
+    {
+      "evidence_id": "https://www.fda.gov/food/guidance-documents-regulatory-information-topic-food-and-dietary-supplements/foods-program-withdrawn-or-expired-guidance",
+      "claim": "FDA将COVID-19期间针对标准菜单项营养标签的临时政策列为不再有效，因此该政策在2026-05-18不能解除模式A的热量披露义务。",
+      "model_slot": "constraints.reg_mode_A_calorie_disclosure",
+      "equation": "x_0 = 0 remains applicable",
+      "code_region": "retention of reg_mode_A_calorie_disclosure without an enforcement-discretion exception"
+    }
+  ],
+  "usage": {
+    "input_tokens": 383707,
+    "cached_input_tokens": 306176,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6700,
+    "reasoning_output_tokens": 3229,
+    "wall_seconds": 163.03763510000135,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 7
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 1815.0,
+        "projected_action": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 1815.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 4,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 7
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,462 @@
+{
+  "task_id": "SWOR040",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "来源护照摘要：no_search 条件下未提供任何可追溯外部政策证据，因此无法确认政策的发布权威性、2026-05-29 时点效力、海桥经营辖区（合成）的地域适用性、对目标实体的主体适用性或例外条款；不得触发结构变更，patched IR 与 base IR 完全相同。"
+  },
+  "base_ir": {
+    "model_id": "SWOR040",
+    "world": "task_prompt_only",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点A是否建设"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点B是否建设"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点C是否建设"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点D是否建设"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点E是否建设"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点F是否建设"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "facility_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_candidates_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR040",
+    "world": "task_prompt_only",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点A是否建设"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点B是否建设"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点C是否建设"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点D是否建设"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点E是否建设"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "节点F是否建设"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "facility_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "core_candidates_minimum",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2869.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2869.0,
+    "constraint_residuals": {
+      "facility_count": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "service_area_1_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "service_area_2_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_candidates_minimum": {
+        "lhs": 3.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "节点A至节点F分别对应六个是否建设的二元决策。",
+      "model_slot": "variables; action_projection",
+      "equation": "x_i ∈ {0,1}, i=0,...,5",
+      "code_region": "ir.variables and ir.action_projection"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "唯一目标是最大化各已建设节点的总网络覆盖收益。",
+      "model_slot": "objective",
+      "equation": "max 1011x_0 + 950x_1 + 908x_2 + 847x_3 + 805x_4 + 744x_5",
+      "code_region": "ir.objective and model.setObjective"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "必须建设3个设施或网络节点。",
+      "model_slot": "constraints.facility_count",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5=3",
+      "code_region": "ir.constraints[0]"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "服务区1至少由节点A、节点C、节点E中的一个设施覆盖。",
+      "model_slot": "constraints.service_area_1_coverage",
+      "equation": "x_0+x_2+x_4>=1",
+      "code_region": "ir.constraints[1]"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "服务区2至少由节点B、节点D、节点F中的一个设施覆盖。",
+      "model_slot": "constraints.service_area_2_coverage",
+      "equation": "x_1+x_3+x_5>=1",
+      "code_region": "ir.constraints[2]"
+    },
+    {
+      "evidence_id": "TASK_PROMPT",
+      "claim": "节点A、节点B、节点C中至少启用两个。",
+      "model_slot": "constraints.core_candidates_minimum",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "ir.constraints[3]"
+    },
+    {
+      "evidence_id": "NO_EXTERNAL_EVIDENCE",
+      "claim": "no_search 条件下没有外部政策证据，不能改变基础模型。",
+      "model_slot": "typed_patch.ops",
+      "equation": "ops=[]; patched_ir=base_ir",
+      "code_region": "No policy-generated constraint or objective modification"
+    },
+    {
+      "evidence_id": "MODEL_SOLUTION",
+      "claim": "最优方案建设节点A、B、C，总收益为2869。",
+      "model_slot": "solution.projected_action",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(1,1,1,0,0,0); z*=2869",
+      "code_region": "model.optimize and result serialization"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15823,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3967,
+    "reasoning_output_tokens": 1009,
+    "wall_seconds": 92.68601820000913,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2869.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2869.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 9,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

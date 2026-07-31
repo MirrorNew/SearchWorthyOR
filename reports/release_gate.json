@@ -1,10 +1,70 @@
 {
   "gates": {
     "duplicates_and_leakage": {
-      "errors": [],
-      "ok": true,
+      "errors": [
+        {
+          "code": "duplicate.private_document_template",
+          "message": "redacted applicable private documents exceed the frozen near-template threshold at pair ('SWOR041', 'SWOR045')",
+          "path": "private/evidence_corpus.jsonl"
+        }
+      ],
+      "ok": false,
       "stats": {
         "evidence_records": 400,
+        "evidence_role_leakage": {
+          "direct_marker_hits": [],
+          "evaluated": true,
+          "evidence_rows": 400,
+          "fail_threshold": 0.5,
+          "id_hash_modulo_attack": {
+            "maximum_selected_rate": 0.42857142857142855,
+            "worst_bucket": {
+              "modulus": 9,
+              "residue": 2,
+              "rows": 42,
+              "selected": 18,
+              "selected_rate": 0.42857142857142855
+            }
+          },
+          "invalid_ids": [],
+          "passed": true,
+          "random_baseline": 0.25,
+          "row_position_modulo_attack": {
+            "maximum_selected_rate": 0.4482758620689655,
+            "worst_bucket": {
+              "modulus": 14,
+              "residue": 3,
+              "rows": 29,
+              "selected": 13,
+              "selected_rate": 0.4482758620689655
+            }
+          },
+          "selected_evidence_ids": 100,
+          "structural_signature_attack": {
+            "bucket_count": 1,
+            "maximum_selected_rate": 0.25,
+            "worst_bucket": {
+              "rows": 400,
+              "selected": 100,
+              "selected_rate": 0.25,
+              "signature": "{\"row_shape\":{\"applicability\":{\"gold_status_exposed\":\"bool\",\"predicate_fields\":{\"item_shapes\":[\"string\",\"string\",\"string\",\"string\",\"string\"],\"length\":5,\"type\":\"list\"}},\"content\":\"string\",\"content_sha256\":\"string\",\"id\":\"string\",\"source_kind\":\"string\"}}"
+            }
+          },
+          "surface_length_attack": {
+            "bucket_count": 35,
+            "maximum_selected_rate": 0.25,
+            "worst_bucket": {
+              "rows": 72,
+              "selected": 18,
+              "selected_rate": 0.25,
+              "signature": [
+                926,
+                328,
+                29
+              ]
+            }
+          }
+        },
         "gold_action_leaks": 0,
         "metadata_decoder": {
           "attacks": {
@@ -3273,12 +3333,12 @@
         "near_template_reuse": {
           "applicable_private_documents": {
             "fail_threshold": 0.9,
-            "maximum_similarity": 0.6201117318435754,
+            "maximum_similarity": 1.0,
             "most_similar_pair": [
-              "SWOR095",
-              "SWOR002"
+              "SWOR041",
+              "SWOR045"
             ],
-            "passed": true,
+            "passed": false,
             "rows": 80
           },
           "method": "redacted_character_5gram_jaccard",
@@ -3317,8 +3377,2014 @@
       "warnings": []
     },
     "schema_and_semantics": {
-      "errors": [],
-      "ok": true,
+      "errors": [
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:1.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:1.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:1.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:1.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:2.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:2.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:2.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:2.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:3.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:3.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:3.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:3.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:4.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:4.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:4.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:4.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:5.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:5.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:5.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:5.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:6.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:6.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:6.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:6.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:7.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:7.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:7.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:7.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:8.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:8.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:8.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:8.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:9.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:9.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:9.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:9.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:10.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:10.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:10.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:10.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:11.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:11.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:11.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:11.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:12.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:12.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:12.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:12.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:13.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:13.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:13.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:13.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:14.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:14.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:14.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:14.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:15.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:15.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:15.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:15.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:16.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:16.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:16.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:16.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:17.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:17.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:17.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:17.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:18.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:18.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:18.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:18.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:19.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:19.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:19.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:19.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:20.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:20.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:20.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:20.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:21.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:21.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:21.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:21.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:22.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:22.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:22.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:22.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:23.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:23.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:23.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:23.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:24.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:24.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:24.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:24.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:25.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:25.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:25.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:25.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:26.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:26.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:26.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:26.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:27.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:27.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:27.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:27.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:28.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:28.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:28.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:28.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:29.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:29.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:29.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:29.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:30.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:30.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:30.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:30.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:31.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:31.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:31.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:31.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:32.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:32.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:32.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:32.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:33.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:33.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:33.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:33.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:34.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:34.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:34.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:34.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:35.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:35.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:35.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:35.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:36.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:36.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:36.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:36.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:37.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:37.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:37.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:37.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:38.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:38.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:38.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:38.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:39.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:39.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:39.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:39.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:40.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:40.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:40.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:40.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:41.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:41.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:41.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:41.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:42.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:42.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:42.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:42.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:43.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:43.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:43.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:43.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:44.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:44.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:44.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:44.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:45.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:45.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:45.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:45.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:46.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:46.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:46.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:46.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:47.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:47.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:47.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:47.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:48.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:48.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:48.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:48.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:49.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:49.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:49.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:49.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:50.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:50.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:50.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:50.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:51.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:51.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:51.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:51.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:52.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:52.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:52.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:52.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:53.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:53.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:53.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:53.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:54.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:54.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:54.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:54.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:55.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:55.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:55.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:55.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:56.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:56.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:56.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:56.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:57.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:57.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:57.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:57.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:58.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:58.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:58.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:58.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:59.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:59.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:59.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:59.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:60.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:60.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:60.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:60.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:61.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:61.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:61.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:61.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:62.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:62.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:62.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:62.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:63.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:63.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:63.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:63.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:64.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:64.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:64.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:64.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:65.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:65.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:65.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:65.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:66.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:66.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:66.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:66.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:67.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:67.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:67.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:67.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:68.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:68.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:68.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:68.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:69.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:69.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:69.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:69.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:70.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:70.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:70.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:70.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:71.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:71.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:71.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:71.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:72.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:72.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:72.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:72.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:73.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:73.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:73.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:73.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:74.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:74.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:74.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:74.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:75.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:75.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:75.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:75.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:76.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:76.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:76.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:76.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:77.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:77.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:77.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:77.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:78.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:78.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:78.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:78.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:79.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:79.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:79.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:79.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:80.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:80.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:80.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:80.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:81.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:81.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:81.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:81.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:82.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:82.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:82.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:82.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:83.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:83.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:83.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:83.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:84.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:84.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:84.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:84.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:85.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:85.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:85.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:85.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:86.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:86.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:86.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:86.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:87.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:87.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:87.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:87.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:88.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:88.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:88.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:88.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:89.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:89.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:89.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:89.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:90.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:90.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:90.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:90.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:91.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:91.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:91.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:91.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:92.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:92.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:92.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:92.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:93.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:93.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:93.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:93.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:94.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:94.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:94.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:94.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:95.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:95.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:95.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:95.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:96.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:96.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:96.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:96.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:97.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:97.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:97.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:97.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:98.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:98.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:98.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:98.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:99.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:99.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:99.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:99.adjudication.unresolved"
+        },
+        {
+          "code": "review.adjudication_unresolved",
+          "message": "adjudication status must be resolved",
+          "path": "private/gold.jsonl:100.adjudication.status"
+        },
+        {
+          "code": "review.unresolved_flag",
+          "message": "unresolved must be explicitly false",
+          "path": "private/gold.jsonl:100.adjudication.unresolved"
+        },
+        {
+          "code": "review.final_decision_invalid",
+          "message": "release rows must be adjudicated accept",
+          "path": "private/gold.jsonl:100.adjudication.final_decision"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "private/gold.jsonl:100.adjudication.unresolved"
+        },
+        {
+          "code": "release.unresolved",
+          "message": "unresolved release state is forbidden",
+          "path": "manifest.json.build_summary.review_agreement.unresolved"
+        }
+      ],
+      "ok": false,
       "stats": {
         "distributions": {
           "evidence_mode": {
@@ -3353,8 +5419,509 @@
       "warnings": []
     },
     "structure_and_provenance": {
-      "errors": [],
-      "ok": true,
+      "errors": [
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:1.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:2.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:3.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:4.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:5.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:6.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:7.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:8.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:9.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:10.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:11.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:12.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:13.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:14.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:15.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:16.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:17.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:18.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:19.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:20.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:21.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:22.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:23.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:24.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:25.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:26.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:27.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:28.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:29.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:30.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:31.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:32.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:33.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:34.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:35.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:36.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:37.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:38.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:39.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:40.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:41.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:42.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:43.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:44.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:45.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:46.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:47.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:48.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:49.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:50.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:51.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:52.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:53.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:54.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:55.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:56.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:57.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:58.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:59.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:60.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:61.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:62.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:63.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:64.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:65.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:66.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:67.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:68.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:69.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:70.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:71.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:72.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:73.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:74.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:75.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:76.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:77.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:78.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:79.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:80.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:81.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:82.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:83.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:84.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:85.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:86.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:87.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:88.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:89.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:90.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:91.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:92.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:93.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:94.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:95.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:96.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:97.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:98.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:99.base_audit.status"
+        },
+        {
+          "code": "provenance.base_not_certified",
+          "message": "base audit status 'rejected' is not a certified pass state",
+          "path": "private/gold.jsonl:100.base_audit.status"
+        }
+      ],
+      "ok": false,
       "stats": {
         "all_collision_groups": [],
         "family_collision_groups": {},
@@ -3368,9 +5935,9 @@
       "warnings": []
     }
   },
-  "ok": true,
+  "ok": false,
   "summary": {
-    "error_count": 0,
+    "error_count": 502,
     "warning_count": 0
   }
 }

@@ -1,0 +1,513 @@
+{
+  "task_id": "SWOR085",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:ecfr.gov/current/title-21 gluten-free 101.91 wheat starch 20 parts per million ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/on/2026-04-22/title-21/chapter-I/subchapter-B/part-101/subpart-F/section-101.91",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/on/2026-04-22/title-21/chapter-I/subchapter-B/part-101/subpart-F/section-101.91"
+        }
+      ]
+    },
+    {
+      "query": "https://www.govinfo.gov/content/pkg/CFR-2026-title21-vol2/pdf/CFR-2026-title21-vol2.pdf",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.govinfo.gov/content/pkg/CFR-2026-title21-vol2/pdf/CFR-2026-title21-vol2.pdf"
+        }
+      ]
+    },
+    {
+      "query": "'What food products are covered by the gluten-free labeling rule?'",
+      "results": []
+    },
+    {
+      "query": "site:fsis.usda.gov gluten-free label claim 20 ppm official policy ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "site:fsis.usda.gov \"maximum allowable 20 ppm\" gluten 2024 OR 2025 OR 2026 ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-F/section-101.91",
+    "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/questions-and-answers-gluten-free-food-labeling-final-rule",
+    "https://www.govinfo.gov/content/pkg/FR-2026-01-22/pdf/FR-2026-01-22.pdf"
+  ],
+  "selected_urls": [
+    "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-F/section-101.91",
+    "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/questions-and-answers-gluten-free-food-labeling-final-rule",
+    "https://www.govinfo.gov/content/pkg/FR-2026-01-22/pdf/FR-2026-01-22.pdf"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "官方材料确认：21 CFR 101.91在决策日前已经生效，且FDA监管的包装食品使用“gluten-free”声明时，含经脱麸质处理的小麦淀粉但使成品达到20 ppm或以上不符合定义；25 ppm因此本可触发x_0+x_1<=1。然而FDA官方问答同时明确，该规则不适用于由USDA或TTB监管标签的食品。题面只说明“包装食品制造商”和美国联邦食品标签监管，未说明最终产品类别或具体监管机构，无法排除肉类、禽类、特定蛋制品等USDA例外，也未提供足以统一裁决所有例外的决策时点规则。因此适用范围不能唯一确定，不采纳候选约束，typed patch为空，patched IR与base IR完全相同。基础模型的最优行动为启用A、B、C，即[1,1,1,0,0,0,0,0]，目标值2871、设备占用7；该行动仅是证据不足条件下的模型结果，不构成对标签合规性的批准。"
+  },
+  "base_ir": {
+    "model_id": "SWOR085",
+    "world": "衡川包装食品_2026-04-22_美国联邦食品标签监管",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A：在同一最终包装上使用gluten-free声明"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B：采用含经脱麸质处理小麦淀粉且成品为25 ppm麸质的配方批次"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C：基础类别"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D：基础类别"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E：基础类别"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F：基础类别"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G：经检测麸质低于20 ppm且其余条件已核验的配方批次"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H：经检测麸质低于20 ppm且其余条件已核验的配方批次"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1018,
+        "x_1": 957,
+        "x_2": 896,
+        "x_3": 854,
+        "x_4": 793,
+        "x_5": 751,
+        "x_6": 690,
+        "x_7": 629
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 7,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "exactly_one_of_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR085",
+    "world": "衡川包装食品_2026-04-22_美国联邦食品标签监管",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A：在同一最终包装上使用gluten-free声明"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B：采用含经脱麸质处理小麦淀粉且成品为25 ppm麸质的配方批次"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C：基础类别"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D：基础类别"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E：基础类别"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F：基础类别"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G：经检测麸质低于20 ppm且其余条件已核验的配方批次"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H：经检测麸质低于20 ppm且其余条件已核验的配方批次"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1018,
+        "x_1": 957,
+        "x_2": 896,
+        "x_3": 854,
+        "x_4": 793,
+        "x_5": 751,
+        "x_6": 690,
+        "x_7": 629
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 7,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "exactly_one_of_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2871.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": -0.0,
+      "x_4": 0.0,
+      "x_5": -0.0,
+      "x_6": -0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2871.0,
+    "constraint_residuals": {
+      "max_three_modes": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "equipment_capacity": {
+        "lhs": 7.0,
+        "sense": "<=",
+        "rhs": 7.0,
+        "violation": 0.0
+      },
+      "exactly_one_of_B_E_H": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.ecfr.gov/current/title-21/chapter-I/subchapter-B/part-101/subpart-F/section-101.91",
+      "claim": "21 CFR 101.91(a)(3)规定，带有gluten-free声明的食品不得使用会使食品麸质达到20 ppm或以上的经脱麸质处理谷物配料；第(b)(1)款将不满足条件的带声明食品认定为错误标示。",
+      "model_slot": "candidate_external_constraint.rejected_due_to_applicability",
+      "equation": "若确认属于FDA监管范围，则应增加x_0 + x_1 <= 1；本轮未编码。",
+      "code_region": "未添加Gurobi约束；适用性门控失败"
+    },
+    {
+      "evidence_id": "https://www.fda.gov/food/nutrition-food-labeling-and-critical-foods/questions-and-answers-gluten-free-food-labeling-final-rule",
+      "claim": "FDA说明该规则适用于FDA监管的包装食品，但不适用于标签由USDA或TTB监管的食品；USDA通常监管肉类、禽类及特定蛋制品。",
+      "model_slot": "applicability.subject_match_and_exception_resolved",
+      "equation": "监管产品类别未知 => subject_match=false且exception_resolved=false => ops=[]",
+      "code_region": "模型构造前的适用性门控；patched代码保持基础约束"
+    },
+    {
+      "evidence_id": "https://www.govinfo.gov/content/pkg/FR-2026-01-22/pdf/FR-2026-01-22.pdf",
+      "claim": "决策日前的2026-01-22联邦公报材料重述21 CFR 101.91的20 ppm门槛，确认该规则在2026-04-22前已存在。",
+      "model_slot": "applicability.effective_at_decision_time",
+      "equation": "effective_at_decision_time=true；该结论不单独产生MILP约束。",
+      "code_region": "版本裁决；无独立Gurobi代码"
+    }
+  ],
+  "usage": {
+    "input_tokens": 365751,
+    "cached_input_tokens": 294144,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 10205,
+    "reasoning_output_tokens": 6355,
+    "wall_seconds": 259.7993761999969,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 7
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "integrality_violation": 0.0,
+        "max_constraint_violation": 0.0,
+        "objective": 2871.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "status": "OPTIMAL"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2871.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 32,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 2,
+      "completed_web_searches": 7
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,558 @@
+{
+  "task_id": "SWOR062",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "林港处理设施（合成场景，危险废物产生场所） 美国联邦 RCRA 2026-06-12",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-1C555C56EC8952B3",
+          "score": 92.97430202013686
+        },
+        {
+          "rank": 2,
+          "id": "DOC-32C086B4681818E2",
+          "score": 92.97430202013686
+        },
+        {
+          "rank": 3,
+          "id": "DOC-439B85B0D8FF343F",
+          "score": 92.97430202013686
+        },
+        {
+          "rank": 4,
+          "id": "DOC-196CCD49298EC1B7",
+          "score": 89.64493966612127
+        },
+        {
+          "rank": 5,
+          "id": "DOC-138436287C1D4674",
+          "score": 74.90610997851681
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-1C555C56EC8952B3"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-1C555C56EC8952B3：其为美国 EPA 正式监管来源，自 2017-05-30 起有效，决策日 2026-06-12 仍有效；辖区为美国联邦 RCRA，主体覆盖按具体场所及废物产生情况分类的危险废物产生者，且题面确认未触发例外。该证据规定月产生量大于 100 kg 且小于 1,000 kg 的产生者属于 SQG；林港设施月产生 150 kg 非急性危险废物，因而不能采用方案 A 声称的 VSQG 简化管理路径，须增加 x_0=0。DOC-32C086B4681818E2 于 2026-06-11 失效；DOC-439B85B0D8FF343F 仅属行业信息来源；DOC-196CCD49298EC1B7 属 OSHA 辖区；DOC-138436287C1D4674 仅属行业信息来源，且题面未确认拟土地处置活动，均不改变模型。证据不足以排除标记为“基础类别”的其他方案或增加土地处置约束。补丁后唯一最优行动为启用方案 B、D，即 [0,1,0,1,0,0,0,0]，目标值 1807。"
+  },
+  "base_ir": {
+    "model_id": "SWOR062_base",
+    "world": "林港处理设施_美国联邦RCRA_2026-06-12",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1016,
+        "x_1": 955,
+        "x_2": 894,
+        "x_3": 852,
+        "x_4": 791,
+        "x_5": 749,
+        "x_6": 688,
+        "x_7": 646
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_energy_units",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "grid_resource_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "minimum_clean_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "minimum_backup_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-1C555C56EC8952B3",
+        "before_expression": "absent",
+        "after_expression": "rcra_sqg_excludes_vsqg_A: x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR062_patched",
+    "world": "林港处理设施_美国联邦RCRA_2026-06-12",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "能源方案H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1016,
+        "x_1": 955,
+        "x_2": 894,
+        "x_3": 852,
+        "x_4": 791,
+        "x_5": 749,
+        "x_6": 688,
+        "x_7": 646
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_energy_units",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "grid_resource_capacity",
+        "sense": "<=",
+        "rhs": 6,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "minimum_clean_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "minimum_backup_capability",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "core_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "rcra_sqg_excludes_vsqg_A",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 1807.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 1807.0,
+    "constraint_residuals": {
+      "max_energy_units": {
+        "lhs": 2.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "grid_resource_capacity": {
+        "lhs": 6.0,
+        "sense": "<=",
+        "rhs": 6.0,
+        "violation": 0.0
+      },
+      "minimum_clean_capability": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "minimum_backup_capability": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_A_or_backup_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "rcra_sqg_excludes_vsqg_A": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-1C555C56EC8952B3",
+      "claim": "美国联邦 RCRA 下，月产生危险废物超过100 kg且低于1,000 kg的产生者属于SQG；林港设施的150 kg月产生量落入该区间，因此方案A所声明的VSQG简化管理路径不可用。",
+      "model_slot": "constraints.rcra_sqg_excludes_vsqg_A",
+      "equation": "x_0 = 0",
+      "code_region": "constraint_specs entry rcra_sqg_excludes_vsqg_A and corresponding model.addConstr branch"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18234,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5560,
+    "reasoning_output_tokens": 2860,
+    "wall_seconds": 119.86304549999477,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 1807.0,
+        "projected_action": [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 1807.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,529 @@
+{
+  "task_id": "SWOR038",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "青屿通信园区运维（合成场景，加州非豁免现场员工雇主） 美国加利福尼亚州 2026-05-21",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-4A1854A60E51A543",
+          "score": 132.76655437164564
+        },
+        {
+          "rank": 2,
+          "id": "DOC-1B53EEE0074AEDA0",
+          "score": 132.37478018938512
+        },
+        {
+          "rank": 3,
+          "id": "DOC-D5BB9462982449FA",
+          "score": 132.37478018938512
+        },
+        {
+          "rank": 4,
+          "id": "DOC-787E8CE8ED550442",
+          "score": 110.82284927663137
+        },
+        {
+          "rank": 5,
+          "id": "DOC-044A2CD3B2BECDA1",
+          "score": 110.15409289323046
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-D5BB9462982449FA"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "采用 DOC-D5BB9462982449FA：其为 California Division of Labor Standards Enforcement 的正式监管来源，自 2012-07-11 起持续有效，覆盖决策日 2026-05-21、加利福尼亚州、安排非豁免现场员工连续工作超过五小时的通信运维雇主，且题面确认未触发例外。DOC-1B53EEE0074AEDA0 于决策日前一日失效；DOC-044A2CD3B2BECDA1 已失效；DOC-4A1854A60E51A543 和 DOC-787E8CE8ED550442 仅登记为行业信息来源，后者还是缺少四小时工作事实支撑的休息期规则。证据触发新增用餐覆盖约束 x_0 <= x_4 + x_5：启用含超过五小时工作段且自身不提供用餐时段的 A 时，方案必须同时启用经本地事实确认提供不少于三十分钟、完全脱离职责用餐时段的 E 或 F。求解后的唯一最优行动为启用 A、C、E，即 [1,0,1,0,1,0]，目标值 2724。"
+  },
+  "base_ir": {
+    "model_id": "SWOR038_base",
+    "world": {
+      "entity": "青屿通信园区运维",
+      "jurisdiction": "美国加利福尼亚州",
+      "decision_time": "2026-05-21"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-D5BB9462982449FA",
+        "before_expression": "absent",
+        "after_expression": "x_0 - x_4 - x_5 <= 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR038_patched",
+    "world": {
+      "entity": "青屿通信园区运维",
+      "jurisdiction": "美国加利福尼亚州",
+      "decision_time": "2026-05-21"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "exactly_one_B_E_F",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "policy_meal_coverage_A",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_4": -1,
+          "x_5": -1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2724.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2724.0,
+    "constraint_residuals": {
+      "max_three_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "zone_1_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_2_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_3_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "A_requires_B_or_E": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "exactly_one_B_E_F": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "policy_meal_coverage_A": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-D5BB9462982449FA",
+      "claim": "对于模块A已确认的连续工作超过五小时、无有效豁免且A自身不提供不少于三十分钟用餐时段的情形，启用A时必须由已确认提供真实用餐时段的E或F覆盖。",
+      "model_slot": "constraints.policy_meal_coverage_A",
+      "equation": "x_0 - x_4 - x_5 <= 0",
+      "code_region": "POLICY_MEAL_COVERAGE_A"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18177,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 7307,
+    "reasoning_output_tokens": 4801,
+    "wall_seconds": 174.713763199994,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2724.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2724.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 3,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

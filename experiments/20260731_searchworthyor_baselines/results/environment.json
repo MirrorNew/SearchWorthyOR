@@ -1,0 +1,51 @@
+{
+  "python": {
+    "executable": "<PYTHON>",
+    "version": "3.12.9"
+  },
+  "packages": {
+    "gurobipy": "12.0.2",
+    "openai": "1.78.0",
+    "numpy": "2.2.5",
+    "langchain": "0.3.25"
+  },
+  "gurobi": {
+    "available": true,
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 1.0
+  },
+  "api_configuration": {
+    "api_key_present": false,
+    "base_url_present": false,
+    "requested_model": "gpt-5.6-sol",
+    "requested_reasoning_effort": "high",
+    "strict_no_reasoning_fallback": true
+  },
+  "codex_cli": {
+    "path": "<CODEX_CLI>",
+    "exists": true,
+    "sha256": "39e9e041ea33ac34aad9578adfe660c5c7a6dc8f82620b77623960f9352a6ef3",
+    "authentication": "existing ChatGPT/Codex CLI login",
+    "reasoning_effort_requested": "high",
+    "reasoning_effort_independently_validated": false
+  },
+  "baseline_roots": {
+    "optimus_prompt": {
+      "path": "<LOCAL_BASELINES_ROOT>\\OptiMUS-main",
+      "exists": true
+    },
+    "optimus_v02": {
+      "path": "<LOCAL_BASELINES_ROOT>\\OptiMUS-optimus-v0.2",
+      "exists": true
+    },
+    "chain_of_experts": {
+      "path": "<LOCAL_BASELINES_ROOT>\\Chain-of-Experts-main",
+      "exists": true
+    },
+    "optiminer_training_free": {
+      "path": "<WORKFLOW_ROOT>",
+      "exists": true
+    }
+  }
+}

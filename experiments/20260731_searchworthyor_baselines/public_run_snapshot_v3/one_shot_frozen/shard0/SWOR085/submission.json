@@ -1,0 +1,509 @@
+{
+  "task_id": "SWOR085",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡川包装食品（合成场景，包装食品制造商） 美国联邦食品标签监管 2026-04-22",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-3A9EB383BDF3DFAE",
+          "score": 117.04379079231273
+        },
+        {
+          "rank": 2,
+          "id": "DOC-DE8745D425424D6C",
+          "score": 116.9927376243004
+        },
+        {
+          "rank": 3,
+          "id": "DOC-D64C58308662DE4C",
+          "score": 111.24377794164846
+        },
+        {
+          "rank": 4,
+          "id": "DOC-2CE83FE565BDD0C0",
+          "score": 110.78725769090758
+        },
+        {
+          "rank": 5,
+          "id": "DOC-A326EA5220246B98",
+          "score": 105.03788192854594
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-3A9EB383BDF3DFAE"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-3A9EB383BDF3DFAE：其属于正式 eCFR 监管来源，在决策日 2026-04-22 有效，辖区为美国联邦食品标签监管，适用于包装食品企业，且题面确认未触发例外。DOC-DE8745D425424D6C 被标为行业信息来源；DOC-D64C58308662DE4C 于决策日前一日失效；DOC-2CE83FE565BDD0C0 属于药品标签辖区；DOC-A326EA5220246B98 的主体及规则语义均不匹配本次配方—gluten-free 声明组合。适用规则使同一最终包装上的模式A声明与模式B的25 ppm配方不相容，因此新增 x_0+x_1<=1。求解后唯一最优行动为启用模式B、C、D，即 [0,1,1,1,0,0,0,0]，目标值2707，容量占用6。"
+  },
+  "base_ir": {
+    "model_id": "SWOR085",
+    "world": "美国联邦食品标签监管下衡川包装食品于2026-04-22进行的生产与容量规划",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1018,
+        "x_1": 957,
+        "x_2": 896,
+        "x_3": 854,
+        "x_4": 793,
+        "x_5": 751,
+        "x_6": 690,
+        "x_7": 629
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 7,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "exactly_one_of_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-3A9EB383BDF3DFAE",
+        "before_expression": "不存在模式A与模式B之间的监管兼容性约束",
+        "after_expression": "gluten_free_claim_formula_compatibility: x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR085",
+    "world": "美国联邦食品标签监管下衡川包装食品于2026-04-22进行的生产与容量规划",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "模式H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1018,
+        "x_1": 957,
+        "x_2": 896,
+        "x_3": 854,
+        "x_4": 793,
+        "x_5": 751,
+        "x_6": 690,
+        "x_7": 629
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modes",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "equipment_capacity",
+        "sense": "<=",
+        "rhs": 7,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "exactly_one_of_B_E_H",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "gluten_free_claim_formula_compatibility",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2707.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2707.0,
+    "constraint_residuals": {
+      "max_three_modes": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "equipment_capacity": {
+        "lhs": 6.0,
+        "sense": "<=",
+        "rhs": 7.0,
+        "violation": 0.0
+      },
+      "exactly_one_of_B_E_H": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "gluten_free_claim_formula_compatibility": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-3A9EB383BDF3DFAE",
+      "claim": "同一最终包装若使用 gluten-free 声明，则不得同时采用会使成品麸质含量达到20 ppm或以上的脱麸质处理小麦淀粉配方；模式B的已核验结果为25 ppm。",
+      "model_slot": "constraints.gluten_free_claim_formula_compatibility",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "model.addConstr(x[0] + x[1] <= 1, name=\"gluten_free_claim_formula_compatibility\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18813,
+    "cached_input_tokens": 3840,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 5479,
+    "reasoning_output_tokens": 2977,
+    "wall_seconds": 133.7872703999892,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2707.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2707.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 28,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,484 @@
+{
+  "task_id": "SWOR057",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "星桥综合服务运营有限公司（松原经营辖区（合成）霁原单元） 松原经营辖区（合成） 2026-06-18",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-176E46B10D3FC6F3",
+          "score": 82.13822607830801
+        },
+        {
+          "rank": 2,
+          "id": "DOC-867A17F7E290BF70",
+          "score": 82.13822607830801
+        },
+        {
+          "rank": 3,
+          "id": "DOC-B0A006E677934719",
+          "score": 79.00577588309913
+        },
+        {
+          "rank": 4,
+          "id": "DOC-E4D29133458A49B3",
+          "score": 70.27671056004108
+        },
+        {
+          "rank": 5,
+          "id": "DOC-C709B4A82F473DCA",
+          "score": 59.59544376087752
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-867A17F7E290BF70"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-867A17F7E290BF70属于正式监管来源，有效期为2026-03-20至2027-06-18，覆盖决策日2026-06-18；适用辖区与松原经营辖区（合成）一致，适用主体与本次决策实体完全一致，且题面明确未激活书面应急例外，因此其保障选项规则适用。DOC-176E46B10D3FC6F3在决策日前一日已失效；DOC-B0A006E677934719辖区不符；DOC-E4D29133458A49B3主体不符；DOC-C709B4A82F473DCA主体单元不符，均不采用。"
+  },
+  "base_ir": {
+    "model_id": "SWOR057_base",
+    "world": "frozen_local_ledger_before_external_policy",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_three_shifts",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_period_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "c_period_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_period_3_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "DOC-867A17F7E290BF70",
+        "before_expression": null,
+        "after_expression": {
+          "name": "c_policy_guarantee_option",
+          "sense": ">=",
+          "rhs": 1,
+          "terms": {
+            "x_4": 1,
+            "x_5": 1
+          }
+        }
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR057_patched",
+    "world": "frozen_local_ledger_with_applicable_policy_DOC-867A17F7E290BF70",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用班次F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "c_exactly_three_shifts",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_period_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "c_period_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "c_period_3_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "c_policy_guarantee_option",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2715.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2715.0,
+    "constraint_residuals": {
+      "c_exactly_three_shifts": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "c_period_1_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_period_2_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_period_3_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "c_policy_guarantee_option": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-867A17F7E290BF70",
+      "claim": "最终组合必须至少包含一个保障选项班次E或班次F。",
+      "model_slot": "constraints.c_policy_guarantee_option",
+      "equation": "x_4 + x_5 >= 1",
+      "code_region": "model.addConstr(x[4] + x[5] >= 1, name=\"c_policy_guarantee_option\")"
+    },
+    {
+      "evidence_id": "DOC-867A17F7E290BF70",
+      "claim": "结合全部冻结基础约束与保障规则，最优行动为启用班次A、C、E。",
+      "model_slot": "optimal_solution.action_projection",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5)=(1,0,1,0,1,0); objective=1008+905+802=2715",
+      "code_region": "model.optimize(); projected_action = [int(round(value)) for value in values]"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17577,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 2638,
+    "reasoning_output_tokens": 435,
+    "wall_seconds": 55.0710315000033,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2715.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2715.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

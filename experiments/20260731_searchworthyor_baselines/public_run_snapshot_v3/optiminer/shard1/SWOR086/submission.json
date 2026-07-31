@@ -1,0 +1,716 @@
+{
+  "task_id": "SWOR086",
+  "baseline": "optiminer_training_free_compat_cli",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "云岬专业任务运营有限公司 2026年7月9日 星港经营辖区 镜川单元 分配匹配 协调资源点 基础类别 保障类别1 保障类别2 执行计划 适用规则 资源上限 组合约束 优先级 例外条件",
+      "reason": "当前无任何搜索历史或外部证据，尚不能判断在决策时点对该辖区及主体有效的规则是否会改变协调资源点总量、类别相关变量域或约束、匹配组合条件、例外逻辑及目标结构。需先检索并核验来源权限、有效期、辖区、适用主体和触发条件；仅凭基础世界无法输出包含外部规则变化的最终 formulation 与唯一最优行动。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-4AC7FFC6CA47EDD3",
+          "score": 94.80703470578214
+        },
+        {
+          "rank": 2,
+          "id": "DOC-CD77FA883D392CCC",
+          "score": 94.80703470578214
+        },
+        {
+          "rank": 3,
+          "id": "DOC-9E73ED994666C16F",
+          "score": 93.6175209126917
+        },
+        {
+          "rank": 4,
+          "id": "DOC-490F6CD1A6054EBC",
+          "score": 81.64668750679235
+        },
+        {
+          "rank": 5,
+          "id": "DOC-72DFA6DFB33561D4",
+          "score": 73.83328763553767
+        }
+      ]
+    },
+    {
+      "query": "云岬专业任务运营有限公司 星港经营辖区（合成）镜川单元 2026年7月9日 正式组合决策 分配匹配 协调资源点总量 上限 资源预算 基础类别 保障类别 类别配额 互斥 联动 前置条件 优先级 效用调整 应急例外",
+      "reason": "第1轮证据已足以确认一条在权限、时点、辖区、主体及例外状态上均适用的规则，即最终组合至少包含匹配F或匹配G；历史失效、错误辖区和错误主体文本可排除。但当前结果只覆盖保障选项约束，尚未排除会改变协调资源点总预算、类别配额或变量域、跨匹配联动与条件约束、效用或目标结构的其他并行有效规则。为达到唯一且事实充分的最终裁决，仍需进行一次针对这些未解决结构槽位的检索。",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-4AC7FFC6CA47EDD3",
+          "score": 93.40040590206472
+        },
+        {
+          "rank": 2,
+          "id": "DOC-CD77FA883D392CCC",
+          "score": 93.40040590206472
+        },
+        {
+          "rank": 3,
+          "id": "DOC-9E73ED994666C16F",
+          "score": 92.21089210897428
+        },
+        {
+          "rank": 4,
+          "id": "DOC-490F6CD1A6054EBC",
+          "score": 80.24005870307487
+        },
+        {
+          "rank": 5,
+          "id": "DOC-1166D399192625B2",
+          "score": 74.92389065927252
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-4AC7FFC6CA47EDD3"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-4AC7FFC6CA47EDD3属于正式监管来源；2026-07-09处于其2026-04-10至2027-07-09的有效期内；适用辖区、发布及受约束主体均与本任务完全一致；书面应急例外未激活。因此其保障选项规则适用。DOC-CD77FA883D392CCC已于2026-07-08失效；DOC-9E73ED994666C16F辖区错误；DOC-490F6CD1A6054EBC、DOC-72DFA6DFB33561D4和DOC-1166D399192625B2主体不匹配，均不得改变模型。协调资源点只有逐项需求而无总预算，不能据此虚构容量约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR086_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735,
+        "x_6": 693
+      }
+    },
+    "constraints": [
+      {
+        "name": "exactly_three_assignments",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_1_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "resource_subject_3_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "at_least_two_core_candidates",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-4AC7FFC6CA47EDD3",
+        "before_expression": "absent",
+        "after_expression": "x_5 + x_6 >= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR086_patched",
+    "world": "evidence_patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用匹配G"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1002,
+        "x_1": 960,
+        "x_2": 899,
+        "x_3": 857,
+        "x_4": 796,
+        "x_5": 735,
+        "x_6": 693
+      }
+    },
+    "constraints": [
+      {
+        "name": "exactly_three_assignments",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_1_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "resource_subject_3_at_most_one",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "at_least_two_core_candidates",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "policy_at_least_one_guarantee_option",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_5": 1,
+          "x_6": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2697.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 0.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 1.0,
+      "x_6": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      0,
+      0,
+      0,
+      1,
+      0
+    ],
+    "objective_recomputed": 2697.0,
+    "constraint_residuals": {
+      "exactly_three_assignments": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "resource_subject_1_at_most_one": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_2_at_most_one": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_3_at_most_one": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "at_least_two_core_candidates": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      },
+      "policy_at_least_one_guarantee_option": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "七个候选匹配均为是否启用的二元决策。",
+      "model_slot": "variables",
+      "equation": "x_i in {0,1}, i=0,...,6",
+      "code_region": "[VARIABLES]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "以给定效用最大化总匹配效用，且只有一个目标。",
+      "model_slot": "objective",
+      "equation": "max 1002x_0+960x_1+899x_2+857x_3+796x_4+735x_5+693x_6",
+      "code_region": "[OBJECTIVE]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "必须完成三个分配。",
+      "model_slot": "constraints.exactly_three_assignments",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6=3",
+      "code_region": "[C_EXACTLY_3]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "匹配A、D、G至多启用一个。",
+      "model_slot": "constraints.resource_subject_1_at_most_one",
+      "equation": "x_0+x_3+x_6<=1",
+      "code_region": "[C_SUBJECT_1]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "匹配B、E至多启用一个。",
+      "model_slot": "constraints.resource_subject_2_at_most_one",
+      "equation": "x_1+x_4<=1",
+      "code_region": "[C_SUBJECT_2]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "匹配C、F至多启用一个。",
+      "model_slot": "constraints.resource_subject_3_at_most_one",
+      "equation": "x_2+x_5<=1",
+      "code_region": "[C_SUBJECT_3]"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK_SWOR086",
+      "claim": "核心候选A、B、C中至少启用两个。",
+      "model_slot": "constraints.at_least_two_core_candidates",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "[C_CORE]"
+    },
+    {
+      "evidence_id": "DOC-4AC7FFC6CA47EDD3",
+      "claim": "最终组合必须至少包含一个保障选项F或G。",
+      "model_slot": "constraints.policy_at_least_one_guarantee_option",
+      "equation": "x_5+x_6>=1",
+      "code_region": "[C_POLICY_GUARANTEE]"
+    },
+    {
+      "evidence_id": "DERIVED_FROM_PATCHED_MODEL",
+      "claim": "最终模型的唯一最优行动为启用A、B、F，投影为[1,1,0,0,0,1,0]，目标值2697。另一可行核心对保障组合B、C、G的目标值为2552；其余核心对与F或G违反已有互斥约束，故不存在并列最优解。",
+      "model_slot": "optimal_solution",
+      "equation": "x=(1,1,0,0,0,1,0), z*=2697",
+      "code_region": "[SOLVE_AND_REPORT]"
+    }
+  ],
+  "usage": {
+    "input_tokens": 21368,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4628,
+    "reasoning_output_tokens": 1604,
+    "wall_seconds": 91.10336670000106,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2697.0,
+        "projected_action": [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2697.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          0,
+          0,
+          0,
+          1,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 0.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 1.0,
+          "x_6": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    },
+    "controller_calls": [
+      {
+        "stage": "controller_turn_1",
+        "usage": {
+          "input_tokens": 15253,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 270,
+          "reasoning_output_tokens": 77
+        },
+        "wall_seconds": 12.872986500005936,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_2",
+        "usage": {
+          "input_tokens": 16799,
+          "cached_input_tokens": 14080,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 352,
+          "reasoning_output_tokens": 114
+        },
+        "wall_seconds": 16.71134389998042,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      },
+      {
+        "stage": "controller_turn_3",
+        "usage": {
+          "input_tokens": 18383,
+          "cached_input_tokens": 12032,
+          "cache_write_input_tokens": 0,
+          "output_tokens": 572,
+          "reasoning_output_tokens": 285
+        },
+        "wall_seconds": 21.818417599977693,
+        "cli_timeout_seconds": 180,
+        "event_audit": {
+          "passed": true,
+          "violations": [],
+          "warnings": [
+            "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+          ],
+          "allow_web_search": false,
+          "counts": {
+            "thread.started": 1,
+            "turn.started": 1,
+            "turn.completed": 1
+          },
+          "completed_agent_messages": 1,
+          "completed_web_searches": 0,
+          "stage_multi_message_compatibility": true,
+          "last_completed_non_error_item": "agent_message",
+          "completed_agent_message_count": 1,
+          "todo_list_event_count": 0,
+          "trailing_item_types": [],
+          "trailing_internal_items": []
+        },
+        "reused_existing_response": false
+      }
+    ],
+    "controller_call_count": 3,
+    "search_call_count": 2
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

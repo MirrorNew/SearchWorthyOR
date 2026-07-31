@@ -1,0 +1,530 @@
+{
+  "task_id": "SWOR038",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:leginfo.legislature.ca.gov faces codes_displaySection.xhtml Labor Code 512 meal period California official ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "site:dir.ca.gov IWC Wage Order telecommunications employees California meal period ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=512.",
+    "https://www.dir.ca.gov/t8/11040.html",
+    "https://dir.ca.gov/dlse/faq_mealperiods.htm"
+  ],
+  "selected_urls": [
+    "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=512.",
+    "https://www.dir.ca.gov/t8/11040.html",
+    "https://dir.ca.gov/dlse/faq_mealperiods.htm"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "采用加州立法机关《劳动法典》第512条、加州工业福利委员会第4号工资令及加州劳工标准执行局官方说明。第512条所示版本自2026-01-01生效，覆盖2026-05-21决策时点；规则适用于加州雇主与员工。第4号工资令覆盖技术、机械及类似职业，其第3至12节的豁免对象不包括题面明确给出的非豁免现场员工。模块A明确包含超过5小时的连续工作段、没有有效豁免且不提供30分钟用餐时段；普通现场服务块也没有事实满足在岗用餐所需的客观工作性质条件及书面协议。题面没有满足《劳动法典》第512(c)-(f)任一例外全部条件的事实。因此新增x_0==0。模块B虽未提供完全脱离职责的用餐时段，但题面未给出超过5小时这一触发事实，不能推定违法；C、D同样证据不足，E、F已提供合规用餐时段，故不作其他变更。基础模型最优行动为[1,1,1,0,0,0]、目标值2869；修补后最终行动为启用B、C、D，即[0,1,1,1,0,0]，目标值2705。"
+  },
+  "base_ir": {
+    "model_id": "SWOR038_base",
+    "world": "SWOR038@2026-05-21",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "access_backhaul_link",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "exclusive_core_backup_emergency",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.dir.ca.gov/t8/11040.html",
+        "before_expression": "不存在针对模块A的政策可行性约束",
+        "after_expression": "ca_meal_period_module_A: x_0 == 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR038_patched",
+    "world": "SWOR038@2026-05-21",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "access_backhaul_link",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "exclusive_core_backup_emergency",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "ca_meal_period_module_A",
+        "sense": "==",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2705.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2705.0,
+    "constraint_residuals": {
+      "max_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "zone_1_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_2_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_3_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "access_backhaul_link": {
+        "lhs": -1.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "exclusive_core_backup_emergency": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "ca_meal_period_module_A": {
+        "lhs": 0.0,
+        "sense": "==",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://leginfo.legislature.ca.gov/faces/codes_displaySection.xhtml?lawCode=LAB&sectionNum=512.",
+      "claim": "自2026-01-01生效的加州《劳动法典》第512(a)条禁止雇主让员工在未提供至少30分钟用餐期的情况下每日工作超过5小时；不超过6小时的工作日仅可由双方同意有效豁免。",
+      "model_slot": "constraints.ca_meal_period_module_A",
+      "equation": "x_0 == 0",
+      "code_region": "patched_ir.constraints[name=ca_meal_period_module_A]及约束构造循环"
+    },
+    {
+      "evidence_id": "https://www.dir.ca.gov/t8/11040.html",
+      "claim": "第4号工资令适用于加州技术、机械及类似职业；第11(A)节要求超过5小时提供至少30分钟用餐期，并规定在岗用餐仅在工作性质客观上阻止完全脱离职责且双方订有可撤销书面协议时允许。题面员工为非豁免现场员工，模块A为普通服务块且没有有效豁免或30分钟用餐期。",
+      "model_slot": "constraints.ca_meal_period_module_A",
+      "equation": "x_0 == 0",
+      "code_region": "patched_ir.constraints[name=ca_meal_period_module_A]及约束构造循环"
+    },
+    {
+      "evidence_id": "https://dir.ca.gov/dlse/faq_mealperiods.htm",
+      "claim": "DLSE说明合规通常要求实际解除全部职责、放弃对员工活动的控制并允许不间断30分钟休息；在岗用餐例外要求客观工作性质条件和书面协议。模块A的固定属性不满足这些条件。",
+      "model_slot": "constraints.ca_meal_period_module_A",
+      "equation": "x_0 == 0",
+      "code_region": "patched_ir.constraints[name=ca_meal_period_module_A]及约束构造循环"
+    }
+  ],
+  "usage": {
+    "input_tokens": 241193,
+    "cached_input_tokens": 177920,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 8451,
+    "reasoning_output_tokens": 4337,
+    "wall_seconds": 221.0348787999974,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 5
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2705.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2705.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 2,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 5
+    },
+    "gold_available_to_model": false
+  }
+}

@@ -1,0 +1,73 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "properties": {
+    "task_id": {
+      "type": "string"
+    },
+    "selected_evidence_ids": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "applicability": {
+      "type": "object",
+      "properties": {
+        "authority": {
+          "type": "boolean"
+        },
+        "effective_at_decision_time": {
+          "type": "boolean"
+        },
+        "jurisdiction_match": {
+          "type": "boolean"
+        },
+        "subject_match": {
+          "type": "boolean"
+        },
+        "exception_resolved": {
+          "type": "boolean"
+        },
+        "reason": {
+          "type": "string"
+        }
+      },
+      "required": [
+        "authority",
+        "effective_at_decision_time",
+        "jurisdiction_match",
+        "subject_match",
+        "exception_resolved",
+        "reason"
+      ],
+      "additionalProperties": false
+    },
+    "base_ir_json": {
+      "type": "string"
+    },
+    "typed_patch_json": {
+      "type": "string"
+    },
+    "patched_ir_json": {
+      "type": "string"
+    },
+    "gurobi_code": {
+      "type": "string"
+    },
+    "claim_to_model_mapping_json": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "task_id",
+    "selected_evidence_ids",
+    "applicability",
+    "base_ir_json",
+    "typed_patch_json",
+    "patched_ir_json",
+    "gurobi_code",
+    "claim_to_model_mapping_json"
+  ],
+  "additionalProperties": false
+}

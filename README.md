@@ -10,6 +10,16 @@ SearchWorthyOR-100 是一个面向“检索增强运筹优化建模”的中文�
 
 > **当前状态：候选审计版，尚未通过严格的搜索评测发布门。** 100 个基础/补丁模型、双求解器结果和行动集证书可以用于模型侧审计；但 vFINAL10 内容红队发现，四候选的组内多数结构仍可在不读取题面的情况下识别适用文档。因此，当前版本不得用于宣称正式的端到端搜索能力。README 保留完整使用与评分协议，是为了明确下一版重构干扰来源后应如何验收。
 
+> **公开仓库边界：本仓库是开放开发集，不是保密测试集。** 仓库中包含
+> `private/gold.jsonl`、证据语料和模型复核材料；`private/` 表示评测接口角色，不表示 GitHub
+> 访问权限。模型或开发者一旦读过这些文件，就不能在同一 100 题上声称无污染的隐藏测试结果。
+> 可复现实验应报告污染状态并在运行时隔离 Gold；正式 leaderboard 必须使用另行冻结、从未公开、
+> 不与本仓库共享政策模板和 base 的 held-out 集。
+
+> **许可边界：仓库当前没有 `LICENSE`。** 公开可见不等于自动授予复制、修改或再分发许可；
+> `private/web_snapshots/raw/` 中的第三方网页/PDF仍受各原始来源条款约束。选择代码/数据许可证和
+> 逐项确认网页快照再分发权之前，本仓库应视为审计性公开，而不是已完成法律清理的正式数据发行版。
+
 ## 一道完整题目包含什么
 
 一条完整任务不是单独一段题面，而是由四个相互关联的层组成：
@@ -17,9 +27,9 @@ SearchWorthyOR-100 是一个面向“检索增强运筹优化建模”的中文�
 | 层 | 每题内容 | 答题时是否可见 |
 |---|---|---|
 | 公开题目 | 中文问题、决策日期、主体、辖区、输出要求和检索入口 | 可见 |
-| 检索语料 | 1 份适用证据和约 3 份旧版本、错误辖区、错误主体或非权威干扰文档 | 只能通过检索接口访问 |
-| Gold | 适用来源、基础模型审计、结构补丁、最终模型、最优行动和证书 | 不可见，仅评测使用 |
-| 模型产物 | 基础/最终 canonical IR、Gurobi/COPT 代码、解和残差 | 不可见，仅复核使用 |
+| 检索语料 | 1 份适用证据和约 3 份旧版本、错误辖区、错误主体或非权威干扰文档 | 仓库可见；答题进程只通过检索接口访问 |
+| Gold | 适用来源、基础模型审计、结构补丁、最终模型、最优行动和证书 | 仓库可见；答题进程不可见 |
+| 模型产物 | 基础/最终 canonical IR、Gurobi/COPT 代码、解和残差 | 仓库可见；答题进程不可见 |
 
 四层通过任务 `id`、Gold 中的 `evidence_ids`、模型路径和内容哈希关联。公开题目不会给出证据 ID，因此 Agent 必须使用自然实体、日期、辖区和业务语义检索。
 
@@ -747,7 +757,8 @@ A_0^\epsilon \cap A_1^\epsilon = \varnothing.
 | `private/web_snapshots/raw/` | 20 个官方来源的冻结原始响应 |
 | `manifest.json` | 发布文件的 SHA-256、数量和构建环境 |
 
-`private/` 和 `models/` 是评测与审计材料，不应在答题阶段暴露给被测系统。
+`private/` 和 `models/` 是评测与审计材料。它们在本公开仓库中可下载，但不应挂载、检索或注入
+被测答题进程；运行前还应声明模型、Agent 开发者和调参流程是否曾访问这些材料。
 
 ## 复现与维护
 
@@ -761,6 +772,10 @@ python scripts/run_release_gate.py --root .
 
 该命令检查数据结构、证据与模型绑定、重复与元数据泄漏、来源完整性、双审状态及文件哈希。网页快照不会在普通验证过程中联网更新。
 
+`reports/release_gate.json` 是验证 `manifest.json` 后生成的审计报告，因此不再被
+`manifest.json` 反向哈希，避免报告与被验证清单形成不可满足的自引用；Git 提交仍固定该报告
+本身。临时 stdout/stderr、缓存和 `staging/` 同样不属于发布内容清单。
+
 详细的数据合同、构造记录和最终审计结果分别位于：
 
 - `docs/release_gate_contract.md`
@@ -768,3 +783,41 @@ python scripts/run_release_gate.py --root .
 - `reports/release_gate.json`
 
 题目来源、生成过程、网页冻结和审计边界已移至 `生成方法.md`，不再与数据字段说明混在 README 正文中。
+
+## 已完成的基线实验
+
+仓库同时提供一份可复核实验包：
+
+`experiments/20260731_searchworthyor_baselines/`
+
+它包含 GPT-5.6-sol high 的无搜索 one-shot、冻结语料 one-shot、20 条真实联网题，
+OPTIMUS-inspired、Chain-of-Experts-inspired 和 training-free OptiMiner compatibility
+六个条件的权威汇总，以及 520 个 task-condition 的逐题公开快照。公开快照保存
+`submission.json`、生成的 Gurobi `model.py`、失败记录与受限恢复 provenance；不包含原始
+prompt、逐事件 telemetry 或本地机器路径。
+
+在仓库根目录运行：
+
+```powershell
+python experiments/20260731_searchworthyor_baselines/scripts/verify_public_bundle.py `
+  --root experiments/20260731_searchworthyor_baselines
+
+python experiments/20260731_searchworthyor_baselines/scripts/verify_public_run_snapshot.py `
+  --root experiments/20260731_searchworthyor_baselines/public_run_snapshot_v3
+```
+
+需要重新评分时，可直接读取公开逐题快照：
+
+```powershell
+python experiments/20260731_searchworthyor_baselines/scripts/summarize_full_run.py `
+  --dataset-root . `
+  --run-root experiments/20260731_searchworthyor_baselines/public_run_snapshot_v3/optiminer `
+  --label "OptiMiner training-free compatibility" `
+  --output optiminer_rescore.json `
+  --markdown optiminer_rescore.md
+```
+
+实验结论、错误来源、成本和 Graph Engineering 框架分别见该目录中的
+`results/EXPERIMENT_FINDINGS.md`、`results/OPTIMINER_FAILURE_ANALYSIS.md`、
+`results/COST_AND_RUNTIME.md` 和 `docs/GRAPH_OR_SEARCH_AGENT.md`。由于 Gold 与候选语料已经
+公开，这些结果只能作为开发集/审计集上的可复现实验，不能解释为长期无污染的隐藏榜单成绩。

@@ -1,0 +1,10 @@
+{
+  "status": "recovery_failed_no_further_retry",
+  "stale_failure_file_preserved": "failure.json",
+  "recovery_failure_file": "recovery_failure_attempt1.json",
+  "newly_completed_stages": [],
+  "failed_stage": "coe_ProgrammingExpert",
+  "failure_message": "coe_ProgrammingExpert event audit failed because forbidden mcp_tool_call items were emitted",
+  "submission_created": false,
+  "retry_exhausted": true
+}

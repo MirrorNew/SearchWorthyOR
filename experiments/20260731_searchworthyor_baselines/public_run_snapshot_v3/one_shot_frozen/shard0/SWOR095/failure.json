@@ -1,0 +1,5 @@
+{
+  "task_id": "SWOR095",
+  "type": "SyntaxError",
+  "message": "did you forget parentheses around the comprehension target? (model.py, line 37)"
+}

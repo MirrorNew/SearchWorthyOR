@@ -1,0 +1,535 @@
+{
+  "task_id": "SWOR090",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据，因此无法确认决策日对指定主体、辖区及业务活动适用的外部规则。未使用模型记忆、旧版、异地版或邻近主体材料；不应用外部补丁，patched IR 与 base IR 完全相同。"
+  },
+  "base_ir": {
+    "model_id": "SWOR090",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696,
+        "x_7": 635
+      }
+    },
+    "constraints": [
+      {
+        "name": "holdings_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 2,
+          "x_1": 3,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 2,
+          "x_5": 3,
+          "x_6": 4,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 3,
+          "x_3": 5,
+          "x_4": 2,
+          "x_5": 4,
+          "x_6": 1,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "core_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR090",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1005,
+        "x_1": 963,
+        "x_2": 902,
+        "x_3": 841,
+        "x_4": 799,
+        "x_5": 738,
+        "x_6": 696,
+        "x_7": 635
+      }
+    },
+    "constraints": [
+      {
+        "name": "holdings_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 2,
+          "x_1": 3,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 2,
+          "x_5": 3,
+          "x_6": 4,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 3,
+          "x_3": 5,
+          "x_4": 2,
+          "x_5": 4,
+          "x_6": 1,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "core_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2870.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2870.0,
+    "constraint_residuals": {
+      "holdings_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "capital_limit": {
+        "lhs": 9.0,
+        "sense": "<=",
+        "rhs": 12.0,
+        "violation": 0.0
+      },
+      "risk_limit": {
+        "lhs": 8.0,
+        "sense": "<=",
+        "rhs": 15.0,
+        "violation": 0.0
+      },
+      "core_or_backup": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_LOCAL_DATA",
+      "claim": "八个候选策略包均为是否启用的二元选择，顺序为A至H。",
+      "model_slot": "variables; action_projection",
+      "equation": "x_i in {0,1}, i=0,...,7",
+      "code_region": "names definition and binary addVar block"
+    },
+    {
+      "evidence_id": "TASK_LOCAL_DATA",
+      "claim": "最大化八个策略包的总风险调整收益，系数依次为1005、963、902、841、799、738、696、635。",
+      "model_slot": "objective",
+      "equation": "max 1005*x_0 + 963*x_1 + 902*x_2 + 841*x_3 + 799*x_4 + 738*x_5 + 696*x_6 + 635*x_7",
+      "code_region": "returns dictionary and model.setObjective"
+    },
+    {
+      "evidence_id": "TASK_LOCAL_RULE",
+      "claim": "投资组合必须恰好持有3个策略头寸。",
+      "model_slot": "constraints.holdings_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6+x_7 = 3",
+      "code_region": "model.addConstr named holdings_exactly_3"
+    },
+    {
+      "evidence_id": "TASK_LOCAL_RULE",
+      "claim": "资本占用系数依次为2、3、4、1、2、3、4、1，总占用不得超过12。",
+      "model_slot": "constraints.capital_limit",
+      "equation": "2*x_0+3*x_1+4*x_2+x_3+2*x_4+3*x_5+4*x_6+x_7 <= 12",
+      "code_region": "capital dictionary and model.addConstr named capital_limit"
+    },
+    {
+      "evidence_id": "TASK_LOCAL_RULE",
+      "claim": "风险点系数依次为4、1、3、5、2、4、1、3，组合风险点不得超过15。",
+      "model_slot": "constraints.risk_limit",
+      "equation": "4*x_0+x_1+3*x_2+5*x_3+2*x_4+4*x_5+x_6+3*x_7 <= 15",
+      "code_region": "risk dictionary and model.addConstr named risk_limit"
+    },
+    {
+      "evidence_id": "TASK_LOCAL_RULE",
+      "claim": "策略包A与备用项策略包D中至少启用一个。",
+      "model_slot": "constraints.core_or_backup",
+      "equation": "x_0+x_3 >= 1",
+      "code_region": "model.addConstr named core_or_backup"
+    },
+    {
+      "evidence_id": "NO_EXTERNAL_EVIDENCE",
+      "claim": "未提供可用于确认适用外部规则的证据，因此不得增加、删除或修改模型槽位。",
+      "model_slot": "typed_patch.ops",
+      "equation": "ops = [] and patched_ir = base_ir",
+      "code_region": "无外部规则代码区域；代码直接实现未修改的基础IR"
+    },
+    {
+      "evidence_id": "MODEL_SOLUTION",
+      "claim": "最优行动为启用策略包A、B、C，其资本占用为9，风险点为8，目标值为2870。",
+      "model_slot": "solution.action_projection; solution.objective",
+      "equation": "(x_0,x_1,x_2,x_3,x_4,x_5,x_6,x_7)=(1,1,1,0,0,0,0,0); z*=1005+963+902=2870",
+      "code_region": "model.optimize and JSON result construction"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15999,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3815,
+    "reasoning_output_tokens": 729,
+    "wall_seconds": 74.37048100000538,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2870.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "selected_strategies": [
+          "策略包A",
+          "策略包B",
+          "策略包C"
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2870.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 36,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

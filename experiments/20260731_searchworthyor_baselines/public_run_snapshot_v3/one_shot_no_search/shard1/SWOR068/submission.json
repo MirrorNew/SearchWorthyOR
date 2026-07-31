@@ -1,0 +1,489 @@
+{
+  "task_id": "SWOR068",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何外部证据，无法核验规则的权威性、决策时点效力、辖区、主体或例外。因此不生成结构补丁，patched IR 与 base IR 完全相同。求解该基础模型的最优行动为启用服务单元A、B、C，停用D、E、F；总服务效用为2860。"
+  },
+  "base_ir": {
+    "model_id": "SWOR068_base",
+    "world": "和岚医疗健康运营有限公司（北湾经营辖区（合成）晨汐单元）于2026-02-17进行医疗资源配置资源重排",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_A_or_B",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_B_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_A_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_ABC_at_least_2",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR068_base",
+    "world": "和岚医疗健康运营有限公司（北湾经营辖区（合成）晨汐单元）于2026-02-17进行医疗资源配置资源重排",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1008,
+        "x_1": 947,
+        "x_2": 905,
+        "x_3": 844,
+        "x_4": 802,
+        "x_5": 741
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_A_or_B",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_B_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_A_or_C",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_ABC_at_least_2",
+        "sense": ">=",
+        "rhs": 2,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2860.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2860.0,
+    "constraint_residuals": {
+      "select_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "emergency_A_or_B": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "continuity_B_or_C": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "specialty_A_or_C": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_ABC_at_least_2": {
+        "lhs": 3.0,
+        "sense": ">=",
+        "rhs": 2.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "服务单元A至F均为可启用或停用的候选，价值贡献依次为1008、947、905、844、802、741。",
+      "model_slot": "variables; objective.terms",
+      "equation": "max 1008*x_0 + 947*x_1 + 905*x_2 + 844*x_3 + 802*x_4 + 741*x_5, x_i in {0,1}",
+      "code_region": "variable_names, variables, objective_terms, model.setObjective"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "各单元临床资源点占用依次为1、2、3、4、1、2，但题面未给出资源点总量上限或资源平衡要求，不能据此新增约束。",
+      "model_slot": "no active model slot",
+      "equation": "no clinical-resource capacity constraint",
+      "code_region": "none"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "必须恰好启用3个医疗资源块。",
+      "model_slot": "constraints.select_exactly_3",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5=3",
+      "code_region": "constraints_data: select_exactly_3"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "紧急服务至少由A、B之一覆盖。",
+      "model_slot": "constraints.emergency_A_or_B",
+      "equation": "x_0+x_1>=1",
+      "code_region": "constraints_data: emergency_A_or_B"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "连续照护至少由B、C之一覆盖。",
+      "model_slot": "constraints.continuity_B_or_C",
+      "equation": "x_1+x_2>=1",
+      "code_region": "constraints_data: continuity_B_or_C"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "专科服务至少由A、C之一覆盖。",
+      "model_slot": "constraints.specialty_A_or_C",
+      "equation": "x_0+x_2>=1",
+      "code_region": "constraints_data: specialty_A_or_C"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "核心候选A、B、C中至少启用两个。",
+      "model_slot": "constraints.core_ABC_at_least_2",
+      "equation": "x_0+x_1+x_2>=2",
+      "code_region": "constraints_data: core_ABC_at_least_2"
+    },
+    {
+      "evidence_id": "EVIDENCE_CONDITION_NO_SEARCH",
+      "claim": "没有提供可核验的外部规则证据，故不得改变基础模型。",
+      "model_slot": "typed_patch.ops; patched_ir",
+      "equation": "ops=[]; patched_ir=base_ir",
+      "code_region": "entire encoded model; no patch code"
+    },
+    {
+      "evidence_id": "TASK_SPEC_SWOR068",
+      "claim": "基础模型的最优行动是启用A、B、C并停用D、E、F，总服务效用为2860。",
+      "model_slot": "action_projection; objective optimum",
+      "equation": "[x_0,x_1,x_2,x_3,x_4,x_5]=[1,1,1,0,0,0]; objective=2860",
+      "code_region": "model.optimize; projected_action; result"
+    }
+  ],
+  "usage": {
+    "input_tokens": 15869,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4868,
+    "reasoning_output_tokens": 1938,
+    "wall_seconds": 96.1489239000075,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2860.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2860.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 10,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

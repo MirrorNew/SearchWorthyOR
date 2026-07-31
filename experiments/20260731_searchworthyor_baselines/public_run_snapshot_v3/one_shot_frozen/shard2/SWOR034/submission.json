@@ -1,0 +1,590 @@
+{
+  "task_id": "SWOR034",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "联岬通信服务有限公司（海桥经营辖区（合成）青浦单元） 海桥经营辖区（合成） 2026-05-29",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-9E718B7A4E23DDE0",
+          "score": 78.20123711800602
+        },
+        {
+          "rank": 2,
+          "id": "DOC-BA1D5E769FAB2344",
+          "score": 78.20123711800602
+        },
+        {
+          "rank": 3,
+          "id": "DOC-EE0529CF0A4B31F1",
+          "score": 75.09892566037566
+        },
+        {
+          "rank": 4,
+          "id": "DOC-8899D3922AF8E814",
+          "score": 65.30959733802143
+        },
+        {
+          "rank": 5,
+          "id": "DOC-15812BA99C6B3DBB",
+          "score": 47.91952917593272
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-BA1D5E769FAB2344"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-BA1D5E769FAB2344 是正式监管来源，在决策日2026-05-29有效，辖区与主体均完全匹配，且未激活书面应急例外，因此唯一适用。DOC-9E718B7A4E23DDE0已于2026-05-28失效；DOC-EE0529CF0A4B31F1辖区不符；DOC-8899D3922AF8E814与DOC-15812BA99C6B3DBB主体不符。适用证据新增A、B互斥约束。修补后最优行动为启用B、C、D，即[0,1,1,1,0,0,0,0]，目标值2710。"
+  },
+  "base_ir": {
+    "model_id": "SWOR034_base",
+    "world": "联岬通信服务有限公司（海桥经营辖区（合成）青浦单元），决策时点2026-05-29",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "module_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-BA1D5E769FAB2344",
+        "before_expression": "不存在服务模块A与服务模块B的政策互斥约束",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR034_patched",
+    "world": "联岬通信服务有限公司（海桥经营辖区（合成）青浦单元），决策时点2026-05-29",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "启用服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "module_A_requires_B_or_E",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_1": -1,
+          "x_4": -1
+        }
+      },
+      {
+        "name": "policy_no_A_with_B",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2710.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": -0.0,
+      "x_6": -0.0,
+      "x_7": -0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2710.0,
+    "constraint_residuals": {
+      "max_three_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "zone_1_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_2_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_3_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "module_A_requires_B_or_E": {
+        "lhs": -1.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "policy_no_A_with_B": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "最大化各启用服务模块的总收益。",
+      "model_slot": "objective",
+      "equation": "max 1000x_0 + 958x_1 + 897x_2 + 855x_3 + 794x_4 + 752x_5 + 691x_6 + 630x_7",
+      "code_region": "utilities与model.setObjective"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "最多启用3个通信服务模块。",
+      "model_slot": "constraints.max_three_modules",
+      "equation": "x_0+x_1+x_2+x_3+x_4+x_5+x_6+x_7 <= 3",
+      "code_region": "addConstr name=max_three_modules"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区1至少由A、D、G之一连通。",
+      "model_slot": "constraints.zone_1_connectivity",
+      "equation": "x_0+x_3+x_6 >= 1",
+      "code_region": "addConstr name=zone_1_connectivity"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区2至少由B、E、H之一连通。",
+      "model_slot": "constraints.zone_2_connectivity",
+      "equation": "x_1+x_4+x_7 >= 1",
+      "code_region": "addConstr name=zone_2_connectivity"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "通信区3至少由C、F之一连通。",
+      "model_slot": "constraints.zone_3_connectivity",
+      "equation": "x_2+x_5 >= 1",
+      "code_region": "addConstr name=zone_3_connectivity"
+    },
+    {
+      "evidence_id": "PUBLIC_TASK",
+      "claim": "启用A时必须同时启用B或E。",
+      "model_slot": "constraints.module_A_requires_B_or_E",
+      "equation": "x_0-x_1-x_4 <= 0",
+      "code_region": "addConstr name=module_A_requires_B_or_E"
+    },
+    {
+      "evidence_id": "DOC-BA1D5E769FAB2344",
+      "claim": "服务模块A与服务模块B不得在同一决策窗口共同启用。",
+      "model_slot": "constraints.policy_no_A_with_B",
+      "equation": "x_0+x_1 <= 1",
+      "code_region": "addConstr name=policy_no_A_with_B"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17629,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4605,
+    "reasoning_output_tokens": 1678,
+    "wall_seconds": 96.89151110000967,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2710.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2710.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 14,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

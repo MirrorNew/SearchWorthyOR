@@ -1,0 +1,594 @@
+{
+  "task_id": "SWOR013",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3 30 minute interruption 8 cumulative hours driving property-carrying ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov \"No motor carrier shall permit or require any driver used by it to drive\" \"8 cumulative hours\" ...",
+      "results": []
+    },
+    {
+      "query": "site:federalregister.gov/documents/2025 OR site:federalregister.gov/documents/2026 FMCSA \"395.3(a)(3)(ii)\" ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/on/2026-06-20/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3 ...",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/on/2026-06-20/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3 ..."
+        },
+        {
+          "rank": 2,
+          "url": "https://www.ecfr.gov/on/2026-06-20/title-49/subtitle-B/chapter-III/subchapter-B/part-395/section-395.3"
+        }
+      ]
+    },
+    {
+      "query": "site:federalregister.gov/documents/2020/06/01 49 CFR 395.3(a)(3)(ii) final rule 30-minute break effective September 29 2020 ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3"
+        }
+      ]
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.1",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.1"
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3",
+    "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.1",
+    "https://www.govinfo.gov/content/pkg/FR-2020-06-01/pdf/2020-11469.pdf"
+  ],
+  "selected_urls": [
+    "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3",
+    "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.1",
+    "https://www.govinfo.gov/content/pkg/FR-2020-06-01/pdf/2020-11469.pdf"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "官方最终规则于2020-09-29生效；eCFR §395.3的修订沿革显示该款最新修订仍为2020年。规则适用于州际财产承运人的property-carrying CMV驾驶员，禁止在没有连续30分钟非驾驶中断时累计驾驶超过8小时。题面已核实不属于short-haul、商业蜜蜂、牲畜、爆炸物押运或其他已登记例外，因此新增A启用时必须同时选择G或H之一的合规约束。未添加协调资源总容量，因为题面没有给出容量。最终唯一最优投影为[0,1,1,1,0,0,0,0]，即选择B、C、D，目标值2710。"
+  },
+  "base_ir": {
+    "model_id": "SWOR013_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "complete_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_1_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_3_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "candidate_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraints",
+        "evidence_id": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3",
+        "before_expression": "absent",
+        "after_expression": "x_0 - x_6 - x_7 <= 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR013_patched",
+    "world": "live_web",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "匹配H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1000,
+        "x_1": 958,
+        "x_2": 897,
+        "x_3": 855,
+        "x_4": 794,
+        "x_5": 752,
+        "x_6": 691,
+        "x_7": 630
+      }
+    },
+    "constraints": [
+      {
+        "name": "complete_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_1_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "resource_subject_2_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "resource_subject_3_at_most_1",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "candidate_A_or_backup_D",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "federal_30min_break_if_match_A",
+        "sense": "<=",
+        "rhs": 0,
+        "terms": {
+          "x_0": 1,
+          "x_6": -1,
+          "x_7": -1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2710.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2710.0,
+    "constraint_residuals": {
+      "complete_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "resource_subject_1_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_2_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "resource_subject_3_at_most_1": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "candidate_A_or_backup_D": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "federal_30min_break_if_match_A": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 0.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.3",
+      "claim": "49 CFR 395.3(a)(3)(ii)规定：除short-haul驾驶员外，在没有至少连续30分钟驾驶状态中断时，不得在累计驾驶超过8小时后继续驾驶；中断可由off-duty、sleeper berth或on-duty not driving构成。结合本地事实，A跨越8小时阈值，而G、H分别提供连续30分钟非驾驶中断。",
+      "model_slot": "constraints.federal_30min_break_if_match_A",
+      "equation": "x_0 - x_6 - x_7 <= 0",
+      "code_region": "model.addConstr(x[0] - x[6] - x[7] <= 0, name=\"federal_30min_break_if_match_A\")"
+    },
+    {
+      "evidence_id": "https://www.ecfr.gov/current/title-49/subtitle-B/chapter-III/subchapter-B/part-395/subpart-A/section-395.1",
+      "claim": "49 CFR 395.1列明Part 395的适用范围及相关例外，包括short-haul、爆炸物押运、商业蜜蜂和牲畜运输。题面已核实这些及其他已登记例外均不适用，因此新增中断约束不附加例外开关。",
+      "model_slot": "constraints.federal_30min_break_if_match_A",
+      "equation": "x_0 - x_6 - x_7 <= 0",
+      "code_region": "unconditional addition of federal_30min_break_if_match_A"
+    },
+    {
+      "evidence_id": "https://www.govinfo.gov/content/pkg/FR-2020-06-01/pdf/2020-11469.pdf",
+      "claim": "FMCSA最终规则85 FR 33396将30分钟中断要求改为累计驾驶8小时口径，并明确生效日期为2020-09-29，早于2026-06-20决策时点。",
+      "model_slot": "constraints.federal_30min_break_if_match_A",
+      "equation": "x_0 - x_6 - x_7 <= 0",
+      "code_region": "patched model regulatory constraint block"
+    }
+  ],
+  "usage": {
+    "input_tokens": 415298,
+    "cached_input_tokens": 335872,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9217,
+    "reasoning_output_tokens": 4971,
+    "wall_seconds": 232.84762240000418,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 8
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2710.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2710.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 8,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 8
+    },
+    "gold_available_to_model": false
+  }
+}

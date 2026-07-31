@@ -1,0 +1,550 @@
+{
+  "task_id": "SWOR012",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:ecfr.gov 40 CFR 262.17 large quantity generator 90 days accumulation extension 30 days ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17"
+        }
+      ]
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/on/2026-05-27/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/on/2026-05-27/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/on/2026-05-27/title-40 \"262.17\" ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/api/versioner/v1/full/2026-05-27/title-40.xml?part=262",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-05-27/title-40.xml?part=262"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/api/versioner/v1/full/2026-05-27/title-40.xml part 262 ...",
+      "results": []
+    },
+    {
+      "query": "https://www.ecfr.gov/api/versioner/v1/full/2026-05-27/title-40.xml",
+      "results": [
+        {
+          "rank": 1,
+          "url": "https://www.ecfr.gov/api/versioner/v1/full/2026-05-27/title-40.xml"
+        }
+      ]
+    },
+    {
+      "query": "site:ecfr.gov/current/title-40 part 266 subpart P healthcare facility hazardous waste pharmaceuticals accumulation time ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+    "https://www.epa.gov/hwgenerators/hazardous-waste-generator-regulatory-summary"
+  ],
+  "selected_urls": [
+    "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+    "https://www.epa.gov/hwgenerators/hazardous-waste-generator-regulatory-summary"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "40 CFR 262.17(a)要求大型产生者在依赖产生者积存豁免时将现场危险废物积存限制在不超过90天；EPA于2026-05-11更新的官方汇总亦确认LQG为不超过90天、180天为SQG期限。服务单元A的核验事实明确触发LQG活动，服务单元B针对同一批废物安排180天中央积存，故二者不能同时启用。已核验例外：262.17(b)的个案延期最多30天，不能支持180天；F006的180天特殊规则仅针对满足附加条件的电镀废水处理污泥；完整本地事实未记载F006、适用许可/临时状态或其他特别废物流。医疗设施身份本身不把未认定为危险废物药品的该批废物转入Subpart P。补丁仅增加x_0+x_1<=1。最终唯一最优行动为[1,0,1,1,0,0]，即启用A、C、D，总效用2778。临床资源点没有给定总预算，因此未虚构资源容量约束。"
+  },
+  "base_ir": {
+    "model_id": "SWOR012",
+    "world": {
+      "decision_time": "2026-05-27",
+      "entity": "和岚医疗中心",
+      "jurisdiction": "美国联邦RCRA"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_three",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_candidate_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+        "before_expression": "absent",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR012",
+    "world": {
+      "decision_time": "2026-05-27",
+      "entity": "和岚医疗中心",
+      "jurisdiction": "美国联邦RCRA"
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务单元F"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1015,
+        "x_1": 954,
+        "x_2": 912,
+        "x_3": 851,
+        "x_4": 790,
+        "x_5": 748
+      }
+    },
+    "constraints": [
+      {
+        "name": "select_exactly_three",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "emergency_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      },
+      {
+        "name": "continuity_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "specialty_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1
+        }
+      },
+      {
+        "name": "core_candidate_or_backup",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "rcra_lqg_no_180_day_path",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2778.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      1,
+      0,
+      0
+    ],
+    "objective_recomputed": 2778.0,
+    "constraint_residuals": {
+      "select_exactly_three": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "emergency_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "continuity_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "specialty_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "core_candidate_or_backup": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "rcra_lqg_no_180_day_path": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.ecfr.gov/current/title-40/chapter-I/subchapter-I/part-262/subpart-A/section-262.17",
+      "claim": "40 CFR 262.17(a)将依赖产生者积存豁免的LQG现场积存限制为不超过90天；262.17(b)个案延期最多30天，F006的180天待遇仅适用于满足专门条件的电镀污泥。完整本地事实没有触发这些例外，因此A触发的LQG活动不能与同批废物的B类180天中央积存路径并存。",
+      "model_slot": "constraints.rcra_lqg_no_180_day_path",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "model.addConstr(x[0] + x[1] <= 1, name=\"rcra_lqg_no_180_day_path\")"
+    },
+    {
+      "evidence_id": "https://www.epa.gov/hwgenerators/hazardous-waste-generator-regulatory-summary",
+      "claim": "EPA在决策日前更新的联邦监管汇总确认：LQG积存期限为不超过90天，而180天是SQG期限，支持按A的已核验LQG属性排除B的180天路径。",
+      "model_slot": "constraints.rcra_lqg_no_180_day_path",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "model.addConstr(x[0] + x[1] <= 1, name=\"rcra_lqg_no_180_day_path\")"
+    }
+  ],
+  "usage": {
+    "input_tokens": 738933,
+    "cached_input_tokens": 657152,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9002,
+    "reasoning_output_tokens": 5259,
+    "wall_seconds": 244.2264628999983,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 12
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2778.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2778.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          1,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0
+        }
+      ],
+      "feasible_assignment_count": 4,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 12
+    },
+    "gold_available_to_model": false
+  }
+}

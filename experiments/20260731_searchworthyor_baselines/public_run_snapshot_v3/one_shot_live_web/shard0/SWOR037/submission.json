@@ -1,0 +1,628 @@
+{
+  "task_id": "SWOR037",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "live_web",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "site:dir.ca.gov/dlse rest periods nonexempt employees 10 minutes four hours California official ...",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "",
+      "results": []
+    },
+    {
+      "query": "site:dir.ca.gov IWC Wage Order 4-2001 rest periods 10 minutes professional technical mechanical communications official PDF ...",
+      "results": []
+    }
+  ],
+  "selected_evidence_ids": [
+    "https://www.dir.ca.gov/t8/11040.html",
+    "https://www.dir.ca.gov/dlse/faq_restperiods.htm",
+    "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=1.&chapter=1.&division=2.&lawCode=LAB&part=1.&title=",
+    "https://www.courts.ca.gov/opinions/archive/S224853.PDF"
+  ],
+  "selected_urls": [
+    "https://www.dir.ca.gov/t8/11040.html",
+    "https://www.dir.ca.gov/dlse/faq_restperiods.htm",
+    "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=1.&chapter=1.&division=2.&lawCode=LAB&part=1.&title=",
+    "https://www.courts.ca.gov/opinions/archive/S224853.PDF"
+  ],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "加州DIR的现行Wage Order 4明确覆盖通信技术员、安装人员及类似技术/机械职业，并要求每满4小时或其主要部分提供净10分钟休息；题面明确A包含同一非豁免员工连续满4小时的受覆盖工作段。劳动法典226.7在2026-05-05有效，并禁止要求员工在法定休息期间工作；Augustus官方判决进一步要求解除全部职责和雇主控制。安全服务例外仅适用于符合注册、雇主及集体谈判协议条件的保安，226.75例外仅适用于Wage Order 1下石油设施/炼厂的安全敏感岗位并要求有效集体谈判协议；题面通信地面机组不属于这些主体。DIR列示的24小时照护、表演、特定建筑/钻探/伐木/采矿及商业客船例外也与核实活动不符。故增加两项结构约束：A启用时必须由G或H提供无工作占用的10分钟覆盖；A不得与占用该段唯一休息窗口的B并用。资源占用数据因题面没有资源预算而不生成约束。补丁模型唯一最优投影为[0,1,1,1,0,0,0,0]，即B、C、D，目标值2711。"
+  },
+  "base_ir": {
+    "model_id": "SWOR037_base",
+    "world": "California; decision_time=2026-05-05; entity=联岬通信地面机组; employee_class=nonexempt_field_employee",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "a_requires_b_or_e",
+        "sense": ">=",
+        "rhs": 0,
+        "terms": {
+          "x_0": -1,
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "a_or_d_required",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.dir.ca.gov/t8/11040.html",
+        "before_expression": null,
+        "after_expression": {
+          "name": "ca_rest_coverage_if_a",
+          "sense": ">=",
+          "rhs": 0,
+          "terms": {
+            "x_0": -1,
+            "x_6": 1,
+            "x_7": 1
+          }
+        }
+      },
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "https://www.courts.ca.gov/opinions/archive/S224853.PDF",
+        "before_expression": null,
+        "after_expression": {
+          "name": "ca_no_work_in_only_rest_window",
+          "sense": "<=",
+          "rhs": 1,
+          "terms": {
+            "x_0": 1,
+            "x_1": 1
+          }
+        }
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR037_patched",
+    "world": "California; decision_time=2026-05-05; entity=联岬通信地面机组; employee_class=nonexempt_field_employee",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "服务模块H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "max_three_modules",
+        "sense": "<=",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_1_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "zone_2_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "zone_3_connectivity",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_2": 1,
+          "x_5": 1
+        }
+      },
+      {
+        "name": "a_requires_b_or_e",
+        "sense": ">=",
+        "rhs": 0,
+        "terms": {
+          "x_0": -1,
+          "x_1": 1,
+          "x_4": 1
+        }
+      },
+      {
+        "name": "a_or_d_required",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_3": 1
+        }
+      },
+      {
+        "name": "ca_rest_coverage_if_a",
+        "sense": ">=",
+        "rhs": 0,
+        "terms": {
+          "x_0": -1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "ca_no_work_in_only_rest_window",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2711.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2711.0,
+    "constraint_residuals": {
+      "max_three_modules": {
+        "lhs": 3.0,
+        "sense": "<=",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "zone_1_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_2_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "zone_3_connectivity": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "a_requires_b_or_e": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "a_or_d_required": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "ca_rest_coverage_if_a": {
+        "lhs": 0.0,
+        "sense": ">=",
+        "rhs": 0.0,
+        "violation": 0.0
+      },
+      "ca_no_work_in_only_rest_window": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "https://www.dir.ca.gov/t8/11040.html",
+      "claim": "Wage Order 4覆盖通信技术员、安装人员及类似技术/机械职业；其第12(A)节要求每四小时或主要部分提供净10分钟休息。结合题面A的连续满4小时工作段及G/H的无任务休息覆盖，A触发至少一个覆盖模块。",
+      "model_slot": "constraints.ca_rest_coverage_if_a",
+      "equation": "-x_0 + x_6 + x_7 >= 0",
+      "code_region": "m.addConstr(-x[0] + x[6] + x[7] >= 0, name=\"ca_rest_coverage_if_a\")"
+    },
+    {
+      "evidence_id": "https://www.dir.ca.gov/dlse/faq_restperiods.htm",
+      "claim": "DLSE现行指引确认非豁免员工每四小时享有净10分钟休息，休息应尽可能位于工作段中间；满4小时不适用少于3.5小时例外。其列示的照护、表演、特定重工业和客船例外均不匹配本通信活动。",
+      "model_slot": "constraints.ca_rest_coverage_if_a",
+      "equation": "x_0 <= x_6 + x_7",
+      "code_region": "ca_rest_coverage_if_a"
+    },
+    {
+      "evidence_id": "https://leginfo.legislature.ca.gov/faces/codes_displayText.xhtml?article=1.&chapter=1.&division=2.&lawCode=LAB&part=1.&title=",
+      "claim": "2026-05-05有效的劳动法典226.7禁止雇主要求员工在法定休息期间工作。保安例外要求特定注册保安、注册巡逻雇主及合格集体谈判协议；226.75仅适用于石油设施或炼厂的安全敏感岗位、Wage Order 1及合格集体谈判协议，均不覆盖题面实体。占用唯一休息窗口的B因此不能与触发该窗口义务的A同时启用。",
+      "model_slot": "constraints.ca_no_work_in_only_rest_window",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "m.addConstr(x[0] + x[1] <= 1, name=\"ca_no_work_in_only_rest_window\")"
+    },
+    {
+      "evidence_id": "https://www.courts.ca.gov/opinions/archive/S224853.PDF",
+      "claim": "加州最高法院Augustus判决认定法定休息必须解除全部工作职责和雇主控制，在休息期间保持待命或承担通信职责不合规。结合B占用唯一休息窗口的核实事实，A与B构成互斥。",
+      "model_slot": "constraints.ca_no_work_in_only_rest_window",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "ca_no_work_in_only_rest_window"
+    }
+  ],
+  "usage": {
+    "input_tokens": 181892,
+    "cached_input_tokens": 123904,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 9211,
+    "reasoning_output_tokens": 5129,
+    "wall_seconds": 204.85153270000592,
+    "cli_timeout_seconds": 420,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 4
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2711.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2711.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 6,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "native live web search"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": true,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 3,
+      "completed_web_searches": 4
+    },
+    "gold_available_to_model": false
+  }
+}

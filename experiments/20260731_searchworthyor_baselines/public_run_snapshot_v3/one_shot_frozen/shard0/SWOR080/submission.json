@@ -1,0 +1,545 @@
+{
+  "task_id": "SWOR080",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡信车队资产组合（合成场景，商业车辆投资与购买方） 美国联邦税收 2025-09-01",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-91E8C16D6F113285",
+          "score": 70.46575423145741
+        },
+        {
+          "rank": 2,
+          "id": "DOC-28920EAE9EE798CE",
+          "score": 68.5332595693877
+        },
+        {
+          "rank": 3,
+          "id": "DOC-91169F5EFC516EDA",
+          "score": 68.5332595693877
+        },
+        {
+          "rank": 4,
+          "id": "DOC-888B432BF190984D",
+          "score": 67.6455079458699
+        },
+        {
+          "rank": 5,
+          "id": "DOC-67C33BA1BB496D0F",
+          "score": 65.70459539764825
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-28920EAE9EE798CE"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "DOC-28920EAE9EE798CE由IRS发布且标记为正式监管来源，自2023-01-01持续有效，覆盖2025-09-01的美国联邦税收以及商业用途车辆取得并投入使用的纳税实体；题面确认未触发例外。策略包A与B明确针对同一车辆，分别采用第30D条和第45W条抵免分支，因此证据直接产生同车互斥约束x_0+x_1<=1。DOC-91E8C16D6F113285仅为行业信息来源；DOC-91169F5EFC516EDA已于决策日前失效；DOC-67C33BA1BB496D0F亦已失效；DOC-888B432BF190984D既非正式监管来源，其截止规则也缺少车辆在2025-09-30后取得这一触发事实，故均不改变模型。补丁后唯一最优组合为策略包A、C、E，即[1,0,1,0,1,0,0,0]，目标值2727，预算占用10，风险点12。"
+  },
+  "base_ir": {
+    "model_id": "SWOR080_base",
+    "world": "base",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745,
+        "x_6": 684,
+        "x_7": 642
+      }
+    },
+    "constraints": [
+      {
+        "name": "position_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_capacity",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "risk_capacity",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5,
+          "x_6": 2,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "core_backup_emergency_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "add_constraint",
+        "slot_type": "constraint",
+        "evidence_id": "DOC-28920EAE9EE798CE",
+        "before_expression": "该同车跨抵免分支约束不存在",
+        "after_expression": "x_0 + x_1 <= 1"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR080_patched",
+    "world": "patched",
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1012,
+        "x_1": 951,
+        "x_2": 909,
+        "x_3": 848,
+        "x_4": 806,
+        "x_5": 745,
+        "x_6": 684,
+        "x_7": 642
+      }
+    },
+    "constraints": [
+      {
+        "name": "position_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_capacity",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 4,
+          "x_1": 1,
+          "x_2": 2,
+          "x_3": 3,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 2,
+          "x_7": 3
+        }
+      },
+      {
+        "name": "risk_capacity",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 5,
+          "x_1": 2,
+          "x_2": 4,
+          "x_3": 1,
+          "x_4": 3,
+          "x_5": 5,
+          "x_6": 2,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "core_backup_emergency_exactly_one",
+        "sense": "==",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_4": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "irs_30d_45w_same_vehicle_exclusivity",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2727.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 0.0,
+      "x_2": 1.0,
+      "x_3": 0.0,
+      "x_4": 1.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      1,
+      0,
+      1,
+      0,
+      1,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2727.0,
+    "constraint_residuals": {
+      "position_count": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "capital_capacity": {
+        "lhs": 10.0,
+        "sense": "<=",
+        "rhs": 12.0,
+        "violation": 0.0
+      },
+      "risk_capacity": {
+        "lhs": 12.0,
+        "sense": "<=",
+        "rhs": 15.0,
+        "violation": 0.0
+      },
+      "core_backup_emergency_exactly_one": {
+        "lhs": 1.0,
+        "sense": "==",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "irs_30d_45w_same_vehicle_exclusivity": {
+        "lhs": 1.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-28920EAE9EE798CE",
+      "claim": "对于已经获准第30D条新清洁车辆抵免的同一车辆，不允许再取得第45W条合格商业清洁车辆抵免。",
+      "model_slot": "constraints.irs_30d_45w_same_vehicle_exclusivity",
+      "equation": "x_0 + x_1 <= 1",
+      "code_region": "patched_ir.constraints中的irs_30d_45w_same_vehicle_exclusivity及通用约束构造循环"
+    }
+  ],
+  "usage": {
+    "input_tokens": 18155,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 6041,
+    "reasoning_output_tokens": 2545,
+    "wall_seconds": 124.87454020000587,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "integrality_violation": 0.0,
+        "max_constraint_violation": 0.0,
+        "objective": 2727.0,
+        "projected_action": [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ],
+        "status": "OPTIMAL"
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2727.0,
+      "optimal_actions": [
+        [
+          1,
+          0,
+          1,
+          0,
+          1,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 0.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 1.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 26,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

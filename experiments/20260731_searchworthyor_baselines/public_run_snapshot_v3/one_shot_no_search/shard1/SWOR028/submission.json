@@ -1,0 +1,565 @@
+{
+  "task_id": "SWOR028",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "no_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [],
+  "selected_evidence_ids": [],
+  "selected_urls": [],
+  "applicability": {
+    "authority": false,
+    "effective_at_decision_time": false,
+    "jurisdiction_match": false,
+    "subject_match": false,
+    "exception_resolved": false,
+    "reason": "证据条件为 no_search，且未提供任何可追溯外部证据，因此不能认定存在可适用的外部规则，也不能修改基础模型。patched IR 与 base IR 完全相同，typed patch ops 为空。求解该不变模型的唯一最优行动为建设节点A、节点B、节点C，总收益2875。"
+  },
+  "base_ir": {
+    "model_id": "SWOR028",
+    "world": {
+      "entity": "林港区域设施网络有限公司（星港经营辖区（合成）镜川单元）",
+      "jurisdiction": "星港经营辖区（合成）",
+      "decision_time": "2026-07-09",
+      "candidates": [
+        {
+          "node": "A",
+          "benefit": 1013,
+          "construction_resource": 4,
+          "category": "基础类别"
+        },
+        {
+          "node": "B",
+          "benefit": 952,
+          "construction_resource": 1,
+          "category": "基础类别"
+        },
+        {
+          "node": "C",
+          "benefit": 910,
+          "construction_resource": 2,
+          "category": "基础类别"
+        },
+        {
+          "node": "D",
+          "benefit": 849,
+          "construction_resource": 3,
+          "category": "基础类别"
+        },
+        {
+          "node": "E",
+          "benefit": 788,
+          "construction_resource": 4,
+          "category": "基础类别"
+        },
+        {
+          "node": "F",
+          "benefit": 746,
+          "construction_resource": 1,
+          "category": "基础类别"
+        },
+        {
+          "node": "G",
+          "benefit": 685,
+          "construction_resource": 2,
+          "category": "保障类别1"
+        },
+        {
+          "node": "H",
+          "benefit": 643,
+          "construction_resource": 3,
+          "category": "保障类别2"
+        }
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "build_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "terminal_backup_mutual_exclusion",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_6": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": []
+  },
+  "patched_ir": {
+    "model_id": "SWOR028",
+    "world": {
+      "entity": "林港区域设施网络有限公司（星港经营辖区（合成）镜川单元）",
+      "jurisdiction": "星港经营辖区（合成）",
+      "decision_time": "2026-07-09",
+      "candidates": [
+        {
+          "node": "A",
+          "benefit": 1013,
+          "construction_resource": 4,
+          "category": "基础类别"
+        },
+        {
+          "node": "B",
+          "benefit": 952,
+          "construction_resource": 1,
+          "category": "基础类别"
+        },
+        {
+          "node": "C",
+          "benefit": 910,
+          "construction_resource": 2,
+          "category": "基础类别"
+        },
+        {
+          "node": "D",
+          "benefit": 849,
+          "construction_resource": 3,
+          "category": "基础类别"
+        },
+        {
+          "node": "E",
+          "benefit": 788,
+          "construction_resource": 4,
+          "category": "基础类别"
+        },
+        {
+          "node": "F",
+          "benefit": 746,
+          "construction_resource": 1,
+          "category": "基础类别"
+        },
+        {
+          "node": "G",
+          "benefit": 685,
+          "construction_resource": 2,
+          "category": "保障类别1"
+        },
+        {
+          "node": "H",
+          "benefit": 643,
+          "construction_resource": 3,
+          "category": "保障类别2"
+        }
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "建设节点H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1013,
+        "x_1": 952,
+        "x_2": 910,
+        "x_3": 849,
+        "x_4": 788,
+        "x_5": 746,
+        "x_6": 685,
+        "x_7": 643
+      }
+    },
+    "constraints": [
+      {
+        "name": "build_exactly_3",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "service_area_1_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_0": 1,
+          "x_2": 1,
+          "x_4": 1,
+          "x_6": 1
+        }
+      },
+      {
+        "name": "service_area_2_coverage",
+        "sense": ">=",
+        "rhs": 1,
+        "terms": {
+          "x_1": 1,
+          "x_3": 1,
+          "x_5": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "terminal_backup_mutual_exclusion",
+        "sense": "<=",
+        "rhs": 1,
+        "terms": {
+          "x_6": 1,
+          "x_7": 1
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2875.0,
+    "assignment": {
+      "x_0": 1.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": -0.0,
+      "x_4": -0.0,
+      "x_5": -0.0,
+      "x_6": -0.0,
+      "x_7": -0.0
+    },
+    "projected_action": [
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2875.0,
+    "constraint_residuals": {
+      "build_exactly_3": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "service_area_1_coverage": {
+        "lhs": 2.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "service_area_2_coverage": {
+        "lhs": 1.0,
+        "sense": ">=",
+        "rhs": 1.0,
+        "violation": 0.0
+      },
+      "terminal_backup_mutual_exclusion": {
+        "lhs": 0.0,
+        "sense": "<=",
+        "rhs": 1.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [],
+  "usage": {
+    "input_tokens": 15884,
+    "cached_input_tokens": 13056,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 3348,
+    "reasoning_output_tokens": 920,
+    "wall_seconds": 68.83503750000091,
+    "codex_cli_returncode": 0,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json",
+          "math"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2875.0,
+        "projected_action": [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2875.0,
+      "optimal_actions": [
+        [
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 1.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 0.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 42,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "no external evidence"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1
+    },
+    "gold_available_to_model": false
+  }
+}

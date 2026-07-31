@@ -1,0 +1,538 @@
+{
+  "task_id": "SWOR066",
+  "baseline": "gpt56_sol_codex_cli_one_shot",
+  "condition": "corpus_search",
+  "requested_model": "gpt-5.6-sol",
+  "actual_model": "gpt-5.6-sol",
+  "requested_reasoning_effort": "high",
+  "reasoning_fallback": false,
+  "reasoning_metadata_verified": false,
+  "generated_once": true,
+  "search_trace": [
+    {
+      "query": "衡信产业投资管理有限公司（北湾经营辖区（合成）晨汐单元） 北湾经营辖区（合成） 2026-02-17",
+      "results": [
+        {
+          "rank": 1,
+          "id": "DOC-18BB551B07DD3575",
+          "score": 92.95848325508692
+        },
+        {
+          "rank": 2,
+          "id": "DOC-AA5B77E57E811C19",
+          "score": 92.95848325508692
+        },
+        {
+          "rank": 3,
+          "id": "DOC-3862E24279ABA9A6",
+          "score": 89.21281924120139
+        },
+        {
+          "rank": 4,
+          "id": "DOC-A7CDBF9FC9FE6772",
+          "score": 79.32537531185915
+        },
+        {
+          "rank": 5,
+          "id": "DOC-FCE532B0EAA320E0",
+          "score": 68.59437042165808
+        }
+      ]
+    }
+  ],
+  "selected_evidence_ids": [
+    "DOC-AA5B77E57E811C19"
+  ],
+  "selected_urls": [],
+  "applicability": {
+    "authority": true,
+    "effective_at_decision_time": true,
+    "jurisdiction_match": true,
+    "subject_match": true,
+    "exception_resolved": true,
+    "reason": "唯一适用证据为 DOC-AA5B77E57E811C19：其正式监管来源、2025-11-19至2027-02-17的有效期、北湾经营辖区（合成）、目标主体及未激活应急例外均与决策条件匹配。DOC-18BB551B07DD3575已于决策日前失效；DOC-3862E24279ABA9A6辖区不符；DOC-A7CDBF9FC9FE6772主体不符；DOC-FCE532B0EAA320E0主体不符且尚未生效。因此仅将策略包A的上界由1改为0。求解补丁模型得到唯一最优行动为选择B、C、D，即[0,1,1,1,0,0,0,0]，目标值2705，资本占用9，风险点10。"
+  },
+  "base_ir": {
+    "model_id": "SWOR066_base",
+    "world": {
+      "decision_time": "2026-02-17",
+      "entity": "衡信产业投资管理有限公司（北湾经营辖区（合成）晨汐单元）",
+      "jurisdiction": "北湾经营辖区（合成）",
+      "candidates": [
+        "策略包A",
+        "策略包B",
+        "策略包C",
+        "策略包D",
+        "策略包E",
+        "策略包F",
+        "策略包G",
+        "策略包H"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744,
+        "x_6": 683,
+        "x_7": 641
+      }
+    },
+    "constraints": [
+      {
+        "name": "holdings_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 1,
+          "x_1": 3,
+          "x_2": 5,
+          "x_3": 2,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 3,
+          "x_7": 5
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "typed_patch": {
+    "ops": [
+      {
+        "op": "replace",
+        "slot_type": "variable_bound",
+        "evidence_id": "DOC-AA5B77E57E811C19",
+        "before_expression": "0 <= x_0 <= 1",
+        "after_expression": "0 <= x_0 <= 0"
+      }
+    ]
+  },
+  "patched_ir": {
+    "model_id": "SWOR066_patched",
+    "world": {
+      "decision_time": "2026-02-17",
+      "entity": "衡信产业投资管理有限公司（北湾经营辖区（合成）晨汐单元）",
+      "jurisdiction": "北湾经营辖区（合成）",
+      "candidates": [
+        "策略包A",
+        "策略包B",
+        "策略包C",
+        "策略包D",
+        "策略包E",
+        "策略包F",
+        "策略包G",
+        "策略包H"
+      ]
+    },
+    "sense": "max",
+    "single_objective": true,
+    "variables": [
+      {
+        "name": "x_0",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 0,
+        "semantic_name": "选择策略包A"
+      },
+      {
+        "name": "x_1",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包B"
+      },
+      {
+        "name": "x_2",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包C"
+      },
+      {
+        "name": "x_3",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包D"
+      },
+      {
+        "name": "x_4",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包E"
+      },
+      {
+        "name": "x_5",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包F"
+      },
+      {
+        "name": "x_6",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包G"
+      },
+      {
+        "name": "x_7",
+        "vartype": "B",
+        "lb": 0,
+        "ub": 1,
+        "semantic_name": "选择策略包H"
+      }
+    ],
+    "objective": {
+      "constant": 0,
+      "terms": {
+        "x_0": 1011,
+        "x_1": 950,
+        "x_2": 908,
+        "x_3": 847,
+        "x_4": 805,
+        "x_5": 744,
+        "x_6": 683,
+        "x_7": 641
+      }
+    },
+    "constraints": [
+      {
+        "name": "holdings_count",
+        "sense": "==",
+        "rhs": 3,
+        "terms": {
+          "x_0": 1,
+          "x_1": 1,
+          "x_2": 1,
+          "x_3": 1,
+          "x_4": 1,
+          "x_5": 1,
+          "x_6": 1,
+          "x_7": 1
+        }
+      },
+      {
+        "name": "capital_limit",
+        "sense": "<=",
+        "rhs": 12,
+        "terms": {
+          "x_0": 1,
+          "x_1": 2,
+          "x_2": 3,
+          "x_3": 4,
+          "x_4": 1,
+          "x_5": 2,
+          "x_6": 3,
+          "x_7": 4
+        }
+      },
+      {
+        "name": "risk_limit",
+        "sense": "<=",
+        "rhs": 15,
+        "terms": {
+          "x_0": 1,
+          "x_1": 3,
+          "x_2": 5,
+          "x_3": 2,
+          "x_4": 4,
+          "x_5": 1,
+          "x_6": 3,
+          "x_7": 5
+        }
+      }
+    ],
+    "action_projection": [
+      "x_0",
+      "x_1",
+      "x_2",
+      "x_3",
+      "x_4",
+      "x_5",
+      "x_6",
+      "x_7"
+    ]
+  },
+  "gurobi_code": "model.py",
+  "gurobi_result": {
+    "solver": "gurobi",
+    "version": "12.0.2",
+    "status": "OPTIMAL",
+    "objective": 2705.0,
+    "assignment": {
+      "x_0": 0.0,
+      "x_1": 1.0,
+      "x_2": 1.0,
+      "x_3": 1.0,
+      "x_4": 0.0,
+      "x_5": 0.0,
+      "x_6": 0.0,
+      "x_7": 0.0
+    },
+    "projected_action": [
+      0,
+      1,
+      1,
+      1,
+      0,
+      0,
+      0,
+      0
+    ],
+    "objective_recomputed": 2705.0,
+    "constraint_residuals": {
+      "holdings_count": {
+        "lhs": 3.0,
+        "sense": "==",
+        "rhs": 3.0,
+        "violation": 0.0
+      },
+      "capital_limit": {
+        "lhs": 9.0,
+        "sense": "<=",
+        "rhs": 12.0,
+        "violation": 0.0
+      },
+      "risk_limit": {
+        "lhs": 10.0,
+        "sense": "<=",
+        "rhs": 15.0,
+        "violation": 0.0
+      }
+    },
+    "max_constraint_violation": 0.0,
+    "integrality_violation": 0.0,
+    "bound_violation": 0.0
+  },
+  "claim_to_model_mapping": [
+    {
+      "evidence_id": "DOC-AA5B77E57E811C19",
+      "claim": "策略包A在目标主体、北湾经营辖区（合成）和2026-02-17决策日下不具备采用资格，且无已激活的书面应急例外。",
+      "model_slot": "variables.x_0.ub",
+      "equation": "x_0 = 0",
+      "code_region": "x变量创建循环中的 upper_bound = 0 if i == 0 else 1"
+    },
+    {
+      "evidence_id": "DOC-AA5B77E57E811C19",
+      "claim": "应用策略包A禁用规则并保留全部冻结基础结构后，最优组合选择策略包B、C、D。",
+      "model_slot": "solution.projected_action",
+      "equation": "argmax = (x_0,...,x_7) = (0,1,1,1,0,0,0,0), objective = 950 + 908 + 847 = 2705",
+      "code_region": "model.optimize()及result中的objective和projected_action"
+    }
+  ],
+  "usage": {
+    "input_tokens": 17684,
+    "cached_input_tokens": 0,
+    "cache_write_input_tokens": 0,
+    "output_tokens": 4192,
+    "reasoning_output_tokens": 1552,
+    "wall_seconds": 80.72984130000987,
+    "cli_timeout_seconds": 180,
+    "codex_cli_returncode": 0,
+    "reused_existing_model_response": false,
+    "event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "model_code_execution": {
+      "passed": true,
+      "returncode": 0,
+      "stderr_empty": true,
+      "static_check": {
+        "imports": [
+          "gurobipy",
+          "json"
+        ],
+        "disallowed_imports": [],
+        "forbidden_calls": [],
+        "forbidden_method_calls": [],
+        "passed": true
+      },
+      "result": {
+        "status": "OPTIMAL",
+        "objective": 2705.0,
+        "projected_action": [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ],
+        "max_constraint_violation": 0.0,
+        "integrality_violation": 0.0
+      }
+    },
+    "trusted_exact_enumeration": {
+      "status": "OPTIMAL",
+      "objective": 2705.0,
+      "optimal_actions": [
+        [
+          0,
+          1,
+          1,
+          1,
+          0,
+          0,
+          0,
+          0
+        ]
+      ],
+      "optimal_assignments": [
+        {
+          "x_0": 0.0,
+          "x_1": 1.0,
+          "x_2": 1.0,
+          "x_3": 1.0,
+          "x_4": 0.0,
+          "x_5": 0.0,
+          "x_6": 0.0,
+          "x_7": 0.0
+        }
+      ],
+      "feasible_assignment_count": 35,
+      "complete": true
+    }
+  },
+  "read_scope": {
+    "model_prompt": [
+      "public task text",
+      "retrieved evidence shown inline"
+    ],
+    "cli_event_audit": {
+      "passed": true,
+      "violations": [],
+      "warnings": [
+        "Skill descriptions were shortened to fit the 2% skills context budget. Codex can still see every skill, but some descriptions are shorter. Disable unused skills or plugins to leave more room for the rest."
+      ],
+      "allow_web_search": false,
+      "counts": {
+        "thread.started": 1,
+        "turn.started": 1,
+        "turn.completed": 1
+      },
+      "completed_agent_messages": 1,
+      "completed_web_searches": 0
+    },
+    "gold_available_to_model": false
+  }
+}

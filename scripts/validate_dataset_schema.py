@@ -3754,9 +3754,20 @@ def validate_manifest(
         if not path.is_file():
             continue
         relative = path.relative_to(root).as_posix()
+        relative_parts = path.relative_to(root).parts
         if relative == "manifest.json":
             continue
+        if relative_parts[0] in {".git", ".pytest_cache", "staging"}:
+            continue
         if "__pycache__" in path.parts or path.suffix in {".pyc", ".pyo"}:
+            continue
+        if (
+            relative_parts[0] == "reports"
+            and (
+                path.name == "release_gate.json"
+                or path.name.endswith((".stdout.txt", ".stderr.txt"))
+            )
+        ):
             continue
         actual_files.add(relative)
     manifest_files = set(entries)
