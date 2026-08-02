@@ -1,0 +1,168 @@
+{
+  "action_projection": [
+    "u1_sep01",
+    "u1_sep16",
+    "u1_oct16",
+    "u2_sep01",
+    "u2_sep16",
+    "u2_oct16",
+    "u3_sep01",
+    "u3_sep16",
+    "u3_oct16"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "u1_oct16": 1,
+        "u1_sep01": 1,
+        "u1_sep16": 1
+      },
+      "meaning": "用户1恰安排一个批次",
+      "name": "schedule_user_1",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "u2_oct16": 1,
+        "u2_sep01": 1,
+        "u2_sep16": 1
+      },
+      "meaning": "用户2恰安排一个批次",
+      "name": "schedule_user_2",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "u3_oct16": 1,
+        "u3_sep01": 1,
+        "u3_sep16": 1
+      },
+      "meaning": "用户3恰安排一个批次",
+      "name": "schedule_user_3",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "u1_sep01": 1,
+        "u2_sep01": 1,
+        "u3_sep01": 1
+      },
+      "meaning": "sep01批次最多处理两名用户",
+      "name": "capacity_sep01",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "u1_sep16": 1,
+        "u2_sep16": 1,
+        "u3_sep16": 1
+      },
+      "meaning": "sep16批次最多处理两名用户",
+      "name": "capacity_sep16",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "u1_oct16": 1,
+        "u2_oct16": 1,
+        "u3_oct16": 1
+      },
+      "meaning": "oct16批次最多处理两名用户",
+      "name": "capacity_oct16",
+      "rhs": 2,
+      "sense": "<="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R097",
+  "objective": {
+    "coefficients": {
+      "u1_oct16": 1,
+      "u1_sep01": 7,
+      "u1_sep16": 4,
+      "u2_oct16": 2,
+      "u2_sep01": 8,
+      "u2_sep16": 6,
+      "u3_oct16": 3,
+      "u3_sep01": 9,
+      "u3_sep16": 5
+    },
+    "constant": 0,
+    "meaning": "账单抵免处理工时",
+    "sense": "min",
+    "unit": "工时"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0198",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "用户1安排在sep01批次",
+      "name": "u1_sep01",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户1安排在sep16批次",
+      "name": "u1_sep16",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户1安排在oct16批次",
+      "name": "u1_oct16",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户2安排在sep01批次",
+      "name": "u2_sep01",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户2安排在sep16批次",
+      "name": "u2_sep16",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户2安排在oct16批次",
+      "name": "u2_oct16",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户3安排在sep01批次",
+      "name": "u3_sep01",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户3安排在sep16批次",
+      "name": "u3_sep16",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "用户3安排在oct16批次",
+      "name": "u3_oct16",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

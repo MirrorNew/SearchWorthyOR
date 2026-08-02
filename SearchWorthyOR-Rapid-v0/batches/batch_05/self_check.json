@@ -1,0 +1,112 @@
+{
+  "schema_version": "searchworthyor.rapid_batch_self_check.v0",
+  "batch": 5,
+  "scope_ids": [
+    "SWOR-R081", "SWOR-R082", "SWOR-R083", "SWOR-R084", "SWOR-R085",
+    "SWOR-R086", "SWOR-R087", "SWOR-R088", "SWOR-R089", "SWOR-R090",
+    "SWOR-R091", "SWOR-R092", "SWOR-R093", "SWOR-R094", "SWOR-R095",
+    "SWOR-R096", "SWOR-R097", "SWOR-R098", "SWOR-R099", "SWOR-R100"
+  ],
+  "generator_id": "/root/rapid_batch05_rebuild",
+  "status": "GENERATOR_SELF_CHECK_PASS",
+  "independent_review": "PENDING",
+  "source_review": {
+    "retained_candidate_count": 20,
+    "reserved_replacement_used": true,
+    "replacement_task": "SWOR-R097",
+    "replacement_candidate": "SRCV2-0198",
+    "all_retained_http_200": true,
+    "all_retained_support_excerpt_nonempty": true,
+    "all_applicability_pass": true,
+    "maximum_tasks_per_source_document": 2
+  },
+  "quota_checks": {
+    "families": {
+      "assignment_matching": 2,
+      "energy_environment": 2,
+      "facility_network": 2,
+      "finance_portfolio": 2,
+      "healthcare_resources": 2,
+      "inventory_supply_chain": 2,
+      "production_capacity": 2,
+      "routing_transport": 2,
+      "scheduling_workforce": 2,
+      "telecom_service": 2
+    },
+    "patch_classes": {
+      "conditional_auxiliary": 5,
+      "eligibility_domain": 5,
+      "quota_risk_service_objective": 5,
+      "temporal_coupling": 5
+    },
+    "exact": true
+  },
+  "model_checks": {
+    "model_pairs": 20,
+    "solver": "COPT 8.0.5",
+    "all_base_optimal": true,
+    "all_patched_optimal": true,
+    "complete_enumeration_both_sides": true,
+    "maximum_base_assignment_space": 1296,
+    "maximum_patched_assignment_space": 32768,
+    "enumeration_limit": 200000,
+    "all_optimal_action_intersections_empty": true,
+    "all_base_constraints_nonredundant_over_finite_domain": true,
+    "all_added_patch_constraints_nonredundant_over_base_feasible_set": true,
+    "base_topology_hashes_unique": true,
+    "base_and_patched_action_projection_equal_per_task": true,
+    "finite_binary_or_integer_only": true,
+    "single_objective_per_model": true
+  },
+  "manual_semantic_review": {
+    "all_20_public_tasks_read_end_to_end": true,
+    "all_actions_have_domain_specific_meanings": true,
+    "all_base_constraints_have_public_business_basis": true,
+    "all_rule_local_fact_patch_chains_read": true,
+    "unstated_patch_inputs_found": false,
+    "arbitrary_service_quota_removed_from_SWOR_R082": true,
+    "name_rule_recovery_encoded_as_four_of_five_next_period_shares_in_SWOR_R088": true,
+    "risk_assessment_exception_status_made_explicit_in_SWOR_R090": true,
+    "biomethane_support_weight_declared_as_local_conservative_cashflow_weight_in_SWOR_R094": true,
+    "standby_response_parameter_distinguished_from_external_duty_start_coupling_in_SWOR_R098": true,
+    "repeated_power_of_two_objective_sequences_found": false,
+    "uniform_set_cover_template_found": false,
+    "gold_rule_conclusion_leakage_found": false
+  },
+  "surface_checks": {
+    "public_fields_exactly_id_and_problem_zh": true,
+    "all_problem_lengths_at_least_120": true,
+    "all_decision_dates_explicit": true,
+    "all_jurisdictions_and_decision_makers_explicit": true,
+    "all_actions_named_and_explained": true,
+    "all_natural_compliance_requirements_present": true,
+    "all_task_local_facts_explicit": true,
+    "all_task_local_fact_bindings_resolve": true,
+    "all_public_numbers_bound": true,
+    "exact_clause_or_patch_leakage_found": false,
+    "banned_template_fragments_found": false,
+    "single_minimal_final_question_per_task": true
+  },
+  "validator": {
+    "command": "python scripts/validate_batch.py --rapid-root <Rapid-v0-root> --batch 5",
+    "status": "PASS",
+    "task_count": 20,
+    "errors": []
+  },
+  "artifact_binding_before_self_check": {
+    "public_tasks_sha256": "17e1365f49fe8915f924144898b890ea4592d7f1a22cd95739e94da1bdacebe2",
+    "private_audit_sha256": "318ba6f9cb2254cf7b4fb68d249afd8d9e1c8b41b42dc9977b81f9bd81eac04f",
+    "ordered_62_artifact_bundle_sha256": "b641580ac31a2ebcf72811cbec6ceb40b13d0bf1e6999bba1bee64b106cf473f",
+    "ordered_bundle_algorithm": "SHA-256 over public tasks, private audit, then model JSON files sorted by path"
+  },
+  "execution_boundary": {
+    "strict_v1_or_v2_write": false,
+    "formal_query_run": false,
+    "probe_run": false,
+    "selection_run": false,
+    "import_run": false,
+    "admission_run": false,
+    "activation_run": false
+  },
+  "claim_boundary": "This artifact records generator self-check only. Independent review remains PENDING; this does not authorize Rapid-v0 publication."
+}

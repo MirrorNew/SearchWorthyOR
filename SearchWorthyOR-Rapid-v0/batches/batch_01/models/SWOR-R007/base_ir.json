@@ -1,0 +1,89 @@
+{
+  "action_projection": [
+    "morning",
+    "voyage",
+    "lake",
+    "pine"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "lake": 1,
+        "morning": 1,
+        "pine": 1,
+        "voyage": 1
+      },
+      "meaning": "恰好选择两只债券",
+      "name": "select_two",
+      "rhs": 2,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "morning": 1,
+        "pine": 1
+      },
+      "meaning": "组合至少包含一只仅含补偿性赎回条款的债券",
+      "name": "make_whole_diversification",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "morning": 1,
+        "voyage": 1
+      },
+      "meaning": "同一发行集团担保的晨星债和远航债至多选择一只",
+      "name": "issuer_concentration",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R007",
+  "objective": {
+    "coefficients": {
+      "lake": 8,
+      "morning": 5,
+      "pine": 6,
+      "voyage": 9
+    },
+    "constant": 0,
+    "meaning": "快速发行通道贡献",
+    "sense": "max",
+    "unit": "百万欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0225",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "晨星债进入快速发行通道",
+      "name": "morning",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "远航债进入快速发行通道",
+      "name": "voyage",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "湖畔债进入快速发行通道",
+      "name": "lake",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "松林债进入快速发行通道",
+      "name": "pine",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

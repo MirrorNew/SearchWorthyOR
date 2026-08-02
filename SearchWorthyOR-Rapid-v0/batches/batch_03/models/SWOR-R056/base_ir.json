@@ -1,0 +1,59 @@
+{
+  "action_projection": [
+    "C",
+    "E",
+    "P"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "C": 1,
+        "E": 1,
+        "P": 1
+      },
+      "meaning": "至少开展1项治理工作",
+      "name": "internal_one_duty",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R056",
+  "objective": {
+    "coefficients": {
+      "C": 1,
+      "E": 2,
+      "P": 3
+    },
+    "constant": 0,
+    "meaning": "最小化治理实施成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0199",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "年度复核全部运营商合同",
+      "name": "C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "制定受助人资格指南",
+      "name": "E",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "确定无赞助服务优先次序",
+      "name": "P",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

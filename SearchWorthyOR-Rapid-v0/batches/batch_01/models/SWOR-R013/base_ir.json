@@ -1,0 +1,89 @@
+{
+  "action_projection": [
+    "smelting",
+    "air",
+    "heat",
+    "warehouse",
+    "office"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "air": 1,
+        "heat": 1,
+        "office": 1,
+        "smelting": 1,
+        "warehouse": 1
+      },
+      "meaning": "至少选择一个评估区域",
+      "name": "choose_area",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "office": 1,
+        "warehouse": 1
+      },
+      "meaning": "仓库和办公室至多选择一个",
+      "name": "shared_inventory_team",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R013",
+  "objective": {
+    "coefficients": {
+      "air": 5,
+      "heat": 4,
+      "office": 1,
+      "smelting": 6,
+      "warehouse": 2
+    },
+    "constant": 0,
+    "meaning": "显著能耗区域评估成本",
+    "sense": "min",
+    "unit": "万英镑"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0127",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择熔炼区域",
+      "name": "smelting",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择压缩空气区域",
+      "name": "air",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择热处理区域",
+      "name": "heat",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择仓库区域",
+      "name": "warehouse",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择办公室区域",
+      "name": "office",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

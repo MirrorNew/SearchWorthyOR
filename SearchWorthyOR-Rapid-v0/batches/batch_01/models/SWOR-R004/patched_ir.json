@@ -1,0 +1,78 @@
+{
+  "action_projection": [
+    "notice_day",
+    "response_day"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "notice_day": -1,
+        "response_day": 1
+      },
+      "meaning": "书面回复不能早于初始通知",
+      "name": "response_after_notice",
+      "rhs": 0,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "notice_day": -1,
+        "response_day": 1
+      },
+      "meaning": "内部服务约定要求回复距通知不超过二十五个工作日",
+      "name": "internal_response_window",
+      "rhs": 25,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "notice_day": 1
+      },
+      "meaning": "识别潜在影响后十个工作日内通知",
+      "name": "initial_notice_deadline",
+      "rhs": 10,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "notice_day": -1,
+        "response_day": 1
+      },
+      "meaning": "受影响系统在通知后二十个工作日内回复",
+      "name": "response_deadline",
+      "rhs": 20,
+      "sense": "<="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R004",
+  "objective": {
+    "coefficients": {
+      "notice_day": 1,
+      "response_day": 0.1
+    },
+    "constant": 0,
+    "meaning": "技术核验收益",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0076",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "向受影响系统发送初始通知的工作日",
+      "name": "notice_day",
+      "type": "INTEGER",
+      "ub": 15
+    },
+    {
+      "lb": 0,
+      "meaning": "受影响系统书面回复的工作日",
+      "name": "response_day",
+      "type": "INTEGER",
+      "ub": 30
+    }
+  ],
+  "variant": "patched"
+}

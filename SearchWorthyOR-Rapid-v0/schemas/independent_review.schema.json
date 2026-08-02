@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "searchworthyor.rapid_independent_review.v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "id", "reviewer_id", "reviewed_at", "artifact_fingerprint", "source_access_confirmed",
+    "authority_confirmed", "support_excerpt_direct", "applicability_confirmed",
+    "structural_patch_supported", "rule_to_patch_trace_confirmed",
+    "task_local_facts_sufficient", "no_unstated_patch_inputs",
+    "base_model_semantics_confirmed",
+    "problem_base_alignment_confirmed", "answer_leakage_absent",
+    "solver_and_action_sets_reproduced", "base_topology_not_template_duplicate",
+    "status", "review_notes"
+  ],
+  "properties": {
+    "schema_version": {"const": "searchworthyor.rapid_independent_review.v0"},
+    "id": {"type": "string", "pattern": "^SWOR-R[0-9]{3}$"},
+    "reviewer_id": {"type": "string", "minLength": 1},
+    "reviewed_at": {"type": "string", "format": "date-time"},
+    "artifact_fingerprint": {"type": "string", "pattern": "^[0-9a-f]{64}$"},
+    "source_access_confirmed": {"type": "boolean"},
+    "authority_confirmed": {"type": "boolean"},
+    "support_excerpt_direct": {"type": "boolean"},
+    "applicability_confirmed": {"type": "boolean"},
+    "structural_patch_supported": {"type": "boolean"},
+    "rule_to_patch_trace_confirmed": {"type": "boolean"},
+    "task_local_facts_sufficient": {"type": "boolean"},
+    "no_unstated_patch_inputs": {"type": "boolean"},
+    "base_model_semantics_confirmed": {"type": "boolean"},
+    "problem_base_alignment_confirmed": {"type": "boolean"},
+    "answer_leakage_absent": {"type": "boolean"},
+    "solver_and_action_sets_reproduced": {"type": "boolean"},
+    "base_topology_not_template_duplicate": {"type": "boolean"},
+    "status": {"enum": ["PASS", "REJECT"]},
+    "review_notes": {"type": "string"}
+  }
+}

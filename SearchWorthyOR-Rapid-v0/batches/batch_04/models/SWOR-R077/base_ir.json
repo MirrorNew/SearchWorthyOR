@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "team_A",
+    "team_B",
+    "team_C",
+    "team_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "team_A": 1,
+        "team_C": 1
+      },
+      "meaning": "培训项目恰好选择1队实施",
+      "name": "training_one",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "team_B": 1,
+        "team_D": 1
+      },
+      "meaning": "演练项目恰好选择1队实施",
+      "name": "exercise_one",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "team_A": 1,
+        "team_D": 1
+      },
+      "meaning": "A队与D队共享讲师而不能同时实施",
+      "name": "shared_instructor",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R077",
+  "objective": {
+    "coefficients": {
+      "team_A": 1,
+      "team_B": 2,
+      "team_C": 3,
+      "team_D": 4
+    },
+    "constant": 0,
+    "meaning": "最小化项目实施成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0104",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择A队实施培训项目",
+      "name": "team_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择B队实施演练项目",
+      "name": "team_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择C队实施培训项目",
+      "name": "team_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择D队实施演练项目",
+      "name": "team_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

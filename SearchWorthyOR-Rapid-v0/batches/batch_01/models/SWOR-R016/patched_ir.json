@@ -1,0 +1,78 @@
+{
+  "action_projection": [
+    "deny",
+    "defer",
+    "prescribe"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "defer": 1,
+        "deny": 1,
+        "prescribe": 1
+      },
+      "meaning": "驳回、延后与签发命令之间恰选一项",
+      "name": "choose_order",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "defer": 1,
+        "prescribe": 1
+      },
+      "meaning": "完整申请进入延后调查或实体命令路径",
+      "name": "complete_docket_path",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "prescribe": 1
+      },
+      "meaning": "满足服务失败且无抗辩或不可行证明时签发互惠换装命令",
+      "name": "eligible_prescription",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R016",
+  "objective": {
+    "coefficients": {
+      "defer": 2,
+      "deny": 1,
+      "prescribe": 4
+    },
+    "constant": 0,
+    "meaning": "互惠换装裁定行政成本",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0068",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "驳回互惠换装申请",
+      "name": "deny",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "延后互惠换装裁定",
+      "name": "defer",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "签发互惠换装命令",
+      "name": "prescribe",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

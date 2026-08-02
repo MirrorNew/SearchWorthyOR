@@ -1,0 +1,78 @@
+{
+  "schema_version": "searchworthyor.rapid_batch_self_check.v0",
+  "batch": 2,
+  "scope_ids": ["SWOR-R021","SWOR-R022","SWOR-R023","SWOR-R024","SWOR-R025","SWOR-R026","SWOR-R027","SWOR-R028","SWOR-R029","SWOR-R030","SWOR-R031","SWOR-R032","SWOR-R033","SWOR-R034","SWOR-R035","SWOR-R036","SWOR-R037","SWOR-R038","SWOR-R039","SWOR-R040"],
+  "generator_id": "/root/native_batch_c",
+  "status": "GENERATOR_SELF_CHECK_PASS",
+  "independent_review": "PENDING",
+  "input_binding": {
+    "path": "private/source_shortlist_130.jsonl",
+    "sha256": "b0a68aa65e79e6856f42cd9c034ba4f0cc281935313d3dc5c678852d985b9aee",
+    "batch": 2,
+    "primary_rows_used": 19,
+    "backup_candidate_substitutions": 1,
+    "replacement_task": "SWOR-R021",
+    "replacement_candidate": "SRCV2-0158",
+    "replacement_reason": "configured PCPD primary and same-domain backup failed current TLS certificate verification",
+    "official_path_fallbacks": [{"id":"SWOR-R022","used_official_backup":"https://www.ams.usda.gov/rules-regulations/strengthening-organic-enforcement/faq","reason":"official FAQ provided the directly recheckable per-shipment certificate text"}]
+  },
+  "source_review": {
+    "retained_candidate_count": 20,
+    "all_retained_http_200": true,
+    "all_support_excerpts_continuously_found_at_final_url": true,
+    "all_applicability_pass": true,
+    "release_source_recheck_20_of_20": true,
+    "soft_guidance_hardening_found": false
+  },
+  "quota_checks": {
+    "families": {"assignment_matching":2,"energy_environment":2,"facility_network":2,"finance_portfolio":2,"healthcare_resources":2,"inventory_supply_chain":2,"production_capacity":2,"routing_transport":2,"scheduling_workforce":2,"telecom_service":2},
+    "patch_classes": {"conditional_auxiliary":5,"eligibility_domain":5,"quota_risk_service_objective":5,"temporal_coupling":5},
+    "exact": true
+  },
+  "model_checks": {
+    "model_pairs": 20,
+    "solver": "COPT 8.0.5",
+    "all_base_optimal": true,
+    "all_patched_optimal": true,
+    "complete_enumeration_both_sides": true,
+    "maximum_base_assignment_space": 256,
+    "maximum_patched_assignment_space": 256,
+    "enumeration_limit": 200000,
+    "all_optimal_action_intersections_empty": true,
+    "all_base_constraints_nonredundant_over_finite_domain": true,
+    "all_added_patch_constraints_nonredundant_over_base_feasible_set": true,
+    "base_topology_hashes_unique": true,
+    "base_and_patched_action_projection_equal_per_task": true,
+    "finite_binary_or_integer_only": true,
+    "single_objective_per_model": true
+  },
+  "manual_semantic_review": {
+    "all_20_public_tasks_read_end_to_end": true,
+    "all_rule_local_fact_patch_chains_read": true,
+    "unstated_patch_inputs_found": false,
+    "regulator_decisions_encoded_as_external_facts": true,
+    "future_effective_periods_explicitly_bounded": true,
+    "guidance_sources_bound_through_written_internal_policy": true,
+    "gold_rule_conclusion_leakage_found": false
+  },
+  "surface_checks": {
+    "public_fields_exactly_id_and_problem_zh": true,
+    "all_problem_lengths_at_least_120": true,
+    "all_decision_dates_explicit": true,
+    "all_natural_compliance_requirements_present": true,
+    "all_public_numbers_bound": true,
+    "exact_clause_or_patch_leakage_found": false,
+    "banned_template_fragments_found": false,
+    "single_minimal_final_question_per_task": true
+  },
+  "validator": {"command":"python scripts/validate_batch.py --rapid-root <Rapid-v0-root> --batch 2","status":"PASS","task_count":20,"errors":[]},
+  "source_recheck": {"command":"python scripts/recheck_release_sources.py --rapid-root <Rapid-v0-root> --batch 2","status":"PASS","checked":20,"passed":20,"failed":[]},
+  "artifact_binding_before_self_check": {
+    "public_tasks_sha256": "182ee1a707d5ec7d0ccb6d4083664f764f0887163bda760c2789c9132d4b59ca",
+    "private_audit_sha256": "5b18c46add2c6e8dd25d0a99d59b6128edb4c20656f9eabc0f3ae290070b2e96",
+    "ordered_42_artifact_bundle_sha256": "0fdc503f18de5d353d8435118c194ec610bfe6c7d893a25db5b23d197e5b5aa5",
+    "ordered_bundle_algorithm": "SHA-256 over raw bytes concatenated in order: public tasks, private audit, then 40 model IR files sorted by path"
+  },
+  "execution_boundary": {"strict_v1_or_v2_write":false,"formal_query_run":false,"probe_run":false,"selection_run":false,"import_run":false,"admission_run":false,"activation_run":false},
+  "claim_boundary": "This artifact records generator self-check only. Independent review remains PENDING and no publication, selection, import, admission, or activation is authorized."
+}

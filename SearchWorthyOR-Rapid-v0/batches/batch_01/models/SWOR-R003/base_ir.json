@@ -1,0 +1,133 @@
+{
+  "action_projection": [
+    "central_1",
+    "bilateral_1",
+    "central_2",
+    "bilateral_2",
+    "central_3",
+    "bilateral_3",
+    "central_4",
+    "bilateral_4"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "bilateral_1": 1,
+        "central_1": 1
+      },
+      "meaning": "第1笔交易恰选择一种结算方式",
+      "name": "assign_1",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "bilateral_2": 1,
+        "central_2": 1
+      },
+      "meaning": "第2笔交易恰选择一种结算方式",
+      "name": "assign_2",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "bilateral_3": 1,
+        "central_3": 1
+      },
+      "meaning": "第3笔交易恰选择一种结算方式",
+      "name": "assign_3",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "bilateral_4": 1,
+        "central_4": 1
+      },
+      "meaning": "第4笔交易恰选择一种结算方式",
+      "name": "assign_4",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R003",
+  "objective": {
+    "coefficients": {
+      "bilateral_1": 1,
+      "bilateral_2": 1,
+      "bilateral_3": 2,
+      "bilateral_4": 2,
+      "central_1": 5,
+      "central_2": 4,
+      "central_3": 6,
+      "central_4": 5
+    },
+    "constant": 0,
+    "meaning": "国债交易清算成本",
+    "sense": "min",
+    "unit": "千美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0085",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "第1笔交易采用中央清算",
+      "name": "central_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第2笔交易采用中央清算",
+      "name": "central_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第3笔交易采用中央清算",
+      "name": "central_3",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第4笔交易采用中央清算",
+      "name": "central_4",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第1笔交易采用双边结算",
+      "name": "bilateral_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第2笔交易采用双边结算",
+      "name": "bilateral_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第3笔交易采用双边结算",
+      "name": "bilateral_3",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "第4笔交易采用双边结算",
+      "name": "bilateral_4",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,77 @@
+{
+  "action_projection": [
+    "a",
+    "b",
+    "c"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "a": 1,
+        "b": 1,
+        "c": 1
+      },
+      "meaning": "合计运行四次情景分析",
+      "name": "four_runs",
+      "rhs": 4,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "a": 1
+      },
+      "meaning": "不计典型终端客户税费的引擎A不用于合规分析",
+      "name": "exclude_tax_omission",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "b": 1
+      },
+      "meaning": "未计全部成本的引擎B不用于合规分析",
+      "name": "exclude_cost_omission",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R048",
+  "objective": {
+    "coefficients": {
+      "a": 8,
+      "b": 7,
+      "c": 5
+    },
+    "constant": 0,
+    "meaning": "最大化名义信息分",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0223",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "分配给引擎A的情景分析次数",
+      "name": "a",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "分配给引擎B的情景分析次数",
+      "name": "b",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "分配给引擎C的情景分析次数",
+      "name": "c",
+      "type": "INTEGER",
+      "ub": 4
+    }
+  ],
+  "variant": "patched"
+}

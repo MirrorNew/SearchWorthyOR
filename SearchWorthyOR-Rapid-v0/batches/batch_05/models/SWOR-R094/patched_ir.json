@@ -1,0 +1,103 @@
+{
+  "action_projection": [
+    "crop_batches",
+    "waste_batches",
+    "crop_injected",
+    "waste_injected"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "crop_batches": 1,
+        "waste_batches": 1
+      },
+      "meaning": "季度最多生产四批",
+      "name": "production_capacity",
+      "rhs": 4,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "crop_batches": -1,
+        "crop_injected": 1
+      },
+      "meaning": "能源作物注气不超过生产量",
+      "name": "crop_injection",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "waste_batches": -1,
+        "waste_injected": 1
+      },
+      "meaning": "废弃物注气不超过生产量",
+      "name": "waste_injection",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "eligible_waste": 1,
+        "waste_injected": -1
+      },
+      "meaning": "完整计量的废弃物注气全部计入合格量",
+      "name": "eligible_measurement",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R094",
+  "objective": {
+    "coefficients": {
+      "crop_batches": 8,
+      "eligible_waste": 1,
+      "waste_batches": 7.5
+    },
+    "constant": 0,
+    "meaning": "季度净贡献",
+    "sense": "max",
+    "unit": "千英镑"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0132",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "能源作物生物甲烷生产批数",
+      "name": "crop_batches",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "废弃物生物甲烷生产批数",
+      "name": "waste_batches",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "能源作物生物甲烷注气批数",
+      "name": "crop_injected",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "废弃物生物甲烷注气批数",
+      "name": "waste_injected",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "计入季度支持的废弃物生物甲烷批数",
+      "name": "eligible_waste",
+      "type": "INTEGER",
+      "ub": 4
+    }
+  ],
+  "variant": "patched"
+}
