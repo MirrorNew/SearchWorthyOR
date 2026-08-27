@@ -76,6 +76,10 @@ Formal 在启动前强制读取通过的 preflight 与 Smoke gate。Smoke 固定
 
 后两项是模型在原生方法下未满足 V1.5.1 输出契约的 Smoke 观测，不是 runner 崩溃，也不能手工改成成功。Smoke 只验证链路可运行和失败可归因，不代表五种方法的正式性能结论。
 
+## 架构与 Idea 交接文档
+
+面向协作者的五个 baseline 详细架构、Direct/Search-First 对照、联网失败分层、已知漏洞和下一版 Agent 科学问题，见 [`docs/five_baselines_handoff/`](docs/five_baselines_handoff/README.md)。文档严格区分原论文方法、当前实际配置和未来候选设计；Formal 未运行前不包含性能优劣结论。
+
 ## 上传安全边界
 
 `.env.local`、`preflight/` 和 `runs/` 不进入 GitHub，API key 与完整上游请求轨迹不得提交。本仓库维护者明确选择公开完整审计版，因此 `private/selected_gold.jsonl` 作为 scorer 角色文件被显式提交；`private` 表示运行时不可见，不表示 GitHub 保密。任何读过该文件、数据集 `private/`、`models/` 或修复记录的模型/开发者，都不能在这 240 个 case 上声称隐藏测试或无污染结果。
