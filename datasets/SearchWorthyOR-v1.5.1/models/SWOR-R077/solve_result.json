@@ -1,0 +1,102 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R077",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 24.0,
+  "patched_objective": 19.0,
+  "base_incumbent": {
+    "s7x12": 1,
+    "s10x8": 0,
+    "s14x6": 0,
+    "s9x9": 0,
+    "p0": 1,
+    "p1": 0,
+    "p4": 0,
+    "p9": 0,
+    "p28": 0
+  },
+  "patched_incumbent": {
+    "s7x12": 0,
+    "s10x8": 0,
+    "s14x6": 0,
+    "s9x9": 1,
+    "p0": 0,
+    "p1": 0,
+    "p4": 0,
+    "p9": 1,
+    "p28": 0
+  },
+  "base_feasible_assignment_count": 20,
+  "patched_feasible_assignment_count": 4,
+  "base_optimal_actions": [
+    {
+      "s7x12": 1,
+      "s10x8": 0,
+      "s14x6": 0,
+      "s9x9": 0,
+      "p0": 1,
+      "p1": 0,
+      "p4": 0,
+      "p9": 0,
+      "p28": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "s7x12": 0,
+      "s10x8": 0,
+      "s14x6": 0,
+      "s9x9": 1,
+      "p0": 0,
+      "p1": 0,
+      "p4": 0,
+      "p9": 1,
+      "p28": 0
+    },
+    {
+      "s7x12": 0,
+      "s10x8": 0,
+      "s14x6": 1,
+      "s9x9": 0,
+      "p0": 0,
+      "p1": 0,
+      "p4": 1,
+      "p9": 0,
+      "p28": 0
+    },
+    {
+      "s7x12": 0,
+      "s10x8": 1,
+      "s14x6": 0,
+      "s9x9": 0,
+      "p0": 1,
+      "p1": 0,
+      "p4": 0,
+      "p9": 0,
+      "p28": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "排班净效用点",
+        "value": 19.0
+      },
+      {
+        "unit": "价值点",
+        "value": 19.0
+      },
+      {
+        "unit": "点",
+        "value": 19.0
+      }
+    ],
+    "canonical_unit": "排班净效用点",
+    "canonical_value": 19.0
+  }
+}

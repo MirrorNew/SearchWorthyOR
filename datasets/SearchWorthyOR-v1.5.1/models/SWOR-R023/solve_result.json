@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R023",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 59.0,
+  "patched_objective": 54.0,
+  "base_incumbent": {
+    "leak_urgent": 1,
+    "leak_standard": 0,
+    "intact_residual": 0,
+    "empty_can": 0,
+    "open_bin": 1,
+    "closed_overpack": 0,
+    "compliant_puncture": 0,
+    "improvised_puncture": 0
+  },
+  "patched_incumbent": {
+    "leak_urgent": 1,
+    "leak_standard": 0,
+    "intact_residual": 0,
+    "empty_can": 0,
+    "open_bin": 0,
+    "closed_overpack": 0,
+    "compliant_puncture": 1,
+    "improvised_puncture": 0
+  },
+  "base_feasible_assignment_count": 15,
+  "patched_feasible_assignment_count": 9,
+  "base_optimal_actions": [
+    {
+      "leak_urgent": 1,
+      "leak_standard": 0,
+      "intact_residual": 0,
+      "empty_can": 0,
+      "open_bin": 1,
+      "closed_overpack": 0,
+      "compliant_puncture": 0,
+      "improvised_puncture": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "leak_urgent": 1,
+      "leak_standard": 0,
+      "intact_residual": 0,
+      "empty_can": 0,
+      "open_bin": 0,
+      "closed_overpack": 0,
+      "compliant_puncture": 1,
+      "improvised_puncture": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "处理净贡献点",
+        "value": 54.0
+      },
+      {
+        "unit": "价值点",
+        "value": 54.0
+      },
+      {
+        "unit": "点",
+        "value": 54.0
+      }
+    ],
+    "canonical_unit": "处理净贡献点",
+    "canonical_value": 54.0
+  }
+}

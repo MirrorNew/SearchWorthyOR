@@ -1,0 +1,84 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R003",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 31,
+  "base_objective": 82.0,
+  "base_incumbent": {
+    "employee_a_hsa": 1,
+    "employee_a_cash": 0,
+    "employee_b_hsa": 0,
+    "employee_b_cash": 1,
+    "employee_c_hsa": 1,
+    "employee_c_cash": 0,
+    "employee_d_hsa": 1,
+    "employee_d_cash": 0,
+    "employee_e_hsa": 1,
+    "employee_e_cash": 0
+  },
+  "base_optimal_actions": [
+    {
+      "employee_a_hsa": 1,
+      "employee_a_cash": 0,
+      "employee_b_hsa": 0,
+      "employee_b_cash": 1,
+      "employee_c_hsa": 1,
+      "employee_c_cash": 0,
+      "employee_d_hsa": 1,
+      "employee_d_cash": 0,
+      "employee_e_hsa": 1,
+      "employee_e_cash": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 8,
+  "patched_objective": 73.0,
+  "patched_incumbent": {
+    "employee_a_hsa": 1,
+    "employee_a_cash": 0,
+    "employee_b_hsa": 0,
+    "employee_b_cash": 1,
+    "employee_c_hsa": 1,
+    "employee_c_cash": 0,
+    "employee_d_hsa": 0,
+    "employee_d_cash": 1,
+    "employee_e_hsa": 1,
+    "employee_e_cash": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "employee_a_hsa": 1,
+      "employee_a_cash": 0,
+      "employee_b_hsa": 0,
+      "employee_b_cash": 1,
+      "employee_c_hsa": 1,
+      "employee_c_cash": 0,
+      "employee_d_hsa": 0,
+      "employee_d_cash": 1,
+      "employee_e_hsa": 1,
+      "employee_e_cash": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 73.0,
+    "canonical_unit": "福利价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "福利价值点",
+        "value": 73.0
+      },
+      {
+        "unit": "价值点",
+        "value": 73.0
+      },
+      {
+        "unit": "点",
+        "value": 73.0
+      }
+    ]
+  }
+}

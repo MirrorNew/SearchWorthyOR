@@ -1,0 +1,116 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R007",
+  "variant": "patched",
+  "family": "finance_portfolio",
+  "source_candidate_id": "SRCV3-R007-BOE-SMF-GOVLINKED-20260619",
+  "variables": [
+    {
+      "name": "ontario_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级AA的加拿大安大略省债券"
+    },
+    {
+      "name": "nsw_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级AA+的澳大利亚新南威尔士州债券"
+    },
+    {
+      "name": "japan_policy_bank_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级AA的日本开发政策银行债券"
+    },
+    {
+      "name": "seoul_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级AA+的韩国首尔市政府债券"
+    },
+    {
+      "name": "quebec_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级A+的加拿大魁北克省债券"
+    },
+    {
+      "name": "private_infrastructure_bond",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "质押信用评级AA+的私营基础设施公司债券"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "ontario_bond": 9,
+      "nsw_bond": 8,
+      "japan_policy_bank_bond": 7,
+      "seoul_bond": 13,
+      "quebec_bond": 12,
+      "private_infrastructure_bond": 11
+    },
+    "meaning": "Total same-day funding-value score of pledged bonds",
+    "unit": "融资价值点"
+  },
+  "constraints": [
+    {
+      "name": "pledge_exactly_three_bonds",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "ontario_bond": 1,
+        "nsw_bond": 1,
+        "japan_policy_bank_bond": 1,
+        "seoul_bond": 1,
+        "quebec_bond": 1,
+        "private_infrastructure_bond": 1
+      },
+      "meaning": "Pledge exactly three of the six candidate bonds"
+    },
+    {
+      "name": "exclude_noncovered_seoul_issuer",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "seoul_bond": 1
+      },
+      "meaning": "The Seoul municipal issuer is outside the announced G10-and-Australia geographic scope"
+    },
+    {
+      "name": "exclude_below_quality_quebec_bond",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "quebec_bond": 1
+      },
+      "meaning": "The A+ Quebec bond is below the announced broadly-AA- minimum quality"
+    },
+    {
+      "name": "exclude_private_infrastructure_issuer",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "private_infrastructure_bond": 1
+      },
+      "meaning": "A private infrastructure company is neither a regional/local government nor a development/policy bank"
+    }
+  ],
+  "action_projection": [
+    "ontario_bond",
+    "nsw_bond",
+    "japan_policy_bank_bond",
+    "seoul_bond",
+    "quebec_bond",
+    "private_infrastructure_bond"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R100",
+  "variant": "patched",
+  "family": "telecom_service",
+  "source_candidate_id": "A4-R100-FCC-TRS-SPEED-ANSWER",
+  "variables": [
+    {
+      "name": "answer80",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择10秒内接听80通的方案"
+    },
+    {
+      "name": "answer85",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择10秒内接听85通的方案"
+    },
+    {
+      "name": "answer90",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择10秒内接听90通的方案"
+    },
+    {
+      "name": "answer75",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择10秒内接听75通的方案"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "answer80": 24,
+      "answer85": 20,
+      "answer90": 17,
+      "answer75": 15
+    },
+    "meaning": "Total decision value",
+    "unit": "中继服务净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_trs_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "answer80": 1,
+        "answer85": 1,
+        "answer90": 1,
+        "answer75": 1
+      },
+      "meaning": "Exactly one listed package must be selected"
+    },
+    {
+      "name": "exclude_80_percent",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "answer80": 1
+      },
+      "meaning": "exclude 80 percent"
+    },
+    {
+      "name": "exclude_75_percent",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "answer75": 1
+      },
+      "meaning": "exclude 75 percent"
+    }
+  ],
+  "action_projection": [
+    "answer80",
+    "answer85",
+    "answer90",
+    "answer75"
+  ]
+}

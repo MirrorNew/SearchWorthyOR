@@ -1,0 +1,50 @@
+{
+  "schema_version": "searchworthyor.v151.five_baselines.smoke_summary.v1",
+  "status": "PASS",
+  "terminal_instances": 10,
+  "configuration_violations": 0,
+  "gold_leakage": 0,
+  "api_key_leakage": 0,
+  "identity_mismatch": 0,
+  "duplicate_terminal_outputs": 0,
+  "harness_runner_failures": 0,
+  "search_gate_missing": 0,
+  "search_budget_violations": 0,
+  "search_backend_violations": 0,
+  "direct_base_stage_missing": 0,
+  "direct_base_solve_completed": 2,
+  "direct_base_provider_failures": 0,
+  "direct_base_failure_unaccounted": 0,
+  "search_final_answer_missing": 0,
+  "raw_nl_binding_failures": 0,
+  "raw_nl_nonempty_instances": 2,
+  "provider_success_by_method": {
+    "direct": 16,
+    "coe": 14,
+    "optimus": 34,
+    "optiminer": 2,
+    "search_first": 14
+  },
+  "search_final_calls": {
+    "search_first": 2,
+    "direct": 2
+  },
+  "status_counts": {
+    "Direct-v2 Base-Solve Gated Search": {
+      "OK": 2
+    },
+    "CoE": {
+      "OK": 1,
+      "OUTPUT_CONTRACT_FAILURE": 1
+    },
+    "OptiMUS": {
+      "OUTPUT_CONTRACT_FAILURE": 2
+    },
+    "optiminer-training-free": {
+      "OK": 2
+    },
+    "Search-First Gated Raw-NL": {
+      "OK": 2
+    }
+  }
+}

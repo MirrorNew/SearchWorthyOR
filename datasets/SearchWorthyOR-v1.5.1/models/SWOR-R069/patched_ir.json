@@ -1,0 +1,66 @@
+{
+  "action_projection": [
+    "award_day",
+    "representation_process"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "award_day": 1
+      },
+      "meaning": "最早在第2个工作日开始时点授标",
+      "name": "earliest_award",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "award_day": 1
+      },
+      "meaning": "第8日末送达决定后经过5个完整工作日，最早第14日开始时点签约",
+      "name": "post_decision_standstill",
+      "rhs": 14,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "representation_process": 1
+      },
+      "meaning": "及时书面陈述触发审查和进一步决定流程",
+      "name": "representation_review_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R069",
+  "objective": {
+    "coefficients": {
+      "award_day": 1,
+      "representation_process": 3
+    },
+    "constant": 0,
+    "meaning": "最小化授标等待与审查成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0130",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "授标并签约的工作日开始时点",
+      "name": "award_day",
+      "type": "INTEGER",
+      "ub": 20
+    },
+    {
+      "lb": 0,
+      "meaning": "启动书面陈述审查并送达进一步决定",
+      "name": "representation_process",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R054",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 40,
+  "base_objective": 217.0,
+  "base_incumbent": {
+    "batch_a": 1,
+    "batch_b": 1,
+    "batch_c": 1,
+    "batch_d": 0,
+    "batch_e": 0,
+    "batch_f": 0,
+    "ecoc_cell": 0
+  },
+  "base_optimal_actions": [
+    {
+      "batch_a": 1,
+      "batch_b": 1,
+      "batch_c": 1,
+      "batch_d": 0,
+      "batch_e": 0,
+      "batch_f": 0,
+      "ecoc_cell": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 21,
+  "patched_objective": 196.0,
+  "patched_incumbent": {
+    "batch_a": 0,
+    "batch_b": 0,
+    "batch_c": 0,
+    "batch_d": 1,
+    "batch_e": 1,
+    "batch_f": 1,
+    "ecoc_cell": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "batch_a": 0,
+      "batch_b": 0,
+      "batch_c": 0,
+      "batch_d": 1,
+      "batch_e": 1,
+      "batch_f": 1,
+      "ecoc_cell": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 196.0,
+    "canonical_unit": "净生产价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "净生产价值点",
+        "value": 196.0
+      },
+      {
+        "unit": "价值点",
+        "value": 196.0
+      },
+      {
+        "unit": "点",
+        "value": 196.0
+      }
+    ]
+  }
+}

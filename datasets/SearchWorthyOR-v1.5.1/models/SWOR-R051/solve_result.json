@@ -1,0 +1,88 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R051",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 60,
+  "base_objective": 23.0,
+  "base_incumbent": {
+    "select_a": 1,
+    "review_a": 0,
+    "select_b": 1,
+    "review_b": 0,
+    "select_c": 0,
+    "review_c": 0,
+    "select_d": 0,
+    "review_d": 0,
+    "select_e": 0,
+    "review_e": 0,
+    "select_f": 0,
+    "review_f": 0
+  },
+  "base_optimal_actions": [
+    {
+      "select_a": 1,
+      "review_a": 0,
+      "select_b": 1,
+      "review_b": 0,
+      "select_c": 0,
+      "review_c": 0,
+      "select_d": 0,
+      "review_d": 0,
+      "select_e": 0,
+      "review_e": 0,
+      "select_f": 0,
+      "review_f": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 41,
+  "patched_objective": 19.0,
+  "patched_incumbent": {
+    "select_a": 0,
+    "review_a": 0,
+    "select_b": 0,
+    "review_b": 0,
+    "select_c": 1,
+    "review_c": 0,
+    "select_d": 1,
+    "review_d": 0,
+    "select_e": 0,
+    "review_e": 0,
+    "select_f": 0,
+    "review_f": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "select_a": 0,
+      "review_a": 0,
+      "select_b": 0,
+      "review_b": 0,
+      "select_c": 1,
+      "review_c": 0,
+      "select_d": 1,
+      "review_d": 0,
+      "select_e": 0,
+      "review_e": 0,
+      "select_f": 0,
+      "review_f": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 19.0,
+    "canonical_unit": "收益点",
+    "accepted_equivalents": [
+      {
+        "unit": "收益点",
+        "value": 19.0
+      },
+      {
+        "unit": "点",
+        "value": 19.0
+      }
+    ]
+  }
+}

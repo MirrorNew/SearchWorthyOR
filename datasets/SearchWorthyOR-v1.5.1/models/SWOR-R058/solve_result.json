@@ -1,0 +1,100 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R058",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 3.0,
+  "patched_objective": 17.0,
+  "base_incumbent": {
+    "one_crew_a": 1,
+    "two_crew_a": 0,
+    "continue_path_a": 0,
+    "special_approval_a": 0,
+    "annual_report_a": 0,
+    "one_crew_b": 1,
+    "two_crew_b": 0,
+    "continue_path_b": 0,
+    "special_approval_b": 0,
+    "annual_report_b": 0,
+    "one_crew_c": 1,
+    "two_crew_c": 0,
+    "continue_path_c": 0,
+    "special_approval_c": 0,
+    "annual_report_c": 0
+  },
+  "patched_incumbent": {
+    "one_crew_a": 1,
+    "two_crew_a": 0,
+    "continue_path_a": 1,
+    "special_approval_a": 0,
+    "annual_report_a": 1,
+    "one_crew_b": 1,
+    "two_crew_b": 0,
+    "continue_path_b": 0,
+    "special_approval_b": 1,
+    "annual_report_b": 1,
+    "one_crew_c": 0,
+    "two_crew_c": 1,
+    "continue_path_c": 0,
+    "special_approval_c": 0,
+    "annual_report_c": 0
+  },
+  "base_feasible_assignment_count": 343,
+  "patched_feasible_assignment_count": 8,
+  "base_optimal_actions": [
+    {
+      "one_crew_a": 1,
+      "two_crew_a": 0,
+      "continue_path_a": 0,
+      "special_approval_a": 0,
+      "annual_report_a": 0,
+      "one_crew_b": 1,
+      "two_crew_b": 0,
+      "continue_path_b": 0,
+      "special_approval_b": 0,
+      "annual_report_b": 0,
+      "one_crew_c": 1,
+      "two_crew_c": 0,
+      "continue_path_c": 0,
+      "special_approval_c": 0,
+      "annual_report_c": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "one_crew_a": 1,
+      "two_crew_a": 0,
+      "continue_path_a": 1,
+      "special_approval_a": 0,
+      "annual_report_a": 1,
+      "one_crew_b": 1,
+      "two_crew_b": 0,
+      "continue_path_b": 0,
+      "special_approval_b": 1,
+      "annual_report_b": 1,
+      "one_crew_c": 0,
+      "two_crew_c": 1,
+      "continue_path_c": 0,
+      "special_approval_c": 0,
+      "annual_report_c": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "成本点",
+        "value": 17.0
+      },
+      {
+        "unit": "点",
+        "value": 17.0
+      }
+    ],
+    "canonical_unit": "成本点",
+    "canonical_value": 17.0
+  }
+}

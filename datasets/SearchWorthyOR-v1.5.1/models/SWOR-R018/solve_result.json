@@ -1,0 +1,60 @@
+{
+  "base_feasible_assignment_count": 30,
+  "base_incumbent": {
+    "aggregate": 1,
+    "plastic_bottle": 0,
+    "paper_box": 0,
+    "metal_can": 0,
+    "glass_jar": 0
+  },
+  "base_objective": 1.0,
+  "base_optimal_actions": [
+    {
+      "aggregate": 1,
+      "plastic_bottle": 0,
+      "paper_box": 0,
+      "metal_can": 0,
+      "glass_jar": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R018",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 3,
+  "patched_incumbent": {
+    "aggregate": 0,
+    "plastic_bottle": 1,
+    "paper_box": 1,
+    "metal_can": 1,
+    "glass_jar": 0
+  },
+  "patched_objective": 12.0,
+  "patched_optimal_actions": [
+    {
+      "aggregate": 0,
+      "plastic_bottle": 1,
+      "paper_box": 1,
+      "metal_can": 1,
+      "glass_jar": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "objective_value_contract": {
+    "canonical_value": 12.0,
+    "canonical_unit": "千新元",
+    "accepted_equivalents": [
+      {
+        "value": 12.0,
+        "unit": "千新元"
+      },
+      {
+        "value": 12000.0,
+        "unit": "新元"
+      }
+    ]
+  }
+}

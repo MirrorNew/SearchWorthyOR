@@ -1,0 +1,158 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R080",
+  "variant": "patched",
+  "family": "telecom_service",
+  "source_candidate_id": "US-FCC-ERATE-FY2026-ESL-DA-25-1069",
+  "variables": [
+    {
+      "name": "package_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "远程交换机安全补丁和软件技术支持，与所支持交换机一并采购"
+    },
+    {
+      "name": "package_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "工程师到校现场完成交换机配置变更"
+    },
+    {
+      "name": "package_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "独立的下一代高级防火墙入侵检测服务"
+    },
+    {
+      "name": "package_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "独立的基础防火墙服务与组件"
+    },
+    {
+      "name": "package_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "远程路由器配置变更，与所支持路由器一并采购"
+    },
+    {
+      "name": "package_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "远程无线接入点软件技术支持，与所支持接入点一并采购"
+    },
+    {
+      "name": "package_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "交换机物理维修并按实际工时计费"
+    }
+  ],
+  "objective": {
+    "sense": "min",
+    "constant": 0,
+    "coefficients": {
+      "package_a": 8,
+      "package_b": 3,
+      "package_c": 2,
+      "package_d": 9,
+      "package_e": 7,
+      "package_f": 10,
+      "package_g": 4
+    },
+    "meaning": "校内宽带服务包的采购成本",
+    "unit": "成本点"
+  },
+  "constraints": [
+    {
+      "name": "cover_switch_lifecycle",
+      "sense": ">=",
+      "rhs": 1,
+      "coefficients": {
+        "package_a": 1,
+        "package_b": 1,
+        "package_g": 1
+      },
+      "meaning": "至少选择一个交换机生命周期项目"
+    },
+    {
+      "name": "cover_firewall",
+      "sense": ">=",
+      "rhs": 1,
+      "coefficients": {
+        "package_c": 1,
+        "package_d": 1
+      },
+      "meaning": "至少选择一个防火墙项目"
+    },
+    {
+      "name": "cover_remote_configuration",
+      "sense": ">=",
+      "rhs": 1,
+      "coefficients": {
+        "package_b": 1,
+        "package_e": 1,
+        "package_f": 1
+      },
+      "meaning": "至少选择一个配置或软件支持项目"
+    },
+    {
+      "name": "award_at_most_three",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "package_a": 1,
+        "package_b": 1,
+        "package_c": 1,
+        "package_d": 1,
+        "package_e": 1,
+        "package_f": 1,
+        "package_g": 1
+      },
+      "meaning": "本轮最多授予三个服务包"
+    },
+    {
+      "name": "bar_onsite_configuration_from_ic_request",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "package_b": 1
+      },
+      "meaning": "现场配置不能列入本轮Internal Connections请求"
+    },
+    {
+      "name": "bar_advanced_firewall",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "package_c": 1
+      },
+      "meaning": "高级防火墙服务不在FY2026 E-Rate资格内"
+    },
+    {
+      "name": "bar_physical_repair_from_ic_request",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "package_g": 1
+      },
+      "meaning": "物理维修不能列入本轮Internal Connections请求"
+    }
+  ],
+  "action_projection": [
+    "package_a",
+    "package_b",
+    "package_c",
+    "package_d",
+    "package_e",
+    "package_f",
+    "package_g"
+  ]
+}

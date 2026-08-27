@@ -1,0 +1,145 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R111",
+  "variant": "patched",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "LOW-D2-R111-FDA-OLDEST-STOCK",
+  "variables": [
+    {
+      "name": "old_first",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "先配送1月批准的旧批次、再配送6月批准的新批次"
+    },
+    {
+      "name": "new_first_shortage",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "因旧批次临时稳定性复核先配送新批次、复核后立即恢复旧批次优先"
+    },
+    {
+      "name": "new_first_margin",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为提高毛利长期先配送新批次"
+    },
+    {
+      "name": "new_only",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "旧批次仍可用但本轮只配送新批次"
+    },
+    {
+      "name": "none",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不建立偏离理由"
+    },
+    {
+      "name": "temporary_appropriate",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "书面批准并记录仅持续至稳定性复核结束的偏离"
+    },
+    {
+      "name": "permanent_preference",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "批准永久销售偏好"
+    },
+    {
+      "name": "undocumented",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "仅作未记录的口头说明"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "old_first": 62,
+      "new_first_shortage": 75,
+      "new_first_margin": 78,
+      "new_only": 72,
+      "none": 0,
+      "temporary_appropriate": -6,
+      "permanent_preference": -2,
+      "undocumented": -1
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "配送净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_sequence",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "old_first": 1,
+        "new_first_shortage": 1,
+        "new_first_margin": 1,
+        "new_only": 1
+      },
+      "meaning": "选择一个批次配送顺序"
+    },
+    {
+      "name": "choose_reason",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "none": 1,
+        "temporary_appropriate": 1,
+        "permanent_preference": 1,
+        "undocumented": 1
+      },
+      "meaning": "选择一个偏离理由程序"
+    },
+    {
+      "name": "temporary_sequence_matches_reason",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "new_first_shortage": 1,
+        "temporary_appropriate": -1
+      },
+      "meaning": "临时倒序配送匹配临时适当偏离程序"
+    },
+    {
+      "name": "permanent_new_first_ineligible",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "new_first_margin": 1
+      },
+      "meaning": "永久毛利偏好不是临时适当偏离"
+    },
+    {
+      "name": "new_only_ineligible",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "new_only": 1
+      },
+      "meaning": "无适当临时偏离不得跳过最老已批准库存"
+    }
+  ],
+  "action_projection": [
+    "old_first",
+    "new_first_shortage",
+    "new_first_margin",
+    "new_only",
+    "none",
+    "temporary_appropriate",
+    "permanent_preference",
+    "undocumented"
+  ]
+}

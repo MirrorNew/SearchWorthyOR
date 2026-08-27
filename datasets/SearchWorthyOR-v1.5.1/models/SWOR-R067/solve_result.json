@@ -1,0 +1,84 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R067",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 601.0,
+  "patched_objective": 494.0,
+  "base_incumbent": {
+    "horizon_40m": 0,
+    "meridian_35m": 1,
+    "novacore_30m": 0,
+    "orion_25m": 1,
+    "prairie_20m": 1,
+    "quartz_20m": 1,
+    "ridge_15m": 0,
+    "summit_15m": 0,
+    "tidal_10m": 0,
+    "union_10m": 0
+  },
+  "patched_incumbent": {
+    "horizon_40m": 0,
+    "meridian_35m": 0,
+    "novacore_30m": 0,
+    "orion_25m": 1,
+    "prairie_20m": 1,
+    "quartz_20m": 1,
+    "ridge_15m": 1,
+    "summit_15m": 0,
+    "tidal_10m": 1,
+    "union_10m": 1
+  },
+  "base_feasible_assignment_count": 51,
+  "patched_feasible_assignment_count": 30,
+  "base_optimal_actions": [
+    {
+      "horizon_40m": 0,
+      "meridian_35m": 1,
+      "novacore_30m": 0,
+      "orion_25m": 1,
+      "prairie_20m": 1,
+      "quartz_20m": 1,
+      "ridge_15m": 0,
+      "summit_15m": 0,
+      "tidal_10m": 0,
+      "union_10m": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "horizon_40m": 0,
+      "meridian_35m": 0,
+      "novacore_30m": 0,
+      "orion_25m": 1,
+      "prairie_20m": 1,
+      "quartz_20m": 1,
+      "ridge_15m": 1,
+      "summit_15m": 0,
+      "tidal_10m": 1,
+      "union_10m": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "季度风险调整收益点",
+        "value": 494.0
+      },
+      {
+        "unit": "价值点",
+        "value": 494.0
+      },
+      {
+        "unit": "点",
+        "value": 494.0
+      }
+    ],
+    "canonical_unit": "季度风险调整收益点",
+    "canonical_value": 494.0
+  }
+}

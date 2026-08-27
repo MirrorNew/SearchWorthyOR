@@ -1,0 +1,68 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R038",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 28.0,
+  "patched_objective": 20.0,
+  "base_incumbent": {
+    "duty14": 0,
+    "duty15": 1,
+    "minimum_crew": 1,
+    "extra_crew": 0,
+    "rest10": 1,
+    "rest12": 0
+  },
+  "patched_incumbent": {
+    "duty14": 1,
+    "duty15": 0,
+    "minimum_crew": 1,
+    "extra_crew": 0,
+    "rest10": 1,
+    "rest12": 0
+  },
+  "base_feasible_assignment_count": 8,
+  "patched_feasible_assignment_count": 5,
+  "base_optimal_actions": [
+    {
+      "duty14": 0,
+      "duty15": 1,
+      "minimum_crew": 1,
+      "extra_crew": 0,
+      "rest10": 1,
+      "rest12": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "duty14": 1,
+      "duty15": 0,
+      "minimum_crew": 1,
+      "extra_crew": 0,
+      "rest10": 1,
+      "rest12": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "排班净收益点",
+        "value": 20.0
+      },
+      {
+        "unit": "价值点",
+        "value": 20.0
+      },
+      {
+        "unit": "点",
+        "value": 20.0
+      }
+    ],
+    "canonical_unit": "排班净收益点",
+    "canonical_value": 20.0
+  }
+}

@@ -1,0 +1,217 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R072",
+  "variant": "base",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "UK-DBT-STEEL-TRANSITION-2026-07-01",
+  "variables": [
+    {
+      "name": "assign_frame_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次A用于车架生产订单"
+    },
+    {
+      "name": "assign_frame_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次B用于车架生产订单"
+    },
+    {
+      "name": "assign_frame_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次C用于车架生产订单"
+    },
+    {
+      "name": "assign_frame_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次D用于车架生产订单"
+    },
+    {
+      "name": "assign_frame_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次E用于车架生产订单"
+    },
+    {
+      "name": "assign_frame_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次F用于车架生产订单"
+    },
+    {
+      "name": "assign_housing_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次A用于机壳生产订单"
+    },
+    {
+      "name": "assign_housing_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次B用于机壳生产订单"
+    },
+    {
+      "name": "assign_housing_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次C用于机壳生产订单"
+    },
+    {
+      "name": "assign_housing_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次D用于机壳生产订单"
+    },
+    {
+      "name": "assign_housing_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次E用于机壳生产订单"
+    },
+    {
+      "name": "assign_housing_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把钢材批次F用于机壳生产订单"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "assign_frame_a": 13,
+      "assign_frame_b": 21,
+      "assign_frame_c": 15,
+      "assign_frame_d": 12,
+      "assign_frame_e": 18,
+      "assign_frame_f": 11,
+      "assign_housing_a": 10,
+      "assign_housing_b": 16,
+      "assign_housing_c": 14,
+      "assign_housing_d": 19,
+      "assign_housing_e": 22,
+      "assign_housing_f": 12
+    },
+    "meaning": "两个生产订单的总贡献",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "fill_frame",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_a": 1,
+        "assign_frame_b": 1,
+        "assign_frame_c": 1,
+        "assign_frame_d": 1,
+        "assign_frame_e": 1,
+        "assign_frame_f": 1
+      },
+      "meaning": "车架生产订单恰好选择一个钢材批次"
+    },
+    {
+      "name": "fill_housing",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_housing_a": 1,
+        "assign_housing_b": 1,
+        "assign_housing_c": 1,
+        "assign_housing_d": 1,
+        "assign_housing_e": 1,
+        "assign_housing_f": 1
+      },
+      "meaning": "机壳生产订单恰好选择一个钢材批次"
+    },
+    {
+      "name": "lot_a_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_a": 1,
+        "assign_housing_a": 1
+      },
+      "meaning": "批次A最多用于一个订单"
+    },
+    {
+      "name": "lot_b_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_b": 1,
+        "assign_housing_b": 1
+      },
+      "meaning": "批次B最多用于一个订单"
+    },
+    {
+      "name": "lot_c_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_c": 1,
+        "assign_housing_c": 1
+      },
+      "meaning": "批次C最多用于一个订单"
+    },
+    {
+      "name": "lot_d_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_d": 1,
+        "assign_housing_d": 1
+      },
+      "meaning": "批次D最多用于一个订单"
+    },
+    {
+      "name": "lot_e_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_e": 1,
+        "assign_housing_e": 1
+      },
+      "meaning": "批次E最多用于一个订单"
+    },
+    {
+      "name": "lot_f_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_frame_f": 1,
+        "assign_housing_f": 1
+      },
+      "meaning": "批次F最多用于一个订单"
+    }
+  ],
+  "action_projection": [
+    "assign_frame_a",
+    "assign_frame_b",
+    "assign_frame_c",
+    "assign_frame_d",
+    "assign_frame_e",
+    "assign_frame_f",
+    "assign_housing_a",
+    "assign_housing_b",
+    "assign_housing_c",
+    "assign_housing_d",
+    "assign_housing_e",
+    "assign_housing_f"
+  ]
+}

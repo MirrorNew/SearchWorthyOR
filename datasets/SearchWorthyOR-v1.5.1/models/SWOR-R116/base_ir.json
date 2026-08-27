@@ -1,0 +1,109 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R116",
+  "variant": "base",
+  "family": "healthcare_resources",
+  "source_candidate_id": "CMS-RHC-FQHC-CY2026-TELEHEALTH-DATES",
+  "variables": [
+    {
+      "name": "schedule_atlas_audio",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排Atlas非行为健康audio-only就诊批次"
+    },
+    {
+      "name": "schedule_birch_mental",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排Birch居家心理健康音视频就诊批次"
+    },
+    {
+      "name": "schedule_cedar_incident",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排Cedar协作服务批次，监督者仅通过实时音频参与"
+    },
+    {
+      "name": "schedule_delta_incident",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排Delta协作服务批次，监督者通过实时音视频参与"
+    },
+    {
+      "name": "deploy_audio_platform",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "部署Atlas与Cedar共用的实时音频平台"
+    },
+    {
+      "name": "deploy_av_platform",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "部署Birch与Delta共用的实时音视频平台"
+    },
+    {
+      "name": "staff_cedar_onsite",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为Cedar配置现场监督执业者"
+    },
+    {
+      "name": "staff_mental_visit",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为Birch配置同期面诊资源"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "schedule_atlas_audio": 63,
+      "schedule_birch_mental": 61,
+      "schedule_cedar_incident": 59,
+      "schedule_delta_incident": 57,
+      "deploy_audio_platform": 45,
+      "deploy_av_platform": 39,
+      "staff_cedar_onsite": 37,
+      "staff_mental_visit": 43
+    },
+    "meaning": "所选5项动作的总医疗服务价值点",
+    "unit": "医疗服务价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_required_number",
+      "sense": "=",
+      "rhs": 5,
+      "coefficients": {
+        "schedule_atlas_audio": 1,
+        "schedule_birch_mental": 1,
+        "schedule_cedar_incident": 1,
+        "schedule_delta_incident": 1,
+        "deploy_audio_platform": 1,
+        "deploy_av_platform": 1,
+        "staff_cedar_onsite": 1,
+        "staff_mental_visit": 1
+      },
+      "meaning": "恰好选择5项动作"
+    }
+  ],
+  "action_projection": [
+    "schedule_atlas_audio",
+    "schedule_birch_mental",
+    "schedule_cedar_incident",
+    "schedule_delta_incident",
+    "deploy_audio_platform",
+    "deploy_av_platform",
+    "staff_cedar_onsite",
+    "staff_mental_visit"
+  ]
+}

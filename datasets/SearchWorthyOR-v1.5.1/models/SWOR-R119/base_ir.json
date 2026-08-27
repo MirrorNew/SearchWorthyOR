@@ -1,0 +1,126 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R119",
+  "variant": "base",
+  "family": "telecom_service",
+  "source_candidate_id": "LOW-D4-R119-FCC-CPN-PRIVACY-TELEMARKETING",
+  "variables": [
+    {
+      "name": "ordinary_private",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "承载拨打*67的普通州际SS7住宅呼叫"
+    },
+    {
+      "name": "collect_ani",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "承载由被叫方付费且被叫方订购ANI/计费号码服务的州际呼叫"
+    },
+    {
+      "name": "emergency_911",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "承载拨打公共机构911紧急线路的呼叫"
+    },
+    {
+      "name": "telemarketing",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "承载营利商家的电话营销呼叫"
+    },
+    {
+      "name": "honor_privacy",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "识别隐私指示且不向被叫方传递或揭示主叫号码与姓名"
+    },
+    {
+      "name": "transmit_assigned",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不作隐私阻断并传输分配给主叫方的CPN或ANI"
+    },
+    {
+      "name": "transmit_seller_service",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "传输所代表卖方名称及可在营业时间接收拒接请求的客服号码"
+    },
+    {
+      "name": "law_enforcement_secure",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "仅依执法机关指示安全披露受限CPN并执行调查访问控制"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "ordinary_private": 80,
+      "collect_ani": 76,
+      "emergency_911": 70,
+      "telemarketing": 85,
+      "honor_privacy": 0,
+      "transmit_assigned": -4,
+      "transmit_seller_service": -3,
+      "law_enforcement_secure": -6
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "主叫信息服务净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_call",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "ordinary_private": 1,
+        "collect_ani": 1,
+        "emergency_911": 1,
+        "telemarketing": 1
+      },
+      "meaning": "选择一种呼叫业务"
+    },
+    {
+      "name": "choose_policy",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "honor_privacy": 1,
+        "transmit_assigned": 1,
+        "transmit_seller_service": 1,
+        "law_enforcement_secure": 1
+      },
+      "meaning": "选择一种主叫信息策略"
+    },
+    {
+      "name": "law_enforcement_package_only_threat_case",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "law_enforcement_secure": 1
+      },
+      "meaning": "题中没有威胁呼叫调查，不采用执法披露包"
+    }
+  ],
+  "action_projection": [
+    "ordinary_private",
+    "collect_ani",
+    "emergency_911",
+    "telemarketing",
+    "honor_privacy",
+    "transmit_assigned",
+    "transmit_seller_service",
+    "law_enforcement_secure"
+  ]
+}

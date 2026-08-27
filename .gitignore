@@ -3,6 +3,7 @@ staging/
 .pytest_cache/
 **/__pycache__/
 *.py[cod]
+**/.env.local
 
 # Local execution logs
 reports/*.stdout.txt

@@ -1,0 +1,117 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R060",
+  "variant": "base",
+  "family": "telecom_service",
+  "source_candidate_id": "LOW-C2S-R060-FCC-TRS-SPEED",
+  "variables": [
+    {
+      "name": "voice100_70fast",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未增加能力时，传统TRS每100通中70通在10秒内立即接通的基准方案"
+    },
+    {
+      "name": "voice100_88fast",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未增加能力时，传统TRS每100通中88通在10秒内立即接通的基准方案"
+    },
+    {
+      "name": "vrs100_76in120",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未增加能力时，VRS每100通中76通在120秒内接通的基准方案"
+    },
+    {
+      "name": "vrs100_84in120",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未增加能力时，VRS每100通中84通在120秒内接通的基准方案"
+    },
+    {
+      "name": "no_capacity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不增加应答能力"
+    },
+    {
+      "name": "voice_queue_control",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置传统TRS专项应答能力包"
+    },
+    {
+      "name": "vrs_capacity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置VRS专项应答能力包"
+    },
+    {
+      "name": "full_crossservice_capacity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置跨业务完整应答能力包"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "voice100_70fast": 150,
+      "voice100_88fast": 142,
+      "vrs100_76in120": 168,
+      "vrs100_84in120": 158,
+      "no_capacity": 0,
+      "voice_queue_control": -12,
+      "vrs_capacity": -10,
+      "full_crossservice_capacity": -20
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "TRS服务净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_load",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "voice100_70fast": 1,
+        "voice100_88fast": 1,
+        "vrs100_76in120": 1,
+        "vrs100_84in120": 1
+      },
+      "meaning": "选择业务负载"
+    },
+    {
+      "name": "choose_capacity",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_capacity": 1,
+        "voice_queue_control": 1,
+        "vrs_capacity": 1,
+        "full_crossservice_capacity": 1
+      },
+      "meaning": "选择应答服务包"
+    }
+  ],
+  "action_projection": [
+    "voice100_70fast",
+    "voice100_88fast",
+    "vrs100_76in120",
+    "vrs100_84in120",
+    "no_capacity",
+    "voice_queue_control",
+    "vrs_capacity",
+    "full_crossservice_capacity"
+  ]
+}

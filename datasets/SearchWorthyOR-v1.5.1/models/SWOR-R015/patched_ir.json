@@ -1,0 +1,129 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R015",
+  "variant": "patched",
+  "family": "routing_transport",
+  "source_candidate_id": "LOW-C5-R015-FMCSA-PRETRIP-EQUIPMENT",
+  "variables": [
+    {
+      "name": "brake_defect_route",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排服务制动器已报告故障的车辆执行跨州路线A"
+    },
+    {
+      "name": "horn_defect_route",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排喇叭已报告故障的车辆执行跨州路线B"
+    },
+    {
+      "name": "all_good_route",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排所列部件均处于良好工作状态的车辆执行路线C"
+    },
+    {
+      "name": "no_repair",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不实施出车前维修"
+    },
+    {
+      "name": "repair_brakes",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "出车前修复制动器并确认良好"
+    },
+    {
+      "name": "repair_horn",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "出车前修复喇叭并确认良好"
+    },
+    {
+      "name": "full_repair",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "出车前实施完整部件维修包"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "brake_defect_route": 116,
+      "horn_defect_route": 115,
+      "all_good_route": 105,
+      "no_repair": 0,
+      "repair_brakes": -12,
+      "repair_horn": -7,
+      "full_repair": -18
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "运输任务净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_route",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "brake_defect_route": 1,
+        "horn_defect_route": 1,
+        "all_good_route": 1
+      },
+      "meaning": "选择车辆路线"
+    },
+    {
+      "name": "choose_repair",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_repair": 1,
+        "repair_brakes": 1,
+        "repair_horn": 1,
+        "full_repair": 1
+      },
+      "meaning": "选择出车前辅助维修服务"
+    },
+    {
+      "coefficients": {
+        "brake_defect_route": 1,
+        "repair_brakes": -1,
+        "full_repair": -1
+      },
+      "meaning": "制动器故障车辆需要制动器专项维修或完整部件维修包",
+      "name": "brake_defect_requires_brake_repair",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "horn_defect_route": 1,
+        "repair_horn": -1,
+        "full_repair": -1
+      },
+      "meaning": "喇叭故障车辆需要喇叭专项维修或完整部件维修包",
+      "name": "horn_defect_requires_horn_repair",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "action_projection": [
+    "brake_defect_route",
+    "horn_defect_route",
+    "all_good_route",
+    "no_repair",
+    "repair_brakes",
+    "repair_horn",
+    "full_repair"
+  ]
+}

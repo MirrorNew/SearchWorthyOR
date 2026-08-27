@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R108",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 78.0,
+  "patched_objective": 62.0,
+  "base_incumbent": {
+    "trained": 0,
+    "trainee_safe": 0,
+    "trainee_busy": 1,
+    "untrained": 0,
+    "independent": 1,
+    "direct_supervision_safe": 0,
+    "direct_supervision_busy": 0,
+    "shadow_only": 0
+  },
+  "patched_incumbent": {
+    "trained": 1,
+    "trainee_safe": 0,
+    "trainee_busy": 0,
+    "untrained": 0,
+    "independent": 1,
+    "direct_supervision_safe": 0,
+    "direct_supervision_busy": 0,
+    "shadow_only": 0
+  },
+  "base_feasible_assignment_count": 10,
+  "patched_feasible_assignment_count": 4,
+  "base_optimal_actions": [
+    {
+      "trained": 0,
+      "trainee_safe": 0,
+      "trainee_busy": 1,
+      "untrained": 0,
+      "independent": 1,
+      "direct_supervision_safe": 0,
+      "direct_supervision_busy": 0,
+      "shadow_only": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "trained": 1,
+      "trainee_safe": 0,
+      "trainee_busy": 0,
+      "untrained": 0,
+      "independent": 1,
+      "direct_supervision_safe": 0,
+      "direct_supervision_busy": 0,
+      "shadow_only": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "叉车任务净效用点",
+        "value": 62.0
+      },
+      {
+        "unit": "价值点",
+        "value": 62.0
+      },
+      {
+        "unit": "点",
+        "value": 62.0
+      }
+    ],
+    "canonical_unit": "叉车任务净效用点",
+    "canonical_value": 62.0
+  }
+}

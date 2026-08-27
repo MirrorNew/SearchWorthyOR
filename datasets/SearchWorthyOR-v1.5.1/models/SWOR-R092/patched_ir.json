@@ -1,0 +1,98 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R092",
+  "variant": "patched",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "SRCV3-R092-EPA-PCE-STAGGERED-SUPPLY-CHAIN-2026",
+  "variables": [
+    {
+      "name": "import_consumer_pce_spot_remover",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "进口消费者使用的去渍剂批次"
+    },
+    {
+      "name": "process_consumer_pce_adhesive",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "加工消费者使用的胶黏剂批次"
+    },
+    {
+      "name": "distribute_pce_to_retailers",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向零售商分销的非干洗用途溶剂批次"
+    },
+    {
+      "name": "manufacture_pce_drycleaning_solvent",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产仅用于持续干洗的溶剂批次"
+    },
+    {
+      "name": "manufacture_pce_aerospace_wcpp",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在题列工作场所控制下生产航空用途材料批次"
+    },
+    {
+      "name": "stock_nonpce_water_cleaner",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "备货水性清洁剂批次"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "import_consumer_pce_spot_remover": 100,
+      "process_consumer_pce_adhesive": 96,
+      "distribute_pce_to_retailers": 92,
+      "manufacture_pce_drycleaning_solvent": 88,
+      "manufacture_pce_aerospace_wcpp": 84,
+      "stock_nonpce_water_cleaner": 80
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "供应组合净收益点"
+  },
+  "constraints": [
+    {
+      "name": "select_three_supply_lots",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "import_consumer_pce_spot_remover": 1,
+        "process_consumer_pce_adhesive": 1,
+        "distribute_pce_to_retailers": 1,
+        "manufacture_pce_drycleaning_solvent": 1,
+        "manufacture_pce_aerospace_wcpp": 1,
+        "stock_nonpce_water_cleaner": 1
+      },
+      "meaning": "Select exactly three supply-chain lots"
+    },
+    {
+      "name": "pce_manufacturing_import_domain_on_august_4",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "import_consumer_pce_spot_remover": 1
+      },
+      "meaning": "pce manufacturing import domain on august 4"
+    }
+  ],
+  "action_projection": [
+    "import_consumer_pce_spot_remover",
+    "process_consumer_pce_adhesive",
+    "distribute_pce_to_retailers",
+    "manufacture_pce_drycleaning_solvent",
+    "manufacture_pce_aerospace_wcpp",
+    "stock_nonpce_water_cleaner"
+  ]
+}

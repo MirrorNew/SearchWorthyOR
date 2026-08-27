@@ -1,0 +1,69 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R093",
+  "variant": "base",
+  "family": "production_capacity",
+  "source_candidate_id": "A4-R093-FDA-COMPONENT-COA-ELIGIBILITY",
+  "variables": [
+    {
+      "name": "coa_no_identity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "仅凭供应商分析报告放行且不做身份试验"
+    },
+    {
+      "name": "validated_coa_identity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用已验证供应商报告并做身份试验"
+    },
+    {
+      "name": "full_internal_tests",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "全部属性由厂内试验"
+    },
+    {
+      "name": "unvalidated_coa_identity",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用未验证供应商报告但做身份试验"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "coa_no_identity": 24,
+      "validated_coa_identity": 20,
+      "full_internal_tests": 17,
+      "unvalidated_coa_identity": 22
+    },
+    "meaning": "Total decision value",
+    "unit": "来料放行净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_release_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "coa_no_identity": 1,
+        "validated_coa_identity": 1,
+        "full_internal_tests": 1,
+        "unvalidated_coa_identity": 1
+      },
+      "meaning": "Exactly one listed package must be selected"
+    }
+  ],
+  "action_projection": [
+    "coa_no_identity",
+    "validated_coa_identity",
+    "full_internal_tests",
+    "unvalidated_coa_identity"
+  ]
+}

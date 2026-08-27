@@ -1,0 +1,895 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R017",
+  "variant": "patched",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "SRCV3-R017-USCG-SLIDING-WATCH-REST-20260731",
+  "variables": [
+    {
+      "name": "a_watch_00_03",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排00:00-03:00值班A"
+    },
+    {
+      "name": "b_watch_03_06",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排03:00-06:00值班B"
+    },
+    {
+      "name": "c_watch_06_09",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排06:00-09:00值班C"
+    },
+    {
+      "name": "d_watch_09_12",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排09:00-12:00值班D"
+    },
+    {
+      "name": "e_watch_12_15",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排12:00-15:00值班E"
+    },
+    {
+      "name": "f_watch_15_18",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排15:00-18:00值班F"
+    },
+    {
+      "name": "g_watch_18_21",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排18:00-21:00值班G"
+    },
+    {
+      "name": "h_watch_21_24",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排21:00-24:00值班H"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "a_watch_00_03": 60,
+      "b_watch_03_06": 56,
+      "c_watch_06_09": 59,
+      "d_watch_09_12": 55,
+      "e_watch_12_15": 58,
+      "f_watch_15_18": 44,
+      "g_watch_18_21": 57,
+      "h_watch_21_24": 43
+    },
+    "meaning": "Total watch coverage value",
+    "unit": "覆盖价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_four_watch_blocks",
+      "sense": "=",
+      "rhs": 4,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "Select exactly four watch blocks"
+    },
+    {
+      "name": "retain_one_midnight_boundary_watch",
+      "sense": ">=",
+      "rhs": 1,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "Retain at least one midnight-boundary watch block"
+    },
+    {
+      "name": "ten_hours_rest_in_every_sliding_day",
+      "sense": "<=",
+      "rhs": 14,
+      "coefficients": {
+        "a_watch_00_03": 3,
+        "b_watch_03_06": 3,
+        "c_watch_06_09": 3,
+        "d_watch_09_12": 3,
+        "e_watch_12_15": 3,
+        "f_watch_15_18": 3,
+        "g_watch_18_21": 3,
+        "h_watch_21_24": 3
+      },
+      "meaning": "At least ten hours of rest remain in every sliding twenty-four-hour window"
+    },
+    {
+      "name": "seventy_seven_hours_rest_in_every_sliding_week",
+      "sense": "<=",
+      "rhs": 91,
+      "coefficients": {
+        "a_watch_00_03": 3,
+        "b_watch_03_06": 3,
+        "c_watch_06_09": 3,
+        "d_watch_09_12": 3,
+        "e_watch_12_15": 3,
+        "f_watch_15_18": 3,
+        "g_watch_18_21": 3,
+        "h_watch_21_24": 3
+      },
+      "meaning": "At least seventy-seven hours of rest remain in every sliding seven-day window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_01",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_02",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_03",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_04",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_05",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_06",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_07",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_08",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_09",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_10",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_11",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_12",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_13",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_14",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_15",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_16",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_17",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_18",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_19",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_20",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_21",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_22",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "c_watch_06_09": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_23",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_24",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_25",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_26",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_27",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_28",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_29",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_30",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_31",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_32",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_33",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_34",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_35",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_36",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_37",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_38",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_39",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_40",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_41",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_42",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_43",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_44",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_45",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_46",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_47",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_48",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_49",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_50",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "b_watch_03_06": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_51",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_52",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_53",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_54",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_55",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_56",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_57",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_58",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_59",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "c_watch_06_09": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_60",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_61",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    },
+    {
+      "name": "exclude_cross_boundary_rest_pattern_62",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "d_watch_09_12": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "This four-watch pattern violates the rest-period structure in at least one sliding twenty-four-hour window"
+    }
+  ],
+  "action_projection": [
+    "a_watch_00_03",
+    "b_watch_03_06",
+    "c_watch_06_09",
+    "d_watch_09_12",
+    "e_watch_12_15",
+    "f_watch_15_18",
+    "g_watch_18_21",
+    "h_watch_21_24"
+  ]
+}

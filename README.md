@@ -1,4 +1,16 @@
-# SearchWorthyOR-100
+# SearchWorthyOR
+
+## 最新版本：SearchWorthyOR V1.5.1
+
+V1.5.1 已发布在 [`datasets/SearchWorthyOR-v1.5.1/`](datasets/SearchWorthyOR-v1.5.1/README.md)：120 个源任务、240 个 C1/C2 case、120 个 `RETAIN` 与 120 个 `PATCH_CHANGES`，包含公开题面、scorer-only Gold、typed Patch、Base/Patched IR、求解结果、完整修复记录和验证报告。当前验证结果为 0 errors、0 public leakage findings。
+
+配套的五方法实验位于 [`experiments/20260827_searchworthyor_v151_five_baselines/`](experiments/20260827_searchworthyor_v151_five_baselines/README_zh.md)，覆盖 Direct/Chain1、Search-First/Chain2、CoE、OptiMUS 和 optiminer-training-free。实验矩阵为 `240 cases × 5 methods = 1200 instances`；Smoke 的 10 个实例已通过严格协议门禁。所有 LLM 请求锁定为 Shubiaobiao `gpt-5.6-luna / xhigh / temperature=1`，凭证不在仓库中。
+
+> **污染边界：** 本公开仓库包含 V1.5.1 的 scorer-only Gold 和模型审计材料。读取 `private/`、`models/` 或修复记录后，不得在同一批 case 上声称隐藏测试或无污染结果。运行 baseline 时仍必须只向模型提供规范的公开 `prompt_zh`。
+
+根目录原有的 `public/`、`private/`、`models/`、审计与实验文件保留为历史 SearchWorthyOR-100 候选审计版；V1.5.1 的规范入口是上述版本目录。
+
+## 历史版本：SearchWorthyOR-100
 
 SearchWorthyOR-100 是一个面向“检索增强运筹优化建模”的中文数据集。
 

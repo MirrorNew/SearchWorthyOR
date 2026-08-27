@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R091",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 126,
+  "base_objective": 361.0,
+  "base_incumbent": {
+    "load_aster": 1,
+    "load_beryl": 0,
+    "load_cinder": 1,
+    "load_dune": 1,
+    "load_ember": 0,
+    "load_flint": 0,
+    "load_grove": 1,
+    "load_harbor": 0,
+    "load_iris": 0
+  },
+  "base_optimal_actions": [
+    {
+      "load_aster": 1,
+      "load_beryl": 0,
+      "load_cinder": 1,
+      "load_dune": 1,
+      "load_ember": 0,
+      "load_flint": 0,
+      "load_grove": 1,
+      "load_harbor": 0,
+      "load_iris": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 29,
+  "patched_objective": 334.0,
+  "patched_incumbent": {
+    "load_aster": 1,
+    "load_beryl": 0,
+    "load_cinder": 1,
+    "load_dune": 0,
+    "load_ember": 0,
+    "load_flint": 1,
+    "load_grove": 1,
+    "load_harbor": 0,
+    "load_iris": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "load_aster": 1,
+      "load_beryl": 0,
+      "load_cinder": 1,
+      "load_dune": 0,
+      "load_ember": 0,
+      "load_flint": 1,
+      "load_grove": 1,
+      "load_harbor": 0,
+      "load_iris": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 334.0,
+    "canonical_unit": "运输贡献点",
+    "accepted_equivalents": [
+      {
+        "unit": "运输贡献点",
+        "value": 334.0
+      },
+      {
+        "unit": "点",
+        "value": 334.0
+      }
+    ]
+  }
+}

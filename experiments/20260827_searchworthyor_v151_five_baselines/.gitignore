@@ -1,0 +1,7 @@
+.env.local
+.pytest_cache/
+**/__pycache__/
+*.py[cod]
+private/
+preflight/
+runs/

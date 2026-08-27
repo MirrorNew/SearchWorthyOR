@@ -1,0 +1,288 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R027",
+  "variant": "patched",
+  "family": "finance_portfolio",
+  "source_candidate_id": "US-ECFR-SEC-RULE144A-QIB-BRANCHES-2026",
+  "variables": [
+    {
+      "name": "assign_ins_q1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q1 Rule 144A受限票据批次分配给保险公司账户I：酌情拥有并投资1.05亿美元非关联发行人证券"
+    },
+    {
+      "name": "assign_ins_q2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q2 Rule 144A受限票据批次分配给保险公司账户I：酌情拥有并投资1.05亿美元非关联发行人证券"
+    },
+    {
+      "name": "assign_ins_q3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q3 Rule 144A受限票据批次分配给保险公司账户I：酌情拥有并投资1.05亿美元非关联发行人证券"
+    },
+    {
+      "name": "assign_ins_r",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将R已注册公开票据批次分配给保险公司账户I：酌情拥有并投资1.05亿美元非关联发行人证券"
+    },
+    {
+      "name": "assign_dealer_q1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q1 Rule 144A受限票据批次分配给注册交易商账户D：酌情拥有并投资1200万美元非关联发行人证券"
+    },
+    {
+      "name": "assign_dealer_q2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q2 Rule 144A受限票据批次分配给注册交易商账户D：酌情拥有并投资1200万美元非关联发行人证券"
+    },
+    {
+      "name": "assign_dealer_q3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q3 Rule 144A受限票据批次分配给注册交易商账户D：酌情拥有并投资1200万美元非关联发行人证券"
+    },
+    {
+      "name": "assign_dealer_r",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将R已注册公开票据批次分配给注册交易商账户D：酌情拥有并投资1200万美元非关联发行人证券"
+    },
+    {
+      "name": "assign_bank30_q1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q1 Rule 144A受限票据批次分配给美国银行账户B30：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值3000万美元"
+    },
+    {
+      "name": "assign_bank30_q2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q2 Rule 144A受限票据批次分配给美国银行账户B30：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值3000万美元"
+    },
+    {
+      "name": "assign_bank30_q3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q3 Rule 144A受限票据批次分配给美国银行账户B30：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值3000万美元"
+    },
+    {
+      "name": "assign_bank30_r",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将R已注册公开票据批次分配给美国银行账户B30：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值3000万美元"
+    },
+    {
+      "name": "assign_bank20_q1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q1 Rule 144A受限票据批次分配给美国银行账户B20：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值2000万美元"
+    },
+    {
+      "name": "assign_bank20_q2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q2 Rule 144A受限票据批次分配给美国银行账户B20：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值2000万美元"
+    },
+    {
+      "name": "assign_bank20_q3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Q3 Rule 144A受限票据批次分配给美国银行账户B20：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值2000万美元"
+    },
+    {
+      "name": "assign_bank20_r",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将R已注册公开票据批次分配给美国银行账户B20：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值2000万美元"
+    }
+  ],
+  "objective": {
+    "sense": "min",
+    "constant": 0,
+    "coefficients": {
+      "assign_ins_q1": 34,
+      "assign_ins_q2": 22,
+      "assign_ins_q3": 32,
+      "assign_ins_r": 10,
+      "assign_dealer_q1": 6,
+      "assign_dealer_q2": 26,
+      "assign_dealer_q3": 31,
+      "assign_dealer_r": 5,
+      "assign_bank30_q1": 33,
+      "assign_bank30_q2": 7,
+      "assign_bank30_q3": 9,
+      "assign_bank30_r": 1,
+      "assign_bank20_q1": 37,
+      "assign_bank20_q2": 17,
+      "assign_bank20_q3": 36,
+      "assign_bank20_r": 27
+    },
+    "meaning": "四个票据批次分配的总执行负担",
+    "unit": "执行负担点"
+  },
+  "constraints": [
+    {
+      "name": "buyer_ins_one_lot",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ins_q1": 1,
+        "assign_ins_q2": 1,
+        "assign_ins_q3": 1,
+        "assign_ins_r": 1
+      },
+      "meaning": "保险公司账户I：酌情拥有并投资1.05亿美元非关联发行人证券恰好接收一个票据批次"
+    },
+    {
+      "name": "buyer_dealer_one_lot",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_dealer_q1": 1,
+        "assign_dealer_q2": 1,
+        "assign_dealer_q3": 1,
+        "assign_dealer_r": 1
+      },
+      "meaning": "注册交易商账户D：酌情拥有并投资1200万美元非关联发行人证券恰好接收一个票据批次"
+    },
+    {
+      "name": "buyer_bank30_one_lot",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_bank30_q1": 1,
+        "assign_bank30_q2": 1,
+        "assign_bank30_q3": 1,
+        "assign_bank30_r": 1
+      },
+      "meaning": "美国银行账户B30：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值3000万美元恰好接收一个票据批次"
+    },
+    {
+      "name": "buyer_bank20_one_lot",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_bank20_q1": 1,
+        "assign_bank20_q2": 1,
+        "assign_bank20_q3": 1,
+        "assign_bank20_r": 1
+      },
+      "meaning": "美国银行账户B20：酌情拥有并投资1.20亿美元非关联发行人证券，最近12个月内年度财务报表所示经审计净值2000万美元恰好接收一个票据批次"
+    },
+    {
+      "name": "lot_q1_one_buyer",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ins_q1": 1,
+        "assign_dealer_q1": 1,
+        "assign_bank30_q1": 1,
+        "assign_bank20_q1": 1
+      },
+      "meaning": "Q1 Rule 144A受限票据批次恰好分配给一个账户"
+    },
+    {
+      "name": "lot_q2_one_buyer",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ins_q2": 1,
+        "assign_dealer_q2": 1,
+        "assign_bank30_q2": 1,
+        "assign_bank20_q2": 1
+      },
+      "meaning": "Q2 Rule 144A受限票据批次恰好分配给一个账户"
+    },
+    {
+      "name": "lot_q3_one_buyer",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ins_q3": 1,
+        "assign_dealer_q3": 1,
+        "assign_bank30_q3": 1,
+        "assign_bank20_q3": 1
+      },
+      "meaning": "Q3 Rule 144A受限票据批次恰好分配给一个账户"
+    },
+    {
+      "name": "lot_r_one_buyer",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ins_r": 1,
+        "assign_dealer_r": 1,
+        "assign_bank30_r": 1,
+        "assign_bank20_r": 1
+      },
+      "meaning": "R已注册公开票据批次恰好分配给一个账户"
+    },
+    {
+      "name": "bank20_not_qib_for_q1",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "assign_bank20_q1": 1
+      },
+      "meaning": "B20不符合QIB银行分支，不能接收Q1 Rule 144A受限票据批次"
+    },
+    {
+      "name": "bank20_not_qib_for_q2",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "assign_bank20_q2": 1
+      },
+      "meaning": "B20不符合QIB银行分支，不能接收Q2 Rule 144A受限票据批次"
+    },
+    {
+      "name": "bank20_not_qib_for_q3",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "assign_bank20_q3": 1
+      },
+      "meaning": "B20不符合QIB银行分支，不能接收Q3 Rule 144A受限票据批次"
+    }
+  ],
+  "action_projection": [
+    "assign_ins_q1",
+    "assign_ins_q2",
+    "assign_ins_q3",
+    "assign_ins_r",
+    "assign_dealer_q1",
+    "assign_dealer_q2",
+    "assign_dealer_q3",
+    "assign_dealer_r",
+    "assign_bank30_q1",
+    "assign_bank30_q2",
+    "assign_bank30_q3",
+    "assign_bank30_r",
+    "assign_bank20_q1",
+    "assign_bank20_q2",
+    "assign_bank20_q3",
+    "assign_bank20_r"
+  ]
+}

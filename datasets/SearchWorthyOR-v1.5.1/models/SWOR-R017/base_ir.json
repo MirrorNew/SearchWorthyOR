@@ -1,0 +1,119 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R017",
+  "variant": "base",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "SRCV3-R017-USCG-SLIDING-WATCH-REST-20260731",
+  "variables": [
+    {
+      "name": "a_watch_00_03",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排00:00-03:00值班A"
+    },
+    {
+      "name": "b_watch_03_06",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排03:00-06:00值班B"
+    },
+    {
+      "name": "c_watch_06_09",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排06:00-09:00值班C"
+    },
+    {
+      "name": "d_watch_09_12",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排09:00-12:00值班D"
+    },
+    {
+      "name": "e_watch_12_15",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排12:00-15:00值班E"
+    },
+    {
+      "name": "f_watch_15_18",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排15:00-18:00值班F"
+    },
+    {
+      "name": "g_watch_18_21",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排18:00-21:00值班G"
+    },
+    {
+      "name": "h_watch_21_24",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排21:00-24:00值班H"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "a_watch_00_03": 60,
+      "b_watch_03_06": 56,
+      "c_watch_06_09": 59,
+      "d_watch_09_12": 55,
+      "e_watch_12_15": 58,
+      "f_watch_15_18": 44,
+      "g_watch_18_21": 57,
+      "h_watch_21_24": 43
+    },
+    "meaning": "Total watch coverage value",
+    "unit": "覆盖价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_four_watch_blocks",
+      "sense": "=",
+      "rhs": 4,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "b_watch_03_06": 1,
+        "c_watch_06_09": 1,
+        "d_watch_09_12": 1,
+        "e_watch_12_15": 1,
+        "f_watch_15_18": 1,
+        "g_watch_18_21": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "Select exactly four watch blocks"
+    },
+    {
+      "name": "retain_one_midnight_boundary_watch",
+      "sense": ">=",
+      "rhs": 1,
+      "coefficients": {
+        "a_watch_00_03": 1,
+        "h_watch_21_24": 1
+      },
+      "meaning": "Retain at least one midnight-boundary watch block"
+    }
+  ],
+  "action_projection": [
+    "a_watch_00_03",
+    "b_watch_03_06",
+    "c_watch_06_09",
+    "d_watch_09_12",
+    "e_watch_12_15",
+    "f_watch_15_18",
+    "g_watch_18_21",
+    "h_watch_21_24"
+  ]
+}

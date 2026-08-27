@@ -1,0 +1,306 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R058",
+  "variant": "base",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "US-FRA-CREW-SIZE-2024",
+  "variables": [
+    {
+      "name": "one_crew_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "A线采用一名乘务员"
+    },
+    {
+      "name": "two_crew_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "A线采用两名乘务员"
+    },
+    {
+      "name": "continue_path_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为A线提交既有运营延续申请"
+    },
+    {
+      "name": "special_approval_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为A线取得新增运营特别批准"
+    },
+    {
+      "name": "annual_report_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为A线提交首个年度安全报告"
+    },
+    {
+      "name": "one_crew_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "B线采用一名乘务员"
+    },
+    {
+      "name": "two_crew_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "B线采用两名乘务员"
+    },
+    {
+      "name": "continue_path_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为B线提交既有运营延续申请"
+    },
+    {
+      "name": "special_approval_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为B线取得新增运营特别批准"
+    },
+    {
+      "name": "annual_report_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为B线提交首个年度安全报告"
+    },
+    {
+      "name": "one_crew_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "C线采用一名乘务员"
+    },
+    {
+      "name": "two_crew_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "C线采用两名乘务员"
+    },
+    {
+      "name": "continue_path_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为C线提交既有运营延续申请"
+    },
+    {
+      "name": "special_approval_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为C线取得新增运营特别批准"
+    },
+    {
+      "name": "annual_report_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为C线提交首个年度安全报告"
+    }
+  ],
+  "objective": {
+    "sense": "min",
+    "constant": 0,
+    "coefficients": {
+      "one_crew_a": 1,
+      "two_crew_a": 8,
+      "continue_path_a": 3,
+      "special_approval_a": 3,
+      "annual_report_a": 2,
+      "one_crew_b": 1,
+      "two_crew_b": 7,
+      "continue_path_b": 3,
+      "special_approval_b": 3,
+      "annual_report_b": 2,
+      "one_crew_c": 1,
+      "two_crew_c": 5,
+      "continue_path_c": 3,
+      "special_approval_c": 3,
+      "annual_report_c": 2
+    },
+    "meaning": "三条线路乘务与后续动作总成本",
+    "unit": "成本点"
+  },
+  "constraints": [
+    {
+      "name": "one_crew_choice_a",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "one_crew_a": 1,
+        "two_crew_a": 1
+      },
+      "meaning": "A线恰选一种乘务人数"
+    },
+    {
+      "name": "continue_only_with_one_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "continue_path_a": 1,
+        "one_crew_a": -1
+      },
+      "meaning": "延续文件只随单人运营"
+    },
+    {
+      "name": "approval_only_with_one_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "special_approval_a": 1,
+        "one_crew_a": -1
+      },
+      "meaning": "特别批准只随单人运营"
+    },
+    {
+      "name": "report_only_with_one_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "annual_report_a": 1,
+        "one_crew_a": -1
+      },
+      "meaning": "年度报告只随单人运营"
+    },
+    {
+      "name": "one_admission_path_a",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "continue_path_a": 1,
+        "special_approval_a": 1
+      },
+      "meaning": "A线至多使用一种单人运营准入路径"
+    },
+    {
+      "name": "one_crew_choice_b",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "one_crew_b": 1,
+        "two_crew_b": 1
+      },
+      "meaning": "B线恰选一种乘务人数"
+    },
+    {
+      "name": "continue_only_with_one_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "continue_path_b": 1,
+        "one_crew_b": -1
+      },
+      "meaning": "延续文件只随单人运营"
+    },
+    {
+      "name": "approval_only_with_one_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "special_approval_b": 1,
+        "one_crew_b": -1
+      },
+      "meaning": "特别批准只随单人运营"
+    },
+    {
+      "name": "report_only_with_one_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "annual_report_b": 1,
+        "one_crew_b": -1
+      },
+      "meaning": "年度报告只随单人运营"
+    },
+    {
+      "name": "one_admission_path_b",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "continue_path_b": 1,
+        "special_approval_b": 1
+      },
+      "meaning": "B线至多使用一种单人运营准入路径"
+    },
+    {
+      "name": "one_crew_choice_c",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "one_crew_c": 1,
+        "two_crew_c": 1
+      },
+      "meaning": "C线恰选一种乘务人数"
+    },
+    {
+      "name": "continue_only_with_one_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "continue_path_c": 1,
+        "one_crew_c": -1
+      },
+      "meaning": "延续文件只随单人运营"
+    },
+    {
+      "name": "approval_only_with_one_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "special_approval_c": 1,
+        "one_crew_c": -1
+      },
+      "meaning": "特别批准只随单人运营"
+    },
+    {
+      "name": "report_only_with_one_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "annual_report_c": 1,
+        "one_crew_c": -1
+      },
+      "meaning": "年度报告只随单人运营"
+    },
+    {
+      "name": "one_admission_path_c",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "continue_path_c": 1,
+        "special_approval_c": 1
+      },
+      "meaning": "C线至多使用一种单人运营准入路径"
+    }
+  ],
+  "action_projection": [
+    "one_crew_a",
+    "two_crew_a",
+    "continue_path_a",
+    "special_approval_a",
+    "annual_report_a",
+    "one_crew_b",
+    "two_crew_b",
+    "continue_path_b",
+    "special_approval_b",
+    "annual_report_b",
+    "one_crew_c",
+    "two_crew_c",
+    "continue_path_c",
+    "special_approval_c",
+    "annual_report_c"
+  ]
+}

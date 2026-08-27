@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R118",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 16.0,
+  "patched_objective": 13.0,
+  "base_incumbent": {
+    "growth_fund": 1,
+    "bond_fund": 0,
+    "remit_day6": 0,
+    "remit_day9": 1,
+    "balanced_fund": 0,
+    "capital_preservation_fund": 0,
+    "remit_day4": 0,
+    "remit_day7": 0
+  },
+  "patched_incumbent": {
+    "growth_fund": 1,
+    "bond_fund": 0,
+    "remit_day6": 0,
+    "remit_day9": 0,
+    "balanced_fund": 0,
+    "capital_preservation_fund": 0,
+    "remit_day4": 0,
+    "remit_day7": 1
+  },
+  "base_feasible_assignment_count": 16,
+  "patched_feasible_assignment_count": 12,
+  "base_optimal_actions": [
+    {
+      "growth_fund": 1,
+      "bond_fund": 0,
+      "remit_day6": 0,
+      "remit_day9": 1,
+      "balanced_fund": 0,
+      "capital_preservation_fund": 0,
+      "remit_day4": 0,
+      "remit_day7": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "growth_fund": 1,
+      "bond_fund": 0,
+      "remit_day6": 0,
+      "remit_day9": 0,
+      "balanced_fund": 0,
+      "capital_preservation_fund": 0,
+      "remit_day4": 0,
+      "remit_day7": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "配置效用点",
+        "value": 13.0
+      },
+      {
+        "unit": "价值点",
+        "value": 13.0
+      },
+      {
+        "unit": "点",
+        "value": 13.0
+      }
+    ],
+    "canonical_unit": "配置效用点",
+    "canonical_value": 13.0
+  }
+}

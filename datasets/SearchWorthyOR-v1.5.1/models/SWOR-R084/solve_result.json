@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R084",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 187.0,
+  "patched_objective": 162.0,
+  "base_incumbent": {
+    "puncture_intact_paint_a": 1,
+    "ship_intact_paint_b": 0,
+    "puncture_leaking_lubricant_c": 1,
+    "hold_leaking_cleaner_d": 0,
+    "ship_intact_food_e": 0,
+    "sort_intact_adhesive_f": 0,
+    "compliant_puncture_cell": 0,
+    "closed_absorbent_overpack": 0
+  },
+  "patched_incumbent": {
+    "puncture_intact_paint_a": 1,
+    "ship_intact_paint_b": 0,
+    "puncture_leaking_lubricant_c": 1,
+    "hold_leaking_cleaner_d": 0,
+    "ship_intact_food_e": 0,
+    "sort_intact_adhesive_f": 0,
+    "compliant_puncture_cell": 1,
+    "closed_absorbent_overpack": 0
+  },
+  "base_feasible_assignment_count": 39,
+  "patched_feasible_assignment_count": 19,
+  "base_optimal_actions": [
+    {
+      "puncture_intact_paint_a": 1,
+      "ship_intact_paint_b": 0,
+      "puncture_leaking_lubricant_c": 1,
+      "hold_leaking_cleaner_d": 0,
+      "ship_intact_food_e": 0,
+      "sort_intact_adhesive_f": 0,
+      "compliant_puncture_cell": 0,
+      "closed_absorbent_overpack": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "puncture_intact_paint_a": 1,
+      "ship_intact_paint_b": 0,
+      "puncture_leaking_lubricant_c": 1,
+      "hold_leaking_cleaner_d": 0,
+      "ship_intact_food_e": 0,
+      "sort_intact_adhesive_f": 0,
+      "compliant_puncture_cell": 1,
+      "closed_absorbent_overpack": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "资源回收贡献点",
+        "value": 162.0
+      },
+      {
+        "unit": "价值点",
+        "value": 162.0
+      },
+      {
+        "unit": "点",
+        "value": 162.0
+      }
+    ],
+    "canonical_unit": "资源回收贡献点",
+    "canonical_value": 162.0
+  }
+}

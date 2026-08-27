@@ -1,0 +1,64 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R064",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 15,
+  "base_objective": 45.0,
+  "base_incumbent": {
+    "select_trip_a": 1,
+    "select_trip_b": 1,
+    "select_trip_c": 0,
+    "select_trip_d": 0,
+    "select_trip_e": 0,
+    "select_trip_f": 0
+  },
+  "base_optimal_actions": [
+    {
+      "select_trip_a": 1,
+      "select_trip_b": 1,
+      "select_trip_c": 0,
+      "select_trip_d": 0,
+      "select_trip_e": 0,
+      "select_trip_f": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 6,
+  "patched_objective": 41.0,
+  "patched_incumbent": {
+    "select_trip_a": 0,
+    "select_trip_b": 0,
+    "select_trip_c": 1,
+    "select_trip_d": 1,
+    "select_trip_e": 0,
+    "select_trip_f": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "select_trip_a": 0,
+      "select_trip_b": 0,
+      "select_trip_c": 1,
+      "select_trip_d": 1,
+      "select_trip_e": 0,
+      "select_trip_f": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 41.0,
+    "canonical_unit": "收益点",
+    "accepted_equivalents": [
+      {
+        "unit": "收益点",
+        "value": 41.0
+      },
+      {
+        "unit": "点",
+        "value": 41.0
+      }
+    ]
+  }
+}

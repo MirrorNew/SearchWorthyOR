@@ -1,0 +1,88 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R041",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 24,
+  "base_objective": 3.0,
+  "base_incumbent": {
+    "assign_F1_A": 0,
+    "assign_F1_B": 0,
+    "assign_F1_C": 1,
+    "assign_F1_D": 0,
+    "assign_F2_A": 1,
+    "assign_F2_B": 0,
+    "assign_F2_C": 0,
+    "assign_F2_D": 0,
+    "assign_F3_A": 0,
+    "assign_F3_B": 0,
+    "assign_F3_C": 0,
+    "assign_F3_D": 1
+  },
+  "base_optimal_actions": [
+    {
+      "assign_F1_A": 0,
+      "assign_F1_B": 0,
+      "assign_F1_C": 1,
+      "assign_F1_D": 0,
+      "assign_F2_A": 1,
+      "assign_F2_B": 0,
+      "assign_F2_C": 0,
+      "assign_F2_D": 0,
+      "assign_F3_A": 0,
+      "assign_F3_B": 0,
+      "assign_F3_C": 0,
+      "assign_F3_D": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 4,
+  "patched_objective": 5.0,
+  "patched_incumbent": {
+    "assign_F1_A": 1,
+    "assign_F1_B": 0,
+    "assign_F1_C": 0,
+    "assign_F1_D": 0,
+    "assign_F2_A": 0,
+    "assign_F2_B": 0,
+    "assign_F2_C": 1,
+    "assign_F2_D": 0,
+    "assign_F3_A": 0,
+    "assign_F3_B": 0,
+    "assign_F3_C": 0,
+    "assign_F3_D": 1
+  },
+  "patched_optimal_actions": [
+    {
+      "assign_F1_A": 1,
+      "assign_F1_B": 0,
+      "assign_F1_C": 0,
+      "assign_F1_D": 0,
+      "assign_F2_A": 0,
+      "assign_F2_B": 0,
+      "assign_F2_C": 1,
+      "assign_F2_D": 0,
+      "assign_F3_A": 0,
+      "assign_F3_B": 0,
+      "assign_F3_C": 0,
+      "assign_F3_D": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 5.0,
+    "canonical_unit": "成本点",
+    "accepted_equivalents": [
+      {
+        "unit": "成本点",
+        "value": 5.0
+      },
+      {
+        "unit": "点",
+        "value": 5.0
+      }
+    ]
+  }
+}

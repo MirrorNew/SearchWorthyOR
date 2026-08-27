@@ -1,0 +1,141 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R106",
+  "variant": "patched",
+  "family": "production_capacity",
+  "source_candidate_id": "LOW-D2-R106-EPA-GASOLINE-SULFUR",
+  "variables": [
+    {
+      "name": "avg12_peak70",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产平均硫12 ppm且设施出口峰值70 ppm的汽油计划A"
+    },
+    {
+      "name": "avg9_peak85",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产平均硫9 ppm且设施出口峰值85 ppm的汽油计划B"
+    },
+    {
+      "name": "avg8_peak75",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产平均硫8 ppm且设施出口峰值75 ppm的汽油计划C"
+    },
+    {
+      "name": "avg13_peak90",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产平均硫13 ppm且设施出口峰值90 ppm的汽油计划D"
+    },
+    {
+      "name": "none",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不增加硫控制处理"
+    },
+    {
+      "name": "average_blend",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用平均值调和包使平均硫降至10 ppm"
+    },
+    {
+      "name": "peak_reprocess",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用峰值返工包使出口峰值降至80 ppm"
+    },
+    {
+      "name": "combined_control",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用联合调和返工包使平均值与峰值分别降至10和80 ppm"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "avg12_peak70": 90,
+      "avg9_peak85": 88,
+      "avg8_peak75": 78,
+      "avg13_peak90": 96,
+      "none": 0,
+      "average_blend": -8,
+      "peak_reprocess": -6,
+      "combined_control": -12
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "炼制净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_plan",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "avg12_peak70": 1,
+        "avg9_peak85": 1,
+        "avg8_peak75": 1,
+        "avg13_peak90": 1
+      },
+      "meaning": "选择一个汽油生产计划"
+    },
+    {
+      "name": "choose_control",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "none": 1,
+        "average_blend": 1,
+        "peak_reprocess": 1,
+        "combined_control": 1
+      },
+      "meaning": "选择一个硫控制包"
+    },
+    {
+      "name": "average_noncompliance_needs_average_control",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "avg12_peak70": 1,
+        "avg13_peak90": 1,
+        "average_blend": -1,
+        "combined_control": -1
+      },
+      "meaning": "平均值超标计划须使用平均控制或联合控制"
+    },
+    {
+      "name": "peak_noncompliance_needs_peak_control",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "avg9_peak85": 1,
+        "avg13_peak90": 1,
+        "peak_reprocess": -1,
+        "combined_control": -1
+      },
+      "meaning": "出口峰值超标计划须使用峰值控制或联合控制"
+    }
+  ],
+  "action_projection": [
+    "avg12_peak70",
+    "avg9_peak85",
+    "avg8_peak75",
+    "avg13_peak90",
+    "none",
+    "average_blend",
+    "peak_reprocess",
+    "combined_control"
+  ]
+}

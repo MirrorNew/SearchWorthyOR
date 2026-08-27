@@ -1,0 +1,150 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R087",
+  "variant": "base",
+  "family": "finance_portfolio",
+  "source_candidate_id": "EU-RUSSIA-21ST-SANCTIONS-FINANCIAL-ENTITIES-20260723",
+  "variables": [
+    {
+      "name": "select_eco_islamic",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在CJSC Eco-Islamic Bank办理短期存款"
+    },
+    {
+      "name": "select_chinggis",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在Chinggis Khaan Bank办理短期存款"
+    },
+    {
+      "name": "select_sberbank_india",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在Sberbank India办理短期存款"
+    },
+    {
+      "name": "select_pilotfinance",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过PilotFinance Ltd配置支付服务余额"
+    },
+    {
+      "name": "select_rapira",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过Rapira配置数字资产结算余额"
+    },
+    {
+      "name": "select_aifory",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过Aifory Pro（Sooty Ltd.）配置数字资产结算余额"
+    },
+    {
+      "name": "select_yelo",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在Yelo Bank办理短期存款"
+    },
+    {
+      "name": "select_german_bill",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置德国短期国库券"
+    },
+    {
+      "name": "select_dutch_bill",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置荷兰短期国库券"
+    },
+    {
+      "name": "select_french_bill",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置法国短期国库券"
+    },
+    {
+      "name": "select_cash_reserve",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "保留欧元现金头寸"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_eco_islamic": 16,
+      "select_chinggis": 15,
+      "select_sberbank_india": 14,
+      "select_pilotfinance": 13,
+      "select_rapira": 12,
+      "select_aifory": 11,
+      "select_yelo": 10,
+      "select_german_bill": 9,
+      "select_dutch_bill": 8,
+      "select_french_bill": 7,
+      "select_cash_reserve": 6
+    },
+    "meaning": "四个头寸的预期净收益",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "select_four_positions",
+      "sense": "=",
+      "rhs": 4,
+      "coefficients": {
+        "select_eco_islamic": 1,
+        "select_chinggis": 1,
+        "select_sberbank_india": 1,
+        "select_pilotfinance": 1,
+        "select_rapira": 1,
+        "select_aifory": 1,
+        "select_yelo": 1,
+        "select_german_bill": 1,
+        "select_dutch_bill": 1,
+        "select_french_bill": 1,
+        "select_cash_reserve": 1
+      },
+      "meaning": "资金经理恰好选择四个头寸"
+    },
+    {
+      "name": "platform_exposure_limit",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "select_pilotfinance": 1,
+        "select_rapira": 1,
+        "select_aifory": 1
+      },
+      "meaning": "数字资产或支付服务平台头寸至多选择两个"
+    }
+  ],
+  "action_projection": [
+    "select_eco_islamic",
+    "select_chinggis",
+    "select_sberbank_india",
+    "select_pilotfinance",
+    "select_rapira",
+    "select_aifory",
+    "select_yelo",
+    "select_german_bill",
+    "select_dutch_bill",
+    "select_french_bill",
+    "select_cash_reserve"
+  ]
+}

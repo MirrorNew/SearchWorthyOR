@@ -1,0 +1,319 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R083",
+  "variant": "patched",
+  "family": "energy_environment",
+  "source_candidate_id": "EPA-RCRA-SECOND-EPISODIC-EVENT-AUXILIARY-2026",
+  "variables": [
+    {
+      "name": "p1_tank_clean",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P1中执行储罐清洗项目"
+    },
+    {
+      "name": "p1_lab_pack",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P1中执行实验室包装项目"
+    },
+    {
+      "name": "p1_filter_change",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P1中执行过滤介质更换项目"
+    },
+    {
+      "name": "u_spill_soil",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在非计划事件U中执行泄漏土壤处置项目"
+    },
+    {
+      "name": "u_damaged_drum",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在非计划事件U中执行破损容器转运项目"
+    },
+    {
+      "name": "u_washwater",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在非计划事件U中执行应急洗消水处置项目"
+    },
+    {
+      "name": "p2_inventory",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P2中执行过期库存清理项目"
+    },
+    {
+      "name": "p2_line_flush",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P2中执行产线冲洗项目"
+    },
+    {
+      "name": "p2_absorbent",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在计划事件P2中执行吸附材料清理项目"
+    },
+    {
+      "name": "event_p1_active",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "至少选择一个p1事件项目"
+    },
+    {
+      "name": "event_u_active",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "至少选择一个u事件项目"
+    },
+    {
+      "name": "event_p2_active",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "至少选择一个p2事件项目"
+    },
+    {
+      "name": "second_event_petition",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为年度第二个episodic event办理petition"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "p1_tank_clean": 100,
+      "p1_lab_pack": 98,
+      "p1_filter_change": 70,
+      "u_spill_soil": 80,
+      "u_damaged_drum": 79,
+      "u_washwater": 78,
+      "p2_inventory": 99,
+      "p2_line_flush": 97,
+      "p2_absorbent": 69,
+      "second_event_petition": -20
+    },
+    "meaning": "所选动作的总环境项目净价值点",
+    "unit": "环境项目净价值点"
+  },
+  "constraints": [
+    {
+      "name": "project_count",
+      "sense": "=",
+      "rhs": 4,
+      "coefficients": {
+        "p1_tank_clean": 1,
+        "p1_lab_pack": 1,
+        "p1_filter_change": 1,
+        "u_spill_soil": 1,
+        "u_damaged_drum": 1,
+        "u_washwater": 1,
+        "p2_inventory": 1,
+        "p2_line_flush": 1,
+        "p2_absorbent": 1
+      },
+      "meaning": "恰好执行4个项目"
+    },
+    {
+      "name": "p1_tank_clean_activates_event_p1_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p1_tank_clean": 1,
+        "event_p1_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "p1_lab_pack_activates_event_p1_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p1_lab_pack": 1,
+        "event_p1_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "p1_filter_change_activates_event_p1_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p1_filter_change": 1,
+        "event_p1_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "event_p1_active_requires_project",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "event_p1_active": 1,
+        "p1_tank_clean": -1,
+        "p1_lab_pack": -1,
+        "p1_filter_change": -1
+      },
+      "meaning": "没有选择所属项目时不能激活事件"
+    },
+    {
+      "name": "u_spill_soil_activates_event_u_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "u_spill_soil": 1,
+        "event_u_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "u_damaged_drum_activates_event_u_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "u_damaged_drum": 1,
+        "event_u_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "u_washwater_activates_event_u_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "u_washwater": 1,
+        "event_u_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "event_u_active_requires_project",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "event_u_active": 1,
+        "u_spill_soil": -1,
+        "u_damaged_drum": -1,
+        "u_washwater": -1
+      },
+      "meaning": "没有选择所属项目时不能激活事件"
+    },
+    {
+      "name": "p2_inventory_activates_event_p2_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p2_inventory": 1,
+        "event_p2_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "p2_line_flush_activates_event_p2_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p2_line_flush": 1,
+        "event_p2_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "p2_absorbent_activates_event_p2_active",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "p2_absorbent": 1,
+        "event_p2_active": -1
+      },
+      "meaning": "选择项目时激活其所属episodic event"
+    },
+    {
+      "name": "event_p2_active_requires_project",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "event_p2_active": 1,
+        "p2_inventory": -1,
+        "p2_line_flush": -1,
+        "p2_absorbent": -1
+      },
+      "meaning": "没有选择所属项目时不能激活事件"
+    },
+    {
+      "name": "one_event_without_petition",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "event_p1_active": 1,
+        "event_u_active": 1,
+        "event_p2_active": 1,
+        "second_event_petition": -1
+      },
+      "meaning": "超过一个事件时必须办理第二事件petition"
+    },
+    {
+      "name": "at_most_two_events",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "event_p1_active": 1,
+        "event_u_active": 1,
+        "event_p2_active": 1
+      },
+      "meaning": "年度route至多覆盖两个episodic event"
+    },
+    {
+      "name": "petition_requires_active_event",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "second_event_petition": 1,
+        "event_p1_active": -1,
+        "event_u_active": -1,
+        "event_p2_active": -1
+      },
+      "meaning": "没有激活事件时不能办理petition"
+    },
+    {
+      "name": "at_most_one_planned_event",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "event_p1_active": 1,
+        "event_p2_active": 1
+      },
+      "meaning": "第二事件存在时两个事件必须一计划一非计划"
+    }
+  ],
+  "action_projection": [
+    "p1_tank_clean",
+    "p1_lab_pack",
+    "p1_filter_change",
+    "u_spill_soil",
+    "u_damaged_drum",
+    "u_washwater",
+    "p2_inventory",
+    "p2_line_flush",
+    "p2_absorbent"
+  ]
+}

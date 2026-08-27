@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R083",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 126,
+  "base_objective": 394.0,
+  "base_incumbent": {
+    "p1_tank_clean": 1,
+    "p1_lab_pack": 1,
+    "p1_filter_change": 0,
+    "u_spill_soil": 0,
+    "u_damaged_drum": 0,
+    "u_washwater": 0,
+    "p2_inventory": 1,
+    "p2_line_flush": 1,
+    "p2_absorbent": 0
+  },
+  "base_optimal_actions": [
+    {
+      "p1_tank_clean": 1,
+      "p1_lab_pack": 1,
+      "p1_filter_change": 0,
+      "u_spill_soil": 0,
+      "u_damaged_drum": 0,
+      "u_washwater": 0,
+      "p2_inventory": 1,
+      "p2_line_flush": 1,
+      "p2_absorbent": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 30,
+  "patched_objective": 337.0,
+  "patched_incumbent": {
+    "p1_tank_clean": 1,
+    "p1_lab_pack": 1,
+    "p1_filter_change": 0,
+    "u_spill_soil": 1,
+    "u_damaged_drum": 1,
+    "u_washwater": 0,
+    "p2_inventory": 0,
+    "p2_line_flush": 0,
+    "p2_absorbent": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "p1_tank_clean": 1,
+      "p1_lab_pack": 1,
+      "p1_filter_change": 0,
+      "u_spill_soil": 1,
+      "u_damaged_drum": 1,
+      "u_washwater": 0,
+      "p2_inventory": 0,
+      "p2_line_flush": 0,
+      "p2_absorbent": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 337.0,
+    "canonical_unit": "环境项目净价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "环境项目净价值点",
+        "value": 337.0
+      },
+      {
+        "unit": "点",
+        "value": 337.0
+      }
+    ]
+  }
+}

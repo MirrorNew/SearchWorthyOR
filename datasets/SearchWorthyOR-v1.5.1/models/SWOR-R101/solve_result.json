@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R101",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 135.0,
+  "patched_objective": 118.0,
+  "base_incumbent": {
+    "job_a_weekly_cargo": 1,
+    "job_b_no_weekly_cargo": 0,
+    "job_c_weekly_cargo": 0,
+    "job_d_no_weekly_cargo": 0,
+    "passenger_aircraft": 1,
+    "cargo_only_aircraft": 0,
+    "ordinary_cylinder_handling": 1,
+    "blanket_and_notification_handling": 0
+  },
+  "patched_incumbent": {
+    "job_a_weekly_cargo": 1,
+    "job_b_no_weekly_cargo": 0,
+    "job_c_weekly_cargo": 0,
+    "job_d_no_weekly_cargo": 0,
+    "passenger_aircraft": 0,
+    "cargo_only_aircraft": 1,
+    "ordinary_cylinder_handling": 0,
+    "blanket_and_notification_handling": 1
+  },
+  "base_feasible_assignment_count": 16,
+  "patched_feasible_assignment_count": 6,
+  "base_optimal_actions": [
+    {
+      "job_a_weekly_cargo": 1,
+      "job_b_no_weekly_cargo": 0,
+      "job_c_weekly_cargo": 0,
+      "job_d_no_weekly_cargo": 0,
+      "passenger_aircraft": 1,
+      "cargo_only_aircraft": 0,
+      "ordinary_cylinder_handling": 1,
+      "blanket_and_notification_handling": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "job_a_weekly_cargo": 1,
+      "job_b_no_weekly_cargo": 0,
+      "job_c_weekly_cargo": 0,
+      "job_d_no_weekly_cargo": 0,
+      "passenger_aircraft": 0,
+      "cargo_only_aircraft": 1,
+      "ordinary_cylinder_handling": 0,
+      "blanket_and_notification_handling": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "配送净效用点",
+        "value": 118.0
+      },
+      {
+        "unit": "价值点",
+        "value": 118.0
+      },
+      {
+        "unit": "点",
+        "value": 118.0
+      }
+    ],
+    "canonical_unit": "配送净效用点",
+    "canonical_value": 118.0
+  }
+}

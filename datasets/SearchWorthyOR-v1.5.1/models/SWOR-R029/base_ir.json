@@ -1,0 +1,177 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R029",
+  "variant": "base",
+  "family": "healthcare_resources",
+  "source_candidate_id": "SRCV3-R029-HSA-EPHARMACY-CLOSED-LOOP-CONTROLLED-DRUG",
+  "variables": [
+    {
+      "name": "pom_a_closed_home",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单A采用路径1"
+    },
+    {
+      "name": "pom_a_pdf_home",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单A采用路径2"
+    },
+    {
+      "name": "pmed_b_closed_home",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单B采用路径1"
+    },
+    {
+      "name": "pmed_b_pdf_home",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单B采用路径2"
+    },
+    {
+      "name": "controlled_c_ehome",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单C采用路径1"
+    },
+    {
+      "name": "controlled_c_counter",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单C采用路径2"
+    },
+    {
+      "name": "pom_d_closed_counter",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单D采用路径1"
+    },
+    {
+      "name": "pom_d_pdf_counter",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "订单D采用路径2"
+    },
+    {
+      "name": "activate_closed_loop_assurance",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "运行共享闭环处方保障服务"
+    },
+    {
+      "name": "activate_secure_delivery",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "运行共享安全到家配送服务"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "pom_a_closed_home": 23,
+      "pom_a_pdf_home": 28,
+      "pmed_b_closed_home": 22,
+      "pmed_b_pdf_home": 27,
+      "controlled_c_ehome": 29,
+      "controlled_c_counter": 18,
+      "pom_d_closed_counter": 21,
+      "pom_d_pdf_counter": 26,
+      "activate_closed_loop_assurance": -6,
+      "activate_secure_delivery": -8
+    },
+    "meaning": "Total fulfilment value net of shared channel-service operating costs",
+    "unit": "净履约价值点"
+  },
+  "constraints": [
+    {
+      "name": "one_a_fulfilment",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "pom_a_closed_home": 1,
+        "pom_a_pdf_home": 1
+      },
+      "meaning": "Choose one fulfilment for POM order A"
+    },
+    {
+      "name": "one_b_fulfilment",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "pmed_b_closed_home": 1,
+        "pmed_b_pdf_home": 1
+      },
+      "meaning": "Choose one fulfilment for pharmacy-medicine order B"
+    },
+    {
+      "name": "one_c_fulfilment",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "controlled_c_ehome": 1,
+        "controlled_c_counter": 1
+      },
+      "meaning": "Choose one fulfilment for controlled-drug order C"
+    },
+    {
+      "name": "one_d_fulfilment",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "pom_d_closed_counter": 1,
+        "pom_d_pdf_counter": 1
+      },
+      "meaning": "Choose one fulfilment for POM order D"
+    },
+    {
+      "name": "closed_loop_service_only_with_closed_orders",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "activate_closed_loop_assurance": 1,
+        "pom_a_closed_home": -1,
+        "pmed_b_closed_home": -1,
+        "pom_d_closed_counter": -1
+      },
+      "meaning": "The shared closed-loop service is operated only when a closed-loop order is selected"
+    },
+    {
+      "name": "delivery_service_only_with_home_orders",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "activate_secure_delivery": 1,
+        "pom_a_closed_home": -1,
+        "pmed_b_closed_home": -1,
+        "pom_a_pdf_home": -1,
+        "pmed_b_pdf_home": -1,
+        "controlled_c_ehome": -1
+      },
+      "meaning": "The shared delivery service is operated only with home delivery"
+    }
+  ],
+  "action_projection": [
+    "pom_a_closed_home",
+    "pom_a_pdf_home",
+    "pmed_b_closed_home",
+    "pmed_b_pdf_home",
+    "controlled_c_ehome",
+    "controlled_c_counter",
+    "pom_d_closed_counter",
+    "pom_d_pdf_counter",
+    "activate_closed_loop_assurance",
+    "activate_secure_delivery"
+  ]
+}

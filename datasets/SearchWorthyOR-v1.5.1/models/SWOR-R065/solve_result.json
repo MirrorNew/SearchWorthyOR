@@ -1,0 +1,88 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R065",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 43.0,
+  "patched_objective": 37.0,
+  "base_incumbent": {
+    "select_colorado": 1,
+    "select_new_mexico": 1,
+    "select_montana": 0,
+    "select_arizona": 0,
+    "select_texas": 0,
+    "select_louisiana": 0,
+    "hq_team_colorado": 0,
+    "hq_team_new_mexico": 0,
+    "hq_team_montana": 0,
+    "hq_team_arizona": 0,
+    "hq_team_texas": 0,
+    "hq_team_louisiana": 0
+  },
+  "patched_incumbent": {
+    "select_colorado": 0,
+    "select_new_mexico": 0,
+    "select_montana": 0,
+    "select_arizona": 1,
+    "select_texas": 1,
+    "select_louisiana": 0,
+    "hq_team_colorado": 0,
+    "hq_team_new_mexico": 0,
+    "hq_team_montana": 0,
+    "hq_team_arizona": 0,
+    "hq_team_texas": 0,
+    "hq_team_louisiana": 0
+  },
+  "base_feasible_assignment_count": 60,
+  "patched_feasible_assignment_count": 33,
+  "base_optimal_actions": [
+    {
+      "select_colorado": 1,
+      "select_new_mexico": 1,
+      "select_montana": 0,
+      "select_arizona": 0,
+      "select_texas": 0,
+      "select_louisiana": 0,
+      "hq_team_colorado": 0,
+      "hq_team_new_mexico": 0,
+      "hq_team_montana": 0,
+      "hq_team_arizona": 0,
+      "hq_team_texas": 0,
+      "hq_team_louisiana": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "select_colorado": 0,
+      "select_new_mexico": 0,
+      "select_montana": 0,
+      "select_arizona": 1,
+      "select_texas": 1,
+      "select_louisiana": 0,
+      "hq_team_colorado": 0,
+      "hq_team_new_mexico": 0,
+      "hq_team_montana": 0,
+      "hq_team_arizona": 0,
+      "hq_team_texas": 0,
+      "hq_team_louisiana": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "收益点",
+        "value": 37.0
+      },
+      {
+        "unit": "点",
+        "value": 37.0
+      }
+    ],
+    "canonical_unit": "收益点",
+    "canonical_value": 37.0
+  }
+}

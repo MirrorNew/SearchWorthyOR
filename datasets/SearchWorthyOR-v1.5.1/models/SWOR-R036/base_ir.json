@@ -1,0 +1,89 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R036",
+  "variant": "base",
+  "family": "routing_transport",
+  "source_candidate_id": "SRCV3-R036-EU-FERRY-REST-INTERRUPTIONS-20260804",
+  "variables": [
+    {
+      "name": "plan_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受日常正常休息被两次各0.6小时打断的轮渡计划A"
+    },
+    {
+      "name": "plan_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受日常正常休息被两次各0.4小时打断且有卧铺的轮渡计划B"
+    },
+    {
+      "name": "plan_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受缩短周休被0.5小时和0.4小时打断且有客舱的轮渡计划C"
+    },
+    {
+      "name": "plan_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受航程7小时且有客舱的正常周休轮渡计划D"
+    },
+    {
+      "name": "plan_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受航程9小时但没有卧铺设施的正常周休轮渡计划E"
+    },
+    {
+      "name": "plan_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受航程9小时且有客舱的正常周休轮渡计划F"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "plan_a": 75,
+      "plan_b": 68,
+      "plan_c": 65,
+      "plan_d": 72,
+      "plan_e": 70,
+      "plan_f": 62
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "运输收益点"
+  },
+  "constraints": [
+    {
+      "name": "accept_exactly_two_ferry_route_rest_plans",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "plan_a": 1,
+        "plan_b": 1,
+        "plan_c": 1,
+        "plan_d": 1,
+        "plan_e": 1,
+        "plan_f": 1
+      },
+      "meaning": "Accept exactly two independent ferry route-rest plans"
+    }
+  ],
+  "action_projection": [
+    "plan_a",
+    "plan_b",
+    "plan_c",
+    "plan_d",
+    "plan_e",
+    "plan_f"
+  ]
+}

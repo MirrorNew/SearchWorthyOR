@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R100",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 24.0,
+  "patched_objective": 20.0,
+  "base_incumbent": {
+    "answer80": 1,
+    "answer85": 0,
+    "answer90": 0,
+    "answer75": 0
+  },
+  "patched_incumbent": {
+    "answer80": 0,
+    "answer85": 1,
+    "answer90": 0,
+    "answer75": 0
+  },
+  "base_feasible_assignment_count": 4,
+  "patched_feasible_assignment_count": 2,
+  "base_optimal_actions": [
+    {
+      "answer80": 1,
+      "answer85": 0,
+      "answer90": 0,
+      "answer75": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "answer80": 0,
+      "answer85": 1,
+      "answer90": 0,
+      "answer75": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "中继服务净效用点",
+        "value": 20.0
+      },
+      {
+        "unit": "价值点",
+        "value": 20.0
+      },
+      {
+        "unit": "点",
+        "value": 20.0
+      }
+    ],
+    "canonical_unit": "中继服务净效用点",
+    "canonical_value": 20.0
+  }
+}

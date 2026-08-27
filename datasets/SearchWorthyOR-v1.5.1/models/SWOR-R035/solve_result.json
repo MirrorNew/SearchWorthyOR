@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R035",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 234.0,
+  "patched_objective": 204.0,
+  "base_incumbent": {
+    "a_residue_drum": 1,
+    "b_cleaned_drum": 1,
+    "c_refilled_drum": 0,
+    "d_limited_quantity_residue": 0,
+    "e_div22_low_pressure": 0,
+    "f_anhydrous_ammonia": 1,
+    "g_unused_marked_package": 1,
+    "h_hazmat_transport_cell": 0
+  },
+  "patched_incumbent": {
+    "a_residue_drum": 1,
+    "b_cleaned_drum": 1,
+    "c_refilled_drum": 0,
+    "d_limited_quantity_residue": 0,
+    "e_div22_low_pressure": 0,
+    "f_anhydrous_ammonia": 1,
+    "g_unused_marked_package": 1,
+    "h_hazmat_transport_cell": 1
+  },
+  "base_feasible_assignment_count": 70,
+  "patched_feasible_assignment_count": 36,
+  "base_optimal_actions": [
+    {
+      "a_residue_drum": 1,
+      "b_cleaned_drum": 1,
+      "c_refilled_drum": 0,
+      "d_limited_quantity_residue": 0,
+      "e_div22_low_pressure": 0,
+      "f_anhydrous_ammonia": 1,
+      "g_unused_marked_package": 1,
+      "h_hazmat_transport_cell": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "a_residue_drum": 1,
+      "b_cleaned_drum": 1,
+      "c_refilled_drum": 0,
+      "d_limited_quantity_residue": 0,
+      "e_div22_low_pressure": 0,
+      "f_anhydrous_ammonia": 1,
+      "g_unused_marked_package": 1,
+      "h_hazmat_transport_cell": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "净路线价值点",
+        "value": 204.0
+      },
+      {
+        "unit": "净价值点",
+        "value": 204.0
+      },
+      {
+        "unit": "点",
+        "value": 204.0
+      }
+    ],
+    "canonical_unit": "净路线价值点",
+    "canonical_value": 204.0
+  }
+}

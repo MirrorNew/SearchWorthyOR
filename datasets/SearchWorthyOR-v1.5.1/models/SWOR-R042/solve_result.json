@@ -1,0 +1,100 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R042",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 60,
+  "base_objective": 61.0,
+  "base_incumbent": {
+    "assign_north_netgear": 1,
+    "assign_north_adtran": 0,
+    "assign_north_verizon": 0,
+    "assign_north_domestic": 0,
+    "assign_north_foreign": 0,
+    "assign_east_netgear": 0,
+    "assign_east_adtran": 1,
+    "assign_east_verizon": 0,
+    "assign_east_domestic": 0,
+    "assign_east_foreign": 0,
+    "assign_west_netgear": 0,
+    "assign_west_adtran": 0,
+    "assign_west_verizon": 0,
+    "assign_west_domestic": 0,
+    "assign_west_foreign": 1
+  },
+  "base_optimal_actions": [
+    {
+      "assign_north_netgear": 1,
+      "assign_north_adtran": 0,
+      "assign_north_verizon": 0,
+      "assign_north_domestic": 0,
+      "assign_north_foreign": 0,
+      "assign_east_netgear": 0,
+      "assign_east_adtran": 1,
+      "assign_east_verizon": 0,
+      "assign_east_domestic": 0,
+      "assign_east_foreign": 0,
+      "assign_west_netgear": 0,
+      "assign_west_adtran": 0,
+      "assign_west_verizon": 0,
+      "assign_west_domestic": 0,
+      "assign_west_foreign": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 12,
+  "patched_objective": 50.0,
+  "patched_incumbent": {
+    "assign_north_netgear": 1,
+    "assign_north_adtran": 0,
+    "assign_north_verizon": 0,
+    "assign_north_domestic": 0,
+    "assign_north_foreign": 0,
+    "assign_east_netgear": 0,
+    "assign_east_adtran": 0,
+    "assign_east_verizon": 1,
+    "assign_east_domestic": 0,
+    "assign_east_foreign": 0,
+    "assign_west_netgear": 0,
+    "assign_west_adtran": 0,
+    "assign_west_verizon": 0,
+    "assign_west_domestic": 1,
+    "assign_west_foreign": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "assign_north_netgear": 1,
+      "assign_north_adtran": 0,
+      "assign_north_verizon": 0,
+      "assign_north_domestic": 0,
+      "assign_north_foreign": 0,
+      "assign_east_netgear": 0,
+      "assign_east_adtran": 0,
+      "assign_east_verizon": 1,
+      "assign_east_domestic": 0,
+      "assign_east_foreign": 0,
+      "assign_west_netgear": 0,
+      "assign_west_adtran": 0,
+      "assign_west_verizon": 0,
+      "assign_west_domestic": 1,
+      "assign_west_foreign": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 50.0,
+    "canonical_unit": "效益点",
+    "accepted_equivalents": [
+      {
+        "unit": "效益点",
+        "value": 50.0
+      },
+      {
+        "unit": "点",
+        "value": 50.0
+      }
+    ]
+  }
+}

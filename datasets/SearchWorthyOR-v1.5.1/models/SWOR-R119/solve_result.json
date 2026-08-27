@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R119",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 85.0,
+  "patched_objective": 82.0,
+  "base_incumbent": {
+    "ordinary_private": 0,
+    "collect_ani": 0,
+    "emergency_911": 0,
+    "telemarketing": 1,
+    "honor_privacy": 1,
+    "transmit_assigned": 0,
+    "transmit_seller_service": 0,
+    "law_enforcement_secure": 0
+  },
+  "patched_incumbent": {
+    "ordinary_private": 0,
+    "collect_ani": 0,
+    "emergency_911": 0,
+    "telemarketing": 1,
+    "honor_privacy": 0,
+    "transmit_assigned": 0,
+    "transmit_seller_service": 1,
+    "law_enforcement_secure": 0
+  },
+  "base_feasible_assignment_count": 12,
+  "patched_feasible_assignment_count": 9,
+  "base_optimal_actions": [
+    {
+      "ordinary_private": 0,
+      "collect_ani": 0,
+      "emergency_911": 0,
+      "telemarketing": 1,
+      "honor_privacy": 1,
+      "transmit_assigned": 0,
+      "transmit_seller_service": 0,
+      "law_enforcement_secure": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "ordinary_private": 0,
+      "collect_ani": 0,
+      "emergency_911": 0,
+      "telemarketing": 1,
+      "honor_privacy": 0,
+      "transmit_assigned": 0,
+      "transmit_seller_service": 1,
+      "law_enforcement_secure": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "主叫信息服务净效用点",
+        "value": 82.0
+      },
+      {
+        "unit": "价值点",
+        "value": 82.0
+      },
+      {
+        "unit": "点",
+        "value": 82.0
+      }
+    ],
+    "canonical_unit": "主叫信息服务净效用点",
+    "canonical_value": 82.0
+  }
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R039",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 153.0,
+  "patched_objective": 135.0,
+  "base_incumbent": {
+    "fixed_voice": 1,
+    "mobile_voice": 1,
+    "personal_070": 0,
+    "fibre_data": 0,
+    "iot_data": 0,
+    "cloud_data": 0,
+    "interconnection_gateway": 0
+  },
+  "patched_incumbent": {
+    "fixed_voice": 0,
+    "mobile_voice": 0,
+    "personal_070": 0,
+    "fibre_data": 1,
+    "iot_data": 1,
+    "cloud_data": 0,
+    "interconnection_gateway": 0
+  },
+  "base_feasible_assignment_count": 30,
+  "patched_feasible_assignment_count": 18,
+  "base_optimal_actions": [
+    {
+      "fixed_voice": 1,
+      "mobile_voice": 1,
+      "personal_070": 0,
+      "fibre_data": 0,
+      "iot_data": 0,
+      "cloud_data": 0,
+      "interconnection_gateway": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "fixed_voice": 0,
+      "mobile_voice": 0,
+      "personal_070": 0,
+      "fibre_data": 1,
+      "iot_data": 1,
+      "cloud_data": 0,
+      "interconnection_gateway": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "净服务价值点",
+        "value": 135.0
+      },
+      {
+        "unit": "价值点",
+        "value": 135.0
+      },
+      {
+        "unit": "点",
+        "value": 135.0
+      }
+    ],
+    "canonical_unit": "净服务价值点",
+    "canonical_value": 135.0
+  }
+}

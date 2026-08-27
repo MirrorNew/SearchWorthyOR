@@ -1,0 +1,196 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R046",
+  "variant": "base",
+  "family": "facility_network",
+  "source_candidate_id": "US-ECFR-FDA-PRODUCE-SAFETY-SCOPE-2026",
+  "variables": [
+    {
+      "name": "select_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用A番茄种植与包装中心：若未同时启用D，则产品进入生鲜零售"
+    },
+    {
+      "name": "select_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用B酿酒葡萄种植与包装中心：若未同时启用E，则产品按鲜食葡萄销售"
+    },
+    {
+      "name": "select_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用C甜菜种植与包装中心：若未同时启用F，则产品按生鲜农产品销售"
+    },
+    {
+      "name": "select_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用D番茄处理合同：仅服务A，把全部番茄制成常温稳定番茄酱；随货披露和2026年度客户书面保证均已生效"
+    },
+    {
+      "name": "select_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用E葡萄酒处理合同：仅服务B，把全部葡萄制成葡萄酒；随货披露和2026年度客户书面保证均已生效"
+    },
+    {
+      "name": "select_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用F制糖处理合同：仅服务C，把全部甜菜制成糖；随货披露和2026年度客户书面保证均已生效"
+    },
+    {
+      "name": "select_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用G完整生鲜马铃薯中心"
+    },
+    {
+      "name": "select_h",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用H草莓小园：全部产品供经营者家庭自用且不销售"
+    },
+    {
+      "name": "prepare_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为A中心启用完整农产品安全准备包"
+    },
+    {
+      "name": "prepare_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为B中心启用完整农产品安全准备包"
+    },
+    {
+      "name": "prepare_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为C中心启用完整农产品安全准备包"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_a": 38,
+      "select_b": 37,
+      "select_c": 36,
+      "select_d": 34,
+      "select_e": 33,
+      "select_f": 32,
+      "select_g": 31,
+      "select_h": 30,
+      "prepare_a": -12,
+      "prepare_b": -12,
+      "prepare_c": -12
+    },
+    "meaning": "三个网络项目贡献减去完整规则准备成本",
+    "unit": "净贡献点"
+  },
+  "constraints": [
+    {
+      "name": "select_three",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "select_a": 1,
+        "select_b": 1,
+        "select_c": 1,
+        "select_d": 1,
+        "select_e": 1,
+        "select_f": 1,
+        "select_g": 1,
+        "select_h": 1
+      },
+      "meaning": "恰好启用三个网络项目"
+    },
+    {
+      "name": "d_requires_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_d": 1,
+        "select_a": -1
+      },
+      "meaning": "D合同仅随A中心启用"
+    },
+    {
+      "name": "e_requires_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_e": 1,
+        "select_b": -1
+      },
+      "meaning": "E合同仅随B中心启用"
+    },
+    {
+      "name": "f_requires_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_f": 1,
+        "select_c": -1
+      },
+      "meaning": "F合同仅随C中心启用"
+    },
+    {
+      "name": "prepare_only_if_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_a": 1,
+        "select_a": -1
+      },
+      "meaning": "准备包仅服务已启用中心"
+    },
+    {
+      "name": "prepare_only_if_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_b": 1,
+        "select_b": -1
+      },
+      "meaning": "准备包仅服务已启用中心"
+    },
+    {
+      "name": "prepare_only_if_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_c": 1,
+        "select_c": -1
+      },
+      "meaning": "准备包仅服务已启用中心"
+    }
+  ],
+  "action_projection": [
+    "select_a",
+    "select_b",
+    "select_c",
+    "select_d",
+    "select_e",
+    "select_f",
+    "select_g",
+    "select_h",
+    "prepare_a",
+    "prepare_b",
+    "prepare_c"
+  ]
+}

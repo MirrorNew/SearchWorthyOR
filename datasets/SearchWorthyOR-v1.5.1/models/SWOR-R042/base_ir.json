@@ -1,0 +1,250 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R042",
+  "variant": "base",
+  "family": "assignment_matching",
+  "source_candidate_id": "US-FCC-DA-26-585-ROUTERS-2026-06-12",
+  "variables": [
+    {
+      "name": "assign_north_netgear",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向北区应急站部署路由器A"
+    },
+    {
+      "name": "assign_north_adtran",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向北区应急站部署路由器B"
+    },
+    {
+      "name": "assign_north_verizon",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向北区应急站部署路由器C"
+    },
+    {
+      "name": "assign_north_domestic",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向北区应急站部署路由器D"
+    },
+    {
+      "name": "assign_north_foreign",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向北区应急站部署路由器E"
+    },
+    {
+      "name": "assign_east_netgear",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向东区应急站部署路由器A"
+    },
+    {
+      "name": "assign_east_adtran",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向东区应急站部署路由器B"
+    },
+    {
+      "name": "assign_east_verizon",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向东区应急站部署路由器C"
+    },
+    {
+      "name": "assign_east_domestic",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向东区应急站部署路由器D"
+    },
+    {
+      "name": "assign_east_foreign",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向东区应急站部署路由器E"
+    },
+    {
+      "name": "assign_west_netgear",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向西区应急站部署路由器A"
+    },
+    {
+      "name": "assign_west_adtran",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向西区应急站部署路由器B"
+    },
+    {
+      "name": "assign_west_verizon",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向西区应急站部署路由器C"
+    },
+    {
+      "name": "assign_west_domestic",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向西区应急站部署路由器D"
+    },
+    {
+      "name": "assign_west_foreign",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "向西区应急站部署路由器E"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "assign_north_netgear": 20,
+      "assign_north_adtran": 12,
+      "assign_north_verizon": 11,
+      "assign_north_domestic": 10,
+      "assign_north_foreign": 19,
+      "assign_east_netgear": 12,
+      "assign_east_adtran": 20,
+      "assign_east_verizon": 13,
+      "assign_east_domestic": 11,
+      "assign_east_foreign": 18,
+      "assign_west_netgear": 14,
+      "assign_west_adtran": 13,
+      "assign_west_verizon": 18,
+      "assign_west_domestic": 17,
+      "assign_west_foreign": 21
+    },
+    "meaning": "三个应急站的设备匹配效益",
+    "unit": "效益点"
+  },
+  "constraints": [
+    {
+      "name": "one_router_north",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_netgear": 1,
+        "assign_north_adtran": 1,
+        "assign_north_verizon": 1,
+        "assign_north_domestic": 1,
+        "assign_north_foreign": 1
+      },
+      "meaning": "每个应急站恰好部署一台路由器"
+    },
+    {
+      "name": "one_router_east",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_east_netgear": 1,
+        "assign_east_adtran": 1,
+        "assign_east_verizon": 1,
+        "assign_east_domestic": 1,
+        "assign_east_foreign": 1
+      },
+      "meaning": "每个应急站恰好部署一台路由器"
+    },
+    {
+      "name": "one_router_west",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_west_netgear": 1,
+        "assign_west_adtran": 1,
+        "assign_west_verizon": 1,
+        "assign_west_domestic": 1,
+        "assign_west_foreign": 1
+      },
+      "meaning": "每个应急站恰好部署一台路由器"
+    },
+    {
+      "name": "router_used_once_netgear",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_netgear": 1,
+        "assign_east_netgear": 1,
+        "assign_west_netgear": 1
+      },
+      "meaning": "每台候选路由器至多部署到一个应急站"
+    },
+    {
+      "name": "router_used_once_adtran",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_adtran": 1,
+        "assign_east_adtran": 1,
+        "assign_west_adtran": 1
+      },
+      "meaning": "每台候选路由器至多部署到一个应急站"
+    },
+    {
+      "name": "router_used_once_verizon",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_verizon": 1,
+        "assign_east_verizon": 1,
+        "assign_west_verizon": 1
+      },
+      "meaning": "每台候选路由器至多部署到一个应急站"
+    },
+    {
+      "name": "router_used_once_domestic",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_domestic": 1,
+        "assign_east_domestic": 1,
+        "assign_west_domestic": 1
+      },
+      "meaning": "每台候选路由器至多部署到一个应急站"
+    },
+    {
+      "name": "router_used_once_foreign",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_foreign": 1,
+        "assign_east_foreign": 1,
+        "assign_west_foreign": 1
+      },
+      "meaning": "每台候选路由器至多部署到一个应急站"
+    }
+  ],
+  "action_projection": [
+    "assign_north_netgear",
+    "assign_north_adtran",
+    "assign_north_verizon",
+    "assign_north_domestic",
+    "assign_north_foreign",
+    "assign_east_netgear",
+    "assign_east_adtran",
+    "assign_east_verizon",
+    "assign_east_domestic",
+    "assign_east_foreign",
+    "assign_west_netgear",
+    "assign_west_adtran",
+    "assign_west_verizon",
+    "assign_west_domestic",
+    "assign_west_foreign"
+  ]
+}

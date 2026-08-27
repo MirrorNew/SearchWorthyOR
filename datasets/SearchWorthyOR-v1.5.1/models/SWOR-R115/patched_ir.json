@@ -1,0 +1,87 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R115",
+  "variant": "patched",
+  "family": "healthcare_resources",
+  "source_candidate_id": "LOW-D3-R115-CMS-IRF-SIXTY-PERCENT",
+  "variables": [
+    {
+      "name": "five_stroke",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用10人组合A：5名卒中、5名普通术后去适应患者"
+    },
+    {
+      "name": "six_spinal",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用10人组合B：6名脊髓损伤、4名普通术后去适应患者"
+    },
+    {
+      "name": "seven_hip",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用10人组合C：7名股骨髋部骨折、3名普通术后去适应患者"
+    },
+    {
+      "name": "four_burn",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用10人组合D：4名烧伤、6名普通术后去适应患者"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "five_stroke": 90,
+      "six_spinal": 84,
+      "seven_hip": 80,
+      "four_burn": 95
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "康复组合价值点"
+  },
+  "constraints": [
+    {
+      "name": "choose_portfolio",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "five_stroke": 1,
+        "six_spinal": 1,
+        "seven_hip": 1,
+        "four_burn": 1
+      },
+      "meaning": "选择一个连续12个月患者组合"
+    },
+    {
+      "name": "exclude_five_of_ten",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "five_stroke": 1
+      },
+      "meaning": "5/10未达到现行IRF患者构成比例"
+    },
+    {
+      "name": "exclude_four_of_ten",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "four_burn": 1
+      },
+      "meaning": "4/10未达到现行IRF患者构成比例"
+    }
+  ],
+  "action_projection": [
+    "five_stroke",
+    "six_spinal",
+    "seven_hip",
+    "four_burn"
+  ]
+}

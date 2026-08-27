@@ -1,0 +1,117 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R103",
+  "variant": "patched",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "LOW-C4-R103-OSHA-VACCINE-CLOCK",
+  "variables": [
+    {
+      "name": "new_day15",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择员工甲及雇主拟到第15个工作日才向其提供乙肝疫苗的岗位安排"
+    },
+    {
+      "name": "new_day8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择员工乙及雇主拟于第8个工作日向其提供乙肝疫苗的岗位安排"
+    },
+    {
+      "name": "series_complete",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择已有完整乙肝疫苗系列记录的员工丙"
+    },
+    {
+      "name": "immune_antibody",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择已有抗体免疫证明的员工丁"
+    },
+    {
+      "name": "no_service",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不增加乙肝疫苗服务"
+    },
+    {
+      "name": "accelerate_within10",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将雇主向甲提供乙肝疫苗的日期从第15个工作日提前到第8个工作日"
+    },
+    {
+      "name": "repeat_vaccine",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排重新完成整套乙肝疫苗系列"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "new_day15": 105,
+      "new_day8": 94,
+      "series_complete": 98,
+      "immune_antibody": 92,
+      "no_service": 0,
+      "accelerate_within10": -9,
+      "repeat_vaccine": -14
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "接种排班净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_worker",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "new_day15": 1,
+        "new_day8": 1,
+        "series_complete": 1,
+        "immune_antibody": 1
+      },
+      "meaning": "选择员工"
+    },
+    {
+      "name": "choose_service",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_service": 1,
+        "accelerate_within10": 1,
+        "repeat_vaccine": 1
+      },
+      "meaning": "选择服务"
+    },
+    {
+      "name": "day15_requires_acceleration",
+      "sense": "<=",
+      "coefficients": {
+        "new_day15": 1,
+        "accelerate_within10": -1
+      },
+      "rhs": 0,
+      "meaning": "雇主拟到第15个工作日才向甲提供乙肝疫苗时，必须配对将提供日期提前到第8个工作日的服务"
+    }
+  ],
+  "action_projection": [
+    "new_day15",
+    "new_day8",
+    "series_complete",
+    "immune_antibody",
+    "no_service",
+    "accelerate_within10",
+    "repeat_vaccine"
+  ]
+}

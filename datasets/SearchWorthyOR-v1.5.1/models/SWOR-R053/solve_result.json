@@ -1,0 +1,68 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R053",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 15,
+  "base_objective": 142.0,
+  "base_incumbent": {
+    "order_a": 1,
+    "order_b": 1,
+    "order_c": 0,
+    "order_d": 0,
+    "order_e": 0,
+    "order_f": 0
+  },
+  "base_optimal_actions": [
+    {
+      "order_a": 1,
+      "order_b": 1,
+      "order_c": 0,
+      "order_d": 0,
+      "order_e": 0,
+      "order_f": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 3,
+  "patched_objective": 122.0,
+  "patched_incumbent": {
+    "order_a": 0,
+    "order_b": 0,
+    "order_c": 0,
+    "order_d": 1,
+    "order_e": 1,
+    "order_f": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "order_a": 0,
+      "order_b": 0,
+      "order_c": 0,
+      "order_d": 1,
+      "order_e": 1,
+      "order_f": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 122.0,
+    "canonical_unit": "服务价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "服务价值点",
+        "value": 122.0
+      },
+      {
+        "unit": "价值点",
+        "value": 122.0
+      },
+      {
+        "unit": "点",
+        "value": 122.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,86 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R060",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 168.0,
+  "patched_objective": 158.0,
+  "base_incumbent": {
+    "voice100_70fast": 0,
+    "voice100_88fast": 0,
+    "vrs100_76in120": 1,
+    "vrs100_84in120": 0,
+    "no_capacity": 1,
+    "voice_queue_control": 0,
+    "vrs_capacity": 0,
+    "full_crossservice_capacity": 0
+  },
+  "patched_incumbent": {
+    "voice100_70fast": 0,
+    "voice100_88fast": 0,
+    "vrs100_76in120": 0,
+    "vrs100_84in120": 1,
+    "no_capacity": 1,
+    "voice_queue_control": 0,
+    "vrs_capacity": 0,
+    "full_crossservice_capacity": 0
+  },
+  "base_feasible_assignment_count": 16,
+  "patched_feasible_assignment_count": 12,
+  "base_optimal_actions": [
+    {
+      "voice100_70fast": 0,
+      "voice100_88fast": 0,
+      "vrs100_76in120": 1,
+      "vrs100_84in120": 0,
+      "no_capacity": 1,
+      "voice_queue_control": 0,
+      "vrs_capacity": 0,
+      "full_crossservice_capacity": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "voice100_70fast": 0,
+      "voice100_88fast": 0,
+      "vrs100_76in120": 0,
+      "vrs100_84in120": 1,
+      "no_capacity": 1,
+      "voice_queue_control": 0,
+      "vrs_capacity": 0,
+      "full_crossservice_capacity": 0
+    },
+    {
+      "voice100_70fast": 0,
+      "voice100_88fast": 0,
+      "vrs100_76in120": 1,
+      "vrs100_84in120": 0,
+      "no_capacity": 0,
+      "voice_queue_control": 0,
+      "vrs_capacity": 1,
+      "full_crossservice_capacity": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "TRS服务净效用点",
+        "value": 158.0
+      },
+      {
+        "unit": "价值点",
+        "value": 158.0
+      },
+      {
+        "unit": "点",
+        "value": 158.0
+      }
+    ],
+    "canonical_unit": "TRS服务净效用点",
+    "canonical_value": 158.0
+  }
+}

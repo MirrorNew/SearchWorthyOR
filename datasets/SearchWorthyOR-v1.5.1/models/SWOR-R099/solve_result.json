@@ -1,0 +1,80 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R099",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 20,
+  "base_objective": 150.0,
+  "base_incumbent": {
+    "plan_a_50": 0,
+    "plan_b_60": 0,
+    "plan_c_120": 1,
+    "plan_d_35": 0,
+    "reserve_0": 1,
+    "reserve_4": 0,
+    "reserve_6": 0,
+    "reserve_12": 0,
+    "reserve_18": 0
+  },
+  "base_optimal_actions": [
+    {
+      "plan_a_50": 0,
+      "plan_b_60": 0,
+      "plan_c_120": 1,
+      "plan_d_35": 0,
+      "reserve_0": 1,
+      "reserve_4": 0,
+      "reserve_6": 0,
+      "reserve_12": 0,
+      "reserve_18": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 13,
+  "patched_objective": 123.0,
+  "patched_incumbent": {
+    "plan_a_50": 0,
+    "plan_b_60": 1,
+    "plan_c_120": 0,
+    "plan_d_35": 0,
+    "reserve_0": 0,
+    "reserve_4": 0,
+    "reserve_6": 1,
+    "reserve_12": 0,
+    "reserve_18": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "plan_a_50": 0,
+      "plan_b_60": 1,
+      "plan_c_120": 0,
+      "plan_d_35": 0,
+      "reserve_0": 0,
+      "reserve_4": 0,
+      "reserve_6": 1,
+      "reserve_12": 0,
+      "reserve_18": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 123.0,
+    "canonical_unit": "频道服务净效用点",
+    "accepted_equivalents": [
+      {
+        "unit": "频道服务净效用点",
+        "value": 123.0
+      },
+      {
+        "unit": "价值点",
+        "value": 123.0
+      },
+      {
+        "unit": "点",
+        "value": 123.0
+      }
+    ]
+  }
+}

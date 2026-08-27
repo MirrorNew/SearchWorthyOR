@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R017",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 55,
+  "base_objective": 234.0,
+  "base_incumbent": {
+    "a_watch_00_03": 1,
+    "b_watch_03_06": 0,
+    "c_watch_06_09": 1,
+    "d_watch_09_12": 0,
+    "e_watch_12_15": 1,
+    "f_watch_15_18": 0,
+    "g_watch_18_21": 1,
+    "h_watch_21_24": 0
+  },
+  "base_optimal_actions": [
+    {
+      "a_watch_00_03": 1,
+      "b_watch_03_06": 0,
+      "c_watch_06_09": 1,
+      "d_watch_09_12": 0,
+      "e_watch_12_15": 1,
+      "f_watch_15_18": 0,
+      "g_watch_18_21": 1,
+      "h_watch_21_24": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 5,
+  "patched_objective": 230.0,
+  "patched_incumbent": {
+    "a_watch_00_03": 1,
+    "b_watch_03_06": 1,
+    "c_watch_06_09": 1,
+    "d_watch_09_12": 1,
+    "e_watch_12_15": 0,
+    "f_watch_15_18": 0,
+    "g_watch_18_21": 0,
+    "h_watch_21_24": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "a_watch_00_03": 1,
+      "b_watch_03_06": 1,
+      "c_watch_06_09": 1,
+      "d_watch_09_12": 1,
+      "e_watch_12_15": 0,
+      "f_watch_15_18": 0,
+      "g_watch_18_21": 0,
+      "h_watch_21_24": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 230.0,
+    "canonical_unit": "覆盖价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "覆盖价值点",
+        "value": 230.0
+      },
+      {
+        "unit": "价值点",
+        "value": 230.0
+      },
+      {
+        "unit": "点",
+        "value": 230.0
+      }
+    ]
+  }
+}

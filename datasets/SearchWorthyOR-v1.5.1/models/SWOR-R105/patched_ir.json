@@ -1,0 +1,127 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R105",
+  "variant": "patched",
+  "family": "production_capacity",
+  "source_candidate_id": "LOW-C4-R105-FDA-PEST-AUXILIARY",
+  "variables": [
+    {
+      "name": "open_food",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择A开放包装运营方案"
+    },
+    {
+      "name": "sealed_food",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择B封闭灌装运营方案"
+    },
+    {
+      "name": "dry_nonfood",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择C干货仓运营方案"
+    },
+    {
+      "name": "dog_patrol",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择D巡逻犬运营方案"
+    },
+    {
+      "name": "no_control",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不增加辅助服务"
+    },
+    {
+      "name": "pest_exclusion",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施虫害排除辅助服务"
+    },
+    {
+      "name": "segregated_dog",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将巡逻犬限制在隔离区域的辅助服务"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "open_food": 126,
+      "sealed_food": 112,
+      "dry_nonfood": 98,
+      "dog_patrol": 121,
+      "no_control": 0,
+      "pest_exclusion": -11,
+      "segregated_dog": -8
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "生产净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_line",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "open_food": 1,
+        "sealed_food": 1,
+        "dry_nonfood": 1,
+        "dog_patrol": 1
+      },
+      "meaning": "选择生产线"
+    },
+    {
+      "name": "choose_auxiliary",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_control": 1,
+        "pest_exclusion": 1,
+        "segregated_dog": 1
+      },
+      "meaning": "选择辅助服务"
+    },
+    {
+      "name": "open_food_requires_exclusion",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "open_food": 1,
+        "pest_exclusion": -1
+      },
+      "meaning": "开放食品线需虫害排除"
+    },
+    {
+      "name": "dog_requires_segregation",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dog_patrol": 1,
+        "segregated_dog": -1
+      },
+      "meaning": "巡逻犬需限制在不污染区域"
+    }
+  ],
+  "action_projection": [
+    "open_food",
+    "sealed_food",
+    "dry_nonfood",
+    "dog_patrol",
+    "no_control",
+    "pest_exclusion",
+    "segregated_dog"
+  ]
+}

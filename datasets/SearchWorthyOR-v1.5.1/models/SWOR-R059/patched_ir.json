@@ -1,0 +1,116 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R059",
+  "variant": "patched",
+  "family": "telecom_service",
+  "source_candidate_id": "SRCV3-R059-SG-IMDA-SER-EQUIPMENT-SCOPE-20260804",
+  "variables": [
+    {
+      "name": "model_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号A"
+    },
+    {
+      "name": "model_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号B"
+    },
+    {
+      "name": "model_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号C"
+    },
+    {
+      "name": "model_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号D"
+    },
+    {
+      "name": "model_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号E"
+    },
+    {
+      "name": "model_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "通过SER申报候选型号F"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "model_a": 68,
+      "model_b": 63,
+      "model_c": 59,
+      "model_d": 74,
+      "model_e": 71,
+      "model_f": 66
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "上市价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_two_ser_filings",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "model_a": 1,
+        "model_b": 1,
+        "model_c": 1,
+        "model_d": 1,
+        "model_e": 1,
+        "model_f": 1
+      },
+      "meaning": "Select exactly two equipment models for the available SER filing slots"
+    },
+    {
+      "name": "model_d_outside_ser_scope",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "model_d": 1
+      },
+      "meaning": "model d outside ser scope"
+    },
+    {
+      "name": "model_e_outside_ser_scope",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "model_e": 1
+      },
+      "meaning": "model e outside ser scope"
+    },
+    {
+      "name": "model_f_outside_ser_scope",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "model_f": 1
+      },
+      "meaning": "model f outside ser scope"
+    }
+  ],
+  "action_projection": [
+    "model_a",
+    "model_b",
+    "model_c",
+    "model_d",
+    "model_e",
+    "model_f"
+  ]
+}

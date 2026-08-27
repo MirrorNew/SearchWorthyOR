@@ -1,0 +1,205 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R082",
+  "variant": "base",
+  "family": "assignment_matching",
+  "source_candidate_id": "UK-STEEL-TRANSITIONAL-QUOTA-NONCOUNT-20260722",
+  "variables": [
+    {
+      "name": "assign_arden_north",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Arden卷材订单并交由北区报关组办理"
+    },
+    {
+      "name": "assign_arden_south",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Arden卷材订单并交由南区报关组办理"
+    },
+    {
+      "name": "assign_beck_north",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Beck板材订单并交由北区报关组办理"
+    },
+    {
+      "name": "assign_beck_south",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Beck板材订单并交由南区报关组办理"
+    },
+    {
+      "name": "assign_cobalt_north",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Cobalt型材订单并交由北区报关组办理"
+    },
+    {
+      "name": "assign_cobalt_south",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Cobalt型材订单并交由南区报关组办理"
+    },
+    {
+      "name": "assign_dunlin_north",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Dunlin线材订单并交由北区报关组办理"
+    },
+    {
+      "name": "assign_dunlin_south",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Dunlin线材订单并交由南区报关组办理"
+    },
+    {
+      "name": "assign_ember_north",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Ember钢管订单并交由北区报关组办理"
+    },
+    {
+      "name": "assign_ember_south",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受Ember钢管订单并交由南区报关组办理"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "assign_arden_north": 20,
+      "assign_arden_south": 15,
+      "assign_beck_north": 18,
+      "assign_beck_south": 14,
+      "assign_cobalt_north": 16,
+      "assign_cobalt_south": 13,
+      "assign_dunlin_north": 12,
+      "assign_dunlin_south": 8,
+      "assign_ember_north": 10,
+      "assign_ember_south": 9
+    },
+    "meaning": "获选钢材订单的总净贡献",
+    "unit": "贡献点"
+  },
+  "constraints": [
+    {
+      "name": "one_team_at_most_arden",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_arden_north": 1,
+        "assign_arden_south": 1
+      },
+      "meaning": "Arden卷材订单至多由一个报关组办理"
+    },
+    {
+      "name": "one_team_at_most_beck",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_beck_north": 1,
+        "assign_beck_south": 1
+      },
+      "meaning": "Beck板材订单至多由一个报关组办理"
+    },
+    {
+      "name": "one_team_at_most_cobalt",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_cobalt_north": 1,
+        "assign_cobalt_south": 1
+      },
+      "meaning": "Cobalt型材订单至多由一个报关组办理"
+    },
+    {
+      "name": "one_team_at_most_dunlin",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_dunlin_north": 1,
+        "assign_dunlin_south": 1
+      },
+      "meaning": "Dunlin线材订单至多由一个报关组办理"
+    },
+    {
+      "name": "one_team_at_most_ember",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ember_north": 1,
+        "assign_ember_south": 1
+      },
+      "meaning": "Ember钢管订单至多由一个报关组办理"
+    },
+    {
+      "name": "team_capacity_north",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "assign_arden_north": 1,
+        "assign_beck_north": 1,
+        "assign_cobalt_north": 1,
+        "assign_dunlin_north": 1,
+        "assign_ember_north": 1
+      },
+      "meaning": "北区报关组最多办理两个订单"
+    },
+    {
+      "name": "team_capacity_south",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "assign_arden_south": 1,
+        "assign_beck_south": 1,
+        "assign_cobalt_south": 1,
+        "assign_dunlin_south": 1,
+        "assign_ember_south": 1
+      },
+      "meaning": "南区报关组最多办理两个订单"
+    },
+    {
+      "name": "quarter_one_quota_slot",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_arden_north": 1,
+        "assign_arden_south": 1,
+        "assign_beck_north": 1,
+        "assign_beck_south": 1,
+        "assign_cobalt_north": 1,
+        "assign_cobalt_south": 1,
+        "assign_dunlin_north": 1,
+        "assign_dunlin_south": 1,
+        "assign_ember_north": 1,
+        "assign_ember_south": 1
+      },
+      "meaning": "未纳入外部过渡安排时，本批次组合最多使用一个季度配额申请名额"
+    }
+  ],
+  "action_projection": [
+    "assign_arden_north",
+    "assign_arden_south",
+    "assign_beck_north",
+    "assign_beck_south",
+    "assign_cobalt_north",
+    "assign_cobalt_south",
+    "assign_dunlin_north",
+    "assign_dunlin_south",
+    "assign_ember_north",
+    "assign_ember_south"
+  ]
+}

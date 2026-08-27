@@ -1,0 +1,315 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R057",
+  "variant": "patched",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "C9-SWOR-R057-FLSA-SLEEPING-TIME",
+  "variables": [
+    {
+      "name": "duty23_sleep6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择23小时连续值守并在设施内实际睡眠6小时的方案"
+    },
+    {
+      "name": "duty24_agreement_sleep6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择24小时值守、书面排除协议及8小时排定睡眠，其中实际睡眠6小时的方案"
+    },
+    {
+      "name": "duty26_agreement_sleep4",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择26小时值守、书面排除协议及8小时排定睡眠，其中实际睡眠4小时的方案"
+    },
+    {
+      "name": "duty24_no_agreement_sleep8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择24小时值守、无任何排除协议且实际睡眠8小时的方案"
+    },
+    {
+      "name": "solo_operator",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由一名操作员独立值守"
+    },
+    {
+      "name": "oncall_backup",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置一名随叫随到的后备操作员"
+    },
+    {
+      "name": "second_operator",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置第二名现场操作员"
+    },
+    {
+      "name": "pay16_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "按16个工时结算"
+    },
+    {
+      "name": "pay18_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "按18个工时结算"
+    },
+    {
+      "name": "pay22_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "按22个工时结算"
+    },
+    {
+      "name": "pay24_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "按24个工时结算"
+    },
+    {
+      "name": "pay26_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "按26个工时结算"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "duty23_sleep6": 50,
+      "duty24_agreement_sleep6": 55,
+      "duty26_agreement_sleep4": 64,
+      "duty24_no_agreement_sleep8": 58,
+      "solo_operator": 0,
+      "oncall_backup": -2,
+      "second_operator": -6,
+      "pay16_hours": 0,
+      "pay18_hours": -2,
+      "pay22_hours": -6,
+      "pay24_hours": -8,
+      "pay26_hours": -10
+    },
+    "meaning": "值守计划贡献减去人员支持与工时结算包耗用后的净效用",
+    "unit": "值守净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_duty_plan",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "duty23_sleep6": 1,
+        "duty24_agreement_sleep6": 1,
+        "duty26_agreement_sleep4": 1,
+        "duty24_no_agreement_sleep8": 1
+      },
+      "meaning": "选择一项值守计划"
+    },
+    {
+      "name": "choose_one_support_plan",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "solo_operator": 1,
+        "oncall_backup": 1,
+        "second_operator": 1
+      },
+      "meaning": "选择一种人员支持配置"
+    },
+    {
+      "name": "choose_one_pay_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "pay16_hours": 1,
+        "pay18_hours": 1,
+        "pay22_hours": 1,
+        "pay24_hours": 1,
+        "pay26_hours": 1
+      },
+      "meaning": "选择一个计薪包"
+    },
+    {
+      "name": "duty26_requires_backup",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty26_agreement_sleep4": 1,
+        "solo_operator": 1
+      },
+      "meaning": "26小时计划不能单人无后备运行"
+    },
+    {
+      "name": "remote_no_agreement_requires_second_not_solo",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_no_agreement_sleep8": 1,
+        "solo_operator": 1
+      },
+      "meaning": "远端无协议计划不能单人运行"
+    },
+    {
+      "name": "remote_no_agreement_requires_second_not_oncall",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_no_agreement_sleep8": 1,
+        "oncall_backup": 1
+      },
+      "meaning": "远端无协议计划须配置现场第二人"
+    },
+    {
+      "name": "duty23_site_has_no_second_berth",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty23_sleep6": 1,
+        "second_operator": 1
+      },
+      "meaning": "23小时站点没有第二人床位"
+    },
+    {
+      "name": "duty23_forbids_pay16",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty23_sleep6": 1,
+        "pay16_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty23_forbids_pay18",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty23_sleep6": 1,
+        "pay18_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty23_forbids_pay22",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty23_sleep6": 1,
+        "pay22_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty24_interrupted_sleep_forbids_pay16",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_agreement_sleep6": 1,
+        "pay16_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty26_under5_sleep_forbids_pay16",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty26_agreement_sleep4": 1,
+        "pay16_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty26_under5_sleep_forbids_pay18",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty26_agreement_sleep4": 1,
+        "pay18_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty26_under5_sleep_forbids_pay22",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty26_agreement_sleep4": 1,
+        "pay22_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty26_under5_sleep_forbids_pay24",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty26_agreement_sleep4": 1,
+        "pay24_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty24_no_agreement_forbids_pay16",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_no_agreement_sleep8": 1,
+        "pay16_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty24_no_agreement_forbids_pay18",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_no_agreement_sleep8": 1,
+        "pay18_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    },
+    {
+      "name": "duty24_no_agreement_forbids_pay22",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "duty24_no_agreement_sleep8": 1,
+        "pay22_hours": 1
+      },
+      "meaning": "排除少计工作时间的组合"
+    }
+  ],
+  "action_projection": [
+    "duty23_sleep6",
+    "duty24_agreement_sleep6",
+    "duty26_agreement_sleep4",
+    "duty24_no_agreement_sleep8",
+    "solo_operator",
+    "oncall_backup",
+    "second_operator",
+    "pay16_hours",
+    "pay18_hours",
+    "pay22_hours",
+    "pay24_hours",
+    "pay26_hours"
+  ]
+}

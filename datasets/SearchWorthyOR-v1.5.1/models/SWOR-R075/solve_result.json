@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R075",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 12,
+  "base_objective": 5.0,
+  "base_incumbent": {
+    "arc_b": 0,
+    "arc_c": 1,
+    "arc_a": 1,
+    "arc_d": 0,
+    "arc_f": 0,
+    "arc_g": 0,
+    "arc_e": 1,
+    "arc_h": 0
+  },
+  "base_optimal_actions": [
+    {
+      "arc_b": 0,
+      "arc_c": 1,
+      "arc_a": 1,
+      "arc_d": 0,
+      "arc_f": 0,
+      "arc_g": 0,
+      "arc_e": 1,
+      "arc_h": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 5,
+  "patched_objective": 9.0,
+  "patched_incumbent": {
+    "arc_b": 0,
+    "arc_c": 1,
+    "arc_a": 0,
+    "arc_d": 0,
+    "arc_f": 0,
+    "arc_g": 0,
+    "arc_e": 0,
+    "arc_h": 1
+  },
+  "patched_optimal_actions": [
+    {
+      "arc_b": 0,
+      "arc_c": 1,
+      "arc_a": 0,
+      "arc_d": 0,
+      "arc_f": 0,
+      "arc_g": 0,
+      "arc_e": 0,
+      "arc_h": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 9.0,
+    "canonical_unit": "成本点",
+    "accepted_equivalents": [
+      {
+        "unit": "成本点",
+        "value": 9.0
+      },
+      {
+        "unit": "点",
+        "value": 9.0
+      }
+    ]
+  }
+}

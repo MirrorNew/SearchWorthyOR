@@ -1,0 +1,107 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R104",
+  "variant": "patched",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "LOW-C4-R104-OSHA-CORROSIVE-FLUSH",
+  "variables": [
+    {
+      "name": "open_acid",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "开放式腐蚀性酸液转移岗位"
+    },
+    {
+      "name": "closed_acid",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "全封闭且无合理暴露可能的酸液系统岗位"
+    },
+    {
+      "name": "dry_pack",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "无腐蚀性材料的干燥包装岗位"
+    },
+    {
+      "name": "no_aux",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不配置快速冲洗辅助设施"
+    },
+    {
+      "name": "eyewash_drench",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "配置工作区内可立即快速冲洗眼睛和身体的设施"
+    },
+    {
+      "name": "ppe_only",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "仅提供护目镜和面屏"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "open_acid": 118,
+      "closed_acid": 105,
+      "dry_pack": 96,
+      "no_aux": 0,
+      "eyewash_drench": -10,
+      "ppe_only": -4
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "岗位净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_assignment",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "open_acid": 1,
+        "closed_acid": 1,
+        "dry_pack": 1
+      },
+      "meaning": "选择岗位"
+    },
+    {
+      "name": "choose_auxiliary",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_aux": 1,
+        "eyewash_drench": 1,
+        "ppe_only": 1
+      },
+      "meaning": "选择辅助包"
+    },
+    {
+      "name": "open_acid_requires_flush",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "open_acid": 1,
+        "eyewash_drench": -1
+      },
+      "meaning": "开放酸液暴露需快速冲洗"
+    }
+  ],
+  "action_projection": [
+    "open_acid",
+    "closed_acid",
+    "dry_pack",
+    "no_aux",
+    "eyewash_drench",
+    "ppe_only"
+  ]
+}

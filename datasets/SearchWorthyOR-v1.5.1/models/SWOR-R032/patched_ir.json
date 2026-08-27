@@ -1,0 +1,269 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R032",
+  "variant": "patched",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "US-ECFR-PHMSA-HAZMAT-SEGREGATION-2026",
+  "variables": [
+    {
+      "name": "select_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物A"
+    },
+    {
+      "name": "select_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物B"
+    },
+    {
+      "name": "select_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物C"
+    },
+    {
+      "name": "select_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物D"
+    },
+    {
+      "name": "select_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物E"
+    },
+    {
+      "name": "select_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物F"
+    },
+    {
+      "name": "select_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物G"
+    },
+    {
+      "name": "select_h",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "装载货物H"
+    },
+    {
+      "name": "install_gh_barrier",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为G与H安装经核定的防泄漏混合隔离舱板"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_a": 38,
+      "select_b": 37,
+      "select_c": 36,
+      "select_d": 35,
+      "select_e": 34,
+      "select_f": 33,
+      "select_g": 32,
+      "select_h": 31,
+      "install_gh_barrier": -12
+    },
+    "meaning": "三票货物贡献减去隔离成本",
+    "unit": "净贡献点"
+  },
+  "constraints": [
+    {
+      "name": "load_three",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "select_a": 1,
+        "select_b": 1,
+        "select_c": 1,
+        "select_d": 1,
+        "select_e": 1,
+        "select_f": 1,
+        "select_g": 1,
+        "select_h": 1
+      },
+      "meaning": "恰好装载三票货物"
+    },
+    {
+      "name": "barrier_only_with_g",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "install_gh_barrier": 1,
+        "select_g": -1
+      },
+      "meaning": "仅装载G时可安装G-H隔离舱板"
+    },
+    {
+      "name": "barrier_only_with_h",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "install_gh_barrier": 1,
+        "select_h": -1
+      },
+      "meaning": "仅装载H时可安装G-H隔离舱板"
+    },
+    {
+      "name": "cyanide_acid_conflict",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "select_a": 1,
+        "select_b": 1
+      },
+      "meaning": "会释放氰化氢的氰化物与酸不能同车"
+    },
+    {
+      "name": "division42_class8_conflict",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "select_c": 1,
+        "select_d": 1
+      },
+      "meaning": "Division 4.2与Class 8液体不能同车"
+    },
+    {
+      "name": "zonea_class3_conflict",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "select_e": 1,
+        "select_f": 1
+      },
+      "meaning": "Zone A剧毒液体与Class 3不能同车"
+    },
+    {
+      "name": "class3_oxidizer_separation",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "select_g": 1,
+        "select_h": 1,
+        "install_gh_barrier": -1
+      },
+      "meaning": "G与H同车时须启用防混合隔离"
+    },
+    {
+      "name": "division42_sulfuric_acid_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_b": 1,
+        "select_c": 1
+      },
+      "rhs": 1,
+      "meaning": "Division 4.2货物C与Class 8硫酸B不能同车"
+    },
+    {
+      "name": "zonea_class8_sulfuric_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_b": 1,
+        "select_e": 1
+      },
+      "rhs": 1,
+      "meaning": "Zone A货物E与Class 8硫酸B不能同车"
+    },
+    {
+      "name": "zonea_division42_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_c": 1,
+        "select_e": 1
+      },
+      "rhs": 1,
+      "meaning": "Zone A货物E与Division 4.2货物C不能同车"
+    },
+    {
+      "name": "zonea_class8_alkali_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_d": 1,
+        "select_e": 1
+      },
+      "rhs": 1,
+      "meaning": "Zone A货物E与Class 8碱液D不能同车"
+    },
+    {
+      "name": "zonea_second_class3_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_e": 1,
+        "select_g": 1
+      },
+      "rhs": 1,
+      "meaning": "Zone A货物E与另一票Class 3货物G不能同车"
+    },
+    {
+      "name": "zonea_division51_conflict",
+      "sense": "<=",
+      "coefficients": {
+        "select_e": 1,
+        "select_h": 1
+      },
+      "rhs": 1,
+      "meaning": "Zone A货物E与Division 5.1货物H不能同车"
+    },
+    {
+      "name": "class8_sulfuric_oxidizer_requires_unavailable_separation",
+      "sense": "<=",
+      "coefficients": {
+        "select_b": 1,
+        "select_h": 1
+      },
+      "rhs": 1,
+      "meaning": "硫酸B与氧化剂H需要题内未提供的专用分隔，故不能同车"
+    },
+    {
+      "name": "class8_alkali_oxidizer_requires_unavailable_separation",
+      "sense": "<=",
+      "coefficients": {
+        "select_d": 1,
+        "select_h": 1
+      },
+      "rhs": 1,
+      "meaning": "碱液D与氧化剂H需要题内未提供的专用分隔，故不能同车"
+    },
+    {
+      "name": "class3_f_oxidizer_requires_unavailable_separation",
+      "sense": "<=",
+      "coefficients": {
+        "select_f": 1,
+        "select_h": 1
+      },
+      "rhs": 1,
+      "meaning": "Class 3货物F与氧化剂H需要题内未提供的专用分隔，故不能同车"
+    }
+  ],
+  "action_projection": [
+    "select_a",
+    "select_b",
+    "select_c",
+    "select_d",
+    "select_e",
+    "select_f",
+    "select_g",
+    "select_h",
+    "install_gh_barrier"
+  ]
+}

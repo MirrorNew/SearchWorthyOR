@@ -1,0 +1,68 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R104",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 118.0,
+  "patched_objective": 108.0,
+  "base_incumbent": {
+    "open_acid": 1,
+    "closed_acid": 0,
+    "dry_pack": 0,
+    "no_aux": 1,
+    "eyewash_drench": 0,
+    "ppe_only": 0
+  },
+  "patched_incumbent": {
+    "open_acid": 1,
+    "closed_acid": 0,
+    "dry_pack": 0,
+    "no_aux": 0,
+    "eyewash_drench": 1,
+    "ppe_only": 0
+  },
+  "base_feasible_assignment_count": 9,
+  "patched_feasible_assignment_count": 7,
+  "base_optimal_actions": [
+    {
+      "open_acid": 1,
+      "closed_acid": 0,
+      "dry_pack": 0,
+      "no_aux": 1,
+      "eyewash_drench": 0,
+      "ppe_only": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "open_acid": 1,
+      "closed_acid": 0,
+      "dry_pack": 0,
+      "no_aux": 0,
+      "eyewash_drench": 1,
+      "ppe_only": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "岗位净效用点",
+        "value": 108.0
+      },
+      {
+        "unit": "价值点",
+        "value": 108.0
+      },
+      {
+        "unit": "点",
+        "value": 108.0
+      }
+    ],
+    "canonical_unit": "岗位净效用点",
+    "canonical_value": 108.0
+  }
+}

@@ -1,0 +1,87 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R089",
+  "variant": "patched",
+  "family": "healthcare_resources",
+  "source_candidate_id": "A4-R089-CMS-HOSPICE-INPATIENT-CAP",
+  "variables": [
+    {
+      "name": "pkg_100_25",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择100总天数含25住院日方案"
+    },
+    {
+      "name": "pkg_100_20",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择100总天数含20住院日方案"
+    },
+    {
+      "name": "pkg_80_18",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择80总天数含18住院日方案"
+    },
+    {
+      "name": "pkg_80_16",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择80总天数含16住院日方案"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "pkg_100_25": 24,
+      "pkg_100_20": 20,
+      "pkg_80_18": 22,
+      "pkg_80_16": 18
+    },
+    "meaning": "Total decision value",
+    "unit": "年度照护净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_hospice_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "pkg_100_25": 1,
+        "pkg_100_20": 1,
+        "pkg_80_18": 1,
+        "pkg_80_16": 1
+      },
+      "meaning": "Exactly one listed package must be selected"
+    },
+    {
+      "name": "exclude_25_of_100",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "pkg_100_25": 1
+      },
+      "meaning": "exclude 25 of 100"
+    },
+    {
+      "name": "exclude_18_of_80",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "pkg_80_18": 1
+      },
+      "meaning": "exclude 18 of 80"
+    }
+  ],
+  "action_projection": [
+    "pkg_100_25",
+    "pkg_100_20",
+    "pkg_80_18",
+    "pkg_80_16"
+  ]
+}

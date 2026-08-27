@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R055",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 135.0,
+  "patched_objective": 116.0,
+  "base_incumbent": {
+    "unsealed_40mi": 0,
+    "unsealed_180mi": 0,
+    "sealed_180mi": 0,
+    "unsealed_320mi": 1,
+    "no_inspection": 1,
+    "first50_only": 0,
+    "first50_and_150": 0,
+    "first50_and_two150": 0
+  },
+  "patched_incumbent": {
+    "unsealed_40mi": 0,
+    "unsealed_180mi": 0,
+    "sealed_180mi": 0,
+    "unsealed_320mi": 1,
+    "no_inspection": 0,
+    "first50_only": 0,
+    "first50_and_150": 0,
+    "first50_and_two150": 1
+  },
+  "base_feasible_assignment_count": 16,
+  "patched_feasible_assignment_count": 7,
+  "base_optimal_actions": [
+    {
+      "unsealed_40mi": 0,
+      "unsealed_180mi": 0,
+      "sealed_180mi": 0,
+      "unsealed_320mi": 1,
+      "no_inspection": 1,
+      "first50_only": 0,
+      "first50_and_150": 0,
+      "first50_and_two150": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "unsealed_40mi": 0,
+      "unsealed_180mi": 0,
+      "sealed_180mi": 0,
+      "unsealed_320mi": 1,
+      "no_inspection": 0,
+      "first50_only": 0,
+      "first50_and_150": 0,
+      "first50_and_two150": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "货运任务净效用点",
+        "value": 116.0
+      },
+      {
+        "unit": "价值点",
+        "value": 116.0
+      },
+      {
+        "unit": "点",
+        "value": 116.0
+      }
+    ],
+    "canonical_unit": "货运任务净效用点",
+    "canonical_value": 116.0
+  }
+}

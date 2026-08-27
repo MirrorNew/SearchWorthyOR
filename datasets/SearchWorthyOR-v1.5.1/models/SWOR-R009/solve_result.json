@@ -1,0 +1,64 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R009",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 20,
+  "base_objective": 36.0,
+  "base_incumbent": {
+    "patient_A": 0,
+    "patient_B": 0,
+    "patient_C": 1,
+    "patient_D": 0,
+    "patient_E": 1,
+    "patient_F": 1
+  },
+  "base_optimal_actions": [
+    {
+      "patient_A": 0,
+      "patient_B": 0,
+      "patient_C": 1,
+      "patient_D": 0,
+      "patient_E": 1,
+      "patient_F": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 1,
+  "patched_objective": 24.0,
+  "patched_incumbent": {
+    "patient_A": 1,
+    "patient_B": 1,
+    "patient_C": 0,
+    "patient_D": 1,
+    "patient_E": 0,
+    "patient_F": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "patient_A": 1,
+      "patient_B": 1,
+      "patient_C": 0,
+      "patient_D": 1,
+      "patient_E": 0,
+      "patient_F": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 24.0,
+    "canonical_unit": "获益点",
+    "accepted_equivalents": [
+      {
+        "unit": "获益点",
+        "value": 24.0
+      },
+      {
+        "unit": "点",
+        "value": 24.0
+      }
+    ]
+  }
+}

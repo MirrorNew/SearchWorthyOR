@@ -1,0 +1,169 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R025",
+  "variant": "patched",
+  "family": "facility_network",
+  "source_candidate_id": "LOW-C1-R025-OSHA-EXIT-ACCESS",
+  "variables": [
+    {
+      "name": "toward_hazard",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用朝高危险反应区方向经过的出口通道A"
+    },
+    {
+      "name": "lockable_room",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用穿过可上锁更衣室的出口通道B"
+    },
+    {
+      "name": "dead_end",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择通向死胡同后再折返出口的通道C"
+    },
+    {
+      "name": "direct_clear",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "采用直接无障碍出口通道D"
+    },
+    {
+      "name": "none",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不改造通道"
+    },
+    {
+      "name": "shield",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "增设连续实体隔墙有效屏蔽高危险区"
+    },
+    {
+      "name": "remove_lock",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "永久拆除更衣室锁具使房间不可上锁"
+    },
+    {
+      "name": "reroute",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "重建通道绕开原房间或死胡同"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "toward_hazard": 62,
+      "lockable_room": 70,
+      "dead_end": 58,
+      "direct_clear": 49,
+      "none": 0,
+      "shield": -9,
+      "remove_lock": -8,
+      "reroute": -14
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "设施净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_route",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "toward_hazard": 1,
+        "lockable_room": 1,
+        "dead_end": 1,
+        "direct_clear": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "choose_mitigation",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "none": 1,
+        "shield": 1,
+        "remove_lock": 1,
+        "reroute": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "shield_only_for_hazard",
+      "coefficients": {
+        "shield": 1,
+        "toward_hazard": -1
+      },
+      "sense": "<=",
+      "rhs": 0,
+      "meaning": "屏蔽包只用于A"
+    },
+    {
+      "name": "remove_lock_only_for_b",
+      "coefficients": {
+        "remove_lock": 1,
+        "lockable_room": -1
+      },
+      "sense": "<=",
+      "rhs": 0,
+      "meaning": "拆锁包只用于B"
+    },
+    {
+      "name": "hazard_route_requires_shield_or_reroute",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "toward_hazard": 1,
+        "shield": -1,
+        "reroute": -1
+      },
+      "meaning": "hazard route requires shield or reroute"
+    },
+    {
+      "name": "lockable_route_requires_remove_or_reroute",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "lockable_room": 1,
+        "remove_lock": -1,
+        "reroute": -1
+      },
+      "meaning": "lockable route requires remove or reroute"
+    },
+    {
+      "name": "dead_end_requires_reroute",
+      "sense": "<=",
+      "coefficients": {
+        "dead_end": 1,
+        "reroute": -1
+      },
+      "rhs": 0,
+      "meaning": "通向死胡同的出口通道须采用重建绕行包"
+    }
+  ],
+  "action_projection": [
+    "toward_hazard",
+    "lockable_room",
+    "dead_end",
+    "direct_clear",
+    "none",
+    "shield",
+    "remove_lock",
+    "reroute"
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R024",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 84.0,
+  "patched_objective": 78.0,
+  "base_incumbent": {
+    "april5_no_archive": 0,
+    "march31_archive": 0,
+    "march20_no_archive": 1,
+    "march25_archive": 0,
+    "no_service": 1,
+    "accelerate_to_march31": 0,
+    "retain_records_three_years": 0
+  },
+  "patched_incumbent": {
+    "april5_no_archive": 0,
+    "march31_archive": 0,
+    "march20_no_archive": 1,
+    "march25_archive": 0,
+    "no_service": 0,
+    "accelerate_to_march31": 0,
+    "retain_records_three_years": 1
+  },
+  "base_feasible_assignment_count": 12,
+  "patched_feasible_assignment_count": 7,
+  "base_optimal_actions": [
+    {
+      "april5_no_archive": 0,
+      "march31_archive": 0,
+      "march20_no_archive": 1,
+      "march25_archive": 0,
+      "no_service": 1,
+      "accelerate_to_march31": 0,
+      "retain_records_three_years": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "april5_no_archive": 0,
+      "march31_archive": 0,
+      "march20_no_archive": 1,
+      "march25_archive": 0,
+      "no_service": 0,
+      "accelerate_to_march31": 0,
+      "retain_records_three_years": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "年度报告净效用点",
+        "value": 78.0
+      },
+      {
+        "unit": "价值点",
+        "value": 78.0
+      },
+      {
+        "unit": "点",
+        "value": 78.0
+      }
+    ],
+    "canonical_unit": "年度报告净效用点",
+    "canonical_value": 78.0
+  }
+}

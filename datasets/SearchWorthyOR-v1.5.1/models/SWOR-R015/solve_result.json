@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R015",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 116.0,
+  "patched_objective": 108.0,
+  "base_incumbent": {
+    "brake_defect_route": 1,
+    "horn_defect_route": 0,
+    "all_good_route": 0,
+    "no_repair": 1,
+    "repair_brakes": 0,
+    "repair_horn": 0,
+    "full_repair": 0
+  },
+  "patched_incumbent": {
+    "brake_defect_route": 0,
+    "horn_defect_route": 1,
+    "all_good_route": 0,
+    "no_repair": 0,
+    "repair_brakes": 0,
+    "repair_horn": 1,
+    "full_repair": 0
+  },
+  "base_feasible_assignment_count": 12,
+  "patched_feasible_assignment_count": 8,
+  "base_optimal_actions": [
+    {
+      "brake_defect_route": 1,
+      "horn_defect_route": 0,
+      "all_good_route": 0,
+      "no_repair": 1,
+      "repair_brakes": 0,
+      "repair_horn": 0,
+      "full_repair": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "brake_defect_route": 0,
+      "horn_defect_route": 1,
+      "all_good_route": 0,
+      "no_repair": 0,
+      "repair_brakes": 0,
+      "repair_horn": 1,
+      "full_repair": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "运输任务净效用点",
+        "value": 108.0
+      },
+      {
+        "unit": "价值点",
+        "value": 108.0
+      },
+      {
+        "unit": "点",
+        "value": 108.0
+      }
+    ],
+    "canonical_unit": "运输任务净效用点",
+    "canonical_value": 108.0
+  }
+}

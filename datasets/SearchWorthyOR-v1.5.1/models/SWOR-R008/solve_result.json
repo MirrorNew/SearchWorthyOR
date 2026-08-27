@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R008",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 12,
+  "base_objective": 82.0,
+  "base_incumbent": {
+    "listed_stock": 1,
+    "municipal_security": 0,
+    "exempt_contract": 0,
+    "same_day": 0,
+    "next_business_day": 0,
+    "second_business_day": 0,
+    "third_business_day": 1
+  },
+  "base_optimal_actions": [
+    {
+      "listed_stock": 1,
+      "municipal_security": 0,
+      "exempt_contract": 0,
+      "same_day": 0,
+      "next_business_day": 0,
+      "second_business_day": 0,
+      "third_business_day": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 10,
+  "patched_objective": 78.0,
+  "patched_incumbent": {
+    "listed_stock": 0,
+    "municipal_security": 0,
+    "exempt_contract": 1,
+    "same_day": 0,
+    "next_business_day": 0,
+    "second_business_day": 0,
+    "third_business_day": 1
+  },
+  "patched_optimal_actions": [
+    {
+      "listed_stock": 0,
+      "municipal_security": 0,
+      "exempt_contract": 1,
+      "same_day": 0,
+      "next_business_day": 0,
+      "second_business_day": 0,
+      "third_business_day": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 78.0,
+    "canonical_unit": "交易净效用点",
+    "accepted_equivalents": [
+      {
+        "unit": "交易净效用点",
+        "value": 78.0
+      },
+      {
+        "unit": "价值点",
+        "value": 78.0
+      },
+      {
+        "unit": "点",
+        "value": 78.0
+      }
+    ]
+  }
+}

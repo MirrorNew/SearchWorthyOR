@@ -1,0 +1,166 @@
+{
+  "schema_version": "searchworthyor.v151.five_baselines.v1",
+  "experiment_name": "SearchWorthyOR V1.5.1 Five Baselines",
+  "experiment_root": ".",
+  "dataset_root": "../../datasets/SearchWorthyOR-v1.5.1",
+  "credential_file": ".env.local",
+  "public_input_file": "selected_public_cases.jsonl",
+  "task_matrix_file": "task_matrix.jsonl",
+  "model": {
+    "name": "gpt-5.6-luna",
+    "reasoning_effort": "xhigh",
+    "temperature": 1
+  },
+  "provider": {
+    "name": "shubiaobiao",
+    "base_url": "https://api.shubiaobiao.cn/v1",
+    "chat_endpoint": "/chat/completions",
+    "responses_endpoint": "/responses",
+    "read_base_url_and_key_only_from_local_env": true,
+    "provider_fallback": false
+  },
+  "inputs": {
+    "case_suffixes": ["C1", "C2"],
+    "case_count": 240,
+    "source_task_count": 120,
+    "model_fields": ["id", "case_id", "prompt_zh"],
+    "private_gold_visible_to_runner": false
+  },
+  "search_profiles": {
+    "shubiaobiao_hosted_search_shared": {
+      "endpoint": "/responses",
+      "tool": "web_search",
+      "search_context_size": "low",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "xhigh",
+      "temperature": 1,
+      "max_query_chars": 320,
+      "max_queries_per_case": 3,
+      "tool_calls_per_planned_query": 1,
+      "max_exposed_results_per_query": 6,
+      "max_opened_pages_per_query": 3,
+      "max_page_attempts_per_query": 6,
+      "max_successful_pages_per_case": 9,
+      "max_page_attempts_per_case": 18,
+      "require_relevance": true,
+      "require_operator_compliance": true,
+      "save_planned_query": true,
+      "save_executed_query": true,
+      "save_query_rewrite": true,
+      "save_raw_results": true,
+      "save_opened_pages": true,
+      "save_evidence_text": true,
+      "backend_fallback": false
+    }
+  },
+  "chain12_parity_contract": {
+    "search_profile_for_both": "shubiaobiao_hosted_search_shared",
+    "same_model": true,
+    "same_provider": true,
+    "same_search_budget": true,
+    "same_retries": true,
+    "same_logging": true,
+    "same_candidate_adapter": true,
+    "same_scorer": true,
+    "only_allowed_differences": [
+      "Chain1 builds and solves a formal Base model before its Search Gate",
+      "Chain1 Search Gate observes Base formulation and Base solve result",
+      "Chain2 Search Gate observes prompt_zh only and forbids pre-modeling",
+      "Chain2 binds verified evidence as Raw-NL before one-shot final modeling"
+    ]
+  },
+  "methods": {
+    "Direct-v2 Base-Solve Gated Search": {
+      "chain": "chain1",
+      "pipeline_order": "base_model_then_solve_then_search_gate_then_search_then_patch_then_resolve",
+      "search_profile": "shubiaobiao_hosted_search_shared",
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "CoE": {
+      "chain": "native",
+      "pipeline_order": "native_conductor_experts_reducer",
+      "search_profile": null,
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "OptiMUS": {
+      "chain": "native",
+      "pipeline_order": "native_modeling_and_code_generation",
+      "search_profile": null,
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "optiminer-training-free": {
+      "chain": "native",
+      "pipeline_order": "native_training_free",
+      "search_profile": "native_arxiv_only",
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "Search-First Gated Raw-NL": {
+      "chain": "chain2",
+      "pipeline_order": "prompt_search_gate_then_search_then_raw_nl_then_model_and_solve",
+      "search_profile": "shubiaobiao_hosted_search_shared",
+      "formal_workers": 3,
+      "smoke_workers": 1
+    }
+  },
+  "parallelism": {
+    "launch_all_methods_together": true,
+    "formal_total_workers": 15,
+    "smoke_total_workers": 5,
+    "per_method_progress_interval": 10
+  },
+  "phases": {
+    "preflight": {
+      "chat_requests": 1,
+      "hosted_search_requests": 1,
+      "launch_requests_together": true,
+      "counted_as_benchmark": false
+    },
+    "smoke": {
+      "case_ids": ["SWOR-R001-C1", "SWOR-R001-C2"],
+      "cases": 2,
+      "methods": 5,
+      "instances": 10,
+      "rerun_in_formal": true
+    },
+    "formal": {
+      "cases": 240,
+      "methods": 5,
+      "instances": 1200,
+      "reuse_old_outputs": false
+    }
+  },
+  "retry": {
+    "infrastructure_retries": 1,
+    "retry_status_codes": [408, 429, 500, 502, 503, 504],
+    "retry_answer_errors": false,
+    "retry_parse_failures": false,
+    "retry_retrieval_failures": false,
+    "retry_output_contract_failures": false
+  },
+  "scoring": {
+    "planned_denominator_per_method": 240,
+    "primary_metrics": [
+      "decision_state_accuracy",
+      "applicability_accuracy",
+      "patch_accuracy",
+      "action_accuracy",
+      "objective_accuracy",
+      "final_answer_joint"
+    ],
+    "search_metrics_for": ["Direct-v2 Base-Solve Gated Search", "Search-First Gated Raw-NL"],
+    "patch_missing_for_non_search_native_methods": "NOT_OBSERVED",
+    "primary_paired_comparison": ["Direct-v2 Base-Solve Gated Search", "Search-First Gated Raw-NL"],
+    "paired_test": "exact_mcnemar"
+  },
+  "output_roots": {
+    "smoke": "runs/smoke",
+    "formal": "runs/formal",
+    "reports": "reports",
+    "scorer_private": "private"
+  },
+  "execution_status": "SMOKE_PASS_FORMAL_READY"
+}

@@ -1,0 +1,126 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R118",
+  "variant": "patched",
+  "family": "finance_portfolio",
+  "source_candidate_id": "B2-R118-DOL-SMALL-PLAN-SEVEN-DAY",
+  "variables": [
+    {
+      "name": "growth_fund",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将缴款配置到成长基金"
+    },
+    {
+      "name": "bond_fund",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将缴款配置到债券基金"
+    },
+    {
+      "name": "remit_day6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在第6个营业日汇入缴款"
+    },
+    {
+      "name": "remit_day9",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在第9个营业日汇入缴款"
+    },
+    {
+      "name": "balanced_fund",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将缴款配置到平衡基金"
+    },
+    {
+      "name": "capital_preservation_fund",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将缴款配置到本金保全基金"
+    },
+    {
+      "name": "remit_day4",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在第4个营业日汇入缴款"
+    },
+    {
+      "name": "remit_day7",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在第7个营业日汇入缴款"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "growth_fund": 10,
+      "bond_fund": 7,
+      "remit_day6": 1,
+      "remit_day9": 6,
+      "balanced_fund": 8,
+      "capital_preservation_fund": 6,
+      "remit_day4": 0,
+      "remit_day7": 3
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "配置效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_fund",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "growth_fund": 1,
+        "bond_fund": 1,
+        "balanced_fund": 1,
+        "capital_preservation_fund": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "choose_one_remittance_day",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "remit_day6": 1,
+        "remit_day9": 1,
+        "remit_day4": 1,
+        "remit_day7": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "small_plan_safe_harbor_excludes_day9",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "remit_day9": 1
+      },
+      "meaning": "small plan safe harbor excludes day9"
+    }
+  ],
+  "action_projection": [
+    "growth_fund",
+    "bond_fund",
+    "remit_day6",
+    "remit_day9",
+    "balanced_fund",
+    "capital_preservation_fund",
+    "remit_day4",
+    "remit_day7"
+  ]
+}

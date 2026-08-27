@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R096",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 28,
+  "base_objective": 99.0,
+  "base_incumbent": {
+    "carry_order_atlas": 1,
+    "carry_order_birch": 0,
+    "carry_order_cove": 1,
+    "carry_order_dune": 0,
+    "carry_order_elm": 0,
+    "carry_order_fjord": 0,
+    "carry_order_grove": 0,
+    "carry_order_haven": 0
+  },
+  "base_optimal_actions": [
+    {
+      "carry_order_atlas": 1,
+      "carry_order_birch": 0,
+      "carry_order_cove": 1,
+      "carry_order_dune": 0,
+      "carry_order_elm": 0,
+      "carry_order_fjord": 0,
+      "carry_order_grove": 0,
+      "carry_order_haven": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 6,
+  "patched_objective": 92.0,
+  "patched_incumbent": {
+    "carry_order_atlas": 0,
+    "carry_order_birch": 1,
+    "carry_order_cove": 0,
+    "carry_order_dune": 1,
+    "carry_order_elm": 0,
+    "carry_order_fjord": 0,
+    "carry_order_grove": 0,
+    "carry_order_haven": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "carry_order_atlas": 0,
+      "carry_order_birch": 1,
+      "carry_order_cove": 0,
+      "carry_order_dune": 1,
+      "carry_order_elm": 0,
+      "carry_order_fjord": 0,
+      "carry_order_grove": 0,
+      "carry_order_haven": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 92.0,
+    "canonical_unit": "运输收益点",
+    "accepted_equivalents": [
+      {
+        "unit": "运输收益点",
+        "value": 92.0
+      },
+      {
+        "unit": "点",
+        "value": 92.0
+      }
+    ]
+  }
+}

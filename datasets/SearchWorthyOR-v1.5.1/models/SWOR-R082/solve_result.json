@@ -1,0 +1,92 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R082",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 11,
+  "base_objective": 20.0,
+  "base_incumbent": {
+    "assign_arden_north": 1,
+    "assign_arden_south": 0,
+    "assign_beck_north": 0,
+    "assign_beck_south": 0,
+    "assign_cobalt_north": 0,
+    "assign_cobalt_south": 0,
+    "assign_dunlin_north": 0,
+    "assign_dunlin_south": 0,
+    "assign_ember_north": 0,
+    "assign_ember_south": 0
+  },
+  "base_optimal_actions": [
+    {
+      "assign_arden_north": 1,
+      "assign_arden_south": 0,
+      "assign_beck_north": 0,
+      "assign_beck_south": 0,
+      "assign_cobalt_north": 0,
+      "assign_cobalt_south": 0,
+      "assign_dunlin_north": 0,
+      "assign_dunlin_south": 0,
+      "assign_ember_north": 0,
+      "assign_ember_south": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 101,
+  "patched_objective": 59.0,
+  "patched_incumbent": {
+    "assign_arden_north": 1,
+    "assign_arden_south": 0,
+    "assign_beck_north": 0,
+    "assign_beck_south": 1,
+    "assign_cobalt_north": 0,
+    "assign_cobalt_south": 1,
+    "assign_dunlin_north": 1,
+    "assign_dunlin_south": 0,
+    "assign_ember_north": 0,
+    "assign_ember_south": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "assign_arden_north": 1,
+      "assign_arden_south": 0,
+      "assign_beck_north": 0,
+      "assign_beck_south": 1,
+      "assign_cobalt_north": 0,
+      "assign_cobalt_south": 1,
+      "assign_dunlin_north": 1,
+      "assign_dunlin_south": 0,
+      "assign_ember_north": 0,
+      "assign_ember_south": 0
+    },
+    {
+      "assign_arden_north": 1,
+      "assign_arden_south": 0,
+      "assign_beck_north": 1,
+      "assign_beck_south": 0,
+      "assign_cobalt_north": 0,
+      "assign_cobalt_south": 1,
+      "assign_dunlin_north": 0,
+      "assign_dunlin_south": 1,
+      "assign_ember_north": 0,
+      "assign_ember_south": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 59.0,
+    "canonical_unit": "贡献点",
+    "accepted_equivalents": [
+      {
+        "unit": "贡献点",
+        "value": 59.0
+      },
+      {
+        "unit": "点",
+        "value": 59.0
+      }
+    ]
+  }
+}

@@ -1,0 +1,84 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R063",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 111.0,
+  "patched_objective": 99.0,
+  "base_incumbent": {
+    "table_a3_facility": 0,
+    "table_a4_27k_facility": 0,
+    "combustion_only_27k_35mmbtu": 1,
+    "unlisted_18k_facility": 0,
+    "no_annual_report": 1,
+    "combustion_only_report": 0,
+    "all_applicable_sources_report": 0,
+    "no_monitoring_package": 1,
+    "combustion_meter_package": 0,
+    "enterprise_inventory_package": 0
+  },
+  "patched_incumbent": {
+    "table_a3_facility": 0,
+    "table_a4_27k_facility": 0,
+    "combustion_only_27k_35mmbtu": 1,
+    "unlisted_18k_facility": 0,
+    "no_annual_report": 0,
+    "combustion_only_report": 1,
+    "all_applicable_sources_report": 0,
+    "no_monitoring_package": 0,
+    "combustion_meter_package": 1,
+    "enterprise_inventory_package": 0
+  },
+  "base_feasible_assignment_count": 36,
+  "patched_feasible_assignment_count": 12,
+  "base_optimal_actions": [
+    {
+      "table_a3_facility": 0,
+      "table_a4_27k_facility": 0,
+      "combustion_only_27k_35mmbtu": 1,
+      "unlisted_18k_facility": 0,
+      "no_annual_report": 1,
+      "combustion_only_report": 0,
+      "all_applicable_sources_report": 0,
+      "no_monitoring_package": 1,
+      "combustion_meter_package": 0,
+      "enterprise_inventory_package": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "table_a3_facility": 0,
+      "table_a4_27k_facility": 0,
+      "combustion_only_27k_35mmbtu": 1,
+      "unlisted_18k_facility": 0,
+      "no_annual_report": 0,
+      "combustion_only_report": 1,
+      "all_applicable_sources_report": 0,
+      "no_monitoring_package": 0,
+      "combustion_meter_package": 1,
+      "enterprise_inventory_package": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "年度运营净效用点",
+        "value": 99.0
+      },
+      {
+        "unit": "价值点",
+        "value": 99.0
+      },
+      {
+        "unit": "点",
+        "value": 99.0
+      }
+    ],
+    "canonical_unit": "年度运营净效用点",
+    "canonical_value": 99.0
+  }
+}

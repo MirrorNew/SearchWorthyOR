@@ -1,0 +1,68 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R078",
+  "variant": "patched",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "PASS2-R103-FAA-FLIGHT-ATTENDANT-REST",
+  "variables": [
+    {
+      "name": "rest_9_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排9小时连续休息"
+    },
+    {
+      "name": "rest_10_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排10小时连续休息"
+    },
+    {
+      "name": "rest_12_hours",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排12小时连续休息"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "rest_9_hours": 15,
+      "rest_10_hours": 11,
+      "rest_12_hours": 8
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "周转效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_rest_window",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "rest_9_hours": 1,
+        "rest_10_hours": 1,
+        "rest_12_hours": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "nine_hour_turnaround_unavailable",
+      "sense": "=",
+      "rhs": 0,
+      "coefficients": {
+        "rest_9_hours": 1
+      },
+      "meaning": "nine hour turnaround unavailable"
+    }
+  ],
+  "action_projection": [
+    "rest_9_hours",
+    "rest_10_hours",
+    "rest_12_hours"
+  ]
+}

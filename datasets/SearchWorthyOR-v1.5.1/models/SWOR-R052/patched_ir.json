@@ -1,0 +1,221 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R052",
+  "variant": "patched",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "US-FDA-2026-CYCLOPHOSPHAMIDE-RECALL",
+  "variables": [
+    {
+      "name": "release_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次A释放给医院订单"
+    },
+    {
+      "name": "release_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次B释放给医院订单"
+    },
+    {
+      "name": "release_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次C释放给医院订单"
+    },
+    {
+      "name": "release_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次D释放给医院订单"
+    },
+    {
+      "name": "release_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次E释放给医院订单"
+    },
+    {
+      "name": "release_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将候选批次F释放给医院订单"
+    },
+    {
+      "name": "return_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次A转入退货流程"
+    },
+    {
+      "name": "return_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次B转入退货流程"
+    },
+    {
+      "name": "return_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次C转入退货流程"
+    },
+    {
+      "name": "return_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次D转入退货流程"
+    },
+    {
+      "name": "return_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次E转入退货流程"
+    },
+    {
+      "name": "return_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把候选批次F转入退货流程"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "release_a": 12,
+      "release_b": 11,
+      "release_c": 10,
+      "release_d": 9,
+      "release_e": 8,
+      "release_f": 7,
+      "return_a": -1,
+      "return_b": -1,
+      "return_c": -1,
+      "return_d": -1,
+      "return_e": -1,
+      "return_f": -1
+    },
+    "meaning": "医院订单供货价值减去召回退货处理成本",
+    "unit": "价值点"
+  },
+  "constraints": [
+    {
+      "name": "release_two_lots",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "release_a": 1,
+        "release_b": 1,
+        "release_c": 1,
+        "release_d": 1,
+        "release_e": 1,
+        "release_f": 1
+      },
+      "meaning": "恰好选择两个候选"
+    },
+    {
+      "name": "release_or_return_a",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_a": 1,
+        "return_a": 1
+      },
+      "meaning": "批次A不能同时释放和退货"
+    },
+    {
+      "name": "release_or_return_b",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_b": 1,
+        "return_b": 1
+      },
+      "meaning": "批次B不能同时释放和退货"
+    },
+    {
+      "name": "release_or_return_c",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_c": 1,
+        "return_c": 1
+      },
+      "meaning": "批次C不能同时释放和退货"
+    },
+    {
+      "name": "release_or_return_d",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_d": 1,
+        "return_d": 1
+      },
+      "meaning": "批次D不能同时释放和退货"
+    },
+    {
+      "name": "release_or_return_e",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_e": 1,
+        "return_e": 1
+      },
+      "meaning": "批次E不能同时释放和退货"
+    },
+    {
+      "name": "release_or_return_f",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "release_f": 1,
+        "return_f": 1
+      },
+      "meaning": "批次F不能同时释放和退货"
+    },
+    {
+      "name": "return_a_after_recall",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "return_a": 1
+      },
+      "meaning": "批次A进入退货流程"
+    },
+    {
+      "name": "return_b_after_recall",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "return_b": 1
+      },
+      "meaning": "批次B进入退货流程"
+    }
+  ],
+  "action_projection": [
+    "release_a",
+    "release_b",
+    "release_c",
+    "release_d",
+    "release_e",
+    "release_f",
+    "return_a",
+    "return_b",
+    "return_c",
+    "return_d",
+    "return_e",
+    "return_f"
+  ]
+}

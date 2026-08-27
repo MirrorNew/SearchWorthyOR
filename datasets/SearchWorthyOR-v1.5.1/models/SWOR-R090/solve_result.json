@@ -1,0 +1,80 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R090",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 249,
+  "base_objective": 73.0,
+  "base_incumbent": {
+    "start_jinarc_chen": 1,
+    "start_jinarc_lim": 1,
+    "start_jinarc_tan": 1,
+    "start_standard_ong": 1,
+    "lab_chen": 0,
+    "lab_lim": 0,
+    "lab_tan": 0,
+    "hcp_certification_session": 0,
+    "stock_checklist_session": 0
+  },
+  "base_optimal_actions": [
+    {
+      "start_jinarc_chen": 1,
+      "start_jinarc_lim": 1,
+      "start_jinarc_tan": 1,
+      "start_standard_ong": 1,
+      "lab_chen": 0,
+      "lab_lim": 0,
+      "lab_tan": 0,
+      "hcp_certification_session": 0,
+      "stock_checklist_session": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 101,
+  "patched_objective": 37.0,
+  "patched_incumbent": {
+    "start_jinarc_chen": 1,
+    "start_jinarc_lim": 1,
+    "start_jinarc_tan": 0,
+    "start_standard_ong": 0,
+    "lab_chen": 1,
+    "lab_lim": 1,
+    "lab_tan": 0,
+    "hcp_certification_session": 0,
+    "stock_checklist_session": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "start_jinarc_chen": 1,
+      "start_jinarc_lim": 1,
+      "start_jinarc_tan": 0,
+      "start_standard_ong": 0,
+      "lab_chen": 1,
+      "lab_lim": 1,
+      "lab_tan": 0,
+      "hcp_certification_session": 0,
+      "stock_checklist_session": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 37.0,
+    "canonical_unit": "净价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "净价值点",
+        "value": 37.0
+      },
+      {
+        "unit": "价值点",
+        "value": 37.0
+      },
+      {
+        "unit": "点",
+        "value": 37.0
+      }
+    ]
+  }
+}

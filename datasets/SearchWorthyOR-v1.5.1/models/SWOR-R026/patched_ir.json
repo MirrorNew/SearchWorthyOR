@@ -1,0 +1,167 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R026",
+  "variant": "patched",
+  "family": "facility_network",
+  "source_candidate_id": "SRCV3-R005-PHMSA-EMERGENCY-RESPONSE-NUMBER-COVERAGE-20260804",
+  "variables": [
+    {
+      "name": "dispatch_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行08:00至12:00的运输A"
+    },
+    {
+      "name": "dispatch_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行10:00至21:00的运输B"
+    },
+    {
+      "name": "dispatch_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行13:00至22:00的运输C"
+    },
+    {
+      "name": "dispatch_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行21:00至次日02:00的运输D"
+    },
+    {
+      "name": "dispatch_e_limited",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行按limited quantity条款交运的运输E"
+    },
+    {
+      "name": "dispatch_f_dry_ice",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行正确描述为Dry ice的运输F"
+    },
+    {
+      "name": "day_response_desk",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用07:00至19:00日间应急信息值班台"
+    },
+    {
+      "name": "night_response_desk",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用19:00至次日07:00夜间应急信息值班台"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "dispatch_a": 60,
+      "dispatch_b": 59,
+      "dispatch_c": 58,
+      "dispatch_d": 57,
+      "dispatch_e_limited": 46,
+      "dispatch_f_dry_ice": 45,
+      "day_response_desk": -30,
+      "night_response_desk": -30
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "净运输价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_three_dispatches",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "dispatch_a": 1,
+        "dispatch_b": 1,
+        "dispatch_c": 1,
+        "dispatch_d": 1,
+        "dispatch_e_limited": 1,
+        "dispatch_f_dry_ice": 1
+      },
+      "meaning": "Select exactly three dispatches"
+    },
+    {
+      "name": "dispatch_a_requires_day_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_a": 1,
+        "day_response_desk": -1
+      },
+      "meaning": "dispatch a requires day desk"
+    },
+    {
+      "name": "dispatch_b_requires_day_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_b": 1,
+        "day_response_desk": -1
+      },
+      "meaning": "dispatch b requires day desk"
+    },
+    {
+      "name": "dispatch_b_requires_night_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_b": 1,
+        "night_response_desk": -1
+      },
+      "meaning": "dispatch b requires night desk"
+    },
+    {
+      "name": "dispatch_c_requires_day_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_c": 1,
+        "day_response_desk": -1
+      },
+      "meaning": "dispatch c requires day desk"
+    },
+    {
+      "name": "dispatch_c_requires_night_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_c": 1,
+        "night_response_desk": -1
+      },
+      "meaning": "dispatch c requires night desk"
+    },
+    {
+      "name": "dispatch_d_requires_night_desk",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "dispatch_d": 1,
+        "night_response_desk": -1
+      },
+      "meaning": "dispatch d requires night desk"
+    }
+  ],
+  "action_projection": [
+    "dispatch_a",
+    "dispatch_b",
+    "dispatch_c",
+    "dispatch_d",
+    "dispatch_e_limited",
+    "dispatch_f_dry_ice",
+    "day_response_desk",
+    "night_response_desk"
+  ]
+}

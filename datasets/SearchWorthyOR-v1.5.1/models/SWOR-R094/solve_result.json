@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R094",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 120.0,
+  "patched_objective": 103.0,
+  "base_incumbent": {
+    "air_45psi": 1,
+    "air_25psi": 0,
+    "vacuum_clean": 0,
+    "air_20psi": 0,
+    "no_protection": 1,
+    "chip_guard_only": 0,
+    "ppe_only": 0,
+    "guard_and_ppe": 0
+  },
+  "patched_incumbent": {
+    "air_45psi": 0,
+    "air_25psi": 1,
+    "vacuum_clean": 0,
+    "air_20psi": 0,
+    "no_protection": 0,
+    "chip_guard_only": 0,
+    "ppe_only": 0,
+    "guard_and_ppe": 1
+  },
+  "base_feasible_assignment_count": 16,
+  "patched_feasible_assignment_count": 6,
+  "base_optimal_actions": [
+    {
+      "air_45psi": 1,
+      "air_25psi": 0,
+      "vacuum_clean": 0,
+      "air_20psi": 0,
+      "no_protection": 1,
+      "chip_guard_only": 0,
+      "ppe_only": 0,
+      "guard_and_ppe": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "air_45psi": 0,
+      "air_25psi": 1,
+      "vacuum_clean": 0,
+      "air_20psi": 0,
+      "no_protection": 0,
+      "chip_guard_only": 0,
+      "ppe_only": 0,
+      "guard_and_ppe": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "生产效用点",
+        "value": 103.0
+      },
+      {
+        "unit": "价值点",
+        "value": 103.0
+      },
+      {
+        "unit": "点",
+        "value": 103.0
+      }
+    ],
+    "canonical_unit": "生产效用点",
+    "canonical_value": 103.0
+  }
+}

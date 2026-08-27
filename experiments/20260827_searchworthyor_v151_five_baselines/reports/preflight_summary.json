@@ -1,0 +1,18 @@
+{
+  "status": "PASS",
+  "launched_concurrently": true,
+  "launch_skew_seconds": 0.00032869999995455146,
+  "chat_actual_model": "gpt-5.6-luna",
+  "responses_actual_model": "gpt-5.6-luna",
+  "reasoning_effort": "xhigh",
+  "temperature": 1.0,
+  "web_search_call_count": 1,
+  "planned_query": "site:ecfr.gov current 14 CFR 121.467 flight attendant rest requirements",
+  "executed_query": "site:ecfr.gov current 14 CFR 121.467 flight attendant rest requirements",
+  "query_rewritten": false,
+  "backend_raw_result_count": 11,
+  "relevant_operator_compliant_results": 6,
+  "backend": "shubiaobiao_responses_web_search",
+  "fallback_used": false,
+  "api_key_leakage": 0
+}

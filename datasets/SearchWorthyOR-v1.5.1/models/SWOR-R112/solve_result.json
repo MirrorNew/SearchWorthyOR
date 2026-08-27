@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R112",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 4,
+  "base_objective": 24.0,
+  "base_incumbent": {
+    "store24h50f": 0,
+    "store40h50f": 1,
+    "store40h45f": 0,
+    "store60h42f": 0
+  },
+  "base_optimal_actions": [
+    {
+      "store24h50f": 0,
+      "store40h50f": 1,
+      "store40h45f": 0,
+      "store60h42f": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 2,
+  "patched_objective": 20.0,
+  "patched_incumbent": {
+    "store24h50f": 0,
+    "store40h50f": 0,
+    "store40h45f": 1,
+    "store60h42f": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "store24h50f": 0,
+      "store40h50f": 0,
+      "store40h45f": 1,
+      "store60h42f": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 20.0,
+    "canonical_unit": "库存周转净效用点",
+    "accepted_equivalents": [
+      {
+        "unit": "库存周转净效用点",
+        "value": 20.0
+      },
+      {
+        "unit": "价值点",
+        "value": 20.0
+      },
+      {
+        "unit": "点",
+        "value": 20.0
+      }
+    ]
+  }
+}

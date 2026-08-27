@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R113",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 24.0,
+  "patched_objective": 20.0,
+  "base_incumbent": {
+    "flame_visible8": 1,
+    "flame_visible5": 0,
+    "noflame_visible0": 0,
+    "flame_visible2": 0
+  },
+  "patched_incumbent": {
+    "flame_visible8": 0,
+    "flame_visible5": 1,
+    "noflame_visible0": 0,
+    "flame_visible2": 0
+  },
+  "base_feasible_assignment_count": 4,
+  "patched_feasible_assignment_count": 2,
+  "base_optimal_actions": [
+    {
+      "flame_visible8": 1,
+      "flame_visible5": 0,
+      "noflame_visible0": 0,
+      "flame_visible2": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "flame_visible8": 0,
+      "flame_visible5": 1,
+      "noflame_visible0": 0,
+      "flame_visible2": 0
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "火炬运行净效用点",
+        "value": 20.0
+      },
+      {
+        "unit": "价值点",
+        "value": 20.0
+      },
+      {
+        "unit": "点",
+        "value": 20.0
+      }
+    ],
+    "canonical_unit": "火炬运行净效用点",
+    "canonical_value": 20.0
+  }
+}

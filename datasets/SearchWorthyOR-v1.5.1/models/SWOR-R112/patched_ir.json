@@ -1,0 +1,87 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R112",
+  "variant": "patched",
+  "family": "inventory_supply_chain",
+  "source_candidate_id": "A5-R112-FDA-SHELL-EGG-TEMPERATURE",
+  "variables": [
+    {
+      "name": "store24h50f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "产蛋24小时后由零售场所收货并立即置于50°F环境"
+    },
+    {
+      "name": "store40h50f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "产蛋40小时后由零售场所收货并立即置于50°F环境"
+    },
+    {
+      "name": "store40h45f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "产蛋40小时后由零售场所收货并立即置于45°F环境"
+    },
+    {
+      "name": "store60h42f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "产蛋60小时后由零售场所收货并立即置于42°F环境"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "store24h50f": 18,
+      "store40h50f": 24,
+      "store40h45f": 20,
+      "store60h42f": 17
+    },
+    "meaning": "Total decision value",
+    "unit": "库存周转净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_egg_storage_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "store24h50f": 1,
+        "store40h50f": 1,
+        "store40h45f": 1,
+        "store60h42f": 1
+      },
+      "meaning": "Exactly one listed package must be selected"
+    },
+    {
+      "name": "exclude_24h_50f",
+      "sense": "=",
+      "coefficients": {
+        "store24h50f": 1
+      },
+      "rhs": 0,
+      "meaning": "排除零售场所在产蛋后24小时收货并立即置于50°F环境的方案"
+    },
+    {
+      "name": "exclude_40h_50f",
+      "sense": "=",
+      "coefficients": {
+        "store40h50f": 1
+      },
+      "rhs": 0,
+      "meaning": "排除零售场所在产蛋后40小时收货并立即置于50°F环境的方案"
+    }
+  ],
+  "action_projection": [
+    "store24h50f",
+    "store40h50f",
+    "store40h45f",
+    "store60h42f"
+  ]
+}

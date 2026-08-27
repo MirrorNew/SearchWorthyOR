@@ -1,0 +1,92 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R057",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 40,
+  "base_objective": 62.0,
+  "base_incumbent": {
+    "duty23_sleep6": 0,
+    "duty24_agreement_sleep6": 0,
+    "duty26_agreement_sleep4": 1,
+    "duty24_no_agreement_sleep8": 0,
+    "solo_operator": 0,
+    "oncall_backup": 1,
+    "second_operator": 0,
+    "pay16_hours": 1,
+    "pay18_hours": 0,
+    "pay22_hours": 0,
+    "pay24_hours": 0,
+    "pay26_hours": 0
+  },
+  "base_optimal_actions": [
+    {
+      "duty23_sleep6": 0,
+      "duty24_agreement_sleep6": 0,
+      "duty26_agreement_sleep4": 1,
+      "duty24_no_agreement_sleep8": 0,
+      "solo_operator": 0,
+      "oncall_backup": 1,
+      "second_operator": 0,
+      "pay16_hours": 1,
+      "pay18_hours": 0,
+      "pay22_hours": 0,
+      "pay24_hours": 0,
+      "pay26_hours": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 20,
+  "patched_objective": 53.0,
+  "patched_incumbent": {
+    "duty23_sleep6": 0,
+    "duty24_agreement_sleep6": 1,
+    "duty26_agreement_sleep4": 0,
+    "duty24_no_agreement_sleep8": 0,
+    "solo_operator": 1,
+    "oncall_backup": 0,
+    "second_operator": 0,
+    "pay16_hours": 0,
+    "pay18_hours": 1,
+    "pay22_hours": 0,
+    "pay24_hours": 0,
+    "pay26_hours": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "duty23_sleep6": 0,
+      "duty24_agreement_sleep6": 1,
+      "duty26_agreement_sleep4": 0,
+      "duty24_no_agreement_sleep8": 0,
+      "solo_operator": 1,
+      "oncall_backup": 0,
+      "second_operator": 0,
+      "pay16_hours": 0,
+      "pay18_hours": 1,
+      "pay22_hours": 0,
+      "pay24_hours": 0,
+      "pay26_hours": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 53.0,
+    "canonical_unit": "值守净效用点",
+    "accepted_equivalents": [
+      {
+        "unit": "值守净效用点",
+        "value": 53.0
+      },
+      {
+        "unit": "价值点",
+        "value": 53.0
+      },
+      {
+        "unit": "点",
+        "value": 53.0
+      }
+    ]
+  }
+}

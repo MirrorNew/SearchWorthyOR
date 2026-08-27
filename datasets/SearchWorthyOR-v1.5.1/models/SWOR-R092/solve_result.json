@@ -1,0 +1,68 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R092",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 20,
+  "base_objective": 288.0,
+  "base_incumbent": {
+    "import_consumer_pce_spot_remover": 1,
+    "process_consumer_pce_adhesive": 1,
+    "distribute_pce_to_retailers": 1,
+    "manufacture_pce_drycleaning_solvent": 0,
+    "manufacture_pce_aerospace_wcpp": 0,
+    "stock_nonpce_water_cleaner": 0
+  },
+  "base_optimal_actions": [
+    {
+      "import_consumer_pce_spot_remover": 1,
+      "process_consumer_pce_adhesive": 1,
+      "distribute_pce_to_retailers": 1,
+      "manufacture_pce_drycleaning_solvent": 0,
+      "manufacture_pce_aerospace_wcpp": 0,
+      "stock_nonpce_water_cleaner": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 10,
+  "patched_objective": 276.0,
+  "patched_incumbent": {
+    "import_consumer_pce_spot_remover": 0,
+    "process_consumer_pce_adhesive": 1,
+    "distribute_pce_to_retailers": 1,
+    "manufacture_pce_drycleaning_solvent": 1,
+    "manufacture_pce_aerospace_wcpp": 0,
+    "stock_nonpce_water_cleaner": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "import_consumer_pce_spot_remover": 0,
+      "process_consumer_pce_adhesive": 1,
+      "distribute_pce_to_retailers": 1,
+      "manufacture_pce_drycleaning_solvent": 1,
+      "manufacture_pce_aerospace_wcpp": 0,
+      "stock_nonpce_water_cleaner": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 276.0,
+    "canonical_unit": "供应组合净收益点",
+    "accepted_equivalents": [
+      {
+        "unit": "供应组合净收益点",
+        "value": 276.0
+      },
+      {
+        "unit": "价值点",
+        "value": 276.0
+      },
+      {
+        "unit": "点",
+        "value": 276.0
+      }
+    ]
+  }
+}

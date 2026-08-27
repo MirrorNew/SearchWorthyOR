@@ -1,0 +1,84 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R087",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 322,
+  "base_objective": 58.0,
+  "base_incumbent": {
+    "select_eco_islamic": 1,
+    "select_chinggis": 1,
+    "select_sberbank_india": 1,
+    "select_pilotfinance": 1,
+    "select_rapira": 0,
+    "select_aifory": 0,
+    "select_yelo": 0,
+    "select_german_bill": 0,
+    "select_dutch_bill": 0,
+    "select_french_bill": 0,
+    "select_cash_reserve": 0
+  },
+  "base_optimal_actions": [
+    {
+      "select_eco_islamic": 1,
+      "select_chinggis": 1,
+      "select_sberbank_india": 1,
+      "select_pilotfinance": 1,
+      "select_rapira": 0,
+      "select_aifory": 0,
+      "select_yelo": 0,
+      "select_german_bill": 0,
+      "select_dutch_bill": 0,
+      "select_french_bill": 0,
+      "select_cash_reserve": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "patched_feasible_assignment_count": 35,
+  "patched_objective": 42.0,
+  "patched_incumbent": {
+    "select_eco_islamic": 0,
+    "select_chinggis": 0,
+    "select_sberbank_india": 0,
+    "select_pilotfinance": 0,
+    "select_rapira": 1,
+    "select_aifory": 1,
+    "select_yelo": 1,
+    "select_german_bill": 1,
+    "select_dutch_bill": 0,
+    "select_french_bill": 0,
+    "select_cash_reserve": 0
+  },
+  "patched_optimal_actions": [
+    {
+      "select_eco_islamic": 0,
+      "select_chinggis": 0,
+      "select_sberbank_india": 0,
+      "select_pilotfinance": 0,
+      "select_rapira": 1,
+      "select_aifory": 1,
+      "select_yelo": 1,
+      "select_german_bill": 1,
+      "select_dutch_bill": 0,
+      "select_french_bill": 0,
+      "select_cash_reserve": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 42.0,
+    "canonical_unit": "收益点",
+    "accepted_equivalents": [
+      {
+        "unit": "收益点",
+        "value": 42.0
+      },
+      {
+        "unit": "点",
+        "value": 42.0
+      }
+    ]
+  }
+}

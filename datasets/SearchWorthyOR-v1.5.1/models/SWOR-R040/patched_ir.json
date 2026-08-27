@@ -1,0 +1,301 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R040",
+  "variant": "patched",
+  "family": "telecom_service",
+  "source_candidate_id": "US-ECFR-FCC-NOTIFICATION-OPTOUT-CLOCKS-2026",
+  "variables": [
+    {
+      "name": "select_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包A"
+    },
+    {
+      "name": "select_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包B"
+    },
+    {
+      "name": "select_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包C"
+    },
+    {
+      "name": "select_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包D"
+    },
+    {
+      "name": "select_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包E"
+    },
+    {
+      "name": "select_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包F"
+    },
+    {
+      "name": "select_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包G"
+    },
+    {
+      "name": "select_h",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择响应包H"
+    },
+    {
+      "name": "prepare_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为A执行立即停止加速"
+    },
+    {
+      "name": "prepare_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为B执行立即停止加速"
+    },
+    {
+      "name": "prepare_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为C执行立即停止加速"
+    },
+    {
+      "name": "prepare_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为D执行立即停止加速"
+    },
+    {
+      "name": "prepare_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为E执行立即停止加速"
+    },
+    {
+      "name": "prepare_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为F执行立即停止加速"
+    },
+    {
+      "name": "prepare_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为G执行立即停止加速"
+    },
+    {
+      "name": "prepare_h",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为H执行立即停止加速"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_a": 35,
+      "select_b": 31,
+      "select_c": 34,
+      "select_d": 33,
+      "select_e": 30,
+      "select_f": 29,
+      "select_g": 32,
+      "select_h": 28,
+      "prepare_a": -10,
+      "prepare_b": -10,
+      "prepare_c": -10,
+      "prepare_d": -10,
+      "prepare_e": -10,
+      "prepare_f": -10,
+      "prepare_g": -10,
+      "prepare_h": -10
+    },
+    "meaning": "三个候选贡献减去合规准备成本",
+    "unit": "净贡献点"
+  },
+  "constraints": [
+    {
+      "name": "select_three",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "select_a": 1,
+        "select_b": 1,
+        "select_c": 1,
+        "select_d": 1,
+        "select_e": 1,
+        "select_f": 1,
+        "select_g": 1,
+        "select_h": 1
+      },
+      "meaning": "恰好选择三个候选"
+    },
+    {
+      "name": "prepare_only_if_selected_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_a": 1,
+        "select_a": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_b",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_b": 1,
+        "select_b": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_c": 1,
+        "select_c": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_d",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_d": 1,
+        "select_d": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_e",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_e": 1,
+        "select_e": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_f",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_f": 1,
+        "select_f": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_g",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_g": 1,
+        "select_g": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "prepare_only_if_selected_h",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "prepare_h": 1,
+        "select_h": -1
+      },
+      "meaning": "准备动作只能用于已选择候选"
+    },
+    {
+      "name": "required_preparation_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_a": 1,
+        "prepare_a": -1
+      },
+      "meaning": "A被选择时须执行准备动作"
+    },
+    {
+      "name": "required_preparation_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_c": 1,
+        "prepare_c": -1
+      },
+      "meaning": "C被选择时须执行准备动作"
+    },
+    {
+      "name": "required_preparation_d",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_d": 1,
+        "prepare_d": -1
+      },
+      "meaning": "D被选择时须执行准备动作"
+    },
+    {
+      "name": "required_preparation_g",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "select_g": 1,
+        "prepare_g": -1
+      },
+      "meaning": "G被选择时须执行准备动作"
+    }
+  ],
+  "action_projection": [
+    "select_a",
+    "select_b",
+    "select_c",
+    "select_d",
+    "select_e",
+    "select_f",
+    "select_g",
+    "select_h",
+    "prepare_a",
+    "prepare_b",
+    "prepare_c",
+    "prepare_d",
+    "prepare_e",
+    "prepare_f",
+    "prepare_g",
+    "prepare_h"
+  ]
+}

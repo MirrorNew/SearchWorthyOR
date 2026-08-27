@@ -1,0 +1,104 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R027",
+  "solver": "complete enumeration (V1.5.1 rebuild verification)",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 42.0,
+  "patched_objective": 64.0,
+  "base_incumbent": {
+    "assign_ins_q1": 0,
+    "assign_ins_q2": 0,
+    "assign_ins_q3": 0,
+    "assign_ins_r": 1,
+    "assign_dealer_q1": 1,
+    "assign_dealer_q2": 0,
+    "assign_dealer_q3": 0,
+    "assign_dealer_r": 0,
+    "assign_bank30_q1": 0,
+    "assign_bank30_q2": 0,
+    "assign_bank30_q3": 1,
+    "assign_bank30_r": 0,
+    "assign_bank20_q1": 0,
+    "assign_bank20_q2": 1,
+    "assign_bank20_q3": 0,
+    "assign_bank20_r": 0
+  },
+  "patched_incumbent": {
+    "assign_ins_q1": 0,
+    "assign_ins_q2": 1,
+    "assign_ins_q3": 0,
+    "assign_ins_r": 0,
+    "assign_dealer_q1": 1,
+    "assign_dealer_q2": 0,
+    "assign_dealer_q3": 0,
+    "assign_dealer_r": 0,
+    "assign_bank30_q1": 0,
+    "assign_bank30_q2": 0,
+    "assign_bank30_q3": 1,
+    "assign_bank30_r": 0,
+    "assign_bank20_q1": 0,
+    "assign_bank20_q2": 0,
+    "assign_bank20_q3": 0,
+    "assign_bank20_r": 1
+  },
+  "base_feasible_assignment_count": 24,
+  "patched_feasible_assignment_count": 6,
+  "base_optimal_actions": [
+    {
+      "assign_ins_q1": 0,
+      "assign_ins_q2": 0,
+      "assign_ins_q3": 0,
+      "assign_ins_r": 1,
+      "assign_dealer_q1": 1,
+      "assign_dealer_q2": 0,
+      "assign_dealer_q3": 0,
+      "assign_dealer_r": 0,
+      "assign_bank30_q1": 0,
+      "assign_bank30_q2": 0,
+      "assign_bank30_q3": 1,
+      "assign_bank30_r": 0,
+      "assign_bank20_q1": 0,
+      "assign_bank20_q2": 1,
+      "assign_bank20_q3": 0,
+      "assign_bank20_r": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "assign_ins_q1": 0,
+      "assign_ins_q2": 1,
+      "assign_ins_q3": 0,
+      "assign_ins_r": 0,
+      "assign_dealer_q1": 1,
+      "assign_dealer_q2": 0,
+      "assign_dealer_q3": 0,
+      "assign_dealer_r": 0,
+      "assign_bank30_q1": 0,
+      "assign_bank30_q2": 0,
+      "assign_bank30_q3": 1,
+      "assign_bank30_r": 0,
+      "assign_bank20_q1": 0,
+      "assign_bank20_q2": 0,
+      "assign_bank20_q3": 0,
+      "assign_bank20_r": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "执行负担点",
+        "value": 64.0
+      },
+      {
+        "unit": "点",
+        "value": 64.0
+      }
+    ],
+    "canonical_unit": "执行负担点",
+    "canonical_value": 64.0
+  }
+}

@@ -1,0 +1,26 @@
+{
+  "schema_version": "searchworthyor.decision_state.v1",
+  "dataset_version": "SearchWorthyOR-v1.5.1",
+  "visibility": "PRIVATE_SCORER_ONLY",
+  "allowed_states": {
+    "RETAIN": {
+      "meaning_zh": "题外规则对当前 case 不产生模型修改；保留 Base IR 与基础解。",
+      "required_applicability": false,
+      "required_patch_cardinality": 0,
+      "target_model_variant": "base",
+      "decision_change_from_base": false
+    },
+    "PATCH_CHANGES": {
+      "meaning_zh": "题外规则适用于当前 case，并支持非空 typed Patch；重求解后的最优决策相对 Base IR 改变。",
+      "required_applicability": true,
+      "required_patch_cardinality": "NONZERO",
+      "target_model_variant": "patched",
+      "decision_change_from_base": true
+    }
+  },
+  "excluded_states": [
+    "PATCH_STABLE"
+  ],
+  "pair_rule": "Every source task has one RETAIN C1 case and one PATCH_CHANGES C2 case.",
+  "public_input_rule": "Only id, case_id and canonical prompt_zh are model input."
+}

@@ -1,0 +1,146 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R049",
+  "variant": "base",
+  "family": "healthcare_resources",
+  "source_candidate_id": "SRCV3-R049-FDA-MQSA-MEE-SOFTWARE-20260804",
+  "variables": [
+    {
+      "name": "restart_new_unit_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复新安装的乳腺摄影设备A"
+    },
+    {
+      "name": "restart_unchanged_qc_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复完成日常质控且未改变的乳腺摄影设备B"
+    },
+    {
+      "name": "restart_reassembled_unit_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复在原址拆卸后重装的乳腺摄影设备C"
+    },
+    {
+      "name": "restart_software_upgrade_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复已安装软件升级的乳腺摄影设备D"
+    },
+    {
+      "name": "restart_cleaned_unit_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复仅完成外部清洁且未改变的乳腺摄影设备E"
+    },
+    {
+      "name": "restart_powercycled_processor_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "优先恢复计划断电重启后未改变的影像处理器F"
+    },
+    {
+      "name": "mee_slot_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排A的乳腺摄影设备评估时段"
+    },
+    {
+      "name": "mee_slot_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排C的乳腺摄影设备评估时段"
+    },
+    {
+      "name": "mee_slot_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "安排D的乳腺摄影设备评估时段"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "restart_new_unit_a": 90,
+      "restart_unchanged_qc_b": 88,
+      "restart_reassembled_unit_c": 86,
+      "restart_software_upgrade_d": 94,
+      "restart_cleaned_unit_e": 84,
+      "restart_powercycled_processor_f": 82,
+      "mee_slot_a": -15,
+      "mee_slot_c": -15,
+      "mee_slot_d": -15
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "患者服务贡献点"
+  },
+  "constraints": [
+    {
+      "name": "prioritize_exactly_two_return_projects",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "restart_new_unit_a": 1,
+        "restart_unchanged_qc_b": 1,
+        "restart_reassembled_unit_c": 1,
+        "restart_software_upgrade_d": 1,
+        "restart_cleaned_unit_e": 1,
+        "restart_powercycled_processor_f": 1
+      },
+      "meaning": "Prioritize exactly two return-to-patient-service projects"
+    },
+    {
+      "name": "mee_a_only_with_project_a",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "mee_slot_a": 1,
+        "restart_new_unit_a": -1
+      },
+      "meaning": "The A evaluation slot can only accompany project A"
+    },
+    {
+      "name": "mee_c_only_with_project_c",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "mee_slot_c": 1,
+        "restart_reassembled_unit_c": -1
+      },
+      "meaning": "The C evaluation slot can only accompany project C"
+    },
+    {
+      "name": "mee_d_only_with_project_d",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "mee_slot_d": 1,
+        "restart_software_upgrade_d": -1
+      },
+      "meaning": "The D evaluation slot can only accompany project D"
+    }
+  ],
+  "action_projection": [
+    "restart_new_unit_a",
+    "restart_unchanged_qc_b",
+    "restart_reassembled_unit_c",
+    "restart_software_upgrade_d",
+    "restart_cleaned_unit_e",
+    "restart_powercycled_processor_f",
+    "mee_slot_a",
+    "mee_slot_c",
+    "mee_slot_d"
+  ]
+}
