@@ -1,5 +1,0 @@
-{
-  "task_id": "SWOR042",
-  "type": "RuntimeError",
-  "message": "coe_CodeReviewer event audit failed: [{'type': 'forbidden_item', 'event_type': 'item.started', 'item_type': 'mcp_tool_call', 'item_id': 'item_2'}, {'type': 'forbidden_item', 'event_type': 'item.completed', 'item_type': 'mcp_tool_call', 'item_id': 'item_2'}, {'type': 'forbidden_item', 'event_type': 'item.started', 'item_type': 'mcp_tool_call', 'item_id': 'item_3'}, {'type': 'forbidden_item', 'event_type': 'item.completed', 'item_type': 'mcp_tool_call', 'item_id': 'item_3'}]"
-}

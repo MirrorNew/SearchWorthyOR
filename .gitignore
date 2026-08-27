@@ -1,13 +1,7 @@
-# Local build and audit intermediates
-staging/
 .pytest_cache/
 **/__pycache__/
 *.py[cod]
 **/.env.local
-
-# Local execution logs
-reports/*.stdout.txt
-reports/*.stderr.txt
 
 # Editor and operating-system files
 .idea/

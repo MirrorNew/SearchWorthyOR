@@ -1,5 +1,0 @@
-{
-  "task_id": "SWOR074",
-  "type": "RuntimeError",
-  "message": "OptiMiner exceeded max research turns without final."
-}

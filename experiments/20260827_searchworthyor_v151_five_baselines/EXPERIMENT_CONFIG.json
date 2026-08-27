@@ -2,7 +2,7 @@
   "schema_version": "searchworthyor.v151.five_baselines.v1",
   "experiment_name": "SearchWorthyOR V1.5.1 Five Baselines",
   "experiment_root": ".",
-  "dataset_root": "../../datasets/SearchWorthyOR-v1.5.1",
+  "dataset_root": "../..",
   "credential_file": ".env.local",
   "public_input_file": "selected_public_cases.jsonl",
   "task_matrix_file": "task_matrix.jsonl",

@@ -1,5 +1,0 @@
-{
-  "task_id": "SWOR008",
-  "type": "TimeoutExpired",
-  "message": "Command '['<CODEX_CLI>', '--search', 'exec', '-m', 'gpt-5.6-sol', '-c', 'model_reasoning_effort=\"high\"', '-c', 'features.shell_tool=false', '-c', 'web_search=\"live\"', '-c', 'agents.enabled=false', '-c', 'features.remote_plugin=false', '-c', 'features.shell_snapshot=false', '--json', '--output-schema', '<EXPERIMENT_ROOT>\\\\configs\\\\cli_one_shot_output_schema.json', '--ephemeral', '--ignore-user-config', '--ignore-rules', '--skip-git-repo-check', '-s', 'read-only', '-C', '<STERILE_ROOT>\\\\live_web_full\\\\SWOR008', '-o', '<EXPERIMENT_ROOT>\\\\runs\\\\codex_cli_one_shot\\\\live_web_full\\\\SWOR008\\\\model_response.json', '-']' timed out after 180 seconds"
-}

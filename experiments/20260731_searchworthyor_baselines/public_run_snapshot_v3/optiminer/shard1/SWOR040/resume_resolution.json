@@ -1,9 +1,0 @@
-{
-  "status": "recovered_from_existing_stage_artifacts",
-  "stale_failure_file_preserved": "failure.json",
-  "reused_controller_stages": [
-    "controller_turn_1",
-    "controller_turn_2"
-  ],
-  "reused_final_model_response": false
-}
