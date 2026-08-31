@@ -1,0 +1,125 @@
+{
+  "schema_version": "searchworthyor.v161.three_methods.v1",
+  "implementation_revision": "public-v1",
+  "experiment_name": "SearchWorthyOR V1.6.1 Candidate - Three Methods",
+  "experiment_root": ".",
+  "allow_exploratory_snapshot": true,
+  "public_input_file": "inputs/public_cases.jsonl",
+  "model": {
+    "name": "gpt-5.6-luna",
+    "reasoning_effort": "xhigh",
+    "temperature": 1
+  },
+  "provider": {
+    "name": "shubiaobiao",
+    "base_url": "https://api.shubiaobiao.cn/v1",
+    "chat_endpoint": "/chat/completions",
+    "responses_endpoint": "/responses",
+    "read_base_url_and_key_only_from_local_env": true,
+    "provider_fallback": false
+  },
+  "inputs": {
+    "case_suffixes": ["C1", "C2", "C3"],
+    "case_count": 360,
+    "source_task_count": 120,
+    "model_fields": ["eval_id", "prompt_zh"],
+    "private_gold_visible_to_runner": false
+  },
+  "search_profiles": {
+    "shubiaobiao_hosted_search_shared": {
+      "endpoint": "/responses",
+      "tool": "web_search",
+      "search_context_size": "low",
+      "model": "gpt-5.6-luna",
+      "reasoning_effort": "xhigh",
+      "temperature": 1,
+      "max_query_chars": 320,
+      "max_queries_per_case": 3,
+      "tool_calls_per_planned_query": 1,
+      "search_budget_unit": "hosted_web_search_call",
+      "provider_query_expansion_policy": "accept_and_log",
+      "max_exposed_results_per_query": 10,
+      "max_opened_pages_per_query": 3,
+      "max_page_attempts_per_query": 6,
+      "max_successful_pages_per_case": 9,
+      "max_page_attempts_per_case": 18,
+      "require_relevance": true,
+      "require_operator_compliance": true,
+      "save_planned_query": true,
+      "save_executed_query": true,
+      "save_query_rewrite": true,
+      "save_raw_results": true,
+      "save_opened_pages": true,
+      "save_evidence_text": true,
+      "backend_fallback": false
+    }
+  },
+  "methods": {
+    "Direct-v2 Base-Solve Gated Search": {
+      "chain": "chain1",
+      "pipeline_order": "base_model_then_solve_then_search_gate_then_search_then_patch_then_resolve",
+      "search_profile": "shubiaobiao_hosted_search_shared",
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "Search-First Gated Raw-NL": {
+      "chain": "chain2",
+      "pipeline_order": "prompt_search_gate_then_search_then_raw_nl_then_model_and_solve",
+      "search_profile": "shubiaobiao_hosted_search_shared",
+      "formal_workers": 3,
+      "smoke_workers": 1
+    },
+    "SearchWorthy": {
+      "chain": "searchworthy",
+      "pipeline_order": "initial_solve_then_information_audit_then_authorized_search_then_evidence_gate_then_transactional_patch_then_resolve",
+      "search_profile": "shubiaobiao_hosted_search_shared",
+      "formal_workers": 3,
+      "smoke_workers": 3
+    }
+  },
+  "parallelism": {
+    "launch_all_methods_together": true,
+    "formal_total_workers": 9,
+    "smoke_total_workers": 5
+  },
+  "phases": {
+    "preflight": {
+      "chat_requests": 1,
+      "hosted_search_requests": 1,
+      "launch_requests_together": true,
+      "counted_as_benchmark": false
+    },
+    "smoke": {
+      "case_ids": ["SWOR-E-01B7C3B94C26D2E48F68"],
+      "searchworthy_case_ids": [
+        "SWOR-E-030F6C5D78703BAF8E04",
+        "SWOR-E-04F844F016AF29729C4A",
+        "SWOR-E-0247CAEBBD83006BF60C",
+        "SWOR-E-031125E1DD5B9C5ABB06",
+        "SWOR-E-01B7C3B94C26D2E48F68",
+        "SWOR-E-031B50F9720A75381D3F"
+      ],
+      "instances": 8,
+      "rerun_in_formal": true
+    },
+    "formal": {
+      "cases": 360,
+      "methods": 3,
+      "instances": 1080,
+      "reuse_old_outputs": false
+    }
+  },
+  "retry": {
+    "infrastructure_retries": 2,
+    "retry_status_codes": [408, 429, 500, 502, 503, 504],
+    "retry_answer_errors": false,
+    "retry_parse_failures": false,
+    "retry_retrieval_failures": false,
+    "retry_output_contract_failures": false
+  },
+  "output_roots": {
+    "smoke": "runs/smoke",
+    "formal": "runs/formal"
+  },
+  "execution_status": "NOT_STARTED"
+}

@@ -1,0 +1,465 @@
+{
+  "model_ir": {
+    "variables": [
+      {
+        "id": "swor_r073_a01",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a02",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a03",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a04",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a05",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a06",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a07",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r073_a08",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "constraints": [
+      {
+        "name": "select_one_product",
+        "terms": [
+          {
+            "var": "swor_r073_a01",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a02",
+            "coef": 1
+          }
+        ],
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_one_color_mode",
+        "terms": [
+          {
+            "var": "swor_r073_a07",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a08",
+            "coef": 1
+          }
+        ],
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "batch_purchase_matches_addition",
+        "terms": [
+          {
+            "var": "swor_r073_a03",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a04",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a05",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a06",
+            "coef": 1
+          },
+          {
+            "var": "swor_r073_a07",
+            "coef": -1
+          }
+        ],
+        "sense": "==",
+        "rhs": 0
+      }
+    ],
+    "objective": {
+      "direction": "max",
+      "terms": [
+        {
+          "var": "swor_r073_a01",
+          "coef": 20
+        },
+        {
+          "var": "swor_r073_a02",
+          "coef": 28
+        },
+        {
+          "var": "swor_r073_a03",
+          "coef": 16
+        },
+        {
+          "var": "swor_r073_a04",
+          "coef": 28
+        },
+        {
+          "var": "swor_r073_a05",
+          "coef": 26
+        },
+        {
+          "var": "swor_r073_a06",
+          "coef": 24
+        },
+        {
+          "var": "swor_r073_a07",
+          "coef": 12
+        },
+        {
+          "var": "swor_r073_a08",
+          "coef": 0
+        }
+      ],
+      "constant": 0,
+      "unit": "生产效用点"
+    },
+    "parameters": {}
+  },
+  "fact_coverage": [
+    {
+      "quote": "2026年8月5日，澄湖食品厂在两种饮料和Galdieria extract blue批次间选择生产组合。",
+      "or_role": "日期、主体和生产组合场景",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "给出日期和主体场景，但没有把主体、日期或法域规则映射到具体行动资格。"
+    },
+    {
+      "quote": "P1为非酒精饮料；",
+      "or_role": "P1产品属性和产品身份",
+      "mapped_targets": [
+        "variable.swor_r073_a01"
+      ],
+      "usage_status": "MODELED",
+      "reason": "明确标识P1产品行动，对应P1二元选择变量。"
+    },
+    {
+      "quote": "P1为非酒精饮料；",
+      "or_role": "P1现实资格属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "该属性未说明其如何满足或排除P1实际生产资格；对应的行动缺口计入溢出缺口。"
+    },
+    {
+      "quote": "P2是由成熟Citrus sinensis取得、去除籽和多余果肉、只冷藏而未冷冻的未发酵橙汁。",
+      "or_role": "P2产品属性和产品身份",
+      "mapped_targets": [
+        "variable.swor_r073_a02"
+      ],
+      "usage_status": "MODELED",
+      "reason": "明确标识P2产品行动，对应P2二元选择变量。"
+    },
+    {
+      "quote": "P2是由成熟Citrus sinensis取得、去除籽和多余果肉、只冷藏而未冷冻的未发酵橙汁。",
+      "or_role": "P2现实对象范围和资格属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "描述了P2属性，但未提供将这些属性映射为实际生产资格或对象范围的外部规则。"
+    },
+    {
+      "quote": "A的铅、汞、镉分别为0.3、0.02、0.3 ppm，",
+      "or_role": "批次A杂质检测属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "检测数值未连接到任何阈值、认证或批次A行动资格规则；对应的行动缺口计入溢出缺口。"
+    },
+    {
+      "quote": "B的铅为0.7 ppm，",
+      "or_role": "批次B杂质检测属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "检测数值未连接到任何阈值、认证或批次B行动资格规则。"
+    },
+    {
+      "quote": "C的汞为0.08 ppm，",
+      "or_role": "批次C杂质检测属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "检测数值未连接到任何阈值、认证或批次C行动资格规则；对应的行动缺口计入溢出缺口。"
+    },
+    {
+      "quote": "D的镉为0.8 ppm，",
+      "or_role": "批次D杂质检测属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "检测数值未连接到任何阈值、认证或批次D行动资格规则；对应的行动缺口计入溢出缺口。"
+    },
+    {
+      "quote": "四批砷检测均为0.3 ppm。",
+      "or_role": "四批次共同杂质检测属性",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "共同检测结果没有对应的适用阈值或资格排除规则，属于未闭合的批次现实映射。"
+    },
+    {
+      "quote": "美国食品着色生产组合。",
+      "or_role": "食品着色领域和法域语境",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "给出领域语境但未给出适用美国规则、管辖映射或行动资格结论。"
+    },
+    {
+      "quote": "澄湖食品厂须选择一种产品以及是否加入候选蓝色色素X；",
+      "or_role": "产品选择与加色选择的局部决策接口",
+      "mapped_targets": [
+        "variable.swor_r073_a01",
+        "variable.swor_r073_a02",
+        "variable.swor_r073_a07",
+        "variable.swor_r073_a08",
+        "constraint.select_one_product",
+        "constraint.select_one_color_mode"
+      ],
+      "usage_status": "MODELED",
+      "reason": "直接形成产品二选一和加入/不加入二选一的局部决策变量及约束。"
+    },
+    {
+      "quote": "澄湖食品厂须选择一种产品以及是否加入候选蓝色色素X；",
+      "or_role": "候选蓝色色素X的现实行动资格",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "局部优化要求没有说明主体是否在该日期和产品范围内实际获准加入候选蓝色色素X。"
+    },
+    {
+      "quote": "只有加入色素时才采购且恰好采购一个批次，",
+      "or_role": "加入色素与批次采购数量的条件关系",
+      "mapped_targets": [
+        "applicability.capacity_feasibility",
+        "variable.swor_r073_a03",
+        "variable.swor_r073_a04",
+        "variable.swor_r073_a05",
+        "variable.swor_r073_a06",
+        "variable.swor_r073_a07",
+        "constraint.batch_purchase_matches_addition"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "明确给出加入行动与批次采购数量之间的局部容量关系，并形成批次联结约束。"
+    },
+    {
+      "quote": "不加入时不采购批次。",
+      "or_role": "不加入色素时的批次采购后果",
+      "mapped_targets": [
+        "variable.swor_r073_a08",
+        "constraint.batch_purchase_matches_addition"
+      ],
+      "usage_status": "MODELED",
+      "reason": "将不加入色素与不采购任何批次的局部决策后果编码为批次联结约束。"
+    },
+    {
+      "quote": "产品为配方单P1（效用20点）或配方单P2（效用28点）；",
+      "or_role": "产品选择及产品效用",
+      "mapped_targets": [
+        "variable.swor_r073_a01",
+        "variable.swor_r073_a02",
+        "constraint.select_one_product",
+        "objective.swor_r073_a01",
+        "objective.swor_r073_a02"
+      ],
+      "usage_status": "MODELED",
+      "reason": "提供产品二选一的效用系数并支持产品唯一选择约束。"
+    },
+    {
+      "quote": "两份配方的成分、加工方法与产品名称载于质量台账。",
+      "or_role": "配方对象属性和记录来源",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "台账记录未给出将成分、加工方法或名称映射到现实生产资格的规则。"
+    },
+    {
+      "quote": "可采购的色素批次A至D效用依次为16、28、26、24点；",
+      "or_role": "批次行动的效用系数",
+      "mapped_targets": [
+        "variable.swor_r073_a03",
+        "variable.swor_r073_a04",
+        "variable.swor_r073_a05",
+        "variable.swor_r073_a06",
+        "objective.swor_r073_a03",
+        "objective.swor_r073_a04",
+        "objective.swor_r073_a05",
+        "objective.swor_r073_a06"
+      ],
+      "usage_status": "MODELED",
+      "reason": "提供A至D批次行动的效用系数并建立对应目标项。"
+    },
+    {
+      "quote": "可采购的色素批次A至D效用依次为16、28、26、24点；",
+      "or_role": "批次可采购属性与现实资格映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "局部可采购集合和效用已建模，但没有把认证、杂质和批次属性映射到现实行动资格。"
+    },
+    {
+      "quote": "各批次的色素身份、认证记录和杂质检测结果记载在质量检验单中。",
+      "or_role": "批次身份、认证和检测记录",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "记录存在本身不构成资格结论，缺少将其映射为批次行动可采购或可加入的外部规则。"
+    },
+    {
+      "quote": "加入色素增加12点，",
+      "or_role": "加入色素的目标后果和收益",
+      "mapped_targets": [
+        "applicability.action_consequence",
+        "applicability.cost_benefit",
+        "variable.swor_r073_a07",
+        "objective.swor_r073_a07"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "明确给出加入行动对生产效用的直接后果，并将其编码为目标系数。"
+    },
+    {
+      "quote": "不加入增加0点。",
+      "or_role": "不加入色素的目标后果和收益",
+      "mapped_targets": [
+        "applicability.action_consequence",
+        "applicability.cost_benefit",
+        "variable.swor_r073_a08",
+        "objective.swor_r073_a08"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "明确给出不加入行动的效用后果，并将其编码为零目标系数。"
+    },
+    {
+      "quote": "唯一目标是最大化生产效用。",
+      "or_role": "目标方向和全体生产效用目标",
+      "mapped_targets": [
+        "applicability.cost_benefit",
+        "objective.swor_r073_a01",
+        "objective.swor_r073_a02",
+        "objective.swor_r073_a03",
+        "objective.swor_r073_a04",
+        "objective.swor_r073_a05",
+        "objective.swor_r073_a06",
+        "objective.swor_r073_a07",
+        "objective.swor_r073_a08"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "明确唯一目标为最大化生产效用，并绑定所有已存在的目标项。"
+    }
+  ],
+  "audit_summary": {
+    "prompt_fact_to_model_complete": false,
+    "model_interface_to_grounding_complete": false,
+    "negative_space_checked": {
+      "SUBJECT_ELIGIBILITY": false,
+      "LOCATION_JURISDICTION": false,
+      "TIME_VERSION": false,
+      "OBJECT_SCOPE": false,
+      "UNIT_THRESHOLD": false,
+      "CAPACITY_FEASIBILITY": true,
+      "EXCEPTION_EXEMPTION": false,
+      "ACTION_CONSEQUENCE": true,
+      "COST_BENEFIT": true
+    },
+    "overflow_detected": true,
+    "overflow_count": 4,
+    "self_contained_reason": "主体、对象范围、时间法域、单位阈值和例外适用均缺少外部现实规则映射；另有4个决策关键行动资格缺口未纳入前三个探针。"
+  },
+  "candidate_gaps": [
+    {
+      "fact_quotes": [
+        "2026年8月5日，澄湖食品厂在两种饮料和Galdieria extract blue批次间选择生产组合。",
+        "P2是由成熟Citrus sinensis取得、去除籽和多余果肉、只冷藏而未冷冻的未发酵橙汁。",
+        "两份配方的成分、加工方法与产品名称载于质量台账。"
+      ],
+      "reality_role": "P2生产行动的主体、时间和对象资格",
+      "gap_claim": "缺少将澄湖食品厂在该日期选择并生产P2及其配方范围映射为现实资格的现行规则或权威结论。",
+      "target": "variable.swor_r073_a02",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r073_a02",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请提供2026年8月5日适用于澄湖食品厂生产P2的主体资格、时间版本和产品范围规则，或提供P2可生产的权威结论。"
+    },
+    {
+      "fact_quotes": [
+        "B的铅为0.7 ppm，",
+        "可采购的色素批次A至D效用依次为16、28、26、24点；",
+        "各批次的色素身份、认证记录和杂质检测结果记载在质量检验单中。"
+      ],
+      "reality_role": "批次B的杂质、认证与采购或加入资格",
+      "gap_claim": "缺少将批次B的铅检测、认证记录和色素身份映射到采购或加入资格的适用阈值及外部规则。",
+      "target": "variable.swor_r073_a04",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r073_a04",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请提供适用于批次B铅检测值、认证记录和色素身份的现行资格或排除规则，以及其对采购和加入P1或P2的结论。"
+    },
+    {
+      "fact_quotes": [
+        "美国食品着色生产组合。",
+        "澄湖食品厂须选择一种产品以及是否加入候选蓝色色素X；"
+      ],
+      "reality_role": "候选蓝色色素X加入所选产品的主体和对象资格",
+      "gap_claim": "缺少将候选蓝色色素X及其Galdieria extract blue批次身份映射到澄湖食品厂在所选产品中可加入的主体资格、对象范围和现实行动许可的外部规则或权威结论。",
+      "target": "variable.swor_r073_a07",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r073_a07",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请提供2026年8月5日美国食品着色规则下澄湖食品厂将候选蓝色色素X加入所选P1或P2的主体资格、对象范围和许可结论。"
+    }
+  ],
+  "self_contained_candidate": false
+}

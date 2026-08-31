@@ -1,10 +1,11 @@
+.env.local
 .pytest_cache/
-**/__pycache__/
+__pycache__/
 *.py[cod]
-**/.env.local
-
-# Editor and operating-system files
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
+/preflight/
+/runs/
+/reports/
+/archives/
+/probes/
+/tmp*/
+*.log

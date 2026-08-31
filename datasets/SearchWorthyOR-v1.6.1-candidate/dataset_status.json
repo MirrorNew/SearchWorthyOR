@@ -1,0 +1,58 @@
+{
+  "schema_version": "searchworthyor.dataset_status.v1",
+  "dataset_id": "SearchWorthyOR-v1.6.1",
+  "release_name": "SearchWorthyOR-v1.6.1-candidate",
+  "release_channel": "candidate",
+  "validated_release": false,
+  "exploratory_only": true,
+  "source_dataset": "SearchWorthyOR-v1.5.1",
+  "counts": {
+    "source_tasks": 120,
+    "public_cases": 360,
+    "C1": 120,
+    "C2": 120,
+    "C3": 120
+  },
+  "runtime_model_input": {
+    "allowed_fields": ["eval_id", "prompt_zh"],
+    "raw_public_row_must_not_be_forwarded": true
+  },
+  "validation": {
+    "status": "FAIL",
+    "error_count": 1424,
+    "report": "validation_report.json",
+    "build_final_validation_status": "NOT_RUN_AFTER_BUILD",
+    "private_crosscheck_snapshots_recomputed": 0,
+    "independent_public_first_reviews_passed": 0,
+    "human_legal_review": "NOT_RUN",
+    "empirical_evidence_omission_tests": "NOT_RUN"
+  },
+  "known_blockers": {
+    "authority_revision_review_binding_errors": 1200,
+    "review_needs_fix_errors": 176,
+    "content_drift_errors": 43,
+    "global_gate_errors": 5,
+    "tasks_needing_fix": 88
+  },
+  "evaluation": {
+    "formal_status": "NOT_RUN",
+    "official_results_available": false,
+    "leaderboard_eligible": false
+  },
+  "distribution": {
+    "mode": "PUBLIC_INPUT_ONLY",
+    "private_gold_in_this_directory": false,
+    "blind_evaluation_claimable": false
+  },
+  "licensing": {
+    "code_license": "UNRESOLVED",
+    "dataset_license": "UNRESOLVED",
+    "third_party_notice_required": true
+  },
+  "allowed_uses": ["development", "schema testing", "harness testing"],
+  "prohibited_claims": [
+    "validated V1.6.1 release",
+    "official benchmark score",
+    "blind or contamination-free result"
+  ]
+}

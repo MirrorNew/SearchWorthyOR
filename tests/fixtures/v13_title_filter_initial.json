@@ -1,0 +1,325 @@
+{
+  "model_ir": {
+    "variables": [
+      {
+        "id": "swor_r059_a01",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r059_a02",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r059_a03",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r059_a04",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r059_a05",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "swor_r059_a06",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "constraints": [
+      {
+        "name": "ser_choose_two",
+        "terms": [
+          {
+            "var": "swor_r059_a01",
+            "coef": 1
+          },
+          {
+            "var": "swor_r059_a02",
+            "coef": 1
+          },
+          {
+            "var": "swor_r059_a03",
+            "coef": 1
+          },
+          {
+            "var": "swor_r059_a04",
+            "coef": 1
+          },
+          {
+            "var": "swor_r059_a05",
+            "coef": 1
+          },
+          {
+            "var": "swor_r059_a06",
+            "coef": 1
+          }
+        ],
+        "sense": "==",
+        "rhs": 2
+      }
+    ],
+    "objective": {
+      "direction": "max",
+      "terms": [
+        {
+          "var": "swor_r059_a01",
+          "coef": 68
+        },
+        {
+          "var": "swor_r059_a02",
+          "coef": 63
+        },
+        {
+          "var": "swor_r059_a03",
+          "coef": 59
+        },
+        {
+          "var": "swor_r059_a04",
+          "coef": 74
+        },
+        {
+          "var": "swor_r059_a05",
+          "coef": 71
+        },
+        {
+          "var": "swor_r059_a06",
+          "coef": 66
+        }
+      ],
+      "constant": 0,
+      "unit": "上市价值点"
+    },
+    "parameters": {}
+  },
+  "fact_coverage": [
+    {
+      "quote": "2026年8月4日，新加坡海岬通信器材公司持有电信经销商执照和两个当前申报名额。",
+      "or_role": "申报名额与数量容量",
+      "mapped_targets": [
+        "constraint.ser_choose_two",
+        "applicability.unit_threshold",
+        "applicability.capacity_feasibility"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "两个当前申报名额提供本地申报数量和容量输入，支撑六个二元行动中恰好选择两个的约束；执照和日期不被据此视为主体资格结论。"
+    },
+    {
+      "quote": "2026年8月4日，新加坡海岬通信器材公司持有电信经销商执照和两个当前申报名额。",
+      "or_role": "主体、地点与时间属性的外部资格映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "提示只陈述持证主体、地点和日期等属性，没有说明这些属性如何映射为任一SER行动的主体资格、辖区适用性或日期版本结论；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "A为5G蜂窝移动终端，B为GMPCS终端，C为电缆调制解调器，D为LTE蜂窝移动终端，E为ADSL调制解调器，F为同轴电缆家庭联网设备；",
+      "or_role": "候选行动识别",
+      "mapped_targets": [
+        "variable.swor_r059_a01",
+        "variable.swor_r059_a02",
+        "variable.swor_r059_a03",
+        "variable.swor_r059_a04",
+        "variable.swor_r059_a05",
+        "variable.swor_r059_a06"
+      ],
+      "usage_status": "MODELED",
+      "reason": "A至F的公开型号标记被用于对应六个现有二元申报行动；类别文字用于识别行动，不推导其法律或运营资格。"
+    },
+    {
+      "quote": "A为5G蜂窝移动终端，B为GMPCS终端，C为电缆调制解调器，D为LTE蜂窝移动终端，E为ADSL调制解调器，F为同轴电缆家庭联网设备；",
+      "or_role": "产品对象范围与资格映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "型号类别和功能只是产品属性，提示没有给出把这些属性映射为SER可申报对象、排除对象或适用范围的现行规则；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "六项均附供应商符合性声明和有效EU型式检验证书。",
+      "or_role": "合规材料属性与SER资格映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "符合性声明和EU型式检验证书被陈述为属性，但没有明确说明它们如何产生SER资格、豁免、排除或其他行动结果；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "2026年8月4日，海岬通信器材公司是持有电信经销商执照的新加坡本地企业，当前窗口只有两个简化设备注册（SER）申报名额，其他注册方式在上市期限前没有处理能力，因此必须从六个型号中选择两个走SER。",
+      "or_role": "SER窗口容量与选择数量",
+      "mapped_targets": [
+        "constraint.ser_choose_two",
+        "applicability.unit_threshold",
+        "applicability.capacity_feasibility"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "当前SER名额、替代注册方式的处理能力和必须选择两个的本地决策容量，直接落入恰好二个的数量约束；这不构成六个型号均具备外部资格的结论。"
+    },
+    {
+      "quote": "2026年8月4日，海岬通信器材公司是持有电信经销商执照的新加坡本地企业，当前窗口只有两个简化设备注册（SER）申报名额，其他注册方式在上市期限前没有处理能力，因此必须从六个型号中选择两个走SER。",
+      "or_role": "主体、辖区、时间与SER适用规则映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "本地企业、执照、日期、SER窗口和必须选择两个是本地事实或决策要求，但没有说明它们如何映射为各型号的主体资格、地点辖区适用性、时间版本或行动后果；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "候选型号标记A至F，上市价值依次为68、63、59、74、71、66点；",
+      "or_role": "上市价值系数",
+      "mapped_targets": [
+        "variable.swor_r059_a01",
+        "variable.swor_r059_a02",
+        "variable.swor_r059_a03",
+        "variable.swor_r059_a04",
+        "variable.swor_r059_a05",
+        "variable.swor_r059_a06",
+        "objective.swor_r059_a01",
+        "objective.swor_r059_a02",
+        "objective.swor_r059_a03",
+        "objective.swor_r059_a04",
+        "objective.swor_r059_a05",
+        "objective.swor_r059_a06",
+        "applicability.cost_benefit"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "按A至F顺序将显式给出的价值点用于六个行动的目标系数，统一单位为上市价值点；这是成本收益目标输入，不是行动后果。"
+    },
+    {
+      "quote": "各型号的设备类别及无线或有线功能记录在本次申报清单中。",
+      "or_role": "设备类别与功能的对象范围映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "申报清单记录类别及无线或有线功能，但没有给出这些属性与SER对象范围、资格或排除结论之间的外部规则映射；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "六个型号均已备齐供应商符合性声明和有效EU型式检验证书，其产品资料包含申报表所需技术参数。",
+      "or_role": "申报材料与技术参数的资格映射",
+      "mapped_targets": [],
+      "usage_status": "UNACCOUNTED",
+      "reason": "材料齐备和技术参数存在只是事实属性，提示没有明确说明其是否使任一型号具备SER资格、适用豁免或产生其他行动后果；该缺口由候选外部规则缺口承接。"
+    },
+    {
+      "quote": "唯一目标是最大化两个型号的上市价值。",
+      "or_role": "唯一成本收益目标",
+      "mapped_targets": [
+        "objective.swor_r059_a01",
+        "objective.swor_r059_a02",
+        "objective.swor_r059_a03",
+        "objective.swor_r059_a04",
+        "objective.swor_r059_a05",
+        "objective.swor_r059_a06",
+        "applicability.cost_benefit"
+      ],
+      "usage_status": "APPLICABILITY_USED",
+      "reason": "明确唯一目标为最大化上市价值，支撑六个目标项的最大化目标和成本收益维度；不把本地目标收益误作法律或运营后果。"
+    }
+  ],
+  "audit_summary": {
+    "prompt_fact_to_model_complete": false,
+    "model_interface_to_grounding_complete": false,
+    "negative_space_checked": {
+      "SUBJECT_ELIGIBILITY": false,
+      "LOCATION_JURISDICTION": false,
+      "TIME_VERSION": false,
+      "OBJECT_SCOPE": false,
+      "UNIT_THRESHOLD": true,
+      "CAPACITY_FEASIBILITY": true,
+      "EXCEPTION_EXEMPTION": false,
+      "ACTION_CONSEQUENCE": false,
+      "COST_BENEFIT": true
+    },
+    "overflow_detected": true,
+    "overflow_count": 3,
+    "self_contained_reason": "提示给出了容量、数量和成本收益模型输入，但仅给出主体、地点、日期、型号类别、证书和技术参数等属性，未给出把这些属性映射为SER主体资格、对象范围、例外或行动后果的现行权威规则；六个行动存在外部规则缺口，仅返回价值最高的三个行动变量探针，另有三个行动变量缺口溢出。"
+  },
+  "candidate_gaps": [
+    {
+      "fact_quotes": [
+        "2026年8月4日，新加坡海岬通信器材公司持有电信经销商执照和两个当前申报名额。",
+        "A为5G蜂窝移动终端，B为GMPCS终端，C为电缆调制解调器，D为LTE蜂窝移动终端，E为ADSL调制解调器，F为同轴电缆家庭联网设备；",
+        "六项均附供应商符合性声明和有效EU型式检验证书。",
+        "2026年8月4日，海岬通信器材公司是持有电信经销商执照的新加坡本地企业，当前窗口只有两个简化设备注册（SER）申报名额，其他注册方式在上市期限前没有处理能力，因此必须从六个型号中选择两个走SER。",
+        "各型号的设备类别及无线或有线功能记录在本次申报清单中。",
+        "六个型号均已备齐供应商符合性声明和有效EU型式检验证书，其产品资料包含申报表所需技术参数。"
+      ],
+      "reality_role": "SER行动的主体资格、时间地点与对象范围外部规则",
+      "gap_claim": "未给出把新加坡持证本地主体、2026年8月4日和SER窗口条件，以及型号D的LTE蜂窝移动终端、证书和技术资料，映射为D可通过SER申报或被排除的现行权威资格规则。",
+      "target": "variable.swor_r059_a04",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r059_a04",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请核实截至2026年8月4日，在新加坡，持有电信经销商执照的本地企业为LTE蜂窝移动终端D办理简化设备注册（SER）时，D是否属于可申报对象、是否存在排除或例外，并说明适用规则版本。"
+    },
+    {
+      "fact_quotes": [
+        "2026年8月4日，新加坡海岬通信器材公司持有电信经销商执照和两个当前申报名额。",
+        "A为5G蜂窝移动终端，B为GMPCS终端，C为电缆调制解调器，D为LTE蜂窝移动终端，E为ADSL调制解调器，F为同轴电缆家庭联网设备；",
+        "六项均附供应商符合性声明和有效EU型式检验证书。",
+        "2026年8月4日，海岬通信器材公司是持有电信经销商执照的新加坡本地企业，当前窗口只有两个简化设备注册（SER）申报名额，其他注册方式在上市期限前没有处理能力，因此必须从六个型号中选择两个走SER。",
+        "各型号的设备类别及无线或有线功能记录在本次申报清单中。",
+        "六个型号均已备齐供应商符合性声明和有效EU型式检验证书，其产品资料包含申报表所需技术参数。"
+      ],
+      "reality_role": "SER行动的主体资格、时间地点与对象范围外部规则",
+      "gap_claim": "未给出把新加坡持证本地主体、2026年8月4日和SER窗口条件，以及型号E的ADSL调制解调器、证书和技术资料，映射为E可通过SER申报或被排除的现行权威资格规则。",
+      "target": "variable.swor_r059_a05",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r059_a05",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请核实截至2026年8月4日，在新加坡，持有电信经销商执照的本地企业为ADSL调制解调器E办理简化设备注册（SER）时，E是否属于可申报对象、是否存在排除或例外，并说明适用规则版本。"
+    },
+    {
+      "fact_quotes": [
+        "2026年8月4日，新加坡海岬通信器材公司持有电信经销商执照和两个当前申报名额。",
+        "A为5G蜂窝移动终端，B为GMPCS终端，C为电缆调制解调器，D为LTE蜂窝移动终端，E为ADSL调制解调器，F为同轴电缆家庭联网设备；",
+        "六项均附供应商符合性声明和有效EU型式检验证书。",
+        "2026年8月4日，海岬通信器材公司是持有电信经销商执照的新加坡本地企业，当前窗口只有两个简化设备注册（SER）申报名额，其他注册方式在上市期限前没有处理能力，因此必须从六个型号中选择两个走SER。",
+        "各型号的设备类别及无线或有线功能记录在本次申报清单中。",
+        "六个型号均已备齐供应商符合性声明和有效EU型式检验证书，其产品资料包含申报表所需技术参数。"
+      ],
+      "reality_role": "SER行动的主体资格、时间地点与对象范围外部规则",
+      "gap_claim": "未给出把新加坡持证本地主体、2026年8月4日和SER窗口条件，以及型号A的5G蜂窝移动终端、证书和技术资料，映射为A可通过SER申报或被排除的现行权威资格规则。",
+      "target": "variable.swor_r059_a01",
+      "gap_route": "EXTERNAL_RULE",
+      "hypothetical_variants": [
+        {
+          "target": "variable.swor_r059_a01",
+          "operation": "SET",
+          "value": {
+            "lb": 0,
+            "ub": 0
+          },
+          "range_basis": "MODEL_BOUNDARY",
+          "basis_quote": null
+        }
+      ],
+      "first_query": "请核实截至2026年8月4日，在新加坡，持有电信经销商执照的本地企业为5G蜂窝移动终端A办理简化设备注册（SER）时，A是否属于可申报对象、是否存在排除或例外，并说明适用规则版本。"
+    }
+  ],
+  "self_contained_candidate": false
+}

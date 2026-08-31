@@ -1,14 +1,6 @@
-# Keep the V1.5.1 release and experiment bundle portable.
-README.md text eol=lf
-MODEL_IO_CONTRACT_zh.md text eol=lf
-V151_CASE_REPAIR_SPEC_zh.md text eol=lf
-V151_REPAIR_RECORDS_zh.md text eol=lf
-validation_report.json text eol=lf
-public/** text eol=lf
-private/** text eol=lf
-models/** text eol=lf
-experiments/20260827_searchworthyor_v151_five_baselines/** text eol=lf
-run_optminer_training_free.py text eol=lf
-scripts/build_searchworthyor_v151.py text eol=lf
-scripts/validate_searchworthyor_v151.py text eol=lf
-scripts/v151_* text eol=lf
+* text=auto
+*.py text eol=lf
+*.json text eol=lf
+*.jsonl text eol=lf
+*.md text eol=lf
+*.txt text eol=lf
