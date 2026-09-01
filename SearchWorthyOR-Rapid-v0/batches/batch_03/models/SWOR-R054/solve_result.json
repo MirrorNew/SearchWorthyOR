@@ -1,0 +1,38 @@
+{
+  "base_feasible_assignment_count": 24600,
+  "base_incumbent": {
+    "pay_A_day": 45,
+    "pay_B_day": 40,
+    "pay_C_day": 45
+  },
+  "base_objective": 130.0,
+  "base_optimal_actions": [
+    {
+      "pay_A_day": 45,
+      "pay_B_day": 40,
+      "pay_C_day": 45
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R054",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 2658,
+  "patched_incumbent": {
+    "pay_A_day": 24,
+    "pay_B_day": 18,
+    "pay_C_day": 22
+  },
+  "patched_objective": 64.0,
+  "patched_optimal_actions": [
+    {
+      "pay_A_day": 24,
+      "pay_B_day": 18,
+      "pay_C_day": 22
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

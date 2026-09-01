@@ -1,0 +1,128 @@
+{
+  "action_projection": [
+    "ground_400",
+    "submersible_300",
+    "submersible_200",
+    "submersible_100",
+    "sealed_500"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "ground_400": 400,
+        "sealed_500": 500,
+        "submersible_100": 100,
+        "submersible_200": 200,
+        "submersible_300": 300
+      },
+      "meaning": "容量至少五百千伏安",
+      "name": "capacity",
+      "rhs": 500,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "ground_400": 1,
+        "sealed_500": 1,
+        "submersible_100": 1,
+        "submersible_200": 1,
+        "submersible_300": 1
+      },
+      "meaning": "最多采购两台",
+      "name": "unit_limit",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "ground_400": 1,
+        "submersible_300": 1
+      },
+      "meaning": "吊装轨道不能同时容纳地面四百型和潜水三百型",
+      "name": "lifting_compatibility",
+      "rhs": 1,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "submersible_300": 1,
+        "submersible_branch_check": -1
+      },
+      "meaning": "采购三百千伏安潜水型机须通过分支核验",
+      "name": "submersible_check_trigger",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "submersible_branch_check": 1
+      },
+      "meaning": "现有档案不能通过潜水型分支核验",
+      "name": "submersible_file_gap",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R084",
+  "objective": {
+    "coefficients": {
+      "ground_400": 35,
+      "sealed_500": 46,
+      "submersible_100": 12,
+      "submersible_200": 16,
+      "submersible_300": 22
+    },
+    "constant": 0,
+    "meaning": "地下站房设备采购价",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0079",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采购400千伏安地面型设备",
+      "name": "ground_400",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购300千伏安潜水型设备",
+      "name": "submersible_300",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购200千伏安潜水型设备",
+      "name": "submersible_200",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购100千伏安潜水型设备",
+      "name": "submersible_100",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购500千伏安密封型设备",
+      "name": "sealed_500",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "三百千伏安设备通过潜水型分支核验",
+      "name": "submersible_branch_check",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

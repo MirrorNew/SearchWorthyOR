@@ -1,0 +1,92 @@
+{
+  "action_projection": [
+    "plan_L",
+    "plan_T",
+    "plan_R",
+    "plan_C",
+    "plan_E"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "plan_C": 1,
+        "plan_E": 1,
+        "plan_L": 1,
+        "plan_R": 1,
+        "plan_T": 1
+      },
+      "meaning": "恰好采用1套提供商级实施方案",
+      "name": "one_provider_plan",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "plan_C": 7,
+        "plan_E": 10,
+        "plan_L": 9,
+        "plan_R": 8,
+        "plan_T": 6
+      },
+      "meaning": "内部准备度得分至少7分",
+      "name": "readiness_floor",
+      "rhs": 7,
+      "sense": ">="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R080",
+  "objective": {
+    "coefficients": {
+      "plan_C": 4,
+      "plan_E": 6,
+      "plan_L": 1,
+      "plan_R": 3,
+      "plan_T": 2
+    },
+    "constant": 0,
+    "meaning": "最小化提供商级实施成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0093",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采用传统方案L",
+      "name": "plan_L",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用仅测试方案T",
+      "name": "plan_T",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用仅报告方案R",
+      "name": "plan_R",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用测试与报告完整方案C",
+      "name": "plan_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用测试与报告增强方案E",
+      "name": "plan_E",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

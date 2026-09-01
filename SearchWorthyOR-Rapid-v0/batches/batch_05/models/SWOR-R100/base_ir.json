@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "day",
+    "evening",
+    "night",
+    "long_day",
+    "relief"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "day": 1,
+        "long_day": 1
+      },
+      "meaning": "第一时段至少一人值守",
+      "name": "cover_period_1",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "evening": 1,
+        "long_day": 1,
+        "relief": 1
+      },
+      "meaning": "第二时段至少一人值守",
+      "name": "cover_period_2",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R100",
+  "objective": {
+    "coefficients": {
+      "day": 4,
+      "evening": 4,
+      "long_day": 7,
+      "night": 7,
+      "relief": 8
+    },
+    "constant": 0,
+    "meaning": "中断联络人员成本",
+    "sense": "min",
+    "unit": "百美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0187",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "安排白班",
+      "name": "day",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排晚班",
+      "name": "evening",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排夜班",
+      "name": "night",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排日间长班",
+      "name": "long_day",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排夜间接续班",
+      "name": "relief",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

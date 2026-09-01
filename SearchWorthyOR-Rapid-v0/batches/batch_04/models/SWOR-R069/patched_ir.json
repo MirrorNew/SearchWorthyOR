@@ -1,0 +1,66 @@
+{
+  "action_projection": [
+    "award_day",
+    "representation_process"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "award_day": 1
+      },
+      "meaning": "最早第2天授标",
+      "name": "earliest_award",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "award_day": 1
+      },
+      "meaning": "送达继续授标决定后再满5个工作日方可授标",
+      "name": "post_decision_standstill",
+      "rhs": 13,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "representation_process": 1
+      },
+      "meaning": "收到符合期限的书面陈述后完成审查与进一步决定流程",
+      "name": "representation_review_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R069",
+  "objective": {
+    "coefficients": {
+      "award_day": 1,
+      "representation_process": 3
+    },
+    "constant": 0,
+    "meaning": "最小化时间与处理成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0130",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "合同授标日",
+      "name": "award_day",
+      "type": "INTEGER",
+      "ub": 20
+    },
+    {
+      "lb": 0,
+      "meaning": "启动陈述处理流程",
+      "name": "representation_process",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

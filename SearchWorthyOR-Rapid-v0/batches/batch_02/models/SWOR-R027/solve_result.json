@@ -1,0 +1,42 @@
+{
+  "base_feasible_assignment_count": 12,
+  "base_incumbent": {
+    "cash_units": 0,
+    "corporate_bond_units": 3,
+    "pledged_agency_units": 0,
+    "treasury_hqla_units": 0
+  },
+  "base_objective": 15.0,
+  "base_optimal_actions": [
+    {
+      "cash_units": 0,
+      "corporate_bond_units": 3,
+      "pledged_agency_units": 0,
+      "treasury_hqla_units": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R027",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 1,
+  "patched_incumbent": {
+    "cash_units": 0,
+    "corporate_bond_units": 0,
+    "pledged_agency_units": 0,
+    "treasury_hqla_units": 2
+  },
+  "patched_objective": 6.0,
+  "patched_optimal_actions": [
+    {
+      "cash_units": 0,
+      "corporate_bond_units": 0,
+      "pledged_agency_units": 0,
+      "treasury_hqla_units": 2
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

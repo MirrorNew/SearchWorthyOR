@@ -1,0 +1,89 @@
+{
+  "action_projection": [
+    "choose_simple_design",
+    "choose_layered_design",
+    "assess_opacity",
+    "assess_duplication",
+    "assess_holistic_transparency"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "choose_layered_design": 1,
+        "choose_simple_design": 1
+      },
+      "meaning": "恰好选择一个收费方案",
+      "name": "select_one_design",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "assess_duplication": 1,
+        "assess_holistic_transparency": 1,
+        "assess_opacity": 1,
+        "choose_layered_design": -1,
+        "choose_simple_design": -1
+      },
+      "meaning": "所选收费设计至少通过1种适当透明度评估",
+      "name": "transparency_review_gate",
+      "rhs": 0,
+      "sense": ">="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R028",
+  "objective": {
+    "coefficients": {
+      "assess_duplication": -2,
+      "assess_holistic_transparency": -3,
+      "assess_opacity": -1,
+      "choose_layered_design": 10,
+      "choose_simple_design": 7
+    },
+    "constant": 0,
+    "meaning": "收费设计净市场价值",
+    "sense": "max",
+    "unit": "分"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0224",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择简明单层收费方案",
+      "name": "choose_simple_design",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择分层收费方案",
+      "name": "choose_layered_design",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "执行收费不透明性评估",
+      "name": "assess_opacity",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "执行成本重复性评估",
+      "name": "assess_duplication",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "执行整体收费透明度评估",
+      "name": "assess_holistic_transparency",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

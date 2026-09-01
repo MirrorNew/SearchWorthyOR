@@ -1,0 +1,135 @@
+{
+  "action_projection": [
+    "A_nurse",
+    "B_nurse",
+    "B_tech",
+    "C_tech",
+    "D_nurse",
+    "D_tech"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "A_nurse": 1,
+        "B_nurse": 1,
+        "D_nurse": 1
+      },
+      "meaning": "护士岗1人",
+      "name": "cover_nurse",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "B_tech": 1,
+        "C_tech": 1,
+        "D_tech": 1
+      },
+      "meaning": "技师岗1人",
+      "name": "cover_tech",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "B_nurse": 1,
+        "B_tech": 1
+      },
+      "meaning": "B至多承担1岗",
+      "name": "staff_B",
+      "rhs": 1,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "D_nurse": 1,
+        "D_tech": 1
+      },
+      "meaning": "D至多承担1岗",
+      "name": "staff_D",
+      "rhs": 1,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "A_nurse": 1
+      },
+      "meaning": "A护士许可已失效",
+      "name": "A_expired_nurse_license",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "B_tech": 1
+      },
+      "meaning": "B尚未通过技师胜任力复核",
+      "name": "B_tech_competency_pending",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R050",
+  "objective": {
+    "coefficients": {
+      "A_nurse": 1,
+      "B_nurse": 2,
+      "B_tech": 1,
+      "C_tech": 2,
+      "D_nurse": 4,
+      "D_tech": 3
+    },
+    "constant": 0,
+    "meaning": "最小化排班成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0259",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "将A分配到护士岗",
+      "name": "A_nurse",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将B分配到护士岗",
+      "name": "B_nurse",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将B分配到技师岗",
+      "name": "B_tech",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将C分配到技师岗",
+      "name": "C_tech",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将D分配到护士岗",
+      "name": "D_nurse",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将D分配到技师岗",
+      "name": "D_tech",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

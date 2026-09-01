@@ -1,0 +1,58 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R025",
+  "variant": "base",
+  "family": "facility_network",
+  "source_candidate_id": "SRCV2-0247",
+  "variables": [
+    {
+      "name": "service_press",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行冲压机检修"
+    },
+    {
+      "name": "service_mixer",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行混料机检修"
+    },
+    {
+      "name": "isolate_press",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为冲压机执行能源隔离"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "service_press": 10,
+      "service_mixer": 6,
+      "isolate_press": -3
+    },
+    "meaning": "检修组合净收益",
+    "unit": "万元"
+  },
+  "constraints": [
+    {
+      "name": "labor_capacity",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "service_press": 2,
+        "service_mixer": 1
+      },
+      "meaning": "检修占用的人工单位不超过两个"
+    }
+  ],
+  "action_projection": [
+    "service_press",
+    "service_mixer",
+    "isolate_press"
+  ]
+}

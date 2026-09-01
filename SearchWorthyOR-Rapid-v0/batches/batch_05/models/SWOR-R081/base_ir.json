@@ -1,0 +1,97 @@
+{
+  "action_projection": [
+    "submit_cork",
+    "defer_cork",
+    "submit_dublin",
+    "defer_dublin",
+    "portal_support"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "defer_cork": 1,
+        "submit_cork": 1
+      },
+      "meaning": "科克市议会恰选择一个处理动作",
+      "name": "choose_cork_action",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "defer_dublin": 1,
+        "submit_dublin": 1
+      },
+      "meaning": "都柏林市议会恰选择一个处理动作",
+      "name": "choose_dublin_action",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "portal_support": -2,
+        "submit_cork": 1,
+        "submit_dublin": 1
+      },
+      "meaning": "任一议会报送时启用共享门户支持",
+      "name": "portal_support_link",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R081",
+  "objective": {
+    "coefficients": {
+      "defer_cork": 1,
+      "defer_dublin": 1,
+      "portal_support": 2,
+      "submit_cork": 8,
+      "submit_dublin": 5
+    },
+    "constant": 0,
+    "meaning": "本期信息处理成本",
+    "sense": "min",
+    "unit": "千欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0160",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "科克市议会本期向环境署报送",
+      "name": "submit_cork",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "科克市议会把材料转入延期处理队列",
+      "name": "defer_cork",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "都柏林市议会本期向环境署报送",
+      "name": "submit_dublin",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "都柏林市议会把材料转入延期处理队列",
+      "name": "defer_dublin",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用共享电子门户技术支持",
+      "name": "portal_support",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

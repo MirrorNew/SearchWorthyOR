@@ -1,0 +1,79 @@
+{
+  "action_projection": [
+    "Q",
+    "H",
+    "D",
+    "M"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "D": 1,
+        "H": 1,
+        "M": 1,
+        "Q": 1
+      },
+      "meaning": "至少启用2项组件",
+      "name": "at_least_two",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "D": 1,
+        "M": 1
+      },
+      "meaning": "D与M中至少启用1项治理支持",
+      "name": "governance_support",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R047",
+  "objective": {
+    "coefficients": {
+      "D": 1,
+      "H": 5,
+      "M": 2,
+      "Q": 4
+    },
+    "constant": 0,
+    "meaning": "最小化评估系统成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0222",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "启用全部产品成本量化",
+      "name": "Q",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用目标客户投资期限兼容性检验",
+      "name": "H",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用文档归档",
+      "name": "D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用例行看板",
+      "name": "M",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

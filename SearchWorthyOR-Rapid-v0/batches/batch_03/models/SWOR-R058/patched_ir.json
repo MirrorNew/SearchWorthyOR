@@ -1,0 +1,67 @@
+{
+  "action_projection": [
+    "checks_A",
+    "checks_B"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "checks_A": 1,
+        "checks_B": 1
+      },
+      "meaning": "2处合计至少记录1次",
+      "name": "internal_one_check",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "checks_A": 1
+      },
+      "meaning": "冷藏区A每天至少温控记录2次",
+      "name": "A_twice_daily",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "checks_B": 1
+      },
+      "meaning": "试剂区B每天至少温控记录2次",
+      "name": "B_twice_daily",
+      "rhs": 2,
+      "sense": ">="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R058",
+  "objective": {
+    "coefficients": {
+      "checks_A": 1,
+      "checks_B": 1
+    },
+    "constant": 0,
+    "meaning": "最小化每日记录工作量",
+    "sense": "min",
+    "unit": "次"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0175",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "冷藏区A每日温度记录次数",
+      "name": "checks_A",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "试剂区B每日温度记录次数",
+      "name": "checks_B",
+      "type": "INTEGER",
+      "ub": 4
+    }
+  ],
+  "variant": "patched"
+}

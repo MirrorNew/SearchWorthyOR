@@ -1,0 +1,117 @@
+{
+  "action_projection": [
+    "s_a",
+    "s_b",
+    "a_c",
+    "b_c",
+    "c_t",
+    "b_t"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "a_c": 1,
+        "s_a": -1
+      },
+      "meaning": "节点a流量守恒",
+      "name": "node_a",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "b_c": 1,
+        "b_t": 1,
+        "s_b": -1
+      },
+      "meaning": "节点b流量守恒",
+      "name": "node_b",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "a_c": -1,
+        "b_c": -1,
+        "c_t": 1
+      },
+      "meaning": "节点c流量守恒",
+      "name": "node_c",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "b_t": 1,
+        "c_t": 1
+      },
+      "meaning": "终点流入1",
+      "name": "sink_flow",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R075",
+  "objective": {
+    "coefficients": {
+      "a_c": 1,
+      "b_c": 2,
+      "b_t": 4,
+      "c_t": 1,
+      "s_a": 1,
+      "s_b": 2
+    },
+    "constant": 0,
+    "meaning": "最小化运输成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0135",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "使用运输弧s_a",
+      "name": "s_a",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用运输弧s_b",
+      "name": "s_b",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用运输弧a_c",
+      "name": "a_c",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用运输弧b_c",
+      "name": "b_c",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用运输弧c_t",
+      "name": "c_t",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用运输弧b_t",
+      "name": "b_t",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

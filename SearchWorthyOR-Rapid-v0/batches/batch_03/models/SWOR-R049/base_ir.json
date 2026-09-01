@@ -1,0 +1,90 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D",
+    "x_E"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 4,
+        "x_B": 5,
+        "x_C": 3,
+        "x_D": 6,
+        "x_E": 7
+      },
+      "meaning": "参与医院总移植能力至少10",
+      "name": "capacity_floor",
+      "rhs": 10,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1
+      },
+      "meaning": "东部片区至少有一家参与",
+      "name": "regional_presence",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R049",
+  "objective": {
+    "coefficients": {
+      "x_A": 2,
+      "x_B": 3,
+      "x_C": 1,
+      "x_D": 2,
+      "x_E": 4
+    },
+    "constant": 0,
+    "meaning": "最小化项目启动成本",
+    "sense": "min",
+    "unit": "百万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0091",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "医院A参加改进项目",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "医院B参加改进项目",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "医院C参加改进项目",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "医院D参加改进项目",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "医院E参加改进项目",
+      "name": "x_E",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}
