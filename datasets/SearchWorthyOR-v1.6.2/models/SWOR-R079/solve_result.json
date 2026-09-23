@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R079",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 16,
+  "base_objective": 6.0,
+  "base_incumbent": {
+    "route_a": 0,
+    "route_b": 1,
+    "route_c": 0,
+    "route_d": 0,
+    "route_e": 1,
+    "route_f": 0,
+    "route_g": 0,
+    "route_h": 1
+  },
+  "base_optimal_actions": [
+    {
+      "route_a": 0,
+      "route_b": 1,
+      "route_c": 0,
+      "route_d": 0,
+      "route_e": 1,
+      "route_f": 0,
+      "route_g": 0,
+      "route_h": 1
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 3,
+  "full_objective": 21.0,
+  "full_incumbent": {
+    "route_a": 1,
+    "route_b": 0,
+    "route_c": 0,
+    "route_d": 1,
+    "route_e": 0,
+    "route_f": 0,
+    "route_g": 1,
+    "route_h": 0
+  },
+  "full_optimal_actions": [
+    {
+      "route_a": 1,
+      "route_b": 0,
+      "route_c": 0,
+      "route_d": 1,
+      "route_e": 0,
+      "route_f": 0,
+      "route_g": 1,
+      "route_h": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 21.0,
+    "canonical_unit": "成本点",
+    "accepted_equivalents": [
+      {
+        "unit": "成本点",
+        "value": 21.0
+      },
+      {
+        "unit": "点",
+        "value": 21.0
+      }
+    ]
+  }
+}

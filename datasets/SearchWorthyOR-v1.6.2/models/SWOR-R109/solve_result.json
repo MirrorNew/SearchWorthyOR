@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R109",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 7,
+  "base_objective": 80.0,
+  "base_incumbent": {
+    "classb_65": 1,
+    "classb_48": 0,
+    "classa_70": 0,
+    "classd_monthly": 0,
+    "none": 1,
+    "move_classb": 0,
+    "add_classa": 0,
+    "add_classd": 0
+  },
+  "base_optimal_actions": [
+    {
+      "classb_65": 1,
+      "classb_48": 0,
+      "classa_70": 0,
+      "classd_monthly": 0,
+      "none": 1,
+      "move_classb": 0,
+      "add_classa": 0,
+      "add_classd": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 6,
+  "full_objective": 76.0,
+  "full_incumbent": {
+    "classb_65": 0,
+    "classb_48": 0,
+    "classa_70": 0,
+    "classd_monthly": 1,
+    "none": 1,
+    "move_classb": 0,
+    "add_classa": 0,
+    "add_classd": 0
+  },
+  "full_optimal_actions": [
+    {
+      "classb_65": 0,
+      "classb_48": 0,
+      "classa_70": 0,
+      "classd_monthly": 1,
+      "none": 1,
+      "move_classb": 0,
+      "add_classa": 0,
+      "add_classd": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "设施防护净效用点",
+        "value": 76.0
+      },
+      {
+        "unit": "价值点",
+        "value": 76.0
+      },
+      {
+        "unit": "点",
+        "value": 76.0
+      }
+    ],
+    "canonical_unit": "设施防护净效用点",
+    "canonical_value": 76.0
+  }
+}

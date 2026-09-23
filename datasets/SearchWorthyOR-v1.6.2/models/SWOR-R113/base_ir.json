@@ -1,0 +1,69 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R113",
+  "variant": "base",
+  "family": "energy_environment",
+  "source_candidate_id": "A5-R113-EPA-FLARE-VISIBLE-EMISSIONS",
+  "variables": [
+    {
+      "name": "flame_visible8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "保持火焰但出现8分钟可见排放"
+    },
+    {
+      "name": "flame_visible5",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "保持火焰且可见排放5分钟"
+    },
+    {
+      "name": "noflame_visible0",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "出现火焰中断但无可见排放"
+    },
+    {
+      "name": "flame_visible2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "保持火焰且可见排放2分钟"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "flame_visible8": 24,
+      "flame_visible5": 20,
+      "noflame_visible0": 22,
+      "flame_visible2": 18
+    },
+    "meaning": "Total decision value",
+    "unit": "火炬运行净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_flare_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "flame_visible8": 1,
+        "flame_visible5": 1,
+        "noflame_visible0": 1,
+        "flame_visible2": 1
+      },
+      "meaning": "Exactly one listed package must be selected"
+    }
+  ],
+  "action_projection": [
+    "flame_visible8",
+    "flame_visible5",
+    "noflame_visible0",
+    "flame_visible2"
+  ]
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R061",
+  "variant": "base",
+  "family": "assignment_matching",
+  "source_candidate_id": "US-CPSC-NOTTAWAY-RECALL-2026-07-16",
+  "variables": [
+    {
+      "name": "assign_north_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由北区技师完成安装Currey Nottaway吊灯型号9000-1128"
+    },
+    {
+      "name": "assign_north_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由北区技师完成安装Currey Nottaway吊灯型号9000-1129"
+    },
+    {
+      "name": "assign_north_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由北区技师完成安装Currey Nottaway吊灯型号9000-1253"
+    },
+    {
+      "name": "assign_north_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由北区技师完成安装Currey Nottaway吊灯型号9000-1130"
+    },
+    {
+      "name": "assign_south_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由南区技师完成安装Currey Nottaway吊灯型号9000-1128"
+    },
+    {
+      "name": "assign_south_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由南区技师完成安装Currey Nottaway吊灯型号9000-1129"
+    },
+    {
+      "name": "assign_south_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由南区技师完成安装Currey Nottaway吊灯型号9000-1253"
+    },
+    {
+      "name": "assign_south_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "由南区技师完成安装Currey Nottaway吊灯型号9000-1130"
+    },
+    {
+      "name": "replace_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为任务A启用厂家处置与状态确认服务"
+    },
+    {
+      "name": "replace_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为任务B启用厂家处置与状态确认服务"
+    },
+    {
+      "name": "replace_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为任务C启用厂家处置与状态确认服务"
+    },
+    {
+      "name": "replace_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为任务D启用厂家处置与状态确认服务"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "assign_north_a": 13,
+      "assign_north_b": 19,
+      "assign_north_c": 11,
+      "assign_north_d": 16,
+      "assign_south_a": 11,
+      "assign_south_b": 17,
+      "assign_south_c": 10,
+      "assign_south_d": 15,
+      "replace_a": -8,
+      "replace_b": -8,
+      "replace_c": -8,
+      "replace_d": -8
+    },
+    "meaning": "两名技师的任务收益减去厂家处置服务成本后的净收益",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "one_job_north",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_a": 1,
+        "assign_north_b": 1,
+        "assign_north_c": 1,
+        "assign_north_d": 1
+      },
+      "meaning": "north技师恰好承担一个任务"
+    },
+    {
+      "name": "one_job_south",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_south_a": 1,
+        "assign_south_b": 1,
+        "assign_south_c": 1,
+        "assign_south_d": 1
+      },
+      "meaning": "south技师恰好承担一个任务"
+    },
+    {
+      "name": "job_a_at_most_one_crew",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_a": 1,
+        "assign_south_a": 1
+      },
+      "meaning": "任务A至多分给一名技师"
+    },
+    {
+      "name": "replace_a_only_if_assigned",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "replace_a": 1,
+        "assign_north_a": -1,
+        "assign_south_a": -1
+      },
+      "meaning": "只可为已分配任务A办理更换"
+    },
+    {
+      "name": "job_b_at_most_one_crew",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_b": 1,
+        "assign_south_b": 1
+      },
+      "meaning": "任务B至多分给一名技师"
+    },
+    {
+      "name": "replace_b_only_if_assigned",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "replace_b": 1,
+        "assign_north_b": -1,
+        "assign_south_b": -1
+      },
+      "meaning": "只可为已分配任务B办理更换"
+    },
+    {
+      "name": "job_c_at_most_one_crew",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_c": 1,
+        "assign_south_c": 1
+      },
+      "meaning": "任务C至多分给一名技师"
+    },
+    {
+      "name": "replace_c_only_if_assigned",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "replace_c": 1,
+        "assign_north_c": -1,
+        "assign_south_c": -1
+      },
+      "meaning": "只可为已分配任务C办理更换"
+    },
+    {
+      "name": "job_d_at_most_one_crew",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_north_d": 1,
+        "assign_south_d": 1
+      },
+      "meaning": "任务D至多分给一名技师"
+    },
+    {
+      "name": "replace_d_only_if_assigned",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "replace_d": 1,
+        "assign_north_d": -1,
+        "assign_south_d": -1
+      },
+      "meaning": "只可为已分配任务D办理更换"
+    }
+  ],
+  "action_projection": [
+    "assign_north_a",
+    "assign_north_b",
+    "assign_north_c",
+    "assign_north_d",
+    "assign_south_a",
+    "assign_south_b",
+    "assign_south_c",
+    "assign_south_d",
+    "replace_a",
+    "replace_b",
+    "replace_c",
+    "replace_d"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R064",
+  "variant": "base",
+  "family": "energy_environment",
+  "source_candidate_id": "US-NOAA-GULF-OTHER-SWG-2026-06-17",
+  "variables": [
+    {
+      "name": "select_trip_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次A"
+    },
+    {
+      "name": "select_trip_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次B"
+    },
+    {
+      "name": "select_trip_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次C"
+    },
+    {
+      "name": "select_trip_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次D"
+    },
+    {
+      "name": "select_trip_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次E"
+    },
+    {
+      "name": "select_trip_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行候选航次F"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_trip_a": 23,
+      "select_trip_b": 22,
+      "select_trip_c": 21,
+      "select_trip_d": 20,
+      "select_trip_e": 19,
+      "select_trip_f": 18
+    },
+    "meaning": "两个墨西哥湾石斑鱼航次的总服务收益",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "select_two_trips",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "select_trip_a": 1,
+        "select_trip_b": 1,
+        "select_trip_c": 1,
+        "select_trip_d": 1,
+        "select_trip_e": 1,
+        "select_trip_f": 1
+      },
+      "meaning": "恰好执行两个体验航次"
+    }
+  ],
+  "action_projection": [
+    "select_trip_a",
+    "select_trip_b",
+    "select_trip_c",
+    "select_trip_d",
+    "select_trip_e",
+    "select_trip_f"
+  ]
+}

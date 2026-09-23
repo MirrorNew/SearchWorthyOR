@@ -1,0 +1,44 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R004",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 361,
+  "base_objective": 18.0,
+  "base_incumbent": {
+    "notice_day": 15,
+    "response_day": 30
+  },
+  "base_optimal_actions": [
+    {
+      "notice_day": 15,
+      "response_day": 30
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 231,
+  "full_objective": 13.0,
+  "full_incumbent": {
+    "notice_day": 10,
+    "response_day": 30
+  },
+  "full_optimal_actions": [
+    {
+      "notice_day": 10,
+      "response_day": 30
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 13.0,
+    "canonical_unit": "点",
+    "accepted_equivalents": [
+      {
+        "value": 13.0,
+        "unit": "点"
+      }
+    ]
+  }
+}

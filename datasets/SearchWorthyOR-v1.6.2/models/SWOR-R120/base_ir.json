@@ -1,0 +1,119 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R120",
+  "variant": "base",
+  "family": "telecom_service",
+  "source_candidate_id": "ECFR-FCC-HAC-NATIONWIDE-PRE-2027-ROUNDING-2026",
+  "variables": [
+    {
+      "name": "offer_alder",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Alder手机"
+    },
+    {
+      "name": "offer_birch",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Birch手机"
+    },
+    {
+      "name": "offer_cedar",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Cedar手机"
+    },
+    {
+      "name": "offer_dover",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Dover手机"
+    },
+    {
+      "name": "offer_elm",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Elm手机"
+    },
+    {
+      "name": "offer_flint",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Flint手机"
+    },
+    {
+      "name": "offer_grove",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Grove手机"
+    },
+    {
+      "name": "offer_harbor",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Harbor手机"
+    },
+    {
+      "name": "offer_inlet",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在该air interface提供Inlet手机"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "offer_alder": 80,
+      "offer_birch": 71,
+      "offer_cedar": 67,
+      "offer_dover": 68,
+      "offer_elm": 56,
+      "offer_flint": 93,
+      "offer_grove": 73,
+      "offer_harbor": 46,
+      "offer_inlet": 41
+    },
+    "meaning": "所选动作的总产品组合价值点",
+    "unit": "产品组合价值点"
+  },
+  "constraints": [
+    {
+      "name": "offer_exactly_six",
+      "sense": "=",
+      "rhs": 6,
+      "coefficients": {
+        "offer_alder": 1,
+        "offer_birch": 1,
+        "offer_cedar": 1,
+        "offer_dover": 1,
+        "offer_elm": 1,
+        "offer_flint": 1,
+        "offer_grove": 1,
+        "offer_harbor": 1,
+        "offer_inlet": 1
+      },
+      "meaning": "恰好提供6款手机"
+    }
+  ],
+  "action_projection": [
+    "offer_alder",
+    "offer_birch",
+    "offer_cedar",
+    "offer_dover",
+    "offer_elm",
+    "offer_flint",
+    "offer_grove",
+    "offer_harbor",
+    "offer_inlet"
+  ]
+}

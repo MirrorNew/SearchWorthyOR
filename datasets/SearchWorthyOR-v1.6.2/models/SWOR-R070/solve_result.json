@@ -1,0 +1,52 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R070",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 9,
+  "base_objective": 3.0,
+  "base_incumbent": {
+    "phys_day": 0,
+    "phys_night": 0,
+    "nurse_day": 1,
+    "nurse_night": 1
+  },
+  "base_optimal_actions": [
+    {
+      "phys_day": 0,
+      "phys_night": 0,
+      "nurse_day": 1,
+      "nurse_night": 1
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 2,
+  "full_objective": 9.0,
+  "full_incumbent": {
+    "phys_day": 1,
+    "phys_night": 1,
+    "nurse_day": 0,
+    "nurse_night": 1
+  },
+  "full_optimal_actions": [
+    {
+      "phys_day": 1,
+      "phys_night": 1,
+      "nurse_day": 0,
+      "nurse_night": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "成本点",
+        "value": 9.0
+      }
+    ],
+    "canonical_unit": "成本点",
+    "canonical_value": 9.0
+  }
+}

@@ -1,0 +1,117 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R055",
+  "variant": "base",
+  "family": "routing_transport",
+  "source_candidate_id": "LOW-C2S-R055-FMCSA-CARGO-REINSPECTION",
+  "variables": [
+    {
+      "name": "unsealed_40mi",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未密封普通货物40英里任务"
+    },
+    {
+      "name": "unsealed_180mi",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未密封普通货物180英里任务"
+    },
+    {
+      "name": "sealed_180mi",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "司机无法检查货物的密封180英里任务"
+    },
+    {
+      "name": "unsealed_320mi",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "未密封普通货物320英里任务"
+    },
+    {
+      "name": "no_inspection",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "不安排途中货物固定检查"
+    },
+    {
+      "name": "first50_only",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在前50英里内安排一次检查"
+    },
+    {
+      "name": "first50_and_150",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在前50英里内及随后150英里节点安排检查"
+    },
+    {
+      "name": "first50_and_two150",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "在前50英里内及两个后续150英里节点安排检查"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "unsealed_40mi": 80,
+      "unsealed_180mi": 112,
+      "sealed_180mi": 105,
+      "unsealed_320mi": 135,
+      "no_inspection": 0,
+      "first50_only": -6,
+      "first50_and_150": -12,
+      "first50_and_two150": -19
+    },
+    "meaning": "题列决策的唯一目标",
+    "unit": "货运任务净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_route",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "unsealed_40mi": 1,
+        "unsealed_180mi": 1,
+        "sealed_180mi": 1,
+        "unsealed_320mi": 1
+      },
+      "meaning": "选择任务"
+    },
+    {
+      "name": "choose_inspection",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "no_inspection": 1,
+        "first50_only": 1,
+        "first50_and_150": 1,
+        "first50_and_two150": 1
+      },
+      "meaning": "选择检查服务"
+    }
+  ],
+  "action_projection": [
+    "unsealed_40mi",
+    "unsealed_180mi",
+    "sealed_180mi",
+    "unsealed_320mi",
+    "no_inspection",
+    "first50_only",
+    "first50_and_150",
+    "first50_and_two150"
+  ]
+}

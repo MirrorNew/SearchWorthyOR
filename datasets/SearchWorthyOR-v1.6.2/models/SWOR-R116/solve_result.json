@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R116",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 22,
+  "base_objective": 267.0,
+  "base_incumbent": {
+    "schedule_atlas_audio": 1,
+    "schedule_birch_mental": 1,
+    "schedule_cedar_incident": 1,
+    "schedule_delta_incident": 0,
+    "deploy_audio_platform": 1,
+    "deploy_av_platform": 1,
+    "staff_cedar_onsite": 0,
+    "staff_mental_visit": 0
+  },
+  "base_optimal_actions": [
+    {
+      "schedule_atlas_audio": 1,
+      "schedule_birch_mental": 1,
+      "schedule_cedar_incident": 1,
+      "schedule_delta_incident": 0,
+      "deploy_audio_platform": 1,
+      "deploy_av_platform": 1,
+      "staff_cedar_onsite": 0,
+      "staff_mental_visit": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 16,
+  "full_objective": 265.0,
+  "full_incumbent": {
+    "schedule_atlas_audio": 1,
+    "schedule_birch_mental": 1,
+    "schedule_cedar_incident": 0,
+    "schedule_delta_incident": 1,
+    "deploy_audio_platform": 1,
+    "deploy_av_platform": 1,
+    "staff_cedar_onsite": 0,
+    "staff_mental_visit": 0
+  },
+  "full_optimal_actions": [
+    {
+      "schedule_atlas_audio": 1,
+      "schedule_birch_mental": 1,
+      "schedule_cedar_incident": 0,
+      "schedule_delta_incident": 1,
+      "deploy_audio_platform": 1,
+      "deploy_av_platform": 1,
+      "staff_cedar_onsite": 0,
+      "staff_mental_visit": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 265.0,
+    "canonical_unit": "医疗服务价值点",
+    "accepted_equivalents": [
+      {
+        "unit": "医疗服务价值点",
+        "value": 265.0
+      },
+      {
+        "unit": "点",
+        "value": 265.0
+      }
+    ]
+  }
+}

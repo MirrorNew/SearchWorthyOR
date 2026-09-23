@@ -1,0 +1,32 @@
+{
+  "schema_version": "searchworthyor.v161.build_integrity.v1",
+  "dataset": "SearchWorthyOR-v1.6.1",
+  "source_dataset": "SearchWorthyOR-v1.5.1",
+  "source_pre_build": {
+    "algorithm": "BLAKE2b-256 tree over sorted POSIX relative paths: uint32-be(path_utf8_length)||path_utf8||uint64-be(file_size)||BLAKE2b-256(file_bytes)",
+    "fingerprint": "34c96a3e70665fbe297e5270c037f6ce3dad922591169cc0f7bf2ed5bc27b25f",
+    "file_count": 375,
+    "total_bytes": 7062812,
+    "directory_count_excluding_root": 123
+  },
+  "source_post_build": {
+    "algorithm": "BLAKE2b-256 tree over sorted POSIX relative paths: uint32-be(path_utf8_length)||path_utf8||uint64-be(file_size)||BLAKE2b-256(file_bytes)",
+    "fingerprint": "34c96a3e70665fbe297e5270c037f6ce3dad922591169cc0f7bf2ed5bc27b25f",
+    "file_count": 375,
+    "total_bytes": 7062812,
+    "directory_count_excluding_root": 123
+  },
+  "source_validation_report_contract": {
+    "schema_version": "searchworthyor.v151.validation.v1",
+    "status": "PASS",
+    "errors": []
+  },
+  "target_closure": {
+    "file_count": 386,
+    "directory_count_excluding_root": 124
+  },
+  "build_transaction": {
+    "marker": "BUILD_IN_PROGRESS",
+    "final_validation_status": "NOT_RUN_AFTER_BUILD"
+  }
+}

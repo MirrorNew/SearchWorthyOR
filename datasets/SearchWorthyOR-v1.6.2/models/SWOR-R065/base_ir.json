@@ -1,0 +1,203 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R065",
+  "variant": "base",
+  "family": "facility_network",
+  "source_candidate_id": "US-EPA-CLASSVI-PRIMACY-STATES-2026-05-26",
+  "variables": [
+    {
+      "name": "select_colorado",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动科罗拉多场站"
+    },
+    {
+      "name": "select_new_mexico",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动新墨西哥场站"
+    },
+    {
+      "name": "select_montana",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动蒙大拿场站"
+    },
+    {
+      "name": "select_arizona",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动亚利桑那场站"
+    },
+    {
+      "name": "select_texas",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动得克萨斯场站"
+    },
+    {
+      "name": "select_louisiana",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启动路易斯安那场站"
+    },
+    {
+      "name": "hq_team_colorado",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为科罗拉多场站安排总部地质资料团队"
+    },
+    {
+      "name": "hq_team_new_mexico",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为新墨西哥场站安排总部地质资料团队"
+    },
+    {
+      "name": "hq_team_montana",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为蒙大拿场站安排总部地质资料团队"
+    },
+    {
+      "name": "hq_team_arizona",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为亚利桑那场站安排总部地质资料团队"
+    },
+    {
+      "name": "hq_team_texas",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为得克萨斯场站安排总部地质资料团队"
+    },
+    {
+      "name": "hq_team_louisiana",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为路易斯安那场站安排总部地质资料团队"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_colorado": 22,
+      "select_new_mexico": 21,
+      "select_montana": 20,
+      "select_arizona": 19,
+      "select_texas": 18,
+      "select_louisiana": 17,
+      "hq_team_colorado": -8,
+      "hq_team_new_mexico": -8,
+      "hq_team_montana": -8,
+      "hq_team_arizona": -8,
+      "hq_team_texas": -8,
+      "hq_team_louisiana": -8
+    },
+    "meaning": "两个注入井场站的开发收益减去总部资料团队成本",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "select_two_sites",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "select_colorado": 1,
+        "select_new_mexico": 1,
+        "select_montana": 1,
+        "select_arizona": 1,
+        "select_texas": 1,
+        "select_louisiana": 1
+      },
+      "meaning": "恰好启动两个封存场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_colorado",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_colorado": 1,
+        "select_colorado": -1
+      },
+      "meaning": "总部团队只可服务已启动的colorado场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_new_mexico",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_new_mexico": 1,
+        "select_new_mexico": -1
+      },
+      "meaning": "总部团队只可服务已启动的new_mexico场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_montana",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_montana": 1,
+        "select_montana": -1
+      },
+      "meaning": "总部团队只可服务已启动的montana场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_arizona",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_arizona": 1,
+        "select_arizona": -1
+      },
+      "meaning": "总部团队只可服务已启动的arizona场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_texas",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_texas": 1,
+        "select_texas": -1
+      },
+      "meaning": "总部团队只可服务已启动的texas场站"
+    },
+    {
+      "name": "hq_team_only_if_selected_louisiana",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "hq_team_louisiana": 1,
+        "select_louisiana": -1
+      },
+      "meaning": "总部团队只可服务已启动的louisiana场站"
+    }
+  ],
+  "action_projection": [
+    "select_colorado",
+    "select_new_mexico",
+    "select_montana",
+    "select_arizona",
+    "select_texas",
+    "select_louisiana",
+    "hq_team_colorado",
+    "hq_team_new_mexico",
+    "hq_team_montana",
+    "hq_team_arizona",
+    "hq_team_texas",
+    "hq_team_louisiana"
+  ]
+}

@@ -1,0 +1,121 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R088",
+  "variant": "base",
+  "family": "finance_portfolio",
+  "source_candidate_id": "EU-LNG-THIRD-COUNTRY-TEMPORARY-EXEMPTION-20260723",
+  "variables": [
+    {
+      "name": "purchase_orion_jan",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Orion采购头寸（合同GL-17，2027年1月）"
+    },
+    {
+      "name": "purchase_lumen_mar",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Lumen采购头寸（合同QP-42，2027年3月）"
+    },
+    {
+      "name": "purchase_cairn_feb",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Cairn采购头寸（合同RT-09，2027年2月）"
+    },
+    {
+      "name": "purchase_vesper_apr",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Vesper采购头寸（合同VN-31，2027年4月）"
+    },
+    {
+      "name": "transfer_maple_feb",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Maple第三国转运头寸（合同QP-42，2027年2月）"
+    },
+    {
+      "name": "transfer_cedar_apr",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Cedar第三国转运头寸（合同GL-17，2027年4月）"
+    },
+    {
+      "name": "transfer_harbor_mar",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Harbor第三国转运头寸（合同RT-09，2027年3月）"
+    },
+    {
+      "name": "transfer_delta_may",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行Delta第三国转运头寸（合同VN-31，2027年5月）"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "purchase_orion_jan": 20,
+      "purchase_lumen_mar": 19,
+      "purchase_cairn_feb": 18,
+      "purchase_vesper_apr": 17,
+      "transfer_maple_feb": 5,
+      "transfer_cedar_apr": 4,
+      "transfer_harbor_mar": 3,
+      "transfer_delta_may": 2
+    },
+    "meaning": "获选采购与转运头寸的总商业价值",
+    "unit": "价值点"
+  },
+  "constraints": [
+    {
+      "name": "execution_capacity",
+      "sense": "<=",
+      "rhs": 4,
+      "coefficients": {
+        "purchase_orion_jan": 1,
+        "purchase_lumen_mar": 1,
+        "purchase_cairn_feb": 1,
+        "purchase_vesper_apr": 1,
+        "transfer_maple_feb": 1,
+        "transfer_cedar_apr": 1,
+        "transfer_harbor_mar": 1,
+        "transfer_delta_may": 1
+      },
+      "meaning": "交易与运营团队最多执行四个头寸"
+    },
+    {
+      "name": "transfer_capacity",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "transfer_maple_feb": 1,
+        "transfer_cedar_apr": 1,
+        "transfer_harbor_mar": 1,
+        "transfer_delta_may": 1
+      },
+      "meaning": "船运团队最多执行两个第三国转运头寸"
+    }
+  ],
+  "action_projection": [
+    "purchase_orion_jan",
+    "purchase_lumen_mar",
+    "purchase_cairn_feb",
+    "purchase_vesper_apr",
+    "transfer_maple_feb",
+    "transfer_cedar_apr",
+    "transfer_harbor_mar",
+    "transfer_delta_may"
+  ]
+}

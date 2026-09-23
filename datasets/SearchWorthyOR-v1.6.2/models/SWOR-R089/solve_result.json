@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R089",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 4,
+  "base_objective": 24.0,
+  "base_incumbent": {
+    "pkg_100_25": 1,
+    "pkg_100_20": 0,
+    "pkg_80_18": 0,
+    "pkg_80_16": 0
+  },
+  "base_optimal_actions": [
+    {
+      "pkg_100_25": 1,
+      "pkg_100_20": 0,
+      "pkg_80_18": 0,
+      "pkg_80_16": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 2,
+  "full_objective": 20.0,
+  "full_incumbent": {
+    "pkg_100_25": 0,
+    "pkg_100_20": 1,
+    "pkg_80_18": 0,
+    "pkg_80_16": 0
+  },
+  "full_optimal_actions": [
+    {
+      "pkg_100_25": 0,
+      "pkg_100_20": 1,
+      "pkg_80_18": 0,
+      "pkg_80_16": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "年度照护净效用点",
+        "value": 20.0
+      },
+      {
+        "unit": "价值点",
+        "value": 20.0
+      },
+      {
+        "unit": "点",
+        "value": 20.0
+      }
+    ],
+    "canonical_unit": "年度照护净效用点",
+    "canonical_value": 20.0
+  }
+}

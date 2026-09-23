@@ -1,0 +1,127 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R077",
+  "variant": "base",
+  "family": "scheduling_workforce",
+  "source_candidate_id": "LOW-C3-R077-REPLACEMENT",
+  "variables": [
+    {
+      "name": "s7x12",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择7个12小时班的排班"
+    },
+    {
+      "name": "s10x8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择10个8小时班的排班"
+    },
+    {
+      "name": "s14x6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择14个6小时班的排班"
+    },
+    {
+      "name": "s9x9",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择9个9小时班的排班"
+    },
+    {
+      "name": "p0",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择0个加班小时的工资包"
+    },
+    {
+      "name": "p1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择1个加班小时的工资包"
+    },
+    {
+      "name": "p4",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择4个加班小时的工资包"
+    },
+    {
+      "name": "p9",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择9个加班小时的工资包"
+    },
+    {
+      "name": "p28",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择28个加班小时的工资包"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "s7x12": 24,
+      "s10x8": 19,
+      "s14x6": 21,
+      "s9x9": 23,
+      "p0": 0,
+      "p1": -1,
+      "p4": -2,
+      "p9": -4,
+      "p28": -7
+    },
+    "meaning": "排班效用减工资包成本后的净效用",
+    "unit": "排班净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_schedule",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "s7x12": 1,
+        "s10x8": 1,
+        "s14x6": 1,
+        "s9x9": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    },
+    {
+      "name": "choose_pay_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "p0": 1,
+        "p1": 1,
+        "p4": 1,
+        "p9": 1,
+        "p28": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    }
+  ],
+  "action_projection": [
+    "s7x12",
+    "s10x8",
+    "s14x6",
+    "s9x9",
+    "p0",
+    "p1",
+    "p4",
+    "p9",
+    "p28"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R050",
+  "variant": "base",
+  "family": "healthcare_resources",
+  "source_candidate_id": "US-CMS-QCN-HOME-CARE-TERMINATION-20260724",
+  "variables": [
+    {
+      "name": "qcn",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把QCN Home Care选为新居家护理计划的执行机构"
+    },
+    {
+      "name": "quality_care",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把Quality Care Nursing, LLC选为新居家护理计划的执行机构"
+    },
+    {
+      "name": "amedisys",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把Amedisys Home Health选为新居家护理计划的执行机构"
+    },
+    {
+      "name": "centerwell",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把CenterWell Home Health选为新居家护理计划的执行机构"
+    },
+    {
+      "name": "elara",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把Elara Caring选为新居家护理计划的执行机构"
+    },
+    {
+      "name": "residential",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把Residential Home Health选为新居家护理计划的执行机构"
+    }
+  ],
+  "objective": {
+    "sense": "min",
+    "constant": 0,
+    "coefficients": {
+      "qcn": 1,
+      "quality_care": 2,
+      "amedisys": 3,
+      "centerwell": 4,
+      "elara": 5,
+      "residential": 6
+    },
+    "meaning": "新居家护理计划的签约与协调成本",
+    "unit": "成本点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_agency",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "qcn": 1,
+        "quality_care": 1,
+        "amedisys": 1,
+        "centerwell": 1,
+        "elara": 1,
+        "residential": 1
+      },
+      "meaning": "新计划恰好选择一家执行机构"
+    }
+  ],
+  "action_projection": [
+    "qcn",
+    "quality_care",
+    "amedisys",
+    "centerwell",
+    "elara",
+    "residential"
+  ]
+}

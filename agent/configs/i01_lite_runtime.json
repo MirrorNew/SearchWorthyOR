@@ -1,0 +1,34 @@
+{
+  "version": "i01-lite-007-c2fix-002",
+  "iteration_naming": "i01-lite-001, i01-lite-002, ...",
+  "channel": "SHUBIAOBIAO_API",
+  "model": {
+    "name": "gpt-5.6-luna",
+    "reasoning_effort": "xhigh",
+    "temperature": 1
+  },
+  "search_channel": "SHUBIAOBIAO_WEB",
+  "search_model": {
+    "name": "gpt-5.6-luna",
+    "reasoning_effort": "xhigh",
+    "temperature": 1
+  },
+  "budgets": {
+    "model": 12,
+    "search": 3,
+    "read": 6,
+    "solve_seconds": 90,
+    "wall_seconds": 1200,
+    "technical_retries": 2
+  },
+  "first_response_body_timeout_seconds": 60,
+  "request_timeout_seconds": 650,
+  "parallel_limit": 20,
+  "admission_policy": "rolling_refill",
+  "max_payload_characters": 240000,
+  "mode": "LIVE",
+  "live_execution_verified": false,
+  "effective_parallel_limit": 20,
+  "temperature_control": "API_REQUEST_AND_ECHO",
+  "technical_retry_support": "MAX_2_SHARED_ORIGINAL_CALL_BUDGET_AND_DEADLINE"
+}

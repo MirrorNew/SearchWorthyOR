@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R021",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 8,
+  "base_objective": 7.0,
+  "base_incumbent": {
+    "producer_greencycle": 1,
+    "producer_harbourworks": 0,
+    "waste_riversort": 1,
+    "waste_ecodepot": 0,
+    "target_commitment": 0
+  },
+  "base_optimal_actions": [
+    {
+      "producer_greencycle": 1,
+      "producer_harbourworks": 0,
+      "waste_riversort": 1,
+      "waste_ecodepot": 0,
+      "target_commitment": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 4,
+  "full_objective": 9.0,
+  "full_incumbent": {
+    "producer_greencycle": 1,
+    "producer_harbourworks": 0,
+    "waste_riversort": 1,
+    "waste_ecodepot": 0,
+    "target_commitment": 1
+  },
+  "full_optimal_actions": [
+    {
+      "producer_greencycle": 1,
+      "producer_harbourworks": 0,
+      "waste_riversort": 1,
+      "waste_ecodepot": 0,
+      "target_commitment": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "万元",
+        "value": 9.0
+      },
+      {
+        "unit": "元",
+        "value": 90000.0
+      }
+    ],
+    "canonical_unit": "万元",
+    "canonical_value": 9.0
+  }
+}

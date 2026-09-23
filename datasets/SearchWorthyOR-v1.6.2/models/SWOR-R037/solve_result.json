@@ -1,0 +1,72 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R037",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 21,
+  "base_objective": 145.0,
+  "base_incumbent": {
+    "roster_a_13h": 0,
+    "roster_b_15h_plus1": 0,
+    "roster_c_15h_base": 1,
+    "roster_d_17h_plus2": 0,
+    "roster_e_17h_plus1": 0,
+    "roster_f_19h_plus3_external": 0,
+    "roster_g_19h_plus3_domestic": 1
+  },
+  "base_optimal_actions": [
+    {
+      "roster_a_13h": 0,
+      "roster_b_15h_plus1": 0,
+      "roster_c_15h_base": 1,
+      "roster_d_17h_plus2": 0,
+      "roster_e_17h_plus1": 0,
+      "roster_f_19h_plus3_external": 0,
+      "roster_g_19h_plus3_domestic": 1
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 6,
+  "full_objective": 118.0,
+  "full_incumbent": {
+    "roster_a_13h": 1,
+    "roster_b_15h_plus1": 1,
+    "roster_c_15h_base": 0,
+    "roster_d_17h_plus2": 0,
+    "roster_e_17h_plus1": 0,
+    "roster_f_19h_plus3_external": 0,
+    "roster_g_19h_plus3_domestic": 0
+  },
+  "full_optimal_actions": [
+    {
+      "roster_a_13h": 1,
+      "roster_b_15h_plus1": 1,
+      "roster_c_15h_base": 0,
+      "roster_d_17h_plus2": 0,
+      "roster_e_17h_plus1": 0,
+      "roster_f_19h_plus3_external": 0,
+      "roster_g_19h_plus3_domestic": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "排班覆盖价值点",
+        "value": 118.0
+      },
+      {
+        "unit": "价值点",
+        "value": 118.0
+      },
+      {
+        "unit": "点",
+        "value": 118.0
+      }
+    ],
+    "canonical_unit": "排班覆盖价值点",
+    "canonical_value": 118.0
+  }
+}

@@ -1,0 +1,129 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R084",
+  "variant": "base",
+  "family": "energy_environment",
+  "source_candidate_id": "SRCV3-R084-EPA-UNIVERSAL-WASTE-AEROSOL-CANS-20260804",
+  "variables": [
+    {
+      "name": "puncture_intact_paint_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行完整废涂料气雾罐穿刺排空回收项目A"
+    },
+    {
+      "name": "ship_intact_paint_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行完整且不泄漏的废涂料气雾罐下游转运项目B"
+    },
+    {
+      "name": "puncture_leaking_lubricant_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行泄漏废润滑剂气雾罐立即穿刺排空项目C"
+    },
+    {
+      "name": "hold_leaking_cleaner_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行泄漏废清洁剂气雾罐保持完整并等待外运项目D"
+    },
+    {
+      "name": "ship_intact_food_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行完整且不泄漏的废食品脱模剂气雾罐转运项目E"
+    },
+    {
+      "name": "sort_intact_adhesive_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "执行完整且不泄漏的废胶黏剂气雾罐不破罐分类项目F"
+    },
+    {
+      "name": "compliant_puncture_cell",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用一套共享的完整合规穿刺排空单元"
+    },
+    {
+      "name": "closed_absorbent_overpack",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用一套独立密闭且带吸附材料的泄漏罐外包装"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "puncture_intact_paint_a": 95,
+      "ship_intact_paint_b": 81,
+      "puncture_leaking_lubricant_c": 92,
+      "hold_leaking_cleaner_d": 90,
+      "ship_intact_food_e": 79,
+      "sort_intact_adhesive_f": 78,
+      "compliant_puncture_cell": -25,
+      "closed_absorbent_overpack": -20
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "资源回收贡献点"
+  },
+  "constraints": [
+    {
+      "name": "select_exactly_two_aerosol_programs",
+      "sense": "=",
+      "rhs": 2,
+      "coefficients": {
+        "puncture_intact_paint_a": 1,
+        "ship_intact_paint_b": 1,
+        "puncture_leaking_lubricant_c": 1,
+        "hold_leaking_cleaner_d": 1,
+        "ship_intact_food_e": 1,
+        "sort_intact_adhesive_f": 1
+      },
+      "meaning": "Select exactly two universal-waste aerosol-can programs"
+    },
+    {
+      "name": "puncture_cell_only_with_breaching_program",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "compliant_puncture_cell": 1,
+        "puncture_intact_paint_a": -1,
+        "puncture_leaking_lubricant_c": -1
+      },
+      "meaning": "The puncture cell can only accompany A or C"
+    },
+    {
+      "name": "overpack_only_with_leaking_program",
+      "sense": "<=",
+      "rhs": 0,
+      "coefficients": {
+        "closed_absorbent_overpack": 1,
+        "puncture_leaking_lubricant_c": -1,
+        "hold_leaking_cleaner_d": -1
+      },
+      "meaning": "The overpack can only accompany a leaking-can program"
+    }
+  ],
+  "action_projection": [
+    "puncture_intact_paint_a",
+    "ship_intact_paint_b",
+    "puncture_leaking_lubricant_c",
+    "hold_leaking_cleaner_d",
+    "ship_intact_food_e",
+    "sort_intact_adhesive_f",
+    "compliant_puncture_cell",
+    "closed_absorbent_overpack"
+  ]
+}

@@ -1,0 +1,98 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R054",
+  "variant": "base",
+  "family": "production_capacity",
+  "source_candidate_id": "SRCV3-R054-UK-VCA-ECOC-SCOPE-20260804",
+  "variables": [
+    {
+      "name": "batch_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产GB无限系列M类车辆批次A"
+    },
+    {
+      "name": "batch_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产UKNI欧盟小批量N类车辆批次B"
+    },
+    {
+      "name": "batch_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产GB中等批量O类车辆批次C"
+    },
+    {
+      "name": "batch_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产GB国家小批量M类车辆批次D"
+    },
+    {
+      "name": "batch_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产GB无限系列L类车辆批次E"
+    },
+    {
+      "name": "batch_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "生产GB无限系列N类车辆批次F"
+    },
+    {
+      "name": "ecoc_cell",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用共享eCoC数据准备与提交单元"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "batch_a": 75,
+      "batch_b": 72,
+      "batch_c": 70,
+      "batch_d": 68,
+      "batch_e": 65,
+      "batch_f": 63,
+      "ecoc_cell": -45
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "净生产价值点"
+  },
+  "constraints": [
+    {
+      "name": "produce_exactly_three_vehicle_batches",
+      "sense": "=",
+      "rhs": 3,
+      "coefficients": {
+        "batch_a": 1,
+        "batch_b": 1,
+        "batch_c": 1,
+        "batch_d": 1,
+        "batch_e": 1,
+        "batch_f": 1
+      },
+      "meaning": "Produce exactly three vehicle batches"
+    }
+  ],
+  "action_projection": [
+    "batch_a",
+    "batch_b",
+    "batch_c",
+    "batch_d",
+    "batch_e",
+    "batch_f",
+    "ecoc_cell"
+  ]
+}

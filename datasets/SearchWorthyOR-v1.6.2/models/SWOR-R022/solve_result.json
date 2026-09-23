@@ -1,0 +1,76 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R022",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 10,
+  "base_objective": 55.0,
+  "base_incumbent": {
+    "perm_2mo_training": 0,
+    "perm_2mo_orientation": 0,
+    "agency_qualified": 0,
+    "qualified_gap25": 1,
+    "standard": 1,
+    "training_shift": 0,
+    "agency_shift": 0,
+    "retraining_shift": 0
+  },
+  "base_optimal_actions": [
+    {
+      "perm_2mo_training": 0,
+      "perm_2mo_orientation": 0,
+      "agency_qualified": 0,
+      "qualified_gap25": 1,
+      "standard": 1,
+      "training_shift": 0,
+      "agency_shift": 0,
+      "retraining_shift": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 3,
+  "full_objective": 46.0,
+  "full_incumbent": {
+    "perm_2mo_training": 0,
+    "perm_2mo_orientation": 0,
+    "agency_qualified": 0,
+    "qualified_gap25": 1,
+    "standard": 0,
+    "training_shift": 0,
+    "agency_shift": 0,
+    "retraining_shift": 1
+  },
+  "full_optimal_actions": [
+    {
+      "perm_2mo_training": 0,
+      "perm_2mo_orientation": 0,
+      "agency_qualified": 0,
+      "qualified_gap25": 1,
+      "standard": 0,
+      "training_shift": 0,
+      "agency_shift": 0,
+      "retraining_shift": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "指派净评分点",
+        "value": 46.0
+      },
+      {
+        "unit": "价值点",
+        "value": 46.0
+      },
+      {
+        "unit": "点",
+        "value": 46.0
+      }
+    ],
+    "canonical_unit": "指派净评分点",
+    "canonical_value": 46.0
+  }
+}

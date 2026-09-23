@@ -1,0 +1,89 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1
+      },
+      "meaning": "选择2项流程",
+      "name": "choose_two",
+      "rhs": 2,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1
+      },
+      "meaning": "覆盖电气维护",
+      "name": "electrical",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "x_C": 1,
+        "x_D": 1
+      },
+      "meaning": "覆盖机械维护",
+      "name": "mechanical",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R074",
+  "objective": {
+    "coefficients": {
+      "x_A": 1,
+      "x_B": 2,
+      "x_C": 1,
+      "x_D": 3
+    },
+    "constant": 0,
+    "meaning": "最小化维护流程成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "RAPID-REPL-UK-PUWER-LOG",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采用维护流程A",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用维护流程B",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用维护流程C",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用维护流程D",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

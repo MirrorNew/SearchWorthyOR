@@ -1,0 +1,129 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R110",
+  "variant": "base",
+  "family": "facility_network",
+  "source_candidate_id": "EU-AFIR-2027-DIRECTIONAL-CORRIDOR-COVERAGE-GRAPH",
+  "variables": [
+    {
+      "name": "select_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施A项目：东向km45与西向km135各建一座充电池"
+    },
+    {
+      "name": "select_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施B项目：东向km90建设一座充电池"
+    },
+    {
+      "name": "select_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施C项目：东向km135与西向km45各建一座充电池"
+    },
+    {
+      "name": "select_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施D项目：西向km90建设一座充电池"
+    },
+    {
+      "name": "select_e",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施E项目：东向km55与西向km40各建一座充电池"
+    },
+    {
+      "name": "select_f",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施F项目：东向km90与西向km140各建一座充电池"
+    },
+    {
+      "name": "select_g",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施G项目：东向km120建设一座充电池"
+    },
+    {
+      "name": "select_h",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施H项目：东向km40与西向km95各建一座充电池"
+    },
+    {
+      "name": "select_i",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施I项目：西向km120建设一座充电池"
+    },
+    {
+      "name": "select_j",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "实施J项目：东向km140与西向km55各建一座充电池"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_a": 72,
+      "select_b": 84,
+      "select_c": 67,
+      "select_d": 63,
+      "select_e": 78,
+      "select_f": 74,
+      "select_g": 82,
+      "select_h": 69,
+      "select_i": 80,
+      "select_j": 66
+    },
+    "meaning": "四个不可拆分项目的网络部署价值",
+    "unit": "网络部署价值点"
+  },
+  "constraints": [
+    {
+      "name": "select_four_upgrade_projects",
+      "sense": "=",
+      "rhs": 4,
+      "coefficients": {
+        "select_a": 1,
+        "select_b": 1,
+        "select_c": 1,
+        "select_d": 1,
+        "select_e": 1,
+        "select_f": 1,
+        "select_g": 1,
+        "select_h": 1,
+        "select_i": 1,
+        "select_j": 1
+      },
+      "meaning": "恰好实施四个项目"
+    }
+  ],
+  "action_projection": [
+    "select_a",
+    "select_b",
+    "select_c",
+    "select_d",
+    "select_e",
+    "select_f",
+    "select_g",
+    "select_h",
+    "select_i",
+    "select_j"
+  ]
+}

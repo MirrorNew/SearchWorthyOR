@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R115",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 4,
+  "base_objective": 95.0,
+  "base_incumbent": {
+    "five_stroke": 0,
+    "six_spinal": 0,
+    "seven_hip": 0,
+    "four_burn": 1
+  },
+  "base_optimal_actions": [
+    {
+      "five_stroke": 0,
+      "six_spinal": 0,
+      "seven_hip": 0,
+      "four_burn": 1
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 2,
+  "full_objective": 84.0,
+  "full_incumbent": {
+    "five_stroke": 0,
+    "six_spinal": 1,
+    "seven_hip": 0,
+    "four_burn": 0
+  },
+  "full_optimal_actions": [
+    {
+      "five_stroke": 0,
+      "six_spinal": 1,
+      "seven_hip": 0,
+      "four_burn": 0
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "accepted_equivalents": [
+      {
+        "unit": "康复组合价值点",
+        "value": 84.0
+      },
+      {
+        "unit": "价值点",
+        "value": 84.0
+      },
+      {
+        "unit": "点",
+        "value": 84.0
+      }
+    ],
+    "canonical_unit": "康复组合价值点",
+    "canonical_value": 84.0
+  }
+}

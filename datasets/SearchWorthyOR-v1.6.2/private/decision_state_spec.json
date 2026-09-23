@@ -1,0 +1,41 @@
+{
+  "schema_version": "searchworthyor.decision_state.v2",
+  "dataset_version": "SearchWorthyOR-v1.6.1",
+  "visibility": "PRIVATE_SCORER_ONLY",
+  "initial_model_timepoint": "After the model has read every field visible in the initial case input.",
+  "allowed_states": {
+    "RETAIN": {
+      "search_required": true,
+      "applicability": false,
+      "initial_model_variant": "base",
+      "final_model_variant": "base",
+      "patch_cardinality": 0,
+      "model_changed_from_initial": false,
+      "decision_changed_from_initial": false
+    },
+    "PATCH_CHANGES": {
+      "search_required": true,
+      "applicability": true,
+      "initial_model_variant": "base",
+      "final_model_variant": "full",
+      "patch_cardinality": "NONZERO",
+      "model_changed_from_initial": true,
+      "decision_changed_from_initial": true
+    },
+    "NO_SEARCH": {
+      "search_required": false,
+      "applicability": true,
+      "initial_model_variant": "full",
+      "final_model_variant": "full",
+      "patch_cardinality": 0,
+      "model_changed_from_initial": false,
+      "decision_changed_from_initial": false
+    }
+  },
+  "empty_patch_rule": "patch=[] is ambiguous between RETAIN and NO_SEARCH; score it with state, applicability, and initial/final model variants.",
+  "triplet_rule": "Every source task has one C1/RETAIN, one C2/PATCH_CHANGES, and one C3/NO_SEARCH case.",
+  "formal_model_input": [
+    "eval_id",
+    "prompt_zh"
+  ]
+}

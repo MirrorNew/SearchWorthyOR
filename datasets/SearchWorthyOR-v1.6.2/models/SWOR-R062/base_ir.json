@@ -1,0 +1,157 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R062",
+  "variant": "base",
+  "family": "assignment_matching",
+  "source_candidate_id": "US-CPSC-MINKA-BARDON-RECALL-2026-05-14",
+  "variables": [
+    {
+      "name": "assign_ballroom_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存A分配给宴会厅"
+    },
+    {
+      "name": "assign_ballroom_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存B分配给宴会厅"
+    },
+    {
+      "name": "assign_ballroom_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存C分配给宴会厅"
+    },
+    {
+      "name": "assign_ballroom_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存D分配给宴会厅"
+    },
+    {
+      "name": "assign_lobby_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存A分配给大堂"
+    },
+    {
+      "name": "assign_lobby_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存B分配给大堂"
+    },
+    {
+      "name": "assign_lobby_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存C分配给大堂"
+    },
+    {
+      "name": "assign_lobby_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "把库存D分配给大堂"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "assign_ballroom_a": 13,
+      "assign_ballroom_b": 20,
+      "assign_ballroom_c": 11,
+      "assign_ballroom_d": 16,
+      "assign_lobby_a": 10,
+      "assign_lobby_b": 17,
+      "assign_lobby_c": 12,
+      "assign_lobby_d": 19
+    },
+    "meaning": "宴会厅与大堂灯具匹配的总完工收益",
+    "unit": "收益点"
+  },
+  "constraints": [
+    {
+      "name": "fill_ballroom",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ballroom_a": 1,
+        "assign_ballroom_b": 1,
+        "assign_ballroom_c": 1,
+        "assign_ballroom_d": 1
+      },
+      "meaning": "ballroom恰好安装一盏灯"
+    },
+    {
+      "name": "fill_lobby",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_lobby_a": 1,
+        "assign_lobby_b": 1,
+        "assign_lobby_c": 1,
+        "assign_lobby_d": 1
+      },
+      "meaning": "lobby恰好安装一盏灯"
+    },
+    {
+      "name": "fixture_a_used_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ballroom_a": 1,
+        "assign_lobby_a": 1
+      },
+      "meaning": "库存灯具A至多用于一个房间"
+    },
+    {
+      "name": "fixture_b_used_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ballroom_b": 1,
+        "assign_lobby_b": 1
+      },
+      "meaning": "库存灯具B至多用于一个房间"
+    },
+    {
+      "name": "fixture_c_used_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ballroom_c": 1,
+        "assign_lobby_c": 1
+      },
+      "meaning": "库存灯具C至多用于一个房间"
+    },
+    {
+      "name": "fixture_d_used_once",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "assign_ballroom_d": 1,
+        "assign_lobby_d": 1
+      },
+      "meaning": "库存灯具D至多用于一个房间"
+    }
+  ],
+  "action_projection": [
+    "assign_ballroom_a",
+    "assign_ballroom_b",
+    "assign_ballroom_c",
+    "assign_ballroom_d",
+    "assign_lobby_a",
+    "assign_lobby_b",
+    "assign_lobby_c",
+    "assign_lobby_d"
+  ]
+}

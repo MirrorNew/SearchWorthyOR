@@ -1,0 +1,69 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R005",
+  "variant": "base",
+  "family": "facility_network",
+  "source_candidate_id": "B2-R005-ADA-PARKING-QUOTA",
+  "variables": [
+    {
+      "name": "package_zero",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择全部240个均为普通车位的方案A"
+    },
+    {
+      "name": "package_six_one",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择6个普通无障碍加1个厢式车无障碍的方案B"
+    },
+    {
+      "name": "package_five_two",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择5个普通无障碍加2个厢式车无障碍的方案C"
+    },
+    {
+      "name": "package_four_three",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "选择4个普通无障碍加3个厢式车无障碍的方案D"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "package_zero": 30,
+      "package_six_one": 24,
+      "package_five_two": 20,
+      "package_four_three": 18
+    },
+    "meaning": "Total decision value net of selected compliance resources",
+    "unit": "设施净效用点"
+  },
+  "constraints": [
+    {
+      "name": "choose_one_parking_package",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "package_zero": 1,
+        "package_six_one": 1,
+        "package_five_two": 1,
+        "package_four_three": 1
+      },
+      "meaning": "Exactly one listed business action must be selected"
+    }
+  ],
+  "action_projection": [
+    "package_zero",
+    "package_six_one",
+    "package_five_two",
+    "package_four_three"
+  ]
+}

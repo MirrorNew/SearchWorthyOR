@@ -1,0 +1,144 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R034",
+  "variant": "base",
+  "family": "production_capacity",
+  "source_candidate_id": "SRCV3-R034-PHMSA-HAZMAT-SEGREGATION-TABLE-20260731",
+  "variables": [
+    {
+      "name": "red_flammable_liquid_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Class 3托盘A装上Red车"
+    },
+    {
+      "name": "blue_flammable_liquid_a",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Class 3托盘A装上Blue车"
+    },
+    {
+      "name": "red_poison_liquid_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 6.1托盘B装上Red车"
+    },
+    {
+      "name": "blue_poison_liquid_b",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 6.1托盘B装上Blue车"
+    },
+    {
+      "name": "red_organic_peroxide_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 5.2托盘C装上Red车"
+    },
+    {
+      "name": "blue_organic_peroxide_c",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 5.2托盘C装上Blue车"
+    },
+    {
+      "name": "red_flammable_solid_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 4.1托盘D装上Red车"
+    },
+    {
+      "name": "blue_flammable_solid_d",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "将Division 4.1托盘D装上Blue车"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "red_flammable_liquid_a": 60,
+      "blue_flammable_liquid_a": 55,
+      "red_poison_liquid_b": 59,
+      "blue_poison_liquid_b": 49,
+      "red_organic_peroxide_c": 58,
+      "blue_organic_peroxide_c": 50,
+      "red_flammable_solid_d": 57,
+      "blue_flammable_solid_d": 51
+    },
+    "meaning": "Total outbound-processing value",
+    "unit": "出厂处理价值点"
+  },
+  "constraints": [
+    {
+      "name": "assign_flammable_liquid_a_once",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "red_flammable_liquid_a": 1,
+        "blue_flammable_liquid_a": 1
+      },
+      "meaning": "Assign flammable_liquid_a to exactly one truck"
+    },
+    {
+      "name": "assign_poison_liquid_b_once",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "red_poison_liquid_b": 1,
+        "blue_poison_liquid_b": 1
+      },
+      "meaning": "Assign poison_liquid_b to exactly one truck"
+    },
+    {
+      "name": "assign_organic_peroxide_c_once",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "red_organic_peroxide_c": 1,
+        "blue_organic_peroxide_c": 1
+      },
+      "meaning": "Assign organic_peroxide_c to exactly one truck"
+    },
+    {
+      "name": "assign_flammable_solid_d_once",
+      "sense": "=",
+      "rhs": 1,
+      "coefficients": {
+        "red_flammable_solid_d": 1,
+        "blue_flammable_solid_d": 1
+      },
+      "meaning": "Assign flammable_solid_d to exactly one truck"
+    },
+    {
+      "name": "red_route_retains_two_priority_lots",
+      "sense": ">=",
+      "rhs": 2,
+      "coefficients": {
+        "red_flammable_liquid_a": 1,
+        "red_organic_peroxide_c": 1,
+        "red_flammable_solid_d": 1
+      },
+      "meaning": "The local route plan requires Red truck to carry at least two of priority pallets A, C, and D"
+    }
+  ],
+  "action_projection": [
+    "red_flammable_liquid_a",
+    "blue_flammable_liquid_a",
+    "red_poison_liquid_b",
+    "blue_poison_liquid_b",
+    "red_organic_peroxide_c",
+    "blue_organic_peroxide_c",
+    "red_flammable_solid_d",
+    "blue_flammable_solid_d"
+  ]
+}

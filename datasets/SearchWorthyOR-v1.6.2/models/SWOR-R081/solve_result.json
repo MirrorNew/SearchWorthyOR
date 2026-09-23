@@ -1,0 +1,60 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v1",
+  "id": "SWOR-R081",
+  "solver": "complete enumeration (V1.6.1 Base/Full verification)",
+  "base_status": "OPTIMAL",
+  "base_feasible_assignment_count": 5,
+  "base_objective": 2.0,
+  "base_incumbent": {
+    "submit_cork": 0,
+    "defer_cork": 1,
+    "submit_dublin": 0,
+    "defer_dublin": 1,
+    "portal_support": 0
+  },
+  "base_optimal_actions": [
+    {
+      "submit_cork": 0,
+      "defer_cork": 1,
+      "submit_dublin": 0,
+      "defer_dublin": 1,
+      "portal_support": 0
+    }
+  ],
+  "full_status": "OPTIMAL",
+  "full_feasible_assignment_count": 1,
+  "full_objective": 15.0,
+  "full_incumbent": {
+    "submit_cork": 1,
+    "defer_cork": 0,
+    "submit_dublin": 1,
+    "defer_dublin": 0,
+    "portal_support": 1
+  },
+  "full_optimal_actions": [
+    {
+      "submit_cork": 1,
+      "defer_cork": 0,
+      "submit_dublin": 1,
+      "defer_dublin": 0,
+      "portal_support": 1
+    }
+  ],
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "optimal_action_changed": true,
+  "objective_value_contract": {
+    "canonical_value": 15.0,
+    "canonical_unit": "千欧元",
+    "accepted_equivalents": [
+      {
+        "value": 15.0,
+        "unit": "千欧元"
+      },
+      {
+        "value": 15000.0,
+        "unit": "欧元"
+      }
+    ]
+  }
+}
