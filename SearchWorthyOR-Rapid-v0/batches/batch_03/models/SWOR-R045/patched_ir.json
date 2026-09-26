@@ -1,0 +1,78 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1
+      },
+      "meaning": "恰好选择一个合规包",
+      "name": "choose_package",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_B": 1
+      },
+      "meaning": "转运站采用不征费但须报告的合规包",
+      "name": "transfer_station_reporting_only",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R045",
+  "objective": {
+    "coefficients": {
+      "x_A": 0,
+      "x_B": 1,
+      "x_C": 2,
+      "x_D": 3
+    },
+    "constant": 0,
+    "meaning": "最小化年度管理成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0153",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择合规包A",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择合规包B",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择合规包C",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择合规包D",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

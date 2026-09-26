@@ -1,0 +1,68 @@
+{
+  "action_projection": [
+    "certified_driver",
+    "trainee_driver",
+    "certified_supervisor"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "certified_driver": 1,
+        "trainee_driver": 1
+      },
+      "meaning": "两名司机中恰选一名",
+      "name": "choose_driver",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "certified_supervisor": 1,
+        "trainee_driver": -1
+      },
+      "meaning": "只有选择未持证司机时才安排主管",
+      "name": "supervisor_only_with_trainee",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R015",
+  "objective": {
+    "coefficients": {
+      "certified_driver": 8,
+      "certified_supervisor": 3,
+      "trainee_driver": 2
+    },
+    "constant": 0,
+    "meaning": "危险品运输人工成本",
+    "sense": "min",
+    "unit": "百加元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0136",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "安排持证司机陈伟独立执行",
+      "name": "certified_driver",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排未持证司机林杰执行",
+      "name": "trainee_driver",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排持证主管赵敏全程在场监督",
+      "name": "certified_supervisor",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

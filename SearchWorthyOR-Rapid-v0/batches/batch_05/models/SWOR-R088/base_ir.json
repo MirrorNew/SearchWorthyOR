@@ -1,0 +1,77 @@
+{
+  "action_projection": [
+    "theme_now",
+    "other_now",
+    "theme_next",
+    "other_next"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "other_now": 1,
+        "theme_now": 1
+      },
+      "meaning": "本月买入五个份额",
+      "name": "current_purchase",
+      "rhs": 5,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "other_next": 1,
+        "theme_next": 1
+      },
+      "meaning": "十月十五日买入五个份额",
+      "name": "next_purchase",
+      "rhs": 5,
+      "sense": "="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R088",
+  "objective": {
+    "coefficients": {
+      "other_next": 8,
+      "other_now": 7,
+      "theme_next": 6,
+      "theme_now": 5
+    },
+    "constant": 0,
+    "meaning": "两期预期收益",
+    "sense": "max",
+    "unit": "千美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0050",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "本月买入清洁能源资产份额",
+      "name": "theme_now",
+      "type": "INTEGER",
+      "ub": 5
+    },
+    {
+      "lb": 0,
+      "meaning": "本月买入其他资产份额",
+      "name": "other_now",
+      "type": "INTEGER",
+      "ub": 5
+    },
+    {
+      "lb": 0,
+      "meaning": "下一季度买入清洁能源资产份额",
+      "name": "theme_next",
+      "type": "INTEGER",
+      "ub": 5
+    },
+    {
+      "lb": 0,
+      "meaning": "下一季度买入其他资产份额",
+      "name": "other_next",
+      "type": "INTEGER",
+      "ub": 5
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,81 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1
+      },
+      "meaning": "恰好签约两家供应商",
+      "name": "select_two",
+      "rhs": 2,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_A": 6,
+        "x_B": 4,
+        "x_C": 7,
+        "x_D": 8
+      },
+      "meaning": "组合保障能力至少十三分",
+      "name": "assurance_floor",
+      "rhs": 13,
+      "sense": ">="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R041",
+  "objective": {
+    "coefficients": {
+      "x_A": 1,
+      "x_B": 2,
+      "x_C": 5,
+      "x_D": 6
+    },
+    "constant": 0,
+    "meaning": "最小化年度签约成本",
+    "sense": "min",
+    "unit": "百万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0243",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "签约供应商A",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "签约供应商B",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "签约供应商C",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "签约供应商D",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

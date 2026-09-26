@@ -1,0 +1,68 @@
+{
+  "action_projection": [
+    "use_july30_rule",
+    "use_july27_rule",
+    "use_emergency_rule"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "use_emergency_rule": 1,
+        "use_july27_rule": 1,
+        "use_july30_rule": 1
+      },
+      "meaning": "恰好选择1个州级规则版本生效",
+      "name": "choose_one_duty_rule",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "use_july30_rule": 1
+      },
+      "meaning": "未满五日且无紧急认定的7月30日方案尚未生效",
+      "name": "filing_effective_lag",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R036",
+  "objective": {
+    "coefficients": {
+      "use_emergency_rule": 7,
+      "use_july27_rule": 8,
+      "use_july30_rule": 10
+    },
+    "constant": 0,
+    "meaning": "州级司机值勤规则版本的监管收益",
+    "sense": "max",
+    "unit": "万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0204",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "使7月30日备案的新司机值勤规则版本生效",
+      "name": "use_july30_rule",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使7月27日备案的常规司机值勤规则版本生效",
+      "name": "use_july27_rule",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使当天备案且获紧急认定的司机值勤规则版本生效",
+      "name": "use_emergency_rule",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

@@ -1,0 +1,49 @@
+{
+  "action_projection": [
+    "emergency_gap",
+    "integrity_gap"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "emergency_gap": 1,
+        "integrity_gap": -1
+      },
+      "meaning": "紧急管理项目间隔至多比完整性管理项目长两年",
+      "name": "gap_balance",
+      "rhs": 2,
+      "sense": "<="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R017",
+  "objective": {
+    "coefficients": {
+      "emergency_gap": 3,
+      "integrity_gap": 4
+    },
+    "constant": 0,
+    "meaning": "审计资源平滑收益",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0133",
+  "variables": [
+    {
+      "lb": 1,
+      "meaning": "紧急管理项目距本次审计的下次审计间隔",
+      "name": "emergency_gap",
+      "type": "INTEGER",
+      "ub": 5
+    },
+    {
+      "lb": 1,
+      "meaning": "完整性管理项目距本次审计的下次审计间隔",
+      "name": "integrity_gap",
+      "type": "INTEGER",
+      "ub": 5
+    }
+  ],
+  "variant": "base"
+}

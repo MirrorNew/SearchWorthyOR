@@ -1,0 +1,39 @@
+{
+  "action_projection": [
+    "next_simulation_month"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "next_simulation_month": 1
+      },
+      "meaning": "与第0个月演练的间隔不超过12个月",
+      "name": "twelve_month_interval",
+      "rhs": 12,
+      "sense": "<="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R052",
+  "objective": {
+    "coefficients": {
+      "next_simulation_month": 1
+    },
+    "constant": 0,
+    "meaning": "最大化下次演练月份",
+    "sense": "max",
+    "unit": "月"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "W-D-005",
+  "variables": [
+    {
+      "lb": 1,
+      "meaning": "下次召回演练月份",
+      "name": "next_simulation_month",
+      "type": "INTEGER",
+      "ub": 18
+    }
+  ],
+  "variant": "patched"
+}

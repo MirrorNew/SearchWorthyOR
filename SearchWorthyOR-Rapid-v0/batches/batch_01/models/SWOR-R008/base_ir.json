@@ -1,0 +1,79 @@
+{
+  "action_projection": [
+    "upside_only",
+    "downside_only",
+    "escrow_only",
+    "two_way"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "downside_only": 1,
+        "escrow_only": 1,
+        "two_way": 1,
+        "upside_only": 1
+      },
+      "meaning": "恰好选择一种结算账户",
+      "name": "choose_one_account",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "two_way": 1,
+        "upside_only": 1
+      },
+      "meaning": "银行当前只批准新开收益账户或综合账户",
+      "name": "bank_onboarding_scope",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R008",
+  "objective": {
+    "coefficients": {
+      "downside_only": 2,
+      "escrow_only": 3,
+      "two_way": 5,
+      "upside_only": 1
+    },
+    "constant": 0,
+    "meaning": "年度结算账户费用",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0092",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择只能接收CMS付款的收益账户",
+      "name": "upside_only",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择只能向CMS付款的支出账户",
+      "name": "downside_only",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择只能暂存争议款的冻结账户",
+      "name": "escrow_only",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择可双向收付款的综合账户",
+      "name": "two_way",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

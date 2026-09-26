@@ -1,0 +1,47 @@
+{
+  "base_feasible_assignment_count": 6,
+  "base_incumbent": {
+    "dry_single_150": 0,
+    "dry_three_225": 0,
+    "dry_three_275": 0,
+    "harbor_dry_500": 1,
+    "liquid_300": 0
+  },
+  "base_objective": 45.0,
+  "base_optimal_actions": [
+    {
+      "dry_single_150": 0,
+      "dry_three_225": 0,
+      "dry_three_275": 0,
+      "harbor_dry_500": 1,
+      "liquid_300": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R083",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 1,
+  "patched_incumbent": {
+    "dry_single_150": 0,
+    "dry_three_225": 1,
+    "dry_three_275": 1,
+    "harbor_class_verified": 0,
+    "harbor_dry_500": 0,
+    "liquid_300": 0
+  },
+  "patched_objective": 51.0,
+  "patched_optimal_actions": [
+    {
+      "dry_single_150": 0,
+      "dry_three_225": 1,
+      "dry_three_275": 1,
+      "harbor_dry_500": 0,
+      "liquid_300": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

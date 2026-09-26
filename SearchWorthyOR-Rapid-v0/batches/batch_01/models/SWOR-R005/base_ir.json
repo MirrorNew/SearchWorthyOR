@@ -1,0 +1,80 @@
+{
+  "action_projection": [
+    "visual",
+    "tank_alarm",
+    "outfall_alarm",
+    "mobile"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "mobile": 4,
+        "outfall_alarm": 3,
+        "tank_alarm": 3,
+        "visual": 2
+      },
+      "meaning": "检测总覆盖至少两分",
+      "name": "detection_coverage",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "outfall_alarm": 1,
+        "tank_alarm": 1,
+        "visual": 1
+      },
+      "meaning": "维护团队最多同时维护两种固定检测方式",
+      "name": "maintenance_limit",
+      "rhs": 2,
+      "sense": "<="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R005",
+  "objective": {
+    "coefficients": {
+      "mobile": 6,
+      "outfall_alarm": 5,
+      "tank_alarm": 4,
+      "visual": 1
+    },
+    "constant": 0,
+    "meaning": "泄漏检测年度成本",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0103",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采用白班人工巡检",
+      "name": "visual",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安装罐区自动报警",
+      "name": "tank_alarm",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安装排水口自动报警",
+      "name": "outfall_alarm",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置移动检测车",
+      "name": "mobile",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

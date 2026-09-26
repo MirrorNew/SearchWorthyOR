@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "water_process",
+    "solvent_process",
+    "reuse_water",
+    "reuse_solvent"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "solvent_process": 1,
+        "water_process": 1
+      },
+      "meaning": "合计生产四批树脂",
+      "name": "production_target",
+      "rhs": 4,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "reuse_water": 1,
+        "water_process": -1
+      },
+      "meaning": "水性残料利用不超过其产生量",
+      "name": "water_residue",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "reuse_solvent": 1,
+        "solvent_process": -1
+      },
+      "meaning": "溶剂残料利用不超过其产生量",
+      "name": "solvent_residue",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R093",
+  "objective": {
+    "coefficients": {
+      "reuse_solvent": 5,
+      "reuse_water": 4,
+      "solvent_process": 9,
+      "water_process": 7
+    },
+    "constant": 0,
+    "meaning": "树脂生产与残料利用利润",
+    "sense": "max",
+    "unit": "千欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "RAPID-REPL-EU-WFD-ARTICLE5",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "水性工艺生产批数",
+      "name": "water_process",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "溶剂工艺生产批数",
+      "name": "solvent_process",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "直接利用水性残料批数",
+      "name": "reuse_water",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "利用溶剂残料批数",
+      "name": "reuse_solvent",
+      "type": "INTEGER",
+      "ub": 4
+    }
+  ],
+  "variant": "base"
+}

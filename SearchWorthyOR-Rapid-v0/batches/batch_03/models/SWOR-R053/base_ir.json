@@ -1,0 +1,70 @@
+{
+  "action_projection": [
+    "q_A",
+    "q_B",
+    "q_C"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "q_A": 4,
+        "q_B": 3,
+        "q_C": 2
+      },
+      "meaning": "总产出至少6吨",
+      "name": "output_need",
+      "rhs": 6,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "q_A": 1,
+        "q_B": 1,
+        "q_C": 1
+      },
+      "meaning": "总生产批数不超过3",
+      "name": "batch_limit",
+      "rhs": 3,
+      "sense": "<="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R053",
+  "objective": {
+    "coefficients": {
+      "q_A": 1,
+      "q_B": 2,
+      "q_C": 3
+    },
+    "constant": 0,
+    "meaning": "最小化生产能耗",
+    "sense": "min",
+    "unit": "能耗点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0253",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "设备A的生产批数",
+      "name": "q_A",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "设备B的生产批数",
+      "name": "q_B",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "设备C的生产批数",
+      "name": "q_C",
+      "type": "INTEGER",
+      "ub": 3
+    }
+  ],
+  "variant": "base"
+}

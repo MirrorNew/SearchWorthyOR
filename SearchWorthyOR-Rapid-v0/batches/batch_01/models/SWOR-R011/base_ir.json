@@ -1,0 +1,97 @@
+{
+  "action_projection": [
+    "house_direct",
+    "customer_direct",
+    "shared_direct",
+    "house_client",
+    "customer_client",
+    "shared_client"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "customer_direct": 1,
+        "house_direct": 1,
+        "shared_direct": 1
+      },
+      "meaning": "自营交易恰好分配一个保证金账户",
+      "name": "assign_direct",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "customer_client": 1,
+        "house_client": 1,
+        "shared_client": 1
+      },
+      "meaning": "客户交易恰好分配一个保证金账户",
+      "name": "assign_client",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R011",
+  "objective": {
+    "coefficients": {
+      "customer_client": 7,
+      "customer_direct": 6,
+      "house_client": 5,
+      "house_direct": 4,
+      "shared_client": 1,
+      "shared_direct": 1
+    },
+    "constant": 0,
+    "meaning": "保证金账户年度管理成本",
+    "sense": "min",
+    "unit": "千美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0086",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "将direct交易分配至house账户",
+      "name": "house_direct",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将direct交易分配至customer账户",
+      "name": "customer_direct",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将direct交易分配至shared账户",
+      "name": "shared_direct",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将client交易分配至house账户",
+      "name": "house_client",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将client交易分配至customer账户",
+      "name": "customer_client",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "将client交易分配至shared账户",
+      "name": "shared_client",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,68 @@
+{
+  "action_projection": [
+    "cutoff_year",
+    "lca_year",
+    "review_year"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "cutoff_year": -1,
+        "lca_year": 1
+      },
+      "meaning": "数据截止年不晚于评估完成年",
+      "name": "cutoff_before_lca",
+      "rhs": 0,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "lca_year": -1,
+        "review_year": 1
+      },
+      "meaning": "复核不得早于评估完成",
+      "name": "review_after_lca",
+      "rhs": 0,
+      "sense": ">="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R073",
+  "objective": {
+    "coefficients": {
+      "cutoff_year": 1,
+      "lca_year": 2,
+      "review_year": 1
+    },
+    "constant": 0,
+    "meaning": "最大化延期收益",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0162",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "评估数据截止年",
+      "name": "cutoff_year",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "生命周期评估完成年",
+      "name": "lca_year",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "环境改进复核年",
+      "name": "review_year",
+      "type": "INTEGER",
+      "ub": 10
+    }
+  ],
+  "variant": "base"
+}

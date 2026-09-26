@@ -1,0 +1,180 @@
+{
+  "artifact_binding_before_self_check": {
+    "ordered_62_artifact_bundle_sha256": "a9e0bbc216b9f890baee1c34cce655e6bc9fe764ed483b586c5b9f9189f66eb9",
+    "ordered_bundle_algorithm": "SHA-256 over raw bytes concatenated in order: public tasks, private audit, then model JSON files sorted by path",
+    "private_audit_sha256": "6f49fd761c45072ef543a0067f154f4f5013a20933fb48a00b60fa499dd8cec3",
+    "public_tasks_sha256": "8ad001a28fd0c321893ce1f100d95a472eee7a5156ed34001529d13914f9164f"
+  },
+  "batch": 4,
+  "claim_boundary": "This artifact records generator self-check only. It is not an independent review PASS and does not authorize publication, selection, import, admission, or activation.",
+  "execution_boundary": {
+    "activation_run": false,
+    "admission_run": false,
+    "formal_query_run": false,
+    "import_run": false,
+    "probe_run": false,
+    "selection_run": false,
+    "strict_v1_or_v2_write": false
+  },
+  "generator_id": "/root/native_batch_a",
+  "independent_review": "PENDING",
+  "input_binding": {
+    "preflight_path": "preflight/batch_04.jsonl",
+    "preflight_sha256": "e2fc401578feaa3a06c43c7961a01e8fe4524f84025d4ba69c47e0f53ebb1f84",
+    "replacement_reservations_path": "private/replacement_reservations.jsonl",
+    "replacement_reservations_sha256": "2726fd26cf9138923aee5a5d3f1f834df4a590d3819eadf54113dac3e09b3b51",
+    "shortlist_path": "private/source_shortlist_130.jsonl",
+    "shortlist_sha256": "1e63e287c895d7a5282d9ac0de34038b7339b6f61ff88d1de333082f345407b1"
+  },
+  "model_checks": {
+    "all_base_optimal": true,
+    "all_optimal_action_intersections_empty": true,
+    "all_patched_optimal": true,
+    "base_and_patched_action_projection_equal_per_task": true,
+    "base_topology_hashes_unique": true,
+    "complete_enumeration_both_sides": true,
+    "enumeration_limit": 200000,
+    "finite_binary_or_integer_only": true,
+    "maximum_base_assignment_space": 315,
+    "maximum_patched_assignment_space": 161,
+    "model_pairs": 20,
+    "single_objective_per_model": true,
+    "solver": "COPT 8.0.5"
+  },
+  "quota_checks": {
+    "exact": true,
+    "families": {
+      "assignment_matching": 2,
+      "energy_environment": 2,
+      "facility_network": 2,
+      "finance_portfolio": 2,
+      "healthcare_resources": 2,
+      "inventory_supply_chain": 2,
+      "production_capacity": 2,
+      "routing_transport": 2,
+      "scheduling_workforce": 2,
+      "telecom_service": 2
+    },
+    "patch_classes": {
+      "conditional_auxiliary": 5,
+      "eligibility_domain": 5,
+      "quota_risk_service_objective": 5,
+      "temporal_coupling": 5
+    }
+  },
+  "replacement_bindings": [
+    {
+      "failed_primary_candidate": "SRCV2-0151",
+      "family_preserved": "assignment_matching",
+      "id": "SWOR-R061",
+      "patch_class_preserved": "conditional_auxiliary",
+      "reason": "official PCPD paths failed current TLS certificate verification",
+      "replacement_candidate": "SRCV2-0141",
+      "replacement_final_url_exact": true,
+      "replacement_http_status": 200,
+      "replacement_support_needles_found": 3
+    },
+    {
+      "failed_primary_candidate": "SRCV2-0089",
+      "family_preserved": "telecom_service",
+      "id": "SWOR-R079",
+      "patch_class_preserved": "eligibility_domain",
+      "reason": "no tested original path contained all frozen support needles",
+      "replacement_candidate": "SRCV2-0197",
+      "replacement_final_url_exact": true,
+      "replacement_http_status": 200,
+      "replacement_support_needles_found": 2
+    },
+    {
+      "failed_primary_candidate": "SRCV2-0170",
+      "family_preserved": "scheduling_workforce",
+      "id": "SWOR-R077",
+      "patch_class_preserved": "conditional_auxiliary",
+      "reason": "the EASA FAQ did not independently support a mandatory hard compliance gate",
+      "replacement_candidate": "SRCV2-0104",
+      "replacement_final_url_exact": true,
+      "replacement_http_status": 200,
+      "replacement_support_needles_found": 1
+    },
+    {
+      "failed_primary_candidate": "SRCV2-0202",
+      "family_preserved": "production_capacity",
+      "id": "SWOR-R074",
+      "patch_class_preserved": "quota_risk_service_objective",
+      "reason": "the original statewide policy goal did not support a hard company constraint; the first ladder replacement then duplicated another atom and lacked a direct aggregation excerpt, so the final source uses the distinct maintenance-log duty",
+      "replacement_candidate": "SRCV2-0254",
+      "replacement_final_url_exact": true,
+      "replacement_http_status": 200,
+      "replacement_support_needles_found": 1
+    },
+    {
+      "failed_primary_candidate": "SRCV2-0102",
+      "family_preserved": "energy_environment",
+      "id": "SWOR-R064",
+      "patch_class_preserved": "quota_risk_service_objective",
+      "reason": "the EPA document had reached the global source-document cap; the final FCC atom directly supports per-central-office backup-power coverage and does not duplicate the Ohio hospital-priority atom",
+      "replacement_candidate": "SRCV2-0182",
+      "replacement_final_url_exact": true,
+      "replacement_http_status": 200,
+      "replacement_support_needles_found": 1
+    }
+  ],
+  "schema_version": "searchworthyor.rapid_batch_self_check.v0",
+  "scope_ids": [
+    "SWOR-R061",
+    "SWOR-R062",
+    "SWOR-R063",
+    "SWOR-R064",
+    "SWOR-R065",
+    "SWOR-R066",
+    "SWOR-R067",
+    "SWOR-R068",
+    "SWOR-R069",
+    "SWOR-R070",
+    "SWOR-R071",
+    "SWOR-R072",
+    "SWOR-R073",
+    "SWOR-R074",
+    "SWOR-R075",
+    "SWOR-R076",
+    "SWOR-R077",
+    "SWOR-R078",
+    "SWOR-R079",
+    "SWOR-R080"
+  ],
+  "source_review": {
+    "all_applicability_pass": true,
+    "all_retained_http_200": true,
+    "all_retained_support_excerpt_nonempty": true,
+    "maximum_tasks_per_source_document": 2,
+    "original_primary_candidates_retained": 15,
+    "release_source_recheck_20_of_20": true,
+    "reserved_replacements_used": 5,
+    "retained_candidate_count": 20,
+    "search_requests_by_generator": 0,
+    "unreserved_substitution_used": false
+  },
+  "status": "GENERATOR_SELF_CHECK_PASS",
+  "surface_checks": {
+    "all_actions_named_and_explained": true,
+    "all_decision_dates_explicit": true,
+    "all_jurisdictions_and_decision_makers_explicit": true,
+    "all_natural_compliance_requirements_present": true,
+    "all_problem_lengths_at_least_120": true,
+    "all_public_numbers_bound": true,
+    "all_rule_to_local_fact_to_patch_chains_manually_checked": true,
+    "all_task_local_fact_bindings_resolve": true,
+    "all_task_local_facts_explicit": true,
+    "banned_template_fragments_found": false,
+    "exact_clause_or_patch_leakage_found": false,
+    "public_fields_exactly_id_and_problem_zh": true,
+    "single_minimal_final_question_per_task": true,
+    "unstated_patch_inputs_found": false
+  },
+  "validator": {
+    "command": "python scripts/validate_batch.py --rapid-root <Rapid-v0-root> --batch 4",
+    "errors": [],
+    "status": "PASS",
+    "task_count": 20
+  }
+}

@@ -1,0 +1,90 @@
+{
+  "action_projection": [
+    "m_A",
+    "m_B",
+    "m_C",
+    "m_D",
+    "m_E"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "m_A": 1,
+        "m_B": 1,
+        "m_C": 1,
+        "m_D": 1,
+        "m_E": 1
+      },
+      "meaning": "申报选择1项方法",
+      "name": "choose_one",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "m_A": 1,
+        "m_C": 1,
+        "m_E": 1
+      },
+      "meaning": "选择可复核的方法",
+      "name": "auditable_method",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R063",
+  "objective": {
+    "coefficients": {
+      "m_A": 1,
+      "m_B": 2,
+      "m_C": 4,
+      "m_D": 5,
+      "m_E": 3
+    },
+    "constant": 0,
+    "meaning": "最小化申报编制成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0048",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "把方法A纳入申报",
+      "name": "m_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "把方法B纳入申报",
+      "name": "m_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "把方法C纳入申报",
+      "name": "m_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "把方法D纳入申报",
+      "name": "m_D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "把方法E纳入申报",
+      "name": "m_E",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

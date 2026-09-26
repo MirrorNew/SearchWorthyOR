@@ -1,0 +1,67 @@
+{
+  "action_projection": [
+    "web",
+    "physical",
+    "notice"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "physical": 1,
+        "web": 1
+      },
+      "meaning": "至少采用一种公开路径",
+      "name": "one_public_path",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "notice": 1
+      },
+      "meaning": "未备案时告知客户查看位置",
+      "name": "customer_location_notice",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R079",
+  "objective": {
+    "coefficients": {
+      "notice": 1,
+      "physical": 2,
+      "web": 1
+    },
+    "constant": 0,
+    "meaning": "最小化资费发布成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0197",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "启用网站资费发布动作",
+      "name": "web",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用实体资费发布动作",
+      "name": "physical",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用客户位置通知动作",
+      "name": "notice",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

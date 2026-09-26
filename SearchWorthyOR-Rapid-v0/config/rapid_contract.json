@@ -1,0 +1,59 @@
+{
+  "schema_version": "searchworthyor.rapid_contract.v0",
+  "task_count": 100,
+  "batches": 5,
+  "tasks_per_batch": 20,
+  "evidence_mode": "real-web",
+  "families": {
+    "routing_transport": 10,
+    "scheduling_workforce": 10,
+    "production_capacity": 10,
+    "assignment_matching": 10,
+    "facility_network": 10,
+    "inventory_supply_chain": 10,
+    "energy_environment": 10,
+    "healthcare_resources": 10,
+    "finance_portfolio": 10,
+    "telecom_service": 10
+  },
+  "patch_classes": {
+    "eligibility_domain": 25,
+    "temporal_coupling": 25,
+    "conditional_auxiliary": 25,
+    "quota_risk_service_objective": 25
+  },
+  "per_page_task_cap": 3,
+  "independent_reviewers_per_task": 1,
+  "reviewer_assignments": {
+    "1": "native_batch_c_20260802",
+    "2": "/root/rapid_batch05_rebuild",
+    "3": "native_batch_c_20260802",
+    "4": "/root",
+    "5": "/root/native_batch_a"
+  },
+  "reviewer_identity_boundary": "process provenance only; Rapid-v0 does not claim cryptographic identity attestation",
+  "solver_count": 1,
+  "source_access_rounds": 1,
+  "minimum_current_official_paths": 1,
+  "source_query_retry_allowed_during_construction": true,
+  "recall_at_8_is_release_gate": false,
+  "finite_discrete_ir_only": true,
+  "maximum_enumerated_assignments_per_model": 200000,
+  "complete_optimal_action_set_comparison": true,
+  "strict_v2_release_contract_is_not_a_rapid_prerequisite": true,
+  "required_checks": [
+    "current_official_source_access",
+    "direct_support_excerpt",
+    "applicability_pass",
+    "nonempty_structural_patch",
+    "base_optimal",
+    "patched_optimal",
+    "disjoint_optimal_action_sets",
+    "problem_base_alignment",
+    "task_local_fact_to_patch_alignment",
+    "no_unstated_patch_inputs",
+    "natural_non_template_problem_and_base",
+    "no_answer_leakage",
+    "single_objective"
+  ]
+}

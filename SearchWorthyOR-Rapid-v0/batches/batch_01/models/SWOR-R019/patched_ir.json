@@ -1,0 +1,153 @@
+{
+  "action_projection": [
+    "context",
+    "material_risk",
+    "risk_treatment",
+    "impact_mitigation",
+    "review",
+    "currency",
+    "generic"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "context": 1,
+        "currency": 1,
+        "generic": 1,
+        "impact_mitigation": 1,
+        "material_risk": 1,
+        "review": 1,
+        "risk_treatment": 1
+      },
+      "meaning": "至少配置两个CIRMP模块",
+      "name": "minimum_program_modules",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "context": 1
+      },
+      "meaning": "识别关键资产运行环境",
+      "name": "context_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "material_risk": 1
+      },
+      "meaning": "识别重大风险",
+      "name": "risk_register_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "risk_treatment": 1
+      },
+      "meaning": "实施合理可行的风险消除或降低",
+      "name": "treatment_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "impact_mitigation": 1
+      },
+      "meaning": "缓解各危险对关键资产的相关影响",
+      "name": "impact_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "review": 1
+      },
+      "meaning": "设置CIRMP审查机制",
+      "name": "review_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "currency": 1
+      },
+      "meaning": "设置CIRMP持续更新机制",
+      "name": "currency_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R019",
+  "objective": {
+    "coefficients": {
+      "context": 2,
+      "currency": 2,
+      "generic": 1,
+      "impact_mitigation": 4,
+      "material_risk": 3,
+      "review": 3,
+      "risk_treatment": 5
+    },
+    "constant": 0,
+    "meaning": "CIRMP模块年度成本",
+    "sense": "min",
+    "unit": "百万澳元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0139",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "配置资产运行环境描述模块",
+      "name": "context",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置重大风险登记模块",
+      "name": "material_risk",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置风险消除或降低模块",
+      "name": "risk_treatment",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置危险影响缓解模块",
+      "name": "impact_mitigation",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置定期审查机制",
+      "name": "review",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置持续更新机制",
+      "name": "currency",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置通用风险模板",
+      "name": "generic",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

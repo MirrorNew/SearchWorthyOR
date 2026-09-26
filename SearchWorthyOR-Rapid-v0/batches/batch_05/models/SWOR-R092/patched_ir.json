@@ -1,0 +1,141 @@
+{
+  "action_projection": [
+    "cash",
+    "treasury",
+    "letter_credit",
+    "receivable",
+    "crypto",
+    "gold"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "cash": 35,
+        "crypto": 40,
+        "gold": 45,
+        "letter_credit": 28,
+        "receivable": 25,
+        "treasury": 30
+      },
+      "meaning": "账面价值至少七十万美元",
+      "name": "book_value",
+      "rhs": 70,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "cash": 1,
+        "crypto": 1,
+        "gold": 1,
+        "letter_credit": 1,
+        "receivable": 1,
+        "treasury": 1
+      },
+      "meaning": "最多选择三项资产",
+      "name": "asset_limit",
+      "rhs": 3,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "receivable": 1
+      },
+      "meaning": "贸易应收账款不属于允许计入信托的资产类型",
+      "name": "receivable_ineligible",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "crypto": 1
+      },
+      "meaning": "加密资产不属于允许计入信托的资产类型",
+      "name": "crypto_ineligible",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "gold": 1
+      },
+      "meaning": "金条不属于允许计入信托的资产类型",
+      "name": "gold_ineligible",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "cash": 35,
+        "letter_credit": 28,
+        "treasury": 30
+      },
+      "meaning": "允许类型资产价值至少七十万美元",
+      "name": "qualifying_value",
+      "rhs": 70,
+      "sense": ">="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R092",
+  "objective": {
+    "coefficients": {
+      "cash": 5,
+      "crypto": 1,
+      "gold": 1.5,
+      "letter_credit": 3,
+      "receivable": 2,
+      "treasury": 4
+    },
+    "constant": 0,
+    "meaning": "年度资产占用成本",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0097",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "纳入现金",
+      "name": "cash",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "纳入美国国债",
+      "name": "treasury",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "纳入银行信用证",
+      "name": "letter_credit",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "纳入应收账款",
+      "name": "receivable",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "纳入加密资产",
+      "name": "crypto",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "纳入金条",
+      "name": "gold",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

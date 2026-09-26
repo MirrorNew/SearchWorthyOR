@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "apply_sep",
+    "apply_oct",
+    "apply_nov",
+    "consultant"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "apply_nov": 1,
+        "apply_oct": 1,
+        "apply_sep": 1
+      },
+      "meaning": "三个申请日期中恰好选择一个",
+      "name": "choose_application_date",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "apply_sep": 1,
+        "consultant": -1
+      },
+      "meaning": "选择九月三十日档期时聘请外部顾问",
+      "name": "september_consultant",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "apply_sep": 1
+      },
+      "meaning": "大型品牌所有者在相关年度前一年的十月一日前提交申请",
+      "name": "registration_deadline",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R012",
+  "objective": {
+    "coefficients": {
+      "apply_nov": 0,
+      "apply_oct": 2,
+      "apply_sep": 1,
+      "consultant": 1
+    },
+    "constant": 0,
+    "meaning": "登记申请处理总成本",
+    "sense": "min",
+    "unit": "千英镑"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0126",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "在2026年9月30日提交登记申请",
+      "name": "apply_sep",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "在2026年10月15日提交登记申请",
+      "name": "apply_oct",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "在2026年11月15日提交登记申请",
+      "name": "apply_nov",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "聘请外部合规顾问",
+      "name": "consultant",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

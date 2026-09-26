@@ -1,0 +1,98 @@
+{
+  "action_projection": [
+    "s_a",
+    "s_b",
+    "a_t",
+    "a_b",
+    "b_t"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "a_b": 1,
+        "a_t": 1,
+        "s_a": -1
+      },
+      "meaning": "节点a流量守恒",
+      "name": "node_a_flow",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "a_b": -1,
+        "b_t": 1,
+        "s_b": -1
+      },
+      "meaning": "节点b流量守恒",
+      "name": "node_b_flow",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "a_t": 1,
+        "b_t": 1
+      },
+      "meaning": "终点流入1单位",
+      "name": "sink_flow",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R055",
+  "objective": {
+    "coefficients": {
+      "a_b": 1,
+      "a_t": 1,
+      "b_t": 1,
+      "s_a": 1,
+      "s_b": 3
+    },
+    "constant": 0,
+    "meaning": "最小化运输路径成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0193",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "使用有向弧s-a",
+      "name": "s_a",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用有向弧s-b",
+      "name": "s_b",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用有向弧a-t",
+      "name": "a_t",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用有向弧a-b",
+      "name": "a_b",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "使用有向弧b-t",
+      "name": "b_t",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

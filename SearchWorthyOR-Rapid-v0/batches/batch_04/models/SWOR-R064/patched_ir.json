@@ -1,0 +1,85 @@
+{
+  "action_projection": [
+    "b_A",
+    "b_B",
+    "b_C",
+    "b_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "b_C": 1,
+        "b_D": 1
+      },
+      "meaning": "沿海局C、D中至少配置1处",
+      "name": "coastal_office",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "b_A": 1
+      },
+      "meaning": "直接服务PSAP的A配置备用电源",
+      "name": "office_A_psap_backup",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "b_B": 1
+      },
+      "meaning": "直接服务PSAP的B配置备用电源",
+      "name": "office_B_psap_backup",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R064",
+  "objective": {
+    "coefficients": {
+      "b_A": 3,
+      "b_B": 4,
+      "b_C": 1,
+      "b_D": 2
+    },
+    "constant": 0,
+    "meaning": "最小化备用电源配置成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0182",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "为中央局A配置备用电源",
+      "name": "b_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "为中央局B配置备用电源",
+      "name": "b_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "为中央局C配置备用电源",
+      "name": "b_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "为中央局D配置备用电源",
+      "name": "b_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

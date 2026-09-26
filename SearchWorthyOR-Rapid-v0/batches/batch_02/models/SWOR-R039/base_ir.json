@@ -1,0 +1,99 @@
+{
+  "action_projection": [
+    "provider_wide_review",
+    "north_psap_diversity",
+    "south_psap_diversity",
+    "north_psap_remediation",
+    "south_psap_remediation",
+    "central_office_backup_check"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "central_office_backup_check": 1,
+        "north_psap_diversity": 1,
+        "north_psap_remediation": 1,
+        "provider_wide_review": 1,
+        "south_psap_diversity": 1,
+        "south_psap_remediation": 1
+      },
+      "meaning": "至少开展1项可靠性工作",
+      "name": "minimum_reliability_work",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "central_office_backup_check": 1,
+        "provider_wide_review": -1
+      },
+      "meaning": "备用电源检查仅与全网汇总审查共同实施",
+      "name": "backup_check_scope",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R039",
+  "objective": {
+    "coefficients": {
+      "central_office_backup_check": 2,
+      "north_psap_diversity": 4,
+      "north_psap_remediation": 2,
+      "provider_wide_review": 1,
+      "south_psap_diversity": 3,
+      "south_psap_remediation": 2
+    },
+    "constant": 0,
+    "meaning": "911电路可靠性工作总成本",
+    "sense": "min",
+    "unit": "万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0181",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "执行全网汇总审查",
+      "name": "provider_wide_review",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "完成北城PSAP关键911电路多样性改造",
+      "name": "north_psap_diversity",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "完成南城PSAP关键911电路多样性改造",
+      "name": "south_psap_diversity",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "编制含具体补救步骤和预计完成日期的北城PSAP补救认证包",
+      "name": "north_psap_remediation",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "编制含具体补救步骤和预计完成日期的南城PSAP补救认证包",
+      "name": "south_psap_remediation",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "执行中心机房备用电源检查",
+      "name": "central_office_backup_check",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

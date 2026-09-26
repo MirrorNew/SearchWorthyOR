@@ -1,0 +1,53 @@
+{
+  "base_feasible_assignment_count": 9,
+  "base_incumbent": {
+    "x_1": 1,
+    "x_2": 1,
+    "x_3": 1,
+    "x_4": 0,
+    "x_5": 0
+  },
+  "base_objective": 25.0,
+  "base_optimal_actions": [
+    {
+      "x_1": 1,
+      "x_2": 1,
+      "x_3": 1,
+      "x_4": 0,
+      "x_5": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R042",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 6,
+  "patched_incumbent": {
+    "x_1": 0,
+    "x_2": 1,
+    "x_3": 1,
+    "x_4": 1,
+    "x_5": 0
+  },
+  "patched_objective": 20.0,
+  "patched_optimal_actions": [
+    {
+      "x_1": 0,
+      "x_2": 1,
+      "x_3": 1,
+      "x_4": 1,
+      "x_5": 0
+    },
+    {
+      "x_1": 1,
+      "x_2": 0,
+      "x_3": 1,
+      "x_4": 0,
+      "x_5": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

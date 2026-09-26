@@ -1,0 +1,91 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D",
+    "x_E"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1,
+        "x_E": 1
+      },
+      "meaning": "恰好采购一台变压器",
+      "name": "select_one",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1,
+        "x_E": 1
+      },
+      "meaning": "所选设备通过内部浪涌兼容性测试",
+      "name": "surge_compatible",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R043",
+  "objective": {
+    "coefficients": {
+      "x_A": 1,
+      "x_B": 2,
+      "x_C": 4,
+      "x_D": 5,
+      "x_E": 6
+    },
+    "constant": 0,
+    "meaning": "最小化采购成本",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0078",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采购变压器A",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购变压器B",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购变压器C",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购变压器D",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购变压器E",
+      "name": "x_E",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

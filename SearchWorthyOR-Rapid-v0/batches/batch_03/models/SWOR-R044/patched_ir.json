@@ -1,0 +1,127 @@
+{
+  "action_projection": [
+    "Q1",
+    "Q2",
+    "Q3",
+    "Q4",
+    "S"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "Q1": 1,
+        "Q2": 1,
+        "Q3": 1,
+        "Q4": 1,
+        "S": 2
+      },
+      "meaning": "总透明度至少4点",
+      "name": "transparency_points",
+      "rhs": 4,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "Q1": 1,
+        "Q2": 1,
+        "Q3": 1,
+        "Q4": 1
+      },
+      "meaning": "全年最多承担5次地图更新",
+      "name": "annual_team_capacity",
+      "rhs": 5,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "Q1": 1
+      },
+      "meaning": "第1季度至少更新1次",
+      "name": "quarter_1_update",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "Q2": 1
+      },
+      "meaning": "第2季度至少更新1次",
+      "name": "quarter_2_update",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "Q3": 1
+      },
+      "meaning": "第3季度至少更新1次",
+      "name": "quarter_3_update",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "Q4": 1
+      },
+      "meaning": "第4季度至少更新1次",
+      "name": "quarter_4_update",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R044",
+  "objective": {
+    "coefficients": {
+      "Q1": 3,
+      "Q2": 3,
+      "Q3": 3,
+      "Q4": 3,
+      "S": 3
+    },
+    "constant": 0,
+    "meaning": "最小化年度公开工作量",
+    "sense": "min",
+    "unit": "工日"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0192",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "第1季度托管容量地图更新次数",
+      "name": "Q1",
+      "type": "INTEGER",
+      "ub": 2
+    },
+    {
+      "lb": 0,
+      "meaning": "第2季度托管容量地图更新次数",
+      "name": "Q2",
+      "type": "INTEGER",
+      "ub": 2
+    },
+    {
+      "lb": 0,
+      "meaning": "第3季度托管容量地图更新次数",
+      "name": "Q3",
+      "type": "INTEGER",
+      "ub": 2
+    },
+    {
+      "lb": 0,
+      "meaning": "第4季度托管容量地图更新次数",
+      "name": "Q4",
+      "type": "INTEGER",
+      "ub": 2
+    },
+    {
+      "lb": 0,
+      "meaning": "是否发布内部自愿年度摘要",
+      "name": "S",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

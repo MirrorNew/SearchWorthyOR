@@ -1,0 +1,46 @@
+{
+  "base_feasible_assignment_count": 25,
+  "base_incumbent": {
+    "ed_aug06": 0,
+    "ed_aug13": 0,
+    "icu_aug04": 0,
+    "icu_aug11": 0,
+    "joint_aug07": 1
+  },
+  "base_objective": 4.0,
+  "base_optimal_actions": [
+    {
+      "ed_aug06": 0,
+      "ed_aug13": 0,
+      "icu_aug04": 0,
+      "icu_aug11": 0,
+      "joint_aug07": 1
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R090",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 5,
+  "patched_incumbent": {
+    "ed_aug06": 0,
+    "ed_aug13": 1,
+    "icu_aug04": 0,
+    "icu_aug11": 1,
+    "joint_aug07": 1
+  },
+  "patched_objective": 13.0,
+  "patched_optimal_actions": [
+    {
+      "ed_aug06": 0,
+      "ed_aug13": 1,
+      "icu_aug04": 0,
+      "icu_aug11": 1,
+      "joint_aug07": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

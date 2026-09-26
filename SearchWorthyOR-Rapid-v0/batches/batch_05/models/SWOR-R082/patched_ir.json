@@ -1,0 +1,168 @@
+{
+  "action_projection": [
+    "school_1",
+    "school_2",
+    "school_3",
+    "transit_1",
+    "transit_2",
+    "transit_3",
+    "para_1",
+    "para_2",
+    "para_3"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "para_1": 1,
+        "school_1": 1,
+        "transit_1": 1
+      },
+      "meaning": "乘客1恰分配一种服务",
+      "name": "assign_1",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "para_2": 1,
+        "school_2": 1,
+        "transit_2": 1
+      },
+      "meaning": "乘客2恰分配一种服务",
+      "name": "assign_2",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "para_3": 1,
+        "school_3": 1,
+        "transit_3": 1
+      },
+      "meaning": "乘客3恰分配一种服务",
+      "name": "assign_3",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "school_1": 1,
+        "school_2": 1,
+        "school_3": 1
+      },
+      "meaning": "校车最多接纳两名乘客",
+      "name": "school_capacity",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "transit_1": 1,
+        "transit_2": 1,
+        "transit_3": 1
+      },
+      "meaning": "固定线路公交最多接纳两名乘客",
+      "name": "transit_capacity",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "school_1": 1,
+        "school_2": 1,
+        "school_3": 1
+      },
+      "meaning": "载运学生期间校车不可共享",
+      "name": "school_unavailable",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R082",
+  "objective": {
+    "coefficients": {
+      "para_1": 7,
+      "para_2": 6,
+      "para_3": 6,
+      "school_1": 2,
+      "school_2": 2,
+      "school_3": 3,
+      "transit_1": 4,
+      "transit_2": 3,
+      "transit_3": 4
+    },
+    "constant": 0,
+    "meaning": "乘客运输成本",
+    "sense": "min",
+    "unit": "美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0200",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "乘客1乘坐校车",
+      "name": "school_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客2乘坐校车",
+      "name": "school_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客3乘坐校车",
+      "name": "school_3",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客1乘坐固定线路公交",
+      "name": "transit_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客2乘坐固定线路公交",
+      "name": "transit_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客3乘坐固定线路公交",
+      "name": "transit_3",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客1乘坐无障碍专车",
+      "name": "para_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客2乘坐无障碍专车",
+      "name": "para_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "乘客3乘坐无障碍专车",
+      "name": "para_3",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

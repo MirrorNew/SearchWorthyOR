@@ -1,0 +1,77 @@
+{
+  "action_projection": [
+    "import_drink",
+    "local_drink",
+    "import_cleaner",
+    "local_cleaner"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "import_drink": 1,
+        "local_drink": 1
+      },
+      "meaning": "采购三批饮料",
+      "name": "drink_demand",
+      "rhs": 3,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "import_cleaner": 1,
+        "local_cleaner": 1
+      },
+      "meaning": "采购三批清洁用品",
+      "name": "cleaner_demand",
+      "rhs": 3,
+      "sense": "="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R091",
+  "objective": {
+    "coefficients": {
+      "import_cleaner": 3,
+      "import_drink": 4,
+      "local_cleaner": 6,
+      "local_drink": 7
+    },
+    "constant": 0,
+    "meaning": "采购与合规处理总成本",
+    "sense": "min",
+    "unit": "千新元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0145",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "进口饮料批数",
+      "name": "import_drink",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "本地饮料批数",
+      "name": "local_drink",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "进口清洁用品批数",
+      "name": "import_cleaner",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "本地清洁用品批数",
+      "name": "local_cleaner",
+      "type": "INTEGER",
+      "ub": 3
+    }
+  ],
+  "variant": "base"
+}

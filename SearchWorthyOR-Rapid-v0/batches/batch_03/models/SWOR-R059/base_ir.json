@@ -1,0 +1,76 @@
+{
+  "action_projection": [
+    "M",
+    "O",
+    "C",
+    "K",
+    "R"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "C": 1,
+        "O": 1
+      },
+      "meaning": "O与C中至少启用1项",
+      "name": "internal_minimum_content",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R059",
+  "objective": {
+    "coefficients": {
+      "C": -2,
+      "K": -1,
+      "M": 1,
+      "O": -1,
+      "R": -1
+    },
+    "constant": 0,
+    "meaning": "最大化调度收益减作业成本",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0185",
+  "variables": [
+    {
+      "lb": 1,
+      "meaning": "发现后的通知发送分钟",
+      "name": "M",
+      "type": "INTEGER",
+      "ub": 180
+    },
+    {
+      "lb": 0,
+      "meaning": "向州应急办公室发送",
+      "name": "O",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "附影响范围与预计修复时间",
+      "name": "C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "提供联系人及回拨号码",
+      "name": "K",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "恢复后补报",
+      "name": "R",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

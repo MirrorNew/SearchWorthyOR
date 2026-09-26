@@ -1,0 +1,50 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R065",
+  "solver": "COPT 8.0.5",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 4.0,
+  "patched_objective": 5.0,
+  "base_incumbent": {
+    "general": 1,
+    "paper": 0,
+    "metal": 0,
+    "plastic": 0,
+    "glass": 0,
+    "textile": 0
+  },
+  "patched_incumbent": {
+    "general": 0,
+    "paper": 1,
+    "metal": 1,
+    "plastic": 1,
+    "glass": 1,
+    "textile": 1
+  },
+  "base_feasible_assignment_count": 33,
+  "patched_feasible_assignment_count": 2,
+  "base_optimal_actions": [
+    {
+      "general": 1,
+      "paper": 0,
+      "metal": 0,
+      "plastic": 0,
+      "glass": 0,
+      "textile": 0
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "general": 0,
+      "paper": 1,
+      "metal": 1,
+      "plastic": 1,
+      "glass": 1,
+      "textile": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true
+}

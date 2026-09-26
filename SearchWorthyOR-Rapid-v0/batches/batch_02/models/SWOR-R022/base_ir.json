@@ -1,0 +1,77 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R022",
+  "variant": "base",
+  "family": "assignment_matching",
+  "source_candidate_id": "SRCV2-0099",
+  "variables": [
+    {
+      "name": "select_herbs",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受有机香草货批"
+    },
+    {
+      "name": "select_oil",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "接受有机橄榄油货批"
+    },
+    {
+      "name": "cert_herbs",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为香草货批办理进口证书"
+    },
+    {
+      "name": "cert_oil",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "为橄榄油货批办理进口证书"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "select_herbs": 11,
+      "select_oil": 8,
+      "cert_herbs": -2,
+      "cert_oil": -2
+    },
+    "meaning": "进口组合总利润",
+    "unit": "万元"
+  },
+  "constraints": [
+    {
+      "name": "port_capacity",
+      "sense": "<=",
+      "rhs": 2,
+      "coefficients": {
+        "select_herbs": 2,
+        "select_oil": 1
+      },
+      "meaning": "接受货批占用的港口舱位不超过两个"
+    },
+    {
+      "name": "certificate_work_limit",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "cert_herbs": 1,
+        "cert_oil": 1
+      },
+      "meaning": "本期最多办理一份进口证书"
+    }
+  ],
+  "action_projection": [
+    "select_herbs",
+    "select_oil",
+    "cert_herbs",
+    "cert_oil"
+  ]
+}

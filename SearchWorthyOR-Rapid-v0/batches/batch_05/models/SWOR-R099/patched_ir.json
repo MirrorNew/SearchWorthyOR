@@ -1,0 +1,304 @@
+{
+  "action_projection": [
+    "x_oa",
+    "x_ad",
+    "x_ob",
+    "x_bd",
+    "x_ab",
+    "n_oa",
+    "n_ad",
+    "n_ob",
+    "n_bd",
+    "n_ab"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "n_ab": -1,
+        "n_ad": -1,
+        "n_oa": 1
+      },
+      "meaning": "正常场景A节点流量平衡",
+      "name": "normal_a",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "n_ab": 1,
+        "n_bd": -1,
+        "n_ob": 1
+      },
+      "meaning": "正常场景B节点流量平衡",
+      "name": "normal_b",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "n_ad": 1,
+        "n_bd": 1
+      },
+      "meaning": "正常场景D接收一单位流",
+      "name": "normal_dest",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "n_oa": 1,
+        "x_oa": -1
+      },
+      "meaning": "正常场景仅使用已建设的oa链路",
+      "name": "normal_use_oa",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "n_ad": 1,
+        "x_ad": -1
+      },
+      "meaning": "正常场景仅使用已建设的ad链路",
+      "name": "normal_use_ad",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "n_ob": 1,
+        "x_ob": -1
+      },
+      "meaning": "正常场景仅使用已建设的ob链路",
+      "name": "normal_use_ob",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "n_bd": 1,
+        "x_bd": -1
+      },
+      "meaning": "正常场景仅使用已建设的bd链路",
+      "name": "normal_use_bd",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "n_ab": 1,
+        "x_ab": -1
+      },
+      "meaning": "正常场景仅使用已建设的ab链路",
+      "name": "normal_use_ab",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "d_ab": -1,
+        "d_ad": -1,
+        "d_oa": 1
+      },
+      "meaning": "海啸场景A节点流量平衡",
+      "name": "disaster_a",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "d_ab": 1,
+        "d_bd": -1,
+        "d_ob": 1
+      },
+      "meaning": "海啸场景B节点流量平衡",
+      "name": "disaster_b",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "d_ad": 1,
+        "d_bd": 1
+      },
+      "meaning": "海啸场景D接收一单位流",
+      "name": "disaster_dest",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "d_ad": 1
+      },
+      "meaning": "海啸场景A-D链路不可用",
+      "name": "ad_disaster_failure",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "d_oa": 1,
+        "x_oa": -1
+      },
+      "meaning": "海啸场景仅使用已建设的oa链路",
+      "name": "disaster_use_oa",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "d_ob": 1,
+        "x_ob": -1
+      },
+      "meaning": "海啸场景仅使用已建设的ob链路",
+      "name": "disaster_use_ob",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "d_bd": 1,
+        "x_bd": -1
+      },
+      "meaning": "海啸场景仅使用已建设的bd链路",
+      "name": "disaster_use_bd",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "d_ab": 1,
+        "x_ab": -1
+      },
+      "meaning": "海啸场景仅使用已建设的ab链路",
+      "name": "disaster_use_ab",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R099",
+  "objective": {
+    "coefficients": {
+      "x_ab": 2,
+      "x_ad": 4,
+      "x_bd": 4,
+      "x_oa": 3,
+      "x_ob": 5
+    },
+    "constant": 0,
+    "meaning": "通信链路建设成本",
+    "sense": "min",
+    "unit": "百万日元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0177",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "建设O-A链路",
+      "name": "x_oa",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设A-D链路",
+      "name": "x_ad",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设O-B链路",
+      "name": "x_ob",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设B-D链路",
+      "name": "x_bd",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设A-B链路",
+      "name": "x_ab",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "正常场景使用O-A",
+      "name": "n_oa",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "正常场景使用A-D",
+      "name": "n_ad",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "正常场景使用O-B",
+      "name": "n_ob",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "正常场景使用B-D",
+      "name": "n_bd",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "正常场景使用A-B",
+      "name": "n_ab",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "海啸场景使用oa链路",
+      "name": "d_oa",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "海啸场景使用ad链路",
+      "name": "d_ad",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "海啸场景使用ob链路",
+      "name": "d_ob",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "海啸场景使用bd链路",
+      "name": "d_bd",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "海啸场景使用ab链路",
+      "name": "d_ab",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

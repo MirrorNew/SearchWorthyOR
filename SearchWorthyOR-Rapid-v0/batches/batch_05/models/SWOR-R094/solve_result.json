@@ -1,0 +1,67 @@
+{
+  "base_feasible_assignment_count": 70,
+  "base_incumbent": {
+    "crop_batches": 4,
+    "crop_injected": 0,
+    "waste_batches": 0,
+    "waste_injected": 0
+  },
+  "base_objective": 32.0,
+  "base_optimal_actions": [
+    {
+      "crop_batches": 4,
+      "crop_injected": 0,
+      "waste_batches": 0,
+      "waste_injected": 0
+    },
+    {
+      "crop_batches": 4,
+      "crop_injected": 1,
+      "waste_batches": 0,
+      "waste_injected": 0
+    },
+    {
+      "crop_batches": 4,
+      "crop_injected": 2,
+      "waste_batches": 0,
+      "waste_injected": 0
+    },
+    {
+      "crop_batches": 4,
+      "crop_injected": 3,
+      "waste_batches": 0,
+      "waste_injected": 0
+    },
+    {
+      "crop_batches": 4,
+      "crop_injected": 4,
+      "waste_batches": 0,
+      "waste_injected": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R094",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 70,
+  "patched_incumbent": {
+    "crop_batches": 0,
+    "crop_injected": 0,
+    "eligible_waste": 4,
+    "waste_batches": 4,
+    "waste_injected": 4
+  },
+  "patched_objective": 34.0,
+  "patched_optimal_actions": [
+    {
+      "crop_batches": 0,
+      "crop_injected": 0,
+      "waste_batches": 4,
+      "waste_injected": 4
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

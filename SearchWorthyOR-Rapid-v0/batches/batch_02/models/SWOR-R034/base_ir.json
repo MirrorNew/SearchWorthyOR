@@ -1,0 +1,67 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R034",
+  "variant": "base",
+  "family": "production_capacity",
+  "source_candidate_id": "SRCV2-0254",
+  "variables": [
+    {
+      "name": "operate_press",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "当日启用冲压机"
+    },
+    {
+      "name": "operate_cutter",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "当日启用切割机"
+    },
+    {
+      "name": "maintain_press",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "当班前完成冲压机保养"
+    },
+    {
+      "name": "maintain_cutter",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "当班前完成切割机保养"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "operate_press": 10,
+      "operate_cutter": 8,
+      "maintain_press": -3,
+      "maintain_cutter": -2
+    },
+    "meaning": "当日设备净产值",
+    "unit": "分"
+  },
+  "constraints": [
+    {
+      "name": "maintenance_team_limit",
+      "sense": "<=",
+      "rhs": 1,
+      "coefficients": {
+        "maintain_press": 1,
+        "maintain_cutter": 1
+      },
+      "meaning": "维护班本期最多完成一台设备保养"
+    }
+  ],
+  "action_projection": [
+    "operate_press",
+    "operate_cutter",
+    "maintain_press",
+    "maintain_cutter"
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "action_projection": [
+    "general",
+    "paper",
+    "metal",
+    "plastic",
+    "glass",
+    "textile"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "general": 5,
+        "glass": 1,
+        "metal": 1,
+        "paper": 1,
+        "plastic": 1,
+        "textile": 1
+      },
+      "meaning": "分类覆盖至少5点",
+      "name": "aggregate_coverage",
+      "rhs": 5,
+      "sense": ">="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R065",
+  "objective": {
+    "coefficients": {
+      "general": 4,
+      "glass": 1,
+      "metal": 1,
+      "paper": 1,
+      "plastic": 1,
+      "textile": 1
+    },
+    "constant": 0,
+    "meaning": "最小化容器成本",
+    "sense": "min",
+    "unit": "万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0159",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采购general收集容器",
+      "name": "general",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购paper收集容器",
+      "name": "paper",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购metal收集容器",
+      "name": "metal",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购plastic收集容器",
+      "name": "plastic",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购glass收集容器",
+      "name": "glass",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购textile收集容器",
+      "name": "textile",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

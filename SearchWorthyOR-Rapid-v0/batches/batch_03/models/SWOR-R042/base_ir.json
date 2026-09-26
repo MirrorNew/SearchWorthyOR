@@ -1,0 +1,90 @@
+{
+  "action_projection": [
+    "x_1",
+    "x_2",
+    "x_3",
+    "x_4",
+    "x_5"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_1": 1,
+        "x_2": 1,
+        "x_3": 1,
+        "x_4": 1,
+        "x_5": 1
+      },
+      "meaning": "恰好分配三个时隙",
+      "name": "allocate_three",
+      "rhs": 3,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_1": 1,
+        "x_3": 1,
+        "x_4": 1
+      },
+      "meaning": "早高峰最多满足两个请求",
+      "name": "peak_limit",
+      "rhs": 2,
+      "sense": "<="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R042",
+  "objective": {
+    "coefficients": {
+      "x_1": 10,
+      "x_2": 9,
+      "x_3": 6,
+      "x_4": 5,
+      "x_5": 4
+    },
+    "constant": 0,
+    "meaning": "最大化分配效益",
+    "sense": "max",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "W-D-004",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "向航空公司1分配时隙",
+      "name": "x_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向航空公司2分配时隙",
+      "name": "x_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向航空公司3分配时隙",
+      "name": "x_3",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向航空公司4分配时隙",
+      "name": "x_4",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向航空公司5分配时隙",
+      "name": "x_5",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,95 @@
+{
+  "action_projection": [
+    "receive_years",
+    "dispatch_years",
+    "receive_inspectable",
+    "dispatch_inspectable"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "receive_inspectable": -8,
+        "receive_years": 1
+      },
+      "meaning": "未启用可检查收货档案时保留年限为零",
+      "name": "receive_archive_link",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "dispatch_inspectable": -8,
+        "dispatch_years": 1
+      },
+      "meaning": "未启用可检查发货档案时保留年限为零",
+      "name": "dispatch_archive_link",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "receive_years": 1
+      },
+      "meaning": "收货交易记录至少保留五年",
+      "name": "receive_five_years",
+      "rhs": 5,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "dispatch_years": 1
+      },
+      "meaning": "发货交易记录至少保留五年",
+      "name": "dispatch_five_years",
+      "rhs": 5,
+      "sense": ">="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R010",
+  "objective": {
+    "coefficients": {
+      "dispatch_inspectable": 3,
+      "dispatch_years": 1.2,
+      "receive_inspectable": 2,
+      "receive_years": 1
+    },
+    "constant": 0,
+    "meaning": "交易档案总成本",
+    "sense": "min",
+    "unit": "千欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0213",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "收货交易档案保留年限",
+      "name": "receive_years",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "发货交易档案保留年限",
+      "name": "dispatch_years",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "启用可检查的收货交易电子档案",
+      "name": "receive_inspectable",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用可检查的发货交易电子档案",
+      "name": "dispatch_inspectable",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

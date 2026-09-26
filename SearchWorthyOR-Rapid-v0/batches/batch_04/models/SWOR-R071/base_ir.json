@@ -1,0 +1,99 @@
+{
+  "action_projection": [
+    "G",
+    "I",
+    "C",
+    "R",
+    "B",
+    "M"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "B": 1,
+        "C": 1,
+        "G": 1,
+        "I": 1,
+        "M": 1,
+        "R": 1
+      },
+      "meaning": "至少启用1项模块",
+      "name": "one_module",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "G": 1,
+        "M": 1
+      },
+      "meaning": "G与M不能同时启用",
+      "name": "shared_license",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R071",
+  "objective": {
+    "coefficients": {
+      "B": 2,
+      "C": 2,
+      "G": 1,
+      "I": 2,
+      "M": 9,
+      "R": 2
+    },
+    "constant": 0,
+    "meaning": "最小化标签系统成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0155",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "启用汇总模块",
+      "name": "G",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用工业标签模块",
+      "name": "I",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用商业标签模块",
+      "name": "C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用居民标签模块",
+      "name": "R",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用建筑标签模块",
+      "name": "B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用多标签模块",
+      "name": "M",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

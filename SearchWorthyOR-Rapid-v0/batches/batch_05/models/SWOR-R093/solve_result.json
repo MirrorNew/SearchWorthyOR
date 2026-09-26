@@ -1,0 +1,42 @@
+{
+  "base_feasible_assignment_count": 35,
+  "base_incumbent": {
+    "reuse_solvent": 4,
+    "reuse_water": 0,
+    "solvent_process": 4,
+    "water_process": 0
+  },
+  "base_objective": 56.0,
+  "base_optimal_actions": [
+    {
+      "reuse_solvent": 4,
+      "reuse_water": 0,
+      "solvent_process": 4,
+      "water_process": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R093",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 15,
+  "patched_incumbent": {
+    "reuse_solvent": 0,
+    "reuse_water": 4,
+    "solvent_process": 0,
+    "water_process": 4
+  },
+  "patched_objective": 44.0,
+  "patched_optimal_actions": [
+    {
+      "reuse_solvent": 0,
+      "reuse_water": 4,
+      "solvent_process": 0,
+      "water_process": 4
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

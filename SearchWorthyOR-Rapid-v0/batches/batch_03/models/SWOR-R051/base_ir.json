@@ -1,0 +1,69 @@
+{
+  "action_projection": [
+    "G",
+    "A",
+    "B",
+    "C"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "A": 1,
+        "B": 1,
+        "C": 1,
+        "G": 1
+      },
+      "meaning": "至少启用一台称量设备",
+      "name": "one_device",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R051",
+  "objective": {
+    "coefficients": {
+      "A": 2,
+      "B": 2,
+      "C": 5,
+      "G": 1
+    },
+    "constant": 0,
+    "meaning": "最小化称量设备成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0154",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "启用混合总量扫描仪",
+      "name": "G",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用进场总吨位设备",
+      "name": "A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用分流吨位设备",
+      "name": "B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用双通道设备",
+      "name": "C",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

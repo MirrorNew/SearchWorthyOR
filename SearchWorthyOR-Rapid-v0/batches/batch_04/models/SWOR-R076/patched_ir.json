@@ -1,0 +1,67 @@
+{
+  "action_projection": [
+    "blocked_minutes",
+    "clear_minutes"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "blocked_minutes": 1,
+        "clear_minutes": 1
+      },
+      "meaning": "周期总长不超过12分钟",
+      "name": "cycle_length",
+      "rhs": 12,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "blocked_minutes": 1
+      },
+      "meaning": "连续封闭不超过5分钟",
+      "name": "blocking_limit",
+      "rhs": 5,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "clear_minutes": 1
+      },
+      "meaning": "随后至少放行3分钟",
+      "name": "clearance_floor",
+      "rhs": 3,
+      "sense": ">="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R076",
+  "objective": {
+    "coefficients": {
+      "blocked_minutes": 3,
+      "clear_minutes": 1
+    },
+    "constant": 0,
+    "meaning": "最大化作业量",
+    "sense": "max",
+    "unit": "作业点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0190",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "道口连续封闭分钟",
+      "name": "blocked_minutes",
+      "type": "INTEGER",
+      "ub": 12
+    },
+    {
+      "lb": 0,
+      "meaning": "随后放行分钟",
+      "name": "clear_minutes",
+      "type": "INTEGER",
+      "ub": 12
+    }
+  ],
+  "variant": "patched"
+}

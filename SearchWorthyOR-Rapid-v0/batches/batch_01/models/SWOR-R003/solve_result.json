@@ -1,0 +1,58 @@
+{
+  "base_feasible_assignment_count": 16,
+  "base_incumbent": {
+    "bilateral_1": 1,
+    "bilateral_2": 1,
+    "bilateral_3": 1,
+    "bilateral_4": 1,
+    "central_1": 0,
+    "central_2": 0,
+    "central_3": 0,
+    "central_4": 0
+  },
+  "base_objective": 6.0,
+  "base_optimal_actions": [
+    {
+      "bilateral_1": 1,
+      "bilateral_2": 1,
+      "bilateral_3": 1,
+      "bilateral_4": 1,
+      "central_1": 0,
+      "central_2": 0,
+      "central_3": 0,
+      "central_4": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R003",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 4,
+  "patched_incumbent": {
+    "bilateral_1": 0,
+    "bilateral_2": 0,
+    "bilateral_3": 1,
+    "bilateral_4": 1,
+    "central_1": 1,
+    "central_2": 1,
+    "central_3": 0,
+    "central_4": 0
+  },
+  "patched_objective": 13.0,
+  "patched_optimal_actions": [
+    {
+      "bilateral_1": 0,
+      "bilateral_2": 0,
+      "bilateral_3": 1,
+      "bilateral_4": 1,
+      "central_1": 1,
+      "central_2": 1,
+      "central_3": 0,
+      "central_4": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

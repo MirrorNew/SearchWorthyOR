@@ -1,0 +1,99 @@
+{
+  "action_projection": [
+    "report_1430",
+    "report_1500",
+    "report_1600",
+    "report_1700",
+    "shuttle"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "report_1430": 1,
+        "report_1500": 1,
+        "report_1600": 1,
+        "report_1700": 1
+      },
+      "meaning": "恰选择一个报到时刻",
+      "name": "choose_report_time",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "report_1430": 1,
+        "report_1500": 1,
+        "shuttle": -1
+      },
+      "meaning": "十四时三十分或十五时报到须派接驳车",
+      "name": "early_shuttle",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "report_1600": 1,
+        "report_1700": 1
+      },
+      "meaning": "报到必须落在运营人定义的响应时间内",
+      "name": "response_window",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R098",
+  "objective": {
+    "coefficients": {
+      "report_1430": 6,
+      "report_1500": 5,
+      "report_1600": 3,
+      "report_1700": 1,
+      "shuttle": 1
+    },
+    "constant": 0,
+    "meaning": "疲劳与调度负担",
+    "sense": "min",
+    "unit": "指数点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0172",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "十四时三十分报到",
+      "name": "report_1430",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "十五时报到",
+      "name": "report_1500",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "十六时报到",
+      "name": "report_1600",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "十七时报到",
+      "name": "report_1700",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "派出早班接驳车",
+      "name": "shuttle",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

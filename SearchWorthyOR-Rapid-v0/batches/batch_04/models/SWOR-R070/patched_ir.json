@@ -1,0 +1,104 @@
+{
+  "action_projection": [
+    "phys_day",
+    "phys_night",
+    "nurse_day",
+    "nurse_night"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "nurse_day": 1,
+        "phys_day": 1
+      },
+      "meaning": "白班至少一名临床人员",
+      "name": "day_cover",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "nurse_night": 1,
+        "phys_night": 1
+      },
+      "meaning": "夜班至少一名临床人员",
+      "name": "night_cover",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "phys_day": 1
+      },
+      "meaning": "白班运营时医生可用",
+      "name": "physician_day_available",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "phys_night": 1
+      },
+      "meaning": "夜班运营时医生可用",
+      "name": "physician_night_available",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "nurse_night": 1
+      },
+      "meaning": "夜间有住院患者时护士在岗",
+      "name": "inpatient_nurse_on_duty",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R070",
+  "objective": {
+    "coefficients": {
+      "nurse_day": 1,
+      "nurse_night": 2,
+      "phys_day": 3,
+      "phys_night": 4
+    },
+    "constant": 0,
+    "meaning": "最小化排班成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0260",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "安排phys_day人员",
+      "name": "phys_day",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排phys_night人员",
+      "name": "phys_night",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排nurse_day人员",
+      "name": "nurse_day",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排nurse_night人员",
+      "name": "nurse_night",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}
