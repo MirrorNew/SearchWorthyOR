@@ -2,7 +2,7 @@
 
 SearchWorthyOR研究优化Agent如何主动查找外部规则、判断规则是否适用于当前任务，并把证据落实到数学模型与最终决策。
 
-本仓库发布 **SearchWorthy Agent `i01-lite-007-c2fix-002-format001`** 和 **SearchWorthyOR v1.6.2** 数据集。更新日期：2026年9月23日。
+本仓库当前发布 **SearchWorthy Agent `i01-lite-007-c2fix-002-format001`** 源码与运行配置。**SearchWorthyOR v1.6.2** 数据集及配套发布清单（`release_manifest.json`）将在整理完成后发布，当前尚未包含在仓库中。更新日期：2026年10月1日。
 
 ## 仓库内容
 
@@ -14,15 +14,13 @@ agent/                         当前Agent源码与固定运行配置
   searchworthy/page_read.py    网页和PDF读取
   searchworthy/compiler.py    数学模型编译
   adapters/solver.py           Gurobi求解
-datasets/SearchWorthyOR-v1.6.2/
-  public/                     公开任务与题面
-  private/                    评分答案、规则依据和适用性记录
-  models/                     参考Base/Full模型
 scripts/
   run_case.py                 可迁移的单题启动入口
   validate_release.py         离线源码和数据校验
-release_manifest.json          发布版本与文件对应关系
 ```
+
+数据集将包含公开任务与题面、评分答案、规则依据和适用性记录，以及参考Base/Full模型。单题运行与数据校验依赖相应的数据文件和发布清单，需待数据整理发布后使用。
+
 ## 安装
 
 使用Python 3.12，在独立环境中安装依赖：
