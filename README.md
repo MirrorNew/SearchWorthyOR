@@ -1,5 +1,7 @@
 # SearchWorthyOR
 
+[English README](README_EN.md) · [English reproduction guide](docs/REPRODUCIBILITY_EN.md)
+
 SearchWorthyOR研究优化Agent如何主动查找外部规则、判断规则是否适用于当前任务，并把证据落实到数学模型与最终决策。
 
 本仓库当前发布 **SearchWorthy Agent `i01-lite-007-c2fix-002-format001`** 源码与运行配置。**SearchWorthyOR v1.6.2** 数据集及配套发布清单（`release_manifest.json`）将在整理完成后发布，当前尚未包含在仓库中。更新日期：2026年10月1日。
