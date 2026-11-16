@@ -1,0 +1,74 @@
+{
+  "paired_by_source_and_run": {
+    "full_model": {
+      "both": 77,
+      "swagent_only": 89,
+      "standard_only": 23,
+      "neither": 111
+    },
+    "answer": {
+      "both": 110,
+      "swagent_only": 89,
+      "standard_only": 23,
+      "neither": 78
+    }
+  },
+  "by_repeat": {
+    "1": {
+      "Standard-online": {
+        "full_pass": 30,
+        "answer_correct": 42
+      },
+      "SWAgent-online": {
+        "full_pass": 54,
+        "answer_correct": 67
+      }
+    },
+    "2": {
+      "Standard-online": {
+        "full_pass": 35,
+        "answer_correct": 44
+      },
+      "SWAgent-online": {
+        "full_pass": 56,
+        "answer_correct": 66
+      }
+    },
+    "3": {
+      "Standard-online": {
+        "full_pass": 35,
+        "answer_correct": 47
+      },
+      "SWAgent-online": {
+        "full_pass": 56,
+        "answer_correct": 66
+      }
+    }
+  },
+  "source_pass_distribution": {
+    "Standard-online": {
+      "0": 53,
+      "1": 14,
+      "2": 13,
+      "3": 20
+    },
+    "SWAgent-online": {
+      "0": 27,
+      "1": 15,
+      "2": 23,
+      "3": 35
+    }
+  },
+  "answer_correct_subset_full_pass": {
+    "standard": 0.7518796992481203,
+    "swagent": 0.8341708542713567,
+    "difference_percentage_points": 8.229115502323648
+  },
+  "strict_model_nonpass_relative_reduction": 0.33,
+  "strict_model_pass_relative_gain": 0.66,
+  "swagent_initial_full_pass": 14,
+  "swagent_final_full_pass": 166,
+  "swagent_net_full_pass_increase": 152,
+  "swagent_initial_fail_to_pass_share": 0.5454545454545454,
+  "scope": "Descriptive statistics of the same 100 sources x 3 runs; no independent 300-task or causal claim."
+}

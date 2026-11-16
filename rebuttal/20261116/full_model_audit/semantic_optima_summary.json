@@ -1,0 +1,586 @@
+{
+  "count": 33,
+  "unique_sources": 18,
+  "optimum_value_preserved": 33,
+  "all_reference_optima_preserved": 33,
+  "same_optimal_action_set": 33,
+  "objective_coefficients_equal": 33,
+  "shared_objective_equal": 33,
+  "checker_count_matches": 33,
+  "checker_objective_all_equal": 33,
+  "generated_optimum_better_than_reference": 0,
+  "generated_optimum_worse_than_reference": 0,
+  "source_changes": [
+    {
+      "source_task_id": "SWOR-R004",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 13,
+        "gen": 13,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 130,
+        "final_missing": 0,
+        "final_extra": 40,
+        "removed_by_update": 90,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R008",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 78,
+        "gen": 78,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 2,
+        "final_missing": 6,
+        "final_extra": 0,
+        "removed_by_update": 8,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R023",
+      "runs": [
+        2
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 54,
+        "gen": 54,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 8,
+        "initial_extra": 2,
+        "final_missing": 8,
+        "final_extra": 0,
+        "removed_by_update": 2,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R024",
+      "runs": [
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 78,
+        "gen": 78,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 5,
+        "final_missing": 0,
+        "final_extra": 1,
+        "removed_by_update": 4,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R025",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 62,
+        "gen": 62,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 3,
+        "final_missing": 2,
+        "final_extra": 0,
+        "removed_by_update": 5,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R031",
+      "runs": [
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": true,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 166,
+        "gen": 166,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 4,
+        "initial_extra": 0,
+        "final_missing": 4,
+        "final_extra": 0,
+        "removed_by_update": 0,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R048",
+      "runs": [
+        1,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 314,
+        "gen": 314,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 388,
+        "final_missing": 0,
+        "final_extra": 102,
+        "removed_by_update": 286,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R055",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 116,
+        "gen": 116,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 3,
+        "initial_extra": 6,
+        "final_missing": 3,
+        "final_extra": 0,
+        "removed_by_update": 6,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R057",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 53,
+        "gen": 53,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 1,
+        "initial_extra": 16,
+        "final_missing": 1,
+        "final_extra": 0,
+        "removed_by_update": 16,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R063",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 99,
+        "gen": 99,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 4,
+        "initial_extra": 12,
+        "final_missing": 4,
+        "final_extra": 5,
+        "removed_by_update": 7,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R077",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 19,
+        "gen": 19,
+        "ref_optimal_action_count": 3,
+        "gen_optimal_action_count": 3,
+        "initial_missing": 0,
+        "initial_extra": 16,
+        "final_missing": 0,
+        "final_extra": 7,
+        "removed_by_update": 9,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R084",
+      "runs": [
+        1,
+        2
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": true,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 162,
+        "gen": 162,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 6,
+        "final_missing": 0,
+        "final_extra": 6,
+        "removed_by_update": 0,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R088",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 48,
+        "gen": 48,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 133,
+        "final_missing": 0,
+        "final_extra": 7,
+        "removed_by_update": 126,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R090",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 37,
+        "gen": 37,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 66,
+        "initial_extra": 59,
+        "final_missing": 66,
+        "final_extra": 0,
+        "removed_by_update": 59,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R098",
+      "runs": [
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 96,
+        "gen": 96,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 18,
+        "final_missing": 0,
+        "final_extra": 5,
+        "removed_by_update": 13,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R103",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": true,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 98,
+        "gen": 98,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 3,
+        "initial_extra": 0,
+        "final_missing": 3,
+        "final_extra": 0,
+        "removed_by_update": 0,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R105",
+      "runs": [
+        1
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 115,
+        "gen": 115,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 4,
+        "final_missing": 2,
+        "final_extra": 0,
+        "removed_by_update": 6,
+        "added_by_update": 0
+      }
+    },
+    {
+      "source_task_id": "SWOR-R109",
+      "runs": [
+        2,
+        3
+      ],
+      "initial_full_model_statuses": [
+        "FAIL"
+      ],
+      "initial_to_final_only_removes_actions": true,
+      "initial_to_final_unchanged": false,
+      "optimum_value_preserved": true,
+      "same_optimal_action_set": true,
+      "first": {
+        "ref": 76,
+        "gen": 76,
+        "ref_optimal_action_count": 1,
+        "gen_optimal_action_count": 1,
+        "initial_missing": 0,
+        "initial_extra": 10,
+        "final_missing": 0,
+        "final_extra": 7,
+        "removed_by_update": 3,
+        "added_by_update": 0
+      }
+    }
+  ],
+  "counterfactuals": [
+    {
+      "source_task_id": "SWOR-R023",
+      "runs": [
+        2
+      ],
+      "all_runs_exact_projected_feasible_set_match": true,
+      "all_runs_optimum_and_argmax_match": true,
+      "per_run": [
+        {
+          "run_id": 2,
+          "reference_feasible": 9,
+          "counterfactual_feasible": 1,
+          "generated_feasible": 1,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 54,
+          "generated_optimum": 54
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R055",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "all_runs_exact_projected_feasible_set_match": true,
+      "all_runs_optimum_and_argmax_match": true,
+      "per_run": [
+        {
+          "run_id": 1,
+          "reference_feasible": 7,
+          "counterfactual_feasible": 4,
+          "generated_feasible": 4,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 116,
+          "generated_optimum": 116
+        },
+        {
+          "run_id": 2,
+          "reference_feasible": 7,
+          "counterfactual_feasible": 4,
+          "generated_feasible": 4,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 116,
+          "generated_optimum": 116
+        },
+        {
+          "run_id": 3,
+          "reference_feasible": 7,
+          "counterfactual_feasible": 4,
+          "generated_feasible": 4,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 116,
+          "generated_optimum": 116
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R090",
+      "runs": [
+        1,
+        2,
+        3
+      ],
+      "all_runs_exact_projected_feasible_set_match": true,
+      "all_runs_optimum_and_argmax_match": true,
+      "per_run": [
+        {
+          "run_id": 1,
+          "reference_feasible": 101,
+          "counterfactual_feasible": 35,
+          "generated_feasible": 35,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 37,
+          "generated_optimum": 37
+        },
+        {
+          "run_id": 2,
+          "reference_feasible": 101,
+          "counterfactual_feasible": 35,
+          "generated_feasible": 35,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 37,
+          "generated_optimum": 37
+        },
+        {
+          "run_id": 3,
+          "reference_feasible": 101,
+          "counterfactual_feasible": 35,
+          "generated_feasible": 35,
+          "cf_missing": 0,
+          "cf_extra": 0,
+          "cf_optimum": 37,
+          "generated_optimum": 37
+        }
+      ]
+    }
+  ]
+}

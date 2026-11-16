@@ -50,7 +50,7 @@
 | PASS -> FAIL | 4 |
 | PASS -> PASS | 10 |
 
-首要逐条复核名单见 CSV。初始 PASS→终态 FAIL 是已引入错误限制的直接反例；FAIL→FAIL 是未修复，FAIL→PASS 是按冻结模型定义完成修复。
+首要逐条复核名单见 CSV。初始 PASS→终态 FAIL 是已引入错误限制的直接反例；FAIL→FAIL 表示终态仍不匹配，期间可以发生部分修正或错误更新；FAIL→PASS 是按冻结模型定义完成修复。
 
 ## 参考契约敏感性
 

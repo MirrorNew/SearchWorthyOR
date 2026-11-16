@@ -1,0 +1,338 @@
+{
+  "scope": "given task constraints and service costs; mathematical safe pruning, not preservation of the entire feasible set or proof the agent intentionally used dominance",
+  "runs": 5,
+  "source_tasks": 3,
+  "removed_actions_with_dominance_witness": 10,
+  "results": [
+    {
+      "source_task_id": "SWOR-R025",
+      "run_id": 1,
+      "generated_subset_of_reference": true,
+      "same_primary_choice_in_every_witness": true,
+      "every_removed_action_strictly_dominated": true,
+      "removed_actions": 2,
+      "witnesses": [
+        {
+          "removed_action": {
+            "swor_r025_a01": 0,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 1,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 1
+          },
+          "reference_value": "35",
+          "retained_action": {
+            "swor_r025_a01": 0,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 1,
+            "swor_r025_a05": 1,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 0
+          },
+          "retained_value": "49",
+          "strict_improvement": "14",
+          "changed_services": [
+            "swor_r025_a05",
+            "swor_r025_a08"
+          ]
+        },
+        {
+          "removed_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 1
+          },
+          "reference_value": "48",
+          "retained_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 1,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 0
+          },
+          "retained_value": "53",
+          "strict_improvement": "5",
+          "changed_services": [
+            "swor_r025_a06",
+            "swor_r025_a08"
+          ]
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R025",
+      "run_id": 2,
+      "generated_subset_of_reference": true,
+      "same_primary_choice_in_every_witness": true,
+      "every_removed_action_strictly_dominated": true,
+      "removed_actions": 2,
+      "witnesses": [
+        {
+          "removed_action": {
+            "swor_r025_a01": 0,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 1,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 1
+          },
+          "reference_value": "35",
+          "retained_action": {
+            "swor_r025_a01": 0,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 1,
+            "swor_r025_a05": 1,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 0
+          },
+          "retained_value": "49",
+          "strict_improvement": "14",
+          "changed_services": [
+            "swor_r025_a05",
+            "swor_r025_a08"
+          ]
+        },
+        {
+          "removed_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 1
+          },
+          "reference_value": "48",
+          "retained_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 1,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 0
+          },
+          "retained_value": "53",
+          "strict_improvement": "5",
+          "changed_services": [
+            "swor_r025_a06",
+            "swor_r025_a08"
+          ]
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R025",
+      "run_id": 3,
+      "generated_subset_of_reference": true,
+      "same_primary_choice_in_every_witness": true,
+      "every_removed_action_strictly_dominated": true,
+      "removed_actions": 1,
+      "witnesses": [
+        {
+          "removed_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 0,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 1
+          },
+          "reference_value": "48",
+          "retained_action": {
+            "swor_r025_a01": 1,
+            "swor_r025_a02": 0,
+            "swor_r025_a03": 0,
+            "swor_r025_a04": 0,
+            "swor_r025_a05": 0,
+            "swor_r025_a06": 1,
+            "swor_r025_a07": 0,
+            "swor_r025_a08": 0
+          },
+          "retained_value": "53",
+          "strict_improvement": "5",
+          "changed_services": [
+            "swor_r025_a06",
+            "swor_r025_a08"
+          ]
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R103",
+      "run_id": 1,
+      "generated_subset_of_reference": true,
+      "same_primary_choice_in_every_witness": true,
+      "every_removed_action_strictly_dominated": true,
+      "removed_actions": 3,
+      "witnesses": [
+        {
+          "removed_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 0,
+            "swor_r103_a03": 0,
+            "swor_r103_a04": 1,
+            "swor_r103_a05": 0,
+            "swor_r103_a06": 1,
+            "swor_r103_a07": 0
+          },
+          "reference_value": "83",
+          "retained_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 0,
+            "swor_r103_a03": 0,
+            "swor_r103_a04": 1,
+            "swor_r103_a05": 1,
+            "swor_r103_a06": 0,
+            "swor_r103_a07": 0
+          },
+          "retained_value": "92",
+          "strict_improvement": "9",
+          "changed_services": [
+            "swor_r103_a05",
+            "swor_r103_a06"
+          ]
+        },
+        {
+          "removed_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 0,
+            "swor_r103_a03": 1,
+            "swor_r103_a04": 0,
+            "swor_r103_a05": 0,
+            "swor_r103_a06": 1,
+            "swor_r103_a07": 0
+          },
+          "reference_value": "89",
+          "retained_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 0,
+            "swor_r103_a03": 1,
+            "swor_r103_a04": 0,
+            "swor_r103_a05": 1,
+            "swor_r103_a06": 0,
+            "swor_r103_a07": 0
+          },
+          "retained_value": "98",
+          "strict_improvement": "9",
+          "changed_services": [
+            "swor_r103_a05",
+            "swor_r103_a06"
+          ]
+        },
+        {
+          "removed_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 1,
+            "swor_r103_a03": 0,
+            "swor_r103_a04": 0,
+            "swor_r103_a05": 0,
+            "swor_r103_a06": 1,
+            "swor_r103_a07": 0
+          },
+          "reference_value": "85",
+          "retained_action": {
+            "swor_r103_a01": 0,
+            "swor_r103_a02": 1,
+            "swor_r103_a03": 0,
+            "swor_r103_a04": 0,
+            "swor_r103_a05": 1,
+            "swor_r103_a06": 0,
+            "swor_r103_a07": 0
+          },
+          "retained_value": "94",
+          "strict_improvement": "9",
+          "changed_services": [
+            "swor_r103_a05",
+            "swor_r103_a06"
+          ]
+        }
+      ]
+    },
+    {
+      "source_task_id": "SWOR-R105",
+      "run_id": 1,
+      "generated_subset_of_reference": true,
+      "same_primary_choice_in_every_witness": true,
+      "every_removed_action_strictly_dominated": true,
+      "removed_actions": 2,
+      "witnesses": [
+        {
+          "removed_action": {
+            "swor_r105_a01": 0,
+            "swor_r105_a02": 0,
+            "swor_r105_a03": 1,
+            "swor_r105_a04": 0,
+            "swor_r105_a05": 0,
+            "swor_r105_a06": 0,
+            "swor_r105_a07": 1
+          },
+          "reference_value": "90",
+          "retained_action": {
+            "swor_r105_a01": 0,
+            "swor_r105_a02": 0,
+            "swor_r105_a03": 1,
+            "swor_r105_a04": 0,
+            "swor_r105_a05": 1,
+            "swor_r105_a06": 0,
+            "swor_r105_a07": 0
+          },
+          "retained_value": "98",
+          "strict_improvement": "8",
+          "changed_services": [
+            "swor_r105_a05",
+            "swor_r105_a07"
+          ]
+        },
+        {
+          "removed_action": {
+            "swor_r105_a01": 0,
+            "swor_r105_a02": 1,
+            "swor_r105_a03": 0,
+            "swor_r105_a04": 0,
+            "swor_r105_a05": 0,
+            "swor_r105_a06": 0,
+            "swor_r105_a07": 1
+          },
+          "reference_value": "104",
+          "retained_action": {
+            "swor_r105_a01": 0,
+            "swor_r105_a02": 1,
+            "swor_r105_a03": 0,
+            "swor_r105_a04": 0,
+            "swor_r105_a05": 1,
+            "swor_r105_a06": 0,
+            "swor_r105_a07": 0
+          },
+          "retained_value": "112",
+          "strict_improvement": "8",
+          "changed_services": [
+            "swor_r105_a05",
+            "swor_r105_a07"
+          ]
+        }
+      ]
+    }
+  ]
+}
