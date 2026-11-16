@@ -1,0 +1,222 @@
+[
+  {
+    "source_id": "B01_00413",
+    "gurobi_status": 2,
+    "reference_objective": 355.1,
+    "gurobi_objective": 355.1,
+    "gurobi_bound": 355.09999999999997,
+    "variables": 44,
+    "constraints": 57,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B02_00054",
+    "gurobi_status": 2,
+    "reference_objective": 660200.0,
+    "gurobi_objective": 660200.0,
+    "gurobi_bound": 660200.0,
+    "variables": 50,
+    "constraints": 65,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B02_00182",
+    "gurobi_status": 2,
+    "reference_objective": 210.0,
+    "gurobi_objective": 210.0,
+    "gurobi_bound": 210.0,
+    "variables": 63,
+    "constraints": 161,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B02_00197",
+    "gurobi_status": 2,
+    "reference_objective": 191500.0,
+    "gurobi_objective": 191500.0,
+    "gurobi_bound": 191500.0,
+    "variables": 31,
+    "constraints": 29,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B03_00149",
+    "gurobi_status": 2,
+    "reference_objective": 100.0,
+    "gurobi_objective": 100.0,
+    "gurobi_bound": 100.0,
+    "variables": 40,
+    "constraints": 61,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B03_00206",
+    "gurobi_status": 2,
+    "reference_objective": 3.0,
+    "gurobi_objective": 3.0,
+    "gurobi_bound": 3.0,
+    "variables": 213,
+    "constraints": 846,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B03_00230",
+    "gurobi_status": 2,
+    "reference_objective": 2.0,
+    "gurobi_objective": 2.0,
+    "gurobi_bound": 2.0,
+    "variables": 60,
+    "constraints": 82,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B03_00275",
+    "gurobi_status": 2,
+    "reference_objective": 34093.75000000001,
+    "gurobi_objective": 34093.75,
+    "gurobi_bound": 34093.75,
+    "variables": 36,
+    "constraints": 73,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "B03_00289",
+    "reference_objective": 690.0,
+    "status": "SOLVER_UNAVAILABLE",
+    "error": "Model too large for size-limited license; visit https://gurobi.com/unrestricted for more information",
+    "error_code": 10010,
+    "variables": 868,
+    "constraints": 17647,
+    "source_unchanged": true,
+    "pass": null
+  },
+  {
+    "source_id": "B03_00461",
+    "gurobi_status": 2,
+    "reference_objective": 1350,
+    "gurobi_objective": 1350.0,
+    "gurobi_bound": 1350.0,
+    "variables": 27,
+    "constraints": 40,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P009_high",
+    "gurobi_status": 2,
+    "reference_objective": 28400.0,
+    "gurobi_objective": 28400.0,
+    "gurobi_bound": 28400.0,
+    "variables": 53,
+    "constraints": 128,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P122_high",
+    "gurobi_status": 2,
+    "reference_objective": 708.47,
+    "gurobi_objective": 708.47,
+    "gurobi_bound": 708.47,
+    "variables": 133,
+    "constraints": 166,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P52_B04_L0055_high",
+    "gurobi_status": 2,
+    "reference_objective": 9,
+    "gurobi_objective": 9.0,
+    "gurobi_bound": 9.0,
+    "variables": 857,
+    "constraints": 1589,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P52_B07_L0138_expert",
+    "gurobi_status": 2,
+    "reference_objective": 354.0,
+    "gurobi_objective": 354.0,
+    "gurobi_bound": 354.0,
+    "variables": 148,
+    "constraints": 321,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P52_B08_L0122_expert",
+    "gurobi_status": 2,
+    "reference_objective": 25.0,
+    "gurobi_objective": 25.0,
+    "gurobi_bound": 25.0,
+    "variables": 100,
+    "constraints": 181,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "P52_B09_L0055_high",
+    "gurobi_status": 2,
+    "reference_objective": 0.0,
+    "gurobi_objective": 0.0,
+    "gurobi_bound": 0.0,
+    "variables": 246,
+    "constraints": 322,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "REUSE_expert_P52_B03_L0028_expert",
+    "gurobi_status": 2,
+    "reference_objective": 1610.0,
+    "gurobi_objective": 1610.0,
+    "gurobi_bound": 1610.0,
+    "variables": 76,
+    "constraints": 193,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+    "gurobi_status": 2,
+    "reference_objective": 149.665,
+    "gurobi_objective": 149.665,
+    "gurobi_bound": 149.665,
+    "variables": 65,
+    "constraints": 76,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "SFTREAL_OP_RB2607_001",
+    "gurobi_status": 2,
+    "reference_objective": 2644.0,
+    "gurobi_objective": 2644.0,
+    "gurobi_bound": 2644.0,
+    "variables": 105,
+    "constraints": 182,
+    "source_unchanged": true,
+    "pass": true
+  },
+  {
+    "source_id": "SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+    "gurobi_status": 2,
+    "reference_objective": 1162.3999999999967,
+    "gurobi_objective": 1162.4,
+    "gurobi_bound": 1162.4,
+    "variables": 139,
+    "constraints": 82,
+    "source_unchanged": true,
+    "pass": true
+  }
+]

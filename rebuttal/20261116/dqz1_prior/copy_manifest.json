@@ -1,0 +1,14 @@
+[
+  {
+    "source": "rebuttal/20261114/rebuttal_dqz1_EN_20261114.md",
+    "copy": "rebuttal/20261116/dqz1_prior/rebuttal_dqz1_EN_20261114.md",
+    "sha256": "8482fa18ffc9d0b190245e52c9a9e3b55ec94c312bf107ec34e04d5accdd354f",
+    "note": "Current English reply"
+  },
+  {
+    "source": "rebuttal/20261114/old/rebuttal_dqz1_中文核对版_20261114.md",
+    "copy": "rebuttal/20261116/dqz1_prior/rebuttal_dqz1_中文核对版_20261114.md",
+    "sha256": "cdf48d4209d554e6c364183a8e9dabb6d0754fdc49854754a7154b0ead5c7db2",
+    "note": "Historical Chinese check copy from old/; not asserted synchronized with latest English"
+  }
+]
