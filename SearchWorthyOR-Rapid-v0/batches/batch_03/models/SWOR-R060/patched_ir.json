@@ -1,0 +1,215 @@
+{
+  "action_projection": [
+    "I",
+    "A",
+    "P",
+    "C",
+    "D",
+    "E",
+    "L",
+    "J",
+    "F"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "A": 1,
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1,
+        "I": 1,
+        "J": 1,
+        "L": 1,
+        "P": 1
+      },
+      "meaning": "至少启用2项报送作业",
+      "name": "internal_two_actions",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "C": 1,
+        "D": 1,
+        "E": 1,
+        "F": 1,
+        "J": 1,
+        "L": 1,
+        "P": 1
+      },
+      "meaning": "P、C、D、E、L、J、F中至少启用1项数据作业",
+      "name": "internal_data_action",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "I": 1
+      },
+      "meaning": "提交1月至6月中期绩效报告",
+      "name": "interim_report",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "A": 1
+      },
+      "meaning": "提交年度外部绩效审计报告",
+      "name": "annual_external_audit",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "P": 1
+      },
+      "meaning": "年度报送投放市场量",
+      "name": "annual_placed_market",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "C": 1
+      },
+      "meaning": "年度报送收集量",
+      "name": "annual_collected",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "D": 1
+      },
+      "meaning": "年度报送填埋分流量",
+      "name": "annual_diverted",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "E": 1
+      },
+      "meaning": "年度报送出口量",
+      "name": "annual_exported",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "L": 1
+      },
+      "meaning": "年度报送填埋量",
+      "name": "annual_landfilled",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "J": 1
+      },
+      "meaning": "年度报送新增岗位数",
+      "name": "annual_jobs",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "F": 1
+      },
+      "meaning": "年度报送财务表现",
+      "name": "annual_finance",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R060",
+  "objective": {
+    "coefficients": {
+      "A": 3,
+      "C": 1,
+      "D": 1,
+      "E": 1,
+      "F": 2,
+      "I": 1,
+      "J": 2,
+      "L": 1,
+      "P": 1
+    },
+    "constant": 0,
+    "meaning": "最小化报送工作成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0163",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "提交1月至6月中期绩效报告",
+      "name": "I",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "提交年度外部绩效审计报告",
+      "name": "A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送投放市场量",
+      "name": "P",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送收集量",
+      "name": "C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送填埋分流量",
+      "name": "D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送出口量",
+      "name": "E",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送填埋量",
+      "name": "L",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送新增岗位数",
+      "name": "J",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "年度报送财务表现",
+      "name": "F",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

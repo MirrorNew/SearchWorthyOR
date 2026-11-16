@@ -1,0 +1,79 @@
+{
+  "action_projection": [
+    "infra_bond",
+    "green_bond",
+    "private_credit",
+    "listed_property",
+    "cash_note"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "cash_note": 30,
+        "green_bond": 50,
+        "infra_bond": 60,
+        "listed_property": 40,
+        "private_credit": 70
+      },
+      "meaning": "总资金占用不超过一百万澳元",
+      "name": "capital_budget",
+      "rhs": 100,
+      "sense": "<="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R087",
+  "objective": {
+    "coefficients": {
+      "cash_note": 8,
+      "green_bond": 11,
+      "infra_bond": 12,
+      "listed_property": 10,
+      "private_credit": 16
+    },
+    "constant": 0,
+    "meaning": "预期年度收益",
+    "sense": "max",
+    "unit": "万澳元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0255",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "投资基础设施债",
+      "name": "infra_bond",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资可再生能源债",
+      "name": "green_bond",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资私人信贷",
+      "name": "private_credit",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资上市地产",
+      "name": "listed_property",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资短期票据",
+      "name": "cash_note",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

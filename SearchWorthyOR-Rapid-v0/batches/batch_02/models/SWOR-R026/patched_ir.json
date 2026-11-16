@@ -1,0 +1,19 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R026",
+  "variant": "patched",
+  "family": "facility_network",
+  "source_candidate_id": "W-D-006",
+  "variables": [
+    {"name": "start_block_f", "type": "BINARY", "lb": 0, "ub": 1, "meaning": "选择F区块作为下一事件首轮切断对象"},
+    {"name": "start_block_g", "type": "BINARY", "lb": 0, "ub": 1, "meaning": "选择G区块作为下一事件首轮切断对象"},
+    {"name": "start_block_h", "type": "BINARY", "lb": 0, "ub": 1, "meaning": "选择H区块作为下一事件首轮切断对象"},
+    {"name": "start_protected_hospital", "type": "BINARY", "lb": 0, "ub": 1, "meaning": "选择受保护医院馈线作为下一事件首轮切断对象"}
+  ],
+  "objective": {"sense": "max", "constant": 0, "coefficients": {"start_block_f": 11, "start_block_g": 9, "start_block_h": 8, "start_protected_hospital": 12}, "meaning": "首轮切断调度匹配分", "unit": "分"},
+  "constraints": [
+    {"name": "single_start_choice", "sense": "=", "rhs": 1, "coefficients": {"start_block_f": 1, "start_block_g": 1, "start_block_h": 1, "start_protected_hospital": 1}, "meaning": "下一事件只确定一个首轮切断对象"},
+    {"name": "stateful_rotation_start", "sense": "=", "rhs": 1, "coefficients": {"start_block_g": 1}, "meaning": "上一事件最后切断F区块时下一事件从G区块开始且不进入受保护医院馈线"}
+  ],
+  "action_projection": ["start_block_f", "start_block_g", "start_block_h", "start_protected_hospital"]
+}

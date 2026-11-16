@@ -1,0 +1,121 @@
+{
+  "action_projection": [
+    "valley",
+    "ridge",
+    "examine_measures",
+    "joint_determination",
+    "grid_implementation",
+    "signal_implementation"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "ridge": 1,
+        "valley": 1
+      },
+      "meaning": "恰选择一条走廊",
+      "name": "choose_corridor",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "examine_measures": 1
+      },
+      "meaning": "开展防护措施审查",
+      "name": "examination_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "joint_determination": 1
+      },
+      "meaning": "共同确定技术和经济上优选的防护措施",
+      "name": "joint_determination_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "grid_implementation": 1
+      },
+      "meaning": "输电运营商实施其责任范围内共同确定的措施",
+      "name": "grid_implementation_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "signal_implementation": 1
+      },
+      "meaning": "信号运营商实施其责任范围内共同确定的措施",
+      "name": "signal_implementation_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R086",
+  "objective": {
+    "coefficients": {
+      "examine_measures": 1,
+      "grid_implementation": 3,
+      "joint_determination": 2,
+      "ridge": 3,
+      "signal_implementation": 2,
+      "valley": 1
+    },
+    "constant": 0,
+    "meaning": "走廊和协调工作总成本",
+    "sense": "min",
+    "unit": "万欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "W-D-002",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择河谷走廊",
+      "name": "valley",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择山脊走廊",
+      "name": "ridge",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "开展防护措施审查",
+      "name": "examine_measures",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "与信号运营商共同确定防护措施",
+      "name": "joint_determination",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施输电侧共同选定的防护措施",
+      "name": "grid_implementation",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "协调信号侧实施共同选定的防护措施",
+      "name": "signal_implementation",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

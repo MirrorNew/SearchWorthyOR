@@ -1,0 +1,79 @@
+{
+  "action_projection": [
+    "invest_river_terminal",
+    "invest_inland_warehouse",
+    "invest_hill_tank",
+    "activate_plan_team"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "activate_plan_team": 2,
+        "invest_hill_tank": 2,
+        "invest_inland_warehouse": 2,
+        "invest_river_terminal": 3
+      },
+      "meaning": "实施资源不超过五个单位",
+      "name": "implementation_budget",
+      "rhs": 5,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "activate_plan_team": 1,
+        "invest_river_terminal": -1
+      },
+      "meaning": "投资满足法定测试的河岸码头时启用响应计划团队",
+      "name": "river_plan_activation",
+      "rhs": 0,
+      "sense": ">="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R023",
+  "objective": {
+    "coefficients": {
+      "activate_plan_team": -4,
+      "invest_hill_tank": 5,
+      "invest_inland_warehouse": 7,
+      "invest_river_terminal": 9
+    },
+    "constant": 0,
+    "meaning": "投资组合净收益",
+    "sense": "max",
+    "unit": "万元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0101",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "投资河岸化学品码头",
+      "name": "invest_river_terminal",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资内陆仓库",
+      "name": "invest_inland_warehouse",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "投资山坡储罐",
+      "name": "invest_hill_tank",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用设施响应计划团队",
+      "name": "activate_plan_team",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

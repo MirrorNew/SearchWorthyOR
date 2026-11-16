@@ -1,0 +1,125 @@
+{
+  "action_projection": [
+    "Q",
+    "I",
+    "M",
+    "R",
+    "X"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "I": 1,
+        "M": 1,
+        "Q": 1,
+        "R": 1,
+        "X": 1
+      },
+      "meaning": "至少配置2项项目",
+      "name": "internal_two_standards",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "I": 1,
+        "M": 1
+      },
+      "meaning": "I、M中至少配置1项",
+      "name": "inspection_or_maintenance",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "Q": 1
+      },
+      "meaning": "配置最低服务质量、安全和可靠性要求",
+      "name": "quality_reliability",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "I": 1
+      },
+      "meaning": "配置检查标准",
+      "name": "inspection",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "M": 1
+      },
+      "meaning": "配置维护标准",
+      "name": "maintenance",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "R": 1
+      },
+      "meaning": "配置修理和更换标准",
+      "name": "repair_replacement",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R057",
+  "objective": {
+    "coefficients": {
+      "I": 2,
+      "M": 3,
+      "Q": 1,
+      "R": 4,
+      "X": 5
+    },
+    "constant": 0,
+    "meaning": "最小化标准体系实施成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0191",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "配置最低服务质量、安全和可靠性标准",
+      "name": "Q",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置检查标准",
+      "name": "I",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置维护标准",
+      "name": "M",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置修理和更换标准",
+      "name": "R",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "配置内部资产地图",
+      "name": "X",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

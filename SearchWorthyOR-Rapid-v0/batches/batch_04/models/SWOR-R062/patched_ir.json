@@ -1,0 +1,101 @@
+{
+  "action_projection": [
+    "direct_B",
+    "competitive_fast",
+    "competitive_balanced",
+    "competitive_enhanced"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "competitive_balanced": 1,
+        "competitive_enhanced": 1,
+        "competitive_fast": 1,
+        "direct_B": 1
+      },
+      "meaning": "恰好采用1种采购执行方案",
+      "name": "one_route",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "competitive_balanced": 7,
+        "competitive_enhanced": 9,
+        "competitive_fast": 6,
+        "direct_B": 8
+      },
+      "meaning": "服务连续性得分至少7分",
+      "name": "quality_floor",
+      "rhs": 7,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "competitive_balanced": 1,
+        "competitive_fast": 1,
+        "direct_B": 1
+      },
+      "meaning": "所选方案提供周末连续服务",
+      "name": "weekend_service",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "direct_B": 1
+      },
+      "meaning": "满足患者选择直授B条件时采用该程序",
+      "name": "direct_B_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R062",
+  "objective": {
+    "coefficients": {
+      "competitive_balanced": 2,
+      "competitive_enhanced": 3,
+      "competitive_fast": 1,
+      "direct_B": 4
+    },
+    "constant": 0,
+    "meaning": "最小化行政成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0129",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采用患者选择直授B方案",
+      "name": "direct_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用快速竞争方案",
+      "name": "competitive_fast",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用均衡竞争方案",
+      "name": "competitive_balanced",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用强化竞争方案",
+      "name": "competitive_enhanced",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

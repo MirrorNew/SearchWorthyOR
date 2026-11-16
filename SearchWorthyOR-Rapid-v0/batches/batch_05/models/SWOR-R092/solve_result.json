@@ -1,0 +1,50 @@
+{
+  "base_feasible_assignment_count": 27,
+  "base_incumbent": {
+    "cash": 0,
+    "crypto": 1,
+    "gold": 1,
+    "letter_credit": 0,
+    "receivable": 0,
+    "treasury": 0
+  },
+  "base_objective": 2.5,
+  "base_optimal_actions": [
+    {
+      "cash": 0,
+      "crypto": 1,
+      "gold": 1,
+      "letter_credit": 0,
+      "receivable": 0,
+      "treasury": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R092",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 1,
+  "patched_incumbent": {
+    "cash": 1,
+    "crypto": 0,
+    "gold": 0,
+    "letter_credit": 1,
+    "receivable": 0,
+    "treasury": 1
+  },
+  "patched_objective": 12.0,
+  "patched_optimal_actions": [
+    {
+      "cash": 1,
+      "crypto": 0,
+      "gold": 0,
+      "letter_credit": 1,
+      "receivable": 0,
+      "treasury": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

@@ -1,0 +1,68 @@
+{
+  "action_projection": [
+    "pay_A_day",
+    "pay_B_day",
+    "pay_C_day"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "pay_A_day": 1,
+        "pay_B_day": -1
+      },
+      "meaning": "甲付款日至少比乙晚5日",
+      "name": "A_after_B",
+      "rhs": 5,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "pay_B_day": -1,
+        "pay_C_day": 1
+      },
+      "meaning": "丙付款日至少比乙晚2日",
+      "name": "C_after_B",
+      "rhs": 2,
+      "sense": ">="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R054",
+  "objective": {
+    "coefficients": {
+      "pay_A_day": 1,
+      "pay_B_day": 1,
+      "pay_C_day": 1
+    },
+    "constant": 0,
+    "meaning": "最大化付款日之和",
+    "sense": "max",
+    "unit": "日"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0142",
+  "variables": [
+    {
+      "lb": 1,
+      "meaning": "甲发票付款日",
+      "name": "pay_A_day",
+      "type": "INTEGER",
+      "ub": 45
+    },
+    {
+      "lb": 1,
+      "meaning": "乙发票付款日",
+      "name": "pay_B_day",
+      "type": "INTEGER",
+      "ub": 45
+    },
+    {
+      "lb": 1,
+      "meaning": "丙发票付款日",
+      "name": "pay_C_day",
+      "type": "INTEGER",
+      "ub": 45
+    }
+  ],
+  "variant": "base"
+}

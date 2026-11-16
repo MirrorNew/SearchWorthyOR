@@ -1,0 +1,99 @@
+{
+  "action_projection": [
+    "river",
+    "hill",
+    "wood",
+    "harbor"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "harbor": 5,
+        "hill": 4,
+        "river": 3,
+        "wood": 2
+      },
+      "meaning": "关税保证预算承诺不超过八百万英镑",
+      "name": "annual_budget",
+      "rhs": 8,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "hill": 1,
+        "river": -1
+      },
+      "meaning": "山丘项目前不跳过更早收到的河湾项目",
+      "name": "hill_after_river",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "hill": -1,
+        "wood": 1
+      },
+      "meaning": "林地项目前不跳过更早收到的山丘项目",
+      "name": "wood_after_hill",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "harbor": 1,
+        "wood": -1
+      },
+      "meaning": "海港项目前不跳过更早收到的林地项目",
+      "name": "harbor_after_wood",
+      "rhs": 0,
+      "sense": "<="
+    }
+  ],
+  "family": "production_capacity",
+  "id": "SWOR-R014",
+  "objective": {
+    "coefficients": {
+      "harbor": 15,
+      "hill": 4,
+      "river": 2,
+      "wood": 9
+    },
+    "constant": 0,
+    "meaning": "获保证项目预计年注气量",
+    "sense": "max",
+    "unit": "吉瓦时"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0131",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "向河湾项目授予关税保证",
+      "name": "river",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向山丘项目授予关税保证",
+      "name": "hill",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向林地项目授予关税保证",
+      "name": "wood",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "向海港项目授予关税保证",
+      "name": "harbor",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

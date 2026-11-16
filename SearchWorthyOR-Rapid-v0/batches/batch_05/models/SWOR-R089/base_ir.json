@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "eligible_alt",
+    "eligible_standard",
+    "unrecorded_alt",
+    "unrecorded_standard"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "eligible_alt": 1,
+        "eligible_standard": 1
+      },
+      "meaning": "四名住房导航人群全部获得服务",
+      "name": "serve_eligible",
+      "rhs": 4,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "unrecorded_alt": 1,
+        "unrecorded_standard": 1
+      },
+      "meaning": "三名健身会员人群全部获得服务",
+      "name": "serve_unrecorded",
+      "rhs": 3,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "eligible_alt": 1,
+        "unrecorded_alt": 1
+      },
+      "meaning": "替代服务机构最多接收五人",
+      "name": "alternative_capacity",
+      "rhs": 5,
+      "sense": "<="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R089",
+  "objective": {
+    "coefficients": {
+      "eligible_alt": 3,
+      "eligible_standard": 7,
+      "unrecorded_alt": 2,
+      "unrecorded_standard": 6
+    },
+    "constant": 0,
+    "meaning": "服务成本",
+    "sense": "min",
+    "unit": "百美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0088",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "住房导航人群接受合同内替代服务的人数",
+      "name": "eligible_alt",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "住房导航人群接受标准服务的人数",
+      "name": "eligible_standard",
+      "type": "INTEGER",
+      "ub": 4
+    },
+    {
+      "lb": 0,
+      "meaning": "健身会员人群接受未写入合同的替代服务人数",
+      "name": "unrecorded_alt",
+      "type": "INTEGER",
+      "ub": 3
+    },
+    {
+      "lb": 0,
+      "meaning": "健身会员人群接受标准服务的人数",
+      "name": "unrecorded_standard",
+      "type": "INTEGER",
+      "ub": 3
+    }
+  ],
+  "variant": "base"
+}

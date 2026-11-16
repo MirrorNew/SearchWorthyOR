@@ -1,0 +1,42 @@
+{
+  "base_feasible_assignment_count": 8,
+  "base_incumbent": {
+    "perform_roof_repair": 1,
+    "perform_shelf_count": 1,
+    "use_heavy_ladder": 0,
+    "use_light_ladder": 1
+  },
+  "base_objective": 19.0,
+  "base_optimal_actions": [
+    {
+      "perform_roof_repair": 1,
+      "perform_shelf_count": 1,
+      "use_heavy_ladder": 0,
+      "use_light_ladder": 1
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R033",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 5,
+  "patched_incumbent": {
+    "perform_roof_repair": 1,
+    "perform_shelf_count": 0,
+    "use_heavy_ladder": 1,
+    "use_light_ladder": 0
+  },
+  "patched_objective": 8.0,
+  "patched_optimal_actions": [
+    {
+      "perform_roof_repair": 1,
+      "perform_shelf_count": 0,
+      "use_heavy_ladder": 1,
+      "use_light_ladder": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

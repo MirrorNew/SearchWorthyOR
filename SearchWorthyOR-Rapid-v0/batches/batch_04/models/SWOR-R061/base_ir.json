@@ -1,0 +1,102 @@
+{
+  "action_projection": [
+    "x_A",
+    "x_B",
+    "x_C",
+    "x_D",
+    "x_E"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_B": 1,
+        "x_C": 1,
+        "x_D": 1,
+        "x_E": 1
+      },
+      "meaning": "恰好选择2家",
+      "name": "choose_two",
+      "rhs": 2,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "x_A": 6,
+        "x_B": 4,
+        "x_C": 7,
+        "x_D": 8,
+        "x_E": 6
+      },
+      "meaning": "供货能力至少13分",
+      "name": "capacity_floor",
+      "rhs": 13,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "x_A": 1,
+        "x_E": 1
+      },
+      "meaning": "A、E中至少入选1家",
+      "name": "regional_resilience",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "assignment_matching",
+  "id": "SWOR-R061",
+  "objective": {
+    "coefficients": {
+      "x_A": 1,
+      "x_B": 2,
+      "x_C": 5,
+      "x_D": 6,
+      "x_E": 4
+    },
+    "constant": 0,
+    "meaning": "最小化年度采购成本",
+    "sense": "min",
+    "unit": "百万人民币"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0141",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择供货商A",
+      "name": "x_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择供货商B",
+      "name": "x_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择供货商C",
+      "name": "x_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择供货商D",
+      "name": "x_D",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择供货商E",
+      "name": "x_E",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,96 @@
+{
+  "action_projection": [
+    "river",
+    "market",
+    "station",
+    "port"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "market": 1,
+        "river": 1
+      },
+      "meaning": "北区至少由一个站点覆盖",
+      "name": "cover_north",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "market": 1,
+        "station": 1
+      },
+      "meaning": "中央区至少由一个站点覆盖",
+      "name": "cover_central",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "port": 1,
+        "station": 1
+      },
+      "meaning": "南区至少由一个站点覆盖",
+      "name": "cover_south",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "market": 1
+      },
+      "meaning": "环境重要区内的市场站不具低影响设施资格",
+      "name": "environmental_area_exclusion",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R085",
+  "objective": {
+    "coefficients": {
+      "market": 15,
+      "port": 11,
+      "river": 18,
+      "station": 17
+    },
+    "constant": 0,
+    "meaning": "通信设施建设成本",
+    "sense": "min",
+    "unit": "万澳元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0261",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "建设河岸站",
+      "name": "river",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设市场站",
+      "name": "market",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设车站站",
+      "name": "station",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "建设港口站",
+      "name": "port",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

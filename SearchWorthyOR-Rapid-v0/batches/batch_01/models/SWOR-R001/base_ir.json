@@ -1,0 +1,79 @@
+{
+  "action_projection": [
+    "close_A",
+    "close_B",
+    "close_C",
+    "close_D"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "close_A": 300,
+        "close_B": 250,
+        "close_C": 400,
+        "close_D": 350
+      },
+      "meaning": "停运净额定容量至少六百兆瓦",
+      "name": "reduction_capacity",
+      "rhs": 600,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "close_C": 1,
+        "close_D": 1
+      },
+      "meaning": "林地C和新城D不能在本轮同时停运",
+      "name": "shared_retirement_crew",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R001",
+  "objective": {
+    "coefficients": {
+      "close_A": 9,
+      "close_B": 7,
+      "close_C": 4,
+      "close_D": 3
+    },
+    "constant": 0,
+    "meaning": "停运机会成本",
+    "sense": "min",
+    "unit": "百万欧元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "W-D-008",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "停运老港A机组",
+      "name": "close_A",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "停运河湾B机组",
+      "name": "close_B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "停运林地C机组",
+      "name": "close_C",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "停运新城D机组",
+      "name": "close_D",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,42 @@
+{
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "id": "SWOR-R070",
+  "solver": "COPT 8.0.5",
+  "base_status": "OPTIMAL",
+  "patched_status": "OPTIMAL",
+  "base_objective": 3.0,
+  "patched_objective": 9.0,
+  "base_incumbent": {
+    "phys_day": 0,
+    "phys_night": 0,
+    "nurse_day": 1,
+    "nurse_night": 1
+  },
+  "patched_incumbent": {
+    "phys_day": 1,
+    "phys_night": 1,
+    "nurse_day": 0,
+    "nurse_night": 1
+  },
+  "base_feasible_assignment_count": 9,
+  "patched_feasible_assignment_count": 2,
+  "base_optimal_actions": [
+    {
+      "phys_day": 0,
+      "phys_night": 0,
+      "nurse_day": 1,
+      "nurse_night": 1
+    }
+  ],
+  "patched_optimal_actions": [
+    {
+      "phys_day": 1,
+      "phys_night": 1,
+      "nurse_day": 0,
+      "nurse_night": 1
+    }
+  ],
+  "common_optimal_actions": [],
+  "common_optimal_action_feasible": false,
+  "optimal_action_changed": true
+}

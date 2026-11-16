@@ -1,0 +1,111 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "searchworthyor.rapid_audit.v0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version", "id", "source_candidate_id", "source_document_key",
+    "regulation_key", "source_url", "final_url",
+    "http_status", "accessed_at", "authority", "jurisdiction", "decision_date",
+    "support_excerpt", "rule_claim", "applicability", "applicability_reason",
+    "preserved_local_binding_facts", "task_local_fact_alignment", "numeric_alignment", "variable_alignment",
+    "constraint_alignment",
+    "structural_patch", "patch_summary", "family", "patch_class",
+    "base_model_path", "patched_model_path", "solve_result_path",
+    "base_solve", "patched_solve", "optimal_action_changed",
+    "common_optimal_action_feasible", "problem_model_alignment",
+    "answer_leakage", "single_objective", "generator_id",
+    "generator_self_check", "independent_review", "status"
+  ],
+  "properties": {
+    "schema_version": {"const": "searchworthyor.rapid_audit.v0"},
+    "id": {"type": "string", "pattern": "^SWOR-R[0-9]{3}$"},
+    "source_candidate_id": {"type": "string", "minLength": 1},
+    "source_document_key": {"type": "string", "minLength": 1},
+    "regulation_key": {"type": "string", "minLength": 1},
+    "source_url": {"type": "string", "pattern": "^https://"},
+    "final_url": {"type": "string", "pattern": "^https://"},
+    "http_status": {"const": 200},
+    "accessed_at": {"type": "string", "format": "date-time"},
+    "authority": {"type": "string", "minLength": 1},
+    "jurisdiction": {"type": "string", "minLength": 1},
+    "decision_date": {"type": "string", "format": "date"},
+    "support_excerpt": {"type": "string", "minLength": 20, "maxLength": 5000},
+    "rule_claim": {"type": "string", "minLength": 20},
+    "applicability": {"const": "PASS"},
+    "applicability_reason": {"type": "string", "minLength": 20},
+    "preserved_local_binding_facts": {
+      "type": "array",
+      "minItems": 1,
+      "items": {"type": "string", "minLength": 2}
+    },
+    "task_local_fact_alignment": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["public_basis", "patch_binding"],
+        "properties": {
+          "public_basis": {"type": "string", "minLength": 2},
+          "patch_binding": {"type": "string", "pattern": "^(variable|constraint|objective):[^:]+$"}
+        }
+      }
+    },
+    "numeric_alignment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["surface", "binding"],
+        "properties": {
+          "surface": {"type": "string", "minLength": 2},
+          "binding": {"type": "string", "pattern": "^(base|evidence):"}
+        }
+      }
+    },
+    "variable_alignment": {
+      "type": "array",
+      "minItems": 1,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["variable", "public_meaning"],
+        "properties": {
+          "variable": {"type": "string", "minLength": 1},
+          "public_meaning": {"type": "string", "minLength": 2}
+        }
+      }
+    },
+    "constraint_alignment": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": ["constraint", "public_basis"],
+        "properties": {
+          "constraint": {"type": "string", "minLength": 1},
+          "public_basis": {"type": "string", "minLength": 2}
+        }
+      }
+    },
+    "structural_patch": {"const": "PASS"},
+    "patch_summary": {"type": "string", "minLength": 10},
+    "family": {"type": "string"},
+    "patch_class": {"type": "string"},
+    "base_model_path": {"type": "string"},
+    "patched_model_path": {"type": "string"},
+    "solve_result_path": {"type": "string"},
+    "base_solve": {"const": "OPTIMAL"},
+    "patched_solve": {"const": "OPTIMAL"},
+    "optimal_action_changed": {"const": true},
+    "common_optimal_action_feasible": {"const": false},
+    "problem_model_alignment": {"const": "PASS"},
+    "answer_leakage": {"const": false},
+    "single_objective": {"const": true},
+    "generator_id": {"type": "string", "minLength": 1},
+    "generator_self_check": {"const": "PASS"},
+    "independent_review": {"enum": ["PENDING", "PASS", "REJECT"]},
+    "status": {"enum": ["GENERATED_SELF_CHECK_PASS", "RAPID_V0_PASS", "REJECT"]}
+  }
+}

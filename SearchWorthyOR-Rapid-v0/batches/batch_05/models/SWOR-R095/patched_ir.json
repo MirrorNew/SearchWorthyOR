@@ -1,0 +1,133 @@
+{
+  "action_projection": [
+    "direct",
+    "fox_out",
+    "fox_in",
+    "lake_out",
+    "lake_in"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "direct": 1,
+        "fox_out": 1,
+        "lake_out": 1
+      },
+      "meaning": "从麦迪逊选择一个出发段",
+      "name": "leave_origin",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "fox_in": -1,
+        "fox_out": 1
+      },
+      "meaning": "福克斯中转两段同时采用",
+      "name": "fox_balance",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "lake_in": -1,
+        "lake_out": 1
+      },
+      "meaning": "湖城中转两段同时采用",
+      "name": "lake_balance",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "lake_insurance_active": -1,
+        "lake_out": 1
+      },
+      "meaning": "湖城出发段须有有效保险",
+      "name": "lake_out_insurance",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "lake_in": 1,
+        "lake_insurance_active": -1
+      },
+      "meaning": "湖城到达段须有有效保险",
+      "name": "lake_in_insurance",
+      "rhs": 0,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "lake_insurance_active": 1
+      },
+      "meaning": "到期证书不能激活承运资格",
+      "name": "expired_certificate",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R095",
+  "objective": {
+    "coefficients": {
+      "direct": 10,
+      "fox_in": 5,
+      "fox_out": 6,
+      "lake_in": 4,
+      "lake_out": 3
+    },
+    "constant": 0,
+    "meaning": "货运路线成本",
+    "sense": "min",
+    "unit": "百美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0195",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采用麦迪逊至绿湾直达段",
+      "name": "direct",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用麦迪逊至福克斯段",
+      "name": "fox_out",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用福克斯至绿湾段",
+      "name": "fox_in",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用麦迪逊至湖城段",
+      "name": "lake_out",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采用湖城至绿湾段",
+      "name": "lake_in",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "湖城承运商具有有效责任保险",
+      "name": "lake_insurance_active",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

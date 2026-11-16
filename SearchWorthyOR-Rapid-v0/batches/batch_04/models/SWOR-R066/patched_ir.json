@@ -1,0 +1,85 @@
+{
+  "action_projection": [
+    "verify_day",
+    "cluster_day",
+    "facility_day"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "verify_day": 1
+      },
+      "meaning": "核验不早于第2天",
+      "name": "verify_floor",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "cluster_day": 1
+      },
+      "meaning": "集群研究及必要复研不早于第6天",
+      "name": "cluster_floor",
+      "rhs": 6,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "facility_day": 1
+      },
+      "meaning": "设施研究不早于第4天",
+      "name": "facility_floor",
+      "rhs": 4,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "cluster_day": -1,
+        "facility_day": 1
+      },
+      "meaning": "设施研究在集群研究后至少2天",
+      "name": "facility_after_cluster",
+      "rhs": 2,
+      "sense": ">="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R066",
+  "objective": {
+    "coefficients": {
+      "cluster_day": 1,
+      "facility_day": 1,
+      "verify_day": 1
+    },
+    "constant": 0,
+    "meaning": "最小化完成日总和",
+    "sense": "min",
+    "unit": "天"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0074",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "verify_day完成日",
+      "name": "verify_day",
+      "type": "INTEGER",
+      "ub": 10
+    },
+    {
+      "lb": 0,
+      "meaning": "集群研究及必要复研完成日",
+      "name": "cluster_day",
+      "type": "INTEGER",
+      "ub": 10
+    },
+    {
+      "lb": 0,
+      "meaning": "设施研究协议提交日",
+      "name": "facility_day",
+      "type": "INTEGER",
+      "ub": 10
+    }
+  ],
+  "variant": "patched"
+}

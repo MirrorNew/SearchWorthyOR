@@ -1,0 +1,46 @@
+{
+  "base_feasible_assignment_count": 23,
+  "base_incumbent": {
+    "air": 0,
+    "heat": 0,
+    "office": 1,
+    "smelting": 0,
+    "warehouse": 0
+  },
+  "base_objective": 1.0,
+  "base_optimal_actions": [
+    {
+      "air": 0,
+      "heat": 0,
+      "office": 1,
+      "smelting": 0,
+      "warehouse": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R013",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 3,
+  "patched_incumbent": {
+    "air": 1,
+    "heat": 1,
+    "office": 0,
+    "smelting": 1,
+    "warehouse": 0
+  },
+  "patched_objective": 15.0,
+  "patched_optimal_actions": [
+    {
+      "air": 1,
+      "heat": 1,
+      "office": 0,
+      "smelting": 1,
+      "warehouse": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

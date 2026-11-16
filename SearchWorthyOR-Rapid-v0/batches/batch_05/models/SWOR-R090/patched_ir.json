@@ -1,0 +1,126 @@
+{
+  "action_projection": [
+    "icu_aug04",
+    "icu_aug11",
+    "ed_aug06",
+    "ed_aug13",
+    "joint_aug07"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "icu_aug04": 1,
+        "icu_aug11": 1,
+        "joint_aug07": 1
+      },
+      "meaning": "重症药房规划期至少检查一次",
+      "name": "icu_period_check",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "ed_aug06": 1,
+        "ed_aug13": 1,
+        "joint_aug07": 1
+      },
+      "meaning": "急诊药柜规划期至少检查一次",
+      "name": "ed_period_check",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "icu_aug04": 1,
+        "joint_aug07": 1
+      },
+      "meaning": "重症药房第一周须有检查",
+      "name": "icu_first_week",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "ed_aug06": 1,
+        "joint_aug07": 1
+      },
+      "meaning": "急诊药柜第一周须有检查",
+      "name": "ed_first_week",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "icu_aug11": 1
+      },
+      "meaning": "重症药房第二周须有检查",
+      "name": "icu_second_week",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "ed_aug13": 1
+      },
+      "meaning": "急诊药柜第二周须有检查",
+      "name": "ed_second_week",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R090",
+  "objective": {
+    "coefficients": {
+      "ed_aug06": 3,
+      "ed_aug13": 4,
+      "icu_aug04": 2,
+      "icu_aug11": 5,
+      "joint_aug07": 4
+    },
+    "constant": 0,
+    "meaning": "库存检查工时",
+    "sense": "min",
+    "unit": "小时"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0207",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "重症药房八月四日检查",
+      "name": "icu_aug04",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "重症药房八月十一日检查",
+      "name": "icu_aug11",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "急诊药柜八月六日检查",
+      "name": "ed_aug06",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "急诊药柜八月十三日检查",
+      "name": "ed_aug13",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "八月七日联合检查两处",
+      "name": "joint_aug07",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

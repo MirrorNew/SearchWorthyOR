@@ -1,0 +1,69 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R023",
+  "variant": "base",
+  "family": "energy_environment",
+  "source_candidate_id": "SRCV2-0101",
+  "variables": [
+    {
+      "name": "invest_river_terminal",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "投资河岸化学品码头"
+    },
+    {
+      "name": "invest_inland_warehouse",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "投资内陆仓库"
+    },
+    {
+      "name": "invest_hill_tank",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "投资山坡储罐"
+    },
+    {
+      "name": "activate_plan_team",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "启用设施响应计划团队"
+    }
+  ],
+  "objective": {
+    "sense": "max",
+    "constant": 0,
+    "coefficients": {
+      "invest_river_terminal": 9,
+      "invest_inland_warehouse": 7,
+      "invest_hill_tank": 5,
+      "activate_plan_team": -4
+    },
+    "meaning": "投资组合净收益",
+    "unit": "万元"
+  },
+  "constraints": [
+    {
+      "name": "implementation_budget",
+      "sense": "<=",
+      "rhs": 5,
+      "coefficients": {
+        "invest_river_terminal": 3,
+        "invest_inland_warehouse": 2,
+        "invest_hill_tank": 2,
+        "activate_plan_team": 2
+      },
+      "meaning": "实施资源不超过五个单位"
+    }
+  ],
+  "action_projection": [
+    "invest_river_terminal",
+    "invest_inland_warehouse",
+    "invest_hill_tank",
+    "activate_plan_team"
+  ]
+}

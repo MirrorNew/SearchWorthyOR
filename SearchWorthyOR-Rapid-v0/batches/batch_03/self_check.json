@@ -1,0 +1,133 @@
+{
+  "schema_version": "searchworthyor.rapid_batch_self_check.v0",
+  "batch": 3,
+  "scope_ids": [
+    "SWOR-R041",
+    "SWOR-R042",
+    "SWOR-R043",
+    "SWOR-R044",
+    "SWOR-R045",
+    "SWOR-R046",
+    "SWOR-R047",
+    "SWOR-R048",
+    "SWOR-R049",
+    "SWOR-R050",
+    "SWOR-R051",
+    "SWOR-R052",
+    "SWOR-R053",
+    "SWOR-R054",
+    "SWOR-R055",
+    "SWOR-R056",
+    "SWOR-R057",
+    "SWOR-R058",
+    "SWOR-R059",
+    "SWOR-R060"
+  ],
+  "generator_id": "/root/native_batch_a",
+  "status": "GENERATOR_SELF_CHECK_PASS",
+  "independent_review": "PENDING",
+  "input_binding": {
+    "path": "private/source_shortlist_130.jsonl",
+    "sha256": "57a441c9f2a9bc0cda39cd024418396a077d9cd34764a9468d39df302b8ee1c4",
+    "batch": 3,
+    "primary_rows_used": 20,
+    "backup_candidate_substitutions": 2,
+    "official_path_fallbacks": [
+      {
+        "id": "SWOR-R050",
+        "failed_primary": "https://www.ecfr.gov/current/title-42/section-494.140",
+        "failure": "redirected to the official anti-automation interstitial rather than the configured section body",
+        "used_official_backup": "https://www.ecfr.gov/api/versioner/v1/full/2026-07-30/title-42.xml?section=494.140",
+        "backup_http_status": 200,
+        "backup_final_url_exact": true,
+        "support_needles_found": 2
+      }
+    ]
+  },
+  "source_review": {
+    "candidate_count": 20,
+    "primary_exact_requests": 19,
+    "fallback_exact_requests": 1,
+    "search_requests": 0,
+    "all_retained_http_200": true,
+    "all_retained_support_excerpt_nonempty": true,
+    "all_applicability_pass": true,
+    "maximum_tasks_per_source_document": 2,
+    "third_party_or_unconfigured_paths_used": false,
+    "release_source_recheck_20_of_20": true
+  },
+  "quota_checks": {
+    "families": {
+      "assignment_matching": 2,
+      "energy_environment": 2,
+      "facility_network": 2,
+      "finance_portfolio": 2,
+      "healthcare_resources": 2,
+      "inventory_supply_chain": 2,
+      "production_capacity": 2,
+      "routing_transport": 2,
+      "scheduling_workforce": 2,
+      "telecom_service": 2
+    },
+    "patch_classes": {
+      "conditional_auxiliary": 5,
+      "eligibility_domain": 5,
+      "quota_risk_service_objective": 5,
+      "temporal_coupling": 5
+    },
+    "exact": true
+  },
+  "model_checks": {
+    "model_pairs": 20,
+    "solver": "COPT 8.0.5",
+    "all_base_optimal": true,
+    "all_patched_optimal": true,
+    "complete_enumeration_both_sides": true,
+    "maximum_base_assignment_space": 24600,
+    "maximum_patched_assignment_space": 2658,
+    "enumeration_limit": 200000,
+    "all_optimal_action_intersections_empty": true,
+    "base_topology_hashes_unique": true,
+    "base_and_patched_action_projection_equal_per_task": true,
+    "finite_binary_or_integer_only": true,
+    "single_objective_per_model": true
+  },
+  "surface_checks": {
+    "public_fields_exactly_id_and_problem_zh": true,
+    "all_problem_lengths_at_least_120": true,
+    "all_decision_dates_explicit": true,
+    "all_jurisdictions_and_decision_makers_explicit": true,
+    "all_actions_named_and_explained": true,
+    "all_natural_compliance_requirements_present": true,
+    "all_public_numbers_bound": true,
+    "exact_clause_or_patch_leakage_found": false,
+    "single_minimal_final_question_per_task": true,
+    "all_task_local_facts_explicit": true,
+    "all_task_local_fact_bindings_resolve": true,
+    "all_rule_to_local_fact_to_patch_chains_manually_checked": true,
+    "unstated_patch_inputs_found": false,
+    "banned_template_fragments_found": false
+  },
+  "validator": {
+    "command": "python scripts/validate_batch.py --rapid-root <Rapid-v0-root> --batch 3",
+    "status": "PASS",
+    "task_count": 20,
+    "errors": []
+  },
+  "artifact_binding_before_self_check": {
+    "public_tasks_sha256": "a23a7eaf737574215cc96694b8d1eb67fb95ab41b3df5eab74196548131e34f4",
+    "private_audit_sha256": "cbae5ece2f8f618deb5f225e99fe5bd0e8855388ede18b3b94fbe846a011659e",
+    "ordered_62_artifact_bundle_sha256": "3e63bda4322e4f6049166bc79fb5d1202fdf549293770ac67c5025db11a125aa",
+    "ordered_bundle_algorithm": "SHA-256 over raw bytes concatenated in order: public tasks, private audit, then model JSON files sorted by path"
+  },
+  "execution_boundary": {
+    "strict_v1_or_v2_write": false,
+    "formal_query_run": false,
+    "probe_run": false,
+    "selection_run": false,
+    "import_run": false,
+    "admission_run": false,
+    "activation_run": false
+  },
+  "claim_boundary": "This artifact records generator self-check only. It is not an independent review PASS and does not authorize publication, selection, import, admission, or activation."
+}

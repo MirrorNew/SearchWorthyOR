@@ -1,0 +1,39 @@
+{
+  "action_projection": [
+    "removal_day"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "removal_day": 1
+      },
+      "meaning": "至少保留10天以完成收尾",
+      "name": "mobilization_floor",
+      "rhs": 10,
+      "sense": ">="
+    }
+  ],
+  "family": "facility_network",
+  "id": "SWOR-R046",
+  "objective": {
+    "coefficients": {
+      "removal_day": 1
+    },
+    "constant": 0,
+    "meaning": "最大化临时设施可用天数",
+    "sense": "max",
+    "unit": "天"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0262",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "施工完成后拆除临时设施的天数",
+      "name": "removal_day",
+      "type": "INTEGER",
+      "ub": 40
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,134 @@
+{
+  "action_projection": [
+    "valley_west",
+    "valley_east",
+    "forest_west",
+    "forest_east",
+    "industrial_west",
+    "industrial_east"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "forest_west": 1,
+        "industrial_west": 1,
+        "valley_west": 1
+      },
+      "meaning": "从接入点选择一条走廊",
+      "name": "choose_route",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "valley_east": -1,
+        "valley_west": 1
+      },
+      "meaning": "河谷走廊两段连续",
+      "name": "valley_continuity",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "forest_east": -1,
+        "forest_west": 1
+      },
+      "meaning": "森林走廊两段连续",
+      "name": "forest_continuity",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "industrial_east": -1,
+        "industrial_west": 1
+      },
+      "meaning": "工业走廊两段连续",
+      "name": "industrial_continuity",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "valley_west": 1
+      },
+      "meaning": "未获证书的河谷西段不得建设",
+      "name": "certificate_gate_west",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "valley_east": 1
+      },
+      "meaning": "未获证书的河谷东段不得建设",
+      "name": "certificate_gate_east",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "routing_transport",
+  "id": "SWOR-R096",
+  "objective": {
+    "coefficients": {
+      "forest_east": 5,
+      "forest_west": 4,
+      "industrial_east": 6,
+      "industrial_west": 2,
+      "valley_east": 4,
+      "valley_west": 3
+    },
+    "constant": 0,
+    "meaning": "输电走廊建设成本",
+    "sense": "min",
+    "unit": "百万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0201",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "河谷走廊西段",
+      "name": "valley_west",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "河谷走廊东段",
+      "name": "valley_east",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "森林走廊西段",
+      "name": "forest_west",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "森林走廊东段",
+      "name": "forest_east",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "工业走廊西段",
+      "name": "industrial_west",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "工业走廊东段",
+      "name": "industrial_east",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

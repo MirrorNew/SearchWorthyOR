@@ -1,0 +1,38 @@
+{
+  "base_feasible_assignment_count": 3,
+  "base_incumbent": {
+    "certified_driver": 0,
+    "certified_supervisor": 0,
+    "trainee_driver": 1
+  },
+  "base_objective": 2.0,
+  "base_optimal_actions": [
+    {
+      "certified_driver": 0,
+      "certified_supervisor": 0,
+      "trainee_driver": 1
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R015",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 2,
+  "patched_incumbent": {
+    "certified_driver": 0,
+    "certified_supervisor": 1,
+    "trainee_driver": 1
+  },
+  "patched_objective": 5.0,
+  "patched_optimal_actions": [
+    {
+      "certified_driver": 0,
+      "certified_supervisor": 1,
+      "trainee_driver": 1
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

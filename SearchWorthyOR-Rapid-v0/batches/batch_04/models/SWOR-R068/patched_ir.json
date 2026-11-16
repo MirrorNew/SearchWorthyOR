@@ -1,0 +1,87 @@
+{
+  "action_projection": [
+    "cash",
+    "agency",
+    "corp_X",
+    "corp_Y"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "agency": 1,
+        "cash": 1,
+        "corp_X": 1,
+        "corp_Y": 1
+      },
+      "meaning": "流动性缓冲共8单位",
+      "name": "buffer_units",
+      "rhs": 8,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "corp_X": 1
+      },
+      "meaning": "公司发行人X最多3单位",
+      "name": "issuer_X_cap",
+      "rhs": 3,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "corp_Y": 1
+      },
+      "meaning": "公司发行人Y最多3单位",
+      "name": "issuer_Y_cap",
+      "rhs": 3,
+      "sense": "<="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R068",
+  "objective": {
+    "coefficients": {
+      "agency": 2,
+      "cash": 1,
+      "corp_X": 5,
+      "corp_Y": 4
+    },
+    "constant": 0,
+    "meaning": "最大化缓冲收益",
+    "sense": "max",
+    "unit": "收益点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0258",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "配置到cash的单位",
+      "name": "cash",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "配置到agency的单位",
+      "name": "agency",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "配置到corp_X的单位",
+      "name": "corp_X",
+      "type": "INTEGER",
+      "ub": 8
+    },
+    {
+      "lb": 0,
+      "meaning": "配置到corp_Y的单位",
+      "name": "corp_Y",
+      "type": "INTEGER",
+      "ub": 8
+    }
+  ],
+  "variant": "patched"
+}

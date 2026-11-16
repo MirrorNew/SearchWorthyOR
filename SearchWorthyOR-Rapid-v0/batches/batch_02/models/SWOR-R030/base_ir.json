@@ -1,0 +1,47 @@
+{
+  "action_projection": [
+    "survey_primary_care",
+    "survey_mental_health",
+    "validate_provider_directory"
+  ],
+  "constraints": [],
+  "family": "healthcare_resources",
+  "id": "SWOR-R030",
+  "objective": {
+    "coefficients": {
+      "survey_mental_health": 8,
+      "survey_primary_care": 9,
+      "validate_provider_directory": -1
+    },
+    "constant": 0,
+    "meaning": "检查方案净覆盖价值",
+    "sense": "max",
+    "unit": "分"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0087",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "安排初级保健独立秘密顾客调查",
+      "name": "survey_primary_care",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "安排心理健康独立秘密顾客调查",
+      "name": "survey_mental_health",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "核验提供者名录准确性",
+      "name": "validate_provider_directory",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

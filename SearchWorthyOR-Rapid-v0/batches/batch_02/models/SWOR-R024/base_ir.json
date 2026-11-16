@@ -1,0 +1,69 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R024",
+  "variant": "base",
+  "family": "energy_environment",
+  "source_candidate_id": "SRCV2-0189",
+  "variables": [
+    {
+      "name": "hospital_start",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 4,
+      "meaning": "医院恢复供电的整数小时开工时点"
+    },
+    {
+      "name": "factory_start",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 4,
+      "meaning": "食品工厂恢复供电的整数小时开工时点"
+    },
+    {
+      "name": "hospital_first",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "meaning": "抢修顺序选择医院先于食品工厂"
+    }
+  ],
+  "objective": {
+    "sense": "min",
+    "constant": 0,
+    "coefficients": {
+      "hospital_start": 6,
+      "factory_start": 9
+    },
+    "meaning": "加权停电损失",
+    "unit": "万元"
+  },
+  "constraints": [
+    {
+      "name": "hospital_before_factory",
+      "sense": "<=",
+      "rhs": 3,
+      "coefficients": {
+        "hospital_start": 1,
+        "factory_start": -1,
+        "hospital_first": 5
+      },
+      "meaning": "选择医院优先时医院两小时作业在工厂前完成"
+    },
+    {
+      "name": "factory_before_hospital",
+      "sense": "<=",
+      "rhs": -1,
+      "coefficients": {
+        "factory_start": 1,
+        "hospital_start": -1,
+        "hospital_first": -5
+      },
+      "meaning": "未选择医院优先时工厂一小时作业在医院前完成"
+    }
+  ],
+  "action_projection": [
+    "hospital_start",
+    "factory_start",
+    "hospital_first"
+  ]
+}

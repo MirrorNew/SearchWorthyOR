@@ -1,0 +1,119 @@
+{
+  "action_projection": [
+    "unauthorized",
+    "privileged",
+    "disruption",
+    "threats",
+    "major_supplier",
+    "dependency",
+    "impact",
+    "insurance"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "dependency": 1,
+        "disruption": 1,
+        "impact": 1,
+        "insurance": 1,
+        "major_supplier": 1,
+        "privileged": 1,
+        "threats": 1,
+        "unauthorized": 1
+      },
+      "meaning": "至少选择两项供应链风险措施",
+      "name": "minimum_supply_measures",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "insurance": 1,
+        "unauthorized": 1
+      },
+      "meaning": "未授权访问控制与通用保险不能同时采购",
+      "name": "procurement_slot",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "telecom_service",
+  "id": "SWOR-R020",
+  "objective": {
+    "coefficients": {
+      "dependency": 3,
+      "disruption": 5,
+      "impact": 5,
+      "insurance": 1,
+      "major_supplier": 6,
+      "privileged": 4,
+      "threats": 4,
+      "unauthorized": 3
+    },
+    "constant": 0,
+    "meaning": "供应链风险措施年度成本",
+    "sense": "min",
+    "unit": "百万澳元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0140",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "实施未授权访问风险措施",
+      "name": "unauthorized",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施供应商特权滥用风险措施",
+      "name": "privileged",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施供应链中断风险措施",
+      "name": "disruption",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施供应链人员和资产威胁措施",
+      "name": "threats",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施主要供应商风险措施",
+      "name": "major_supplier",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施依赖资产能力下降风险措施",
+      "name": "dependency",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "实施供应链危险影响缓解措施",
+      "name": "impact",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "购买通用保险方案",
+      "name": "insurance",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

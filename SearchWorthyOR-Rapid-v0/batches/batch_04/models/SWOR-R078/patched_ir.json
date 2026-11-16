@@ -1,0 +1,66 @@
+{
+  "action_projection": [
+    "notify_hour",
+    "rest_start"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "rest_start": 1
+      },
+      "meaning": "休息不早于第8小时",
+      "name": "rest_earliest",
+      "rhs": 8,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "rest_start": 1
+      },
+      "meaning": "休息不晚于第16小时",
+      "name": "rest_latest",
+      "rhs": 16,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "notify_hour": 1,
+        "rest_start": -1
+      },
+      "meaning": "通知必须早于休息开始",
+      "name": "notify_before_rest",
+      "rhs": -1,
+      "sense": "<="
+    }
+  ],
+  "family": "scheduling_workforce",
+  "id": "SWOR-R078",
+  "objective": {
+    "coefficients": {
+      "notify_hour": 1
+    },
+    "constant": 0,
+    "meaning": "最大化通知时点",
+    "sense": "max",
+    "unit": "小时"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0169",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "变更通知时点",
+      "name": "notify_hour",
+      "type": "INTEGER",
+      "ub": 24
+    },
+    {
+      "lb": 0,
+      "meaning": "飞行前休息开始时点",
+      "name": "rest_start",
+      "type": "INTEGER",
+      "ub": 24
+    }
+  ],
+  "variant": "patched"
+}

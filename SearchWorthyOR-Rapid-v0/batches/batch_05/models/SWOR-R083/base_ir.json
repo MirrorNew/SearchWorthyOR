@@ -1,0 +1,112 @@
+{
+  "action_projection": [
+    "dry_single_150",
+    "dry_three_225",
+    "dry_three_275",
+    "liquid_300",
+    "harbor_dry_500"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "dry_single_150": 150,
+        "dry_three_225": 225,
+        "dry_three_275": 275,
+        "harbor_dry_500": 500,
+        "liquid_300": 300
+      },
+      "meaning": "总容量至少五百千伏安",
+      "name": "capacity",
+      "rhs": 500,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "dry_single_150": 1,
+        "dry_three_225": 1,
+        "dry_three_275": 1,
+        "harbor_dry_500": 1,
+        "liquid_300": 1
+      },
+      "meaning": "最多采购两台",
+      "name": "unit_limit",
+      "rhs": 2,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "dry_three_225": 1,
+        "liquid_300": 1
+      },
+      "meaning": "二百二十五千伏安干式机与三百千伏安液浸机不能同时接入",
+      "name": "bus_incompatibility_225",
+      "rhs": 1,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "dry_three_275": 1,
+        "liquid_300": 1
+      },
+      "meaning": "二百七十五千伏安干式机与三百千伏安液浸机不能同时接入",
+      "name": "bus_incompatibility_275",
+      "rhs": 1,
+      "sense": "<="
+    }
+  ],
+  "family": "energy_environment",
+  "id": "SWOR-R083",
+  "objective": {
+    "coefficients": {
+      "dry_single_150": 18,
+      "dry_three_225": 23,
+      "dry_three_275": 28,
+      "harbor_dry_500": 45,
+      "liquid_300": 32
+    },
+    "constant": 0,
+    "meaning": "变压器采购总价",
+    "sense": "min",
+    "unit": "万美元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0077",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "采购150千伏安单相低压干式机",
+      "name": "dry_single_150",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购225千伏安三相低压干式机",
+      "name": "dry_three_225",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购275千伏安三相低压干式机",
+      "name": "dry_three_275",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购300千伏安液浸机",
+      "name": "liquid_300",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "采购500千伏安远港低压干式机",
+      "name": "harbor_dry_500",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

@@ -1,0 +1,73 @@
+{
+  "base_feasible_assignment_count": 25,
+  "base_incumbent": {
+    "para_1": 0,
+    "para_2": 0,
+    "para_3": 0,
+    "school_1": 1,
+    "school_2": 1,
+    "school_3": 0,
+    "transit_1": 0,
+    "transit_2": 0,
+    "transit_3": 1
+  },
+  "base_objective": 8.0,
+  "base_optimal_actions": [
+    {
+      "para_1": 0,
+      "para_2": 0,
+      "para_3": 0,
+      "school_1": 1,
+      "school_2": 0,
+      "school_3": 1,
+      "transit_1": 0,
+      "transit_2": 1,
+      "transit_3": 0
+    },
+    {
+      "para_1": 0,
+      "para_2": 0,
+      "para_3": 0,
+      "school_1": 1,
+      "school_2": 1,
+      "school_3": 0,
+      "transit_1": 0,
+      "transit_2": 0,
+      "transit_3": 1
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R082",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 7,
+  "patched_incumbent": {
+    "para_1": 0,
+    "para_2": 0,
+    "para_3": 1,
+    "school_1": 0,
+    "school_2": 0,
+    "school_3": 0,
+    "transit_1": 1,
+    "transit_2": 1,
+    "transit_3": 0
+  },
+  "patched_objective": 13.0,
+  "patched_optimal_actions": [
+    {
+      "para_1": 0,
+      "para_2": 0,
+      "para_3": 1,
+      "school_1": 0,
+      "school_2": 0,
+      "school_3": 0,
+      "transit_1": 1,
+      "transit_2": 1,
+      "transit_3": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

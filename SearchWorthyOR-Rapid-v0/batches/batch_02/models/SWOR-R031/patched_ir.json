@@ -1,0 +1,95 @@
+{
+  "action_projection": [
+    "submit_plastic_data",
+    "submit_paper_data",
+    "prepare_supporting_basis",
+    "external_assurance"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "external_assurance": 1,
+        "submit_paper_data": 1,
+        "submit_plastic_data": 2
+      },
+      "meaning": "两类包装数据提交工作使用不超过3个单位",
+      "name": "work_capacity",
+      "rhs": 3,
+      "sense": "<="
+    },
+    {
+      "coefficients": {
+        "submit_plastic_data": 1
+      },
+      "meaning": "报告实际进口和使用的PET瓶包装数据",
+      "name": "plastic_report_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "submit_paper_data": 1
+      },
+      "meaning": "报告实际进口和使用的运输纸箱包装数据",
+      "name": "paper_report_required",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "prepare_supporting_basis": 1
+      },
+      "meaning": "为年度包装报告准备计算方法底稿和支持文件",
+      "name": "supporting_basis_required",
+      "rhs": 1,
+      "sense": "="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R031",
+  "objective": {
+    "coefficients": {
+      "external_assurance": -1,
+      "prepare_supporting_basis": -2,
+      "submit_paper_data": 7,
+      "submit_plastic_data": 9
+    },
+    "constant": 0,
+    "meaning": "年度包装资料净申报完整度",
+    "sense": "max",
+    "unit": "分"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0147",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "提交塑料包装数据",
+      "name": "submit_plastic_data",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "提交纸类包装数据",
+      "name": "submit_paper_data",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "准备计算方法底稿和支持文件",
+      "name": "prepare_supporting_basis",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "委托外部机构作自愿保证",
+      "name": "external_assurance",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

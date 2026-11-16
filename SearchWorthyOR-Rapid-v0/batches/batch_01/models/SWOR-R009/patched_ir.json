@@ -1,0 +1,88 @@
+{
+  "action_projection": [
+    "marina",
+    "jurong",
+    "changi",
+    "punggol"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "changi": 1,
+        "jurong": 1,
+        "marina": 1,
+        "punggol": 1
+      },
+      "meaning": "恰好选择一个运营点",
+      "name": "choose_one_site",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "jurong": 1,
+        "punggol": 1
+      },
+      "meaning": "周末运营点从裕廊点和榜鹅点中选择",
+      "name": "weekend_site",
+      "rhs": 1,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "punggol": 1
+      },
+      "meaning": "未配置合格主管药剂师且电子药房服务未通过评估的零售点不用于运营",
+      "name": "punggol_ineligible",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "healthcare_resources",
+  "id": "SWOR-R009",
+  "objective": {
+    "coefficients": {
+      "changi": 8,
+      "jurong": 7,
+      "marina": 5,
+      "punggol": 10
+    },
+    "constant": 0,
+    "meaning": "周末电子药房服务收益",
+    "sense": "max",
+    "unit": "万新元"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0209",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择滨海点运营电子药房",
+      "name": "marina",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择裕廊点运营电子药房",
+      "name": "jurong",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择樟宜点运营电子药房",
+      "name": "changi",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择榜鹅点运营电子药房",
+      "name": "punggol",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

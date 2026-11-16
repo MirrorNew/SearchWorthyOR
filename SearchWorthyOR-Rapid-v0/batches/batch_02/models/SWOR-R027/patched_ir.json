@@ -1,0 +1,21 @@
+{
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "id": "SWOR-R027",
+  "variant": "patched",
+  "family": "finance_portfolio",
+  "source_candidate_id": "SRCV2-0257",
+  "variables": [
+    {"name": "cash_units", "type": "INTEGER", "lb": 0, "ub": 3, "meaning": "配置未设权利负担的现金单位"},
+    {"name": "treasury_hqla_units", "type": "INTEGER", "lb": 0, "ub": 3, "meaning": "配置未设权利负担的美国国债类高质量流动资产单位"},
+    {"name": "corporate_bond_units", "type": "INTEGER", "lb": 0, "ub": 3, "meaning": "配置未通过董事会流动性测试的公司债单位"},
+    {"name": "pledged_agency_units", "type": "INTEGER", "lb": 0, "ub": 3, "meaning": "配置质押给普通交易对手的机构债单位"}
+  ],
+  "objective": {"sense": "max", "constant": 0, "coefficients": {"cash_units": 1, "treasury_hqla_units": 3, "corporate_bond_units": 5, "pledged_agency_units": 4}, "meaning": "流动性缓冲收益分", "unit": "分"},
+  "constraints": [
+    {"name": "capital_limit", "sense": "<=", "rhs": 6, "coefficients": {"cash_units": 4, "treasury_hqla_units": 3, "corporate_bond_units": 2, "pledged_agency_units": 2}, "meaning": "缓冲资产占用资金不超过六个单位"},
+    {"name": "stress_buffer_need", "sense": ">=", "rhs": 2, "coefficients": {"cash_units": 1, "treasury_hqla_units": 1, "corporate_bond_units": 1, "pledged_agency_units": 1}, "meaning": "缓冲总量至少两个单位"},
+    {"name": "board_test_eligibility", "sense": "=", "rhs": 0, "coefficients": {"corporate_bond_units": 1}, "meaning": "未通过董事会规定流动性测试的公司债不得计入缓冲"},
+    {"name": "unencumbered_eligibility", "sense": "=", "rhs": 0, "coefficients": {"pledged_agency_units": 1}, "meaning": "不符合有限质押路径的已质押机构债不得计入缓冲"}
+  ],
+  "action_projection": ["cash_units", "treasury_hqla_units", "corporate_bond_units", "pledged_agency_units"]
+}

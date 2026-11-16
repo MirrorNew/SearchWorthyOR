@@ -1,0 +1,35 @@
+{
+  "batch": 1,
+  "task_count": 20,
+  "status": "GENERATOR_SELF_CHECK_PASS",
+  "validator": "PASS",
+  "source_recheck": {
+    "checked": 20,
+    "passed": 20,
+    "failed": []
+  },
+  "family_distribution": {
+    "assignment_matching": 2,
+    "energy_environment": 2,
+    "facility_network": 2,
+    "finance_portfolio": 2,
+    "healthcare_resources": 2,
+    "inventory_supply_chain": 2,
+    "production_capacity": 2,
+    "routing_transport": 2,
+    "scheduling_workforce": 2,
+    "telecom_service": 2
+  },
+  "patch_distribution": {
+    "conditional_auxiliary": 5,
+    "eligibility_domain": 5,
+    "quota_risk_service_objective": 5,
+    "temporal_coupling": 5
+  },
+  "independent_review": "PENDING",
+  "sha256": {
+    "public/tasks_zh.jsonl": "0ad1a5b173bce4b70e6b81dffff315875da802035dd25d0269a5ae1251299d57",
+    "private/rapid_audit.jsonl": "d050dfeefefe75399c2978236394eea96306159548462269e65bcfec02673eac",
+    "private/generate_batch.py": "d22e18ff1ba36e2983f0373a0ed55e1304f330d77dafd04a3cb7b6ad560574fe"
+  }
+}

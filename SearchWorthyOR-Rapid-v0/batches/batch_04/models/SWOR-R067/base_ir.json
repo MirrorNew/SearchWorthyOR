@@ -1,0 +1,99 @@
+{
+  "action_projection": [
+    "T",
+    "R",
+    "B",
+    "M",
+    "X",
+    "Y"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "B": 1,
+        "M": 1,
+        "R": 1,
+        "T": 1,
+        "X": 1,
+        "Y": 1
+      },
+      "meaning": "至少启用2项政策组件",
+      "name": "at_least_two",
+      "rhs": 2,
+      "sense": ">="
+    },
+    {
+      "coefficients": {
+        "M": 1,
+        "X": 1
+      },
+      "meaning": "M、X中至少启用1项",
+      "name": "monitor_or_disclosure",
+      "rhs": 1,
+      "sense": ">="
+    }
+  ],
+  "family": "finance_portfolio",
+  "id": "SWOR-R067",
+  "objective": {
+    "coefficients": {
+      "B": 3,
+      "M": 4,
+      "R": 2,
+      "T": 1,
+      "X": 5,
+      "Y": 6
+    },
+    "constant": 0,
+    "meaning": "最小化政策实施成本",
+    "sense": "min",
+    "unit": "点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0256",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "启用配置目标",
+      "name": "T",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用配置区间",
+      "name": "R",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "记录区间变更依据",
+      "name": "B",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用监测与恢复机制",
+      "name": "M",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用外部治理披露",
+      "name": "X",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "启用内部委员会记录",
+      "name": "Y",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "base"
+}

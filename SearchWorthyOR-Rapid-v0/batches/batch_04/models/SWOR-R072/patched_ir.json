@@ -1,0 +1,113 @@
+{
+  "action_projection": [
+    "large_1",
+    "small_1",
+    "large_2",
+    "small_2"
+  ],
+  "constraints": [
+    {
+      "coefficients": {
+        "large_1": 1,
+        "small_1": 1
+      },
+      "meaning": "晨星恰好选择一个类别",
+      "name": "business_1_class",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "large_2": 1,
+        "small_2": 1
+      },
+      "meaning": "港湾恰好选择一个类别",
+      "name": "business_2_class",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "large_1": 1
+      },
+      "meaning": "晨星达到大型生产者门槛",
+      "name": "business_1_large_eligible",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "small_1": 1
+      },
+      "meaning": "晨星不属于小型类别",
+      "name": "business_1_small_ineligible",
+      "rhs": 0,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "small_2": 1
+      },
+      "meaning": "港湾符合小型生产者条件",
+      "name": "business_2_small_eligible",
+      "rhs": 1,
+      "sense": "="
+    },
+    {
+      "coefficients": {
+        "large_2": 1
+      },
+      "meaning": "港湾未达到大型生产者门槛",
+      "name": "business_2_large_ineligible",
+      "rhs": 0,
+      "sense": "="
+    }
+  ],
+  "family": "inventory_supply_chain",
+  "id": "SWOR-R072",
+  "objective": {
+    "coefficients": {
+      "large_1": 4,
+      "large_2": 3,
+      "small_1": 1,
+      "small_2": 1
+    },
+    "constant": 0,
+    "meaning": "最小化申报成本",
+    "sense": "min",
+    "unit": "成本点"
+  },
+  "schema_version": "searchworthyor.rapid_model_ir.v0",
+  "source_candidate_id": "SRCV2-0125",
+  "variables": [
+    {
+      "lb": 0,
+      "meaning": "选择large_1申报类别",
+      "name": "large_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择small_1申报类别",
+      "name": "small_1",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择large_2申报类别",
+      "name": "large_2",
+      "type": "BINARY",
+      "ub": 1
+    },
+    {
+      "lb": 0,
+      "meaning": "选择small_2申报类别",
+      "name": "small_2",
+      "type": "BINARY",
+      "ub": 1
+    }
+  ],
+  "variant": "patched"
+}

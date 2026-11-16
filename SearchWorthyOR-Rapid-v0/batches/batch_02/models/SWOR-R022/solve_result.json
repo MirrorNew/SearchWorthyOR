@@ -1,0 +1,42 @@
+{
+  "base_feasible_assignment_count": 9,
+  "base_incumbent": {
+    "cert_herbs": 0,
+    "cert_oil": 0,
+    "select_herbs": 1,
+    "select_oil": 0
+  },
+  "base_objective": 11.0,
+  "base_optimal_actions": [
+    {
+      "cert_herbs": 0,
+      "cert_oil": 0,
+      "select_herbs": 1,
+      "select_oil": 0
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R022",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 5,
+  "patched_incumbent": {
+    "cert_herbs": 1,
+    "cert_oil": 0,
+    "select_herbs": 1,
+    "select_oil": 0
+  },
+  "patched_objective": 9.0,
+  "patched_optimal_actions": [
+    {
+      "cert_herbs": 1,
+      "cert_oil": 0,
+      "select_herbs": 1,
+      "select_oil": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}

@@ -1,0 +1,42 @@
+{
+  "base_feasible_assignment_count": 11,
+  "base_incumbent": {
+    "activate_plan_team": 0,
+    "invest_hill_tank": 0,
+    "invest_inland_warehouse": 1,
+    "invest_river_terminal": 1
+  },
+  "base_objective": 16.0,
+  "base_optimal_actions": [
+    {
+      "activate_plan_team": 0,
+      "invest_hill_tank": 0,
+      "invest_inland_warehouse": 1,
+      "invest_river_terminal": 1
+    }
+  ],
+  "base_status": "OPTIMAL",
+  "common_optimal_action_feasible": false,
+  "common_optimal_actions": [],
+  "id": "SWOR-R023",
+  "optimal_action_changed": true,
+  "patched_feasible_assignment_count": 8,
+  "patched_incumbent": {
+    "activate_plan_team": 0,
+    "invest_hill_tank": 1,
+    "invest_inland_warehouse": 1,
+    "invest_river_terminal": 0
+  },
+  "patched_objective": 12.0,
+  "patched_optimal_actions": [
+    {
+      "activate_plan_team": 0,
+      "invest_hill_tank": 1,
+      "invest_inland_warehouse": 1,
+      "invest_river_terminal": 0
+    }
+  ],
+  "patched_status": "OPTIMAL",
+  "schema_version": "searchworthyor.rapid_solve_result.v0",
+  "solver": "COPT 8.0.5"
+}
