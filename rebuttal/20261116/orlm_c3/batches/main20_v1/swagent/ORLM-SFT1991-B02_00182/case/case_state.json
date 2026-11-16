@@ -1,0 +1,2642 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "z_0_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_0_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_0_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_1_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_1_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_1_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_4_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_4_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_4_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_5_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_5_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_5_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "u_1",
+        "type": "CONTINUOUS",
+        "lb": 1,
+        "ub": 5
+      },
+      {
+        "id": "u_2",
+        "type": "CONTINUOUS",
+        "lb": 1,
+        "ub": 5
+      },
+      {
+        "id": "u_3",
+        "type": "CONTINUOUS",
+        "lb": 1,
+        "ub": 5
+      },
+      {
+        "id": "u_4",
+        "type": "CONTINUOUS",
+        "lb": 1,
+        "ub": 5
+      },
+      {
+        "id": "u_5",
+        "type": "CONTINUOUS",
+        "lb": 1,
+        "ub": 5
+      },
+      {
+        "id": "dep_time_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "arr_time_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "arr_time_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "arr_time_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "arr_time_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "arr_time_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "dep_time_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "dep_time_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "dep_time_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "dep_time_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "dep_time_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "ret_time",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "charge_start_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "charge_start_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "charge_start_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 360
+      },
+      {
+        "id": "charge_start_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "charge_start_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "c_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "c_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "c_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "q_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 80
+      },
+      {
+        "id": "q_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 80
+      },
+      {
+        "id": "q_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 80
+      },
+      {
+        "id": "q_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "q_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "dep_energy_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "arr_energy_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "arr_energy_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "arr_energy_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "arr_energy_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "arr_energy_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "dep_energy_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "dep_energy_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "dep_energy_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "dep_energy_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "dep_energy_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      },
+      {
+        "id": "ret_energy",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 160
+      }
+    ],
+    "objective": {
+      "direction": "min",
+      "terms": {
+        "z_0_1": 40,
+        "z_0_2": 55,
+        "z_0_5": 60,
+        "z_1_0": 40,
+        "z_1_2": 25,
+        "z_1_3": 45,
+        "z_2_0": 55,
+        "z_2_1": 25,
+        "z_2_3": 35,
+        "z_2_4": 15,
+        "z_3_1": 45,
+        "z_3_2": 35,
+        "z_3_4": 30,
+        "z_3_5": 50,
+        "z_4_2": 15,
+        "z_4_3": 30,
+        "z_4_5": 20,
+        "z_5_0": 60,
+        "z_5_3": 50,
+        "z_5_4": 20
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T019",
+        "T020",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "y_A": 1,
+          "y_B": 1,
+          "y_C": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T036"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "z_0_1": 1,
+          "z_0_2": 1,
+          "z_0_5": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T029",
+          "T031"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "z_1_0": 1,
+          "z_1_2": 1,
+          "z_1_3": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "z_2_0": 1,
+          "z_2_1": 1,
+          "z_2_3": 1,
+          "z_2_4": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "z_3_1": 1,
+          "z_3_2": 1,
+          "z_3_4": 1,
+          "z_3_5": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "z_4_2": 1,
+          "z_4_3": 1,
+          "z_4_5": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "z_5_0": 1,
+          "z_5_3": 1,
+          "z_5_4": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "z_1_0": 1,
+          "z_2_0": 1,
+          "z_5_0": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T029",
+          "T031"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "z_0_1": 1,
+          "z_2_1": 1,
+          "z_3_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "z_0_2": 1,
+          "z_1_2": 1,
+          "z_3_2": 1,
+          "z_4_2": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "z_1_3": 1,
+          "z_2_3": 1,
+          "z_4_3": 1,
+          "z_5_3": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "z_2_4": 1,
+          "z_3_4": 1,
+          "z_5_4": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "z_0_5": 1,
+          "z_3_5": 1,
+          "z_4_5": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "z_3_5": 1,
+          "y_A": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T037",
+          "T038"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "z_5_3": 1,
+          "y_A": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T037",
+          "T038"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "z_0_2": 1,
+          "y_B": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T037",
+          "T038"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "z_2_0": 1,
+          "y_B": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T037",
+          "T038"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "u_1": 1,
+          "u_2": -1,
+          "z_1_2": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "u_1": 1,
+          "u_3": -1,
+          "z_1_3": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "u_2": 1,
+          "u_1": -1,
+          "z_2_1": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "u_2": 1,
+          "u_3": -1,
+          "z_2_3": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "u_2": 1,
+          "u_4": -1,
+          "z_2_4": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "u_3": 1,
+          "u_1": -1,
+          "z_3_1": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "u_3": 1,
+          "u_2": -1,
+          "z_3_2": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "u_3": 1,
+          "u_4": -1,
+          "z_3_4": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "u_3": 1,
+          "u_5": -1,
+          "z_3_5": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "u_4": 1,
+          "u_2": -1,
+          "z_4_2": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "u_4": 1,
+          "u_3": -1,
+          "z_4_3": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "u_4": 1,
+          "u_5": -1,
+          "z_4_5": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "u_5": 1,
+          "u_3": -1,
+          "z_5_3": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "u_5": 1,
+          "u_4": -1,
+          "z_5_4": 5
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T032"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "c_1": 1,
+          "y_A": -1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T052",
+          "T165"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "c_2": 1,
+          "y_B": -1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T052",
+          "T165"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "c_3": 1,
+          "y_B": -1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T052",
+          "T165"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "c_1": 1,
+          "c_2": 1,
+          "c_3": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T051"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "c_1": -80
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "c_1": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "c_2": -80
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "c_2": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "c_3": -80
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "c_3": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T055"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "charge_start_1": 1,
+          "c_1": -360
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T094"
+        ],
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "charge_start_2": 1,
+          "c_2": -360
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T094"
+        ],
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "charge_start_3": 1,
+          "c_3": -360
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T094"
+        ],
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "charge_start_1": 1,
+          "arr_time_1": -1,
+          "c_1": -1000
+        },
+        "sense": ">=",
+        "rhs": -995,
+        "citations": [
+          "T078",
+          "T089"
+        ],
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "charge_start_2": 1,
+          "arr_time_2": -1,
+          "c_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -995,
+        "citations": [
+          "T078",
+          "T089"
+        ],
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "charge_start_3": 1,
+          "arr_time_3": -1,
+          "c_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -995,
+        "citations": [
+          "T078",
+          "T089"
+        ],
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "charge_start_1": 1,
+          "c_1": -1000
+        },
+        "sense": ">=",
+        "rhs": -960,
+        "citations": [
+          "T090"
+        ],
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "charge_start_2": 1,
+          "c_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -935,
+        "citations": [
+          "T090"
+        ],
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "charge_start_3": 1,
+          "c_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -890,
+        "citations": [
+          "T090"
+        ],
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "charge_start_1": 1,
+          "q_1": 0.5,
+          "c_1": 1000
+        },
+        "sense": "<=",
+        "rhs": 1165,
+        "citations": [
+          "T091"
+        ],
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "charge_start_2": 1,
+          "q_2": 0.5,
+          "c_2": 1000
+        },
+        "sense": "<=",
+        "rhs": 1175,
+        "citations": [
+          "T091"
+        ],
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "charge_start_3": 1,
+          "q_3": 0.5,
+          "c_3": 1000
+        },
+        "sense": "<=",
+        "rhs": 1235,
+        "citations": [
+          "T091"
+        ],
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "dep_time_1": 1,
+          "charge_start_1": -1,
+          "q_1": -0.5
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T092"
+        ],
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "dep_time_2": 1,
+          "charge_start_2": -1,
+          "q_2": -0.5
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T092"
+        ],
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "dep_time_3": 1,
+          "charge_start_3": -1,
+          "q_3": -0.5
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T092"
+        ],
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "dep_time_1": 1,
+          "arr_time_1": -1
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T077",
+          "T081"
+        ],
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "dep_time_2": 1,
+          "arr_time_2": -1
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T077",
+          "T081"
+        ],
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "dep_time_3": 1,
+          "arr_time_3": -1
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T077",
+          "T081"
+        ],
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "dep_time_4": 1,
+          "arr_time_4": -1
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T077",
+          "T081"
+        ],
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "dep_time_5": 1,
+          "arr_time_5": -1
+        },
+        "sense": ">=",
+        "rhs": 5,
+        "citations": [
+          "T077",
+          "T081"
+        ],
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_0": -1,
+          "z_0_1": -1000
+        },
+        "sense": ">=",
+        "rhs": -960,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_0": -1,
+          "z_0_1": 1000
+        },
+        "sense": "<=",
+        "rhs": 1040,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_0": -1,
+          "z_0_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -945,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_0": -1,
+          "z_0_2": 1000
+        },
+        "sense": "<=",
+        "rhs": 1055,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_0": -1,
+          "z_0_5": -1000
+        },
+        "sense": ">=",
+        "rhs": -940,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_0": -1,
+          "z_0_5": 1000
+        },
+        "sense": "<=",
+        "rhs": 1060,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_1": -1,
+          "z_1_0": -1000
+        },
+        "sense": ">=",
+        "rhs": -960,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C068"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_1": -1,
+          "z_1_0": 1000
+        },
+        "sense": "<=",
+        "rhs": 1040,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C069"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_1": -1,
+          "z_1_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -975,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C070"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_1": -1,
+          "z_1_2": 1000
+        },
+        "sense": "<=",
+        "rhs": 1025,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C071"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_1": -1,
+          "z_1_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -955,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C072"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_1": -1,
+          "z_1_3": 1000
+        },
+        "sense": "<=",
+        "rhs": 1045,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C073"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_2": -1,
+          "z_2_0": -1000
+        },
+        "sense": ">=",
+        "rhs": -945,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C074"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_2": -1,
+          "z_2_0": 1000
+        },
+        "sense": "<=",
+        "rhs": 1055,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C075"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_2": -1,
+          "z_2_1": -1000
+        },
+        "sense": ">=",
+        "rhs": -975,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C076"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_2": -1,
+          "z_2_1": 1000
+        },
+        "sense": "<=",
+        "rhs": 1025,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C077"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_2": -1,
+          "z_2_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -965,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C078"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_2": -1,
+          "z_2_3": 1000
+        },
+        "sense": "<=",
+        "rhs": 1035,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C079"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_2": -1,
+          "z_2_4": -1000
+        },
+        "sense": ">=",
+        "rhs": -985,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C080"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_2": -1,
+          "z_2_4": 1000
+        },
+        "sense": "<=",
+        "rhs": 1015,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C081"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_3": -1,
+          "z_3_1": -1000
+        },
+        "sense": ">=",
+        "rhs": -955,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C082"
+      },
+      {
+        "terms": {
+          "arr_time_1": 1,
+          "dep_time_3": -1,
+          "z_3_1": 1000
+        },
+        "sense": "<=",
+        "rhs": 1045,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C083"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_3": -1,
+          "z_3_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -965,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C084"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_3": -1,
+          "z_3_2": 1000
+        },
+        "sense": "<=",
+        "rhs": 1035,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C085"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_3": -1,
+          "z_3_4": -1000
+        },
+        "sense": ">=",
+        "rhs": -970,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C086"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_3": -1,
+          "z_3_4": 1000
+        },
+        "sense": "<=",
+        "rhs": 1030,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C087"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_3": -1,
+          "z_3_5": -1000
+        },
+        "sense": ">=",
+        "rhs": -950,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C088"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_3": -1,
+          "z_3_5": 1000
+        },
+        "sense": "<=",
+        "rhs": 1050,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C089"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_4": -1,
+          "z_4_2": -1000
+        },
+        "sense": ">=",
+        "rhs": -985,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C090"
+      },
+      {
+        "terms": {
+          "arr_time_2": 1,
+          "dep_time_4": -1,
+          "z_4_2": 1000
+        },
+        "sense": "<=",
+        "rhs": 1015,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C091"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_4": -1,
+          "z_4_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -970,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C092"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_4": -1,
+          "z_4_3": 1000
+        },
+        "sense": "<=",
+        "rhs": 1030,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C093"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_4": -1,
+          "z_4_5": -1000
+        },
+        "sense": ">=",
+        "rhs": -980,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C094"
+      },
+      {
+        "terms": {
+          "arr_time_5": 1,
+          "dep_time_4": -1,
+          "z_4_5": 1000
+        },
+        "sense": "<=",
+        "rhs": 1020,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C095"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_5": -1,
+          "z_5_0": -1000
+        },
+        "sense": ">=",
+        "rhs": -940,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C096"
+      },
+      {
+        "terms": {
+          "ret_time": 1,
+          "dep_time_5": -1,
+          "z_5_0": 1000
+        },
+        "sense": "<=",
+        "rhs": 1060,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C097"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_5": -1,
+          "z_5_3": -1000
+        },
+        "sense": ">=",
+        "rhs": -950,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C098"
+      },
+      {
+        "terms": {
+          "arr_time_3": 1,
+          "dep_time_5": -1,
+          "z_5_3": 1000
+        },
+        "sense": "<=",
+        "rhs": 1050,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C099"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_5": -1,
+          "z_5_4": -1000
+        },
+        "sense": ">=",
+        "rhs": -980,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C100"
+      },
+      {
+        "terms": {
+          "arr_time_4": 1,
+          "dep_time_5": -1,
+          "z_5_4": 1000
+        },
+        "sense": "<=",
+        "rhs": 1020,
+        "citations": [
+          "T084",
+          "T085"
+        ],
+        "name": "C101"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_0": -1,
+          "z_0_1": -400
+        },
+        "sense": ">=",
+        "rhs": -440,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C102"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_0": -1,
+          "z_0_1": 400
+        },
+        "sense": "<=",
+        "rhs": 360,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C103"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_0": -1,
+          "z_0_2": -400
+        },
+        "sense": ">=",
+        "rhs": -455,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C104"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_0": -1,
+          "z_0_2": 400
+        },
+        "sense": "<=",
+        "rhs": 345,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C105"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_0": -1,
+          "z_0_5": -400
+        },
+        "sense": ">=",
+        "rhs": -460,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C106"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_0": -1,
+          "z_0_5": 400
+        },
+        "sense": "<=",
+        "rhs": 340,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C107"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_1": -1,
+          "z_1_0": -400
+        },
+        "sense": ">=",
+        "rhs": -440,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C108"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_1": -1,
+          "z_1_0": 400
+        },
+        "sense": "<=",
+        "rhs": 360,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C109"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_1": -1,
+          "z_1_2": -400
+        },
+        "sense": ">=",
+        "rhs": -425,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C110"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_1": -1,
+          "z_1_2": 400
+        },
+        "sense": "<=",
+        "rhs": 375,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C111"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_1": -1,
+          "z_1_3": -400
+        },
+        "sense": ">=",
+        "rhs": -445,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C112"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_1": -1,
+          "z_1_3": 400
+        },
+        "sense": "<=",
+        "rhs": 355,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C113"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_2": -1,
+          "z_2_0": -400
+        },
+        "sense": ">=",
+        "rhs": -455,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C114"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_2": -1,
+          "z_2_0": 400
+        },
+        "sense": "<=",
+        "rhs": 345,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C115"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_2": -1,
+          "z_2_1": -400
+        },
+        "sense": ">=",
+        "rhs": -425,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C116"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_2": -1,
+          "z_2_1": 400
+        },
+        "sense": "<=",
+        "rhs": 375,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C117"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_2": -1,
+          "z_2_3": -400
+        },
+        "sense": ">=",
+        "rhs": -435,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C118"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_2": -1,
+          "z_2_3": 400
+        },
+        "sense": "<=",
+        "rhs": 365,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C119"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_2": -1,
+          "z_2_4": -400
+        },
+        "sense": ">=",
+        "rhs": -415,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C120"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_2": -1,
+          "z_2_4": 400
+        },
+        "sense": "<=",
+        "rhs": 385,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C121"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_3": -1,
+          "z_3_1": -400
+        },
+        "sense": ">=",
+        "rhs": -445,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C122"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "dep_energy_3": -1,
+          "z_3_1": 400
+        },
+        "sense": "<=",
+        "rhs": 355,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C123"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_3": -1,
+          "z_3_2": -400
+        },
+        "sense": ">=",
+        "rhs": -435,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C124"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_3": -1,
+          "z_3_2": 400
+        },
+        "sense": "<=",
+        "rhs": 365,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C125"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_3": -1,
+          "z_3_4": -400
+        },
+        "sense": ">=",
+        "rhs": -430,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C126"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_3": -1,
+          "z_3_4": 400
+        },
+        "sense": "<=",
+        "rhs": 370,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C127"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_3": -1,
+          "z_3_5": -400
+        },
+        "sense": ">=",
+        "rhs": -450,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C128"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_3": -1,
+          "z_3_5": 400
+        },
+        "sense": "<=",
+        "rhs": 350,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C129"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_4": -1,
+          "z_4_2": -400
+        },
+        "sense": ">=",
+        "rhs": -415,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C130"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "dep_energy_4": -1,
+          "z_4_2": 400
+        },
+        "sense": "<=",
+        "rhs": 385,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C131"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_4": -1,
+          "z_4_3": -400
+        },
+        "sense": ">=",
+        "rhs": -430,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C132"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_4": -1,
+          "z_4_3": 400
+        },
+        "sense": "<=",
+        "rhs": 370,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C133"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_4": -1,
+          "z_4_5": -400
+        },
+        "sense": ">=",
+        "rhs": -420,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C134"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "dep_energy_4": -1,
+          "z_4_5": 400
+        },
+        "sense": "<=",
+        "rhs": 380,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C135"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_5": -1,
+          "z_5_0": -400
+        },
+        "sense": ">=",
+        "rhs": -460,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C136"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "dep_energy_5": -1,
+          "z_5_0": 400
+        },
+        "sense": "<=",
+        "rhs": 340,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C137"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_5": -1,
+          "z_5_3": -400
+        },
+        "sense": ">=",
+        "rhs": -450,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C138"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "dep_energy_5": -1,
+          "z_5_3": 400
+        },
+        "sense": "<=",
+        "rhs": 350,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C139"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_5": -1,
+          "z_5_4": -400
+        },
+        "sense": ">=",
+        "rhs": -420,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C140"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "dep_energy_5": -1,
+          "z_5_4": 400
+        },
+        "sense": "<=",
+        "rhs": 380,
+        "citations": [
+          "T067",
+          "T068",
+          "T069"
+        ],
+        "name": "C141"
+      },
+      {
+        "terms": {
+          "dep_energy_1": 1,
+          "arr_energy_1": -1,
+          "q_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T065"
+        ],
+        "name": "C142"
+      },
+      {
+        "terms": {
+          "dep_energy_2": 1,
+          "arr_energy_2": -1,
+          "q_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T065"
+        ],
+        "name": "C143"
+      },
+      {
+        "terms": {
+          "dep_energy_3": 1,
+          "arr_energy_3": -1,
+          "q_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T065"
+        ],
+        "name": "C144"
+      },
+      {
+        "terms": {
+          "dep_energy_4": 1,
+          "arr_energy_4": -1,
+          "q_4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T065"
+        ],
+        "name": "C145"
+      },
+      {
+        "terms": {
+          "dep_energy_5": 1,
+          "arr_energy_5": -1,
+          "q_5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T065"
+        ],
+        "name": "C146"
+      },
+      {
+        "terms": {
+          "dep_energy_0": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T062",
+          "T070"
+        ],
+        "name": "C147"
+      },
+      {
+        "terms": {
+          "arr_energy_1": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C148"
+      },
+      {
+        "terms": {
+          "arr_energy_2": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C149"
+      },
+      {
+        "terms": {
+          "arr_energy_3": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C150"
+      },
+      {
+        "terms": {
+          "arr_energy_4": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C151"
+      },
+      {
+        "terms": {
+          "arr_energy_5": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C152"
+      },
+      {
+        "terms": {
+          "dep_energy_1": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C153"
+      },
+      {
+        "terms": {
+          "dep_energy_2": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C154"
+      },
+      {
+        "terms": {
+          "dep_energy_3": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C155"
+      },
+      {
+        "terms": {
+          "dep_energy_4": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C156"
+      },
+      {
+        "terms": {
+          "dep_energy_5": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C157"
+      },
+      {
+        "terms": {
+          "ret_energy": 1,
+          "y_A": -160,
+          "y_B": -130,
+          "y_C": -115
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T070"
+        ],
+        "name": "C158"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 无人机巡检回路与充电保障联合优化需求\n\n## 1. 任务范围与实施要求\n\n使用Python调用COPT，建立并求解混合整数线性规划，联合安排无人机、巡检回路和充电保障。\n\n园区登记11个充电站，本次只涉及充电站1至6，其他5站不参与任何路径、充电或资源决策。CSV中的站点索引0至5分别对应业务站号1至6，显示结果时使用业务站号。\n\n任务只能选择一架无人机，由该机执行全程，不得途中换机、重复访问站点或在未列出的地点补能。允许按下述规定在站内等待和充电。\n\n真实输入CSV在程序运行时提供，读取路径及字段定义见本文末尾。\n\n## 2. 联合决策与唯一优化目标\n\n需要决定：\n\n- 执行任务的无人机；\n- 各站访问顺序及所使用的有向航段；\n- 启用哪些站的本次任务专用充电服务；\n- 充电开始时间、充电量及必要的站内等待；\n- 各站到达、离开时间和到达、离开电量；\n- 最终返回站1的时间和电量。\n\n唯一优化目标是最小化所选航段的原始飞行时间总和，单位为分钟。巡检、充电、接口准备及等待时间不计入目标。\n\n不得增加充电成本、服务启用成本、完工时间或无人机类型等次级目标。存在多个最优方案时，可报告任意一个。\n\n## 3. 航路与回路\n\n`travel_times.csv`给出全部6×6有向站点组合。原始航路可双向飞行，两个方向时间相同。\n\n其中，飞行时间等于`parameters.csv`中`unavailable_marker`的记录表示不存在航路，不是可付出该时间后使用的航路。自环一律禁止。\n\n回路必须满足：\n\n- 固定从站1出发，最终返回站1；\n- 站2至6各访问并巡检一次；\n- 每站恰有一条选中的入边和一条选中的出边；\n- 全部6站组成一个单一回路，不允许独立子回路；\n- 站1出发事件和最终返回事件必须分别处理，不能要求返回时间等于出发时间。\n\n## 4. 无人机与充电资格\n\n`drones.csv`包含A、B、C三架无人机及电池容量、传感器能力。必须且只能选择一架。\n\n`drone_restrictions.csv`列出的无人机与有向航段组合禁止使用。禁用规则只对对应无人机生效，不改变原始航路表；两个方向分别列出。除此之外，每架无人机均可使用原始航路中存在的航段。\n\n所有无人机均能巡检全部6站。传感器能力只影响充电资格，不影响到站或巡检资格：\n\n- 站1、2为超声波接口，可为A、C充电；\n- 站3、4为激光接口，可为B、C充电；\n- 站5、6没有本次可用充电接口。\n\n无人机在任务开始前由机队基地准备满电，不要求使用站1接口。保留站1接口信息，但本次回路中只有站2、3、4可以启用充电；站1不提供出发后的补充充电，也不提供计入任务的返回后充电。\n\n## 5. 充电服务与电量\n\n### 5.1 服务启用与充电作业\n\n全回路最多启用2个站的充电服务。只有本次允许充电且与所选无人机传感器匹配的站才可启用。\n\n启用意味着在该站进行一次实际充电，每站最多一次；计数按实际充电站数，不按访问数或充电量计算。\n\n- 启用站充电量为连续数量，至少1、至多80个能量单位。\n- 未启用站充电量和充电作业时长均为0，也不执行接口准备。\n- 一次完整充电作业先进行5分钟接口准备，再按每分钟2个能量单位补能。\n- 完整作业时长为5分钟加上充电量除以充电速率。\n- 接口准备不增加电量，准备和补能构成一次不可中断作业。\n\n这些限额和速率由`parameters.csv`读取。\n\n### 5.2 电量精确衔接\n\n从站1出发时，电量等于所选无人机的电池容量。\n\n每飞行1分钟消耗1个能量单位。等待、巡检、接口准备均不消耗本题计量的推进电量，也不增加电量。\n\n站2至6的离开电量等于到达电量加本站实际充电量；站5、6充电量为0。每个选中航段的终点到达电量，必须精确等于起点离开电量减去该航段耗电量。\n\n离开站1的航段使用初始满电状态；飞回站1的航段使用单独的最终返回电量状态。\n\n所有到达、离开及最终返回电量都必须非负且不超过所选无人机容量。不得超容量充电、弃置电量，或仅以全程充电总量覆盖全程耗电量替代逐航段衔接。最终返回电量允许为0，没有额外储备要求。\n\n## 6. 时间、巡检与窗口\n\n### 6.1 起止与站内作业\n\n所有任务时间以开始时刻为0，单位为分钟，可取连续值。\n\n- 站1出发前巡检在时刻0以前已经完成，出发时刻固定为0。\n- 到达站2至6后立即巡检5分钟。\n- 巡检和充电不得重叠，完整充电作业只能在本站巡检完成后开始。\n- 巡检完成后允许等待；充电完成后也允许等待再离开。\n- 未充电站不得早于巡检完成时离开。\n- 最终返回站1后不再巡检或充电。\n- 必须在时刻360或以前返回站1。\n\n选中航段的终点到达时刻，必须精确等于起点离开时刻加该航段原始飞行时间。禁止空中等待，时间差必须明确归属于站内巡检、充电或等待。\n\n### 6.2 完整充电作业窗口\n\n`stations.csv`提供站2、3、4的完整充电作业窗口，分别为[40,170]、[65,180]、[110,240]分钟，均包含边界。\n\n启用站必须同时满足：\n\n- 作业开始不早于到达后5分钟，即巡检完成时刻；\n- 作业开始不早于窗口开始；\n- 接口准备和补能全部在窗口结束前或恰好结束时完成；\n- 离站不早于充电作业结束。\n\n未启用站不受充电窗口约束，但仍须满足巡检和航段时间衔接。为统一输出，所有未启用站的充电开始时间固定为0；其充电结束时间也以0表示“没有充电作业”，不代表实际发生了零时刻作业。\n\n### 6.3 统一边界和技术参数\n\n全部实际到达、离开、最终返回时间及充电开始时间均在[0,360]内。\n\n全部电量的统一外层范围为[0,160]，同时还必须受所选无人机容量限制。每站充电量的统一范围为[0,80]，实际启用时还须满足至少1个能量单位。\n\n输入保留两个条件约束辅助常数：`time_condition_constant=1000`、`energy_condition_constant=400`。它们与航路不可用标记10000含义不同，不得使不存在或对所选无人机禁用的航段变为可用。具体建模方式由实现者选择，但必须保持混合整数线性规划。\n\n## 7. 结果报告\n\n输出求解状态。若获得最优解，至少报告：\n\n1. 最小总飞行时间，单位为分钟；\n2. 所选无人机及电池容量；\n3. 从站1开始并返回站1的完整站点序列；\n4. 所有选中航段及对应原始飞行时间；\n5. 各站到达、巡检完成、离开时刻；\n6. 各站是否启用充电；启用时报告开始、结束时刻和充电量；\n7. 各站到达、离开电量，以及最终返回站1的时间和电量。\n\n起点出发事件和最终返回事件单独列示。站1没有本次任务内的初始到达事件，其出发前巡检的具体完成时刻未给出，应标记为“时刻0前已完成”，不得编造具体时间。最终返回事件没有后续巡检或离站事件，相关项目标记为不适用。\n\n若模型不可行，报告不可行，不得删去巡检站、放宽窗口或修改原始飞行时间生成替代答案。未取得最优解时应如实报告实际求解状态，不得把其他状态宣称为最优。\n\n## 8. 输入CSV结构\n\n所有CSV均为UTF-8编码，第一行为表头。除站点表中明确允许为空的充电窗口字段外，字段不允许为空。各文件不得出现重复唯一标识或重复组合键。\n\n### ./data/parameters.csv\n\n每行代表一组任务级参数，本任务恰有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| registered_station_count | 园区登记站数 | integer | 个 |\n| n | 本次任务站数 | integer | 个 |\n| unavailable_marker | 航路矩阵不可用标记 | integer | 非飞行时间，表示航路不存在 |\n| departure_time | 站1固定出发时刻 | number | 分钟 |\n| deadline | 最晚返回时刻及任务时间上界 | number | 分钟 |\n| inspection_duration | 站2至6每次巡检时长 | number | 分钟 |\n| max_charging_stations | 最多实际充电站数 | integer | 个 |\n| min_charge | 启用站最少充电量 | number | 能量单位 |\n| max_charge | 每站充电量上界 | number | 能量单位 |\n| preparation_duration | 每次充电接口准备时长 | number | 分钟 |\n| charging_rate | 实际补能速率 | number | 能量单位/分钟 |\n| energy_per_flight_minute | 每分钟飞行耗能 | number | 能量单位/分钟 |\n| energy_outer_bound | 电量统一外层上界 | number | 能量单位 |\n| time_condition_constant | 条件时间约束辅助常数 | number | 分钟 |\n| energy_condition_constant | 条件电量约束辅助常数 | number | 能量单位 |\n\n### ./data/stations.csv\n\n每行代表一个本次任务站点。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| station_index | 程序站点索引 | integer | 0至5 |\n| station_number | 业务站号 | integer | 1至6 |\n| sensor | 充电设施传感器 | string | ultrasound为超声波，laser为激光，none为无本次可用接口 |\n| charging_allowed | 是否允许本次回路站内充电 | boolean | true为允许，false为不允许；仍需匹配无人机资格 |\n| window_start | 完整充电作业窗口开始 | number | 分钟 |\n| window_end | 完整充电作业窗口结束 | number | 分钟 |\n\n`station_index`为主键，`station_number`也唯一。站1、5、6的窗口字段为空，表示没有本次可用充电窗口；不得将空值解释为0或无限开放。\n\n### ./data/drones.csv\n\n每行代表一架可选无人机。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| drone_id | 无人机标识 | string | A、B、C |\n| battery_capacity | 电池容量 | number | 能量单位 |\n| ultrasound_capable | 是否具有超声波充电传感器能力 | boolean | true为具有，false为不具有 |\n| laser_capable | 是否具有激光充电传感器能力 | boolean | true为具有，false为不具有 |\n\n`drone_id`为主键。传感器能力与站点传感器匹配才具备充电资格，且必须同时满足本站允许本次充电。\n\n### ./data/travel_times.csv\n\n每行代表一个有向站点组合，包括自环和不可用组合，共36行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| from_index | 起点程序索引 | integer | 0至5 |\n| to_index | 终点程序索引 | integer | 0至5 |\n| flight_time | 原始飞行时间或不可用标记 | number | 分钟；等于unavailable_marker时表示不可用 |\n\n组合键为`from_index,to_index`，两个索引都关联`stations.csv.station_index`。所有自环禁止，未列入原始航路的组合以不可用标记存储。\n\n### ./data/drone_restrictions.csv\n\n每行代表某架无人机额外禁止使用的一个有向航段。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| drone_id | 受禁用规则约束的无人机 | string | 关联drones.csv.drone_id |\n| from_index | 禁用航段起点索引 | integer | 关联stations.csv.station_index |\n| to_index | 禁用航段终点索引 | integer | 关联stations.csv.station_index |\n\n组合键为`drone_id,from_index,to_index`。只有选择对应无人机时，该禁用记录才约束航段使用；未列出的组合没有额外禁用规则，但仍须存在原始航路。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：drone_restrictions.csv\ndrone_id,from_index,to_index\r\nA,3,5\r\nA,5,3\r\nB,0,2\r\nB,2,0\r\n\n\n数据文件：drones.csv\ndrone_id,battery_capacity,ultrasound_capable,laser_capable\r\nA,160,true,false\r\nB,130,false,true\r\nC,115,true,true\r\n\n\n数据文件：parameters.csv\nregistered_station_count,n,unavailable_marker,departure_time,deadline,inspection_duration,max_charging_stations,min_charge,max_charge,preparation_duration,charging_rate,energy_per_flight_minute,energy_outer_bound,time_condition_constant,energy_condition_constant\r\n11,6,10000,0,360,5,2,1,80,5,2,1,160,1000,400\r\n\n\n数据文件：stations.csv\nstation_index,station_number,sensor,charging_allowed,window_start,window_end\r\n0,1,ultrasound,false,,\r\n1,2,ultrasound,true,40,170\r\n2,3,laser,true,65,180\r\n3,4,laser,true,110,240\r\n4,5,none,false,,\r\n5,6,none,false,,\r\n\n\n数据文件：travel_times.csv\nfrom_index,to_index,flight_time\r\n0,0,10000\r\n0,1,40\r\n0,2,55\r\n0,3,10000\r\n0,4,10000\r\n0,5,60\r\n1,0,40\r\n1,1,10000\r\n1,2,25\r\n1,3,45\r\n1,4,10000\r\n1,5,10000\r\n2,0,55\r\n2,1,25\r\n2,2,10000\r\n2,3,35\r\n2,4,15\r\n2,5,10000\r\n3,0,10000\r\n3,1,45\r\n3,2,35\r\n3,3,10000\r\n3,4,30\r\n3,5,50\r\n4,0,10000\r\n4,1,10000\r\n4,2,15\r\n4,3,30\r\n4,4,10000\r\n4,5,20\r\n5,0,60\r\n5,1,10000\r\n5,2,10000\r\n5,3,50\r\n5,4,20\r\n5,5,10000",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-6c4b77261221a942",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

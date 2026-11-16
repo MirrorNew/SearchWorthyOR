@@ -1,0 +1,4 @@
+{"elapsed":0.0,"kind":"ACQUISITION_POLICY"}
+{"elapsed":0.01600000000325963,"kind":"RESOURCE_RESERVED","purpose":"PLAN_LITE","resource":"model"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":369.125,"kind":"API_FAILED","request_id":"4ccc74071a5c4e5d93fb09eda0e3f6e9","stage":"PLAN_LITE"}
+{"elapsed":369.6720000000205,"kind":"FINALIZE"}

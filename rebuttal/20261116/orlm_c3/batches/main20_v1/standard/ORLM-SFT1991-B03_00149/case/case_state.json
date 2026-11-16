@@ -1,0 +1,2062 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "model": {
+    "variables": [
+      {
+        "id": "p1",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p2",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p3",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p4",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p5",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "n1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "a1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "cash1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 140
+      },
+      {
+        "id": "cash2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 210
+      },
+      {
+        "id": "cash3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 300
+      },
+      {
+        "id": "cash4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 395
+      },
+      {
+        "id": "cash5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 525
+      }
+    ],
+    "objective": {
+      "sense": "min",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "p1": 1,
+        "p2": 1,
+        "p3": 1,
+        "p4": 1,
+        "p5": 1
+      }
+    },
+    "constraints": [
+      {
+        "name": "purchase_link_1",
+        "coefficients": {
+          "p1": 1,
+          "n1": -1,
+          "o1": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_2",
+        "coefficients": {
+          "p2": 1,
+          "n2": -1,
+          "o2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_3",
+        "coefficients": {
+          "p3": 1,
+          "n3": -1,
+          "o3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_4",
+        "coefficients": {
+          "p4": 1,
+          "n4": -1,
+          "o4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_5",
+        "coefficients": {
+          "p5": 1,
+          "n5": -1,
+          "o5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_1",
+        "coefficients": {
+          "n1": 5,
+          "p1": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_2",
+        "coefficients": {
+          "n2": 5,
+          "p2": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_3",
+        "coefficients": {
+          "n3": 5,
+          "p3": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_4",
+        "coefficients": {
+          "n4": 5,
+          "p4": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_5",
+        "coefficients": {
+          "n5": 5,
+          "p5": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_supply_1",
+        "coefficients": {
+          "n1": 1
+        },
+        "sense": "<=",
+        "rhs": 9
+      },
+      {
+        "name": "new_supply_2",
+        "coefficients": {
+          "n2": 1
+        },
+        "sense": "<=",
+        "rhs": 10
+      },
+      {
+        "name": "new_supply_3",
+        "coefficients": {
+          "n3": 1
+        },
+        "sense": "<=",
+        "rhs": 11
+      },
+      {
+        "name": "new_supply_4",
+        "coefficients": {
+          "n4": 1
+        },
+        "sense": "<=",
+        "rhs": 9
+      },
+      {
+        "name": "new_supply_5",
+        "coefficients": {
+          "n5": 1
+        },
+        "sense": "<=",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_usable_1",
+        "coefficients": {
+          "u1": 1,
+          "n1": -1,
+          "a1": -1
+        },
+        "sense": "==",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_pending_1",
+        "coefficients": {
+          "v1": 1,
+          "o1": -1,
+          "a1": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_1",
+        "coefficients": {
+          "tot1": 1,
+          "p1": -1
+        },
+        "sense": "==",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_total_identity_1",
+        "coefficients": {
+          "tot1": 1,
+          "u1": -1,
+          "v1": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_2",
+        "coefficients": {
+          "u2": 1,
+          "u1": -1,
+          "n2": -1,
+          "a2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_2",
+        "coefficients": {
+          "v2": 1,
+          "v1": -1,
+          "o2": -1,
+          "a2": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_2",
+        "coefficients": {
+          "tot2": 1,
+          "tot1": -1,
+          "p2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_2",
+        "coefficients": {
+          "tot2": 1,
+          "u2": -1,
+          "v2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_3",
+        "coefficients": {
+          "u3": 1,
+          "u2": -1,
+          "n3": -1,
+          "a3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_3",
+        "coefficients": {
+          "v3": 1,
+          "v2": -1,
+          "o3": -1,
+          "a3": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_3",
+        "coefficients": {
+          "tot3": 1,
+          "tot2": -1,
+          "p3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_3",
+        "coefficients": {
+          "tot3": 1,
+          "u3": -1,
+          "v3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_4",
+        "coefficients": {
+          "u4": 1,
+          "u3": -1,
+          "n4": -1,
+          "a4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_4",
+        "coefficients": {
+          "v4": 1,
+          "v3": -1,
+          "o4": -1,
+          "a4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_4",
+        "coefficients": {
+          "tot4": 1,
+          "tot3": -1,
+          "p4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_4",
+        "coefficients": {
+          "tot4": 1,
+          "u4": -1,
+          "v4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_5",
+        "coefficients": {
+          "u5": 1,
+          "u4": -1,
+          "n5": -1,
+          "a5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_5",
+        "coefficients": {
+          "v5": 1,
+          "v4": -1,
+          "o5": -1,
+          "a5": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_5",
+        "coefficients": {
+          "tot5": 1,
+          "tot4": -1,
+          "p5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_5",
+        "coefficients": {
+          "tot5": 1,
+          "u5": -1,
+          "v5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_1",
+        "coefficients": {
+          "a1": 1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_2",
+        "coefficients": {
+          "a2": 1,
+          "v1": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_3",
+        "coefficients": {
+          "a3": 1,
+          "v2": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_4",
+        "coefficients": {
+          "a4": 1,
+          "v3": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_5",
+        "coefficients": {
+          "a5": 1,
+          "v4": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "quality_capacity_1",
+        "coefficients": {
+          "n1": 1,
+          "a1": 1
+        },
+        "sense": "<=",
+        "rhs": 14
+      },
+      {
+        "name": "quality_capacity_2",
+        "coefficients": {
+          "n2": 1,
+          "a2": 1
+        },
+        "sense": "<=",
+        "rhs": 19
+      },
+      {
+        "name": "quality_capacity_3",
+        "coefficients": {
+          "n3": 1,
+          "a3": 1
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "quality_capacity_4",
+        "coefficients": {
+          "n4": 1,
+          "a4": 1
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "quality_capacity_5",
+        "coefficients": {
+          "n5": 1,
+          "a5": 1
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "usable_inventory_min_1",
+        "coefficients": {
+          "u1": 1
+        },
+        "sense": ">=",
+        "rhs": 20
+      },
+      {
+        "name": "usable_inventory_min_2",
+        "coefficients": {
+          "u2": 1
+        },
+        "sense": ">=",
+        "rhs": 38
+      },
+      {
+        "name": "usable_inventory_min_3",
+        "coefficients": {
+          "u3": 1
+        },
+        "sense": ">=",
+        "rhs": 58
+      },
+      {
+        "name": "usable_inventory_min_4",
+        "coefficients": {
+          "u4": 1
+        },
+        "sense": ">=",
+        "rhs": 78
+      },
+      {
+        "name": "usable_inventory_min_5",
+        "coefficients": {
+          "u5": 1
+        },
+        "sense": ">=",
+        "rhs": 105
+      },
+      {
+        "name": "final_total_inventory_min",
+        "coefficients": {
+          "tot5": 1
+        },
+        "sense": ">=",
+        "rhs": 60
+      },
+      {
+        "name": "cash_balance_1",
+        "coefficients": {
+          "cash1": 1,
+          "n1": 5,
+          "o1": 3,
+          "a1": 1
+        },
+        "sense": "==",
+        "rhs": 140
+      },
+      {
+        "name": "cash_balance_2",
+        "coefficients": {
+          "cash2": 1,
+          "cash1": -1,
+          "n2": 5,
+          "o2": 3,
+          "a2": 1
+        },
+        "sense": "==",
+        "rhs": 70
+      },
+      {
+        "name": "cash_balance_3",
+        "coefficients": {
+          "cash3": 1,
+          "cash2": -1,
+          "n3": 5,
+          "o3": 3,
+          "a3": 1
+        },
+        "sense": "==",
+        "rhs": 90
+      },
+      {
+        "name": "cash_balance_4",
+        "coefficients": {
+          "cash4": 1,
+          "cash3": -1,
+          "n4": 5,
+          "o4": 3,
+          "a4": 1
+        },
+        "sense": "==",
+        "rhs": 95
+      },
+      {
+        "name": "cash_balance_5",
+        "coefficients": {
+          "cash5": 1,
+          "cash4": -1,
+          "n5": 5,
+          "o5": 3,
+          "a5": 1
+        },
+        "sense": "==",
+        "rhs": 130
+      },
+      {
+        "name": "cash_min_1",
+        "coefficients": {
+          "cash1": 1
+        },
+        "sense": ">=",
+        "rhs": 50
+      },
+      {
+        "name": "cash_min_2",
+        "coefficients": {
+          "cash2": 1
+        },
+        "sense": ">=",
+        "rhs": 40
+      },
+      {
+        "name": "cash_min_3",
+        "coefficients": {
+          "cash3": 1
+        },
+        "sense": ">=",
+        "rhs": 35
+      },
+      {
+        "name": "cash_min_4",
+        "coefficients": {
+          "cash4": 1
+        },
+        "sense": ">=",
+        "rhs": 35
+      },
+      {
+        "name": "cash_min_5",
+        "coefficients": {
+          "cash5": 1
+        },
+        "sense": ">=",
+        "rhs": 70
+      }
+    ]
+  },
+  "revision": 1,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 五周关键零部件采购、验收与应急储备规划需求\n\n## 1. 任务与实施要求\n\n使用 Python 调用 COPT，建立并求解混合整数规划问题，制定连续5周的关键零部件采购和旧零件验收安排。\n\n规划用于建立战略库存。零件来源包括新零件和旧零件；旧零件只有完成验收后，才能用于应急保障。规划期内没有对外发货、生产领用、报废或其他实物消耗。\n\n唯一优化目标是：在满足全部业务条件的前提下，使5周总采购量最小。\n\n采购和验收费用仅用于检查资金可行性，不作为优化目标。如果存在多个总采购量相同的最优方案，输出任意一个即可，不需要继续优化成本、待验库存或其他指标。\n\n运行时从本文末尾约定的 CSV 文件读取输入，不依赖外部补充数据。\n\n## 2. 规划期间与需确定的安排\n\n周编号为1至5，周0表示规划开始前的状态。\n\n每周需要确定：\n\n- 总采购量；\n- 新零件采购量；\n- 旧零件采购量；\n- 完成验收的旧零件数量。\n\n同时跟踪初始及每周末的：\n\n- 总库存；\n- 可用库存；\n- 待验库存；\n- 现金余额。\n\n所有零件数量、验收数量和库存数量均为非负整数，单位为零件单位。现金余额与实际费用均按整数货币单位计量。\n\n## 3. 每周业务顺序\n\n每周必须按以下顺序开展业务：\n\n1. 本周预算到账；\n2. 验收上周末已经在库的待验旧零件；\n3. 本周采购的新、旧零件到货，并完成相应入库处理；\n4. 支付本周采购和验收费用，核算周末库存和现金余额。\n\n每周采购请求都必须在对应周执行并完成到货，不得跳过任何一周，也不得将采购移到其他周。第2周采购在第1周采购完成之后执行；第3周采购必须在第3周完成。\n\n## 4. 采购要求\n\n初始总库存为12单位，全部已验收合格，可用于应急保障；初始待验库存为0。\n\n每周采购须同时满足：\n\n- 总采购量为整数，至少19单位、至多71单位；\n- 总采购量等于新零件采购量与旧零件采购量之和；\n- 新零件和旧零件采购量分别为非负整数，单项原始上限均为71单位；\n- 新零件采购量至少占本周总采购量的40%，不得因数量整数化而向下放宽该比例；\n- 新零件采购量不得超过当周供应上限，供应上限由周度数据文件给出。\n\n新零件供给上限是附加条件，不能替代或修改每周总采购量的原始区间。\n\n由于不存在实物消耗，每周末总库存等于上周末总库存加本周总采购量。第5周末总库存必须至少达到60单位，该条件须与第5周末可用库存要求同时保留。\n\n## 5. 入库、跨周验收与库存状态\n\n### 5.1 新零件\n\n新零件随货提供合格证明，经本周入库核验后，当周即可成为可用库存。新零件入库核验不产生单独收费，其费用已包含在采购单价中。\n\n### 5.2 旧零件\n\n旧零件到货后先进入待验库存，至少经过一个周界才能验收：\n\n- 本周只能验收上周末已经在库的待验旧零件；\n- 本周验收量不得超过上周末待验库存；\n- 本周刚到货的旧零件不能在本周验收；\n- 未验收的旧零件可跨周留存；\n- 第5周到货的旧零件计入第5周末总库存，但本规划期内不能完成验收。\n\n所有接受验收的旧零件均通过验收，不发生数量损失。验收只是把零件由待验状态转为可用状态，不减少总库存。\n\n### 5.3 库存结转口径\n\n每周末：\n\n- 可用库存等于上周末可用库存，加本周新零件采购量，再加本周旧零件验收量；\n- 待验库存等于上周末待验库存，加本周旧零件采购量，再减本周旧零件验收量；\n- 总库存必须等于可用库存与待验库存之和。\n\n初始状态也必须满足总库存与两类状态库存一致。所有库存状态非负且为整数，可统一采用367单位作为有效上界；该上界来自初始12单位加5周各至多71单位采购。\n\n## 6. 质量作业能力与能力预留\n\n新零件入库核验和旧零件验收共用当周质量作业资源：\n\n- 每单位新零件入库核验占用1个质量作业单位；\n- 每单位旧零件验收占用1个质量作业单位；\n- 旧零件到货后的登记和待验存放不占用该资源。\n\n每周质量作业总能力从周度数据读取。每周必须预留至少总能力的20%，预留量按整数作业单位向上取整；数据文件中的强制预留量按此口径生成。\n\n本周新零件入库核验量、旧零件验收量和强制预留量之和，不得超过本周质量作业总能力。\n\n能力预留：\n\n- 不得用于计划内作业；\n- 不得跨周结转；\n- 不产生实物库存；\n- 不发生实际验收费用；\n- 不允许用现金替代，也不允许购买额外能力。\n\n报告中的“计划外剩余能力”是总能力扣除本周新零件入库核验与旧零件验收实际占用后的余额，包含强制预留部分，不是再次扣除强制预留后的余额。\n\n## 7. 每周末可用库存预留\n\n每周末可用库存不得低于周度数据给出的当周应急预留下限。\n\n该要求作用于同一份可用库存：\n\n- 预留零件仍在仓库中，不算消耗或出库；\n- 不需要每周另行扣除一批库存；\n- 待验旧零件不能用于满足可用库存预留下限。\n\n第5周末可用库存下限与第5周末总库存至少60单位的条件同时适用，不得删除或修改后者。\n\n## 8. 资金、现金结转与流动性预留\n\n初始现金余额为100货币单位。公司只能使用已有现金和当周到账预算，不得借款、透支或提前使用未来周预算。\n\n费用口径如下：\n\n- 新零件采购费用等于采购数量乘以每单位5货币单位；\n- 旧零件采购费用等于采购数量乘以每单位3货币单位；\n- 旧零件验收费用等于实际验收数量乘以每单位1货币单位；\n- 新零件入库核验费用已包含在新零件采购费用中；\n- 初始库存不再支付采购或验收费用；\n- 没有其他现金收入或支出，不计利息、库存持有费和固定订货费。\n\n每周末现金余额等于上周末现金余额，加当周到账预算，减本周新、旧零件采购费用和实际旧零件验收费用。\n\n每周末现金余额必须非负、为整数，且不得低于当周现金预留下限。可采用“初始现金加截至本周累计到账预算”作为当周现金余额的有效上界。\n\n现金预留是余额下限，不是额外支出，可以随实际余额结转到下一周，但下一周末仍须满足下一周的预留下限。\n\n现金预留、可用库存预留和质量作业能力预留分别作用于货币、实物和作业能力，三者相互独立，不得替代或合并计算。\n\n## 9. 结果输出与核验\n\n程序应输出：\n\n1. COPT 求解状态；\n2. 最优总采购量；\n3. 各周总采购量、新零件采购量、旧零件采购量和旧零件验收量；\n4. 周0及各周末的总库存、可用库存、待验库存和现金余额；\n5. 各周质量作业实际占用量、强制预留量和计划外剩余能力；\n6. 各周可用库存减当周预留下限的数量，以及现金余额减当周现金预留下限的余额；\n7. 简要可行性核验，覆盖采购数量范围、采购组成、新零件比例与供给上限、跨周验收、库存结转与一致性、质量能力和全部预留要求、现金结转，以及第5周末总库存要求。\n\n仅在已确认最优时，将结果称为最优方案。如果求解未证明最优，应如实说明求解状态；如提供可行方案，应明确其尚未证明最优。\n\n若模型不可行，应明确报告不可行，不得通过放宽采购、验收、资金或预留规则获得方案。\n\n## 10. 输入 CSV 文件定义\n\n全部 CSV 使用 UTF-8 编码，首行为字段名。输入没有空值；不得用空值表示零。各文件不包含重复记录。以下字段顺序与实际文件表头一致。\n\n### ./data/planning_parameters.csv\n\n每行代表本次完整规划的一组全局参数，本文件恰有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| planning_weeks | 规划周数 | integer | 周，5 |\n| initial_total_inventory | 初始总库存 | integer | 零件单位，12 |\n| initial_usable_inventory | 初始可用库存 | integer | 零件单位，12 |\n| initial_pending_inventory | 初始待验库存 | integer | 零件单位，0 |\n| initial_cash | 初始现金余额 | integer | 货币单位，100 |\n| weekly_purchase_min | 每周总采购量下限 | integer | 零件单位，19 |\n| weekly_purchase_max | 每周总采购量上限 | integer | 零件单位，71 |\n| component_purchase_max | 每周新、旧零件各自的原始采购上限 | integer | 零件单位，71 |\n| new_purchase_min_ratio | 新零件占当周总采购量的最低比例 | number | 比例，0.4 |\n| inventory_upper_bound | 各库存状态统一有效上界 | integer | 零件单位，367 |\n| final_total_inventory_min | 第5周末总库存下限 | integer | 零件单位，60 |\n| quality_reserve_ratio | 质量作业能力最低预留比例 | number | 比例，0.20，预留作业单位向上取整 |\n| new_unit_cost | 新零件采购单价，包含入库核验费用 | integer | 货币单位/零件单位，5 |\n| old_unit_cost | 旧零件采购单价 | integer | 货币单位/零件单位，3 |\n| acceptance_unit_cost | 旧零件实际验收单价 | integer | 货币单位/验收单位，1 |\n\n本文件为单行参数表，无需记录编号；参数共同适用于周度数据中的全部5周。\n\n### ./data/weekly_requirements.csv\n\n每行代表一个规划周的供应、质量作业能力、库存预留和资金要求。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| week | 规划周编号 | integer | 不适用，1至5 |\n| new_supply_max | 当周新零件供给上限 | integer | 零件单位 |\n| quality_capacity | 当周质量作业总能力 | integer | 作业单位/周 |\n| quality_reserve | 当周强制质量能力预留量 | integer | 作业单位，按总能力的20%向上取整 |\n| usable_inventory_min | 当周末可用库存预留下限 | integer | 零件单位 |\n| budget | 当周到账预算 | integer | 货币单位 |\n| cash_min | 当周末现金预留下限 | integer | 货币单位 |\n\n`week` 是唯一标识，必须恰好覆盖1至5。各周按编号顺序结转库存和现金，周1的前序状态使用全局参数中的初始值。`quality_reserve` 是由当周总能力和全局预留比例生成的派生输入，不是可自行减少的预留决策。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：planning_parameters.csv\nplanning_weeks,initial_total_inventory,initial_usable_inventory,initial_pending_inventory,initial_cash,weekly_purchase_min,weekly_purchase_max,component_purchase_max,new_purchase_min_ratio,inventory_upper_bound,final_total_inventory_min,quality_reserve_ratio,new_unit_cost,old_unit_cost,acceptance_unit_cost\r\n5,12,12,0,100,19,71,71,0.4,367,60,0.2,5,3,1\r\n\n\n数据文件：weekly_requirements.csv\nweek,new_supply_max,quality_capacity,quality_reserve,usable_inventory_min,budget,cash_min\r\n1,9,18,4,20,40,50\r\n2,10,24,5,38,70,40\r\n3,11,28,6,58,90,35\r\n4,9,27,6,78,95,35\r\n5,12,30,6,105,130,70",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-c2b61dcef8d214ac",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "diagnostics": [
+    {
+      "kind": "BASE_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "p1": 22,
+          "p2": 19,
+          "p3": 20,
+          "p4": 20,
+          "p5": 19,
+          "n1": 9,
+          "n2": 10,
+          "n3": 11,
+          "n4": 9,
+          "n5": 12,
+          "o1": 13,
+          "o2": 9,
+          "o3": 9,
+          "o4": 11,
+          "o5": 7,
+          "a1": 0,
+          "a2": 9,
+          "a3": 11,
+          "a4": 11,
+          "a5": 11,
+          "u1": 21,
+          "u2": 40,
+          "u3": 62,
+          "u4": 82,
+          "u5": 105,
+          "v1": 13,
+          "v2": 13,
+          "v3": 11,
+          "v4": 11,
+          "v5": 7,
+          "tot1": 34,
+          "tot2": 53,
+          "tot3": 73,
+          "tot4": 93,
+          "tot5": 112,
+          "cash1": 56,
+          "cash2": 40,
+          "cash3": 37,
+          "cash4": 43,
+          "cash5": 81
+        },
+        "objective": {
+          "value": 100.0,
+          "unit": "objective_units",
+          "direction": "min"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.0049991607666015625
+      }
+    },
+    {
+      "kind": "SEARCH_GATE",
+      "gate": {
+        "search_needed": false,
+        "reason": "The task is a fully specified mixed-integer optimization problem with all parameters, constraints, base model, and data files supplied; solving it does not require external public information.",
+        "queries": []
+      }
+    },
+    {
+      "kind": "FINAL_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "p1": 22,
+          "p2": 19,
+          "p3": 20,
+          "p4": 20,
+          "p5": 19,
+          "n1": 9,
+          "n2": 10,
+          "n3": 11,
+          "n4": 9,
+          "n5": 12,
+          "o1": 13,
+          "o2": 9,
+          "o3": 9,
+          "o4": 11,
+          "o5": 7,
+          "a1": 0,
+          "a2": 9,
+          "a3": 11,
+          "a4": 11,
+          "a5": 11,
+          "u1": 21,
+          "u2": 40,
+          "u3": 62,
+          "u4": 82,
+          "u5": 105,
+          "v1": 13,
+          "v2": 13,
+          "v3": 11,
+          "v4": 11,
+          "v5": 7,
+          "tot1": 34,
+          "tot2": 53,
+          "tot3": 73,
+          "tot4": 93,
+          "tot5": 112,
+          "cash1": 56,
+          "cash2": 40,
+          "cash3": 37,
+          "cash4": 43,
+          "cash5": 81
+        },
+        "objective": {
+          "value": 100.0,
+          "unit": "objective_units",
+          "direction": "min"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.0039997100830078125
+      }
+    },
+    {
+      "kind": "FINALIZE",
+      "result": {
+        "method": "standard_legacy_knowledge_v1",
+        "version": "standard_legacy_knowledge_v1",
+        "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+        "decision": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "p1": 22,
+            "p2": 19,
+            "p3": 20,
+            "p4": 20,
+            "p5": 19,
+            "n1": 9,
+            "n2": 10,
+            "n3": 11,
+            "n4": 9,
+            "n5": 12,
+            "o1": 13,
+            "o2": 9,
+            "o3": 9,
+            "o4": 11,
+            "o5": 7,
+            "a1": 0,
+            "a2": 9,
+            "a3": 11,
+            "a4": 11,
+            "a5": 11,
+            "u1": 21,
+            "u2": 40,
+            "u3": 62,
+            "u4": 82,
+            "u5": 105,
+            "v1": 13,
+            "v2": 13,
+            "v3": 11,
+            "v4": 11,
+            "v5": 7,
+            "tot1": 34,
+            "tot2": 53,
+            "tot3": 73,
+            "tot4": 93,
+            "tot5": 112,
+            "cash1": 56,
+            "cash2": 40,
+            "cash3": 37,
+            "cash4": 43,
+            "cash5": 81
+          },
+          "objective": {
+            "value": 100.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.0039997100830078125
+        },
+        "last_solve": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "p1": 22,
+            "p2": 19,
+            "p3": 20,
+            "p4": 20,
+            "p5": 19,
+            "n1": 9,
+            "n2": 10,
+            "n3": 11,
+            "n4": 9,
+            "n5": 12,
+            "o1": 13,
+            "o2": 9,
+            "o3": 9,
+            "o4": 11,
+            "o5": 7,
+            "a1": 0,
+            "a2": 9,
+            "a3": 11,
+            "a4": 11,
+            "a5": 11,
+            "u1": 21,
+            "u2": 40,
+            "u3": 62,
+            "u4": 82,
+            "u5": 105,
+            "v1": 13,
+            "v2": 13,
+            "v3": 11,
+            "v4": 11,
+            "v5": 7,
+            "tot1": 34,
+            "tot2": 53,
+            "tot3": 73,
+            "tot4": 93,
+            "tot5": 112,
+            "cash1": 56,
+            "cash2": 40,
+            "cash3": 37,
+            "cash4": 43,
+            "cash5": 81
+          },
+          "objective": {
+            "value": 100.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.0039997100830078125
+        },
+        "base_solution": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "p1": 22,
+            "p2": 19,
+            "p3": 20,
+            "p4": 20,
+            "p5": 19,
+            "n1": 9,
+            "n2": 10,
+            "n3": 11,
+            "n4": 9,
+            "n5": 12,
+            "o1": 13,
+            "o2": 9,
+            "o3": 9,
+            "o4": 11,
+            "o5": 7,
+            "a1": 0,
+            "a2": 9,
+            "a3": 11,
+            "a4": 11,
+            "a5": 11,
+            "u1": 21,
+            "u2": 40,
+            "u3": 62,
+            "u4": 82,
+            "u5": 105,
+            "v1": 13,
+            "v2": 13,
+            "v3": 11,
+            "v4": 11,
+            "v5": 7,
+            "tot1": 34,
+            "tot2": 53,
+            "tot3": 73,
+            "tot4": 93,
+            "tot5": 112,
+            "cash1": 56,
+            "cash2": 40,
+            "cash3": 37,
+            "cash4": 43,
+            "cash5": 81
+          },
+          "objective": {
+            "value": 100.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.0049991607666015625
+        },
+        "model": {
+          "variables": [
+            {
+              "id": "p1",
+              "type": "INTEGER",
+              "lb": 19,
+              "ub": 71
+            },
+            {
+              "id": "p2",
+              "type": "INTEGER",
+              "lb": 19,
+              "ub": 71
+            },
+            {
+              "id": "p3",
+              "type": "INTEGER",
+              "lb": 19,
+              "ub": 71
+            },
+            {
+              "id": "p4",
+              "type": "INTEGER",
+              "lb": 19,
+              "ub": 71
+            },
+            {
+              "id": "p5",
+              "type": "INTEGER",
+              "lb": 19,
+              "ub": 71
+            },
+            {
+              "id": "n1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "n2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "n3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "n4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "n5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "o1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "o2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "o3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "o4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "o5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 71
+            },
+            {
+              "id": "a1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "a2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "a3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "a4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "a5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "u1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "u2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "u3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "u4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "u5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "v1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "v2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "v3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "v4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "v5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "tot1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "tot2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "tot3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "tot4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "tot5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 367
+            },
+            {
+              "id": "cash1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 140
+            },
+            {
+              "id": "cash2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 210
+            },
+            {
+              "id": "cash3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 300
+            },
+            {
+              "id": "cash4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 395
+            },
+            {
+              "id": "cash5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 525
+            }
+          ],
+          "objective": {
+            "sense": "min",
+            "unit": "objective_units",
+            "constant": 0,
+            "coefficients": {
+              "p1": 1,
+              "p2": 1,
+              "p3": 1,
+              "p4": 1,
+              "p5": 1
+            }
+          },
+          "constraints": [
+            {
+              "name": "purchase_link_1",
+              "coefficients": {
+                "p1": 1,
+                "n1": -1,
+                "o1": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "purchase_link_2",
+              "coefficients": {
+                "p2": 1,
+                "n2": -1,
+                "o2": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "purchase_link_3",
+              "coefficients": {
+                "p3": 1,
+                "n3": -1,
+                "o3": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "purchase_link_4",
+              "coefficients": {
+                "p4": 1,
+                "n4": -1,
+                "o4": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "purchase_link_5",
+              "coefficients": {
+                "p5": 1,
+                "n5": -1,
+                "o5": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "new_ratio_1",
+              "coefficients": {
+                "n1": 5,
+                "p1": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "new_ratio_2",
+              "coefficients": {
+                "n2": 5,
+                "p2": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "new_ratio_3",
+              "coefficients": {
+                "n3": 5,
+                "p3": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "new_ratio_4",
+              "coefficients": {
+                "n4": 5,
+                "p4": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "new_ratio_5",
+              "coefficients": {
+                "n5": 5,
+                "p5": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "new_supply_1",
+              "coefficients": {
+                "n1": 1
+              },
+              "sense": "<=",
+              "rhs": 9
+            },
+            {
+              "name": "new_supply_2",
+              "coefficients": {
+                "n2": 1
+              },
+              "sense": "<=",
+              "rhs": 10
+            },
+            {
+              "name": "new_supply_3",
+              "coefficients": {
+                "n3": 1
+              },
+              "sense": "<=",
+              "rhs": 11
+            },
+            {
+              "name": "new_supply_4",
+              "coefficients": {
+                "n4": 1
+              },
+              "sense": "<=",
+              "rhs": 9
+            },
+            {
+              "name": "new_supply_5",
+              "coefficients": {
+                "n5": 1
+              },
+              "sense": "<=",
+              "rhs": 12
+            },
+            {
+              "name": "inventory_usable_1",
+              "coefficients": {
+                "u1": 1,
+                "n1": -1,
+                "a1": -1
+              },
+              "sense": "==",
+              "rhs": 12
+            },
+            {
+              "name": "inventory_pending_1",
+              "coefficients": {
+                "v1": 1,
+                "o1": -1,
+                "a1": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_flow_1",
+              "coefficients": {
+                "tot1": 1,
+                "p1": -1
+              },
+              "sense": "==",
+              "rhs": 12
+            },
+            {
+              "name": "inventory_total_identity_1",
+              "coefficients": {
+                "tot1": 1,
+                "u1": -1,
+                "v1": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_usable_2",
+              "coefficients": {
+                "u2": 1,
+                "u1": -1,
+                "n2": -1,
+                "a2": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_pending_2",
+              "coefficients": {
+                "v2": 1,
+                "v1": -1,
+                "o2": -1,
+                "a2": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_flow_2",
+              "coefficients": {
+                "tot2": 1,
+                "tot1": -1,
+                "p2": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_identity_2",
+              "coefficients": {
+                "tot2": 1,
+                "u2": -1,
+                "v2": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_usable_3",
+              "coefficients": {
+                "u3": 1,
+                "u2": -1,
+                "n3": -1,
+                "a3": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_pending_3",
+              "coefficients": {
+                "v3": 1,
+                "v2": -1,
+                "o3": -1,
+                "a3": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_flow_3",
+              "coefficients": {
+                "tot3": 1,
+                "tot2": -1,
+                "p3": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_identity_3",
+              "coefficients": {
+                "tot3": 1,
+                "u3": -1,
+                "v3": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_usable_4",
+              "coefficients": {
+                "u4": 1,
+                "u3": -1,
+                "n4": -1,
+                "a4": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_pending_4",
+              "coefficients": {
+                "v4": 1,
+                "v3": -1,
+                "o4": -1,
+                "a4": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_flow_4",
+              "coefficients": {
+                "tot4": 1,
+                "tot3": -1,
+                "p4": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_identity_4",
+              "coefficients": {
+                "tot4": 1,
+                "u4": -1,
+                "v4": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_usable_5",
+              "coefficients": {
+                "u5": 1,
+                "u4": -1,
+                "n5": -1,
+                "a5": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_pending_5",
+              "coefficients": {
+                "v5": 1,
+                "v4": -1,
+                "o5": -1,
+                "a5": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_flow_5",
+              "coefficients": {
+                "tot5": 1,
+                "tot4": -1,
+                "p5": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "inventory_total_identity_5",
+              "coefficients": {
+                "tot5": 1,
+                "u5": -1,
+                "v5": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "accept_limit_1",
+              "coefficients": {
+                "a1": 1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "accept_limit_2",
+              "coefficients": {
+                "a2": 1,
+                "v1": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "accept_limit_3",
+              "coefficients": {
+                "a3": 1,
+                "v2": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "accept_limit_4",
+              "coefficients": {
+                "a4": 1,
+                "v3": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "accept_limit_5",
+              "coefficients": {
+                "a5": 1,
+                "v4": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "quality_capacity_1",
+              "coefficients": {
+                "n1": 1,
+                "a1": 1
+              },
+              "sense": "<=",
+              "rhs": 14
+            },
+            {
+              "name": "quality_capacity_2",
+              "coefficients": {
+                "n2": 1,
+                "a2": 1
+              },
+              "sense": "<=",
+              "rhs": 19
+            },
+            {
+              "name": "quality_capacity_3",
+              "coefficients": {
+                "n3": 1,
+                "a3": 1
+              },
+              "sense": "<=",
+              "rhs": 22
+            },
+            {
+              "name": "quality_capacity_4",
+              "coefficients": {
+                "n4": 1,
+                "a4": 1
+              },
+              "sense": "<=",
+              "rhs": 21
+            },
+            {
+              "name": "quality_capacity_5",
+              "coefficients": {
+                "n5": 1,
+                "a5": 1
+              },
+              "sense": "<=",
+              "rhs": 24
+            },
+            {
+              "name": "usable_inventory_min_1",
+              "coefficients": {
+                "u1": 1
+              },
+              "sense": ">=",
+              "rhs": 20
+            },
+            {
+              "name": "usable_inventory_min_2",
+              "coefficients": {
+                "u2": 1
+              },
+              "sense": ">=",
+              "rhs": 38
+            },
+            {
+              "name": "usable_inventory_min_3",
+              "coefficients": {
+                "u3": 1
+              },
+              "sense": ">=",
+              "rhs": 58
+            },
+            {
+              "name": "usable_inventory_min_4",
+              "coefficients": {
+                "u4": 1
+              },
+              "sense": ">=",
+              "rhs": 78
+            },
+            {
+              "name": "usable_inventory_min_5",
+              "coefficients": {
+                "u5": 1
+              },
+              "sense": ">=",
+              "rhs": 105
+            },
+            {
+              "name": "final_total_inventory_min",
+              "coefficients": {
+                "tot5": 1
+              },
+              "sense": ">=",
+              "rhs": 60
+            },
+            {
+              "name": "cash_balance_1",
+              "coefficients": {
+                "cash1": 1,
+                "n1": 5,
+                "o1": 3,
+                "a1": 1
+              },
+              "sense": "==",
+              "rhs": 140
+            },
+            {
+              "name": "cash_balance_2",
+              "coefficients": {
+                "cash2": 1,
+                "cash1": -1,
+                "n2": 5,
+                "o2": 3,
+                "a2": 1
+              },
+              "sense": "==",
+              "rhs": 70
+            },
+            {
+              "name": "cash_balance_3",
+              "coefficients": {
+                "cash3": 1,
+                "cash2": -1,
+                "n3": 5,
+                "o3": 3,
+                "a3": 1
+              },
+              "sense": "==",
+              "rhs": 90
+            },
+            {
+              "name": "cash_balance_4",
+              "coefficients": {
+                "cash4": 1,
+                "cash3": -1,
+                "n4": 5,
+                "o4": 3,
+                "a4": 1
+              },
+              "sense": "==",
+              "rhs": 95
+            },
+            {
+              "name": "cash_balance_5",
+              "coefficients": {
+                "cash5": 1,
+                "cash4": -1,
+                "n5": 5,
+                "o5": 3,
+                "a5": 1
+              },
+              "sense": "==",
+              "rhs": 130
+            },
+            {
+              "name": "cash_min_1",
+              "coefficients": {
+                "cash1": 1
+              },
+              "sense": ">=",
+              "rhs": 50
+            },
+            {
+              "name": "cash_min_2",
+              "coefficients": {
+                "cash2": 1
+              },
+              "sense": ">=",
+              "rhs": 40
+            },
+            {
+              "name": "cash_min_3",
+              "coefficients": {
+                "cash3": 1
+              },
+              "sense": ">=",
+              "rhs": 35
+            },
+            {
+              "name": "cash_min_4",
+              "coefficients": {
+                "cash4": 1
+              },
+              "sense": ">=",
+              "rhs": 35
+            },
+            {
+              "name": "cash_min_5",
+              "coefficients": {
+                "cash5": 1
+              },
+              "sense": ">=",
+              "rhs": 70
+            }
+          ]
+        },
+        "stop_reason": "FINISHED",
+        "error": null,
+        "delivery_status": "PROVISIONAL",
+        "information_complete": null,
+        "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+        "acquisition_enabled": true,
+        "acquisition_stop": null,
+        "search_gate": {
+          "search_needed": false,
+          "reason": "The task is a fully specified mixed-integer optimization problem with all parameters, constraints, base model, and data files supplied; solving it does not require external public information.",
+          "queries": []
+        },
+        "unresolved": [],
+        "final_modeling_attempted": true,
+        "final_modeling_completed": true,
+        "resources": {
+          "model": 3,
+          "search": 0,
+          "read": 0,
+          "solve": 2,
+          "format_repairs": 0,
+          "schedule": 0
+        },
+        "elapsed_seconds": 112.90700000000652,
+        "usage": {
+          "calls": 3,
+          "model_calls": 3,
+          "search_calls": 0,
+          "read_calls": 0,
+          "channel": "RESPONSES_COMPATIBLE_API",
+          "retrieval_channel": "DEEPSEEK_SEARCH_API",
+          "read_channel": "BASELINE_HTTP",
+          "read_http_requests": 0,
+          "usage_complete": true,
+          "actual_temperature": 1.0,
+          "strict_token_budget_verified": false,
+          "wall_seconds": 112.75,
+          "actual_models": [
+            "deepseek-flash"
+          ],
+          "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+          "prompt_tokens": 20493,
+          "known_prompt_tokens": 20493,
+          "completion_tokens": 16261,
+          "known_completion_tokens": 16261,
+          "total_tokens": 36754,
+          "known_total_tokens": 36754,
+          "search_backend": "DEEPSEEK_SEARCH_API",
+          "search_http_requests": 0,
+          "search_successful_nonempty": 0,
+          "search_empty_results": 0,
+          "search_cost_usd": 0,
+          "search_known_cost_usd": 0,
+          "search_unknown_cost": false,
+          "search_cost_basis": "official_published_rate_not_invoice",
+          "search_price_usd_per_1000": 0.75,
+          "model_total_tokens": 36754,
+          "search_billing_unit": "successful_nonempty_request",
+          "acquisition_enabled": true,
+          "blocked_external_operations": {
+            "search": 0,
+            "read": 0
+          }
+        },
+        "standard_protocol": "legacy_knowledge_v1",
+        "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+        "legacy_source_sha256": {
+          "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+          "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+          "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+        },
+        "model_ir_contract": "archived_variables_objective_constraints",
+        "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+        "model_format_repair_policy": "none; strict archived parser and validator",
+        "solver_scope": "current shared solver, not archived solver.py"
+      }
+    }
+  ]
+}

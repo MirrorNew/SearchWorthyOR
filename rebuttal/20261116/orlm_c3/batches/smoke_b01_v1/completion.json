@@ -1,0 +1,19 @@
+{
+  "complete": true,
+  "records": [
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "returncode": 0,
+      "seconds": 170.844,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "returncode": 0,
+      "seconds": 179.328,
+      "watchdog_timeout": false
+    }
+  ]
+}

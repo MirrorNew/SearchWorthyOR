@@ -1,0 +1,104 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "model": null,
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 高校考试排程、考场启用与服务承诺优化需求\n\n## 1. 任务与目标\n\n使用 Python 调用 COPT 建立并求解混合整数规划问题，为数学、物理和化学三门考试制定三天内的考试安排，同时决定学生分配、教室启用、教师出勤和监考分配。\n\n唯一优化目标是**最小化考试总场次**。没有次级目标；教室启用、教师出勤均不产生目标中的费用，也不得进一步以减少启用、减少出勤或提前完成考试作为优化目标。\n\n运行时从本文最后列明的 CSV 文件读取全部输入数据。所有相对路径均以运行时当前工作目录为基准。\n\n## 2. 业务范围与时间口径\n\n- 科目编号从0开始：0为数学，1为物理，2为化学。\n- 日期编号为0、1、2，依次表示第一、第二、第三天，并非实际日历日期。\n- 教室编号0为教室A，1为教室B。\n- 日内时段编号0为上午，1为下午。\n- 教师编号0至4，依次表示教师1至教师5。\n- 三天每天均有上午09:00—11:00、下午14:00—16:00两个时段。\n- 每场占用一个完整时段，持续120分钟，不允许调整开始、结束时刻或将一场跨越时段。\n- 所有绝对时刻以第一天00:00为第0分钟。时段开始时刻按“1440乘日期编号，加540，再加300乘时段编号”计算；结束时刻为开始时刻加120分钟。读取 `slots.csv` 中的已生成时刻即可。\n\n三科均为必考科目。学生可按科目拆分到不同场次，允许跨日期、跨时段。没有跨科目学生身份对应数据，不添加学生跨科考试冲突约束。\n\n## 3. 应作出的安排与场次口径\n\n应决定：\n\n1. 每科在哪些日期、教室和时段举办考试；\n2. 各场分配的学生人数；\n3. 每天实际启用的教室；\n4. 每天实际出勤的教师及各场监考教师名单。\n\n一场考试是一个确定的“科目、日期、教室、时段”组合。同科同时使用两个教室计两场，跨日期或跨时段分批举办也分别计场。\n\n同一科目在同一天的同一教室**至多举办一场**，不能上午和下午各办一场。按“科目、日期、教室”汇总时：\n\n- 是否开场取决于当天该教室是否存在该科的实际场次；\n- 学生人数是该组合下实际场次人数的合计；\n- 因最多一场，该组合的学生合计不得超过教室容量。\n\n## 4. 学生覆盖与场地使用\n\n### 4.1 学生分配\n\n- 每科至少举办一场。\n- 每科各场人数之和必须恰好等于该科参考人数：数学150人、物理120人、化学180人。\n- 人数必须是非负整数。\n- 未举办的场次不得分配学生；实际举办的每场至少1名学生，且不超过所在教室容量。\n- 教室A容量为200人，教室B容量为100人，启用与否不改变容量。\n- 各场人数代表互不重复的该科考生分配，不允许漏考、重复参加同科考试、重复计数或空场。\n\n### 4.2 场地与每日场数\n\n- 每个教室每个时段最多举办一场，不得安排不同科目共用同一教室的同一时段。\n- 教室B每天最多举办一门考试，即最多一场。\n- 每天总考试场次不得超过10场。即使其他资源规则已经使实际可排场次更少，也须保留这项限制。\n\n### 4.3 教室启用\n\n- 教室只有在当天启用后才能举办考试。\n- 启用的教室当天必须实际举办至少一场，不允许空启用。\n- 三天内每个教室分别最多启用两天。\n- 启用天数仅作为资源限制，不是费用或优化目标。\n\n## 5. 整科先后依赖\n\n存在以下两条整科依赖：\n\n- 数学全部场次结束后，至少经过60分钟考务交接，物理才可开始任何场次；\n- 物理全部场次结束后，至少经过60分钟考务交接，化学才可开始任何场次。\n\n这项要求适用于前后两科所有实际场次，而不只是比较两科的第一场。后一科最早开始时刻，不得早于前一科最晚结束时刻加该条依赖要求的交接间隔；恰好相等允许。\n\n例如，物理若拆成两场，化学须等待两场物理都结束并完成交接后才可开始。\n\n输入保留题面给定的4000分钟时间放宽界限参数，适用于本题全部时刻范围。它不是交接时间，不改变以上业务要求，也不要求采用特定建模方式。\n\n## 6. 教师资格、监考能力与出勤\n\n学校共有5名教师，三天每天的上午和下午均可出勤，没有额外不可用时段。科目资格和教室B设备操作资格从 `teachers.csv` 读取。\n\n### 6.1 场次监考\n\n- 每个实际场次至少有1名监考教师。\n- 所有被分配的教师都必须具有对应科目的监考资格。\n- 未举办的场次不得安排教师。\n- 每名教师在同一日期的同一时段最多监考一场。\n- 每名教师每天最多监考两场。\n- 每名监考教师在一场内最多负责80名学生。因此，每场学生人数不能超过该场监考人数乘80。\n- 同一场的学生责任人数可在监考团队内合理划分，不要求提供学生个人名单或逐人责任分配。\n- 教室B每场至少有一名同时具备该科监考资格和B设备操作资格的教师。该教师也计入普通监考人数及总监考能力，不额外增加一名人员。\n\n### 6.2 出勤启用\n\n- 教师只有在当天启用出勤后才能监考。\n- 当天启用出勤的教师必须实际承担至少一场监考，不允许空出勤。\n- 每天最多启用3名不同教师。\n- 三天累计最多7个教师出勤人日。\n- 一名教师同一天监考一场或两场均计1个人日；不同日期出勤分别计数。\n- 教师总人数仍为5名，不得通过增加教师满足需求。\n\n## 7. 学生服务承诺\n\n以下承诺均为必须满足的硬要求，不得降低全部学生最终参加考试的覆盖人数。\n\n### 7.1 按时完成\n\n学生所在场次结束时刻不晚于该科截止时刻，才计为按时完成；恰好在截止时刻结束也计入。\n\n- 数学：截止第一天11:00，即第660分钟，至少120人按时完成。\n- 物理：截止第二天11:00，即第2100分钟，至少100人按时完成。\n- 化学：截止第三天11:00，即第3540分钟，至少140人按时完成。\n\n计算每科按时完成人数时，汇总所有满足结束时刻要求的场次人数，不按开始时刻判定。报告中的按时完成比例，以该科全部参考人数为分母；硬约束采用整数人数门槛，不替换成舍入后的比例门槛。\n\n### 7.2 教室A覆盖\n\n- 数学至少120名学生在教室A参加考试。\n- 化学至少150名学生在教室A参加考试。\n- 物理无教室A最低覆盖要求，输入门槛为0。\n\n教室A覆盖与按时完成分别统计。学生可同时计入这两项服务指标，但在该科总人数中只能计一次。\n\n## 8. 求解结果输出\n\n程序应输出：\n\n1. COPT求解状态。若已证明最优，给出最少考试场次。\n2. 每个实际场次的科目、日期、教室、时段、开始时刻、结束时刻、学生人数和监考教师名单。时刻应明确显示日期及钟表时间，或明确采用相对第一天00:00的分钟口径。\n3. 每天的教室启用情况、教师出勤名单、考试场数，以及三天总教师出勤人日。\n4. 每科总安排人数、按时完成人数、按时完成比例和教室A覆盖人数。\n5. 每科最早开始及最晚结束时刻，并分别说明数学到物理、物理到化学的整科依赖是否满足。\n6. 如模型无可行解，明确报告无可行解。若存在可行方案但尚未证明最优，只能报告该方案及其场数，不能称为已证明的最少场次。若尚无可行方案，应明确说明，不能输出虚构安排。\n\n不要求在多个最少场次方案中按其他指标择优。\n\n## 9. 输入 CSV 文件与字段\n\n所有 CSV 均为 UTF-8 编码，含一行表头，无空值、无重复主键。资格字段使用整数1和0，分别表示具有和不具有资格。标识字段均为从0开始的整数。\n\n### ./data/courses.csv\n\n每行代表一门必考科目及其学生服务门槛。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| course_id | 科目编号 | integer | 0数学、1物理、2化学 |\n| course_name | 科目名称 | string | 不适用 |\n| student_count | 全部参考人数 | integer | 人 |\n| deadline_minute | 按时完成截止时刻 | integer | 分钟，相对第一天00:00 |\n| min_on_time_students | 至少按时完成人数 | integer | 人 |\n| min_room_a_students | 教室A最低覆盖人数 | integer | 人，0表示无最低覆盖要求 |\n\n主键为 `course_id`，共3行。\n\n### ./data/rooms.csv\n\n每行代表一个教室及其容量、启用天数上限。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| room_id | 教室编号 | integer | 0教室A、1教室B |\n| room_name | 教室名称 | string | 不适用 |\n| capacity | 场次学生容量 | integer | 人 |\n| max_activation_days | 三天内最多启用天数 | integer | 天 |\n\n主键为 `room_id`，共2行。\n\n### ./data/slots.csv\n\n每行代表一个日期的一个可用考试时段。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| day_id | 日期编号 | integer | 0第一天、1第二天、2第三天 |\n| slot_id | 日内时段编号 | integer | 0上午、1下午 |\n| slot_name | 时段名称 | string | 不适用 |\n| start_minute | 开始时刻 | integer | 分钟，相对第一天00:00 |\n| end_minute | 结束时刻 | integer | 分钟，相对第一天00:00 |\n\n联合主键为 `day_id, slot_id`，共6行，包含三天各两个时段。\n\n### ./data/teachers.csv\n\n每行代表一名教师及其监考、设备操作资格。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| teacher_id | 教师编号 | integer | 0至4 |\n| teacher_name | 教师名称 | string | 教师1至教师5 |\n| math_qualified | 数学监考资格 | integer | 1有资格，0无资格 |\n| physics_qualified | 物理监考资格 | integer | 1有资格，0无资格 |\n| chemistry_qualified | 化学监考资格 | integer | 1有资格，0无资格 |\n| room_b_operator | 教室B设备操作资格 | integer | 1有资格，0无资格 |\n\n主键为 `teacher_id`，共5行。三个科目资格字段分别对应 `courses.csv` 中科目编号0、1、2。\n\n### ./data/dependencies.csv\n\n每行代表一条整科先后依赖及其考务交接间隔。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| predecessor_course_id | 前科目编号 | integer | 关联 courses.csv 的 course_id |\n| successor_course_id | 后科目编号 | integer | 关联 courses.csv 的 course_id |\n| min_gap_minutes | 前科全部结束至后科任一场开始的最小间隔 | integer | 分钟 |\n\n联合主键为 `predecessor_course_id, successor_course_id`，共2行。\n\n### ./data/settings.csv\n\n唯一一行代表适用于整个排程问题的统一业务限制及时间参数。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| max_daily_sessions | 每天考试总场次上限 | integer | 场 |\n| max_daily_room_b_sessions | 教室B每天场次上限 | integer | 场 |\n| max_teacher_daily_sessions | 每位教师每天监考场次上限 | integer | 场 |\n| students_per_teacher | 每名教师每场最大负责人数 | integer | 人 |\n| max_daily_active_teachers | 每天启用的不同教师数上限 | integer | 人 |\n| max_total_teacher_days | 三天教师出勤人日上限 | integer | 人日 |\n| session_duration_minutes | 每场持续时间 | integer | 分钟 |\n| time_relaxation_bound_minutes | 题面给定、适用于全部时刻范围的时间放宽界限 | integer | 分钟 |\n\n该文件固定为1行，无标识字段。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：courses.csv\ncourse_id,course_name,student_count,deadline_minute,min_on_time_students,min_room_a_students\r\n0,数学,150,660,120,120\r\n1,物理,120,2100,100,0\r\n2,化学,180,3540,140,150\r\n\n\n数据文件：dependencies.csv\npredecessor_course_id,successor_course_id,min_gap_minutes\r\n0,1,60\r\n1,2,60\r\n\n\n数据文件：rooms.csv\nroom_id,room_name,capacity,max_activation_days\r\n0,教室A,200,2\r\n1,教室B,100,2\r\n\n\n数据文件：settings.csv\nmax_daily_sessions,max_daily_room_b_sessions,max_teacher_daily_sessions,students_per_teacher,max_daily_active_teachers,max_total_teacher_days,session_duration_minutes,time_relaxation_bound_minutes\r\n10,1,2,80,3,7,120,4000\r\n\n\n数据文件：slots.csv\nday_id,slot_id,slot_name,start_minute,end_minute\r\n0,0,上午,540,660\r\n0,1,下午,840,960\r\n1,0,上午,1980,2100\r\n1,1,下午,2280,2400\r\n2,0,上午,3420,3540\r\n2,1,下午,3720,3840\r\n\n\n数据文件：teachers.csv\nteacher_id,teacher_name,math_qualified,physics_qualified,chemistry_qualified,room_b_operator\r\n0,教师1,1,0,1,0\r\n1,教师2,1,1,0,1\r\n2,教师3,0,1,1,0\r\n3,教师4,1,0,1,0\r\n4,教师5,0,1,1,1",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-686e7e4838acd0d9",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "diagnostics": [
+    {
+      "kind": "FINALIZE",
+      "result": {
+        "method": "standard_legacy_knowledge_v1",
+        "version": "standard_legacy_knowledge_v1",
+        "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+        "decision": null,
+        "last_solve": null,
+        "base_solution": null,
+        "model": null,
+        "stop_reason": "ValueError",
+        "error": "Invalid model keys",
+        "delivery_status": "NONE",
+        "information_complete": null,
+        "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+        "acquisition_enabled": true,
+        "acquisition_stop": null,
+        "search_gate": null,
+        "unresolved": [
+          "Workflow did not complete: ValueError: Invalid model keys"
+        ],
+        "final_modeling_attempted": false,
+        "final_modeling_completed": false,
+        "resources": {
+          "model": 2,
+          "search": 0,
+          "read": 0,
+          "solve": 0,
+          "format_repairs": 0,
+          "schedule": 0
+        },
+        "elapsed_seconds": 837.2029999999795,
+        "usage": {
+          "calls": 2,
+          "model_calls": 2,
+          "search_calls": 0,
+          "read_calls": 0,
+          "channel": "RESPONSES_COMPATIBLE_API",
+          "retrieval_channel": "DEEPSEEK_SEARCH_API",
+          "read_channel": "BASELINE_HTTP",
+          "read_http_requests": 0,
+          "usage_complete": false,
+          "actual_temperature": null,
+          "strict_token_budget_verified": false,
+          "wall_seconds": 834.6869999999763,
+          "actual_models": [
+            "deepseek-flash"
+          ],
+          "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+          "prompt_tokens": null,
+          "known_prompt_tokens": 4474,
+          "completion_tokens": null,
+          "known_completion_tokens": 37069,
+          "total_tokens": null,
+          "known_total_tokens": 41543,
+          "search_backend": "DEEPSEEK_SEARCH_API",
+          "search_http_requests": 0,
+          "search_successful_nonempty": 0,
+          "search_empty_results": 0,
+          "search_cost_usd": 0,
+          "search_known_cost_usd": 0,
+          "search_unknown_cost": false,
+          "search_cost_basis": "official_published_rate_not_invoice",
+          "search_price_usd_per_1000": 0.75,
+          "model_total_tokens": null,
+          "search_billing_unit": "successful_nonempty_request",
+          "acquisition_enabled": true,
+          "blocked_external_operations": {
+            "search": 0,
+            "read": 0
+          }
+        },
+        "standard_protocol": "legacy_knowledge_v1",
+        "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+        "legacy_source_sha256": {
+          "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+          "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+          "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+        },
+        "model_ir_contract": "archived_variables_objective_constraints",
+        "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+        "model_format_repair_policy": "none; strict archived parser and validator",
+        "solver_scope": "current shared solver, not archived solver.py"
+      }
+    }
+  ]
+}

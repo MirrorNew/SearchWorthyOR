@@ -1,0 +1,5946 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "q_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "q_20",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "y_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_20",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "inv_start_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_start_20",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "inv_end_20",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 76
+      },
+      {
+        "id": "sat_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 15
+      },
+      {
+        "id": "sat_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 22
+      },
+      {
+        "id": "sat_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 18
+      },
+      {
+        "id": "sat_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "sat_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "sat_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "sat_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "sat_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 28
+      },
+      {
+        "id": "sat_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 32
+      },
+      {
+        "id": "sat_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 27
+      },
+      {
+        "id": "sat_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 31
+      },
+      {
+        "id": "sat_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 23
+      },
+      {
+        "id": "sat_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 29
+      },
+      {
+        "id": "sat_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 26
+      },
+      {
+        "id": "sat_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 35
+      },
+      {
+        "id": "sat_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 33
+      },
+      {
+        "id": "sat_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 21
+      },
+      {
+        "id": "sat_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "sat_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 34
+      },
+      {
+        "id": "sat_20",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "short_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 15
+      },
+      {
+        "id": "short_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 22
+      },
+      {
+        "id": "short_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 18
+      },
+      {
+        "id": "short_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "short_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "short_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "short_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "short_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 28
+      },
+      {
+        "id": "short_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 32
+      },
+      {
+        "id": "short_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 27
+      },
+      {
+        "id": "short_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 31
+      },
+      {
+        "id": "short_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 23
+      },
+      {
+        "id": "short_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 29
+      },
+      {
+        "id": "short_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 26
+      },
+      {
+        "id": "short_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 35
+      },
+      {
+        "id": "short_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 33
+      },
+      {
+        "id": "short_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 21
+      },
+      {
+        "id": "short_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "short_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 34
+      },
+      {
+        "id": "short_20",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 36
+      },
+      {
+        "id": "sel_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_1_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_1_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_1_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_1_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_2_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_2_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_2_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_2_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_3_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_3_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_3_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "tr_3_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_1_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_1_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_1_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_1_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_1_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_2_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_2_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_2_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_2_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_2_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_3_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_3_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_3_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_3_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "cert_3_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_1_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_2_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "rev_3_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_1_20",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_2_20",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "elig_3_20",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "direction": "min",
+      "terms": {
+        "short_1": 1,
+        "short_2": 1,
+        "short_3": 1,
+        "short_4": 1,
+        "short_5": 1,
+        "short_6": 1,
+        "short_7": 1,
+        "short_8": 1,
+        "short_9": 1,
+        "short_10": 1,
+        "short_11": 1,
+        "short_12": 1,
+        "short_13": 1,
+        "short_14": 1,
+        "short_15": 1,
+        "short_16": 1,
+        "short_17": 1,
+        "short_18": 1,
+        "short_19": 1,
+        "short_20": 1
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T023",
+        "T118",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "q_1": 1,
+          "y_1": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "y_1": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "y_2": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "y_2": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "y_3": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "y_3": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "q_4": 1,
+          "y_4": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "q_4": 1,
+          "y_4": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "q_5": 1,
+          "y_5": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "q_5": 1,
+          "y_5": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "q_6": 1,
+          "y_6": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "q_6": 1,
+          "y_6": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "q_7": 1,
+          "y_7": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "q_7": 1,
+          "y_7": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "q_8": 1,
+          "y_8": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "q_8": 1,
+          "y_8": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "q_9": 1,
+          "y_9": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "q_9": 1,
+          "y_9": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "q_10": 1,
+          "y_10": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "q_10": 1,
+          "y_10": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "q_11": 1,
+          "y_11": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "q_11": 1,
+          "y_11": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "q_12": 1,
+          "y_12": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "q_12": 1,
+          "y_12": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "q_13": 1,
+          "y_13": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "q_13": 1,
+          "y_13": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "q_14": 1,
+          "y_14": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "q_14": 1,
+          "y_14": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "q_15": 1,
+          "y_15": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "q_15": 1,
+          "y_15": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "q_16": 1,
+          "y_16": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "q_16": 1,
+          "y_16": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "q_17": 1,
+          "y_17": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "q_17": 1,
+          "y_17": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "q_18": 1,
+          "y_18": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "q_18": 1,
+          "y_18": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "q_19": 1,
+          "y_19": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "q_19": 1,
+          "y_19": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "q_20": 1,
+          "y_20": -36
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T032"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "q_20": 1,
+          "y_20": -20
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T030",
+          "T031"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "q_1": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "q_2": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057"
+        ],
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "q_3": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057"
+        ],
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "q_4": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057"
+        ],
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "q_5": 1,
+          "elig_1_5": -4,
+          "elig_2_5": -4,
+          "elig_3_5": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "q_6": 1,
+          "elig_1_6": -4,
+          "elig_2_6": -4,
+          "elig_3_6": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "q_7": 1,
+          "elig_1_7": -4,
+          "elig_2_7": -4,
+          "elig_3_7": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "q_8": 1,
+          "elig_1_8": -4,
+          "elig_2_8": -4,
+          "elig_3_8": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "q_9": 1,
+          "elig_1_9": -4,
+          "elig_2_9": -4,
+          "elig_3_9": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "q_10": 1,
+          "elig_1_10": -4,
+          "elig_2_10": -4,
+          "elig_3_10": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "q_11": 1,
+          "elig_1_11": -4,
+          "elig_2_11": -4,
+          "elig_3_11": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "q_12": 1,
+          "elig_1_12": -4,
+          "elig_2_12": -4,
+          "elig_3_12": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "q_13": 1,
+          "elig_1_13": -4,
+          "elig_2_13": -4,
+          "elig_3_13": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "q_14": 1,
+          "elig_1_14": -4,
+          "elig_2_14": -4,
+          "elig_3_14": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "q_15": 1,
+          "elig_1_15": -4,
+          "elig_2_15": -4,
+          "elig_3_15": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "q_16": 1,
+          "elig_1_16": -4,
+          "elig_2_16": -4,
+          "elig_3_16": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "q_17": 1,
+          "elig_1_17": -4,
+          "elig_2_17": -4,
+          "elig_3_17": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "q_18": 1,
+          "elig_1_18": -4,
+          "elig_2_18": -4,
+          "elig_3_18": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "q_19": 1,
+          "elig_1_19": -4,
+          "elig_2_19": -4,
+          "elig_3_19": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "q_20": 1,
+          "elig_1_20": -4,
+          "elig_2_20": -4,
+          "elig_3_20": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T033",
+          "T057",
+          "T066",
+          "T109"
+        ],
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "q_1": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058"
+        ],
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "q_2": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058"
+        ],
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "q_3": 1
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058"
+        ],
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "q_4": 1,
+          "elig_1_5": -4,
+          "elig_2_5": -4,
+          "elig_3_5": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "q_5": 1,
+          "elig_1_6": -4,
+          "elig_2_6": -4,
+          "elig_3_6": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "q_6": 1,
+          "elig_1_7": -4,
+          "elig_2_7": -4,
+          "elig_3_7": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "q_7": 1,
+          "elig_1_8": -4,
+          "elig_2_8": -4,
+          "elig_3_8": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "q_8": 1,
+          "elig_1_9": -4,
+          "elig_2_9": -4,
+          "elig_3_9": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C068"
+      },
+      {
+        "terms": {
+          "q_9": 1,
+          "elig_1_10": -4,
+          "elig_2_10": -4,
+          "elig_3_10": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C069"
+      },
+      {
+        "terms": {
+          "q_10": 1,
+          "elig_1_11": -4,
+          "elig_2_11": -4,
+          "elig_3_11": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C070"
+      },
+      {
+        "terms": {
+          "q_11": 1,
+          "elig_1_12": -4,
+          "elig_2_12": -4,
+          "elig_3_12": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C071"
+      },
+      {
+        "terms": {
+          "q_12": 1,
+          "elig_1_13": -4,
+          "elig_2_13": -4,
+          "elig_3_13": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C072"
+      },
+      {
+        "terms": {
+          "q_13": 1,
+          "elig_1_14": -4,
+          "elig_2_14": -4,
+          "elig_3_14": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C073"
+      },
+      {
+        "terms": {
+          "q_14": 1,
+          "elig_1_15": -4,
+          "elig_2_15": -4,
+          "elig_3_15": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C074"
+      },
+      {
+        "terms": {
+          "q_15": 1,
+          "elig_1_16": -4,
+          "elig_2_16": -4,
+          "elig_3_16": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C075"
+      },
+      {
+        "terms": {
+          "q_16": 1,
+          "elig_1_17": -4,
+          "elig_2_17": -4,
+          "elig_3_17": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C076"
+      },
+      {
+        "terms": {
+          "q_17": 1,
+          "elig_1_18": -4,
+          "elig_2_18": -4,
+          "elig_3_18": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C077"
+      },
+      {
+        "terms": {
+          "q_18": 1,
+          "elig_1_19": -4,
+          "elig_2_19": -4,
+          "elig_3_19": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C078"
+      },
+      {
+        "terms": {
+          "q_19": 1,
+          "elig_1_20": -4,
+          "elig_2_20": -4,
+          "elig_3_20": -8
+        },
+        "sense": "<=",
+        "rhs": 28,
+        "citations": [
+          "T041",
+          "T058",
+          "T066",
+          "T110"
+        ],
+        "name": "C079"
+      },
+      {
+        "terms": {
+          "inv_start_1": 1
+        },
+        "sense": "==",
+        "rhs": 37,
+        "citations": [
+          "T016",
+          "T046",
+          "T048"
+        ],
+        "name": "C080"
+      },
+      {
+        "terms": {
+          "inv_end_1": 1,
+          "inv_start_1": -1,
+          "sat_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C081"
+      },
+      {
+        "terms": {
+          "inv_end_2": 1,
+          "inv_start_2": -1,
+          "sat_2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C082"
+      },
+      {
+        "terms": {
+          "inv_end_3": 1,
+          "inv_start_3": -1,
+          "sat_3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C083"
+      },
+      {
+        "terms": {
+          "inv_end_4": 1,
+          "inv_start_4": -1,
+          "sat_4": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C084"
+      },
+      {
+        "terms": {
+          "inv_end_5": 1,
+          "inv_start_5": -1,
+          "sat_5": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C085"
+      },
+      {
+        "terms": {
+          "inv_end_6": 1,
+          "inv_start_6": -1,
+          "sat_6": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C086"
+      },
+      {
+        "terms": {
+          "inv_end_7": 1,
+          "inv_start_7": -1,
+          "sat_7": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C087"
+      },
+      {
+        "terms": {
+          "inv_end_8": 1,
+          "inv_start_8": -1,
+          "sat_8": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C088"
+      },
+      {
+        "terms": {
+          "inv_end_9": 1,
+          "inv_start_9": -1,
+          "sat_9": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C089"
+      },
+      {
+        "terms": {
+          "inv_end_10": 1,
+          "inv_start_10": -1,
+          "sat_10": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C090"
+      },
+      {
+        "terms": {
+          "inv_end_11": 1,
+          "inv_start_11": -1,
+          "sat_11": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C091"
+      },
+      {
+        "terms": {
+          "inv_end_12": 1,
+          "inv_start_12": -1,
+          "sat_12": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C092"
+      },
+      {
+        "terms": {
+          "inv_end_13": 1,
+          "inv_start_13": -1,
+          "sat_13": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C093"
+      },
+      {
+        "terms": {
+          "inv_end_14": 1,
+          "inv_start_14": -1,
+          "sat_14": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C094"
+      },
+      {
+        "terms": {
+          "inv_end_15": 1,
+          "inv_start_15": -1,
+          "sat_15": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C095"
+      },
+      {
+        "terms": {
+          "inv_end_16": 1,
+          "inv_start_16": -1,
+          "sat_16": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C096"
+      },
+      {
+        "terms": {
+          "inv_end_17": 1,
+          "inv_start_17": -1,
+          "sat_17": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C097"
+      },
+      {
+        "terms": {
+          "inv_end_18": 1,
+          "inv_start_18": -1,
+          "sat_18": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C098"
+      },
+      {
+        "terms": {
+          "inv_end_19": 1,
+          "inv_start_19": -1,
+          "sat_19": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C099"
+      },
+      {
+        "terms": {
+          "inv_end_20": 1,
+          "inv_start_20": -1,
+          "sat_20": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T047",
+          "T049"
+        ],
+        "name": "C100"
+      },
+      {
+        "terms": {
+          "inv_start_2": 1,
+          "inv_end_1": -1,
+          "q_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C101"
+      },
+      {
+        "terms": {
+          "inv_start_3": 1,
+          "inv_end_2": -1,
+          "q_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C102"
+      },
+      {
+        "terms": {
+          "inv_start_4": 1,
+          "inv_end_3": -1,
+          "q_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C103"
+      },
+      {
+        "terms": {
+          "inv_start_5": 1,
+          "inv_end_4": -1,
+          "q_4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C104"
+      },
+      {
+        "terms": {
+          "inv_start_6": 1,
+          "inv_end_5": -1,
+          "q_5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C105"
+      },
+      {
+        "terms": {
+          "inv_start_7": 1,
+          "inv_end_6": -1,
+          "q_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C106"
+      },
+      {
+        "terms": {
+          "inv_start_8": 1,
+          "inv_end_7": -1,
+          "q_7": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C107"
+      },
+      {
+        "terms": {
+          "inv_start_9": 1,
+          "inv_end_8": -1,
+          "q_8": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C108"
+      },
+      {
+        "terms": {
+          "inv_start_10": 1,
+          "inv_end_9": -1,
+          "q_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C109"
+      },
+      {
+        "terms": {
+          "inv_start_11": 1,
+          "inv_end_10": -1,
+          "q_10": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C110"
+      },
+      {
+        "terms": {
+          "inv_start_12": 1,
+          "inv_end_11": -1,
+          "q_11": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C111"
+      },
+      {
+        "terms": {
+          "inv_start_13": 1,
+          "inv_end_12": -1,
+          "q_12": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C112"
+      },
+      {
+        "terms": {
+          "inv_start_14": 1,
+          "inv_end_13": -1,
+          "q_13": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C113"
+      },
+      {
+        "terms": {
+          "inv_start_15": 1,
+          "inv_end_14": -1,
+          "q_14": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C114"
+      },
+      {
+        "terms": {
+          "inv_start_16": 1,
+          "inv_end_15": -1,
+          "q_15": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C115"
+      },
+      {
+        "terms": {
+          "inv_start_17": 1,
+          "inv_end_16": -1,
+          "q_16": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C116"
+      },
+      {
+        "terms": {
+          "inv_start_18": 1,
+          "inv_end_17": -1,
+          "q_17": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C117"
+      },
+      {
+        "terms": {
+          "inv_start_19": 1,
+          "inv_end_18": -1,
+          "q_18": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C118"
+      },
+      {
+        "terms": {
+          "inv_start_20": 1,
+          "inv_end_19": -1,
+          "q_19": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T038",
+          "T050"
+        ],
+        "name": "C119"
+      },
+      {
+        "terms": {
+          "short_1": 1,
+          "sat_1": 1
+        },
+        "sense": "==",
+        "rhs": 15,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C120"
+      },
+      {
+        "terms": {
+          "short_2": 1,
+          "sat_2": 1
+        },
+        "sense": "==",
+        "rhs": 22,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C121"
+      },
+      {
+        "terms": {
+          "short_3": 1,
+          "sat_3": 1
+        },
+        "sense": "==",
+        "rhs": 18,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C122"
+      },
+      {
+        "terms": {
+          "short_4": 1,
+          "sat_4": 1
+        },
+        "sense": "==",
+        "rhs": 24,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C123"
+      },
+      {
+        "terms": {
+          "short_5": 1,
+          "sat_5": 1
+        },
+        "sense": "==",
+        "rhs": 20,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C124"
+      },
+      {
+        "terms": {
+          "short_6": 1,
+          "sat_6": 1
+        },
+        "sense": "==",
+        "rhs": 30,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C125"
+      },
+      {
+        "terms": {
+          "short_7": 1,
+          "sat_7": 1
+        },
+        "sense": "==",
+        "rhs": 25,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C126"
+      },
+      {
+        "terms": {
+          "short_8": 1,
+          "sat_8": 1
+        },
+        "sense": "==",
+        "rhs": 28,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C127"
+      },
+      {
+        "terms": {
+          "short_9": 1,
+          "sat_9": 1
+        },
+        "sense": "==",
+        "rhs": 32,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C128"
+      },
+      {
+        "terms": {
+          "short_10": 1,
+          "sat_10": 1
+        },
+        "sense": "==",
+        "rhs": 27,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C129"
+      },
+      {
+        "terms": {
+          "short_11": 1,
+          "sat_11": 1
+        },
+        "sense": "==",
+        "rhs": 31,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C130"
+      },
+      {
+        "terms": {
+          "short_12": 1,
+          "sat_12": 1
+        },
+        "sense": "==",
+        "rhs": 23,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C131"
+      },
+      {
+        "terms": {
+          "short_13": 1,
+          "sat_13": 1
+        },
+        "sense": "==",
+        "rhs": 29,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C132"
+      },
+      {
+        "terms": {
+          "short_14": 1,
+          "sat_14": 1
+        },
+        "sense": "==",
+        "rhs": 26,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C133"
+      },
+      {
+        "terms": {
+          "short_15": 1,
+          "sat_15": 1
+        },
+        "sense": "==",
+        "rhs": 35,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C134"
+      },
+      {
+        "terms": {
+          "short_16": 1,
+          "sat_16": 1
+        },
+        "sense": "==",
+        "rhs": 33,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C135"
+      },
+      {
+        "terms": {
+          "short_17": 1,
+          "sat_17": 1
+        },
+        "sense": "==",
+        "rhs": 21,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C136"
+      },
+      {
+        "terms": {
+          "short_18": 1,
+          "sat_18": 1
+        },
+        "sense": "==",
+        "rhs": 19,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C137"
+      },
+      {
+        "terms": {
+          "short_19": 1,
+          "sat_19": 1
+        },
+        "sense": "==",
+        "rhs": 34,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C138"
+      },
+      {
+        "terms": {
+          "short_20": 1,
+          "sat_20": 1
+        },
+        "sense": "==",
+        "rhs": 36,
+        "citations": [
+          "T020",
+          "T021"
+        ],
+        "name": "C139"
+      },
+      {
+        "terms": {
+          "sat_1": 1,
+          "sat_2": 1,
+          "sat_3": 1,
+          "sat_4": 1,
+          "sat_5": 1,
+          "sat_6": 1,
+          "sat_7": 1,
+          "sat_8": 1,
+          "sat_9": 1,
+          "sat_10": 1,
+          "sat_11": 1,
+          "sat_12": 1,
+          "sat_13": 1,
+          "sat_14": 1,
+          "sat_15": 1,
+          "sat_16": 1,
+          "sat_17": 1,
+          "sat_18": 1,
+          "sat_19": 1,
+          "sat_20": 1
+        },
+        "sense": ">=",
+        "rhs": 502,
+        "citations": [
+          "T018",
+          "T019",
+          "T147"
+        ],
+        "name": "C140"
+      },
+      {
+        "terms": {
+          "inv_start_1": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C141"
+      },
+      {
+        "terms": {
+          "inv_start_2": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C142"
+      },
+      {
+        "terms": {
+          "inv_start_3": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C143"
+      },
+      {
+        "terms": {
+          "inv_start_4": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C144"
+      },
+      {
+        "terms": {
+          "inv_start_5": 1,
+          "elig_1_5": -12,
+          "elig_2_5": -20,
+          "elig_3_5": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C145"
+      },
+      {
+        "terms": {
+          "inv_start_6": 1,
+          "elig_1_6": -12,
+          "elig_2_6": -20,
+          "elig_3_6": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C146"
+      },
+      {
+        "terms": {
+          "inv_start_7": 1,
+          "elig_1_7": -12,
+          "elig_2_7": -20,
+          "elig_3_7": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C147"
+      },
+      {
+        "terms": {
+          "inv_start_8": 1,
+          "elig_1_8": -12,
+          "elig_2_8": -20,
+          "elig_3_8": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C148"
+      },
+      {
+        "terms": {
+          "inv_start_9": 1,
+          "elig_1_9": -12,
+          "elig_2_9": -20,
+          "elig_3_9": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C149"
+      },
+      {
+        "terms": {
+          "inv_start_10": 1,
+          "elig_1_10": -12,
+          "elig_2_10": -20,
+          "elig_3_10": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C150"
+      },
+      {
+        "terms": {
+          "inv_start_11": 1,
+          "elig_1_11": -12,
+          "elig_2_11": -20,
+          "elig_3_11": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C151"
+      },
+      {
+        "terms": {
+          "inv_start_12": 1,
+          "elig_1_12": -12,
+          "elig_2_12": -20,
+          "elig_3_12": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C152"
+      },
+      {
+        "terms": {
+          "inv_start_13": 1,
+          "elig_1_13": -12,
+          "elig_2_13": -20,
+          "elig_3_13": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C153"
+      },
+      {
+        "terms": {
+          "inv_start_14": 1,
+          "elig_1_14": -12,
+          "elig_2_14": -20,
+          "elig_3_14": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C154"
+      },
+      {
+        "terms": {
+          "inv_start_15": 1,
+          "elig_1_15": -12,
+          "elig_2_15": -20,
+          "elig_3_15": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C155"
+      },
+      {
+        "terms": {
+          "inv_start_16": 1,
+          "elig_1_16": -12,
+          "elig_2_16": -20,
+          "elig_3_16": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C156"
+      },
+      {
+        "terms": {
+          "inv_start_17": 1,
+          "elig_1_17": -12,
+          "elig_2_17": -20,
+          "elig_3_17": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C157"
+      },
+      {
+        "terms": {
+          "inv_start_18": 1,
+          "elig_1_18": -12,
+          "elig_2_18": -20,
+          "elig_3_18": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C158"
+      },
+      {
+        "terms": {
+          "inv_start_19": 1,
+          "elig_1_19": -12,
+          "elig_2_19": -20,
+          "elig_3_19": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C159"
+      },
+      {
+        "terms": {
+          "inv_start_20": 1,
+          "elig_1_20": -12,
+          "elig_2_20": -20,
+          "elig_3_20": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C160"
+      },
+      {
+        "terms": {
+          "inv_end_1": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C161"
+      },
+      {
+        "terms": {
+          "inv_end_2": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C162"
+      },
+      {
+        "terms": {
+          "inv_end_3": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C163"
+      },
+      {
+        "terms": {
+          "inv_end_4": 1
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T065",
+          "T111"
+        ],
+        "name": "C164"
+      },
+      {
+        "terms": {
+          "inv_end_5": 1,
+          "elig_1_5": -12,
+          "elig_2_5": -20,
+          "elig_3_5": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C165"
+      },
+      {
+        "terms": {
+          "inv_end_6": 1,
+          "elig_1_6": -12,
+          "elig_2_6": -20,
+          "elig_3_6": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C166"
+      },
+      {
+        "terms": {
+          "inv_end_7": 1,
+          "elig_1_7": -12,
+          "elig_2_7": -20,
+          "elig_3_7": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C167"
+      },
+      {
+        "terms": {
+          "inv_end_8": 1,
+          "elig_1_8": -12,
+          "elig_2_8": -20,
+          "elig_3_8": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C168"
+      },
+      {
+        "terms": {
+          "inv_end_9": 1,
+          "elig_1_9": -12,
+          "elig_2_9": -20,
+          "elig_3_9": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C169"
+      },
+      {
+        "terms": {
+          "inv_end_10": 1,
+          "elig_1_10": -12,
+          "elig_2_10": -20,
+          "elig_3_10": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C170"
+      },
+      {
+        "terms": {
+          "inv_end_11": 1,
+          "elig_1_11": -12,
+          "elig_2_11": -20,
+          "elig_3_11": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C171"
+      },
+      {
+        "terms": {
+          "inv_end_12": 1,
+          "elig_1_12": -12,
+          "elig_2_12": -20,
+          "elig_3_12": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C172"
+      },
+      {
+        "terms": {
+          "inv_end_13": 1,
+          "elig_1_13": -12,
+          "elig_2_13": -20,
+          "elig_3_13": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C173"
+      },
+      {
+        "terms": {
+          "inv_end_14": 1,
+          "elig_1_14": -12,
+          "elig_2_14": -20,
+          "elig_3_14": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C174"
+      },
+      {
+        "terms": {
+          "inv_end_15": 1,
+          "elig_1_15": -12,
+          "elig_2_15": -20,
+          "elig_3_15": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C175"
+      },
+      {
+        "terms": {
+          "inv_end_16": 1,
+          "elig_1_16": -12,
+          "elig_2_16": -20,
+          "elig_3_16": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C176"
+      },
+      {
+        "terms": {
+          "inv_end_17": 1,
+          "elig_1_17": -12,
+          "elig_2_17": -20,
+          "elig_3_17": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C177"
+      },
+      {
+        "terms": {
+          "inv_end_18": 1,
+          "elig_1_18": -12,
+          "elig_2_18": -20,
+          "elig_3_18": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C178"
+      },
+      {
+        "terms": {
+          "inv_end_19": 1,
+          "elig_1_19": -12,
+          "elig_2_19": -20,
+          "elig_3_19": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C179"
+      },
+      {
+        "terms": {
+          "inv_end_20": 1,
+          "elig_1_20": -12,
+          "elig_2_20": -20,
+          "elig_3_20": -16
+        },
+        "sense": "<=",
+        "rhs": 40,
+        "citations": [
+          "T052",
+          "T056",
+          "T063",
+          "T065",
+          "T106",
+          "T111"
+        ],
+        "name": "C180"
+      },
+      {
+        "terms": {
+          "tr_1_1": 1,
+          "tr_1_2": 1,
+          "tr_1_3": 1,
+          "tr_1_4": 1,
+          "sel_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C181"
+      },
+      {
+        "terms": {
+          "cert_1_3": 1,
+          "cert_1_4": 1,
+          "cert_1_5": 1,
+          "cert_1_6": 1,
+          "cert_1_9": 1,
+          "sel_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C182"
+      },
+      {
+        "terms": {
+          "rev_1_10": 1,
+          "rev_1_11": 1,
+          "rev_1_12": 1,
+          "rev_1_13": 1,
+          "rev_1_15": 1,
+          "rev_1_16": 1,
+          "rev_1_17": 1,
+          "rev_1_18": 1,
+          "rev_1_19": 1,
+          "sel_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T088",
+          "T089"
+        ],
+        "name": "C183"
+      },
+      {
+        "terms": {
+          "tr_2_2": 1,
+          "tr_2_3": 1,
+          "tr_2_4": 1,
+          "tr_2_5": 1,
+          "sel_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C184"
+      },
+      {
+        "terms": {
+          "cert_2_3": 1,
+          "cert_2_4": 1,
+          "cert_2_5": 1,
+          "cert_2_6": 1,
+          "cert_2_9": 1,
+          "sel_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C185"
+      },
+      {
+        "terms": {
+          "rev_2_10": 1,
+          "rev_2_11": 1,
+          "rev_2_12": 1,
+          "rev_2_13": 1,
+          "rev_2_15": 1,
+          "rev_2_16": 1,
+          "rev_2_17": 1,
+          "rev_2_18": 1,
+          "rev_2_19": 1,
+          "sel_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T088",
+          "T089"
+        ],
+        "name": "C186"
+      },
+      {
+        "terms": {
+          "tr_3_3": 1,
+          "tr_3_4": 1,
+          "tr_3_5": 1,
+          "tr_3_6": 1,
+          "sel_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C187"
+      },
+      {
+        "terms": {
+          "cert_3_3": 1,
+          "cert_3_4": 1,
+          "cert_3_5": 1,
+          "cert_3_6": 1,
+          "cert_3_9": 1,
+          "sel_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T070",
+          "T089"
+        ],
+        "name": "C188"
+      },
+      {
+        "terms": {
+          "rev_3_10": 1,
+          "rev_3_11": 1,
+          "rev_3_12": 1,
+          "rev_3_13": 1,
+          "rev_3_15": 1,
+          "rev_3_16": 1,
+          "rev_3_17": 1,
+          "rev_3_18": 1,
+          "rev_3_19": 1,
+          "sel_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061",
+          "T062",
+          "T088",
+          "T089"
+        ],
+        "name": "C189"
+      },
+      {
+        "terms": {
+          "sel_1": 1,
+          "sel_2": 1,
+          "sel_3": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T060"
+        ],
+        "name": "C190"
+      },
+      {
+        "terms": {
+          "tr_1_1": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C191"
+      },
+      {
+        "terms": {
+          "tr_1_2": 1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C192"
+      },
+      {
+        "terms": {
+          "tr_1_3": 1,
+          "cert_1_5": -1,
+          "cert_1_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C193"
+      },
+      {
+        "terms": {
+          "tr_1_4": 1,
+          "cert_1_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C194"
+      },
+      {
+        "terms": {
+          "tr_2_2": 1,
+          "cert_2_5": -1,
+          "cert_2_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C195"
+      },
+      {
+        "terms": {
+          "tr_2_3": 1,
+          "cert_2_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C196"
+      },
+      {
+        "terms": {
+          "tr_2_4": 1,
+          "cert_2_9": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C197"
+      },
+      {
+        "terms": {
+          "tr_2_5": 1,
+          "cert_2_9": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C198"
+      },
+      {
+        "terms": {
+          "tr_3_3": 1,
+          "cert_3_5": -1,
+          "cert_3_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C199"
+      },
+      {
+        "terms": {
+          "tr_3_4": 1,
+          "cert_3_6": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C200"
+      },
+      {
+        "terms": {
+          "tr_3_5": 1,
+          "cert_3_9": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C201"
+      },
+      {
+        "terms": {
+          "tr_3_6": 1,
+          "cert_3_9": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T079",
+          "T081",
+          "T082",
+          "T083"
+        ],
+        "name": "C202"
+      },
+      {
+        "terms": {
+          "cert_1_3": 1,
+          "rev_1_11": -1,
+          "rev_1_12": -1,
+          "rev_1_13": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C203"
+      },
+      {
+        "terms": {
+          "cert_1_4": 1,
+          "rev_1_12": -1,
+          "rev_1_13": -1,
+          "rev_1_15": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C204"
+      },
+      {
+        "terms": {
+          "cert_1_5": 1,
+          "rev_1_13": -1,
+          "rev_1_15": -1,
+          "rev_1_16": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C205"
+      },
+      {
+        "terms": {
+          "cert_1_6": 1,
+          "rev_1_15": -1,
+          "rev_1_16": -1,
+          "rev_1_17": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C206"
+      },
+      {
+        "terms": {
+          "cert_1_9": 1,
+          "rev_1_17": -1,
+          "rev_1_18": -1,
+          "rev_1_19": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C207"
+      },
+      {
+        "terms": {
+          "cert_2_3": 1,
+          "rev_2_11": -1,
+          "rev_2_12": -1,
+          "rev_2_13": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C208"
+      },
+      {
+        "terms": {
+          "cert_2_4": 1,
+          "rev_2_12": -1,
+          "rev_2_13": -1,
+          "rev_2_15": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C209"
+      },
+      {
+        "terms": {
+          "cert_2_5": 1,
+          "rev_2_13": -1,
+          "rev_2_15": -1,
+          "rev_2_16": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C210"
+      },
+      {
+        "terms": {
+          "cert_2_6": 1,
+          "rev_2_15": -1,
+          "rev_2_16": -1,
+          "rev_2_17": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C211"
+      },
+      {
+        "terms": {
+          "cert_2_9": 1,
+          "rev_2_17": -1,
+          "rev_2_18": -1,
+          "rev_2_19": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C212"
+      },
+      {
+        "terms": {
+          "cert_3_3": 1,
+          "rev_3_11": -1,
+          "rev_3_12": -1,
+          "rev_3_13": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C213"
+      },
+      {
+        "terms": {
+          "cert_3_4": 1,
+          "rev_3_12": -1,
+          "rev_3_13": -1,
+          "rev_3_15": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C214"
+      },
+      {
+        "terms": {
+          "cert_3_5": 1,
+          "rev_3_13": -1,
+          "rev_3_15": -1,
+          "rev_3_16": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C215"
+      },
+      {
+        "terms": {
+          "cert_3_6": 1,
+          "rev_3_15": -1,
+          "rev_3_16": -1,
+          "rev_3_17": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C216"
+      },
+      {
+        "terms": {
+          "cert_3_9": 1,
+          "rev_3_17": -1,
+          "rev_3_18": -1,
+          "rev_3_19": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086",
+          "T087",
+          "T088"
+        ],
+        "name": "C217"
+      },
+      {
+        "terms": {
+          "elig_1_5": 1,
+          "cert_1_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C218"
+      },
+      {
+        "terms": {
+          "elig_1_6": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C219"
+      },
+      {
+        "terms": {
+          "elig_1_7": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C220"
+      },
+      {
+        "terms": {
+          "elig_1_8": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C221"
+      },
+      {
+        "terms": {
+          "elig_1_9": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C222"
+      },
+      {
+        "terms": {
+          "elig_1_10": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "rev_1_10": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C223"
+      },
+      {
+        "terms": {
+          "elig_1_11": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_11": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C224"
+      },
+      {
+        "terms": {
+          "elig_1_12": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_12": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C225"
+      },
+      {
+        "terms": {
+          "elig_1_13": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_13": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C226"
+      },
+      {
+        "terms": {
+          "elig_1_14": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C227"
+      },
+      {
+        "terms": {
+          "elig_1_15": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_15": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C228"
+      },
+      {
+        "terms": {
+          "elig_1_16": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_16": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C229"
+      },
+      {
+        "terms": {
+          "elig_1_17": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_17": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C230"
+      },
+      {
+        "terms": {
+          "elig_1_18": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_18": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C231"
+      },
+      {
+        "terms": {
+          "elig_1_19": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1,
+          "rev_1_19": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C232"
+      },
+      {
+        "terms": {
+          "elig_1_20": 1,
+          "cert_1_3": -1,
+          "cert_1_4": -1,
+          "cert_1_5": -1,
+          "cert_1_6": -1,
+          "cert_1_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T104"
+        ],
+        "name": "C233"
+      },
+      {
+        "terms": {
+          "elig_2_5": 1,
+          "cert_2_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C234"
+      },
+      {
+        "terms": {
+          "elig_2_6": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C235"
+      },
+      {
+        "terms": {
+          "elig_2_7": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C236"
+      },
+      {
+        "terms": {
+          "elig_2_8": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C237"
+      },
+      {
+        "terms": {
+          "elig_2_9": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C238"
+      },
+      {
+        "terms": {
+          "elig_2_10": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "rev_2_10": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C239"
+      },
+      {
+        "terms": {
+          "elig_2_11": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_11": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C240"
+      },
+      {
+        "terms": {
+          "elig_2_12": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_12": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C241"
+      },
+      {
+        "terms": {
+          "elig_2_13": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_13": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C242"
+      },
+      {
+        "terms": {
+          "elig_2_14": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C243"
+      },
+      {
+        "terms": {
+          "elig_2_15": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_15": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C244"
+      },
+      {
+        "terms": {
+          "elig_2_16": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_16": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C245"
+      },
+      {
+        "terms": {
+          "elig_2_17": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_17": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C246"
+      },
+      {
+        "terms": {
+          "elig_2_18": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_18": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C247"
+      },
+      {
+        "terms": {
+          "elig_2_19": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1,
+          "rev_2_19": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C248"
+      },
+      {
+        "terms": {
+          "elig_2_20": 1,
+          "cert_2_3": -1,
+          "cert_2_4": -1,
+          "cert_2_5": -1,
+          "cert_2_6": -1,
+          "cert_2_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T104"
+        ],
+        "name": "C249"
+      },
+      {
+        "terms": {
+          "elig_3_5": 1,
+          "cert_3_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C250"
+      },
+      {
+        "terms": {
+          "elig_3_6": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C251"
+      },
+      {
+        "terms": {
+          "elig_3_7": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C252"
+      },
+      {
+        "terms": {
+          "elig_3_8": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C253"
+      },
+      {
+        "terms": {
+          "elig_3_9": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C254"
+      },
+      {
+        "terms": {
+          "elig_3_10": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "rev_3_10": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C255"
+      },
+      {
+        "terms": {
+          "elig_3_11": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_11": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C256"
+      },
+      {
+        "terms": {
+          "elig_3_12": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_12": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C257"
+      },
+      {
+        "terms": {
+          "elig_3_13": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_13": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C258"
+      },
+      {
+        "terms": {
+          "elig_3_14": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102"
+        ],
+        "name": "C259"
+      },
+      {
+        "terms": {
+          "elig_3_15": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_15": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C260"
+      },
+      {
+        "terms": {
+          "elig_3_16": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_16": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C261"
+      },
+      {
+        "terms": {
+          "elig_3_17": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_17": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C262"
+      },
+      {
+        "terms": {
+          "elig_3_18": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_18": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C263"
+      },
+      {
+        "terms": {
+          "elig_3_19": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1,
+          "rev_3_19": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T103",
+          "T104"
+        ],
+        "name": "C264"
+      },
+      {
+        "terms": {
+          "elig_3_20": 1,
+          "cert_3_3": -1,
+          "cert_3_4": -1,
+          "cert_3_5": -1,
+          "cert_3_6": -1,
+          "cert_3_9": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T099",
+          "T101",
+          "T102",
+          "T104"
+        ],
+        "name": "C265"
+      },
+      {
+        "terms": {
+          "tr_1_1": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C266"
+      },
+      {
+        "terms": {
+          "tr_1_2": 1,
+          "tr_2_2": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C267"
+      },
+      {
+        "terms": {
+          "tr_1_3": 1,
+          "tr_2_3": 1,
+          "tr_3_3": 1,
+          "cert_1_3": 1,
+          "cert_2_3": 1,
+          "cert_3_3": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C268"
+      },
+      {
+        "terms": {
+          "tr_1_4": 1,
+          "tr_2_4": 1,
+          "tr_3_4": 1,
+          "cert_1_3": 1,
+          "cert_2_3": 1,
+          "cert_3_3": 1,
+          "cert_1_4": 1,
+          "cert_2_4": 1,
+          "cert_3_4": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C269"
+      },
+      {
+        "terms": {
+          "tr_2_5": 1,
+          "tr_3_5": 1,
+          "cert_1_4": 1,
+          "cert_2_4": 1,
+          "cert_3_4": 1,
+          "cert_1_5": 1,
+          "cert_2_5": 1,
+          "cert_3_5": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C270"
+      },
+      {
+        "terms": {
+          "tr_3_6": 1,
+          "cert_1_5": 1,
+          "cert_2_5": 1,
+          "cert_3_5": 1,
+          "cert_1_6": 1,
+          "cert_2_6": 1,
+          "cert_3_6": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C271"
+      },
+      {
+        "terms": {
+          "cert_1_6": 1,
+          "cert_2_6": 1,
+          "cert_3_6": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093",
+          "T095"
+        ],
+        "name": "C272"
+      },
+      {
+        "terms": {
+          "cert_1_9": 1,
+          "cert_2_9": 1,
+          "cert_3_9": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C273"
+      },
+      {
+        "terms": {
+          "cert_1_9": 1,
+          "cert_2_9": 1,
+          "cert_3_9": 1,
+          "rev_1_10": 1,
+          "rev_2_10": 1,
+          "rev_3_10": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C274"
+      },
+      {
+        "terms": {
+          "rev_1_11": 1,
+          "rev_2_11": 1,
+          "rev_3_11": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C275"
+      },
+      {
+        "terms": {
+          "rev_1_12": 1,
+          "rev_2_12": 1,
+          "rev_3_12": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C276"
+      },
+      {
+        "terms": {
+          "rev_1_13": 1,
+          "rev_2_13": 1,
+          "rev_3_13": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C277"
+      },
+      {
+        "terms": {
+          "rev_1_15": 1,
+          "rev_2_15": 1,
+          "rev_3_15": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C278"
+      },
+      {
+        "terms": {
+          "rev_1_16": 1,
+          "rev_2_16": 1,
+          "rev_3_16": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C279"
+      },
+      {
+        "terms": {
+          "rev_1_17": 1,
+          "rev_2_17": 1,
+          "rev_3_17": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C280"
+      },
+      {
+        "terms": {
+          "rev_1_18": 1,
+          "rev_2_18": 1,
+          "rev_3_18": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093"
+        ],
+        "name": "C281"
+      },
+      {
+        "terms": {
+          "rev_1_19": 1,
+          "rev_2_19": 1,
+          "rev_3_19": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T092",
+          "T093",
+          "T095"
+        ],
+        "name": "C282"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 医院关键药物采购、库存与冷链服务计划需求\n\n## 1. 任务与求解方式\n\n使用 Python 调用 COPT，建立并实际求解混合整数线性规划，为一种关键药物制定覆盖20周的采购、供药、库存和可选冷链服务单元任务计划。\n\n程序需要决定：\n- 每周是否采购、采购瓶数，以及实际用于满足当周患者需求的瓶数；\n- 是否选择各附加冷链服务单元；\n- 被选择单元的培训、首次认证和复核开始周。\n\n资格状态、任务完成周、到货量、缺货量、库存及有效能力必须依据上述决定和业务规则计算，不得独立任意指定。\n\n所有药品数量以瓶计，必须为非负整数。任务开始和完成时间按整数周表示。输入文件均位于当前工作目录的 `./data/` 下，文件结构见文档最后。\n\n## 2. 需求与服务目标\n\n规划期为第1至第20周。期初有37瓶可直接使用的药品，且不存在规划期开始前尚未到货的订单。\n\n每周需求从 `weeks.csv` 读取。整个周期总需求为528瓶，最低实际满足量按“总需求的95%向上取整”确定，为502瓶。该要求针对20周累计需求，不要求每一周分别满足95%。\n\n每周实际满足量不得超过当周需求，也不得超过当周患者用药前的库存。当周缺货量等于当周需求减去实际满足量。未满足需求不结转，不在以后周补计满足。\n\n**唯一优化目标是最小化20周总缺货量。**\n\n不增加成本、启用单元数、采购次数、采购瓶数、任务时间或期末库存等目标，也不为这些指标设置次级优先级。存在多个最优方案时，可以报告任意一个。\n\n## 3. 采购、到货和库存流程\n\n### 3.1 采购请求\n\n每周最多提交一次采购请求，也可以不采购：\n- 提交请求时，采购量必须为20至36瓶之间的整数；\n- 不提交请求时，采购量为0；\n- 采购指示应准确反映是否提交请求。\n\n采购请求还必须满足请求当周的有效采购授权额度。即使附加单元使授权额度超过36瓶，单次请求仍不得超过36瓶。\n\n### 3.2 配送\n\n采购处理和配送延迟固定为1周：\n- 第1周到货量为0；\n- 第2至第20周的当周到货量等于上一周采购量；\n- 当周采购不能用于满足当周需求；\n- 不允许推迟到货，也不允许已到货药品在院外等待。\n\n到货量必须满足到货当周的有效接收能力。因此，一笔订单必须分别满足下达周的授权条件和下一周的接收条件。\n\n第20周允许按相同请求规则采购，并须满足第20周有效授权额度。该订单于第21周到货，不计入本规划期供药量，不检查其第21周接收和储存条件，也不要求第20周采购量为0。\n\n### 3.3 库存核算\n\n“周初库存”指当周到货完成后、患者用药前的库存；“周末库存”指当周患者用药后的剩余库存。\n\n- 第1周周初库存为37瓶。\n- 周末库存等于周初库存减去当周实际满足量。\n- 下一周周初库存等于上一周周末库存加上一周采购在本周形成的到货量。\n- 药品在规划期内不发生过期、损耗或主动报废。\n- 每周周初和周末库存均不得超过当周有效库存容量。\n\n周初容量在到货之后、患者用药之前检查，不能用当周即将发生的患者用药来规避到货时的容量限制。\n\n## 4. 冷链服务单元选择与能力\n\n基础冷链设施每周始终可用，提供：\n- 库存容量40瓶；\n- 采购请求授权额度28瓶/周；\n- 到货接收能力28瓶/周。\n\n另有3个可选服务单元，参数从 `units.csv` 读取。最多选择2个，也可以全部不选择。\n\n选择一个单元后，必须完成该单元全部培训、首次认证和复核任务，即使其增量能力最终未被实际使用。未选择的单元不得安排任何任务，也不提供任何能力。\n\n具有有效资格的单元提供其对应的库存增量容量，以及采购授权和到货接收增量能力。各有效单元的能力可以相加：\n- 当周有效库存容量为基础40瓶加上当周有效单元的库存增量；\n- 当周有效采购授权额度和到货接收能力相同，均为基础28瓶/周加上当周有效单元的授权及接收增量。\n\n本任务不设置启用费用、任务费用或预算。\n\n## 5. 任务安排与共享技术团队\n\n### 5.1 执行和完成口径\n\n每个被选择单元必须各执行一次：\n- 培训和准备：持续1周；\n- 设备验证与首次资格认证：持续2周；\n- 运行后的强制资格复核：持续1周。\n\n任务仅能在周初开始，须连续执行，不能拆分或中断。在某周开始、持续若干周的任务，占用从开始周起连续的相应周数，并在最后一个占用周的下一周周初完成。任务完成的同一周周初即可使用其完成结果。\n\n### 5.2 时间窗口与先后关系\n\n对每个被选择的单元：\n1. 培训开始周必须在该单元的最早、最晚培训开始周之间，包含端点。\n2. 首次认证只能在第3至第9周开始，包含端点。\n3. 培训在培训开始周的下一周周初完成。认证开始必须在培训完成后至少等待该单元规定的最小间隔；在此最小间隔基础上的额外等待不得超过2周。\n4. 首次认证在认证开始后的第2周周初完成。复核须在首次认证完成后6至9周之间开始，包含端点。\n5. 复核开始周还必须位于第10至第19周之间，包含端点。两个复核窗口必须同时满足。\n6. 复核是强制任务，不得以停用单元为由取消。\n\n以上窗口和依赖仅适用于被选择单元，但被选择单元的三项任务均须安排完整。\n\n### 5.3 团队可用性\n\n医院仅有1支技术团队。所有单元的培训、首次认证、复核在执行期间，每周均占用整支团队。\n\n任意一周最多有一个任务正在执行，适用于同一单元及不同单元之间的全部任务。\n\n第8周和第14周团队不可用，其他规划期周可用。任何任务的任何占用周均不得落在不可用周内；首次认证持续2周，其两个占用周都必须可用。团队日历从 `weeks.csv` 读取。\n\n## 6. 资格状态与每周能力\n\n资格状态必须唯一取决于单元选择和任务进度：\n- 未选择单元在所有周均无有效资格；\n- 首次认证完成前不可用；\n- 从首次认证完成的周初起可用；\n- 复核执行的那一周不可用；\n- 复核持续1周，在复核开始周的下一周周初完成并恢复可用，此后保持至第20周结束。\n\n不得为了改善计划而任意关闭或开启资格状态。\n\n复核执行周，该单元不提供库存容量、采购授权或到货接收能力。允许提前调整采购和供药，并将库存转移至当周有效的基础设施及其他单元。内部转移没有损耗，也没有独立的瓶数限制，但转移后的总库存仍须满足当周总有效容量。\n\n每周采购量须满足当周有效授权额度；第2至第20周到货量须满足当周有效接收能力；每周周初及周末库存须满足当周有效容量。单元启用不改变配送延迟或每周最多一次采购的规则。\n\n## 7. 程序输出与求解状态\n\n必须真实调用 COPT 求解，不能以直接打印方案代替求解。\n\n实际求解后打印一条带有 `RESULT_JSON` 标识的 JSON 结果，例如使用 `RESULT_JSON` 后接序列化的 JSON 对象。结果必须包含：\n- `status`：取值限于 `optimal`、`feasible`、`infeasible`、`unbounded`、`unknown`、`error`，应反映真实求解结果；\n- `objective_value`：有可用解时，为该解20周总缺货量的自然方向数值，优化方向为最小化；无可用解时为 `null`。\n\n只有证明最优时才可将目标值称为“最优总缺货量”；仅获得可行解时须明确未证明最优。不得输出为求解而取负后的内部目标值。\n\n有可用解时，结果还应输出以下明细，可放在同一 JSON 对象中：\n1. 20周逐周的采购指示、采购量、当周到货量、周初库存、实际满足量、缺货量和周末库存。\n2. 各单元是否被选择；被选择单元的培训、首次认证和复核开始周及完成周。未选择单元不应显示虚构任务日期，可将任务时间输出为 `null`。\n3. 各单元在20周的有效资格状态。\n4. 每周总有效库存容量，以及总有效采购授权额度和到货接收能力。\n5. 总实际满足量、总需求满足率及是否达到至少95%的要求。满足率为总实际满足量除以总需求，可同时给出百分比。\n6. 第20周采购量，并明确：大于0时形成相同瓶数的第21周期外到货；为0时不形成期外到货。\n\n无可用解时报告状态及必要说明，不输出违反业务条件的采购或任务计划。\n\n## 8. 输入 CSV 文件\n\n所有文件使用 UTF-8 编码，首行为字段名。输入不包含空值或重复记录。编号字段均为整数，不存在前导零标识。\n\n### ./data/parameters.csv\n\n每行代表本规划问题的全局规模、初始库存和累计服务量参数；本文件恰有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| T | 规划期周数 | integer | 周，20 |\n| init_stock | 第1周可直接使用的初始库存 | integer | 瓶，37 |\n| total_demand | 全规划期总需求 | integer | 瓶，等于各周需求之和 |\n| min_satisfy | 至少95%累计需求对应的最低实际满足量 | integer | 瓶，总需求的95%向上取整 |\n\n该表的累计需求应与 `weeks.csv` 的需求合计一致。95%比例及其他固定业务规则以正文规定为准。\n\n### ./data/weeks.csv\n\n每行代表一个规划周的患者需求和技术团队可用性，共20行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| week | 规划周编号 | integer | 周，1至20 |\n| demand | 当周患者需求 | integer | 瓶 |\n| team_available | 当周技术团队是否可执行任务 | boolean | true 或 false；第8、14周为 false |\n\n`week` 为唯一标识；周记录完整覆盖1至20，不得缺周。该编号也是采购、库存、任务日历及资格输出使用的周编号。\n\n### ./data/units.csv\n\n每行代表一个可选冷链服务单元及其培训窗口、准备间隔和有效时的增量能力，共3行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| unit_id | 冷链服务单元编号 | integer | 不适用，1至3 |\n| training_earliest | 培训最早开始周 | integer | 周 |\n| training_latest | 培训最晚开始周 | integer | 周 |\n| certification_min_gap | 培训完成至首次认证开始的最小间隔 | integer | 周 |\n| stock_capacity_increment | 有效资格时增加的库存容量 | integer | 瓶 |\n| authorization_receipt_increment | 有效资格时增加的采购授权额度和到货接收能力 | integer | 瓶/周 |\n\n`unit_id` 为唯一标识。培训窗口字段使用与 `weeks.csv.week` 相同的周编号体系；间隔字段为时长，不是周编号。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：parameters.csv\nT,init_stock,total_demand,min_satisfy\r\n20,37,528,502\r\n\n\n数据文件：units.csv\nunit_id,training_earliest,training_latest,certification_min_gap,stock_capacity_increment,authorization_receipt_increment\r\n1,1,4,1,12,4\r\n2,2,5,2,20,4\r\n3,3,6,1,16,8\r\n\n\n数据文件：weeks.csv\nweek,demand,team_available\r\n1,15,true\r\n2,22,true\r\n3,18,true\r\n4,24,true\r\n5,20,true\r\n6,30,true\r\n7,25,true\r\n8,28,false\r\n9,32,true\r\n10,27,true\r\n11,31,true\r\n12,23,true\r\n13,29,true\r\n14,26,false\r\n15,35,true\r\n16,33,true\r\n17,21,true\r\n18,19,true\r\n19,34,true\r\n20,36,true",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-adbf6365c649247f",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

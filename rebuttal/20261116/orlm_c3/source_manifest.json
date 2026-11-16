@@ -1,0 +1,1033 @@
+{
+  "schema": "orlm_c3_source_manifest.v1",
+  "classification": "C3_style_user_assigned_information_complete",
+  "deployment_provenance": "unverified; no real deployment claim",
+  "source_root": "rebuttal/20261116/SFT1991_sample20/SFT1991_sample20",
+  "public_cases_file": "rebuttal/20261116/orlm_c3/public_cases.jsonl",
+  "public_cases_sha256": "e7818e7338a9bc24170f86d256640fe6e7fa7a7141a3f6608c7bd4e0bc7c2bae",
+  "public_case_count": 20,
+  "prompt_limit_characters_exclusive": 240000,
+  "answers_excluded": true,
+  "entries": [
+    {
+      "source_id": "B01_00413",
+      "id": "ORLM-SFT1991-B01_00413",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "e33e81eb65d13dbbd16369d43cf58f22ec7d5a3ac7c6e991c1608aa8d0a3a83f",
+          "bytes": 11866,
+          "characters": 5736
+        },
+        {
+          "relative_path": "data/days.csv",
+          "sha256": "265273abd738eae4851ac5665875f8a63bbfd1519d36aa3db6090aa86b3af033",
+          "bytes": 37,
+          "characters": 37
+        },
+        {
+          "relative_path": "data/orders.csv",
+          "sha256": "493e6e2ffd0d26d94969a1136e0469430265ccef5d7fc7ab6feff3a949e802ac",
+          "bytes": 79,
+          "characters": 63
+        },
+        {
+          "relative_path": "data/products.csv",
+          "sha256": "919338bee76dbc9a359af2e1c7e8338f262d008f4293d5de87b4c10d7dbc79dc",
+          "bytes": 247,
+          "characters": 235
+        }
+      ],
+      "prompt_sha256": "bb84dc41433ae2e440132356295ee7c57ec2af5964fa1a3758fe1bab5c000cf8",
+      "prompt_characters": 6284,
+      "input_sha256": "289f6e61ce5450f1833bd2889b3a525ddc886e5edcdce5e04853a4b047c8df43",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "86a6a9423e7eb9feb2fd8ccb9f7b6a9048e9bcb0513030cc4446db8a4e9950bf",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B02_00054",
+      "id": "ORLM-SFT1991-B02_00054",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "06bf08084c1b3e378eed9abfdf2e13cdbe64f778bf9d3d517f56af3bb34bf229",
+          "bytes": 14350,
+          "characters": 6364
+        },
+        {
+          "relative_path": "data/batch_types.csv",
+          "sha256": "963debabca64ac64850b20c9fa98a8e4c5bf0bf1df69bb321ed1b2cd7896e1b1",
+          "bytes": 58,
+          "characters": 58
+        },
+        {
+          "relative_path": "data/cleaning_units.csv",
+          "sha256": "5ee39777ed464bb5c074f852d253453d7921d6abe468edc306daac185f76d5da",
+          "bytes": 70,
+          "characters": 70
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "46fba30769ddbd008f4928fd8f08e3165aa3c2d760e1f63423fd3a924ce7269d",
+          "bytes": 275,
+          "characters": 275
+        },
+        {
+          "relative_path": "data/periods.csv",
+          "sha256": "b7f9b58d1b37d3d633abcb876320f28174123b21f4fc08343884edb9262f197f",
+          "bytes": 40,
+          "characters": 40
+        },
+        {
+          "relative_path": "data/route_processing.csv",
+          "sha256": "7a50c0b4f990c6184d954260c490b673b992cf9c1edcf8cbf080096b4faac549",
+          "bytes": 212,
+          "characters": 212
+        },
+        {
+          "relative_path": "data/routes.csv",
+          "sha256": "97bed23c944176b85a56001233f8353d566837f8256d6c186eecbcf000987b91",
+          "bytes": 89,
+          "characters": 89
+        }
+      ],
+      "prompt_sha256": "47507f96547ac6512ede350a70fb5937a1c9e715bd0d4851d7251257ea0ae8c0",
+      "prompt_characters": 7403,
+      "input_sha256": "efee4ef96367a20163e1ea32004729e11d4cd2b2f4c3f3f0b5e5378e87708003",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "e3094f42681f767326a42416f9b177ecd63a77348e328cdf4c1faee5844b2cba",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B02_00182",
+      "id": "ORLM-SFT1991-B02_00182",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "b50e148f648be31f0737b6ce4d1d35e0ec4c862a76a1f8599fae061de9efaff8",
+          "bytes": 11988,
+          "characters": 5591
+        },
+        {
+          "relative_path": "data/drone_restrictions.csv",
+          "sha256": "8fdc859565c3ca18754e889051b4b6e1c7c404345439e5e62702973a23b4a7d7",
+          "bytes": 58,
+          "characters": 58
+        },
+        {
+          "relative_path": "data/drones.csv",
+          "sha256": "58083b8199f2a4c2273a55f329f5140c1e4f74df32e7de8b8971cea2b837cd89",
+          "bytes": 113,
+          "characters": 113
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "5bd28070c41bbe9497fc548263913e65edc7ad643e2fbedacc0327f795947611",
+          "bytes": 310,
+          "characters": 310
+        },
+        {
+          "relative_path": "data/stations.csv",
+          "sha256": "0d4be8330d372e6210f0414a015c95211646c2a34b0eafabd13397a2a9a56397",
+          "bytes": 213,
+          "characters": 213
+        },
+        {
+          "relative_path": "data/travel_times.csv",
+          "sha256": "1f67f5db28e142bae2ca579e8cbbb4fd10b9c36a2cd626a2f62653d8b425aa2c",
+          "bytes": 369,
+          "characters": 369
+        }
+      ],
+      "prompt_sha256": "93860e1454fe7a5e37ad4baf3786e6a9fb6dabee992e3c2e6bdfb6a343d61b0e",
+      "prompt_characters": 6927,
+      "input_sha256": "8249e3976e748af72562e4eb65a1a6ee5f66d12b2114b6d29da9d5040ec85334",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "fbd4669a1ac149acbb95ea705831afa94e10f0db41965ab24acd5e1c773e10d9",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B02_00197",
+      "id": "ORLM-SFT1991-B02_00197",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "efa31b22247577f45001977909dd3985755950f6f39bfd07eeba4c5e7f23e209",
+          "bytes": 7170,
+          "characters": 3446
+        },
+        {
+          "relative_path": "data/certifications.csv",
+          "sha256": "2ebe74b922938bc6fe17c327de41c22db68bff028b970022b96c25906270459a",
+          "bytes": 183,
+          "characters": 183
+        },
+        {
+          "relative_path": "data/hubs.csv",
+          "sha256": "19319298729acda01ec3f64b4c78ed4fb7e0a69cf0495a0d66cf40ac325238b0",
+          "bytes": 112,
+          "characters": 112
+        },
+        {
+          "relative_path": "data/vehicles.csv",
+          "sha256": "63ca0518ed94a817868b05f849b4621255118ace11ddd54fbd47325f4311cefd",
+          "bytes": 150,
+          "characters": 120
+        }
+      ],
+      "prompt_sha256": "1fe9df0441dd79c8f7d7abfb808ef03045c088c467d096d5cea0a73013551775",
+      "prompt_characters": 4082,
+      "input_sha256": "ae92aef57e4fa41d47a8bb6a0ad46bc04769688bf2319bd25a3691ddf4d9618e",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "05f82b476e2a6bd0ce1208938bca492746f4d9b9185ff9e6bc177605e5560631",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00149",
+      "id": "ORLM-SFT1991-B03_00149",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "087898eee7e42a5a67e67eff7273235c0c926134127f25e4c60d036dd7540596",
+          "bytes": 10986,
+          "characters": 4702
+        },
+        {
+          "relative_path": "data/planning_parameters.csv",
+          "sha256": "6839d320fc3ca5bae13bb6a68410f282809a1a4177f0fb58ece6e221baa2e080",
+          "bytes": 354,
+          "characters": 354
+        },
+        {
+          "relative_path": "data/weekly_requirements.csv",
+          "sha256": "7b9f3be2139b939378b8cd6143539eed030c758bd793e6b5dc02d3eb97ddb77a",
+          "bytes": 191,
+          "characters": 191
+        }
+      ],
+      "prompt_sha256": "437f844a41909544207970485e11057acaf5e87c1a2dbfcc8e582cb0878a50a6",
+      "prompt_characters": 5468,
+      "input_sha256": "99c7d45768bf0b67a22c5a623c6b33352de213bfb635286789ae31ff7f024b52",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "0a69dacf27f4ad7e47fefefb2f076adf0272270276daa73c48a0f957d21220ac",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00206",
+      "id": "ORLM-SFT1991-B03_00206",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "085d4f148a640d188b5dab7c33ce529f2f816afaef6b9cdb43c4bedd86f7b3e4",
+          "bytes": 12062,
+          "characters": 5654
+        },
+        {
+          "relative_path": "data/courses.csv",
+          "sha256": "0e9f6146ca52537575e8b22e0e08d1ce132145d3d24ced9df8cbf876869b4683",
+          "bytes": 172,
+          "characters": 160
+        },
+        {
+          "relative_path": "data/dependencies.csv",
+          "sha256": "e706673d4e6b7248b72075cf99211f2cee5ca3e57f04c67307437c1ddf04e975",
+          "bytes": 75,
+          "characters": 75
+        },
+        {
+          "relative_path": "data/rooms.csv",
+          "sha256": "9de22308b426e21851ed8cfae8f9337002d531bc4e608dcfb13fffca178d38b6",
+          "bytes": 82,
+          "characters": 74
+        },
+        {
+          "relative_path": "data/settings.csv",
+          "sha256": "ea06874b971cb56e72e1ca2fbd1b831776ca69a84b877829a9310b9a5807df0a",
+          "bytes": 222,
+          "characters": 222
+        },
+        {
+          "relative_path": "data/slots.csv",
+          "sha256": "3a52aab65c718a5e05097a9e607bb4b7ecccbdbfd2fe9afc9280a641124703c6",
+          "bytes": 178,
+          "characters": 154
+        },
+        {
+          "relative_path": "data/teachers.csv",
+          "sha256": "4bae95b01cdcb5416e3d57f75414be51a158eb9d2e6ca9cd0769f2ebeb474e91",
+          "bytes": 189,
+          "characters": 169
+        }
+      ],
+      "prompt_sha256": "09a8973617c7677c9d80ac11df028a2e4e973a996adeef701e5f74879a76381f",
+      "prompt_characters": 6784,
+      "input_sha256": "cf17b4ca381e30685175afa74949ef06af1eefceb4dffa1a522afde3f83d43bb",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "fc5f42aca4b0177673fdbdefe50c658d0384b4c71d506ca32ea63de06928d402",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00230",
+      "id": "ORLM-SFT1991-B03_00230",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "3584176fb163f7049a77763438b96a14a2f0f58f7e97010f4cd9777ab0dc474e",
+          "bytes": 11968,
+          "characters": 5988
+        },
+        {
+          "relative_path": "data/electronic_rooms.csv",
+          "sha256": "2cecdfef9e1d070e28936bd319e49d26b169c3b2bffbc98e8bb59842f68fc429",
+          "bytes": 42,
+          "characters": 42
+        },
+        {
+          "relative_path": "data/exams.csv",
+          "sha256": "bcf3d04b424cb0a0017bd655245862413196e1e54ea36e66a7eaab3438a8b0c2",
+          "bytes": 38,
+          "characters": 38
+        },
+        {
+          "relative_path": "data/rooms.csv",
+          "sha256": "2e13e5197195c3636375ca17d9a77d7b7ef28fc3acbebddaac5fac92c5b50d45",
+          "bytes": 88,
+          "characters": 88
+        },
+        {
+          "relative_path": "data/teacher_availability.csv",
+          "sha256": "9f46cda0bc08d7fae7cdb0c27f785e758cb799acd3a2970ecaa1db4513111118",
+          "bytes": 50,
+          "characters": 50
+        },
+        {
+          "relative_path": "data/teacher_modes.csv",
+          "sha256": "fb52b9bf45d40d7f8c0fe601ea3848e0530308dac3f9e475bd5fdcc5a94cb3de",
+          "bytes": 72,
+          "characters": 72
+        },
+        {
+          "relative_path": "data/teacher_rooms.csv",
+          "sha256": "5b5325e25d7242b88532fb23f9ef346100fa2b19029196ce049208e64de32fac",
+          "bytes": 55,
+          "characters": 55
+        },
+        {
+          "relative_path": "data/teachers.csv",
+          "sha256": "568180f93a10156f5bc2cd658d129e3892058f90baa7b9009c4ffb56f3ee1aab",
+          "bytes": 48,
+          "characters": 48
+        }
+      ],
+      "prompt_sha256": "30282377f67f737ee965c2d6185579b1acb3de90d0560ef9c9943b72c648760c",
+      "prompt_characters": 6704,
+      "input_sha256": "dc079d7ba0a1e62181eaf474d1074c852bb8b4bd33abf5628a69fbf4a082990a",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "65bc662516290512e3659097ce5d0506746e946a156fa21be960e5d2321c21af",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00275",
+      "id": "ORLM-SFT1991-B03_00275",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "fb9f26b56d1028850179af4f021bda0f76ed2db0987e9b5e0c211a13eee0da0c",
+          "bytes": 12456,
+          "characters": 5576
+        },
+        {
+          "relative_path": "data/buyers.csv",
+          "sha256": "7b3a3ae8a1c09d251ac5b53ba419780235b5c2b05c6cc919c9a893f0d30d45e6",
+          "bytes": 204,
+          "characters": 204
+        },
+        {
+          "relative_path": "data/fruits.csv",
+          "sha256": "edaa1d0ffda247d869b416f7164554db5007b093818193c1f08e36370abd24a0",
+          "bytes": 269,
+          "characters": 261
+        },
+        {
+          "relative_path": "data/harvest.csv",
+          "sha256": "e5d19da50d5ad4ebc69ba216c2230169881cc58c4518621eb59bd4ec14b977ce",
+          "bytes": 108,
+          "characters": 108
+        },
+        {
+          "relative_path": "data/season.csv",
+          "sha256": "8985ef0c0bc69ab9585bf4af131495d00ec6a5b989bf12b90fca6c524f167a78",
+          "bytes": 193,
+          "characters": 193
+        }
+      ],
+      "prompt_sha256": "74b7a812f45034110d0068d98111989ad0a5da92011e852cecf2412bc78a6309",
+      "prompt_characters": 6574,
+      "input_sha256": "499dd019ff136fcbf1c19b725154059df74cfe6c549197b4701c4b4ac31babeb",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "c31e630186fd6fdb53fbe4d5e1624778212ee485ef4b346f160edd0e65fd456d",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00289",
+      "id": "ORLM-SFT1991-B03_00289",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "27dca578241b19055f69f8a261ef8a6e55e3cb60ba214bee97dedd5f4648c702",
+          "bytes": 14000,
+          "characters": 6622
+        },
+        {
+          "relative_path": "data/days.csv",
+          "sha256": "dd0394dd799d78b9eba0195f0df0cd605d4dcd8a3428bde4408a08c63a211812",
+          "bytes": 128,
+          "characters": 128
+        },
+        {
+          "relative_path": "data/operations.csv",
+          "sha256": "4145b625edea966c6e66dcdac412396acacd5b662b2798d7105f013ce2742336",
+          "bytes": 478,
+          "characters": 406
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "ac424a5347b0613bf1c43f9b7a46df4fcbeb31033fadcf5039bca9baa2c39e56",
+          "bytes": 447,
+          "characters": 447
+        },
+        {
+          "relative_path": "data/plots.csv",
+          "sha256": "e171ae6faa04ff029e05a5e636cb320ccc757e67852cfa70121294564ebf810a",
+          "bytes": 176,
+          "characters": 176
+        }
+      ],
+      "prompt_sha256": "446c5f3f023cc1d4d9fd2f2fa0cc30bbd27c899df3a5b700281dd7a9ec5dfd1e",
+      "prompt_characters": 8015,
+      "input_sha256": "71cca36c5483331d4fd11aa1b4ff29662cbc1da4e78fb9227548471399140354",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "a5043c69a49dea6c1830763057a9942240a0958668e64a741427b63d937f7a7e",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "B03_00461",
+      "id": "ORLM-SFT1991-B03_00461",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "1096f7cdd614037f394dba609b63018af72e18c8c9df5442d7871ea1276097b8",
+          "bytes": 9159,
+          "characters": 4709
+        },
+        {
+          "relative_path": "data/acceptance_options.csv",
+          "sha256": "434ce01672f5a099ff58649fd6cd20daafa09c05e28786a3a224a381bffb3165",
+          "bytes": 170,
+          "characters": 170
+        },
+        {
+          "relative_path": "data/centers.csv",
+          "sha256": "0cb103cf6327be19a873e940510b9644a9a1475d45cd77824f3de837afa6997d",
+          "bytes": 153,
+          "characters": 91
+        },
+        {
+          "relative_path": "data/projects.csv",
+          "sha256": "2ff8ab80d1cff68852c2dc84eb0e9f45ab849464f36ae4b100bb6870f2b3e7b5",
+          "bytes": 579,
+          "characters": 417
+        },
+        {
+          "relative_path": "data/resource_limits.csv",
+          "sha256": "dd5ea19f14ce16cc46f48c6fdae643942f489d473523dc3e97b042cd18480a41",
+          "bytes": 136,
+          "characters": 136
+        }
+      ],
+      "prompt_sha256": "c22ad2e7d7d08ca9fc8ca02ddd279298d874f83b2f19d45eb1391b667dccb73d",
+      "prompt_characters": 5778,
+      "input_sha256": "563a632e3955049cb40595e228aefa6a1c4381c25151f84dbbe91bb6e95f087b",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "2a18fde932cdb274b861f64d4dc9fc95ddd06dc9a3c4162f21f35f38bb1a93d9",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P009_high",
+      "id": "ORLM-SFT1991-P009_high",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "376080b8972a8fe4f4a0487d33db31522223034d9b9ce663eaf8fac8aff3fcfa",
+          "bytes": 13782,
+          "characters": 7032
+        },
+        {
+          "relative_path": "data/orders.csv",
+          "sha256": "e3975373a3fab9bc7a53da5614d700e294de52765533da00dd02024983a27166",
+          "bytes": 151,
+          "characters": 131
+        },
+        {
+          "relative_path": "data/periods.csv",
+          "sha256": "727eaf07d68def3241d1221a0ac6b4bf1874be0fb0cf01698986a52f1d243adc",
+          "bytes": 192,
+          "characters": 180
+        },
+        {
+          "relative_path": "data/precedence_rules.csv",
+          "sha256": "ae408dbcaba6e03bcd35910812e7e4d2c1a78d1655d3152dca278c0bee8e26bc",
+          "bytes": 103,
+          "characters": 87
+        },
+        {
+          "relative_path": "data/production_options.csv",
+          "sha256": "828c9edb7f57073a04447ea1f39a4f32e1780deea046766c88cb9c35a1927ca3",
+          "bytes": 232,
+          "characters": 196
+        },
+        {
+          "relative_path": "data/products.csv",
+          "sha256": "fbc31a070522ede5481ae6603780a64489b6ed3953e8a0379e1039c9db145dc8",
+          "bytes": 176,
+          "characters": 176
+        }
+      ],
+      "prompt_sha256": "36e83c7b397513ac8b7faa843ee1a9f83a5c32078e637cb4312dcd2a11c0b495",
+      "prompt_characters": 8076,
+      "input_sha256": "541cca58f8286b69dbbb65372f745df81fe12133b4580d752cb1032b9f81d82f",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "d610849e5537a542f2c7b0f2a8cd88707a7af446e93a315722bbfb0699c42d65",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P122_high",
+      "id": "ORLM-SFT1991-P122_high",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "a37f40bb484972e684b77f0f91fcf5c5d1f0f22f700f16380f54653e2c8457a2",
+          "bytes": 15676,
+          "characters": 7812
+        },
+        {
+          "relative_path": "data/node_period_capacity.csv",
+          "sha256": "1be7370130a870b6c3060086988b55ac5ec471e16bccda4a434081290b52ff97",
+          "bytes": 194,
+          "characters": 194
+        },
+        {
+          "relative_path": "data/node_period_windows.csv",
+          "sha256": "a758357e209f5c6b92c4f79df08dd0da84254825d207a9b9d291cf97f8955bbf",
+          "bytes": 1343,
+          "characters": 1343
+        },
+        {
+          "relative_path": "data/nodes.csv",
+          "sha256": "60fe78693eee7bd611c7c4892a47980d70e41ca38f8cc60fdb289ac7b7e9c51c",
+          "bytes": 618,
+          "characters": 618
+        },
+        {
+          "relative_path": "data/periods.csv",
+          "sha256": "b1b0d77f1755fd16cc31746a53d45c7ed22e7561f73cd42faeaacd45e857c17b",
+          "bytes": 192,
+          "characters": 192
+        },
+        {
+          "relative_path": "data/policy.csv",
+          "sha256": "7916c6b1898e7b487a4b93a5be52786b0f8f0c56296d6eacccb5774e4a5b521b",
+          "bytes": 397,
+          "characters": 397
+        },
+        {
+          "relative_path": "data/windows.csv",
+          "sha256": "0509238192281fe796b1012a37f6dd3a32c5c326ea814d265101910986fe17bb",
+          "bytes": 93,
+          "characters": 93
+        }
+      ],
+      "prompt_sha256": "1c1af314ee29c4cfe9c09aefc8264fc3cae998a6c45bcd4148b63ccfa70b6326",
+      "prompt_characters": 10944,
+      "input_sha256": "47e7a0b848994a2e9b336a98a9a0634614ceee3a2c50dfddceb2f7f4bc1e0339",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "398be4ad1359a68534ddad0be03e06880c8f0887fb713520a121c62e0efcc850",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P52_B04_L0055_high",
+      "id": "ORLM-SFT1991-P52_B04_L0055_high",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "30c66fd8d59575b1da5ec92b7febfad5847e46b8b57a1ba05523efb6e7099d7b",
+          "bytes": 16016,
+          "characters": 7784
+        },
+        {
+          "relative_path": "data/assignment_links.csv",
+          "sha256": "d6d3d80134416905d803f6e1280784f64143f417b761af51c1754df5affdb061",
+          "bytes": 104,
+          "characters": 96
+        },
+        {
+          "relative_path": "data/assignments.csv",
+          "sha256": "ced3c4d26b8d33354637e3827bf76e74e6a996160b1c2443c27797d545ed9a31",
+          "bytes": 454,
+          "characters": 356
+        },
+        {
+          "relative_path": "data/departments.csv",
+          "sha256": "90ee4a1f00618b937c85e9ed4d7129fd5186c357a858dbc1bac05fea9f567848",
+          "bytes": 183,
+          "characters": 169
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "43586921cb8c9af4e8b10ca7c650bf124d45283e6b119407b1a35299e1492012",
+          "bytes": 263,
+          "characters": 263
+        },
+        {
+          "relative_path": "data/personnel.csv",
+          "sha256": "07bffb562c3d61ab552e091131f61c2882e459224f4e518c707697a69276a5a7",
+          "bytes": 292,
+          "characters": 264
+        },
+        {
+          "relative_path": "data/precedences.csv",
+          "sha256": "62f17e611d96d42c23fbb67e66a9d336433b12eba4319b6f54dd7f97173d5ed7",
+          "bytes": 107,
+          "characters": 107
+        },
+        {
+          "relative_path": "data/tasks.csv",
+          "sha256": "7cf96ccc9e8635277fbe21facbcb36dfa4b54050fb03877b7fe4c23beb087591",
+          "bytes": 439,
+          "characters": 271
+        },
+        {
+          "relative_path": "data/teams.csv",
+          "sha256": "5de5077f047107dc86a7cb66329b0166b638cc05610c59abe1e9023d6cc403a2",
+          "bytes": 308,
+          "characters": 308
+        }
+      ],
+      "prompt_sha256": "4d5aef901ea2debee6e198506e8cd18c47a8181759fa072b912cfcc5e9d3660a",
+      "prompt_characters": 9951,
+      "input_sha256": "6dd2e9fcd447aab25e15d731a2e4e7a7cbea39abd92963e7713bc7e6edf87bf7",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "9a5adc8594469238a23fb6a42ff1d0fdd371d48c32cff7b8bccd391023bc8346",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P52_B07_L0138_expert",
+      "id": "ORLM-SFT1991-P52_B07_L0138_expert",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "338d42415dfa657fb6498da85c0b8da3547fde720bcd8150ede1580cbf08eeb7",
+          "bytes": 15919,
+          "characters": 7667
+        },
+        {
+          "relative_path": "data/channel_windows.csv",
+          "sha256": "f0fc5f3a3ade422de5492541b30d567fca5c5a1f2e90fcadc3a59796ae25f571",
+          "bytes": 125,
+          "characters": 125
+        },
+        {
+          "relative_path": "data/channels.csv",
+          "sha256": "f1aadab1e72dee750d3315d5bc155719a0c35d2388a686725ba2da0032639c6a",
+          "bytes": 430,
+          "characters": 372
+        },
+        {
+          "relative_path": "data/resource_channels.csv",
+          "sha256": "1e231cd37dc44cf205f055df72bafe1292562edda3a54345f4a43b0be8425516",
+          "bytes": 104,
+          "characters": 104
+        },
+        {
+          "relative_path": "data/resource_conflicts.csv",
+          "sha256": "a9cd1b1605b0299cf4b1572d2c7d047e5f682e41bcf6071794f8fbe043ff876c",
+          "bytes": 39,
+          "characters": 39
+        },
+        {
+          "relative_path": "data/resource_windows.csv",
+          "sha256": "5faabe8edd18a1a97085e675b41fbc3e6d663bdedf5f6b35eb8679ab6e383c34",
+          "bytes": 109,
+          "characters": 109
+        },
+        {
+          "relative_path": "data/resources.csv",
+          "sha256": "d80b469be6bbc39f929ba6ba65a5b64c26a93a94d6592d795df286e5d16b5a77",
+          "bytes": 84,
+          "characters": 84
+        },
+        {
+          "relative_path": "data/settings.csv",
+          "sha256": "04e799d34ae9258745b406812723b24836266161d077c37f129caece180a399a",
+          "bytes": 229,
+          "characters": 229
+        },
+        {
+          "relative_path": "data/weekly_channel_limits.csv",
+          "sha256": "7209cecda7e435b8df4a0dc7d0692e09dcecfd21757b4f77a244fba1bf053344",
+          "bytes": 86,
+          "characters": 86
+        },
+        {
+          "relative_path": "data/weeks.csv",
+          "sha256": "3376fb80a124f0c82f5d08f38436a4c2ad60f0c53eddb4859333a52e7195c3cf",
+          "bytes": 58,
+          "characters": 58
+        }
+      ],
+      "prompt_sha256": "254a38bf98eb07ad4d88d4e9efd643d8c18a98feb17eadafe0fcd76808a37dd8",
+      "prompt_characters": 9257,
+      "input_sha256": "bf6f0ed19aaf0b8b32378323e82b1e53d0308d944765a2bc5558f557b96cd5e1",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "3cb0155853d97ffe58c4372f5f6fcb1a5f6c58188b400062eb89cf6589205317",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P52_B08_L0122_expert",
+      "id": "ORLM-SFT1991-P52_B08_L0122_expert",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "3fba3db8afe04cb75b5970400e008295fa942532588d4f779ad54bf35956e080",
+          "bytes": 12725,
+          "characters": 6003
+        },
+        {
+          "relative_path": "data/dependencies.csv",
+          "sha256": "af74d0b4e9f036abe658e964e1185c5ee08c11be2413ef56fe4bfab45bcc2f78",
+          "bytes": 167,
+          "characters": 167
+        },
+        {
+          "relative_path": "data/equipment.csv",
+          "sha256": "13b15f01c1580672b532e72d58d0ad9efe706bf5abf6a5c2b63f5b05476b88d3",
+          "bytes": 95,
+          "characters": 95
+        },
+        {
+          "relative_path": "data/job_windows.csv",
+          "sha256": "99807f0ce87d6dc8f4e98e5cd97549377dac0f8321a46f8be1d61ba79d50e60f",
+          "bytes": 165,
+          "characters": 165
+        },
+        {
+          "relative_path": "data/jobs.csv",
+          "sha256": "2c0e1560c2666216653b90e270054d3c59fc3047a655e8c41d699eaf89e3cf59",
+          "bytes": 363,
+          "characters": 241
+        },
+        {
+          "relative_path": "data/planning.csv",
+          "sha256": "7f8172732b7827359ccbb1a02629e5260e80f7887f7688216421d241fdec39ca",
+          "bytes": 311,
+          "characters": 311
+        },
+        {
+          "relative_path": "data/time_slots.csv",
+          "sha256": "79061f705ca59c3f2b079d91a1bf266309bcbd411bfb16e101634a4b604f6e59",
+          "bytes": 202,
+          "characters": 202
+        }
+      ],
+      "prompt_sha256": "9fe6fad4e1c5966f18eb9158c4e26fdbd42a1a241bf74367ae217f4cba3052f5",
+      "prompt_characters": 7469,
+      "input_sha256": "ab852cb98d97576de40616c66672b960002365ebd6445ef78ee1ade07d505845",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "893c8ca1029492a8390e69bf8634f15e8bc4fd72171a3e3fff22938d98c88517",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "P52_B09_L0055_high",
+      "id": "ORLM-SFT1991-P52_B09_L0055_high",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "8b46f067f00f788e172362dfe751dd900f9a51e0daca3dc510a778c8cbe54ac3",
+          "bytes": 11364,
+          "characters": 4766
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "612857ca4bee0566f6b5edeec81fafda081c248c87eea376a772d39c1844b3e8",
+          "bytes": 54,
+          "characters": 54
+        },
+        {
+          "relative_path": "data/units.csv",
+          "sha256": "29c1e80401d040ac0998fe9143374a398f5b4301855fb5dfc6727d792c801d3e",
+          "bytes": 164,
+          "characters": 164
+        },
+        {
+          "relative_path": "data/weeks.csv",
+          "sha256": "070e6620f0033191c3f25d245fa41cfdc392efde5883b508f09873630d8adcbc",
+          "bytes": 261,
+          "characters": 261
+        }
+      ],
+      "prompt_sha256": "4fe5ab60b8b813263a5ab8af901a763d480f3b1c6e9df4f4ece7f0304c144d29",
+      "prompt_characters": 5460,
+      "input_sha256": "0cc6690c4c5d41df7eb4d2fcfde54b20f01a13041c9af30c5ab59111177304e7",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "c304dc631d3b7c23ed122dd38e122953b0ce8bb3ca0916b7f83b0b92a34301d9",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "REUSE_expert_P52_B03_L0028_expert",
+      "id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "75545fa30d1effca06bab601768cd0a5e5e009a44706e9b2f1a27909eca37fe7",
+          "bytes": 13985,
+          "characters": 6845
+        },
+        {
+          "relative_path": "data/class_courses.csv",
+          "sha256": "b61e442dea6a83df7fdd369ea2dcfa74785f70a83b8dce77afbc004c66515c72",
+          "bytes": 84,
+          "characters": 84
+        },
+        {
+          "relative_path": "data/classes.csv",
+          "sha256": "77a2fa21288149cb10184e82f606213ace20f71b1ae4a67e9d6a38ba30404d94",
+          "bytes": 79,
+          "characters": 67
+        },
+        {
+          "relative_path": "data/course_periods.csv",
+          "sha256": "d2f6991c973071844d4e04c68fda5725cf68ff503a656655a80b69e70e671fa6",
+          "bytes": 133,
+          "characters": 133
+        },
+        {
+          "relative_path": "data/courses.csv",
+          "sha256": "54ab73b232a824099d34e39e8b6f5239f7f179249dd937907e98298a5eb056f0",
+          "bytes": 118,
+          "characters": 118
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "a24c2aa2f35993b4e10730da74b16826c250be53e3839788f5636911e6b6c1c9",
+          "bytes": 310,
+          "characters": 310
+        },
+        {
+          "relative_path": "data/periods.csv",
+          "sha256": "6151510917d1c60d04f3d4e85af4d4681ca0f6a1f487e9ffb167a05875814cb8",
+          "bytes": 245,
+          "characters": 197
+        },
+        {
+          "relative_path": "data/rooms.csv",
+          "sha256": "4a35564521c49c5138c5e37a01c0eaf7190846362ab8abddfc1957b4e0bcdb05",
+          "bytes": 120,
+          "characters": 102
+        },
+        {
+          "relative_path": "data/teacher_availability.csv",
+          "sha256": "cde89bb5955f6f121bd9ae56005c8080613c03e3336aa0fa04c1369173c4fa61",
+          "bytes": 89,
+          "characters": 89
+        },
+        {
+          "relative_path": "data/teachers.csv",
+          "sha256": "ec7c8c5b644f0f700791bdb362579bcc9388f36c0632ae7134bb9bc212ff1e8e",
+          "bytes": 56,
+          "characters": 44
+        }
+      ],
+      "prompt_sha256": "d6701bff699b13aee76c31ea6d847c05a226f0a6f11453619ad4e82bd07231fc",
+      "prompt_characters": 8347,
+      "input_sha256": "4f06d12e8db31f34313902f9f2f2f97b6d0c4b48441db108b3115659612015a7",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "62b115c4f1e7a50ae02e5b20ead893266ee7ef962cf23c9ceeb67e7ac45e84b0",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "8bb3654dddc8ae3a04c90ad1fc6c13160516e87b22c00f49511746e9da97d498",
+          "bytes": 13496,
+          "characters": 7146
+        },
+        {
+          "relative_path": "data/material_days.csv",
+          "sha256": "e89afe3e12997c12e1003f41c756e6842f98caeb1c87a905bee0d48ed275a051",
+          "bytes": 311,
+          "characters": 311
+        },
+        {
+          "relative_path": "data/materials.csv",
+          "sha256": "77907d41cd4dffa09812c8259599ad3e9390314dfea1997665d01e4e53b05bc0",
+          "bytes": 243,
+          "characters": 243
+        },
+        {
+          "relative_path": "data/mode_days.csv",
+          "sha256": "33da16ab47a3542e1515ecdb639d0e164f863e8de3e8228d98ab6ef7c66f61b0",
+          "bytes": 366,
+          "characters": 366
+        },
+        {
+          "relative_path": "data/mode_materials.csv",
+          "sha256": "41e1aa92e6f21fd019087358b994de9492f969c6995f4a3aa02bc10f2cd8dcf3",
+          "bytes": 410,
+          "characters": 410
+        },
+        {
+          "relative_path": "data/mode_resources.csv",
+          "sha256": "00e502c0b08969475afcc1a9e98516d54a4aee6fc10b05a36f4a1414b84373a6",
+          "bytes": 258,
+          "characters": 258
+        },
+        {
+          "relative_path": "data/modes.csv",
+          "sha256": "3d35a1331911d931fed466441d2d34280a47a7b7c4ca62ccabec9aa0f32b646a",
+          "bytes": 299,
+          "characters": 299
+        },
+        {
+          "relative_path": "data/resource_days.csv",
+          "sha256": "80d17cb33a8549a03e7a9162aa0e578b0f6079c8061bd7b3fd752c43d6feaebc",
+          "bytes": 71,
+          "characters": 71
+        }
+      ],
+      "prompt_sha256": "25756cb996ae82ae8089814ac69752cd15a762805742eac9466a9b432358b0da",
+      "prompt_characters": 9424,
+      "input_sha256": "60ca8dd0b08b2c49b2cb96ec595bfcc57cc45d4a0092b0df1bbe9579f93ebb23",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "133310c4a991c54cefe858f687e464770b28b18cee46f6ee5d5492189803e805",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "SFTREAL_OP_RB2607_001",
+      "id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "da813d53fb8ecf3e83227365069bb75410cfaafa2dfc405715af07c6dbcb8cf6",
+          "bytes": 9894,
+          "characters": 4702
+        },
+        {
+          "relative_path": "data/coverage.csv",
+          "sha256": "05348f2220fe20006fef878c882af3434d025e4ff47a61b2943d20921113ee5a",
+          "bytes": 124,
+          "characters": 124
+        },
+        {
+          "relative_path": "data/employees.csv",
+          "sha256": "49d57ac851a56f4b8f1bf5dd303cbe0dd5e0be891a07150c4b709096d0a27520",
+          "bytes": 220,
+          "characters": 220
+        },
+        {
+          "relative_path": "data/mentoring.csv",
+          "sha256": "55bc9dc64c5f3ecdfb091d3c5bf0ed5076fdeb452ad67ed0ee4a96278fa62bc3",
+          "bytes": 72,
+          "characters": 72
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "5edbe65ec8cc7f2852986f82e2e37e44a5eae60e8af2ea5fca3b49e16062a510",
+          "bytes": 203,
+          "characters": 163
+        },
+        {
+          "relative_path": "data/shifts.csv",
+          "sha256": "a3402091a1084d695c23f44599ac4635e2e4e7550cd0ee3d5cfddb0936ca5bbe",
+          "bytes": 73,
+          "characters": 65
+        }
+      ],
+      "prompt_sha256": "bf5bd28f1259b0b28ebc8b916e1286e53c6e28a9160ee00ab43da17523c98956",
+      "prompt_characters": 5607,
+      "input_sha256": "cc882399a52adb13d739f913c6823195c79aaefddad57143865393ce196e8684",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "d11faca0e28f105c1317f9e6d0a441d1b5040ce9e0a781b15f446355e26791db",
+      "answers_excluded": true
+    },
+    {
+      "source_id": "SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "included_files": [
+        {
+          "relative_path": "题面.md",
+          "sha256": "64eceacdefff4702d810f9f6fa157ae6d881fb7f55ff9e2739438c45ed5aa026",
+          "bytes": 12516,
+          "characters": 6854
+        },
+        {
+          "relative_path": "data/depots.csv",
+          "sha256": "e4cbc458f0cfe8fb45b4a8be45ae12b9e4f83c2a166a82331f09a44555ab67f0",
+          "bytes": 90,
+          "characters": 90
+        },
+        {
+          "relative_path": "data/driver_types.csv",
+          "sha256": "aba9b82a9754b0f8cb93b56f421163e5c8cb3cad43d28e08638a707f71fbcf0b",
+          "bytes": 60,
+          "characters": 60
+        },
+        {
+          "relative_path": "data/drivers.csv",
+          "sha256": "dc18e5b8509a30ef48c8b18dc80490145e597c0e882c351f8194a51fac6e4d6e",
+          "bytes": 79,
+          "characters": 79
+        },
+        {
+          "relative_path": "data/fleet.csv",
+          "sha256": "e2a91a1d7c3d2ac55beab13a39bf50fd9a4bf8d20952b68516c933fa176e6b09",
+          "bytes": 79,
+          "characters": 79
+        },
+        {
+          "relative_path": "data/parameters.csv",
+          "sha256": "cd1a7abd912d6b99dc85c111efb4d8078666a08ea8837e460f1ccba4e741d949",
+          "bytes": 294,
+          "characters": 244
+        },
+        {
+          "relative_path": "data/shifts.csv",
+          "sha256": "59caa9c47d77633c19caa13379ca03507138fb1e0d111b28bd66071dd9678f27",
+          "bytes": 46,
+          "characters": 46
+        },
+        {
+          "relative_path": "data/trips.csv",
+          "sha256": "7c2657585f230e6ca00eeaedfc60a0ea93d6b332f428bbbd26650d153cac8249",
+          "bytes": 105,
+          "characters": 105
+        },
+        {
+          "relative_path": "data/vehicle_types.csv",
+          "sha256": "542dd65e4f6dc6c7cf2aab0297a75091416b4b06893d9e594130ea61e63f5ade",
+          "bytes": 65,
+          "characters": 65
+        }
+      ],
+      "prompt_sha256": "0f0903cae75c6c4c0a4773fc4141598f53ca7ab9190362c1dc745fcc7e3425f2",
+      "prompt_characters": 7941,
+      "input_sha256": "c4c63f54bfc1daf916ba8d74960fd63791e23595cafc6464a2b71ee62cd4c774",
+      "input_sha256_definition": "SHA256 of compact UTF-8 JSON for included_files in listed order",
+      "public_case_line_sha256": "e4b3c8d1b6d22cfbc297167c4b8fb106d1331b245d7e9f4bcc5e35999bd39356",
+      "answers_excluded": true
+    }
+  ]
+}

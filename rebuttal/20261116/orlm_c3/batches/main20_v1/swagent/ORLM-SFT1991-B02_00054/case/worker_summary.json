@@ -1,0 +1,14 @@
+{
+  "eval_id": "ORLM-SFT1991-B02_00054",
+  "method": "swagent",
+  "stop_reason": "ValueError",
+  "decision": null,
+  "resources": {
+    "model": 1,
+    "search": 0,
+    "read": 0,
+    "solve": 0,
+    "format_repairs": 0,
+    "schedule": 0
+  }
+}

@@ -1,0 +1,1268 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "lith_p1_r1_A": 0,
+      "lith_p1_r1_B": 28,
+      "lith_p1_r2_A": 23,
+      "lith_p1_r2_B": 0,
+      "lith_p2_r1_A": 0,
+      "lith_p2_r1_B": 23,
+      "lith_p2_r2_A": 20,
+      "lith_p2_r2_B": 4,
+      "etch_p1_r1_A": 0,
+      "etch_p1_r1_B": 28,
+      "etch_p1_r2_A": 23,
+      "etch_p1_r2_B": 0,
+      "etch_p2_r1_A": 0,
+      "etch_p2_r1_B": 23,
+      "etch_p2_r2_A": 20,
+      "etch_p2_r2_B": 4,
+      "insp_p1_r1_A": 0,
+      "insp_p1_r1_B": 28,
+      "insp_p1_r2_A": 23,
+      "insp_p1_r2_B": 0,
+      "insp_p2_r1_A": 0,
+      "insp_p2_r1_B": 23,
+      "insp_p2_r2_A": 20,
+      "insp_p2_r2_B": 4,
+      "w1_p1_r1_A": 0,
+      "w1_p1_r1_B": 0,
+      "w1_p1_r2_A": 0,
+      "w1_p1_r2_B": 0,
+      "w1_p2_r1_A": 0,
+      "w1_p2_r1_B": 0,
+      "w1_p2_r2_A": 0,
+      "w1_p2_r2_B": 0,
+      "w2_p1_r1_A": 0,
+      "w2_p1_r1_B": 0,
+      "w2_p1_r2_A": 0,
+      "w2_p1_r2_B": 0,
+      "w2_p2_r1_A": 0,
+      "w2_p2_r1_B": 0,
+      "w2_p2_r2_A": 0,
+      "w2_p2_r2_B": 0,
+      "route2_active_p1": 1,
+      "route2_active_p2": 1,
+      "clean_p1": 1,
+      "dirty_p1": 51,
+      "clean_p2": 0,
+      "dirty_p2": 52,
+      "clean_qty_N": 0,
+      "clean_qty_F": 46,
+      "clean_on_N": 0,
+      "clean_on_F": 1
+    },
+    "objective": {
+      "value": 660200.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.3189983367919922
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "lith_p1_r1_A": 0,
+      "lith_p1_r1_B": 28,
+      "lith_p1_r2_A": 23,
+      "lith_p1_r2_B": 0,
+      "lith_p2_r1_A": 0,
+      "lith_p2_r1_B": 23,
+      "lith_p2_r2_A": 20,
+      "lith_p2_r2_B": 4,
+      "etch_p1_r1_A": 0,
+      "etch_p1_r1_B": 28,
+      "etch_p1_r2_A": 23,
+      "etch_p1_r2_B": 0,
+      "etch_p2_r1_A": 0,
+      "etch_p2_r1_B": 23,
+      "etch_p2_r2_A": 20,
+      "etch_p2_r2_B": 4,
+      "insp_p1_r1_A": 0,
+      "insp_p1_r1_B": 28,
+      "insp_p1_r2_A": 23,
+      "insp_p1_r2_B": 0,
+      "insp_p2_r1_A": 0,
+      "insp_p2_r1_B": 23,
+      "insp_p2_r2_A": 20,
+      "insp_p2_r2_B": 4,
+      "w1_p1_r1_A": 0,
+      "w1_p1_r1_B": 0,
+      "w1_p1_r2_A": 0,
+      "w1_p1_r2_B": 0,
+      "w1_p2_r1_A": 0,
+      "w1_p2_r1_B": 0,
+      "w1_p2_r2_A": 0,
+      "w1_p2_r2_B": 0,
+      "w2_p1_r1_A": 0,
+      "w2_p1_r1_B": 0,
+      "w2_p1_r2_A": 0,
+      "w2_p1_r2_B": 0,
+      "w2_p2_r1_A": 0,
+      "w2_p2_r1_B": 0,
+      "w2_p2_r2_A": 0,
+      "w2_p2_r2_B": 0,
+      "route2_active_p1": 1,
+      "route2_active_p2": 1,
+      "clean_p1": 1,
+      "dirty_p1": 51,
+      "clean_p2": 0,
+      "dirty_p2": 52,
+      "clean_qty_N": 0,
+      "clean_qty_F": 46,
+      "clean_on_N": 0,
+      "clean_on_F": 1
+    },
+    "objective": {
+      "value": 660200.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.3189983367919922
+  },
+  "base_solution": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "lith_p1_r1_A": 0,
+      "lith_p1_r1_B": 28,
+      "lith_p1_r2_A": 23,
+      "lith_p1_r2_B": 0,
+      "lith_p2_r1_A": 0,
+      "lith_p2_r1_B": 23,
+      "lith_p2_r2_A": 20,
+      "lith_p2_r2_B": 4,
+      "etch_p1_r1_A": 0,
+      "etch_p1_r1_B": 28,
+      "etch_p1_r2_A": 23,
+      "etch_p1_r2_B": 0,
+      "etch_p2_r1_A": 0,
+      "etch_p2_r1_B": 23,
+      "etch_p2_r2_A": 20,
+      "etch_p2_r2_B": 4,
+      "insp_p1_r1_A": 0,
+      "insp_p1_r1_B": 28,
+      "insp_p1_r2_A": 23,
+      "insp_p1_r2_B": 0,
+      "insp_p2_r1_A": 0,
+      "insp_p2_r1_B": 23,
+      "insp_p2_r2_A": 20,
+      "insp_p2_r2_B": 4,
+      "w1_p1_r1_A": 0,
+      "w1_p1_r1_B": 0,
+      "w1_p1_r2_A": 0,
+      "w1_p1_r2_B": 0,
+      "w1_p2_r1_A": 0,
+      "w1_p2_r1_B": 0,
+      "w1_p2_r2_A": 0,
+      "w1_p2_r2_B": 0,
+      "w2_p1_r1_A": 0,
+      "w2_p1_r1_B": 0,
+      "w2_p1_r2_A": 0,
+      "w2_p1_r2_B": 0,
+      "w2_p2_r1_A": 0,
+      "w2_p2_r1_B": 0,
+      "w2_p2_r2_A": 0,
+      "w2_p2_r2_B": 0,
+      "route2_active_p1": 1,
+      "route2_active_p2": 1,
+      "clean_p1": 1,
+      "dirty_p1": 51,
+      "clean_p2": 0,
+      "dirty_p2": 52,
+      "clean_qty_N": 0,
+      "clean_qty_F": 46,
+      "clean_on_N": 0,
+      "clean_on_F": 1
+    },
+    "objective": {
+      "value": 660200.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.30700111389160156
+  },
+  "model": {
+    "variables": [
+      {
+        "id": "lith_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "route2_active_p1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "route2_active_p2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "clean_p1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "dirty_p1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "clean_p2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "dirty_p2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "clean_qty_N",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 42
+      },
+      {
+        "id": "clean_qty_F",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "clean_on_N",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "clean_on_F",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "sense": "max",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "insp_p1_r1_A": 8200,
+        "insp_p1_r1_B": 5600,
+        "insp_p1_r2_A": 9000,
+        "insp_p1_r2_B": 5900,
+        "insp_p2_r1_A": 8200,
+        "insp_p2_r1_B": 5600,
+        "insp_p2_r2_A": 9000,
+        "insp_p2_r2_B": 5900,
+        "route2_active_p1": -18000,
+        "route2_active_p2": -18000
+      }
+    },
+    "constraints": [
+      {
+        "name": "lith_demand_p1_A",
+        "coefficients": {
+          "lith_p1_r1_A": 1,
+          "lith_p1_r2_A": 1
+        },
+        "sense": ">=",
+        "rhs": 19.8
+      },
+      {
+        "name": "lith_demand_p1_B",
+        "coefficients": {
+          "lith_p1_r1_B": 1,
+          "lith_p1_r2_B": 1
+        },
+        "sense": ">=",
+        "rhs": 26.4
+      },
+      {
+        "name": "lith_demand_p2_A",
+        "coefficients": {
+          "lith_p2_r1_A": 1,
+          "lith_p2_r2_A": 1
+        },
+        "sense": ">=",
+        "rhs": 19.8
+      },
+      {
+        "name": "lith_demand_p2_B",
+        "coefficients": {
+          "lith_p2_r1_B": 1,
+          "lith_p2_r2_B": 1
+        },
+        "sense": ">=",
+        "rhs": 26.4
+      },
+      {
+        "name": "qual_demand_p1_A",
+        "coefficients": {
+          "insp_p1_r1_A": 0.96,
+          "insp_p1_r2_A": 0.98
+        },
+        "sense": ">=",
+        "rhs": 17.1
+      },
+      {
+        "name": "qual_demand_p1_B",
+        "coefficients": {
+          "insp_p1_r1_B": 0.94,
+          "insp_p1_r2_B": 0.95
+        },
+        "sense": ">=",
+        "rhs": 22.8
+      },
+      {
+        "name": "qual_demand_p2_A",
+        "coefficients": {
+          "insp_p2_r1_A": 0.96,
+          "insp_p2_r2_A": 0.98
+        },
+        "sense": ">=",
+        "rhs": 17.1
+      },
+      {
+        "name": "qual_demand_p2_B",
+        "coefficients": {
+          "insp_p2_r1_B": 0.94,
+          "insp_p2_r2_B": 0.95
+        },
+        "sense": ">=",
+        "rhs": 22.8
+      },
+      {
+        "name": "wip_balance_p1_r1_A_etch",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "lith_p1_r1_A": -1,
+          "etch_p1_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_A_insp",
+        "coefficients": {
+          "w2_p1_r1_A": 1,
+          "etch_p1_r1_A": -1,
+          "insp_p1_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_B_etch",
+        "coefficients": {
+          "w1_p1_r1_B": 1,
+          "lith_p1_r1_B": -1,
+          "etch_p1_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_B_insp",
+        "coefficients": {
+          "w2_p1_r1_B": 1,
+          "etch_p1_r1_B": -1,
+          "insp_p1_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_A_etch",
+        "coefficients": {
+          "w1_p1_r2_A": 1,
+          "lith_p1_r2_A": -1,
+          "etch_p1_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_A_insp",
+        "coefficients": {
+          "w2_p1_r2_A": 1,
+          "etch_p1_r2_A": -1,
+          "insp_p1_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_B_etch",
+        "coefficients": {
+          "w1_p1_r2_B": 1,
+          "lith_p1_r2_B": -1,
+          "etch_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_B_insp",
+        "coefficients": {
+          "w2_p1_r2_B": 1,
+          "etch_p1_r2_B": -1,
+          "insp_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_A_etch",
+        "coefficients": {
+          "w1_p2_r1_A": 1,
+          "w1_p1_r1_A": -1,
+          "lith_p2_r1_A": -1,
+          "etch_p2_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_A_insp",
+        "coefficients": {
+          "w2_p2_r1_A": 1,
+          "w2_p1_r1_A": -1,
+          "etch_p2_r1_A": -1,
+          "insp_p2_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_B_etch",
+        "coefficients": {
+          "w1_p2_r1_B": 1,
+          "w1_p1_r1_B": -1,
+          "lith_p2_r1_B": -1,
+          "etch_p2_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_B_insp",
+        "coefficients": {
+          "w2_p2_r1_B": 1,
+          "w2_p1_r1_B": -1,
+          "etch_p2_r1_B": -1,
+          "insp_p2_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_A_etch",
+        "coefficients": {
+          "w1_p2_r2_A": 1,
+          "w1_p1_r2_A": -1,
+          "lith_p2_r2_A": -1,
+          "etch_p2_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_A_insp",
+        "coefficients": {
+          "w2_p2_r2_A": 1,
+          "w2_p1_r2_A": -1,
+          "etch_p2_r2_A": -1,
+          "insp_p2_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_B_etch",
+        "coefficients": {
+          "w1_p2_r2_B": 1,
+          "w1_p1_r2_B": -1,
+          "lith_p2_r2_B": -1,
+          "etch_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_B_insp",
+        "coefficients": {
+          "w2_p2_r2_B": 1,
+          "w2_p1_r2_B": -1,
+          "etch_p2_r2_B": -1,
+          "insp_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "equip_lith_p1_r1",
+        "coefficients": {
+          "lith_p1_r1_A": 1,
+          "lith_p1_r1_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "equip_etch_p1_r1",
+        "coefficients": {
+          "etch_p1_r1_A": 0.8,
+          "etch_p1_r1_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "equip_insp_p1_r1",
+        "coefficients": {
+          "insp_p1_r1_A": 0.5,
+          "insp_p1_r1_B": 0.4
+        },
+        "sense": "<=",
+        "rhs": 13
+      },
+      {
+        "name": "equip_lith_p1_r2",
+        "coefficients": {
+          "lith_p1_r2_A": 0.8,
+          "lith_p1_r2_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "equip_etch_p1_r2",
+        "coefficients": {
+          "etch_p1_r2_A": 1,
+          "etch_p1_r2_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 23
+      },
+      {
+        "name": "equip_insp_p1_r2",
+        "coefficients": {
+          "insp_p1_r2_A": 0.6,
+          "insp_p1_r2_B": 0.5
+        },
+        "sense": "<=",
+        "rhs": 15
+      },
+      {
+        "name": "equip_lith_p2_r1",
+        "coefficients": {
+          "lith_p2_r1_A": 1,
+          "lith_p2_r1_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "equip_etch_p2_r1",
+        "coefficients": {
+          "etch_p2_r1_A": 0.8,
+          "etch_p2_r1_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "equip_insp_p2_r1",
+        "coefficients": {
+          "insp_p2_r1_A": 0.5,
+          "insp_p2_r1_B": 0.4
+        },
+        "sense": "<=",
+        "rhs": 13
+      },
+      {
+        "name": "equip_lith_p2_r2",
+        "coefficients": {
+          "lith_p2_r2_A": 0.8,
+          "lith_p2_r2_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "equip_etch_p2_r2",
+        "coefficients": {
+          "etch_p2_r2_A": 1,
+          "etch_p2_r2_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 23
+      },
+      {
+        "name": "equip_insp_p2_r2",
+        "coefficients": {
+          "insp_p2_r2_A": 0.6,
+          "insp_p2_r2_B": 0.5
+        },
+        "sense": "<=",
+        "rhs": 15
+      },
+      {
+        "name": "route2_activation_p1_lith_A",
+        "coefficients": {
+          "lith_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_lith_B",
+        "coefficients": {
+          "lith_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_etch_A",
+        "coefficients": {
+          "etch_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_etch_B",
+        "coefficients": {
+          "etch_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_insp_A",
+        "coefficients": {
+          "insp_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_insp_B",
+        "coefficients": {
+          "insp_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_lith_A",
+        "coefficients": {
+          "lith_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_lith_B",
+        "coefficients": {
+          "lith_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_etch_A",
+        "coefficients": {
+          "etch_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_etch_B",
+        "coefficients": {
+          "etch_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_insp_A",
+        "coefficients": {
+          "insp_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_insp_B",
+        "coefficients": {
+          "insp_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "personnel_p1",
+        "coefficients": {
+          "etch_p1_r1_A": 0.5,
+          "etch_p1_r2_A": 0.5,
+          "etch_p1_r1_B": 0.3,
+          "etch_p1_r2_B": 0.3
+        },
+        "sense": "<=",
+        "rhs": 20
+      },
+      {
+        "name": "personnel_p2",
+        "coefficients": {
+          "etch_p2_r1_A": 0.5,
+          "etch_p2_r2_A": 0.5,
+          "etch_p2_r1_B": 0.3,
+          "etch_p2_r2_B": 0.3,
+          "clean_qty_N": 0.2,
+          "clean_qty_F": 0.3,
+          "clean_on_N": 2,
+          "clean_on_F": 3
+        },
+        "sense": "<=",
+        "rhs": 35
+      },
+      {
+        "name": "clean_at_most_one",
+        "coefficients": {
+          "clean_on_N": 1,
+          "clean_on_F": 1
+        },
+        "sense": "<=",
+        "rhs": 1
+      },
+      {
+        "name": "clean_N_upper",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_on_N": -42
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_N_lower",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_on_N": -1
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_F_upper",
+        "coefficients": {
+          "clean_qty_F": 1,
+          "clean_on_F": -50
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_F_lower",
+        "coefficients": {
+          "clean_qty_F": 1,
+          "clean_on_F": -1
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_total_le_dirty_p1",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_qty_F": 1,
+          "dirty_p1": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_clean_p1",
+        "coefficients": {
+          "clean_p1": 1,
+          "lith_p1_r1_A": 1,
+          "lith_p1_r1_B": 1,
+          "lith_p1_r2_A": 1,
+          "lith_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "carrier_dirty_p1",
+        "coefficients": {
+          "dirty_p1": 1,
+          "insp_p1_r1_A": -1,
+          "insp_p1_r1_B": -1,
+          "insp_p1_r2_A": -1,
+          "insp_p1_r2_B": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_clean_p2",
+        "coefficients": {
+          "clean_p2": 1,
+          "clean_p1": -1,
+          "clean_qty_N": -1,
+          "clean_qty_F": -1,
+          "lith_p2_r1_A": 1,
+          "lith_p2_r1_B": 1,
+          "lith_p2_r2_A": 1,
+          "lith_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_dirty_p2",
+        "coefficients": {
+          "dirty_p2": 1,
+          "dirty_p1": -1,
+          "clean_qty_N": 1,
+          "clean_qty_F": 1,
+          "insp_p2_r1_A": -1,
+          "insp_p2_r1_B": -1,
+          "insp_p2_r2_A": -1,
+          "insp_p2_r2_B": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_conservation_p1",
+        "coefficients": {
+          "clean_p1": 1,
+          "dirty_p1": 1,
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "carrier_conservation_p2",
+        "coefficients": {
+          "clean_p2": 1,
+          "dirty_p2": 1,
+          "w1_p2_r1_A": 1,
+          "w1_p2_r1_B": 1,
+          "w1_p2_r2_A": 1,
+          "w1_p2_r2_B": 1,
+          "w2_p2_r1_A": 1,
+          "w2_p2_r1_B": 1,
+          "w2_p2_r2_A": 1,
+          "w2_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "wip_p1_storage_limit",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "wip_p1_receipt_limit",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "<=",
+        "rhs": 3
+      },
+      {
+        "name": "final_wip_zero",
+        "coefficients": {
+          "w1_p2_r1_A": 1,
+          "w1_p2_r1_B": 1,
+          "w1_p2_r2_A": 1,
+          "w1_p2_r2_B": 1,
+          "w2_p2_r1_A": 1,
+          "w2_p2_r1_B": 1,
+          "w2_p2_r2_A": 1,
+          "w2_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      }
+    ]
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": {
+    "search_needed": false,
+    "reason": "The optimization problem, all input data, the model formulation, and solver output are fully supplied; no external public-web information is required.",
+    "queries": []
+  },
+  "unresolved": [],
+  "final_modeling_attempted": true,
+  "final_modeling_completed": true,
+  "resources": {
+    "model": 3,
+    "search": 0,
+    "read": 0,
+    "solve": 2,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 191.59299999999348,
+  "usage": {
+    "calls": 3,
+    "model_calls": 3,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 190.81200000003446,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 29119,
+    "known_prompt_tokens": 29119,
+    "completion_tokens": 33731,
+    "known_completion_tokens": 33731,
+    "total_tokens": 62850,
+    "known_total_tokens": 62850,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 62850,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

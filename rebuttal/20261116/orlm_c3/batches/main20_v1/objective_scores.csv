@@ -1,0 +1,41 @@
+﻿source_id,eval_id,method,completed,stop_reason,error,solver_status,last_solver_status,reference_direction,generated_direction,reference_value,generated_value,objective_match,absolute_error,normal_finish,model_calls,search_calls,read_calls,solve_calls,elapsed_seconds,output_actions
+B01_00413,ORLM-SFT1991-B01_00413,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,355.1,355.1,True,0.0,True,3,0,0,2,108.375,44
+B02_00054,ORLM-SFT1991-B02_00054,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,660200.0,660200.0,True,0.0,True,3,0,0,2,193.078,50
+B02_00182,ORLM-SFT1991-B02_00182,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,210.0,210.0,True,0.0,True,3,0,0,2,331.969,70
+B02_00197,ORLM-SFT1991-B02_00197,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,191500.0,191500.0,True,0.0,True,3,0,0,2,70.64,31
+B03_00149,ORLM-SFT1991-B03_00149,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,100.0,100.0,True,0.0,True,3,0,0,2,113.704,40
+B03_00206,ORLM-SFT1991-B03_00206,standard-online,True,ValueError,Invalid model keys,,,min,,3.0,,False,,False,2,0,0,0,838.0,0
+B03_00230,ORLM-SFT1991-B03_00230,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,2.0,2.0,True,0.0,True,3,0,0,2,210.922,57
+B03_00275,ORLM-SFT1991-B03_00275,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,34093.75000000001,34093.75,True,7.275957614183426e-12,True,3,0,0,2,171.0,36
+B03_00289,ORLM-SFT1991-B03_00289,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,690.0,690.0,True,0.0,True,3,0,0,2,481.156,10
+B03_00461,ORLM-SFT1991-B03_00461,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,1350,1350.0,True,0.0,True,3,0,0,2,89.985,27
+P009_high,ORLM-SFT1991-P009_high,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,28400.0,28400.0,True,0.0,True,3,0,0,2,485.375,50
+P122_high,ORLM-SFT1991-P122_high,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,708.47,708.47,True,0.0,True,3,0,0,2,254.922,155
+P52_B04_L0055_high,ORLM-SFT1991-P52_B04_L0055_high,standard-online,True,HandoffFailure,FAILED [784abbf8f1ca4ce88c50fdb236769eee]: ValueError: Provider reported a failed or incomplete response,,,min,,9,,False,,False,1,0,0,0,324.969,0
+P52_B07_L0138_expert,ORLM-SFT1991-P52_B07_L0138_expert,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,354.0,354.0,True,0.0,True,3,0,0,2,319.594,126
+P52_B08_L0122_expert,ORLM-SFT1991-P52_B08_L0122_expert,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,25.0,25.0,True,0.0,True,3,0,0,2,269.75,152
+P52_B09_L0055_high,ORLM-SFT1991-P52_B09_L0055_high,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,0.0,0.0,True,0.0,True,3,0,0,2,457.468,237
+REUSE_expert_P52_B03_L0028_expert,ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,1610.0,1610.0,True,0.0,True,3,0,0,2,377.75,58
+SFTREAL_OP_R400007_cream_procurement_lot_two_day_life,ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,149.665,149.665,True,0.0,True,3,0,0,2,227.375,59
+SFTREAL_OP_RB2607_001,ORLM-SFT1991-SFTREAL_OP_RB2607_001,standard-online,True,ValueError,Invalid bounds,,,min,,2644.0,,False,,False,1,0,0,0,158.781,0
+SFTREAL_OP_RB2610_individual_monthly_overtime_fee,ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee,standard-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,1162.3999999999967,1162.399999999933,True,6.366462912410498e-11,True,3,0,0,2,453.625,135
+B01_00413,ORLM-SFT1991-B01_00413,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,355.1,355.1,True,0.0,True,2,0,0,1,168.89,44
+B02_00054,ORLM-SFT1991-B02_00054,swagent-online,True,ValueError,Citations must identify observed task or body references,,,max,,660200.0,,False,,False,1,0,0,0,155.39,0
+B02_00182,ORLM-SFT1991-B02_00182,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,210.0,210.0,True,0.0,True,2,0,0,1,431.031,65
+B02_00197,ORLM-SFT1991-B02_00197,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,191500.0,191500.0,True,0.0,True,2,0,0,1,136.219,31
+B03_00149,ORLM-SFT1991-B03_00149,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,100.0,100.0,True,0.0,True,2,0,0,1,108.687,40
+B03_00206,ORLM-SFT1991-B03_00206,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,3.0,3.0,True,0.0,True,2,0,0,2,677.657,231
+B03_00230,ORLM-SFT1991-B03_00230,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,2.0,2.0,True,0.0,True,2,0,0,1,310.953,63
+B03_00275,ORLM-SFT1991-B03_00275,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,34093.75000000001,34093.75000000001,True,0.0,True,2,0,0,1,296.594,36
+B03_00289,ORLM-SFT1991-B03_00289,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,690.0,690.0,True,0.0,True,2,0,0,1,342.656,10
+B03_00461,ORLM-SFT1991-B03_00461,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,1350,1350.0,True,0.0,True,2,0,0,1,123.265,27
+P009_high,ORLM-SFT1991-P009_high,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,28400.0,28399.99999999996,True,4.001776687800884e-11,True,2,0,0,1,429.313,54
+P122_high,ORLM-SFT1991-P122_high,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,708.47,708.4700000000004,True,3.410605131648481e-13,True,3,0,0,1,729.75,187
+P52_B04_L0055_high,ORLM-SFT1991-P52_B04_L0055_high,swagent-online,True,HandoffFailure,FAILED [4ccc74071a5c4e5d93fb09eda0e3f6e9]: ValueError: Provider reported a failed or incomplete response,,,min,,9,,False,,False,1,0,0,0,370.562,0
+P52_B07_L0138_expert,ORLM-SFT1991-P52_B07_L0138_expert,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,max,max,354.0,354.0,True,0.0,True,2,0,0,1,362.953,139
+P52_B08_L0122_expert,ORLM-SFT1991-P52_B08_L0122_expert,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,25.0,25.0,True,0.0,True,2,0,0,1,358.157,348
+P52_B09_L0055_high,ORLM-SFT1991-P52_B09_L0055_high,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,0.0,0.0,True,0.0,True,2,0,0,1,510.406,225
+REUSE_expert_P52_B03_L0028_expert,ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,1610.0,1610.0,True,0.0,True,2,0,0,1,649.282,55
+SFTREAL_OP_R400007_cream_procurement_lot_two_day_life,ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,149.665,149.665,True,0.0,True,2,0,0,1,336.953,59
+SFTREAL_OP_RB2607_001,ORLM-SFT1991-SFTREAL_OP_RB2607_001,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,2644.0,2644.0,True,0.0,True,3,0,0,1,709.937,112
+SFTREAL_OP_RB2610_individual_monthly_overtime_fee,ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee,swagent-online,True,FINISHED,,OPTIMAL,OPTIMAL,min,min,1162.3999999999967,1162.4,True,3.410605131648481e-12,True,2,0,0,1,343.735,141

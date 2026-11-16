@@ -1,0 +1,25 @@
+{
+  "status": "OPTIMAL",
+  "solver_status": 1,
+  "feasible": true,
+  "actions": {
+    "F1": 10,
+    "F2": 10,
+    "F3": 20,
+    "P1": 0,
+    "P2": 10,
+    "P3": 10,
+    "y1": 0,
+    "y2": 1,
+    "y3": 1,
+    "E": 5
+  },
+  "objective": {
+    "value": 690.0,
+    "unit": "objective_units",
+    "direction": "max"
+  },
+  "conflict_constraints": [],
+  "solver": "COPT",
+  "solver_seconds": 0.0039997100830078125
+}

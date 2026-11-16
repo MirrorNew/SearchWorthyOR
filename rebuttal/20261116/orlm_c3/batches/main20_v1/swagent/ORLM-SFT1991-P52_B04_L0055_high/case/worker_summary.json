@@ -1,0 +1,14 @@
+{
+  "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+  "method": "swagent",
+  "stop_reason": "HandoffFailure",
+  "decision": null,
+  "resources": {
+    "model": 1,
+    "search": 0,
+    "read": 0,
+    "solve": 0,
+    "format_repairs": 0,
+    "schedule": 0
+  }
+}

@@ -1,0 +1,28 @@
+{
+  "source_case": "REAL_RB-CO-00",
+  "artifact": "dqz1_第一点_业务描述还原示例.md",
+  "type": "illustrative_narrative_adaptation_not_evaluated",
+  "numerical_provenance": "independently synthetic; no customer data reproduced",
+  "source_files": [
+    {
+      "path": "SFT1991_sample20/REAL6_complexified(1)/REAL6_complexified/REAL_RB-CO-00/requirements.md",
+      "sha256": "6b00194bb82eb299e1e546180b113a4ff2f6b88e2d69f2189a786a0a12cfa130"
+    },
+    {
+      "path": "SFT1991_sample20/REAL6_complexified(1)/REAL6_complexified/REAL_RB-CO-00/data/parameters.csv",
+      "sha256": "fb59f6766544a755f3bd71565c41771c839a1d66d22eb906350abc42707ce631"
+    },
+    {
+      "path": "SFT1991_sample20/REAL6_complexified(1)/REAL6_complexified/REAL_RB-CO-00/data/products.csv",
+      "sha256": "6caf11a77db45e0f090388ef6010c6b50a069fb9d39406bb540b8dd876300bb8"
+    },
+    {
+      "path": "SFT1991_sample20/REAL6_complexified(1)/REAL6_complexified/REAL_RB-CO-00/data/cleaning_parameters.csv",
+      "sha256": "068ea3387ea09e0b73810d9dca7fa6be800e08e99c97af677b84b92f109beb3d"
+    },
+    {
+      "path": "SFT1991_sample20/REAL6_complexified(1)/REAL6_complexified/REAL_RB-CO-00/data/cleaning_supply.csv",
+      "sha256": "60e694f417e312e575783e1a92f54ed14bdf5b73253269f7be28441e017609d0"
+    }
+  ]
+}

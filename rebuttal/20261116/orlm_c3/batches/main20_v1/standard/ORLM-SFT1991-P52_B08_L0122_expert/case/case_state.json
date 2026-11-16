@@ -1,0 +1,7366 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "model": {
+    "variables": [
+      {
+        "id": "server_count",
+        "type": "INTEGER",
+        "lb": 6,
+        "ub": 25
+      },
+      {
+        "id": "cooling_count",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "backup_count",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "x_A_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_A_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_A_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_B_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_B_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_B_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_B_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_C_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_C_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_C_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_C_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_D_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_D_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_D_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_D_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_D_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_E_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_E_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_F_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_F_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_F_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_F_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_G_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_H_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_I_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_J_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_K_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_K_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_K_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_K_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_K_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_L_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "start_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_C",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_D",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_E",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_F",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_G",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_H",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_I",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_J",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_K",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_L",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "R_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_6",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_7",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_8",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_9",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_10",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_11",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_12",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_13",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_14",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_15",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_16",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_17",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_18",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "R_19",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 30
+      },
+      {
+        "id": "K_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_5",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_6",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_7",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_8",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_9",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_10",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_11",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_12",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_13",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_14",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_15",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_16",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_17",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_18",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "K_19",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 9
+      },
+      {
+        "id": "q_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "q_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "q_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "b_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "b_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "b_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 0
+      },
+      {
+        "id": "b_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 2
+      },
+      {
+        "id": "b_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "b_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "b_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "b_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "sense": "min",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "server_count": 2,
+        "cooling_count": 4,
+        "backup_count": 5
+      }
+    },
+    "constraints": [
+      {
+        "name": "power_limit",
+        "coefficients": {
+          "server_count": 2,
+          "cooling_count": 4,
+          "backup_count": 5
+        },
+        "sense": "<=",
+        "rhs": 50
+      },
+      {
+        "name": "cooling_ratio_min",
+        "coefficients": {
+          "server_count": 1,
+          "cooling_count": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cooling_ratio_max",
+        "coefficients": {
+          "server_count": 1,
+          "cooling_count": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_min",
+        "coefficients": {
+          "server_count": 1,
+          "backup_count": -8
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_max",
+        "coefficients": {
+          "server_count": 1,
+          "backup_count": -4
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "select_A",
+        "coefficients": {
+          "x_A_0": 1,
+          "x_A_1": 1,
+          "x_A_2": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_B",
+        "coefficients": {
+          "x_B_0": 1,
+          "x_B_1": 1,
+          "x_B_2": 1,
+          "x_B_3": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_C",
+        "coefficients": {
+          "x_C_1": 1,
+          "x_C_2": 1,
+          "x_C_3": 1,
+          "x_C_4": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_D",
+        "coefficients": {
+          "x_D_2": 1,
+          "x_D_3": 1,
+          "x_D_4": 1,
+          "x_D_5": 1,
+          "x_D_6": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_E",
+        "coefficients": {
+          "x_E_4": 1,
+          "x_E_5": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_F",
+        "coefficients": {
+          "x_F_4": 1,
+          "x_F_5": 1,
+          "x_F_9": 1,
+          "x_F_10": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_G",
+        "coefficients": {
+          "x_G_7": 1,
+          "x_G_8": 1,
+          "x_G_9": 1,
+          "x_G_10": 1,
+          "x_G_11": 1,
+          "x_G_12": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_H",
+        "coefficients": {
+          "x_H_7": 1,
+          "x_H_8": 1,
+          "x_H_9": 1,
+          "x_H_10": 1,
+          "x_H_11": 1,
+          "x_H_12": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_I",
+        "coefficients": {
+          "x_I_9": 1,
+          "x_I_10": 1,
+          "x_I_11": 1,
+          "x_I_12": 1,
+          "x_I_13": 1,
+          "x_I_14": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_J",
+        "coefficients": {
+          "x_J_11": 1,
+          "x_J_12": 1,
+          "x_J_13": 1,
+          "x_J_14": 1,
+          "x_J_15": 1,
+          "x_J_16": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_K",
+        "coefficients": {
+          "x_K_12": 1,
+          "x_K_13": 1,
+          "x_K_14": 1,
+          "x_K_15": 1,
+          "x_K_16": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "select_L",
+        "coefficients": {
+          "x_L_13": 1,
+          "x_L_14": 1,
+          "x_L_15": 1,
+          "x_L_16": 1,
+          "x_L_17": 1,
+          "x_L_18": 1
+        },
+        "sense": "==",
+        "rhs": 1
+      },
+      {
+        "name": "start_A_eq",
+        "coefficients": {
+          "start_A": 1,
+          "x_A_1": -1,
+          "x_A_2": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_B_eq",
+        "coefficients": {
+          "start_B": 1,
+          "x_B_1": -1,
+          "x_B_2": -2,
+          "x_B_3": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_C_eq",
+        "coefficients": {
+          "start_C": 1,
+          "x_C_1": -1,
+          "x_C_2": -2,
+          "x_C_3": -3,
+          "x_C_4": -4
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_D_eq",
+        "coefficients": {
+          "start_D": 1,
+          "x_D_2": -2,
+          "x_D_3": -3,
+          "x_D_4": -4,
+          "x_D_5": -5,
+          "x_D_6": -6
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_E_eq",
+        "coefficients": {
+          "start_E": 1,
+          "x_E_4": -4,
+          "x_E_5": -5
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_F_eq",
+        "coefficients": {
+          "start_F": 1,
+          "x_F_4": -4,
+          "x_F_5": -5,
+          "x_F_9": -9,
+          "x_F_10": -10
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_G_eq",
+        "coefficients": {
+          "start_G": 1,
+          "x_G_7": -7,
+          "x_G_8": -8,
+          "x_G_9": -9,
+          "x_G_10": -10,
+          "x_G_11": -11,
+          "x_G_12": -12
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_H_eq",
+        "coefficients": {
+          "start_H": 1,
+          "x_H_7": -7,
+          "x_H_8": -8,
+          "x_H_9": -9,
+          "x_H_10": -10,
+          "x_H_11": -11,
+          "x_H_12": -12
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_I_eq",
+        "coefficients": {
+          "start_I": 1,
+          "x_I_9": -9,
+          "x_I_10": -10,
+          "x_I_11": -11,
+          "x_I_12": -12,
+          "x_I_13": -13,
+          "x_I_14": -14
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_J_eq",
+        "coefficients": {
+          "start_J": 1,
+          "x_J_11": -11,
+          "x_J_12": -12,
+          "x_J_13": -13,
+          "x_J_14": -14,
+          "x_J_15": -15,
+          "x_J_16": -16
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_K_eq",
+        "coefficients": {
+          "start_K": 1,
+          "x_K_12": -12,
+          "x_K_13": -13,
+          "x_K_14": -14,
+          "x_K_15": -15,
+          "x_K_16": -16
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "start_L_eq",
+        "coefficients": {
+          "start_L": 1,
+          "x_L_13": -13,
+          "x_L_14": -14,
+          "x_L_15": -15,
+          "x_L_16": -16,
+          "x_L_17": -17,
+          "x_L_18": -18
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "dep_A_E_min",
+        "coefficients": {
+          "start_E": 1,
+          "start_A": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_A_E_max",
+        "coefficients": {
+          "start_E": 1,
+          "start_A": -1
+        },
+        "sense": "<=",
+        "rhs": 5
+      },
+      {
+        "name": "dep_B_E_min",
+        "coefficients": {
+          "start_E": 1,
+          "start_B": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_B_E_max",
+        "coefficients": {
+          "start_E": 1,
+          "start_B": -1
+        },
+        "sense": "<=",
+        "rhs": 6
+      },
+      {
+        "name": "dep_C_F_min",
+        "coefficients": {
+          "start_F": 1,
+          "start_C": -1
+        },
+        "sense": ">=",
+        "rhs": 3
+      },
+      {
+        "name": "dep_C_F_max",
+        "coefficients": {
+          "start_F": 1,
+          "start_C": -1
+        },
+        "sense": "<=",
+        "rhs": 9
+      },
+      {
+        "name": "dep_D_F_min",
+        "coefficients": {
+          "start_F": 1,
+          "start_D": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_D_F_max",
+        "coefficients": {
+          "start_F": 1,
+          "start_D": -1
+        },
+        "sense": "<=",
+        "rhs": 8
+      },
+      {
+        "name": "dep_E_G_min",
+        "coefficients": {
+          "start_G": 1,
+          "start_E": -1
+        },
+        "sense": ">=",
+        "rhs": 3
+      },
+      {
+        "name": "dep_E_G_max",
+        "coefficients": {
+          "start_G": 1,
+          "start_E": -1
+        },
+        "sense": "<=",
+        "rhs": 5
+      },
+      {
+        "name": "dep_F_H_min",
+        "coefficients": {
+          "start_H": 1,
+          "start_F": -1
+        },
+        "sense": ">=",
+        "rhs": 3
+      },
+      {
+        "name": "dep_F_H_max",
+        "coefficients": {
+          "start_H": 1,
+          "start_F": -1
+        },
+        "sense": "<=",
+        "rhs": 5
+      },
+      {
+        "name": "dep_G_I_min",
+        "coefficients": {
+          "start_I": 1,
+          "start_G": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_G_I_max",
+        "coefficients": {
+          "start_I": 1,
+          "start_G": -1
+        },
+        "sense": "<=",
+        "rhs": 6
+      },
+      {
+        "name": "dep_H_I_min",
+        "coefficients": {
+          "start_I": 1,
+          "start_H": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_H_I_max",
+        "coefficients": {
+          "start_I": 1,
+          "start_H": -1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "dep_I_J_min",
+        "coefficients": {
+          "start_J": 1,
+          "start_I": -1
+        },
+        "sense": ">=",
+        "rhs": 1
+      },
+      {
+        "name": "dep_I_J_max",
+        "coefficients": {
+          "start_J": 1,
+          "start_I": -1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "dep_I_K_min",
+        "coefficients": {
+          "start_K": 1,
+          "start_I": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_I_K_max",
+        "coefficients": {
+          "start_K": 1,
+          "start_I": -1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "dep_J_L_min",
+        "coefficients": {
+          "start_L": 1,
+          "start_J": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_J_L_max",
+        "coefficients": {
+          "start_L": 1,
+          "start_J": -1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "dep_K_L_min",
+        "coefficients": {
+          "start_L": 1,
+          "start_K": -1
+        },
+        "sense": ">=",
+        "rhs": 2
+      },
+      {
+        "name": "dep_K_L_max",
+        "coefficients": {
+          "start_L": 1,
+          "start_K": -1
+        },
+        "sense": "<=",
+        "rhs": 3
+      },
+      {
+        "name": "R_eq_0",
+        "coefficients": {
+          "R_0": 1,
+          "x_A_0": -2,
+          "x_B_0": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_1",
+        "coefficients": {
+          "R_1": 1,
+          "x_A_0": -2,
+          "x_A_1": -2,
+          "x_B_0": -3,
+          "x_B_1": -3,
+          "x_C_1": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_2",
+        "coefficients": {
+          "R_2": 1,
+          "x_A_1": -2,
+          "x_A_2": -2,
+          "x_B_1": -3,
+          "x_B_2": -3,
+          "x_C_1": -2,
+          "x_C_2": -2,
+          "x_D_2": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_3",
+        "coefficients": {
+          "R_3": 1,
+          "x_A_2": -2,
+          "x_B_2": -3,
+          "x_B_3": -3,
+          "x_C_1": -2,
+          "x_C_2": -2,
+          "x_C_3": -2,
+          "x_D_2": -2,
+          "x_D_3": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_4",
+        "coefficients": {
+          "R_4": 1,
+          "x_B_3": -3,
+          "x_C_2": -2,
+          "x_C_3": -2,
+          "x_C_4": -2,
+          "x_D_3": -2,
+          "x_D_4": -2,
+          "x_E_4": -4,
+          "x_F_4": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_5",
+        "coefficients": {
+          "R_5": 1,
+          "x_C_3": -2,
+          "x_C_4": -2,
+          "x_D_4": -2,
+          "x_D_5": -2,
+          "x_E_4": -4,
+          "x_E_5": -4,
+          "x_F_4": -3,
+          "x_F_5": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_6",
+        "coefficients": {
+          "R_6": 1,
+          "x_C_4": -2,
+          "x_D_5": -2,
+          "x_D_6": -2,
+          "x_E_4": -4,
+          "x_E_5": -4,
+          "x_F_4": -3,
+          "x_F_5": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_7",
+        "coefficients": {
+          "R_7": 1,
+          "x_D_6": -2,
+          "x_E_5": -4,
+          "x_F_5": -3,
+          "x_G_7": -2,
+          "x_H_7": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_8",
+        "coefficients": {
+          "R_8": 1,
+          "x_G_7": -2,
+          "x_G_8": -2,
+          "x_H_7": -3,
+          "x_H_8": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_9",
+        "coefficients": {
+          "R_9": 1,
+          "x_F_9": -3,
+          "x_G_8": -2,
+          "x_G_9": -2,
+          "x_H_8": -3,
+          "x_H_9": -3,
+          "x_I_9": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_10",
+        "coefficients": {
+          "R_10": 1,
+          "x_F_9": -3,
+          "x_F_10": -3,
+          "x_G_9": -2,
+          "x_G_10": -2,
+          "x_H_9": -3,
+          "x_H_10": -3,
+          "x_I_10": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_11",
+        "coefficients": {
+          "R_11": 1,
+          "x_F_9": -3,
+          "x_F_10": -3,
+          "x_G_10": -2,
+          "x_G_11": -2,
+          "x_H_10": -3,
+          "x_H_11": -3,
+          "x_I_11": -2,
+          "x_J_11": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_12",
+        "coefficients": {
+          "R_12": 1,
+          "x_F_10": -3,
+          "x_G_11": -2,
+          "x_G_12": -2,
+          "x_H_11": -3,
+          "x_H_12": -3,
+          "x_I_12": -2,
+          "x_J_11": -2,
+          "x_J_12": -2,
+          "x_K_12": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_13",
+        "coefficients": {
+          "R_13": 1,
+          "x_G_12": -2,
+          "x_H_12": -3,
+          "x_I_13": -2,
+          "x_J_12": -2,
+          "x_J_13": -2,
+          "x_K_12": -3,
+          "x_K_13": -3,
+          "x_L_13": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_14",
+        "coefficients": {
+          "R_14": 1,
+          "x_I_14": -2,
+          "x_J_13": -2,
+          "x_J_14": -2,
+          "x_K_13": -3,
+          "x_K_14": -3,
+          "x_L_13": -2,
+          "x_L_14": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_15",
+        "coefficients": {
+          "R_15": 1,
+          "x_J_14": -2,
+          "x_J_15": -2,
+          "x_K_14": -3,
+          "x_K_15": -3,
+          "x_L_14": -2,
+          "x_L_15": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_16",
+        "coefficients": {
+          "R_16": 1,
+          "x_J_15": -2,
+          "x_J_16": -2,
+          "x_K_15": -3,
+          "x_K_16": -3,
+          "x_L_15": -2,
+          "x_L_16": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_17",
+        "coefficients": {
+          "R_17": 1,
+          "x_J_16": -2,
+          "x_K_16": -3,
+          "x_L_16": -2,
+          "x_L_17": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_18",
+        "coefficients": {
+          "R_18": 1,
+          "x_L_17": -2,
+          "x_L_18": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "R_eq_19",
+        "coefficients": {
+          "R_19": 1,
+          "x_L_18": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_0",
+        "coefficients": {
+          "K_0": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_1",
+        "coefficients": {
+          "K_1": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_2",
+        "coefficients": {
+          "K_2": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_3",
+        "coefficients": {
+          "K_3": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_4",
+        "coefficients": {
+          "K_4": 1,
+          "x_E_4": -4
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_5",
+        "coefficients": {
+          "K_5": 1,
+          "x_E_4": -4,
+          "x_E_5": -4
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_6",
+        "coefficients": {
+          "K_6": 1,
+          "x_E_4": -4,
+          "x_E_5": -4
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_7",
+        "coefficients": {
+          "K_7": 1,
+          "x_E_5": -4,
+          "x_G_7": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_8",
+        "coefficients": {
+          "K_8": 1,
+          "x_G_7": -2,
+          "x_G_8": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_9",
+        "coefficients": {
+          "K_9": 1,
+          "x_G_8": -2,
+          "x_G_9": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_10",
+        "coefficients": {
+          "K_10": 1,
+          "x_G_9": -2,
+          "x_G_10": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_11",
+        "coefficients": {
+          "K_11": 1,
+          "x_G_10": -2,
+          "x_G_11": -2
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_12",
+        "coefficients": {
+          "K_12": 1,
+          "x_G_11": -2,
+          "x_G_12": -2,
+          "x_K_12": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_13",
+        "coefficients": {
+          "K_13": 1,
+          "x_G_12": -2,
+          "x_K_12": -3,
+          "x_K_13": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_14",
+        "coefficients": {
+          "K_14": 1,
+          "x_K_13": -3,
+          "x_K_14": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_15",
+        "coefficients": {
+          "K_15": 1,
+          "x_K_14": -3,
+          "x_K_15": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_16",
+        "coefficients": {
+          "K_16": 1,
+          "x_K_15": -3,
+          "x_K_16": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_17",
+        "coefficients": {
+          "K_17": 1,
+          "x_K_16": -3
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_18",
+        "coefficients": {
+          "K_18": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "K_eq_19",
+        "coefficients": {
+          "K_19": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_0",
+        "coefficients": {
+          "R_0": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_1",
+        "coefficients": {
+          "R_1": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_2",
+        "coefficients": {
+          "R_2": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_3",
+        "coefficients": {
+          "R_3": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_4",
+        "coefficients": {
+          "R_4": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_5",
+        "coefficients": {
+          "R_5": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_6",
+        "coefficients": {
+          "R_6": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_7",
+        "coefficients": {
+          "R_7": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_8",
+        "coefficients": {
+          "R_8": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_9",
+        "coefficients": {
+          "R_9": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_10",
+        "coefficients": {
+          "R_10": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_11",
+        "coefficients": {
+          "R_11": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_12",
+        "coefficients": {
+          "R_12": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_13",
+        "coefficients": {
+          "R_13": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_14",
+        "coefficients": {
+          "R_14": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_15",
+        "coefficients": {
+          "R_15": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_16",
+        "coefficients": {
+          "R_16": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_17",
+        "coefficients": {
+          "R_17": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_18",
+        "coefficients": {
+          "R_18": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_19",
+        "coefficients": {
+          "R_19": 1,
+          "server_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_0",
+        "coefficients": {
+          "q_0": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_1",
+        "coefficients": {
+          "q_1": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_2",
+        "coefficients": {
+          "q_2": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_3",
+        "coefficients": {
+          "q_3": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_4",
+        "coefficients": {
+          "q_4": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_5",
+        "coefficients": {
+          "q_5": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_6",
+        "coefficients": {
+          "q_6": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_7",
+        "coefficients": {
+          "q_7": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_8",
+        "coefficients": {
+          "q_8": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_9",
+        "coefficients": {
+          "q_9": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_10",
+        "coefficients": {
+          "q_10": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_11",
+        "coefficients": {
+          "q_11": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_12",
+        "coefficients": {
+          "q_12": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_13",
+        "coefficients": {
+          "q_13": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_14",
+        "coefficients": {
+          "q_14": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_15",
+        "coefficients": {
+          "q_15": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_16",
+        "coefficients": {
+          "q_16": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_17",
+        "coefficients": {
+          "q_17": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_18",
+        "coefficients": {
+          "q_18": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_config_19",
+        "coefficients": {
+          "q_19": 1,
+          "cooling_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_0",
+        "coefficients": {
+          "R_0": 1,
+          "q_0": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_1",
+        "coefficients": {
+          "R_1": 1,
+          "q_1": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_2",
+        "coefficients": {
+          "R_2": 1,
+          "q_2": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_3",
+        "coefficients": {
+          "R_3": 1,
+          "q_3": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_4",
+        "coefficients": {
+          "R_4": 1,
+          "q_4": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_5",
+        "coefficients": {
+          "R_5": 1,
+          "q_5": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_6",
+        "coefficients": {
+          "R_6": 1,
+          "q_6": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_7",
+        "coefficients": {
+          "R_7": 1,
+          "q_7": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_8",
+        "coefficients": {
+          "R_8": 1,
+          "q_8": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_9",
+        "coefficients": {
+          "R_9": 1,
+          "q_9": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_10",
+        "coefficients": {
+          "R_10": 1,
+          "q_10": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_11",
+        "coefficients": {
+          "R_11": 1,
+          "q_11": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_12",
+        "coefficients": {
+          "R_12": 1,
+          "q_12": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_13",
+        "coefficients": {
+          "R_13": 1,
+          "q_13": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_14",
+        "coefficients": {
+          "R_14": 1,
+          "q_14": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_15",
+        "coefficients": {
+          "R_15": 1,
+          "q_15": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_16",
+        "coefficients": {
+          "R_16": 1,
+          "q_16": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_17",
+        "coefficients": {
+          "R_17": 1,
+          "q_17": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_18",
+        "coefficients": {
+          "R_18": 1,
+          "q_18": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_lb_19",
+        "coefficients": {
+          "R_19": 1,
+          "q_19": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_0",
+        "coefficients": {
+          "R_0": 1,
+          "q_0": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_1",
+        "coefficients": {
+          "R_1": 1,
+          "q_1": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_2",
+        "coefficients": {
+          "R_2": 1,
+          "q_2": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_3",
+        "coefficients": {
+          "R_3": 1,
+          "q_3": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_4",
+        "coefficients": {
+          "R_4": 1,
+          "q_4": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_5",
+        "coefficients": {
+          "R_5": 1,
+          "q_5": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_6",
+        "coefficients": {
+          "R_6": 1,
+          "q_6": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_7",
+        "coefficients": {
+          "R_7": 1,
+          "q_7": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_8",
+        "coefficients": {
+          "R_8": 1,
+          "q_8": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_9",
+        "coefficients": {
+          "R_9": 1,
+          "q_9": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_10",
+        "coefficients": {
+          "R_10": 1,
+          "q_10": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_11",
+        "coefficients": {
+          "R_11": 1,
+          "q_11": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_12",
+        "coefficients": {
+          "R_12": 1,
+          "q_12": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_13",
+        "coefficients": {
+          "R_13": 1,
+          "q_13": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_14",
+        "coefficients": {
+          "R_14": 1,
+          "q_14": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_15",
+        "coefficients": {
+          "R_15": 1,
+          "q_15": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_16",
+        "coefficients": {
+          "R_16": 1,
+          "q_16": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_17",
+        "coefficients": {
+          "R_17": 1,
+          "q_17": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_18",
+        "coefficients": {
+          "R_18": 1,
+          "q_18": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "cool_ratio_ub_19",
+        "coefficients": {
+          "R_19": 1,
+          "q_19": -3
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_0",
+        "coefficients": {
+          "b_0": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_1",
+        "coefficients": {
+          "b_1": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_2",
+        "coefficients": {
+          "b_2": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_3",
+        "coefficients": {
+          "b_3": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_4",
+        "coefficients": {
+          "b_4": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_5",
+        "coefficients": {
+          "b_5": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_6",
+        "coefficients": {
+          "b_6": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_7",
+        "coefficients": {
+          "b_7": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_8",
+        "coefficients": {
+          "b_8": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_9",
+        "coefficients": {
+          "b_9": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_10",
+        "coefficients": {
+          "b_10": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_11",
+        "coefficients": {
+          "b_11": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_12",
+        "coefficients": {
+          "b_12": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_13",
+        "coefficients": {
+          "b_13": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_14",
+        "coefficients": {
+          "b_14": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_15",
+        "coefficients": {
+          "b_15": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_16",
+        "coefficients": {
+          "b_16": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_17",
+        "coefficients": {
+          "b_17": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_18",
+        "coefficients": {
+          "b_18": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_config_19",
+        "coefficients": {
+          "b_19": 1,
+          "backup_count": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_0",
+        "coefficients": {
+          "K_0": 1,
+          "b_0": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_1",
+        "coefficients": {
+          "K_1": 1,
+          "b_1": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_2",
+        "coefficients": {
+          "K_2": 1,
+          "b_2": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_3",
+        "coefficients": {
+          "K_3": 1,
+          "b_3": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_4",
+        "coefficients": {
+          "K_4": 1,
+          "b_4": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_5",
+        "coefficients": {
+          "K_5": 1,
+          "b_5": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_6",
+        "coefficients": {
+          "K_6": 1,
+          "b_6": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_7",
+        "coefficients": {
+          "K_7": 1,
+          "b_7": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_8",
+        "coefficients": {
+          "K_8": 1,
+          "b_8": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_9",
+        "coefficients": {
+          "K_9": 1,
+          "b_9": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_10",
+        "coefficients": {
+          "K_10": 1,
+          "b_10": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_11",
+        "coefficients": {
+          "K_11": 1,
+          "b_11": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_12",
+        "coefficients": {
+          "K_12": 1,
+          "b_12": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_13",
+        "coefficients": {
+          "K_13": 1,
+          "b_13": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_14",
+        "coefficients": {
+          "K_14": 1,
+          "b_14": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_15",
+        "coefficients": {
+          "K_15": 1,
+          "b_15": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_16",
+        "coefficients": {
+          "K_16": 1,
+          "b_16": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_17",
+        "coefficients": {
+          "K_17": 1,
+          "b_17": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_18",
+        "coefficients": {
+          "K_18": 1,
+          "b_18": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_lb_19",
+        "coefficients": {
+          "K_19": 1,
+          "b_19": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_0",
+        "coefficients": {
+          "K_0": 1,
+          "b_0": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_1",
+        "coefficients": {
+          "K_1": 1,
+          "b_1": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_2",
+        "coefficients": {
+          "K_2": 1,
+          "b_2": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_3",
+        "coefficients": {
+          "K_3": 1,
+          "b_3": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_4",
+        "coefficients": {
+          "K_4": 1,
+          "b_4": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_5",
+        "coefficients": {
+          "K_5": 1,
+          "b_5": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_6",
+        "coefficients": {
+          "K_6": 1,
+          "b_6": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_7",
+        "coefficients": {
+          "K_7": 1,
+          "b_7": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_8",
+        "coefficients": {
+          "K_8": 1,
+          "b_8": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_9",
+        "coefficients": {
+          "K_9": 1,
+          "b_9": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_10",
+        "coefficients": {
+          "K_10": 1,
+          "b_10": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_11",
+        "coefficients": {
+          "K_11": 1,
+          "b_11": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_12",
+        "coefficients": {
+          "K_12": 1,
+          "b_12": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_13",
+        "coefficients": {
+          "K_13": 1,
+          "b_13": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_14",
+        "coefficients": {
+          "K_14": 1,
+          "b_14": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_15",
+        "coefficients": {
+          "K_15": 1,
+          "b_15": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_16",
+        "coefficients": {
+          "K_16": 1,
+          "b_16": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_17",
+        "coefficients": {
+          "K_17": 1,
+          "b_17": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_18",
+        "coefficients": {
+          "K_18": 1,
+          "b_18": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "backup_ratio_ub_19",
+        "coefficients": {
+          "K_19": 1,
+          "b_19": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      }
+    ]
+  },
+  "revision": 1,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 数据中心设备配置与限时作业调度需求\n\n## 1. 任务与求解方式\n\n使用 Python 调用 COPT，将设备配置与作业调度联合建立为混合整数线性规划并实际求解。\n\n需要决定：\n- 服务器、冷却设备、备用电源各配置多少台；\n- 每项作业的整数小时开始时间及所选允许窗口；\n- 每个时段投入服务的冷却设备和备用电源数量。\n\n全部输入从文末约定的 UTF-8 CSV 文件读取。不得引入随机数据、额外作业、虚拟负载或新的业务约束。\n\n## 2. 唯一优化目标\n\n最小化全部配置设备的额定总功率。总功率按各类设备的配置台数乘以其单台功率后求和：\n- 服务器每台2单位功率；\n- 冷却设备每台4单位功率；\n- 备用电源每台5单位功率。\n\n总功率不得超过50单位。\n\n这是为已配置设备预留的额定功率，不是按运行时间累计的电量。设备闲置、未投入服务或仅在部分时段投入，均不减少其配置功率。备用电源的保障能力也不抵扣其他设备的功率。\n\n不附加作业完成时间、设备切换次数等目标。存在多个总功率相同的最优方案时，输出任意一个即可。\n\n## 3. 计划周期与设备配置\n\n### 3.1 时间口径\n\n计划周期为20小时，分为20个1小时时段，时段编号为0至19。时段编号表示该时段的开始小时，时段覆盖该小时至下一小时的半开区间。\n\n所有作业开始时间只能为0至19之间的整数，且整个执行过程必须位于计划周期内。\n\n### 3.2 配置数量与配置比例\n\n三类设备配置数量均为非负整数：\n- 服务器至少6台，有效上限为25台；\n- 冷却设备最多8台；\n- 备用电源最多3台。\n\n服务器的25台上限来自总功率上限，不替代其他条件。\n\n配置数量还必须满足：\n- 冷却设备台数占服务器配置台数的比例为1/4至1/2，含边界；\n- 备用电源台数占服务器配置台数的比例为1/8至1/4，含边界。\n\n配置比例统计整个周期内配置的设备台数，而不是逐时投入台数。服务器至少6台，故上述比例的分母始终为正。数量限制、配置比例和总功率上限必须同时满足。\n\n同类设备性能一致。服务器可在作业完成后立即供其他作业使用，不计切换时间。冷却设备和备用电源可在整数小时边界切换投入状态，不另计启停时间或启停功率。\n\n## 4. 作业安排\n\n### 4.1 必须执行且不可中断\n\n全部12项作业都必须执行一次，不可取消、拆分或中断。\n\n每项作业的持续时间、服务器需求和关键标记从 `jobs.csv` 读取。作业完成时间等于开始时间加持续时间。作业从开始时刻起连续占用持续时间所覆盖的每个时段，但不占用完成时刻开始的时段。\n\n作业执行期间始终需要同时独占其需求数量的服务器。同一时段不同作业不得共享同一台服务器。\n\n### 4.2 完整执行窗口\n\n允许窗口从 `job_windows.csv` 读取。每项作业必须选择一个允许窗口，并使整个执行区间落在该窗口内：\n- 开始时间不得早于窗口左端；\n- 完成时间不得晚于窗口右端；\n- 可以恰好在左端开始，或恰好在右端完成。\n\n作业F有两个允许窗口，必须二选一，不得跨越两个窗口间的空档。其他作业各有一个窗口。\n\n### 4.3 依赖及等待间隔\n\n`dependencies.csv` 每行给出一条必须满足的前项到后项关系。\n\n等待时间按“后项开始时间减去前项完成时间”计算，必须落在该行规定的最小与最大等待时间之间，两端均包含。后项有多个前项时，所有对应关系都必须同时满足。\n\n未列出的作业对不增加先后关系。满足窗口、依赖和资源条件的不同作业可以并行执行。\n\n## 5. 逐时服务器与冷却服务\n\n### 5.1 实际运行服务器需求\n\n每个时段的实际运行服务器需求，为该时段所有执行中作业的服务器需求之和，不得超过服务器配置数量。\n\n闲置服务器不计入实际运行需求，也不得增加虚拟负载来改变冷却配比。\n\n### 5.2 冷却投入限制\n\n每个时段实际投入服务的冷却设备台数必须为非负整数，且同时不得超过：\n- 冷却设备配置数量；\n- `time_slots.csv` 给出的该时段冷却支路投入上限。\n\n冷却支路上限为：\n- 时段0至3：2台；\n- 时段4至11：3台；\n- 时段12至19：2台。\n\n该上限不是必须投入的数量，也不改变冷却设备最多配置8台的限制。\n\n### 5.3 冷却与实际服务器负载的配比\n\n有作业运行时，投入冷却设备台数占实际运行服务器需求的比例必须为1/3至1/2，含边界。等价的业务计算口径是：实际运行服务器需求至少为投入冷却设备台数的2倍，最多为其3倍。\n\n没有作业运行时，冷却投入必须为0。\n\n## 6. 逐时备用供电保障\n\n### 6.1 关键负载\n\n每个时段的关键服务器需求，为该时段执行中、关键标记为1的作业的服务器需求之和。\n\n关键作业为E、G、K。非关键作业不要求备用供电保障，也不得计入关键服务器需求来调整比例。\n\n### 6.2 备用电源投入限制\n\n每个时段实际投入关键负载保障的备用电源台数必须为非负整数，且同时不得超过：\n- 备用电源配置数量；\n- `time_slots.csv` 给出的该时段备用电源投入上限。\n\n投入上限为：\n- 时段0至3：0台；\n- 时段4至15：2台；\n- 时段16至19：1台。\n\n### 6.3 备用电源与关键负载的配比\n\n有关键负载时，投入备用电源台数占关键服务器需求的比例必须为1/4至1/2，含边界。等价的业务计算口径是：关键服务器需求至少为投入备用电源台数的2倍，最多为其4倍。\n\n没有关键负载时，备用电源投入必须为0。配置但未投入的备用电源仍计入配置总功率。\n\n## 7. 结果与核验要求\n\n程序必须实际调用 COPT，不得以预置方案或仅打印结果代替求解。\n\n输出至少包括：\n1. 求解状态；未证明最优时如实说明；\n2. 可用解中的三类设备配置数量；\n3. 配置总功率；仅在证明最优时称其为最小总功率；\n4. 每项作业的开始时间、完成时间、所选窗口编号及窗口端点；\n5. 全部20个时段的实际运行服务器需求、关键服务器需求、冷却投入台数、备用电源投入台数；\n6. 根据输出方案重新核验以下条件，并报告各类核验是否通过及违规明细：\n   - 配置数量的整数性、上下限、总功率；\n   - 两类设备的配置比例；\n   - 作业执行次数、整数开始时间、持续时间、计划周期与完整执行窗口；\n   - 所有依赖的最小和最大等待间隔；\n   - 逐时服务器容量；\n   - 冷却和备用电源的整数投入数量、配置数量上限、时段投入上限及负载配比；\n   - 无运行负载时冷却投入为0，无关键负载时备用电源投入为0。\n\n实际求解后必须打印一行以 `RESULT_JSON` 开头、后接 JSON 对象的结果。该对象至少包含：\n- `status`：只能为 `optimal`、`feasible`、`infeasible`、`unbounded`、`unknown` 或 `error`；\n- `objective_value`：有可用解时为该解的配置总功率数值，保持自然最小化方向；无可用解时为 `null`。\n\n状态口径：\n- `optimal`：已证明最优；\n- `feasible`：有可用解，但未证明最优；\n- `infeasible`：已证明不可行；\n- `unbounded`：求解器报告无界；\n- `unknown`：未获得可用解，也未确定不可行或无界；\n- `error`：程序或求解调用发生错误。\n\n方案和核验结果可放入该 JSON 的附加字段，也可另行输出。没有可用解时，不得编造配置、调度或最优值。\n\n## 8. CSV 输入接口\n\n所有文件均采用 UTF-8 编码，首行为字段名。所有字段均不得为空；各表不得存在重复唯一标识。所有输入均为完整定义，不需要补充外部数据。\n\n### ./data/planning.csv\n\n每行代表本问题的计划周期、功率预算及配比参数；本文件恰有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| horizon_hours | 计划周期长度 | integer | 小时，20 |\n| slot_hours | 每个时段长度 | integer | 小时，1 |\n| total_power_limit | 配置总功率上限 | integer | 功率单位，50 |\n| cooling_config_min_ratio | 冷却配置台数占服务器配置台数的最小比例 | number | 无量纲，1/4 |\n| cooling_config_max_ratio | 冷却配置台数占服务器配置台数的最大比例 | number | 无量纲，1/2 |\n| backup_config_min_ratio | 备用电源配置台数占服务器配置台数的最小比例 | number | 无量纲，1/8 |\n| backup_config_max_ratio | 备用电源配置台数占服务器配置台数的最大比例 | number | 无量纲，1/4 |\n| cooling_min_servers_per_unit | 实际运行服务器需求相对冷却投入台数的最小倍数 | integer | 台服务器/台冷却设备，2 |\n| cooling_max_servers_per_unit | 实际运行服务器需求相对冷却投入台数的最大倍数 | integer | 台服务器/台冷却设备，3 |\n| backup_min_critical_servers_per_unit | 关键服务器需求相对备用电源投入台数的最小倍数 | integer | 台关键服务器/台备用电源，2 |\n| backup_max_critical_servers_per_unit | 关键服务器需求相对备用电源投入台数的最大倍数 | integer | 台关键服务器/台备用电源，4 |\n\n### ./data/equipment.csv\n\n每行代表一类设备的配置参数，共三行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| equipment_type | 设备类别标识 | string | server、cooling、backup分别表示服务器、冷却设备、备用电源 |\n| power_per_unit | 单台设备的额定功率 | integer | 功率单位/台 |\n| min_count | 配置台数下限 | integer | 台 |\n| max_count | 配置台数上限 | integer | 台；服务器为由功率预算得到的有效上限25 |\n\n`equipment_type` 为唯一标识。\n\n### ./data/jobs.csv\n\n每行代表一项必须执行的作业，共12行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| job_id | 作业编号 | string | A至L |\n| job_name | 业务名称 | string | 不适用 |\n| duration_hours | 连续执行持续时间 | integer | 小时 |\n| server_demand | 执行期间每个时段独占的服务器台数 | integer | 台 |\n| critical_flag | 是否属于关键作业 | integer | 1表示关键，0表示非关键 |\n\n`job_id` 为唯一标识。\n\n### ./data/job_windows.csv\n\n每行代表一项作业的一个允许执行窗口，共13行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| job_id | 所属作业编号 | string | 关联jobs.csv的job_id |\n| window_id | 作业内的窗口编号 | integer | 从1开始；F为1、2，其他作业为1 |\n| start_hour | 窗口左端 | integer | 从计划周期起点计的小时，可在此开始 |\n| end_hour | 窗口右端 | integer | 从计划周期起点计的小时，可在此完成，不占用此后的时段 |\n\n`job_id` 与 `window_id` 的组合为唯一标识。窗口为半开区间，必须容纳作业的整个执行过程。\n\n### ./data/dependencies.csv\n\n每行代表一条必须满足的作业依赖，共12行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| predecessor_id | 前项作业编号 | string | 关联jobs.csv的job_id |\n| successor_id | 后项作业编号 | string | 关联jobs.csv的job_id |\n| min_wait_hours | 前项完成至后项开始的最小等待时间 | integer | 小时，含边界 |\n| max_wait_hours | 前项完成至后项开始的最大等待时间 | integer | 小时，含边界 |\n\n`predecessor_id` 与 `successor_id` 的组合为唯一标识。\n\n### ./data/time_slots.csv\n\n每行代表一个1小时时段的冷却和备用电源投入上限，共20行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| slot_id | 时段编号，也是时段开始小时 | integer | 0至19 |\n| cooling_service_limit | 该时段最多可投入服务的冷却设备台数 | integer | 台 |\n| backup_service_limit | 该时段最多可投入关键负载保障的备用电源台数 | integer | 台 |\n\n`slot_id` 为唯一标识。每行覆盖从 `slot_id` 到 `slot_id+1` 的半开时间区间。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：dependencies.csv\npredecessor_id,successor_id,min_wait_hours,max_wait_hours\r\nA,E,0,3\r\nB,E,0,4\r\nC,F,0,6\r\nD,F,0,6\r\nE,G,0,2\r\nF,H,0,2\r\nG,I,0,4\r\nH,I,0,2\r\nI,J,0,3\r\nI,K,1,3\r\nJ,L,0,2\r\nK,L,0,1\r\n\n\n数据文件：equipment.csv\nequipment_type,power_per_unit,min_count,max_count\r\nserver,2,6,25\r\ncooling,4,0,8\r\nbackup,5,0,3\r\n\n\n数据文件：job_windows.csv\njob_id,window_id,start_hour,end_hour\r\nA,1,0,4\r\nB,1,0,5\r\nC,1,1,7\r\nD,1,2,8\r\nE,1,4,8\r\nF,1,4,8\r\nF,2,9,13\r\nG,1,7,14\r\nH,1,7,14\r\nI,1,9,15\r\nJ,1,11,18\r\nK,1,12,18\r\nL,1,13,20\r\n\n\n数据文件：jobs.csv\njob_id,job_name,duration_hours,server_demand,critical_flag\r\nA,数据接入,2,2,0\r\nB,索引装载,2,3,0\r\nC,样本预处理,3,2,0\r\nD,环境校验,2,2,0\r\nE,核心模型计算,3,4,1\r\nF,批量特征计算,3,3,0\r\nG,核心结果验证,2,2,1\r\nH,批量结果合并,2,3,0\r\nI,一致性检查点,1,2,0\r\nJ,报告生成,2,2,0\r\nK,关键结果提交,2,3,1\r\nL,最终归档,2,2,0\r\n\n\n数据文件：planning.csv\nhorizon_hours,slot_hours,total_power_limit,cooling_config_min_ratio,cooling_config_max_ratio,backup_config_min_ratio,backup_config_max_ratio,cooling_min_servers_per_unit,cooling_max_servers_per_unit,backup_min_critical_servers_per_unit,backup_max_critical_servers_per_unit\r\n20,1,50,0.25,0.5,0.125,0.25,2,3,2,4\r\n\n\n数据文件：time_slots.csv\nslot_id,cooling_service_limit,backup_service_limit\r\n0,2,0\r\n1,2,0\r\n2,2,0\r\n3,2,0\r\n4,3,2\r\n5,3,2\r\n6,3,2\r\n7,3,2\r\n8,3,2\r\n9,3,2\r\n10,3,2\r\n11,3,2\r\n12,2,2\r\n13,2,2\r\n14,2,2\r\n15,2,2\r\n16,2,1\r\n17,2,1\r\n18,2,1\r\n19,2,1",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-60cd59a87d82dd9c",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "diagnostics": [
+    {
+      "kind": "BASE_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "server_count": 6,
+          "cooling_count": 2,
+          "backup_count": 1,
+          "x_A_0": 1,
+          "x_A_1": 0,
+          "x_A_2": 0,
+          "x_B_0": 0,
+          "x_B_1": 0,
+          "x_B_2": 1,
+          "x_B_3": 0,
+          "x_C_1": 0,
+          "x_C_2": 0,
+          "x_C_3": 0,
+          "x_C_4": 1,
+          "x_D_2": 1,
+          "x_D_3": 0,
+          "x_D_4": 0,
+          "x_D_5": 0,
+          "x_D_6": 0,
+          "x_E_4": 1,
+          "x_E_5": 0,
+          "x_F_4": 0,
+          "x_F_5": 0,
+          "x_F_9": 1,
+          "x_F_10": 0,
+          "x_G_7": 0,
+          "x_G_8": 1,
+          "x_G_9": 0,
+          "x_G_10": 0,
+          "x_G_11": 0,
+          "x_G_12": 0,
+          "x_H_7": 0,
+          "x_H_8": 0,
+          "x_H_9": 0,
+          "x_H_10": 0,
+          "x_H_11": 0,
+          "x_H_12": 1,
+          "x_I_9": 0,
+          "x_I_10": 0,
+          "x_I_11": 0,
+          "x_I_12": 0,
+          "x_I_13": 0,
+          "x_I_14": 1,
+          "x_J_11": 0,
+          "x_J_12": 0,
+          "x_J_13": 0,
+          "x_J_14": 0,
+          "x_J_15": 0,
+          "x_J_16": 1,
+          "x_K_12": 0,
+          "x_K_13": 0,
+          "x_K_14": 0,
+          "x_K_15": 0,
+          "x_K_16": 1,
+          "x_L_13": 0,
+          "x_L_14": 0,
+          "x_L_15": 0,
+          "x_L_16": 0,
+          "x_L_17": 0,
+          "x_L_18": 1,
+          "start_A": 0,
+          "start_B": 2,
+          "start_C": 4,
+          "start_D": 2,
+          "start_E": 4,
+          "start_F": 9,
+          "start_G": 8,
+          "start_H": 12,
+          "start_I": 14,
+          "start_J": 16,
+          "start_K": 16,
+          "start_L": 18,
+          "R_0": 2.0,
+          "R_1": 2.0,
+          "R_2": 5.0,
+          "R_3": 5.0,
+          "R_4": 6.0,
+          "R_5": 6.0,
+          "R_6": 6.0,
+          "R_7": 0.0,
+          "R_8": 2.0,
+          "R_9": 5.0,
+          "R_10": 3.0,
+          "R_11": 3.0,
+          "R_12": 3.0,
+          "R_13": 3.0,
+          "R_14": 2.0,
+          "R_15": 0.0,
+          "R_16": 5.0,
+          "R_17": 5.0,
+          "R_18": 2.0,
+          "R_19": 2.0,
+          "K_0": 0.0,
+          "K_1": 0.0,
+          "K_2": 0.0,
+          "K_3": 0.0,
+          "K_4": 4.0,
+          "K_5": 4.0,
+          "K_6": 4.0,
+          "K_7": 0.0,
+          "K_8": 2.0,
+          "K_9": 2.0,
+          "K_10": 0.0,
+          "K_11": 0.0,
+          "K_12": 0.0,
+          "K_13": 0.0,
+          "K_14": 0.0,
+          "K_15": 0.0,
+          "K_16": 3.0,
+          "K_17": 3.0,
+          "K_18": 0.0,
+          "K_19": 0.0,
+          "q_0": 1,
+          "q_1": 1,
+          "q_2": 2,
+          "q_3": 2,
+          "q_4": 2,
+          "q_5": 2,
+          "q_6": 2,
+          "q_7": 0,
+          "q_8": 1,
+          "q_9": 2,
+          "q_10": 1,
+          "q_11": 1,
+          "q_12": 1,
+          "q_13": 1,
+          "q_14": 1,
+          "q_15": 0,
+          "q_16": 2,
+          "q_17": 2,
+          "q_18": 1,
+          "q_19": 1,
+          "b_0": 0,
+          "b_1": 0,
+          "b_2": 0,
+          "b_3": 0,
+          "b_4": 1,
+          "b_5": 1,
+          "b_6": 1,
+          "b_7": 0,
+          "b_8": 1,
+          "b_9": 1,
+          "b_10": 0,
+          "b_11": 0,
+          "b_12": 0,
+          "b_13": 0,
+          "b_14": 0,
+          "b_15": 0,
+          "b_16": 1,
+          "b_17": 1,
+          "b_18": 0,
+          "b_19": 0
+        },
+        "objective": {
+          "value": 25.0,
+          "unit": "objective_units",
+          "direction": "min"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.008998870849609375
+      }
+    },
+    {
+      "kind": "SEARCH_GATE",
+      "gate": {
+        "search_needed": false,
+        "reason": "The task is a fully specified mixed-integer optimization problem with all CSV data, rules, and solver environment provided; no external public information is required.",
+        "queries": []
+      }
+    },
+    {
+      "kind": "FINAL_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "server_count": 6,
+          "cooling_count": 2,
+          "backup_count": 1,
+          "x_A_0": 1,
+          "x_A_1": 0,
+          "x_A_2": 0,
+          "x_B_0": 0,
+          "x_B_1": 0,
+          "x_B_2": 1,
+          "x_B_3": 0,
+          "x_C_1": 0,
+          "x_C_2": 0,
+          "x_C_3": 0,
+          "x_C_4": 1,
+          "x_D_2": 1,
+          "x_D_3": 0,
+          "x_D_4": 0,
+          "x_D_5": 0,
+          "x_D_6": 0,
+          "x_E_4": 1,
+          "x_E_5": 0,
+          "x_F_4": 0,
+          "x_F_5": 0,
+          "x_F_9": 1,
+          "x_F_10": 0,
+          "x_G_7": 0,
+          "x_G_8": 1,
+          "x_G_9": 0,
+          "x_G_10": 0,
+          "x_G_11": 0,
+          "x_G_12": 0,
+          "x_H_7": 0,
+          "x_H_8": 0,
+          "x_H_9": 0,
+          "x_H_10": 0,
+          "x_H_11": 0,
+          "x_H_12": 1,
+          "x_I_9": 0,
+          "x_I_10": 0,
+          "x_I_11": 0,
+          "x_I_12": 0,
+          "x_I_13": 0,
+          "x_I_14": 1,
+          "x_J_11": 0,
+          "x_J_12": 0,
+          "x_J_13": 0,
+          "x_J_14": 0,
+          "x_J_15": 0,
+          "x_J_16": 1,
+          "x_K_12": 0,
+          "x_K_13": 0,
+          "x_K_14": 0,
+          "x_K_15": 0,
+          "x_K_16": 1,
+          "x_L_13": 0,
+          "x_L_14": 0,
+          "x_L_15": 0,
+          "x_L_16": 0,
+          "x_L_17": 0,
+          "x_L_18": 1,
+          "start_A": 0,
+          "start_B": 2,
+          "start_C": 4,
+          "start_D": 2,
+          "start_E": 4,
+          "start_F": 9,
+          "start_G": 8,
+          "start_H": 12,
+          "start_I": 14,
+          "start_J": 16,
+          "start_K": 16,
+          "start_L": 18,
+          "R_0": 2.0,
+          "R_1": 2.0,
+          "R_2": 5.0,
+          "R_3": 5.0,
+          "R_4": 6.0,
+          "R_5": 6.0,
+          "R_6": 6.0,
+          "R_7": 0.0,
+          "R_8": 2.0,
+          "R_9": 5.0,
+          "R_10": 3.0,
+          "R_11": 3.0,
+          "R_12": 3.0,
+          "R_13": 3.0,
+          "R_14": 2.0,
+          "R_15": 0.0,
+          "R_16": 5.0,
+          "R_17": 5.0,
+          "R_18": 2.0,
+          "R_19": 2.0,
+          "K_0": 0.0,
+          "K_1": 0.0,
+          "K_2": 0.0,
+          "K_3": 0.0,
+          "K_4": 4.0,
+          "K_5": 4.0,
+          "K_6": 4.0,
+          "K_7": 0.0,
+          "K_8": 2.0,
+          "K_9": 2.0,
+          "K_10": 0.0,
+          "K_11": 0.0,
+          "K_12": 0.0,
+          "K_13": 0.0,
+          "K_14": 0.0,
+          "K_15": 0.0,
+          "K_16": 3.0,
+          "K_17": 3.0,
+          "K_18": 0.0,
+          "K_19": 0.0,
+          "q_0": 1,
+          "q_1": 1,
+          "q_2": 2,
+          "q_3": 2,
+          "q_4": 2,
+          "q_5": 2,
+          "q_6": 2,
+          "q_7": 0,
+          "q_8": 1,
+          "q_9": 2,
+          "q_10": 1,
+          "q_11": 1,
+          "q_12": 1,
+          "q_13": 1,
+          "q_14": 1,
+          "q_15": 0,
+          "q_16": 2,
+          "q_17": 2,
+          "q_18": 1,
+          "q_19": 1,
+          "b_0": 0,
+          "b_1": 0,
+          "b_2": 0,
+          "b_3": 0,
+          "b_4": 1,
+          "b_5": 1,
+          "b_6": 1,
+          "b_7": 0,
+          "b_8": 1,
+          "b_9": 1,
+          "b_10": 0,
+          "b_11": 0,
+          "b_12": 0,
+          "b_13": 0,
+          "b_14": 0,
+          "b_15": 0,
+          "b_16": 1,
+          "b_17": 1,
+          "b_18": 0,
+          "b_19": 0
+        },
+        "objective": {
+          "value": 25.0,
+          "unit": "objective_units",
+          "direction": "min"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.019001007080078125
+      }
+    },
+    {
+      "kind": "FINALIZE",
+      "result": {
+        "method": "standard_legacy_knowledge_v1",
+        "version": "standard_legacy_knowledge_v1",
+        "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+        "decision": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "server_count": 6,
+            "cooling_count": 2,
+            "backup_count": 1,
+            "x_A_0": 1,
+            "x_A_1": 0,
+            "x_A_2": 0,
+            "x_B_0": 0,
+            "x_B_1": 0,
+            "x_B_2": 1,
+            "x_B_3": 0,
+            "x_C_1": 0,
+            "x_C_2": 0,
+            "x_C_3": 0,
+            "x_C_4": 1,
+            "x_D_2": 1,
+            "x_D_3": 0,
+            "x_D_4": 0,
+            "x_D_5": 0,
+            "x_D_6": 0,
+            "x_E_4": 1,
+            "x_E_5": 0,
+            "x_F_4": 0,
+            "x_F_5": 0,
+            "x_F_9": 1,
+            "x_F_10": 0,
+            "x_G_7": 0,
+            "x_G_8": 1,
+            "x_G_9": 0,
+            "x_G_10": 0,
+            "x_G_11": 0,
+            "x_G_12": 0,
+            "x_H_7": 0,
+            "x_H_8": 0,
+            "x_H_9": 0,
+            "x_H_10": 0,
+            "x_H_11": 0,
+            "x_H_12": 1,
+            "x_I_9": 0,
+            "x_I_10": 0,
+            "x_I_11": 0,
+            "x_I_12": 0,
+            "x_I_13": 0,
+            "x_I_14": 1,
+            "x_J_11": 0,
+            "x_J_12": 0,
+            "x_J_13": 0,
+            "x_J_14": 0,
+            "x_J_15": 0,
+            "x_J_16": 1,
+            "x_K_12": 0,
+            "x_K_13": 0,
+            "x_K_14": 0,
+            "x_K_15": 0,
+            "x_K_16": 1,
+            "x_L_13": 0,
+            "x_L_14": 0,
+            "x_L_15": 0,
+            "x_L_16": 0,
+            "x_L_17": 0,
+            "x_L_18": 1,
+            "start_A": 0,
+            "start_B": 2,
+            "start_C": 4,
+            "start_D": 2,
+            "start_E": 4,
+            "start_F": 9,
+            "start_G": 8,
+            "start_H": 12,
+            "start_I": 14,
+            "start_J": 16,
+            "start_K": 16,
+            "start_L": 18,
+            "R_0": 2.0,
+            "R_1": 2.0,
+            "R_2": 5.0,
+            "R_3": 5.0,
+            "R_4": 6.0,
+            "R_5": 6.0,
+            "R_6": 6.0,
+            "R_7": 0.0,
+            "R_8": 2.0,
+            "R_9": 5.0,
+            "R_10": 3.0,
+            "R_11": 3.0,
+            "R_12": 3.0,
+            "R_13": 3.0,
+            "R_14": 2.0,
+            "R_15": 0.0,
+            "R_16": 5.0,
+            "R_17": 5.0,
+            "R_18": 2.0,
+            "R_19": 2.0,
+            "K_0": 0.0,
+            "K_1": 0.0,
+            "K_2": 0.0,
+            "K_3": 0.0,
+            "K_4": 4.0,
+            "K_5": 4.0,
+            "K_6": 4.0,
+            "K_7": 0.0,
+            "K_8": 2.0,
+            "K_9": 2.0,
+            "K_10": 0.0,
+            "K_11": 0.0,
+            "K_12": 0.0,
+            "K_13": 0.0,
+            "K_14": 0.0,
+            "K_15": 0.0,
+            "K_16": 3.0,
+            "K_17": 3.0,
+            "K_18": 0.0,
+            "K_19": 0.0,
+            "q_0": 1,
+            "q_1": 1,
+            "q_2": 2,
+            "q_3": 2,
+            "q_4": 2,
+            "q_5": 2,
+            "q_6": 2,
+            "q_7": 0,
+            "q_8": 1,
+            "q_9": 2,
+            "q_10": 1,
+            "q_11": 1,
+            "q_12": 1,
+            "q_13": 1,
+            "q_14": 1,
+            "q_15": 0,
+            "q_16": 2,
+            "q_17": 2,
+            "q_18": 1,
+            "q_19": 1,
+            "b_0": 0,
+            "b_1": 0,
+            "b_2": 0,
+            "b_3": 0,
+            "b_4": 1,
+            "b_5": 1,
+            "b_6": 1,
+            "b_7": 0,
+            "b_8": 1,
+            "b_9": 1,
+            "b_10": 0,
+            "b_11": 0,
+            "b_12": 0,
+            "b_13": 0,
+            "b_14": 0,
+            "b_15": 0,
+            "b_16": 1,
+            "b_17": 1,
+            "b_18": 0,
+            "b_19": 0
+          },
+          "objective": {
+            "value": 25.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.019001007080078125
+        },
+        "last_solve": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "server_count": 6,
+            "cooling_count": 2,
+            "backup_count": 1,
+            "x_A_0": 1,
+            "x_A_1": 0,
+            "x_A_2": 0,
+            "x_B_0": 0,
+            "x_B_1": 0,
+            "x_B_2": 1,
+            "x_B_3": 0,
+            "x_C_1": 0,
+            "x_C_2": 0,
+            "x_C_3": 0,
+            "x_C_4": 1,
+            "x_D_2": 1,
+            "x_D_3": 0,
+            "x_D_4": 0,
+            "x_D_5": 0,
+            "x_D_6": 0,
+            "x_E_4": 1,
+            "x_E_5": 0,
+            "x_F_4": 0,
+            "x_F_5": 0,
+            "x_F_9": 1,
+            "x_F_10": 0,
+            "x_G_7": 0,
+            "x_G_8": 1,
+            "x_G_9": 0,
+            "x_G_10": 0,
+            "x_G_11": 0,
+            "x_G_12": 0,
+            "x_H_7": 0,
+            "x_H_8": 0,
+            "x_H_9": 0,
+            "x_H_10": 0,
+            "x_H_11": 0,
+            "x_H_12": 1,
+            "x_I_9": 0,
+            "x_I_10": 0,
+            "x_I_11": 0,
+            "x_I_12": 0,
+            "x_I_13": 0,
+            "x_I_14": 1,
+            "x_J_11": 0,
+            "x_J_12": 0,
+            "x_J_13": 0,
+            "x_J_14": 0,
+            "x_J_15": 0,
+            "x_J_16": 1,
+            "x_K_12": 0,
+            "x_K_13": 0,
+            "x_K_14": 0,
+            "x_K_15": 0,
+            "x_K_16": 1,
+            "x_L_13": 0,
+            "x_L_14": 0,
+            "x_L_15": 0,
+            "x_L_16": 0,
+            "x_L_17": 0,
+            "x_L_18": 1,
+            "start_A": 0,
+            "start_B": 2,
+            "start_C": 4,
+            "start_D": 2,
+            "start_E": 4,
+            "start_F": 9,
+            "start_G": 8,
+            "start_H": 12,
+            "start_I": 14,
+            "start_J": 16,
+            "start_K": 16,
+            "start_L": 18,
+            "R_0": 2.0,
+            "R_1": 2.0,
+            "R_2": 5.0,
+            "R_3": 5.0,
+            "R_4": 6.0,
+            "R_5": 6.0,
+            "R_6": 6.0,
+            "R_7": 0.0,
+            "R_8": 2.0,
+            "R_9": 5.0,
+            "R_10": 3.0,
+            "R_11": 3.0,
+            "R_12": 3.0,
+            "R_13": 3.0,
+            "R_14": 2.0,
+            "R_15": 0.0,
+            "R_16": 5.0,
+            "R_17": 5.0,
+            "R_18": 2.0,
+            "R_19": 2.0,
+            "K_0": 0.0,
+            "K_1": 0.0,
+            "K_2": 0.0,
+            "K_3": 0.0,
+            "K_4": 4.0,
+            "K_5": 4.0,
+            "K_6": 4.0,
+            "K_7": 0.0,
+            "K_8": 2.0,
+            "K_9": 2.0,
+            "K_10": 0.0,
+            "K_11": 0.0,
+            "K_12": 0.0,
+            "K_13": 0.0,
+            "K_14": 0.0,
+            "K_15": 0.0,
+            "K_16": 3.0,
+            "K_17": 3.0,
+            "K_18": 0.0,
+            "K_19": 0.0,
+            "q_0": 1,
+            "q_1": 1,
+            "q_2": 2,
+            "q_3": 2,
+            "q_4": 2,
+            "q_5": 2,
+            "q_6": 2,
+            "q_7": 0,
+            "q_8": 1,
+            "q_9": 2,
+            "q_10": 1,
+            "q_11": 1,
+            "q_12": 1,
+            "q_13": 1,
+            "q_14": 1,
+            "q_15": 0,
+            "q_16": 2,
+            "q_17": 2,
+            "q_18": 1,
+            "q_19": 1,
+            "b_0": 0,
+            "b_1": 0,
+            "b_2": 0,
+            "b_3": 0,
+            "b_4": 1,
+            "b_5": 1,
+            "b_6": 1,
+            "b_7": 0,
+            "b_8": 1,
+            "b_9": 1,
+            "b_10": 0,
+            "b_11": 0,
+            "b_12": 0,
+            "b_13": 0,
+            "b_14": 0,
+            "b_15": 0,
+            "b_16": 1,
+            "b_17": 1,
+            "b_18": 0,
+            "b_19": 0
+          },
+          "objective": {
+            "value": 25.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.019001007080078125
+        },
+        "base_solution": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "server_count": 6,
+            "cooling_count": 2,
+            "backup_count": 1,
+            "x_A_0": 1,
+            "x_A_1": 0,
+            "x_A_2": 0,
+            "x_B_0": 0,
+            "x_B_1": 0,
+            "x_B_2": 1,
+            "x_B_3": 0,
+            "x_C_1": 0,
+            "x_C_2": 0,
+            "x_C_3": 0,
+            "x_C_4": 1,
+            "x_D_2": 1,
+            "x_D_3": 0,
+            "x_D_4": 0,
+            "x_D_5": 0,
+            "x_D_6": 0,
+            "x_E_4": 1,
+            "x_E_5": 0,
+            "x_F_4": 0,
+            "x_F_5": 0,
+            "x_F_9": 1,
+            "x_F_10": 0,
+            "x_G_7": 0,
+            "x_G_8": 1,
+            "x_G_9": 0,
+            "x_G_10": 0,
+            "x_G_11": 0,
+            "x_G_12": 0,
+            "x_H_7": 0,
+            "x_H_8": 0,
+            "x_H_9": 0,
+            "x_H_10": 0,
+            "x_H_11": 0,
+            "x_H_12": 1,
+            "x_I_9": 0,
+            "x_I_10": 0,
+            "x_I_11": 0,
+            "x_I_12": 0,
+            "x_I_13": 0,
+            "x_I_14": 1,
+            "x_J_11": 0,
+            "x_J_12": 0,
+            "x_J_13": 0,
+            "x_J_14": 0,
+            "x_J_15": 0,
+            "x_J_16": 1,
+            "x_K_12": 0,
+            "x_K_13": 0,
+            "x_K_14": 0,
+            "x_K_15": 0,
+            "x_K_16": 1,
+            "x_L_13": 0,
+            "x_L_14": 0,
+            "x_L_15": 0,
+            "x_L_16": 0,
+            "x_L_17": 0,
+            "x_L_18": 1,
+            "start_A": 0,
+            "start_B": 2,
+            "start_C": 4,
+            "start_D": 2,
+            "start_E": 4,
+            "start_F": 9,
+            "start_G": 8,
+            "start_H": 12,
+            "start_I": 14,
+            "start_J": 16,
+            "start_K": 16,
+            "start_L": 18,
+            "R_0": 2.0,
+            "R_1": 2.0,
+            "R_2": 5.0,
+            "R_3": 5.0,
+            "R_4": 6.0,
+            "R_5": 6.0,
+            "R_6": 6.0,
+            "R_7": 0.0,
+            "R_8": 2.0,
+            "R_9": 5.0,
+            "R_10": 3.0,
+            "R_11": 3.0,
+            "R_12": 3.0,
+            "R_13": 3.0,
+            "R_14": 2.0,
+            "R_15": 0.0,
+            "R_16": 5.0,
+            "R_17": 5.0,
+            "R_18": 2.0,
+            "R_19": 2.0,
+            "K_0": 0.0,
+            "K_1": 0.0,
+            "K_2": 0.0,
+            "K_3": 0.0,
+            "K_4": 4.0,
+            "K_5": 4.0,
+            "K_6": 4.0,
+            "K_7": 0.0,
+            "K_8": 2.0,
+            "K_9": 2.0,
+            "K_10": 0.0,
+            "K_11": 0.0,
+            "K_12": 0.0,
+            "K_13": 0.0,
+            "K_14": 0.0,
+            "K_15": 0.0,
+            "K_16": 3.0,
+            "K_17": 3.0,
+            "K_18": 0.0,
+            "K_19": 0.0,
+            "q_0": 1,
+            "q_1": 1,
+            "q_2": 2,
+            "q_3": 2,
+            "q_4": 2,
+            "q_5": 2,
+            "q_6": 2,
+            "q_7": 0,
+            "q_8": 1,
+            "q_9": 2,
+            "q_10": 1,
+            "q_11": 1,
+            "q_12": 1,
+            "q_13": 1,
+            "q_14": 1,
+            "q_15": 0,
+            "q_16": 2,
+            "q_17": 2,
+            "q_18": 1,
+            "q_19": 1,
+            "b_0": 0,
+            "b_1": 0,
+            "b_2": 0,
+            "b_3": 0,
+            "b_4": 1,
+            "b_5": 1,
+            "b_6": 1,
+            "b_7": 0,
+            "b_8": 1,
+            "b_9": 1,
+            "b_10": 0,
+            "b_11": 0,
+            "b_12": 0,
+            "b_13": 0,
+            "b_14": 0,
+            "b_15": 0,
+            "b_16": 1,
+            "b_17": 1,
+            "b_18": 0,
+            "b_19": 0
+          },
+          "objective": {
+            "value": 25.0,
+            "unit": "objective_units",
+            "direction": "min"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.008998870849609375
+        },
+        "model": {
+          "variables": [
+            {
+              "id": "server_count",
+              "type": "INTEGER",
+              "lb": 6,
+              "ub": 25
+            },
+            {
+              "id": "cooling_count",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 8
+            },
+            {
+              "id": "backup_count",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "x_A_0",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_A_1",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_A_2",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_B_0",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_B_1",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_B_2",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_B_3",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_C_1",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_C_2",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_C_3",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_C_4",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_D_2",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_D_3",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_D_4",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_D_5",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_D_6",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_E_4",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_E_5",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_F_4",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_F_5",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_F_9",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_F_10",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_7",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_8",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_9",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_10",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_11",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_G_12",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_7",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_8",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_9",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_10",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_11",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_H_12",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_9",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_10",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_11",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_12",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_13",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_I_14",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_11",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_12",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_13",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_14",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_15",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_J_16",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_K_12",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_K_13",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_K_14",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_K_15",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_K_16",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_13",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_14",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_15",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_16",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_17",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "x_L_18",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "start_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_C",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_D",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_E",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_F",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_G",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_H",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_I",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_J",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_K",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "start_L",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 19
+            },
+            {
+              "id": "R_0",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_1",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_2",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_3",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_4",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_5",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_6",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_7",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_8",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_9",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_10",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_11",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_12",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_13",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_14",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_15",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_16",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_17",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_18",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "R_19",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 30
+            },
+            {
+              "id": "K_0",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_1",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_2",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_3",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_4",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_5",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_6",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_7",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_8",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_9",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_10",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_11",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_12",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_13",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_14",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_15",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_16",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_17",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_18",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "K_19",
+              "type": "CONTINUOUS",
+              "lb": 0,
+              "ub": 9
+            },
+            {
+              "id": "q_0",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_6",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_7",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_8",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_9",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_10",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_11",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 3
+            },
+            {
+              "id": "q_12",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_13",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_14",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_15",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_16",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_17",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_18",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "q_19",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_0",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 0
+            },
+            {
+              "id": "b_1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 0
+            },
+            {
+              "id": "b_2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 0
+            },
+            {
+              "id": "b_3",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 0
+            },
+            {
+              "id": "b_4",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_5",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_6",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_7",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_8",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_9",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_10",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_11",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_12",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_13",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_14",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_15",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 2
+            },
+            {
+              "id": "b_16",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "b_17",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "b_18",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "b_19",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 1
+            }
+          ],
+          "objective": {
+            "sense": "min",
+            "unit": "objective_units",
+            "constant": 0,
+            "coefficients": {
+              "server_count": 2,
+              "cooling_count": 4,
+              "backup_count": 5
+            }
+          },
+          "constraints": [
+            {
+              "name": "power_limit",
+              "coefficients": {
+                "server_count": 2,
+                "cooling_count": 4,
+                "backup_count": 5
+              },
+              "sense": "<=",
+              "rhs": 50
+            },
+            {
+              "name": "cooling_ratio_min",
+              "coefficients": {
+                "server_count": 1,
+                "cooling_count": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cooling_ratio_max",
+              "coefficients": {
+                "server_count": 1,
+                "cooling_count": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_min",
+              "coefficients": {
+                "server_count": 1,
+                "backup_count": -8
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_max",
+              "coefficients": {
+                "server_count": 1,
+                "backup_count": -4
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "select_A",
+              "coefficients": {
+                "x_A_0": 1,
+                "x_A_1": 1,
+                "x_A_2": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_B",
+              "coefficients": {
+                "x_B_0": 1,
+                "x_B_1": 1,
+                "x_B_2": 1,
+                "x_B_3": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_C",
+              "coefficients": {
+                "x_C_1": 1,
+                "x_C_2": 1,
+                "x_C_3": 1,
+                "x_C_4": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_D",
+              "coefficients": {
+                "x_D_2": 1,
+                "x_D_3": 1,
+                "x_D_4": 1,
+                "x_D_5": 1,
+                "x_D_6": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_E",
+              "coefficients": {
+                "x_E_4": 1,
+                "x_E_5": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_F",
+              "coefficients": {
+                "x_F_4": 1,
+                "x_F_5": 1,
+                "x_F_9": 1,
+                "x_F_10": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_G",
+              "coefficients": {
+                "x_G_7": 1,
+                "x_G_8": 1,
+                "x_G_9": 1,
+                "x_G_10": 1,
+                "x_G_11": 1,
+                "x_G_12": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_H",
+              "coefficients": {
+                "x_H_7": 1,
+                "x_H_8": 1,
+                "x_H_9": 1,
+                "x_H_10": 1,
+                "x_H_11": 1,
+                "x_H_12": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_I",
+              "coefficients": {
+                "x_I_9": 1,
+                "x_I_10": 1,
+                "x_I_11": 1,
+                "x_I_12": 1,
+                "x_I_13": 1,
+                "x_I_14": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_J",
+              "coefficients": {
+                "x_J_11": 1,
+                "x_J_12": 1,
+                "x_J_13": 1,
+                "x_J_14": 1,
+                "x_J_15": 1,
+                "x_J_16": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_K",
+              "coefficients": {
+                "x_K_12": 1,
+                "x_K_13": 1,
+                "x_K_14": 1,
+                "x_K_15": 1,
+                "x_K_16": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "select_L",
+              "coefficients": {
+                "x_L_13": 1,
+                "x_L_14": 1,
+                "x_L_15": 1,
+                "x_L_16": 1,
+                "x_L_17": 1,
+                "x_L_18": 1
+              },
+              "sense": "==",
+              "rhs": 1
+            },
+            {
+              "name": "start_A_eq",
+              "coefficients": {
+                "start_A": 1,
+                "x_A_1": -1,
+                "x_A_2": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_B_eq",
+              "coefficients": {
+                "start_B": 1,
+                "x_B_1": -1,
+                "x_B_2": -2,
+                "x_B_3": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_C_eq",
+              "coefficients": {
+                "start_C": 1,
+                "x_C_1": -1,
+                "x_C_2": -2,
+                "x_C_3": -3,
+                "x_C_4": -4
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_D_eq",
+              "coefficients": {
+                "start_D": 1,
+                "x_D_2": -2,
+                "x_D_3": -3,
+                "x_D_4": -4,
+                "x_D_5": -5,
+                "x_D_6": -6
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_E_eq",
+              "coefficients": {
+                "start_E": 1,
+                "x_E_4": -4,
+                "x_E_5": -5
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_F_eq",
+              "coefficients": {
+                "start_F": 1,
+                "x_F_4": -4,
+                "x_F_5": -5,
+                "x_F_9": -9,
+                "x_F_10": -10
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_G_eq",
+              "coefficients": {
+                "start_G": 1,
+                "x_G_7": -7,
+                "x_G_8": -8,
+                "x_G_9": -9,
+                "x_G_10": -10,
+                "x_G_11": -11,
+                "x_G_12": -12
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_H_eq",
+              "coefficients": {
+                "start_H": 1,
+                "x_H_7": -7,
+                "x_H_8": -8,
+                "x_H_9": -9,
+                "x_H_10": -10,
+                "x_H_11": -11,
+                "x_H_12": -12
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_I_eq",
+              "coefficients": {
+                "start_I": 1,
+                "x_I_9": -9,
+                "x_I_10": -10,
+                "x_I_11": -11,
+                "x_I_12": -12,
+                "x_I_13": -13,
+                "x_I_14": -14
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_J_eq",
+              "coefficients": {
+                "start_J": 1,
+                "x_J_11": -11,
+                "x_J_12": -12,
+                "x_J_13": -13,
+                "x_J_14": -14,
+                "x_J_15": -15,
+                "x_J_16": -16
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_K_eq",
+              "coefficients": {
+                "start_K": 1,
+                "x_K_12": -12,
+                "x_K_13": -13,
+                "x_K_14": -14,
+                "x_K_15": -15,
+                "x_K_16": -16
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "start_L_eq",
+              "coefficients": {
+                "start_L": 1,
+                "x_L_13": -13,
+                "x_L_14": -14,
+                "x_L_15": -15,
+                "x_L_16": -16,
+                "x_L_17": -17,
+                "x_L_18": -18
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "dep_A_E_min",
+              "coefficients": {
+                "start_E": 1,
+                "start_A": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_A_E_max",
+              "coefficients": {
+                "start_E": 1,
+                "start_A": -1
+              },
+              "sense": "<=",
+              "rhs": 5
+            },
+            {
+              "name": "dep_B_E_min",
+              "coefficients": {
+                "start_E": 1,
+                "start_B": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_B_E_max",
+              "coefficients": {
+                "start_E": 1,
+                "start_B": -1
+              },
+              "sense": "<=",
+              "rhs": 6
+            },
+            {
+              "name": "dep_C_F_min",
+              "coefficients": {
+                "start_F": 1,
+                "start_C": -1
+              },
+              "sense": ">=",
+              "rhs": 3
+            },
+            {
+              "name": "dep_C_F_max",
+              "coefficients": {
+                "start_F": 1,
+                "start_C": -1
+              },
+              "sense": "<=",
+              "rhs": 9
+            },
+            {
+              "name": "dep_D_F_min",
+              "coefficients": {
+                "start_F": 1,
+                "start_D": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_D_F_max",
+              "coefficients": {
+                "start_F": 1,
+                "start_D": -1
+              },
+              "sense": "<=",
+              "rhs": 8
+            },
+            {
+              "name": "dep_E_G_min",
+              "coefficients": {
+                "start_G": 1,
+                "start_E": -1
+              },
+              "sense": ">=",
+              "rhs": 3
+            },
+            {
+              "name": "dep_E_G_max",
+              "coefficients": {
+                "start_G": 1,
+                "start_E": -1
+              },
+              "sense": "<=",
+              "rhs": 5
+            },
+            {
+              "name": "dep_F_H_min",
+              "coefficients": {
+                "start_H": 1,
+                "start_F": -1
+              },
+              "sense": ">=",
+              "rhs": 3
+            },
+            {
+              "name": "dep_F_H_max",
+              "coefficients": {
+                "start_H": 1,
+                "start_F": -1
+              },
+              "sense": "<=",
+              "rhs": 5
+            },
+            {
+              "name": "dep_G_I_min",
+              "coefficients": {
+                "start_I": 1,
+                "start_G": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_G_I_max",
+              "coefficients": {
+                "start_I": 1,
+                "start_G": -1
+              },
+              "sense": "<=",
+              "rhs": 6
+            },
+            {
+              "name": "dep_H_I_min",
+              "coefficients": {
+                "start_I": 1,
+                "start_H": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_H_I_max",
+              "coefficients": {
+                "start_I": 1,
+                "start_H": -1
+              },
+              "sense": "<=",
+              "rhs": 4
+            },
+            {
+              "name": "dep_I_J_min",
+              "coefficients": {
+                "start_J": 1,
+                "start_I": -1
+              },
+              "sense": ">=",
+              "rhs": 1
+            },
+            {
+              "name": "dep_I_J_max",
+              "coefficients": {
+                "start_J": 1,
+                "start_I": -1
+              },
+              "sense": "<=",
+              "rhs": 4
+            },
+            {
+              "name": "dep_I_K_min",
+              "coefficients": {
+                "start_K": 1,
+                "start_I": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_I_K_max",
+              "coefficients": {
+                "start_K": 1,
+                "start_I": -1
+              },
+              "sense": "<=",
+              "rhs": 4
+            },
+            {
+              "name": "dep_J_L_min",
+              "coefficients": {
+                "start_L": 1,
+                "start_J": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_J_L_max",
+              "coefficients": {
+                "start_L": 1,
+                "start_J": -1
+              },
+              "sense": "<=",
+              "rhs": 4
+            },
+            {
+              "name": "dep_K_L_min",
+              "coefficients": {
+                "start_L": 1,
+                "start_K": -1
+              },
+              "sense": ">=",
+              "rhs": 2
+            },
+            {
+              "name": "dep_K_L_max",
+              "coefficients": {
+                "start_L": 1,
+                "start_K": -1
+              },
+              "sense": "<=",
+              "rhs": 3
+            },
+            {
+              "name": "R_eq_0",
+              "coefficients": {
+                "R_0": 1,
+                "x_A_0": -2,
+                "x_B_0": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_1",
+              "coefficients": {
+                "R_1": 1,
+                "x_A_0": -2,
+                "x_A_1": -2,
+                "x_B_0": -3,
+                "x_B_1": -3,
+                "x_C_1": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_2",
+              "coefficients": {
+                "R_2": 1,
+                "x_A_1": -2,
+                "x_A_2": -2,
+                "x_B_1": -3,
+                "x_B_2": -3,
+                "x_C_1": -2,
+                "x_C_2": -2,
+                "x_D_2": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_3",
+              "coefficients": {
+                "R_3": 1,
+                "x_A_2": -2,
+                "x_B_2": -3,
+                "x_B_3": -3,
+                "x_C_1": -2,
+                "x_C_2": -2,
+                "x_C_3": -2,
+                "x_D_2": -2,
+                "x_D_3": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_4",
+              "coefficients": {
+                "R_4": 1,
+                "x_B_3": -3,
+                "x_C_2": -2,
+                "x_C_3": -2,
+                "x_C_4": -2,
+                "x_D_3": -2,
+                "x_D_4": -2,
+                "x_E_4": -4,
+                "x_F_4": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_5",
+              "coefficients": {
+                "R_5": 1,
+                "x_C_3": -2,
+                "x_C_4": -2,
+                "x_D_4": -2,
+                "x_D_5": -2,
+                "x_E_4": -4,
+                "x_E_5": -4,
+                "x_F_4": -3,
+                "x_F_5": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_6",
+              "coefficients": {
+                "R_6": 1,
+                "x_C_4": -2,
+                "x_D_5": -2,
+                "x_D_6": -2,
+                "x_E_4": -4,
+                "x_E_5": -4,
+                "x_F_4": -3,
+                "x_F_5": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_7",
+              "coefficients": {
+                "R_7": 1,
+                "x_D_6": -2,
+                "x_E_5": -4,
+                "x_F_5": -3,
+                "x_G_7": -2,
+                "x_H_7": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_8",
+              "coefficients": {
+                "R_8": 1,
+                "x_G_7": -2,
+                "x_G_8": -2,
+                "x_H_7": -3,
+                "x_H_8": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_9",
+              "coefficients": {
+                "R_9": 1,
+                "x_F_9": -3,
+                "x_G_8": -2,
+                "x_G_9": -2,
+                "x_H_8": -3,
+                "x_H_9": -3,
+                "x_I_9": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_10",
+              "coefficients": {
+                "R_10": 1,
+                "x_F_9": -3,
+                "x_F_10": -3,
+                "x_G_9": -2,
+                "x_G_10": -2,
+                "x_H_9": -3,
+                "x_H_10": -3,
+                "x_I_10": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_11",
+              "coefficients": {
+                "R_11": 1,
+                "x_F_9": -3,
+                "x_F_10": -3,
+                "x_G_10": -2,
+                "x_G_11": -2,
+                "x_H_10": -3,
+                "x_H_11": -3,
+                "x_I_11": -2,
+                "x_J_11": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_12",
+              "coefficients": {
+                "R_12": 1,
+                "x_F_10": -3,
+                "x_G_11": -2,
+                "x_G_12": -2,
+                "x_H_11": -3,
+                "x_H_12": -3,
+                "x_I_12": -2,
+                "x_J_11": -2,
+                "x_J_12": -2,
+                "x_K_12": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_13",
+              "coefficients": {
+                "R_13": 1,
+                "x_G_12": -2,
+                "x_H_12": -3,
+                "x_I_13": -2,
+                "x_J_12": -2,
+                "x_J_13": -2,
+                "x_K_12": -3,
+                "x_K_13": -3,
+                "x_L_13": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_14",
+              "coefficients": {
+                "R_14": 1,
+                "x_I_14": -2,
+                "x_J_13": -2,
+                "x_J_14": -2,
+                "x_K_13": -3,
+                "x_K_14": -3,
+                "x_L_13": -2,
+                "x_L_14": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_15",
+              "coefficients": {
+                "R_15": 1,
+                "x_J_14": -2,
+                "x_J_15": -2,
+                "x_K_14": -3,
+                "x_K_15": -3,
+                "x_L_14": -2,
+                "x_L_15": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_16",
+              "coefficients": {
+                "R_16": 1,
+                "x_J_15": -2,
+                "x_J_16": -2,
+                "x_K_15": -3,
+                "x_K_16": -3,
+                "x_L_15": -2,
+                "x_L_16": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_17",
+              "coefficients": {
+                "R_17": 1,
+                "x_J_16": -2,
+                "x_K_16": -3,
+                "x_L_16": -2,
+                "x_L_17": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_18",
+              "coefficients": {
+                "R_18": 1,
+                "x_L_17": -2,
+                "x_L_18": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "R_eq_19",
+              "coefficients": {
+                "R_19": 1,
+                "x_L_18": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_0",
+              "coefficients": {
+                "K_0": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_1",
+              "coefficients": {
+                "K_1": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_2",
+              "coefficients": {
+                "K_2": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_3",
+              "coefficients": {
+                "K_3": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_4",
+              "coefficients": {
+                "K_4": 1,
+                "x_E_4": -4
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_5",
+              "coefficients": {
+                "K_5": 1,
+                "x_E_4": -4,
+                "x_E_5": -4
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_6",
+              "coefficients": {
+                "K_6": 1,
+                "x_E_4": -4,
+                "x_E_5": -4
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_7",
+              "coefficients": {
+                "K_7": 1,
+                "x_E_5": -4,
+                "x_G_7": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_8",
+              "coefficients": {
+                "K_8": 1,
+                "x_G_7": -2,
+                "x_G_8": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_9",
+              "coefficients": {
+                "K_9": 1,
+                "x_G_8": -2,
+                "x_G_9": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_10",
+              "coefficients": {
+                "K_10": 1,
+                "x_G_9": -2,
+                "x_G_10": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_11",
+              "coefficients": {
+                "K_11": 1,
+                "x_G_10": -2,
+                "x_G_11": -2
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_12",
+              "coefficients": {
+                "K_12": 1,
+                "x_G_11": -2,
+                "x_G_12": -2,
+                "x_K_12": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_13",
+              "coefficients": {
+                "K_13": 1,
+                "x_G_12": -2,
+                "x_K_12": -3,
+                "x_K_13": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_14",
+              "coefficients": {
+                "K_14": 1,
+                "x_K_13": -3,
+                "x_K_14": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_15",
+              "coefficients": {
+                "K_15": 1,
+                "x_K_14": -3,
+                "x_K_15": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_16",
+              "coefficients": {
+                "K_16": 1,
+                "x_K_15": -3,
+                "x_K_16": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_17",
+              "coefficients": {
+                "K_17": 1,
+                "x_K_16": -3
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_18",
+              "coefficients": {
+                "K_18": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "K_eq_19",
+              "coefficients": {
+                "K_19": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_0",
+              "coefficients": {
+                "R_0": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_1",
+              "coefficients": {
+                "R_1": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_2",
+              "coefficients": {
+                "R_2": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_3",
+              "coefficients": {
+                "R_3": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_4",
+              "coefficients": {
+                "R_4": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_5",
+              "coefficients": {
+                "R_5": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_6",
+              "coefficients": {
+                "R_6": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_7",
+              "coefficients": {
+                "R_7": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_8",
+              "coefficients": {
+                "R_8": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_9",
+              "coefficients": {
+                "R_9": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_10",
+              "coefficients": {
+                "R_10": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_11",
+              "coefficients": {
+                "R_11": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_12",
+              "coefficients": {
+                "R_12": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_13",
+              "coefficients": {
+                "R_13": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_14",
+              "coefficients": {
+                "R_14": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_15",
+              "coefficients": {
+                "R_15": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_16",
+              "coefficients": {
+                "R_16": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_17",
+              "coefficients": {
+                "R_17": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_18",
+              "coefficients": {
+                "R_18": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "capacity_19",
+              "coefficients": {
+                "R_19": 1,
+                "server_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_0",
+              "coefficients": {
+                "q_0": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_1",
+              "coefficients": {
+                "q_1": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_2",
+              "coefficients": {
+                "q_2": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_3",
+              "coefficients": {
+                "q_3": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_4",
+              "coefficients": {
+                "q_4": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_5",
+              "coefficients": {
+                "q_5": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_6",
+              "coefficients": {
+                "q_6": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_7",
+              "coefficients": {
+                "q_7": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_8",
+              "coefficients": {
+                "q_8": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_9",
+              "coefficients": {
+                "q_9": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_10",
+              "coefficients": {
+                "q_10": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_11",
+              "coefficients": {
+                "q_11": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_12",
+              "coefficients": {
+                "q_12": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_13",
+              "coefficients": {
+                "q_13": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_14",
+              "coefficients": {
+                "q_14": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_15",
+              "coefficients": {
+                "q_15": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_16",
+              "coefficients": {
+                "q_16": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_17",
+              "coefficients": {
+                "q_17": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_18",
+              "coefficients": {
+                "q_18": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_config_19",
+              "coefficients": {
+                "q_19": 1,
+                "cooling_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_0",
+              "coefficients": {
+                "R_0": 1,
+                "q_0": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_1",
+              "coefficients": {
+                "R_1": 1,
+                "q_1": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_2",
+              "coefficients": {
+                "R_2": 1,
+                "q_2": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_3",
+              "coefficients": {
+                "R_3": 1,
+                "q_3": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_4",
+              "coefficients": {
+                "R_4": 1,
+                "q_4": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_5",
+              "coefficients": {
+                "R_5": 1,
+                "q_5": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_6",
+              "coefficients": {
+                "R_6": 1,
+                "q_6": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_7",
+              "coefficients": {
+                "R_7": 1,
+                "q_7": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_8",
+              "coefficients": {
+                "R_8": 1,
+                "q_8": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_9",
+              "coefficients": {
+                "R_9": 1,
+                "q_9": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_10",
+              "coefficients": {
+                "R_10": 1,
+                "q_10": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_11",
+              "coefficients": {
+                "R_11": 1,
+                "q_11": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_12",
+              "coefficients": {
+                "R_12": 1,
+                "q_12": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_13",
+              "coefficients": {
+                "R_13": 1,
+                "q_13": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_14",
+              "coefficients": {
+                "R_14": 1,
+                "q_14": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_15",
+              "coefficients": {
+                "R_15": 1,
+                "q_15": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_16",
+              "coefficients": {
+                "R_16": 1,
+                "q_16": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_17",
+              "coefficients": {
+                "R_17": 1,
+                "q_17": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_18",
+              "coefficients": {
+                "R_18": 1,
+                "q_18": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_lb_19",
+              "coefficients": {
+                "R_19": 1,
+                "q_19": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_0",
+              "coefficients": {
+                "R_0": 1,
+                "q_0": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_1",
+              "coefficients": {
+                "R_1": 1,
+                "q_1": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_2",
+              "coefficients": {
+                "R_2": 1,
+                "q_2": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_3",
+              "coefficients": {
+                "R_3": 1,
+                "q_3": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_4",
+              "coefficients": {
+                "R_4": 1,
+                "q_4": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_5",
+              "coefficients": {
+                "R_5": 1,
+                "q_5": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_6",
+              "coefficients": {
+                "R_6": 1,
+                "q_6": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_7",
+              "coefficients": {
+                "R_7": 1,
+                "q_7": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_8",
+              "coefficients": {
+                "R_8": 1,
+                "q_8": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_9",
+              "coefficients": {
+                "R_9": 1,
+                "q_9": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_10",
+              "coefficients": {
+                "R_10": 1,
+                "q_10": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_11",
+              "coefficients": {
+                "R_11": 1,
+                "q_11": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_12",
+              "coefficients": {
+                "R_12": 1,
+                "q_12": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_13",
+              "coefficients": {
+                "R_13": 1,
+                "q_13": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_14",
+              "coefficients": {
+                "R_14": 1,
+                "q_14": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_15",
+              "coefficients": {
+                "R_15": 1,
+                "q_15": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_16",
+              "coefficients": {
+                "R_16": 1,
+                "q_16": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_17",
+              "coefficients": {
+                "R_17": 1,
+                "q_17": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_18",
+              "coefficients": {
+                "R_18": 1,
+                "q_18": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "cool_ratio_ub_19",
+              "coefficients": {
+                "R_19": 1,
+                "q_19": -3
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_0",
+              "coefficients": {
+                "b_0": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_1",
+              "coefficients": {
+                "b_1": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_2",
+              "coefficients": {
+                "b_2": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_3",
+              "coefficients": {
+                "b_3": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_4",
+              "coefficients": {
+                "b_4": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_5",
+              "coefficients": {
+                "b_5": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_6",
+              "coefficients": {
+                "b_6": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_7",
+              "coefficients": {
+                "b_7": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_8",
+              "coefficients": {
+                "b_8": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_9",
+              "coefficients": {
+                "b_9": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_10",
+              "coefficients": {
+                "b_10": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_11",
+              "coefficients": {
+                "b_11": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_12",
+              "coefficients": {
+                "b_12": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_13",
+              "coefficients": {
+                "b_13": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_14",
+              "coefficients": {
+                "b_14": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_15",
+              "coefficients": {
+                "b_15": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_16",
+              "coefficients": {
+                "b_16": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_17",
+              "coefficients": {
+                "b_17": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_18",
+              "coefficients": {
+                "b_18": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_config_19",
+              "coefficients": {
+                "b_19": 1,
+                "backup_count": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_0",
+              "coefficients": {
+                "K_0": 1,
+                "b_0": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_1",
+              "coefficients": {
+                "K_1": 1,
+                "b_1": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_2",
+              "coefficients": {
+                "K_2": 1,
+                "b_2": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_3",
+              "coefficients": {
+                "K_3": 1,
+                "b_3": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_4",
+              "coefficients": {
+                "K_4": 1,
+                "b_4": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_5",
+              "coefficients": {
+                "K_5": 1,
+                "b_5": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_6",
+              "coefficients": {
+                "K_6": 1,
+                "b_6": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_7",
+              "coefficients": {
+                "K_7": 1,
+                "b_7": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_8",
+              "coefficients": {
+                "K_8": 1,
+                "b_8": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_9",
+              "coefficients": {
+                "K_9": 1,
+                "b_9": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_10",
+              "coefficients": {
+                "K_10": 1,
+                "b_10": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_11",
+              "coefficients": {
+                "K_11": 1,
+                "b_11": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_12",
+              "coefficients": {
+                "K_12": 1,
+                "b_12": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_13",
+              "coefficients": {
+                "K_13": 1,
+                "b_13": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_14",
+              "coefficients": {
+                "K_14": 1,
+                "b_14": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_15",
+              "coefficients": {
+                "K_15": 1,
+                "b_15": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_16",
+              "coefficients": {
+                "K_16": 1,
+                "b_16": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_17",
+              "coefficients": {
+                "K_17": 1,
+                "b_17": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_18",
+              "coefficients": {
+                "K_18": 1,
+                "b_18": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_lb_19",
+              "coefficients": {
+                "K_19": 1,
+                "b_19": -2
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_0",
+              "coefficients": {
+                "K_0": 1,
+                "b_0": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_1",
+              "coefficients": {
+                "K_1": 1,
+                "b_1": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_2",
+              "coefficients": {
+                "K_2": 1,
+                "b_2": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_3",
+              "coefficients": {
+                "K_3": 1,
+                "b_3": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_4",
+              "coefficients": {
+                "K_4": 1,
+                "b_4": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_5",
+              "coefficients": {
+                "K_5": 1,
+                "b_5": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_6",
+              "coefficients": {
+                "K_6": 1,
+                "b_6": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_7",
+              "coefficients": {
+                "K_7": 1,
+                "b_7": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_8",
+              "coefficients": {
+                "K_8": 1,
+                "b_8": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_9",
+              "coefficients": {
+                "K_9": 1,
+                "b_9": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_10",
+              "coefficients": {
+                "K_10": 1,
+                "b_10": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_11",
+              "coefficients": {
+                "K_11": 1,
+                "b_11": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_12",
+              "coefficients": {
+                "K_12": 1,
+                "b_12": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_13",
+              "coefficients": {
+                "K_13": 1,
+                "b_13": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_14",
+              "coefficients": {
+                "K_14": 1,
+                "b_14": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_15",
+              "coefficients": {
+                "K_15": 1,
+                "b_15": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_16",
+              "coefficients": {
+                "K_16": 1,
+                "b_16": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_17",
+              "coefficients": {
+                "K_17": 1,
+                "b_17": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_18",
+              "coefficients": {
+                "K_18": 1,
+                "b_18": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "backup_ratio_ub_19",
+              "coefficients": {
+                "K_19": 1,
+                "b_19": -4
+              },
+              "sense": "<=",
+              "rhs": 0
+            }
+          ]
+        },
+        "stop_reason": "FINISHED",
+        "error": null,
+        "delivery_status": "PROVISIONAL",
+        "information_complete": null,
+        "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+        "acquisition_enabled": true,
+        "acquisition_stop": null,
+        "search_gate": {
+          "search_needed": false,
+          "reason": "The task is a fully specified mixed-integer optimization problem with all CSV data, rules, and solver environment provided; no external public information is required.",
+          "queries": []
+        },
+        "unresolved": [],
+        "final_modeling_attempted": true,
+        "final_modeling_completed": true,
+        "resources": {
+          "model": 3,
+          "search": 0,
+          "read": 0,
+          "solve": 2,
+          "format_repairs": 0,
+          "schedule": 0
+        },
+        "elapsed_seconds": 268.81300000002375,
+        "usage": {
+          "calls": 3,
+          "model_calls": 3,
+          "search_calls": 0,
+          "read_calls": 0,
+          "channel": "RESPONSES_COMPATIBLE_API",
+          "retrieval_channel": "DEEPSEEK_SEARCH_API",
+          "read_channel": "BASELINE_HTTP",
+          "read_http_requests": 0,
+          "usage_complete": true,
+          "actual_temperature": 1.0,
+          "strict_token_budget_verified": false,
+          "wall_seconds": 268.5320000000647,
+          "actual_models": [
+            "deepseek-flash"
+          ],
+          "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+          "prompt_tokens": 50713,
+          "known_prompt_tokens": 50713,
+          "completion_tokens": 61605,
+          "known_completion_tokens": 61605,
+          "total_tokens": 112318,
+          "known_total_tokens": 112318,
+          "search_backend": "DEEPSEEK_SEARCH_API",
+          "search_http_requests": 0,
+          "search_successful_nonempty": 0,
+          "search_empty_results": 0,
+          "search_cost_usd": 0,
+          "search_known_cost_usd": 0,
+          "search_unknown_cost": false,
+          "search_cost_basis": "official_published_rate_not_invoice",
+          "search_price_usd_per_1000": 0.75,
+          "model_total_tokens": 112318,
+          "search_billing_unit": "successful_nonempty_request",
+          "acquisition_enabled": true,
+          "blocked_external_operations": {
+            "search": 0,
+            "read": 0
+          }
+        },
+        "standard_protocol": "legacy_knowledge_v1",
+        "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+        "legacy_source_sha256": {
+          "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+          "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+          "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+        },
+        "model_ir_contract": "archived_variables_objective_constraints",
+        "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+        "model_format_repair_policy": "none; strict archived parser and validator",
+        "solver_scope": "current shared solver, not archived solver.py"
+      }
+    }
+  ]
+}

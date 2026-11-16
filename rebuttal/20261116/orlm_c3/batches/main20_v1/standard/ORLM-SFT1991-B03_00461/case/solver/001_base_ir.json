@@ -1,0 +1,628 @@
+{
+  "variables": [
+    {
+      "id": "x_P1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P4",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P5",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P7",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "x_P8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "y_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "y_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "y_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P1_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P1_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P2_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P2_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P3_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P3_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P4_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P4_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P5_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P5_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P6_A",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P6_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P7_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P7_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P8_B",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_P8_C",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    }
+  ],
+  "objective": {
+    "direction": "max",
+    "unit": "objective_units",
+    "constant": 0,
+    "terms": {
+      "x_P1": 245,
+      "x_P2": 315,
+      "x_P3": 285,
+      "x_P4": 230,
+      "x_P5": 300,
+      "x_P6": 175,
+      "x_P7": 290,
+      "x_P8": 270
+    }
+  },
+  "constraints": [
+    {
+      "name": "resource_investment_budget",
+      "terms": {
+        "x_P1": 180,
+        "x_P2": 240,
+        "x_P3": 210,
+        "x_P4": 160,
+        "x_P5": 260,
+        "x_P6": 140,
+        "x_P7": 220,
+        "x_P8": 190
+      },
+      "sense": "<=",
+      "rhs": 1150
+    },
+    {
+      "name": "resource_product_person_months",
+      "terms": {
+        "x_P1": 18,
+        "x_P2": 30,
+        "x_P3": 16,
+        "x_P4": 12,
+        "x_P5": 25,
+        "x_P6": 10,
+        "x_P7": 20,
+        "x_P8": 14
+      },
+      "sense": "<=",
+      "rhs": 110
+    },
+    {
+      "name": "resource_data_person_months",
+      "terms": {
+        "x_P1": 12,
+        "x_P2": 8,
+        "x_P3": 28,
+        "x_P4": 24,
+        "x_P5": 15,
+        "x_P6": 18,
+        "x_P7": 6,
+        "x_P8": 10
+      },
+      "sense": "<=",
+      "rhs": 92
+    },
+    {
+      "name": "resource_market_person_months",
+      "terms": {
+        "x_P1": 6,
+        "x_P2": 10,
+        "x_P3": 4,
+        "x_P4": 8,
+        "x_P5": 3,
+        "x_P6": 5,
+        "x_P7": 26,
+        "x_P8": 30
+      },
+      "sense": "<=",
+      "rhs": 68
+    },
+    {
+      "name": "resource_risk_score",
+      "terms": {
+        "x_P1": 7,
+        "x_P2": 6,
+        "x_P3": 5,
+        "x_P4": 8,
+        "x_P5": 3,
+        "x_P6": 2,
+        "x_P7": 7,
+        "x_P8": 9
+      },
+      "sense": "<=",
+      "rhs": 31
+    },
+    {
+      "name": "category_customer_experience",
+      "terms": {
+        "x_P1": 1,
+        "x_P2": 1
+      },
+      "sense": ">=",
+      "rhs": 1
+    },
+    {
+      "name": "category_data_capability",
+      "terms": {
+        "x_P3": 1,
+        "x_P4": 1
+      },
+      "sense": ">=",
+      "rhs": 1
+    },
+    {
+      "name": "category_compliance_security",
+      "terms": {
+        "x_P5": 1,
+        "x_P6": 1
+      },
+      "sense": ">=",
+      "rhs": 1
+    },
+    {
+      "name": "category_market_growth",
+      "terms": {
+        "x_P7": 1,
+        "x_P8": 1
+      },
+      "sense": ">=",
+      "rhs": 1
+    },
+    {
+      "name": "dependency_P2_P3",
+      "terms": {
+        "x_P2": 1,
+        "x_P3": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "mutual_exclusion_P5_P8",
+      "terms": {
+        "x_P5": 1,
+        "x_P8": 1
+      },
+      "sense": "<=",
+      "rhs": 1
+    },
+    {
+      "name": "max_selected_projects",
+      "terms": {
+        "x_P1": 1,
+        "x_P2": 1,
+        "x_P3": 1,
+        "x_P4": 1,
+        "x_P5": 1,
+        "x_P6": 1,
+        "x_P7": 1,
+        "x_P8": 1
+      },
+      "sense": "<=",
+      "rhs": 6
+    },
+    {
+      "name": "assign_P1",
+      "terms": {
+        "z_P1_A": 1,
+        "z_P1_B": 1,
+        "x_P1": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P2",
+      "terms": {
+        "z_P2_A": 1,
+        "z_P2_B": 1,
+        "x_P2": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P3",
+      "terms": {
+        "z_P3_A": 1,
+        "z_P3_C": 1,
+        "x_P3": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P4",
+      "terms": {
+        "z_P4_B": 1,
+        "z_P4_C": 1,
+        "x_P4": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P5",
+      "terms": {
+        "z_P5_A": 1,
+        "z_P5_C": 1,
+        "x_P5": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P6",
+      "terms": {
+        "z_P6_A": 1,
+        "z_P6_C": 1,
+        "x_P6": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P7",
+      "terms": {
+        "z_P7_B": 1,
+        "z_P7_C": 1,
+        "x_P7": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "assign_P8",
+      "terms": {
+        "z_P8_B": 1,
+        "z_P8_C": 1,
+        "x_P8": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P1_A",
+      "terms": {
+        "z_P1_A": 1,
+        "y_A": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P1_B",
+      "terms": {
+        "z_P1_B": 1,
+        "y_B": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P2_A",
+      "terms": {
+        "z_P2_A": 1,
+        "y_A": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P2_B",
+      "terms": {
+        "z_P2_B": 1,
+        "y_B": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P3_A",
+      "terms": {
+        "z_P3_A": 1,
+        "y_A": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P3_C",
+      "terms": {
+        "z_P3_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P4_B",
+      "terms": {
+        "z_P4_B": 1,
+        "y_B": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P4_C",
+      "terms": {
+        "z_P4_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P5_A",
+      "terms": {
+        "z_P5_A": 1,
+        "y_A": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P5_C",
+      "terms": {
+        "z_P5_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P6_A",
+      "terms": {
+        "z_P6_A": 1,
+        "y_A": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P6_C",
+      "terms": {
+        "z_P6_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P7_B",
+      "terms": {
+        "z_P7_B": 1,
+        "y_B": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P7_C",
+      "terms": {
+        "z_P7_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P8_B",
+      "terms": {
+        "z_P8_B": 1,
+        "y_B": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "eligibility_P8_C",
+      "terms": {
+        "z_P8_C": 1,
+        "y_C": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "max_enabled_centers",
+      "terms": {
+        "y_A": 1,
+        "y_B": 1,
+        "y_C": 1
+      },
+      "sense": "<=",
+      "rhs": 2
+    },
+    {
+      "name": "capacity_A",
+      "terms": {
+        "z_P1_A": 6,
+        "z_P2_A": 10,
+        "z_P3_A": 8,
+        "z_P5_A": 7,
+        "z_P6_A": 4,
+        "y_A": -16
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "capacity_B",
+      "terms": {
+        "z_P1_B": 4,
+        "z_P2_B": 9,
+        "z_P4_B": 6,
+        "z_P7_B": 8,
+        "z_P8_B": 9,
+        "y_B": -16
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "capacity_C",
+      "terms": {
+        "z_P3_C": 5,
+        "z_P4_C": 7,
+        "z_P5_C": 9,
+        "z_P6_C": 6,
+        "z_P7_C": 5,
+        "z_P8_C": 8,
+        "y_C": -18
+      },
+      "sense": "<=",
+      "rhs": 0
+    }
+  ]
+}

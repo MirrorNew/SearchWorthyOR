@@ -1,0 +1,82 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": null,
+  "last_solve": null,
+  "base_solution": null,
+  "model": null,
+  "stop_reason": "ValueError",
+  "error": "Invalid model keys",
+  "delivery_status": "NONE",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": null,
+  "unresolved": [
+    "Workflow did not complete: ValueError: Invalid model keys"
+  ],
+  "final_modeling_attempted": false,
+  "final_modeling_completed": false,
+  "resources": {
+    "model": 2,
+    "search": 0,
+    "read": 0,
+    "solve": 0,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 837.2029999999795,
+  "usage": {
+    "calls": 2,
+    "model_calls": 2,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": false,
+    "actual_temperature": null,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 834.6869999999763,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": null,
+    "known_prompt_tokens": 4474,
+    "completion_tokens": null,
+    "known_completion_tokens": 37069,
+    "total_tokens": null,
+    "known_total_tokens": 41543,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": null,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

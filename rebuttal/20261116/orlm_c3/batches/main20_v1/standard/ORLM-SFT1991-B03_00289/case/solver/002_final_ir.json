@@ -1,0 +1,220 @@
+{
+  "variables": [
+    {
+      "id": "F1",
+      "type": "INTEGER",
+      "lb": 10,
+      "ub": 24,
+      "visibility": "public"
+    },
+    {
+      "id": "F2",
+      "type": "INTEGER",
+      "lb": 10,
+      "ub": 24,
+      "visibility": "public"
+    },
+    {
+      "id": "F3",
+      "type": "INTEGER",
+      "lb": 10,
+      "ub": 24,
+      "visibility": "public"
+    },
+    {
+      "id": "P1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 10,
+      "visibility": "public"
+    },
+    {
+      "id": "P2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 10,
+      "visibility": "public"
+    },
+    {
+      "id": "P3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 10,
+      "visibility": "public"
+    },
+    {
+      "id": "Y1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "Y2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "Y3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "Q",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 10,
+      "visibility": "public"
+    }
+  ],
+  "objective": {
+    "direction": "max",
+    "unit": "objective_units",
+    "constant": 0,
+    "terms": {
+      "F1": 12,
+      "F2": 12,
+      "F3": 12,
+      "P1": 11,
+      "P2": 11,
+      "P3": 11,
+      "Q": -2
+    }
+  },
+  "constraints": [
+    {
+      "name": "P1_ge_3Y1",
+      "terms": {
+        "P1": 1,
+        "Y1": -3
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "P1_le_10Y1",
+      "terms": {
+        "P1": 1,
+        "Y1": -10
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "P2_ge_3Y2",
+      "terms": {
+        "P2": 1,
+        "Y2": -3
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "P2_le_10Y2",
+      "terms": {
+        "P2": 1,
+        "Y2": -10
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "P3_ge_3Y3",
+      "terms": {
+        "P3": 1,
+        "Y3": -3
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "P3_le_10Y3",
+      "terms": {
+        "P3": 1,
+        "Y3": -10
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "minimum_total_input",
+      "terms": {
+        "F1": 1,
+        "F2": 1,
+        "F3": 1,
+        "P1": 1,
+        "P2": 1,
+        "P3": 1
+      },
+      "sense": ">=",
+      "rhs": 50
+    },
+    {
+      "name": "environment_limit",
+      "terms": {
+        "F1": 1,
+        "F2": 1,
+        "F3": 1,
+        "P1": 1,
+        "P2": 1,
+        "P3": 1
+      },
+      "sense": "<=",
+      "rhs": 60
+    },
+    {
+      "name": "minimum_fertilizer_gap",
+      "terms": {
+        "F1": 1,
+        "F2": 1,
+        "F3": 1,
+        "P1": -1,
+        "P2": -1,
+        "P3": -1
+      },
+      "sense": ">=",
+      "rhs": 10
+    },
+    {
+      "name": "budget_limit",
+      "terms": {
+        "F1": 7,
+        "F2": 7,
+        "F3": 7,
+        "P1": 9,
+        "P2": 9,
+        "P3": 9
+      },
+      "sense": "<=",
+      "rhs": 520
+    },
+    {
+      "name": "weekly_water_limit",
+      "terms": {
+        "F1": 2,
+        "F2": 2,
+        "F3": 2,
+        "P1": 1,
+        "P2": 1,
+        "P3": 1
+      },
+      "sense": "<=",
+      "rhs": 100
+    },
+    {
+      "name": "pesticide_risk_excess",
+      "terms": {
+        "P1": 1,
+        "P2": 1,
+        "P3": 1,
+        "Q": -1
+      },
+      "sense": "<=",
+      "rhs": 15
+    }
+  ]
+}

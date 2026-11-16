@@ -1,0 +1,55 @@
+{
+  "batch": "smoke_b01_v1",
+  "pass": true,
+  "attempts": 2,
+  "all_attempts_terminated": true,
+  "unchanged_code_files": 38,
+  "unchanged_public_source_files": 130,
+  "paired_inputs_and_configs_match": true,
+  "unchanged_reference_answer_files": 20,
+  "public_cases_sha256": "e7818e7338a9bc24170f86d256640fe6e7fa7a7141a3f6608c7bd4e0bc7c2bae",
+  "observed_model_calls": {
+    "deepseek-flash": 5
+  },
+  "scope": "Checks recorded project-root file access after public input loading; not an OS-wide filesystem sandbox or business-feasibility certificate.",
+  "runs": [
+    {
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 6,
+      "additional_denied_accesses": [
+        {
+          "event": "os.listdir",
+          "path": "D:\\LLM-CodexProject\\SWAgent-for-ICLR\\rebuttal\\20261116\\orlm_c3",
+          "allowed": false
+        }
+      ],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 6,
+      "additional_denied_accesses": [
+        {
+          "event": "os.listdir",
+          "path": "D:\\LLM-CodexProject\\SWAgent-for-ICLR\\rebuttal\\20261116\\orlm_c3",
+          "allowed": false
+        }
+      ],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    }
+  ]
+}

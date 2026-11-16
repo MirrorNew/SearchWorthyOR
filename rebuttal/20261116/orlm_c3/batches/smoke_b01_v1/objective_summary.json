@@ -1,0 +1,37 @@
+{
+  "batch": "smoke_b01_v1",
+  "condition": "C3-style",
+  "metric": "delivered optimal objective match, not full-model or independently verified business feasibility",
+  "absolute_tolerance": 1e-05,
+  "n_per_method": 1,
+  "recorded_monetary_cost": null,
+  "complete": true,
+  "methods": {
+    "standard-online": {
+      "matches": 1,
+      "denominator": 1,
+      "match_percent": 100.0,
+      "completed": 1,
+      "normal_finish": 1,
+      "stop_reasons": {
+        "FINISHED": 1
+      },
+      "model_calls": 3,
+      "search_calls": 0,
+      "read_calls": 0
+    },
+    "swagent-online": {
+      "matches": 1,
+      "denominator": 1,
+      "match_percent": 100.0,
+      "completed": 1,
+      "normal_finish": 1,
+      "stop_reasons": {
+        "FINISHED": 1
+      },
+      "model_calls": 2,
+      "search_calls": 0,
+      "read_calls": 0
+    }
+  }
+}

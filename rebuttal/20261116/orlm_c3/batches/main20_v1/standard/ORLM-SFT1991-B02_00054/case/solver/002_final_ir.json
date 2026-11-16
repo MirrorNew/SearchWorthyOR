@@ -1,0 +1,1043 @@
+{
+  "variables": [
+    {
+      "id": "lith_p1_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p1_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p1_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p1_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p2_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p2_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p2_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "lith_p2_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p1_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p1_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p1_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p1_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p2_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p2_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p2_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "etch_p2_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p1_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p1_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p1_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p1_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p2_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p2_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p2_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "insp_p2_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p1_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p1_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p1_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p1_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p2_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p2_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p2_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w1_p2_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p1_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p1_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p1_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p1_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p2_r1_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p2_r1_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p2_r2_A",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "w2_p2_r2_B",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "route2_active_p1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "route2_active_p2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_p1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "dirty_p1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_p2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "dirty_p2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 52,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_qty_N",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 42,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_qty_F",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 50,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_on_N",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "clean_on_F",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    }
+  ],
+  "objective": {
+    "direction": "max",
+    "unit": "objective_units",
+    "constant": 0,
+    "terms": {
+      "insp_p1_r1_A": 8200,
+      "insp_p1_r1_B": 5600,
+      "insp_p1_r2_A": 9000,
+      "insp_p1_r2_B": 5900,
+      "insp_p2_r1_A": 8200,
+      "insp_p2_r1_B": 5600,
+      "insp_p2_r2_A": 9000,
+      "insp_p2_r2_B": 5900,
+      "route2_active_p1": -18000,
+      "route2_active_p2": -18000
+    }
+  },
+  "constraints": [
+    {
+      "name": "lith_demand_p1_A",
+      "terms": {
+        "lith_p1_r1_A": 1,
+        "lith_p1_r2_A": 1
+      },
+      "sense": ">=",
+      "rhs": 19.8
+    },
+    {
+      "name": "lith_demand_p1_B",
+      "terms": {
+        "lith_p1_r1_B": 1,
+        "lith_p1_r2_B": 1
+      },
+      "sense": ">=",
+      "rhs": 26.4
+    },
+    {
+      "name": "lith_demand_p2_A",
+      "terms": {
+        "lith_p2_r1_A": 1,
+        "lith_p2_r2_A": 1
+      },
+      "sense": ">=",
+      "rhs": 19.8
+    },
+    {
+      "name": "lith_demand_p2_B",
+      "terms": {
+        "lith_p2_r1_B": 1,
+        "lith_p2_r2_B": 1
+      },
+      "sense": ">=",
+      "rhs": 26.4
+    },
+    {
+      "name": "qual_demand_p1_A",
+      "terms": {
+        "insp_p1_r1_A": 0.96,
+        "insp_p1_r2_A": 0.98
+      },
+      "sense": ">=",
+      "rhs": 17.1
+    },
+    {
+      "name": "qual_demand_p1_B",
+      "terms": {
+        "insp_p1_r1_B": 0.94,
+        "insp_p1_r2_B": 0.95
+      },
+      "sense": ">=",
+      "rhs": 22.8
+    },
+    {
+      "name": "qual_demand_p2_A",
+      "terms": {
+        "insp_p2_r1_A": 0.96,
+        "insp_p2_r2_A": 0.98
+      },
+      "sense": ">=",
+      "rhs": 17.1
+    },
+    {
+      "name": "qual_demand_p2_B",
+      "terms": {
+        "insp_p2_r1_B": 0.94,
+        "insp_p2_r2_B": 0.95
+      },
+      "sense": ">=",
+      "rhs": 22.8
+    },
+    {
+      "name": "wip_balance_p1_r1_A_etch",
+      "terms": {
+        "w1_p1_r1_A": 1,
+        "lith_p1_r1_A": -1,
+        "etch_p1_r1_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r1_A_insp",
+      "terms": {
+        "w2_p1_r1_A": 1,
+        "etch_p1_r1_A": -1,
+        "insp_p1_r1_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r1_B_etch",
+      "terms": {
+        "w1_p1_r1_B": 1,
+        "lith_p1_r1_B": -1,
+        "etch_p1_r1_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r1_B_insp",
+      "terms": {
+        "w2_p1_r1_B": 1,
+        "etch_p1_r1_B": -1,
+        "insp_p1_r1_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r2_A_etch",
+      "terms": {
+        "w1_p1_r2_A": 1,
+        "lith_p1_r2_A": -1,
+        "etch_p1_r2_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r2_A_insp",
+      "terms": {
+        "w2_p1_r2_A": 1,
+        "etch_p1_r2_A": -1,
+        "insp_p1_r2_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r2_B_etch",
+      "terms": {
+        "w1_p1_r2_B": 1,
+        "lith_p1_r2_B": -1,
+        "etch_p1_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p1_r2_B_insp",
+      "terms": {
+        "w2_p1_r2_B": 1,
+        "etch_p1_r2_B": -1,
+        "insp_p1_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r1_A_etch",
+      "terms": {
+        "w1_p2_r1_A": 1,
+        "w1_p1_r1_A": -1,
+        "lith_p2_r1_A": -1,
+        "etch_p2_r1_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r1_A_insp",
+      "terms": {
+        "w2_p2_r1_A": 1,
+        "w2_p1_r1_A": -1,
+        "etch_p2_r1_A": -1,
+        "insp_p2_r1_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r1_B_etch",
+      "terms": {
+        "w1_p2_r1_B": 1,
+        "w1_p1_r1_B": -1,
+        "lith_p2_r1_B": -1,
+        "etch_p2_r1_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r1_B_insp",
+      "terms": {
+        "w2_p2_r1_B": 1,
+        "w2_p1_r1_B": -1,
+        "etch_p2_r1_B": -1,
+        "insp_p2_r1_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r2_A_etch",
+      "terms": {
+        "w1_p2_r2_A": 1,
+        "w1_p1_r2_A": -1,
+        "lith_p2_r2_A": -1,
+        "etch_p2_r2_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r2_A_insp",
+      "terms": {
+        "w2_p2_r2_A": 1,
+        "w2_p1_r2_A": -1,
+        "etch_p2_r2_A": -1,
+        "insp_p2_r2_A": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r2_B_etch",
+      "terms": {
+        "w1_p2_r2_B": 1,
+        "w1_p1_r2_B": -1,
+        "lith_p2_r2_B": -1,
+        "etch_p2_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "wip_balance_p2_r2_B_insp",
+      "terms": {
+        "w2_p2_r2_B": 1,
+        "w2_p1_r2_B": -1,
+        "etch_p2_r2_B": -1,
+        "insp_p2_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "equip_lith_p1_r1",
+      "terms": {
+        "lith_p1_r1_A": 1,
+        "lith_p1_r1_B": 0.7
+      },
+      "sense": "<=",
+      "rhs": 24
+    },
+    {
+      "name": "equip_etch_p1_r1",
+      "terms": {
+        "etch_p1_r1_A": 0.8,
+        "etch_p1_r1_B": 0.6
+      },
+      "sense": "<=",
+      "rhs": 22
+    },
+    {
+      "name": "equip_insp_p1_r1",
+      "terms": {
+        "insp_p1_r1_A": 0.5,
+        "insp_p1_r1_B": 0.4
+      },
+      "sense": "<=",
+      "rhs": 13
+    },
+    {
+      "name": "equip_lith_p1_r2",
+      "terms": {
+        "lith_p1_r2_A": 0.8,
+        "lith_p1_r2_B": 0.6
+      },
+      "sense": "<=",
+      "rhs": 21
+    },
+    {
+      "name": "equip_etch_p1_r2",
+      "terms": {
+        "etch_p1_r2_A": 1,
+        "etch_p1_r2_B": 0.7
+      },
+      "sense": "<=",
+      "rhs": 23
+    },
+    {
+      "name": "equip_insp_p1_r2",
+      "terms": {
+        "insp_p1_r2_A": 0.6,
+        "insp_p1_r2_B": 0.5
+      },
+      "sense": "<=",
+      "rhs": 15
+    },
+    {
+      "name": "equip_lith_p2_r1",
+      "terms": {
+        "lith_p2_r1_A": 1,
+        "lith_p2_r1_B": 0.7
+      },
+      "sense": "<=",
+      "rhs": 24
+    },
+    {
+      "name": "equip_etch_p2_r1",
+      "terms": {
+        "etch_p2_r1_A": 0.8,
+        "etch_p2_r1_B": 0.6
+      },
+      "sense": "<=",
+      "rhs": 22
+    },
+    {
+      "name": "equip_insp_p2_r1",
+      "terms": {
+        "insp_p2_r1_A": 0.5,
+        "insp_p2_r1_B": 0.4
+      },
+      "sense": "<=",
+      "rhs": 13
+    },
+    {
+      "name": "equip_lith_p2_r2",
+      "terms": {
+        "lith_p2_r2_A": 0.8,
+        "lith_p2_r2_B": 0.6
+      },
+      "sense": "<=",
+      "rhs": 21
+    },
+    {
+      "name": "equip_etch_p2_r2",
+      "terms": {
+        "etch_p2_r2_A": 1,
+        "etch_p2_r2_B": 0.7
+      },
+      "sense": "<=",
+      "rhs": 23
+    },
+    {
+      "name": "equip_insp_p2_r2",
+      "terms": {
+        "insp_p2_r2_A": 0.6,
+        "insp_p2_r2_B": 0.5
+      },
+      "sense": "<=",
+      "rhs": 15
+    },
+    {
+      "name": "route2_activation_p1_lith_A",
+      "terms": {
+        "lith_p1_r2_A": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p1_lith_B",
+      "terms": {
+        "lith_p1_r2_B": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p1_etch_A",
+      "terms": {
+        "etch_p1_r2_A": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p1_etch_B",
+      "terms": {
+        "etch_p1_r2_B": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p1_insp_A",
+      "terms": {
+        "insp_p1_r2_A": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p1_insp_B",
+      "terms": {
+        "insp_p1_r2_B": 1,
+        "route2_active_p1": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_lith_A",
+      "terms": {
+        "lith_p2_r2_A": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_lith_B",
+      "terms": {
+        "lith_p2_r2_B": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_etch_A",
+      "terms": {
+        "etch_p2_r2_A": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_etch_B",
+      "terms": {
+        "etch_p2_r2_B": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_insp_A",
+      "terms": {
+        "insp_p2_r2_A": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "route2_activation_p2_insp_B",
+      "terms": {
+        "insp_p2_r2_B": 1,
+        "route2_active_p2": -52
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "personnel_p1",
+      "terms": {
+        "etch_p1_r1_A": 0.5,
+        "etch_p1_r2_A": 0.5,
+        "etch_p1_r1_B": 0.3,
+        "etch_p1_r2_B": 0.3
+      },
+      "sense": "<=",
+      "rhs": 20
+    },
+    {
+      "name": "personnel_p2",
+      "terms": {
+        "etch_p2_r1_A": 0.5,
+        "etch_p2_r2_A": 0.5,
+        "etch_p2_r1_B": 0.3,
+        "etch_p2_r2_B": 0.3,
+        "clean_qty_N": 0.2,
+        "clean_qty_F": 0.3,
+        "clean_on_N": 2,
+        "clean_on_F": 3
+      },
+      "sense": "<=",
+      "rhs": 35
+    },
+    {
+      "name": "clean_at_most_one",
+      "terms": {
+        "clean_on_N": 1,
+        "clean_on_F": 1
+      },
+      "sense": "<=",
+      "rhs": 1
+    },
+    {
+      "name": "clean_N_upper",
+      "terms": {
+        "clean_qty_N": 1,
+        "clean_on_N": -42
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "clean_N_lower",
+      "terms": {
+        "clean_qty_N": 1,
+        "clean_on_N": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "clean_F_upper",
+      "terms": {
+        "clean_qty_F": 1,
+        "clean_on_F": -50
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "clean_F_lower",
+      "terms": {
+        "clean_qty_F": 1,
+        "clean_on_F": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "clean_total_le_dirty_p1",
+      "terms": {
+        "clean_qty_N": 1,
+        "clean_qty_F": 1,
+        "dirty_p1": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "carrier_clean_p1",
+      "terms": {
+        "clean_p1": 1,
+        "lith_p1_r1_A": 1,
+        "lith_p1_r1_B": 1,
+        "lith_p1_r2_A": 1,
+        "lith_p1_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 52
+    },
+    {
+      "name": "carrier_dirty_p1",
+      "terms": {
+        "dirty_p1": 1,
+        "insp_p1_r1_A": -1,
+        "insp_p1_r1_B": -1,
+        "insp_p1_r2_A": -1,
+        "insp_p1_r2_B": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "carrier_clean_p2",
+      "terms": {
+        "clean_p2": 1,
+        "clean_p1": -1,
+        "clean_qty_N": -1,
+        "clean_qty_F": -1,
+        "lith_p2_r1_A": 1,
+        "lith_p2_r1_B": 1,
+        "lith_p2_r2_A": 1,
+        "lith_p2_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "carrier_dirty_p2",
+      "terms": {
+        "dirty_p2": 1,
+        "dirty_p1": -1,
+        "clean_qty_N": 1,
+        "clean_qty_F": 1,
+        "insp_p2_r1_A": -1,
+        "insp_p2_r1_B": -1,
+        "insp_p2_r2_A": -1,
+        "insp_p2_r2_B": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "carrier_conservation_p1",
+      "terms": {
+        "clean_p1": 1,
+        "dirty_p1": 1,
+        "w1_p1_r1_A": 1,
+        "w1_p1_r1_B": 1,
+        "w1_p1_r2_A": 1,
+        "w1_p1_r2_B": 1,
+        "w2_p1_r1_A": 1,
+        "w2_p1_r1_B": 1,
+        "w2_p1_r2_A": 1,
+        "w2_p1_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 52
+    },
+    {
+      "name": "carrier_conservation_p2",
+      "terms": {
+        "clean_p2": 1,
+        "dirty_p2": 1,
+        "w1_p2_r1_A": 1,
+        "w1_p2_r1_B": 1,
+        "w1_p2_r2_A": 1,
+        "w1_p2_r2_B": 1,
+        "w2_p2_r1_A": 1,
+        "w2_p2_r1_B": 1,
+        "w2_p2_r2_A": 1,
+        "w2_p2_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 52
+    },
+    {
+      "name": "wip_p1_storage_limit",
+      "terms": {
+        "w1_p1_r1_A": 1,
+        "w1_p1_r1_B": 1,
+        "w1_p1_r2_A": 1,
+        "w1_p1_r2_B": 1,
+        "w2_p1_r1_A": 1,
+        "w2_p1_r1_B": 1,
+        "w2_p1_r2_A": 1,
+        "w2_p1_r2_B": 1
+      },
+      "sense": "<=",
+      "rhs": 4
+    },
+    {
+      "name": "wip_p1_receipt_limit",
+      "terms": {
+        "w1_p1_r1_A": 1,
+        "w1_p1_r1_B": 1,
+        "w1_p1_r2_A": 1,
+        "w1_p1_r2_B": 1,
+        "w2_p1_r1_A": 1,
+        "w2_p1_r1_B": 1,
+        "w2_p1_r2_A": 1,
+        "w2_p1_r2_B": 1
+      },
+      "sense": "<=",
+      "rhs": 3
+    },
+    {
+      "name": "final_wip_zero",
+      "terms": {
+        "w1_p2_r1_A": 1,
+        "w1_p2_r1_B": 1,
+        "w1_p2_r2_A": 1,
+        "w1_p2_r2_B": 1,
+        "w2_p2_r1_A": 1,
+        "w2_p2_r1_B": 1,
+        "w2_p2_r2_A": 1,
+        "w2_p2_r2_B": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    }
+  ]
+}

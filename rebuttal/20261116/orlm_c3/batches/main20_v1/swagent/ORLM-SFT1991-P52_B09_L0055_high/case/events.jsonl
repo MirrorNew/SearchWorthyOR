@@ -1,0 +1,10 @@
+{"elapsed":0.0,"kind":"ACQUISITION_POLICY"}
+{"elapsed":0.0,"kind":"RESOURCE_RESERVED","purpose":"PLAN_LITE","resource":"model"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":423.06199999997625,"kind":"API_CONSUMED","request_id":"736c0929a80c4e5b9bffa32a9f39010e","stage":"PLAN_LITE"}
+{"elapsed":423.0929999999935,"kind":"RESOURCE_RESERVED","label":"base","resource":"solve"}
+{"backend":"COPT","elapsed":423.25,"kind":"SOLVE","label":"base","status":"OPTIMAL"}
+{"elapsed":423.26500000001397,"kind":"BASE_SOLVE"}
+{"elapsed":423.26500000001397,"kind":"RESOURCE_RESERVED","purpose":"UPDATE","resource":"model"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":509.53100000001723,"kind":"API_CONSUMED","request_id":"7d76520a1e80420fb039629cc3e15b1a","stage":"UPDATE"}
+{"elapsed":509.5779999999795,"kind":"UPDATE"}
+{"elapsed":509.5929999999935,"kind":"FINALIZE"}

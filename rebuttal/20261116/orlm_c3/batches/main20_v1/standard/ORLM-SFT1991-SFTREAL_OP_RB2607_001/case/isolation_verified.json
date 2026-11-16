@@ -1,0 +1,12 @@
+{
+  "pass": true,
+  "blocked_probes": 5,
+  "public_input_loaded_before_guard": true,
+  "adapter": {
+    "version": "orlm_c3_free_variable_v1",
+    "original_agents_modified": false,
+    "public_actions_in_input": 0,
+    "variables_declared_from_task": true,
+    "updates_may_add_variables": false
+  }
+}

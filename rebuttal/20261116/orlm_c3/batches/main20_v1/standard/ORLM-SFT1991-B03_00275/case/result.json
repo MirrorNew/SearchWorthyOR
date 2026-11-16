@@ -1,0 +1,1128 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "area_P": 130.46875,
+      "area_Ban": 60.0,
+      "plant_P": 1,
+      "plant_Ban": 1,
+      "del_P_A_1": 107.99999999999996,
+      "del_P_A_2": 254.03125000000009,
+      "del_P_A_3": 272.0,
+      "del_P_A_4": 257.84375,
+      "del_Ban_A_1": 71.99999999999997,
+      "del_Ban_A_2": 85.96875,
+      "del_Ban_A_3": 68.0,
+      "del_Ban_A_4": 82.15625000000003,
+      "del_P_B_1": 87.70312500000004,
+      "del_P_B_2": 57.140624999999915,
+      "del_P_B_3": 136.13858695652166,
+      "del_P_B_4": 131.83016304347822,
+      "del_Ban_B_1": 107.1927083333334,
+      "del_Ban_B_2": 69.83854166666657,
+      "del_Ban_B_3": 58.345108695652144,
+      "del_Ban_B_4": 56.498641304347814,
+      "sel_A_1": 1,
+      "sel_A_2": 1,
+      "sel_A_3": 1,
+      "sel_A_4": 1,
+      "sel_B_1": 1,
+      "sel_B_2": 1,
+      "sel_B_3": 1,
+      "sel_B_4": 1,
+      "inv_P_1": 0.0,
+      "inv_P_2": 15.0,
+      "inv_P_3": 63.502038043478336,
+      "inv_P_4": 0.0,
+      "inv_Ban_1": 0.807291666666643,
+      "inv_Ban_2": 25.0,
+      "inv_Ban_3": 48.654891304347856,
+      "inv_Ban_4": 0.0
+    },
+    "objective": {
+      "value": 34093.75,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.005001068115234375
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "area_P": 130.46875,
+      "area_Ban": 60.0,
+      "plant_P": 1,
+      "plant_Ban": 1,
+      "del_P_A_1": 107.99999999999996,
+      "del_P_A_2": 254.03125000000009,
+      "del_P_A_3": 272.0,
+      "del_P_A_4": 257.84375,
+      "del_Ban_A_1": 71.99999999999997,
+      "del_Ban_A_2": 85.96875,
+      "del_Ban_A_3": 68.0,
+      "del_Ban_A_4": 82.15625000000003,
+      "del_P_B_1": 87.70312500000004,
+      "del_P_B_2": 57.140624999999915,
+      "del_P_B_3": 136.13858695652166,
+      "del_P_B_4": 131.83016304347822,
+      "del_Ban_B_1": 107.1927083333334,
+      "del_Ban_B_2": 69.83854166666657,
+      "del_Ban_B_3": 58.345108695652144,
+      "del_Ban_B_4": 56.498641304347814,
+      "sel_A_1": 1,
+      "sel_A_2": 1,
+      "sel_A_3": 1,
+      "sel_A_4": 1,
+      "sel_B_1": 1,
+      "sel_B_2": 1,
+      "sel_B_3": 1,
+      "sel_B_4": 1,
+      "inv_P_1": 0.0,
+      "inv_P_2": 15.0,
+      "inv_P_3": 63.502038043478336,
+      "inv_P_4": 0.0,
+      "inv_Ban_1": 0.807291666666643,
+      "inv_Ban_2": 25.0,
+      "inv_Ban_3": 48.654891304347856,
+      "inv_Ban_4": 0.0
+    },
+    "objective": {
+      "value": 34093.75,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.005001068115234375
+  },
+  "base_solution": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "area_P": 130.46875,
+      "area_Ban": 60.0,
+      "plant_P": 1,
+      "plant_Ban": 1,
+      "del_P_A_1": 107.99999999999996,
+      "del_P_A_2": 254.03125000000009,
+      "del_P_A_3": 272.0,
+      "del_P_A_4": 257.84375,
+      "del_Ban_A_1": 71.99999999999997,
+      "del_Ban_A_2": 85.96875,
+      "del_Ban_A_3": 68.0,
+      "del_Ban_A_4": 82.15625000000003,
+      "del_P_B_1": 87.70312500000004,
+      "del_P_B_2": 57.140624999999915,
+      "del_P_B_3": 136.13858695652166,
+      "del_P_B_4": 131.83016304347822,
+      "del_Ban_B_1": 107.1927083333334,
+      "del_Ban_B_2": 69.83854166666657,
+      "del_Ban_B_3": 58.345108695652144,
+      "del_Ban_B_4": 56.498641304347814,
+      "sel_A_1": 1,
+      "sel_A_2": 1,
+      "sel_A_3": 1,
+      "sel_A_4": 1,
+      "sel_B_1": 1,
+      "sel_B_2": 1,
+      "sel_B_3": 1,
+      "sel_B_4": 1,
+      "inv_P_1": 0.0,
+      "inv_P_2": 15.0,
+      "inv_P_3": 63.502038043478336,
+      "inv_P_4": 0.0,
+      "inv_Ban_1": 0.807291666666643,
+      "inv_Ban_2": 25.0,
+      "inv_Ban_3": 48.654891304347856,
+      "inv_Ban_4": 0.0
+    },
+    "objective": {
+      "value": 34093.75,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.006000518798828125
+  },
+  "model": {
+    "variables": [
+      {
+        "id": "area_P",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 200
+      },
+      {
+        "id": "area_Ban",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 200
+      },
+      {
+        "id": "plant_P",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "plant_Ban",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "del_P_A_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_P_A_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_P_A_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_P_A_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_Ban_A_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_Ban_A_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_Ban_A_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_Ban_A_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "del_P_B_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_P_B_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_P_B_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_P_B_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_Ban_B_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_Ban_B_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_Ban_B_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "del_Ban_B_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "sel_A_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_A_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_A_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_A_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_B_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_B_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_B_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "sel_B_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "inv_P_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_P_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_P_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_P_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_Ban_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_Ban_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_Ban_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_Ban_4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      }
+    ],
+    "objective": {
+      "sense": "max",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "area_P": 200,
+        "area_Ban": 150,
+        "plant_P": -500,
+        "plant_Ban": -500
+      }
+    },
+    "constraints": [
+      {
+        "name": "land_capacity",
+        "coefficients": {
+          "area_P": 1,
+          "area_Ban": 1
+        },
+        "sense": "<=",
+        "rhs": 200
+      },
+      {
+        "name": "min_area_P",
+        "coefficients": {
+          "area_P": 1
+        },
+        "sense": ">=",
+        "rhs": 40
+      },
+      {
+        "name": "min_area_Banana",
+        "coefficients": {
+          "area_Ban": 1
+        },
+        "sense": ">=",
+        "rhs": 60
+      },
+      {
+        "name": "banana_area_ratio",
+        "coefficients": {
+          "area_Ban": 1,
+          "area_P": -4
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "plant_link_P",
+        "coefficients": {
+          "area_P": 1,
+          "plant_P": -200
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "plant_link_Banana",
+        "coefficients": {
+          "area_Ban": 1,
+          "plant_Ban": -200
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_P_1",
+        "coefficients": {
+          "inv_P_1": 1,
+          "area_P": -1.5,
+          "del_P_A_1": 1,
+          "del_P_B_1": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_P_2",
+        "coefficients": {
+          "inv_P_2": 1,
+          "inv_P_1": -1,
+          "area_P": -2.5,
+          "del_P_A_2": 1,
+          "del_P_B_2": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_P_3",
+        "coefficients": {
+          "inv_P_3": 1,
+          "inv_P_2": -1,
+          "area_P": -3.5,
+          "del_P_A_3": 1,
+          "del_P_B_3": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_P_4",
+        "coefficients": {
+          "inv_P_4": 1,
+          "inv_P_3": -1,
+          "area_P": -2.5,
+          "del_P_A_4": 1,
+          "del_P_B_4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_Ban_1",
+        "coefficients": {
+          "inv_Ban_1": 1,
+          "area_Ban": -3.0,
+          "del_Ban_A_1": 1,
+          "del_Ban_B_1": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_Ban_2",
+        "coefficients": {
+          "inv_Ban_2": 1,
+          "inv_Ban_1": -1,
+          "area_Ban": -3.0,
+          "del_Ban_A_2": 1,
+          "del_Ban_B_2": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_Ban_3",
+        "coefficients": {
+          "inv_Ban_3": 1,
+          "inv_Ban_2": -1,
+          "area_Ban": -2.5,
+          "del_Ban_A_3": 1,
+          "del_Ban_B_3": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inv_balance_Ban_4",
+        "coefficients": {
+          "inv_Ban_4": 1,
+          "inv_Ban_3": -1,
+          "area_Ban": -1.5,
+          "del_Ban_A_4": 1,
+          "del_Ban_B_4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "total_inventory_m1",
+        "coefficients": {
+          "inv_P_1": 1,
+          "inv_Ban_1": 1
+        },
+        "sense": "<=",
+        "rhs": 160
+      },
+      {
+        "name": "total_inventory_m2",
+        "coefficients": {
+          "inv_P_2": 1,
+          "inv_Ban_2": 1
+        },
+        "sense": "<=",
+        "rhs": 160
+      },
+      {
+        "name": "total_inventory_m3",
+        "coefficients": {
+          "inv_P_3": 1,
+          "inv_Ban_3": 1
+        },
+        "sense": "<=",
+        "rhs": 160
+      },
+      {
+        "name": "total_inventory_m4",
+        "coefficients": {
+          "inv_P_4": 1,
+          "inv_Ban_4": 1
+        },
+        "sense": "<=",
+        "rhs": 160
+      },
+      {
+        "name": "safety_total_min_m2",
+        "coefficients": {
+          "inv_P_2": 1,
+          "inv_Ban_2": 1
+        },
+        "sense": ">=",
+        "rhs": 40
+      },
+      {
+        "name": "safety_total_max_m2",
+        "coefficients": {
+          "inv_P_2": 1,
+          "inv_Ban_2": 1
+        },
+        "sense": "<=",
+        "rhs": 120
+      },
+      {
+        "name": "safety_banana_min_m2",
+        "coefficients": {
+          "inv_Ban_2": 1
+        },
+        "sense": ">=",
+        "rhs": 25
+      },
+      {
+        "name": "final_inventory_P_m4",
+        "coefficients": {
+          "inv_P_4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "final_inventory_Ban_m4",
+        "coefficients": {
+          "inv_Ban_4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "A_m1_min",
+        "coefficients": {
+          "del_P_A_1": 1,
+          "del_Ban_A_1": 1,
+          "sel_A_1": -120
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m1_max",
+        "coefficients": {
+          "del_P_A_1": 1,
+          "del_Ban_A_1": 1,
+          "sel_A_1": -340
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m2_min",
+        "coefficients": {
+          "del_P_A_2": 1,
+          "del_Ban_A_2": 1,
+          "sel_A_2": -120
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m2_max",
+        "coefficients": {
+          "del_P_A_2": 1,
+          "del_Ban_A_2": 1,
+          "sel_A_2": -340
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m3_min",
+        "coefficients": {
+          "del_P_A_3": 1,
+          "del_Ban_A_3": 1,
+          "sel_A_3": -120
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m3_max",
+        "coefficients": {
+          "del_P_A_3": 1,
+          "del_Ban_A_3": 1,
+          "sel_A_3": -340
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m4_min",
+        "coefficients": {
+          "del_P_A_4": 1,
+          "del_Ban_A_4": 1,
+          "sel_A_4": -120
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_m4_max",
+        "coefficients": {
+          "del_P_A_4": 1,
+          "del_Ban_A_4": 1,
+          "sel_A_4": -340
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m1_min",
+        "coefficients": {
+          "del_P_B_1": 1,
+          "del_Ban_B_1": 1,
+          "sel_B_1": -100
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m1_max",
+        "coefficients": {
+          "del_P_B_1": 1,
+          "del_Ban_B_1": 1,
+          "sel_B_1": -260
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m2_min",
+        "coefficients": {
+          "del_P_B_2": 1,
+          "del_Ban_B_2": 1,
+          "sel_B_2": -100
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m2_max",
+        "coefficients": {
+          "del_P_B_2": 1,
+          "del_Ban_B_2": 1,
+          "sel_B_2": -260
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m3_min",
+        "coefficients": {
+          "del_P_B_3": 1,
+          "del_Ban_B_3": 1,
+          "sel_B_3": -100
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m3_max",
+        "coefficients": {
+          "del_P_B_3": 1,
+          "del_Ban_B_3": 1,
+          "sel_B_3": -260
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m4_min",
+        "coefficients": {
+          "del_P_B_4": 1,
+          "del_Ban_B_4": 1,
+          "sel_B_4": -100
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_m4_max",
+        "coefficients": {
+          "del_P_B_4": 1,
+          "del_Ban_B_4": 1,
+          "sel_B_4": -260
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_min_m1",
+        "coefficients": {
+          "del_P_A_1": -0.2,
+          "del_Ban_A_1": 0.8
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_max_m1",
+        "coefficients": {
+          "del_P_A_1": -0.4,
+          "del_Ban_A_1": 0.6
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_min_m2",
+        "coefficients": {
+          "del_P_A_2": -0.2,
+          "del_Ban_A_2": 0.8
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_max_m2",
+        "coefficients": {
+          "del_P_A_2": -0.4,
+          "del_Ban_A_2": 0.6
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_min_m3",
+        "coefficients": {
+          "del_P_A_3": -0.2,
+          "del_Ban_A_3": 0.8
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_max_m3",
+        "coefficients": {
+          "del_P_A_3": -0.4,
+          "del_Ban_A_3": 0.6
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_min_m4",
+        "coefficients": {
+          "del_P_A_4": -0.2,
+          "del_Ban_A_4": 0.8
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "A_share_max_m4",
+        "coefficients": {
+          "del_P_A_4": -0.4,
+          "del_Ban_A_4": 0.6
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_min_m1",
+        "coefficients": {
+          "del_P_B_1": -0.3,
+          "del_Ban_B_1": 0.7
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_max_m1",
+        "coefficients": {
+          "del_P_B_1": -0.55,
+          "del_Ban_B_1": 0.45
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_min_m2",
+        "coefficients": {
+          "del_P_B_2": -0.3,
+          "del_Ban_B_2": 0.7
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_max_m2",
+        "coefficients": {
+          "del_P_B_2": -0.55,
+          "del_Ban_B_2": 0.45
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_min_m3",
+        "coefficients": {
+          "del_P_B_3": -0.3,
+          "del_Ban_B_3": 0.7
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_max_m3",
+        "coefficients": {
+          "del_P_B_3": -0.55,
+          "del_Ban_B_3": 0.45
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_min_m4",
+        "coefficients": {
+          "del_P_B_4": -0.3,
+          "del_Ban_B_4": 0.7
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "B_share_max_m4",
+        "coefficients": {
+          "del_P_B_4": -0.55,
+          "del_Ban_B_4": 0.45
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "A_season_min",
+        "coefficients": {
+          "del_P_A_1": 1,
+          "del_Ban_A_1": 1,
+          "del_P_A_2": 1,
+          "del_Ban_A_2": 1,
+          "del_P_A_3": 1,
+          "del_Ban_A_3": 1,
+          "del_P_A_4": 1,
+          "del_Ban_A_4": 1
+        },
+        "sense": ">=",
+        "rhs": 800
+      },
+      {
+        "name": "A_season_max",
+        "coefficients": {
+          "del_P_A_1": 1,
+          "del_Ban_A_1": 1,
+          "del_P_A_2": 1,
+          "del_Ban_A_2": 1,
+          "del_P_A_3": 1,
+          "del_Ban_A_3": 1,
+          "del_P_A_4": 1,
+          "del_Ban_A_4": 1
+        },
+        "sense": "<=",
+        "rhs": 1200
+      },
+      {
+        "name": "B_season_min",
+        "coefficients": {
+          "del_P_B_1": 1,
+          "del_Ban_B_1": 1,
+          "del_P_B_2": 1,
+          "del_Ban_B_2": 1,
+          "del_P_B_3": 1,
+          "del_Ban_B_3": 1,
+          "del_P_B_4": 1,
+          "del_Ban_B_4": 1
+        },
+        "sense": ">=",
+        "rhs": 600
+      },
+      {
+        "name": "B_season_max",
+        "coefficients": {
+          "del_P_B_1": 1,
+          "del_Ban_B_1": 1,
+          "del_P_B_2": 1,
+          "del_Ban_B_2": 1,
+          "del_P_B_3": 1,
+          "del_Ban_B_3": 1,
+          "del_P_B_4": 1,
+          "del_Ban_B_4": 1
+        },
+        "sense": "<=",
+        "rhs": 900
+      },
+      {
+        "name": "A_min_delivery_months",
+        "coefficients": {
+          "sel_A_1": 1,
+          "sel_A_2": 1,
+          "sel_A_3": 1,
+          "sel_A_4": 1
+        },
+        "sense": ">=",
+        "rhs": 3
+      },
+      {
+        "name": "B_min_delivery_months",
+        "coefficients": {
+          "sel_B_1": 1,
+          "sel_B_2": 1,
+          "sel_B_3": 1,
+          "sel_B_4": 1
+        },
+        "sense": ">=",
+        "rhs": 3
+      },
+      {
+        "name": "labor_m1",
+        "coefficients": {
+          "area_P": 2,
+          "area_Ban": 5,
+          "del_P_A_1": 0.4,
+          "del_P_B_1": 0.4,
+          "del_Ban_A_1": 0.6,
+          "del_Ban_B_1": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800
+      },
+      {
+        "name": "labor_m2",
+        "coefficients": {
+          "area_P": 2,
+          "area_Ban": 5,
+          "del_P_A_2": 0.4,
+          "del_P_B_2": 0.4,
+          "del_Ban_A_2": 0.6,
+          "del_Ban_B_2": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800
+      },
+      {
+        "name": "labor_m3",
+        "coefficients": {
+          "area_P": 2,
+          "area_Ban": 5,
+          "del_P_A_3": 0.4,
+          "del_P_B_3": 0.4,
+          "del_Ban_A_3": 0.6,
+          "del_Ban_B_3": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800
+      },
+      {
+        "name": "labor_m4",
+        "coefficients": {
+          "area_P": 2,
+          "area_Ban": 5,
+          "del_P_A_4": 0.4,
+          "del_P_B_4": 0.4,
+          "del_Ban_A_4": 0.6,
+          "del_Ban_B_4": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800
+      }
+    ]
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": {
+    "search_needed": false,
+    "reason": "The task is a self-contained operations research optimization problem with all required data, model specification, and solver environment provided; no external public-web information is needed to formulate or solve the mixed-integer program.",
+    "queries": []
+  },
+  "unresolved": [],
+  "final_modeling_attempted": true,
+  "final_modeling_completed": true,
+  "resources": {
+    "model": 3,
+    "search": 0,
+    "read": 0,
+    "solve": 2,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 170.2029999999795,
+  "usage": {
+    "calls": 3,
+    "model_calls": 3,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 169.9990000000107,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 24981,
+    "known_prompt_tokens": 24981,
+    "completion_tokens": 26656,
+    "known_completion_tokens": 26656,
+    "total_tokens": 51637,
+    "known_total_tokens": 51637,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 51637,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

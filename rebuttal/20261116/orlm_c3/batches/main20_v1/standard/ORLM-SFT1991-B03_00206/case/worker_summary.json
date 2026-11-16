@@ -1,0 +1,14 @@
+{
+  "eval_id": "ORLM-SFT1991-B03_00206",
+  "method": "standard",
+  "stop_reason": "ValueError",
+  "decision": null,
+  "resources": {
+    "model": 2,
+    "search": 0,
+    "read": 0,
+    "solve": 0,
+    "format_repairs": 0,
+    "schedule": 0
+  }
+}

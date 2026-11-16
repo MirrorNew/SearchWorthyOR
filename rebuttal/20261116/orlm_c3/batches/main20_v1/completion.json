@@ -1,0 +1,285 @@
+{
+  "complete": true,
+  "records": [
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B02_00197",
+      "returncode": 0,
+      "seconds": 70.64,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "returncode": 0,
+      "seconds": 108.375,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B02_00197",
+      "returncode": 0,
+      "seconds": 136.219,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B02_00054",
+      "returncode": 0,
+      "seconds": 155.39,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "returncode": 0,
+      "seconds": 168.89,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00149",
+      "returncode": 0,
+      "seconds": 113.704,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B02_00054",
+      "returncode": 0,
+      "seconds": 193.078,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00149",
+      "returncode": 0,
+      "seconds": 108.687,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B02_00182",
+      "returncode": 0,
+      "seconds": 331.969,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00275",
+      "returncode": 0,
+      "seconds": 171.0,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00230",
+      "returncode": 0,
+      "seconds": 210.922,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B02_00182",
+      "returncode": 0,
+      "seconds": 431.031,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00461",
+      "returncode": 0,
+      "seconds": 89.985,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00230",
+      "returncode": 0,
+      "seconds": 310.953,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00275",
+      "returncode": 0,
+      "seconds": 296.594,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00461",
+      "returncode": 0,
+      "seconds": 123.265,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00289",
+      "returncode": 0,
+      "seconds": 342.656,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P122_high",
+      "returncode": 0,
+      "seconds": 254.922,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00289",
+      "returncode": 0,
+      "seconds": 481.156,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-B03_00206",
+      "returncode": 0,
+      "seconds": 677.657,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P009_high",
+      "returncode": 0,
+      "seconds": 429.313,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P009_high",
+      "returncode": 0,
+      "seconds": 485.375,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-B03_00206",
+      "returncode": 0,
+      "seconds": 838.0,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+      "returncode": 0,
+      "seconds": 324.969,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P52_B07_L0138_expert",
+      "returncode": 0,
+      "seconds": 319.594,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+      "returncode": 0,
+      "seconds": 370.562,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P52_B08_L0122_expert",
+      "returncode": 0,
+      "seconds": 269.75,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P52_B07_L0138_expert",
+      "returncode": 0,
+      "seconds": 362.953,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P122_high",
+      "returncode": 0,
+      "seconds": 729.75,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P52_B08_L0122_expert",
+      "returncode": 0,
+      "seconds": 358.157,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "returncode": 0,
+      "seconds": 227.375,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-P52_B09_L0055_high",
+      "returncode": 0,
+      "seconds": 457.468,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+      "returncode": 0,
+      "seconds": 158.781,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+      "returncode": 0,
+      "seconds": 377.75,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "returncode": 0,
+      "seconds": 336.953,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-P52_B09_L0055_high",
+      "returncode": 0,
+      "seconds": 510.406,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "returncode": 0,
+      "seconds": 343.735,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+      "returncode": 0,
+      "seconds": 649.282,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "standard",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "returncode": 0,
+      "seconds": 453.625,
+      "watchdog_timeout": false
+    },
+    {
+      "method": "swagent",
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+      "returncode": 0,
+      "seconds": 709.937,
+      "watchdog_timeout": false
+    }
+  ]
+}

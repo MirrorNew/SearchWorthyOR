@@ -1,0 +1,13 @@
+{"elapsed":0.0,"kind":"ACQUISITION_POLICY"}
+{"elapsed":0.0,"kind":"RESOURCE_RESERVED","purpose":"PLAN_LITE","resource":"model"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":468.219000000041,"kind":"API_FAILED","request_id":"8e6bbfce16e94fdfb2b73ac4471ff491","stage":"PLAN_LITE"}
+{"backoff_policy":"TECHNICAL_BACKOFF","delay_seconds":2.0,"elapsed":468.61000000004424,"kind":"API_RETRY_SCHEDULED","kind_of_call":"model","previous_request_id":"8e6bbfce16e94fdfb2b73ac4471ff491","retry_index":1,"retry_of":"8e6bbfce16e94fdfb2b73ac4471ff491","stage":"PLAN_LITE"}
+{"channel":"SHUBIAOBIAO_API","elapsed":470.61000000004424,"kind":"RESOURCE_RESERVED","purpose":"PLAN_LITE","resource":"model","retry_index":1,"retry_of":"8e6bbfce16e94fdfb2b73ac4471ff491"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":617.3130000000237,"kind":"API_CONSUMED","request_id":"25333d368fee46cdac94197d413b0a5a","stage":"PLAN_LITE"}
+{"elapsed":617.375,"kind":"RESOURCE_RESERVED","label":"base","resource":"solve"}
+{"backend":"COPT","elapsed":618.219000000041,"kind":"SOLVE","label":"base","status":"OPTIMAL"}
+{"elapsed":618.2350000000442,"kind":"BASE_SOLVE"}
+{"elapsed":618.2350000000442,"kind":"RESOURCE_RESERVED","purpose":"UPDATE","resource":"model"}
+{"channel":"RESPONSES_COMPATIBLE_API","elapsed":728.5160000000033,"kind":"API_CONSUMED","request_id":"665d95b9cc6d46329d3d625166498d8d","stage":"UPDATE"}
+{"elapsed":728.594000000041,"kind":"UPDATE"}
+{"elapsed":728.6410000000033,"kind":"FINALIZE"}

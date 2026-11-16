@@ -1,0 +1,3 @@
+﻿source_id,eval_id,method,completed,stop_reason,error,solver_status,reference_direction,generated_direction,reference_value,generated_value,objective_match,absolute_error,normal_finish,model_calls,search_calls,read_calls,solve_calls,elapsed_seconds,output_actions
+B01_00413,ORLM-SFT1991-B01_00413,standard-online,True,FINISHED,,OPTIMAL,min,min,355.1,355.1,True,0.0,True,3,0,0,2,179.328,44
+B01_00413,ORLM-SFT1991-B01_00413,swagent-online,True,FINISHED,,OPTIMAL,min,min,355.1,355.1,True,0.0,True,2,0,0,1,170.844,44

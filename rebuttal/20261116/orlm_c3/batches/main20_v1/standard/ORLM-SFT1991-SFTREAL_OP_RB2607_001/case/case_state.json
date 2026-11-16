@@ -1,0 +1,104 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "model": null,
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 门店七日排班与带教配班需求文档\n\n## 1. 任务与实施要求\n\n为门店7名员工安排第1天至第7天的工作。每天每名员工的安排只能是早班E、晚班L或休息。\n\n使用 Python 调用 COPT 建立混合整数规划模型并求解，在满足全部硬性规则的前提下，使工资、非偏好班次费用和工时公平性费用之和最小。三项费用直接相加，不设优先级。\n\n本任务编号为 RB26-07。人员、资质、工资、需求、带教名单和排班参数均为合成门店示例，不代表客户原始数据或实际用工法规；不得额外引入地区法规或其他用工条件。所有金额使用同一费用单位，不指定币种。\n\n实际输入由本文末尾约定的 CSV 文件提供，应从文件读取人员、班次、需求、带教名单及公共参数。\n\n## 2. 排班范围与班次口径\n\n- 计划仅包含第1天至第7天，共7天。\n- E为早班，当天08:00开始、16:00结束。\n- L为晚班，当天14:00开始、22:00结束。\n- 每次上班必须安排一个完整班次；两个班次均在当天结束，均按完整8小时计薪，没有不计薪休息。\n- 每名员工每天最多上一个班次，也可以休息，不得同一天兼上E和L。\n- 计划前一天和后一天，所有员工均休息。没有需要衔接的历史班次或后续班次，休息间隔和连续工作限制按此边界处理。\n\n需要决定所有员工在所有计划日的逐日安排。带教陪同名单由最终同班安排确定。\n\n## 3. 每日人员配置\n\n### 3.1 覆盖与收银\n\n每天的E、L两班均至少安排2名员工，允许超过最低人数。各天各班最低人数由 `coverage.csv` 提供。\n\n每天每班实际安排的员工中，至少1名必须具备收银资格。收银员工同时计入该班总人数，不需要额外安排一人。收银资格要求是硬性要求，不能通过支付罚金替代。\n\n员工收银资格以 `employees.csv` 中的 `cashier` 为准。\n\n### 3.2 E5带教配班\n\nE5每次上班，当天同一班次必须至少安排1名指定带教员工。指定带教员工仅为E1、E3，名单和最低人数由 `mentoring.csv` 提供。\n\n具体含义如下：\n\n- E5上E班时，E1、E3中至少一人必须在当天上E班。\n- E5上L班时，E1、E3中至少一人必须在当天上L班。\n- 指定带教员工仅在当天另一个班次工作，不满足要求。\n- E5休息时不触发带教要求；不强制E5上班，也不要求两名带教员工同时陪同。\n- 其他员工不受带教配班要求约束。\n\n带教员工仍须满足自身全部排班限制。同班带教员工只计入一人的覆盖，工资和工时按正常完整班次计算，不额外占用时间或产生带教费用。\n\n带教身份不改变收银资格。E1、E3同班带教时仍可计入收银人数；E5不具备收银资格，不能计入收银合格人数。带教不新增临时资格或独立培训任务。\n\n带教配班、覆盖和收银要求分别适用，不能相互替代。\n\n## 4. 员工工作限制\n\n### 4.1 可用性\n\n`employees.csv` 的 `unavailable_days` 列出员工整日不可用的日期编号。这些日期不得安排任何班次。\n\n### 4.2 总工时\n\n每名员工7天总工时为实际安排的完整班次计薪工时之和，休息不计工时。总工时不得超过该员工的 `max_hours`；本数据所有员工上限均为40小时。\n\n### 4.3 工作之间的休息间隔\n\n同一员工前一次工作结束到后一次工作开始之间，至少休息12小时。\n\n班次时刻以所在日00:00起算。计算跨日间隔时，将第1天00:00作为计划起点：第d天的日开始位置为计划起点后24乘以“d减1”小时，再加上班次的开始或结束时刻，得到对应的绝对时刻。休息间隔按后一次工作的绝对开始时刻减去前一次工作的绝对结束时刻计算。\n\n例如，L班22:00结束后接翌日E班08:00开始，仅休息10小时，不允许这样安排。\n\n### 4.4 连续工作天数\n\n每名员工最多连续工作4天。任意连续5天内至少有1天休息；安排E或L均视为当天工作。\n\n上述可用性、工时上限、休息间隔和连续工作限制必须同时满足，不能因满足其他规则而免除。\n\n## 5. 费用计算与优化目标\n\n以以下三项费用的合计作为唯一最小化目标：\n\n1. **工资**  \n   每名员工7天总计薪工时乘以其 `hourly_cost`，再对所有员工求和。\n\n2. **非偏好班次费用**  \n   实际安排的班次不同于员工 `preferred` 时，每次收取5费用单位。休息不收取此费用。员工可以上非偏好班次，这不是硬性禁止条件。\n\n3. **工时公平性费用**  \n   每名员工7天总工时与32小时之差取绝对值，每偏差1小时收取1费用单位，再对所有员工求和。高于或低于32小时都计费。\n\n32小时是软目标，不要求每名员工必须达到，也不能替代40小时的工时上限或其他硬性规则。目标工时、非偏好费用和公平性费率从 `parameters.csv` 读取。带教没有额外费用。\n\n## 6. 结果输出\n\n输出求解状态，并在获得最优解时给出满足全部硬性规则、总费用最小的排班。结果应包括：\n\n1. 7名员工在第1天至第7天的逐日安排，明确标为E、L或休息；\n2. 每名员工的7天总工时；\n3. 工资总额、非偏好班次费用、工时公平性费用及三者合计；\n4. E5每次上班的日期、班次及当天同班的指定带教员工名单；若E1、E3均在该班，应列出两人；\n5. 求解状态。\n\n若无法得到最优解，应如实说明状态，不得把未证明最优的可行排班称为最优解；没有可用解时不得输出虚构排班。\n\n## 7. 输入文件与字段定义\n\n全部文件采用UTF-8编码，路径相对于程序当前工作目录。字段均不使用空值。列表字段使用JSON数组文本，应解析为列表；空列表表示没有对应条目，不使用空字符串代替。\n\n主键不重复，列表中不含重复标识。员工编号和班次代码按字符串处理。所有日期编号均在1至7范围内。\n\n### ./data/parameters.csv\n\n每行代表一份计划的公共参数，本文件仅有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| id | 题目编号 | string | RB26-07 |\n| data_origin | 数据来源说明 | string | 合成门店示例，不是实际用工法规或客户数据 |\n| days | 计划天数 | integer | 天；7，日期编号为1至7 |\n| cashier_min | 每天每班最低收银合格人数 | integer | 人；1 |\n| rest_hours | 同一员工两次工作之间最短休息间隔 | number | 小时；12 |\n| max_consecutive_days | 同一员工最多连续工作天数 | integer | 天；4 |\n| target_hours | 每名员工计划内目标总工时 | number | 小时；32，软目标 |\n| fairness_cost_per_hour | 总工时偏离目标的每小时费用 | number | 费用单位／小时；1 |\n| preference_cost | 每次非偏好班次费用 | number | 费用单位／次；5 |\n\n`id` 为唯一标识。\n\n### ./data/shifts.csv\n\n每行代表一种完整班次，共两行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| shift_code | 班次代码 | string | E为早班，L为晚班 |\n| name | 班次名称 | string | 早班或晚班 |\n| start | 当天开始时刻 | number | 自当天00:00起算的小时数 |\n| end | 当天结束时刻 | number | 自当天00:00起算的小时数 |\n| paid_hours | 每次完整班次的计薪工时 | number | 小时；8 |\n\n`shift_code` 为唯一标识。`start` 和 `end` 均为当天时刻，不是跨日绝对时刻。\n\n### ./data/coverage.csv\n\n每行代表某个计划日、某个班次的最低人员需求，共14行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| day | 计划日期编号 | integer | 第1至第7天 |\n| shift_code | 班次代码 | string | 关联 shifts.csv 的 shift_code |\n| min_staff | 最低安排员工人数 | integer | 人；允许超过该值 |\n\n`day` 与 `shift_code` 联合唯一，覆盖全部7天和两类班次的组合。\n\n### ./data/employees.csv\n\n每行代表一名员工，共7行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| employee_id | 员工编号 | string | E1至E7 |\n| cashier | 是否具备收银资格 | boolean | true表示具备，false表示不具备 |\n| hourly_cost | 小时工资 | number | 费用单位／小时 |\n| max_hours | 本计划总工时上限 | number | 小时；40 |\n| preferred | 偏好班次代码 | string | 关联 shifts.csv 的 shift_code |\n| unavailable_days | 整日不可用日期编号列表 | string | JSON整数数组；元素为第1至第7天的编号 |\n\n`employee_id` 为唯一标识。`cashier` 在CSV中使用小写 `true` 或 `false`。`unavailable_days` 的每个元素对应计划日期编号。\n\n### ./data/mentoring.csv\n\n每行代表一名需要带教配班的员工及其指定带教要求，本文件仅有E5的一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| employee_id | 需要带教配班的员工编号 | string | 关联 employees.csv 的 employee_id |\n| mentor_ids | 指定带教员工编号列表 | string | JSON字符串数组；本数据为E1、E3 |\n| min_same_shift_mentors | 每次上班所需同班指定带教员工最低人数 | integer | 人；1 |\n\n`employee_id` 为唯一标识，`mentor_ids` 的每个元素关联 `employees.csv` 的 `employee_id`。此表要求适用于全部计划日的E、L班次；未在此表出现的员工没有带教配班要求。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：coverage.csv\nday,shift_code,min_staff\r\n1,E,2\r\n2,E,2\r\n3,E,2\r\n4,E,2\r\n5,E,2\r\n6,E,2\r\n7,E,2\r\n1,L,2\r\n2,L,2\r\n3,L,2\r\n4,L,2\r\n5,L,2\r\n6,L,2\r\n7,L,2\r\n\n\n数据文件：employees.csv\nemployee_id,cashier,hourly_cost,max_hours,preferred,unavailable_days\r\nE1,true,12,40,E,[2]\r\nE2,true,13,40,L,[5]\r\nE3,true,11,40,E,[7]\r\nE4,true,14,40,L,[1]\r\nE5,false,10,40,E,[3]\r\nE6,false,11,40,L,[4]\r\nE7,false,12,40,E,[6]\r\n\n\n数据文件：mentoring.csv\nemployee_id,mentor_ids,min_same_shift_mentors\r\nE5,\"[\"\"E1\"\", \"\"E3\"\"]\",1\r\n\n\n数据文件：parameters.csv\nid,data_origin,days,cashier_min,rest_hours,max_consecutive_days,target_hours,fairness_cost_per_hour,preference_cost\r\nRB26-07,合成门店示例，不是实际用工法规或客户数据,7,1,12,4,32,1,5\r\n\n\n数据文件：shifts.csv\nshift_code,name,start,end,paid_hours\r\nE,早班,8,16,8\r\nL,晚班,14,22,8",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-65ce0a706f0ec9e3",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "diagnostics": [
+    {
+      "kind": "FINALIZE",
+      "result": {
+        "method": "standard_legacy_knowledge_v1",
+        "version": "standard_legacy_knowledge_v1",
+        "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+        "decision": null,
+        "last_solve": null,
+        "base_solution": null,
+        "model": null,
+        "stop_reason": "ValueError",
+        "error": "Invalid bounds",
+        "delivery_status": "NONE",
+        "information_complete": null,
+        "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+        "acquisition_enabled": true,
+        "acquisition_stop": null,
+        "search_gate": null,
+        "unresolved": [
+          "Workflow did not complete: ValueError: Invalid bounds"
+        ],
+        "final_modeling_attempted": false,
+        "final_modeling_completed": false,
+        "resources": {
+          "model": 1,
+          "search": 0,
+          "read": 0,
+          "solve": 0,
+          "format_repairs": 0,
+          "schedule": 0
+        },
+        "elapsed_seconds": 156.76600000000326,
+        "usage": {
+          "calls": 1,
+          "model_calls": 1,
+          "search_calls": 0,
+          "read_calls": 0,
+          "channel": "RESPONSES_COMPATIBLE_API",
+          "retrieval_channel": "DEEPSEEK_SEARCH_API",
+          "read_channel": "BASELINE_HTTP",
+          "read_http_requests": 0,
+          "usage_complete": true,
+          "actual_temperature": 1.0,
+          "strict_token_budget_verified": false,
+          "wall_seconds": 156.73399999999674,
+          "actual_models": [
+            "deepseek-flash"
+          ],
+          "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+          "prompt_tokens": 3891,
+          "known_prompt_tokens": 3891,
+          "completion_tokens": 22579,
+          "known_completion_tokens": 22579,
+          "total_tokens": 26470,
+          "known_total_tokens": 26470,
+          "search_backend": "DEEPSEEK_SEARCH_API",
+          "search_http_requests": 0,
+          "search_successful_nonempty": 0,
+          "search_empty_results": 0,
+          "search_cost_usd": 0,
+          "search_known_cost_usd": 0,
+          "search_unknown_cost": false,
+          "search_cost_basis": "official_published_rate_not_invoice",
+          "search_price_usd_per_1000": 0.75,
+          "model_total_tokens": 26470,
+          "search_billing_unit": "successful_nonempty_request",
+          "acquisition_enabled": true,
+          "blocked_external_operations": {
+            "search": 0,
+            "read": 0
+          }
+        },
+        "standard_protocol": "legacy_knowledge_v1",
+        "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+        "legacy_source_sha256": {
+          "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+          "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+          "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+        },
+        "model_ir_contract": "archived_variables_objective_constraints",
+        "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+        "model_format_repair_policy": "none; strict archived parser and validator",
+        "solver_scope": "current shared solver, not archived solver.py"
+      }
+    }
+  ]
+}

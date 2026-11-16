@@ -1,0 +1,42 @@
+{
+  "status": "OPTIMAL",
+  "solver_status": 1,
+  "feasible": true,
+  "actions": {
+    "x_P1": 1,
+    "x_P2": 0,
+    "x_P3": 1,
+    "x_P4": 1,
+    "x_P5": 1,
+    "x_P6": 0,
+    "x_P7": 1,
+    "x_P8": 0,
+    "y_A": 1,
+    "y_B": 0,
+    "y_C": 1,
+    "z_P1_A": 1,
+    "z_P1_B": 0,
+    "z_P2_A": 0,
+    "z_P2_B": 0,
+    "z_P3_A": 0,
+    "z_P3_C": 1,
+    "z_P4_B": 0,
+    "z_P4_C": 1,
+    "z_P5_A": 1,
+    "z_P5_C": 0,
+    "z_P6_A": 0,
+    "z_P6_C": 0,
+    "z_P7_B": 0,
+    "z_P7_C": 1,
+    "z_P8_B": 0,
+    "z_P8_C": 0
+  },
+  "objective": {
+    "value": 1350.0,
+    "unit": "objective_units",
+    "direction": "max"
+  },
+  "conflict_constraints": [],
+  "solver": "COPT",
+  "solver_seconds": 0.0030002593994140625
+}

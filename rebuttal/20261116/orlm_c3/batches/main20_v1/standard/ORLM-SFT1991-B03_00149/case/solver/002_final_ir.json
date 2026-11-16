@@ -1,0 +1,876 @@
+{
+  "variables": [
+    {
+      "id": "p1",
+      "type": "INTEGER",
+      "lb": 19,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "p2",
+      "type": "INTEGER",
+      "lb": 19,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "p3",
+      "type": "INTEGER",
+      "lb": 19,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "p4",
+      "type": "INTEGER",
+      "lb": 19,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "p5",
+      "type": "INTEGER",
+      "lb": 19,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "n1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "n2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "n3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "n4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "n5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "o1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "o2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "o3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "o4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "o5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 71,
+      "visibility": "public"
+    },
+    {
+      "id": "a1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "a2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "a3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "a4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "a5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "u1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "u2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "u3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "u4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "u5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "v1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "v2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "v3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "v4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "v5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "tot1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "tot2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "tot3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "tot4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "tot5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 367,
+      "visibility": "public"
+    },
+    {
+      "id": "cash1",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 140,
+      "visibility": "public"
+    },
+    {
+      "id": "cash2",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 210,
+      "visibility": "public"
+    },
+    {
+      "id": "cash3",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 300,
+      "visibility": "public"
+    },
+    {
+      "id": "cash4",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 395,
+      "visibility": "public"
+    },
+    {
+      "id": "cash5",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 525,
+      "visibility": "public"
+    }
+  ],
+  "objective": {
+    "direction": "min",
+    "unit": "objective_units",
+    "constant": 0,
+    "terms": {
+      "p1": 1,
+      "p2": 1,
+      "p3": 1,
+      "p4": 1,
+      "p5": 1
+    }
+  },
+  "constraints": [
+    {
+      "name": "purchase_link_1",
+      "terms": {
+        "p1": 1,
+        "n1": -1,
+        "o1": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "purchase_link_2",
+      "terms": {
+        "p2": 1,
+        "n2": -1,
+        "o2": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "purchase_link_3",
+      "terms": {
+        "p3": 1,
+        "n3": -1,
+        "o3": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "purchase_link_4",
+      "terms": {
+        "p4": 1,
+        "n4": -1,
+        "o4": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "purchase_link_5",
+      "terms": {
+        "p5": 1,
+        "n5": -1,
+        "o5": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "new_ratio_1",
+      "terms": {
+        "n1": 5,
+        "p1": -2
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "new_ratio_2",
+      "terms": {
+        "n2": 5,
+        "p2": -2
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "new_ratio_3",
+      "terms": {
+        "n3": 5,
+        "p3": -2
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "new_ratio_4",
+      "terms": {
+        "n4": 5,
+        "p4": -2
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "new_ratio_5",
+      "terms": {
+        "n5": 5,
+        "p5": -2
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "new_supply_1",
+      "terms": {
+        "n1": 1
+      },
+      "sense": "<=",
+      "rhs": 9
+    },
+    {
+      "name": "new_supply_2",
+      "terms": {
+        "n2": 1
+      },
+      "sense": "<=",
+      "rhs": 10
+    },
+    {
+      "name": "new_supply_3",
+      "terms": {
+        "n3": 1
+      },
+      "sense": "<=",
+      "rhs": 11
+    },
+    {
+      "name": "new_supply_4",
+      "terms": {
+        "n4": 1
+      },
+      "sense": "<=",
+      "rhs": 9
+    },
+    {
+      "name": "new_supply_5",
+      "terms": {
+        "n5": 1
+      },
+      "sense": "<=",
+      "rhs": 12
+    },
+    {
+      "name": "inventory_usable_1",
+      "terms": {
+        "u1": 1,
+        "n1": -1,
+        "a1": -1
+      },
+      "sense": "==",
+      "rhs": 12
+    },
+    {
+      "name": "inventory_pending_1",
+      "terms": {
+        "v1": 1,
+        "o1": -1,
+        "a1": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_flow_1",
+      "terms": {
+        "tot1": 1,
+        "p1": -1
+      },
+      "sense": "==",
+      "rhs": 12
+    },
+    {
+      "name": "inventory_total_identity_1",
+      "terms": {
+        "tot1": 1,
+        "u1": -1,
+        "v1": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_usable_2",
+      "terms": {
+        "u2": 1,
+        "u1": -1,
+        "n2": -1,
+        "a2": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_pending_2",
+      "terms": {
+        "v2": 1,
+        "v1": -1,
+        "o2": -1,
+        "a2": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_flow_2",
+      "terms": {
+        "tot2": 1,
+        "tot1": -1,
+        "p2": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_identity_2",
+      "terms": {
+        "tot2": 1,
+        "u2": -1,
+        "v2": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_usable_3",
+      "terms": {
+        "u3": 1,
+        "u2": -1,
+        "n3": -1,
+        "a3": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_pending_3",
+      "terms": {
+        "v3": 1,
+        "v2": -1,
+        "o3": -1,
+        "a3": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_flow_3",
+      "terms": {
+        "tot3": 1,
+        "tot2": -1,
+        "p3": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_identity_3",
+      "terms": {
+        "tot3": 1,
+        "u3": -1,
+        "v3": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_usable_4",
+      "terms": {
+        "u4": 1,
+        "u3": -1,
+        "n4": -1,
+        "a4": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_pending_4",
+      "terms": {
+        "v4": 1,
+        "v3": -1,
+        "o4": -1,
+        "a4": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_flow_4",
+      "terms": {
+        "tot4": 1,
+        "tot3": -1,
+        "p4": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_identity_4",
+      "terms": {
+        "tot4": 1,
+        "u4": -1,
+        "v4": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_usable_5",
+      "terms": {
+        "u5": 1,
+        "u4": -1,
+        "n5": -1,
+        "a5": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_pending_5",
+      "terms": {
+        "v5": 1,
+        "v4": -1,
+        "o5": -1,
+        "a5": 1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_flow_5",
+      "terms": {
+        "tot5": 1,
+        "tot4": -1,
+        "p5": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "inventory_total_identity_5",
+      "terms": {
+        "tot5": 1,
+        "u5": -1,
+        "v5": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "accept_limit_1",
+      "terms": {
+        "a1": 1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "accept_limit_2",
+      "terms": {
+        "a2": 1,
+        "v1": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "accept_limit_3",
+      "terms": {
+        "a3": 1,
+        "v2": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "accept_limit_4",
+      "terms": {
+        "a4": 1,
+        "v3": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "accept_limit_5",
+      "terms": {
+        "a5": 1,
+        "v4": -1
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "quality_capacity_1",
+      "terms": {
+        "n1": 1,
+        "a1": 1
+      },
+      "sense": "<=",
+      "rhs": 14
+    },
+    {
+      "name": "quality_capacity_2",
+      "terms": {
+        "n2": 1,
+        "a2": 1
+      },
+      "sense": "<=",
+      "rhs": 19
+    },
+    {
+      "name": "quality_capacity_3",
+      "terms": {
+        "n3": 1,
+        "a3": 1
+      },
+      "sense": "<=",
+      "rhs": 22
+    },
+    {
+      "name": "quality_capacity_4",
+      "terms": {
+        "n4": 1,
+        "a4": 1
+      },
+      "sense": "<=",
+      "rhs": 21
+    },
+    {
+      "name": "quality_capacity_5",
+      "terms": {
+        "n5": 1,
+        "a5": 1
+      },
+      "sense": "<=",
+      "rhs": 24
+    },
+    {
+      "name": "usable_inventory_min_1",
+      "terms": {
+        "u1": 1
+      },
+      "sense": ">=",
+      "rhs": 20
+    },
+    {
+      "name": "usable_inventory_min_2",
+      "terms": {
+        "u2": 1
+      },
+      "sense": ">=",
+      "rhs": 38
+    },
+    {
+      "name": "usable_inventory_min_3",
+      "terms": {
+        "u3": 1
+      },
+      "sense": ">=",
+      "rhs": 58
+    },
+    {
+      "name": "usable_inventory_min_4",
+      "terms": {
+        "u4": 1
+      },
+      "sense": ">=",
+      "rhs": 78
+    },
+    {
+      "name": "usable_inventory_min_5",
+      "terms": {
+        "u5": 1
+      },
+      "sense": ">=",
+      "rhs": 105
+    },
+    {
+      "name": "final_total_inventory_min",
+      "terms": {
+        "tot5": 1
+      },
+      "sense": ">=",
+      "rhs": 60
+    },
+    {
+      "name": "cash_balance_1",
+      "terms": {
+        "cash1": 1,
+        "n1": 5,
+        "o1": 3,
+        "a1": 1
+      },
+      "sense": "==",
+      "rhs": 140
+    },
+    {
+      "name": "cash_balance_2",
+      "terms": {
+        "cash2": 1,
+        "cash1": -1,
+        "n2": 5,
+        "o2": 3,
+        "a2": 1
+      },
+      "sense": "==",
+      "rhs": 70
+    },
+    {
+      "name": "cash_balance_3",
+      "terms": {
+        "cash3": 1,
+        "cash2": -1,
+        "n3": 5,
+        "o3": 3,
+        "a3": 1
+      },
+      "sense": "==",
+      "rhs": 90
+    },
+    {
+      "name": "cash_balance_4",
+      "terms": {
+        "cash4": 1,
+        "cash3": -1,
+        "n4": 5,
+        "o4": 3,
+        "a4": 1
+      },
+      "sense": "==",
+      "rhs": 95
+    },
+    {
+      "name": "cash_balance_5",
+      "terms": {
+        "cash5": 1,
+        "cash4": -1,
+        "n5": 5,
+        "o5": 3,
+        "a5": 1
+      },
+      "sense": "==",
+      "rhs": 130
+    },
+    {
+      "name": "cash_min_1",
+      "terms": {
+        "cash1": 1
+      },
+      "sense": ">=",
+      "rhs": 50
+    },
+    {
+      "name": "cash_min_2",
+      "terms": {
+        "cash2": 1
+      },
+      "sense": ">=",
+      "rhs": 40
+    },
+    {
+      "name": "cash_min_3",
+      "terms": {
+        "cash3": 1
+      },
+      "sense": ">=",
+      "rhs": 35
+    },
+    {
+      "name": "cash_min_4",
+      "terms": {
+        "cash4": 1
+      },
+      "sense": ">=",
+      "rhs": 35
+    },
+    {
+      "name": "cash_min_5",
+      "terms": {
+        "cash5": 1
+      },
+      "sense": ">=",
+      "rhs": 70
+    }
+  ]
+}

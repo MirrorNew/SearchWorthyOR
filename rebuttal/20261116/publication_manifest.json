@@ -1,0 +1,2495 @@
+{
+  "scope": "Final experimental and narrative-example checkpoint; earlier C2 audits were committed separately. Raw API payloads, credential configurations and original source packages remain local.",
+  "files": [
+    {
+      "file": "README.md",
+      "bytes": 3185,
+      "sha256": "e14d3d2be97f4ae187fba9dc2d2f6719be7cccd247a079dd2600e1f89e36d9a2"
+    },
+    {
+      "file": "dqz1_followup_complete_EN.md",
+      "bytes": 5443,
+      "sha256": "41beea817a43eb85e8b73ff086918d14ffd567207d5cb7d64ed2165f7d02654f"
+    },
+    {
+      "file": "dqz1_followup_complete_ZH.md",
+      "bytes": 4603,
+      "sha256": "491edeed97f54c82e7dea7ec3dd3dbd3b789ca1dbd212a9f86ce1858a5eb5102"
+    },
+    {
+      "file": "dqz1_第一点_业务描述还原示例.md",
+      "bytes": 5617,
+      "sha256": "5e2171c6c2cddae8cf5b4ac92cadd5dea98802f3adf4870a0d8daead13daee40"
+    },
+    {
+      "file": "real6_example_provenance.json",
+      "bytes": 1325,
+      "sha256": "df357df8cefa5661c10216caedefd10fb5425361113718aed0fdd205d5ae0e51"
+    },
+    {
+      "file": "orlm_c3/RESULTS_20261116.md",
+      "bytes": 5491,
+      "sha256": "c5a1a5d42d5a4317502d93cc54fbd69f1fbc91c48581c5979e79dd5157d96a57"
+    },
+    {
+      "file": "score_orlm_runs.py",
+      "bytes": 5031,
+      "sha256": "eb537187cf4ab7de2f3918692245d3e767d257cf541ad7703265c6ccd50b43c6"
+    },
+    {
+      "file": "verify_orlm_batch.py",
+      "bytes": 5592,
+      "sha256": "ffb2550aff3d4eb9da27f10ec1e48019e9903e6ead74834b469570952c3a6e0a"
+    },
+    {
+      "file": "orlm_reference/scoring_reference.json",
+      "bytes": 3451,
+      "sha256": "de353ada80c45e1bfdb69e5e0f28562f94c646418429bf1a0d1512d5fee33b50"
+    },
+    {
+      "file": "orlm_c3/convert_public_cases.py",
+      "bytes": 5557,
+      "sha256": "3a9cd96c62f247a729d91ea9fc87863834778d43092b98406cb6f8da7644f708"
+    },
+    {
+      "file": "orlm_c3/public_cases.jsonl",
+      "bytes": 291598,
+      "sha256": "e7818e7338a9bc24170f86d256640fe6e7fa7a7141a3f6608c7bd4e0bc7c2bae"
+    },
+    {
+      "file": "orlm_c3/source_manifest.json",
+      "bytes": 40353,
+      "sha256": "196acb77690299d00eaf51a56ed6dc5547bfb28eaa41f86a13b3b979aa78bd4f"
+    },
+    {
+      "file": "orlm_c3/free_variable_adapter.py",
+      "bytes": 5207,
+      "sha256": "583ddb8c4e7aff52a441b79a7e2c016261cd01645e75daeab16af77c5861800c"
+    },
+    {
+      "file": "orlm_c3/copt_solver.py",
+      "bytes": 5009,
+      "sha256": "92b08d4d073bcbe64428f2b29e9312fe6c7e18bb38bbb2c932cedb3b05d850fa"
+    },
+    {
+      "file": "orlm_c3/run_worker.py",
+      "bytes": 5455,
+      "sha256": "26a573092ff0297215941f56e6a99f9a1c3d4b4584c72f6956edd9d858b815ab"
+    },
+    {
+      "file": "orlm_c3/run_batch.py",
+      "bytes": 5429,
+      "sha256": "b8fb8b165117efbf898c60c99ae9a0434b9ba0f118f5d0293ccb7635235936db"
+    },
+    {
+      "file": "orlm_c3/SCORING_PROTOCOL.md",
+      "bytes": 1933,
+      "sha256": "7f08179465761ec1f57b406ce7c38c656c4a9e4b959427cec527705c02776ff7"
+    },
+    {
+      "file": "orlm_c3/README.md",
+      "bytes": 2894,
+      "sha256": "2c9c0b5b9ba07f9f0bc98606186be73be564022c5cddf922271ef4dacd75089e"
+    },
+    {
+      "file": "orlm_c3/case_inventory.md",
+      "bytes": 2261,
+      "sha256": "dc0c1c3aa6e208403fd470e2878c977693642f06e34de648e656c74ac5f4ce82"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/batch_manifest.json",
+      "bytes": 5374,
+      "sha256": "0fb85b4f4459185517cdd251664ae5c5b6084b5c05e881e1a824dcc16632c2d3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/completion.json",
+      "bytes": 7215,
+      "sha256": "ce02326af0b9fa56758dfde35d23cd49f4a9dbba9b6548ea9a0bd3e444fa633c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/objective_scores.json",
+      "bytes": 83528,
+      "sha256": "ea4e0d78921963488c2661e1a8049de9fa19cdfc523af39512507c78369b7913"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/objective_scores.csv",
+      "bytes": 6663,
+      "sha256": "bbcb5b07cb6a9cc9bc746d1044e94151e06f76435bd3b2c62a8eeca21284fe15"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/objective_summary.json",
+      "bytes": 1304,
+      "sha256": "8f2ee829d3bc2e969f3e79059d0ce042afd2008b2029fe0e644256a2cb8ee4fb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/verification.json",
+      "bytes": 15761,
+      "sha256": "c3a8f8ab79ff6a3b112810de9286a394adda61cb7bbb702435c1d91bbc5c3348"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/execution.json",
+      "bytes": 143,
+      "sha256": "dc41394689ab6eed90f89261fb5750b4c3d95a9921cf06d6054f175b038930c5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/manifest.json",
+      "bytes": 4549,
+      "sha256": "fbce09948d2c9410464a7b73135bacef2a20d605eba343d3b08f4926cdad3512"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/result.json",
+      "bytes": 23485,
+      "sha256": "d72e4cb5f9be483419194a179151102dec5127d0659c5ef060af99a28fdb0162"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/worker_summary.json",
+      "bytes": 1535,
+      "sha256": "999012f52f46714a4dface856b00bd2ab49c31636f0715045239e05b222221dd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/case_state.json",
+      "bytes": 63027,
+      "sha256": "84a787bf084743b2591c668f01fc4669872e480d128f1ca50248a2e01709f0a4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/api_calls.jsonl",
+      "bytes": 3736,
+      "sha256": "c06b127b0bcfd34992c1dc6a990a888f88737bd66527c72167c3a859aa060d78"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/events.jsonl",
+      "bytes": 16014,
+      "sha256": "cb78b8039aff2d60260535f8d47dbf689ac20f6f8a83f06e368a766896afa831"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/version.json",
+      "bytes": 4992,
+      "sha256": "c5c67f593b40935c58f533db99144a92b37ac40074eec5c0d75ac2a7de4661f8"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/solver/001_base_ir.json",
+      "bytes": 15726,
+      "sha256": "740c57523f25ea0aa002443dc1ee05517b2b28265338f28097d28b91e4095157"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/solver/001_base_result.json",
+      "bytes": 1167,
+      "sha256": "c9d25e66c0a0d85a18e466b2d3bbe41a6efab1507115c41691a0e243c35b60fc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/solver/002_final_ir.json",
+      "bytes": 15726,
+      "sha256": "740c57523f25ea0aa002443dc1ee05517b2b28265338f28097d28b91e4095157"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B01_00413/case/solver/002_final_result.json",
+      "bytes": 1167,
+      "sha256": "f446d04e470e5d2c62b55184306c71103084d0ca2c681f06d0762ef3d276fc63"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/execution.json",
+      "bytes": 143,
+      "sha256": "b202d29bd3d4fa795c8a990d3862e27b583570b49dc893d4edb418998e74ddfe"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/manifest.json",
+      "bytes": 4549,
+      "sha256": "fba5cb099171957c2bafe52ae2c9254a05a9d248dbe2ebe970977a2b713ddc71"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/result.json",
+      "bytes": 29704,
+      "sha256": "421e53a865796a764167ceed05ffe6edd95709784a3548a5fcdb3008459df33b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/worker_summary.json",
+      "bytes": 1838,
+      "sha256": "de1ced9a395aff55f3506065ac29c519a8837fa978d0988db89a04ec62f0e4cc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/case_state.json",
+      "bytes": 79212,
+      "sha256": "6c6d7c7f508ab5343f2ebe16dde35d07edd400aba1eabaa37f91718de99d0737"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/api_calls.jsonl",
+      "bytes": 3736,
+      "sha256": "510eea7327b4f487f0cd7095e40e09630e0ef35f6ad2a34f51d386d482b3cefe"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/events.jsonl",
+      "bytes": 20664,
+      "sha256": "663823675a43598ac6119d4e8d387ce238c1feddc5c05ba5125bcead1913ddb2"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/version.json",
+      "bytes": 4993,
+      "sha256": "ed4d0909d7b38893ac0b642543d42478154629da7b691b2e70e2083d9f2db5d0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/solver/001_base_ir.json",
+      "bytes": 20875,
+      "sha256": "7a5cb6b64d60c65cd7cdc6b882cc309e8110987c47e1b10198936f13cdc8b7b3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/solver/001_base_result.json",
+      "bytes": 1459,
+      "sha256": "762ae4159a3f806073ddd875710389bcce81695a77e6d78d917560a7374eaf05"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/solver/002_final_ir.json",
+      "bytes": 20875,
+      "sha256": "7a5cb6b64d60c65cd7cdc6b882cc309e8110987c47e1b10198936f13cdc8b7b3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00054/case/solver/002_final_result.json",
+      "bytes": 1458,
+      "sha256": "5e6ec00c866dd44f29dfaebbaf28d78b03b3b322d7d18f820496e27a4eae64f9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/execution.json",
+      "bytes": 143,
+      "sha256": "27e6eaee4fd07515d212926d7fa76770c25af5efe2fe46eabd68da1874917f83"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/manifest.json",
+      "bytes": 4549,
+      "sha256": "10f89c97284500a4ebf8597dc55da1c7ffd9584dc8d0e5b9d8df7b6263f1c27b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/result.json",
+      "bytes": 51385,
+      "sha256": "2cd69b7bf82d309ecce59ab440f216bea96d8f578758515a9cf58d5393ba1076"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/worker_summary.json",
+      "bytes": 2097,
+      "sha256": "6a08ac43d22d2c385e920ffca11b7a8b3a079d753ed76e43c0040758af6d81bc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/case_state.json",
+      "bytes": 127575,
+      "sha256": "c34cd0acc244c9ebf56466e6595676ed7773f0732fdca3d1433262e6b85221ff"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/api_calls.jsonl",
+      "bytes": 3761,
+      "sha256": "e8f4c1401848ac48ec7c2789f369b3bfa5f4cd5316c4e3cfbfd52da555b25c17"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/events.jsonl",
+      "bytes": 29849,
+      "sha256": "a412c74b5ac7afe1d5b2e68351695237262266ae67192fde0f2fee209ba4309c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/version.json",
+      "bytes": 4993,
+      "sha256": "87a226353c1524de9961a02deb1f7f09f4795cbb644192f26a7c943586726a2c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/solver/001_base_ir.json",
+      "bytes": 39403,
+      "sha256": "2f0f1cd813b6abc52c71341c00fb635b2383a1460e449d70fc790031f76ce170"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/solver/001_base_result.json",
+      "bytes": 1676,
+      "sha256": "2d4b03cad315bd10cc555a91c389f8625ea229dd0c727e624b09ad97b70e5662"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/solver/002_final_ir.json",
+      "bytes": 39403,
+      "sha256": "2f0f1cd813b6abc52c71341c00fb635b2383a1460e449d70fc790031f76ce170"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00182/case/solver/002_final_result.json",
+      "bytes": 1677,
+      "sha256": "33ea25b8d09479753a49afd8d9104ec392c2aae68e2fb9602caeefff09e0e1a1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/execution.json",
+      "bytes": 141,
+      "sha256": "38a64056a4ec4f5cf3712c75bb55ba7eaf53aec32507cc7243b9cb96aaebc390"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/manifest.json",
+      "bytes": 4549,
+      "sha256": "ee922ae4171ce63b0b1197a175f83887436801c18b973b953e227906a6bd99a3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/result.json",
+      "bytes": 15450,
+      "sha256": "2ed2a582465cb1511734caa2e92b56e2dc53708f31c682697519fe6f649d741b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/worker_summary.json",
+      "bytes": 1138,
+      "sha256": "e7bead8e18581b583ed5ee6bd2f794808d075dc5bfb056d2d5d0f8c6f1992369"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/case_state.json",
+      "bytes": 40324,
+      "sha256": "e1024359ed75ba24656747b36333debdcc74260a8d5d5d99044151f3e7d56855"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/api_calls.jsonl",
+      "bytes": 3736,
+      "sha256": "fabba3ceccf941986b684c96c49c03ab8c34f89923c8240a1c301c8cfde767e6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/events.jsonl",
+      "bytes": 11112,
+      "sha256": "ddf41e1f5f9ce0160d59696f5da33dd824882e181a29e0e9060162a864fd5bbc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/version.json",
+      "bytes": 4993,
+      "sha256": "4f3849519605429b15c4433881c899f07456aeddfa058a186b707814e83e9267"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/solver/001_base_ir.json",
+      "bytes": 9412,
+      "sha256": "2f7863fe0af130eef8db216676ab57ebdaf412cfe996c3fafd2f0e0156de2bea"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/solver/001_base_result.json",
+      "bytes": 795,
+      "sha256": "5c131aeb1b912ac9d7b54b07fb6762936be92df6335d5bf01df9b890987844b6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/solver/002_final_ir.json",
+      "bytes": 9412,
+      "sha256": "2f7863fe0af130eef8db216676ab57ebdaf412cfe996c3fafd2f0e0156de2bea"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B02_00197/case/solver/002_final_result.json",
+      "bytes": 796,
+      "sha256": "b0ff7651cbfac1193a629e99fd4961ed40080d1dfd3fdf7bc6be876dd5a03a66"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/execution.json",
+      "bytes": 143,
+      "sha256": "309f4937151dfabc928d9dbecfd108112f6d776609e4a1acfae25815fa7d5319"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/manifest.json",
+      "bytes": 4549,
+      "sha256": "8a8cb87915260578e90bf135153f8854ecacc2f8fc94e2bbb4552bb381af0f0a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/result.json",
+      "bytes": 22298,
+      "sha256": "536b36f70270b4c54dbb9fce75689be8aea47dedcf64fe3748311efa7e4626b9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/worker_summary.json",
+      "bytes": 1268,
+      "sha256": "05b4b580441f0acce1bcd9fb82680864031c98255306a75f2828e05cc8ff9940"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/case_state.json",
+      "bytes": 60015,
+      "sha256": "d75b6ff354a9b824cfb55b7e5633da1a7c3874c3ea18985dfc6dd9cf055c4c82"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/api_calls.jsonl",
+      "bytes": 3732,
+      "sha256": "2b09dfb93b8dae985087f126ac34256b78fd34a2cde7e3c0e837a9e055562557"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/events.jsonl",
+      "bytes": 14348,
+      "sha256": "c3949bed18699f1164ad91be8ea221f7611997e05580920a2aec626923a93655"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/version.json",
+      "bytes": 4992,
+      "sha256": "43f0af0872f6cfb0ec99042236c3fc7ff9d038aad5d66172e00acfbb9994003c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/solver/001_base_ir.json",
+      "bytes": 15182,
+      "sha256": "9596992da0191d770b592341b553c55466d2ec27e94306c142eecbf810775500"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/solver/001_base_result.json",
+      "bytes": 908,
+      "sha256": "03398929921959f227e4595ce4f7935fac9801c5f10002aaf3b082c36772c6dc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/solver/002_final_ir.json",
+      "bytes": 15182,
+      "sha256": "9596992da0191d770b592341b553c55466d2ec27e94306c142eecbf810775500"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00149/case/solver/002_final_result.json",
+      "bytes": 908,
+      "sha256": "49e80a22943eb8a108db11a1c8f02798c4de8b7b6ffa3c7da3ac32d7cc5a5829"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/execution.json",
+      "bytes": 141,
+      "sha256": "a97ca03db9ac5850a241e29b58c609868c57ce6cfdc61086d2df2135737c2ded"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/manifest.json",
+      "bytes": 4549,
+      "sha256": "2d9e33cc4763f023c56e787cbd386a79d94c8b8d0c4cda096ab7f0d373c9a3f9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/result.json",
+      "bytes": 3052,
+      "sha256": "612ac568560ad2d04dcfbc4d575dceb7447e1949878f58eca1c2d5fbc4e59c2b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/worker_summary.json",
+      "bytes": 258,
+      "sha256": "c3e5f45149b049539a46528666f967ce1001e4803162855121249a20c61d4ac1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/case_state.json",
+      "bytes": 17414,
+      "sha256": "64ae5fe38bf81cd836c4c9dec6f75fa8b7729faa2fb023052b88adcef2d774af"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/api_calls.jsonl",
+      "bytes": 2558,
+      "sha256": "667a5ff07204b0084d52562223289a1681c9df90c22815a898d934ecc76d7fb6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/events.jsonl",
+      "bytes": 3505,
+      "sha256": "7da7a18a63a814737140606d092d9675d77d85d2acca34ce23e59a3c2bb046c1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00206/case/version.json",
+      "bytes": 4993,
+      "sha256": "09f5e4692f14c78dee7cb6705bfc36a228251469b4cb74777da625553881bebb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/execution.json",
+      "bytes": 143,
+      "sha256": "948f458f4057aff8069c796e7404bda8a388ae744bab02c0af6c37707da1869a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/manifest.json",
+      "bytes": 4549,
+      "sha256": "9a2503c8e4abc10dec2ba088896b6bcf0effea16ba0fb60c2abe32b327883772"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/result.json",
+      "bytes": 30337,
+      "sha256": "dcdc56f88318b4f1b8c3ad5d4fcba14397dd1221ec128bd5862f8d10396c27ae"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/worker_summary.json",
+      "bytes": 1693,
+      "sha256": "690fe4f2c8590f6608c05234ff43d99d9729d2c242196694b131fe53b0a45736"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/case_state.json",
+      "bytes": 79357,
+      "sha256": "7c120fcc85512c87203ebf3da6fb88f746617b00c69e21f04d9929dfa4c66414"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/api_calls.jsonl",
+      "bytes": 3746,
+      "sha256": "39425d4f696bd92b0837cfd98032ce71a562fe51cfd5e6dd82922300dce637b3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/events.jsonl",
+      "bytes": 19022,
+      "sha256": "92b8b6c5abccc99f2cd1371e61efab2063b039984eb196b7af5709d89b631798"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/version.json",
+      "bytes": 4993,
+      "sha256": "8de79e2a0698afc6738f8bb69e31c225a8cb06ebbc05af720e07610433e22c23"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/solver/001_base_ir.json",
+      "bytes": 21634,
+      "sha256": "dbde16e4bbeeae0c1de749b237b5f4e89fe0646632a6320b84cee9b027b01808"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/solver/001_base_result.json",
+      "bytes": 1300,
+      "sha256": "7e2b8db46cb08a7f608c3dd2b56dc844e5218be11d4b7eb2e2a23f911cd537db"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/solver/002_final_ir.json",
+      "bytes": 21634,
+      "sha256": "dbde16e4bbeeae0c1de749b237b5f4e89fe0646632a6320b84cee9b027b01808"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00230/case/solver/002_final_result.json",
+      "bytes": 1299,
+      "sha256": "901180a21e7b32b49c8b3fe300bc3d886b0590f698adc7aeac9eb4d90a94a7d0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/execution.json",
+      "bytes": 141,
+      "sha256": "cfab31dbd21289b0da459fc125c05d9251c56061017105a2e64fec16220dec4a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/manifest.json",
+      "bytes": 4549,
+      "sha256": "567a0f15e9aad68420ce40dd3d27775307c6ecef6894ef0546f726870c6c034f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/result.json",
+      "bytes": 26406,
+      "sha256": "480383c9126d2535e8008d4d73869838196bb510217db3b7693aead35f5aa938"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/worker_summary.json",
+      "bytes": 1679,
+      "sha256": "8a06a862f794f0f798ae680f10cf68391cac93bfc096b3972f53b5c09470d190"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/case_state.json",
+      "bytes": 69815,
+      "sha256": "89446473e7f4585cfbc4dfa08cd438ed5b8f292b57ca6ebb71f3c7a49c8917dc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/api_calls.jsonl",
+      "bytes": 3756,
+      "sha256": "6063c0bbaa0e7d26ffd14c35e19bf44585eecd1e01ac09364bcd6468a8893d77"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/events.jsonl",
+      "bytes": 18796,
+      "sha256": "d3a3ba7634b59f01eabb03c57a2e7107f38a20b0afbd92c9066defb07f607707"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/version.json",
+      "bytes": 4993,
+      "sha256": "f5a928aeb5b0afead78e83a901f6abb3ca650f7f55d741bc2fcff0dce1405ae5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/solver/001_base_ir.json",
+      "bytes": 17728,
+      "sha256": "27c52b16aeb9a85c1a221b132d5768af9ae2d3b97fb5f02971c71ee7d8ba10f0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/solver/001_base_result.json",
+      "bytes": 1327,
+      "sha256": "6c9e7e1b0ac1b1c96e27f50faf891370d79054fbc336ce9438e498c267db527f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/solver/002_final_ir.json",
+      "bytes": 17728,
+      "sha256": "27c52b16aeb9a85c1a221b132d5768af9ae2d3b97fb5f02971c71ee7d8ba10f0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00275/case/solver/002_final_result.json",
+      "bytes": 1327,
+      "sha256": "58c4cd29fc07a0995cd3ef57a4b9f230efd4bb76590dfa290902f907c3a765dd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/execution.json",
+      "bytes": 143,
+      "sha256": "63114ddbb9e4714f37d73f314891b9242c2da978753a315ea96824d4f41c1e95"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/manifest.json",
+      "bytes": 4549,
+      "sha256": "ec6649aaf2f9d1a2d00f6ae3207eed0ca0d054c9a1fb1fac4cecdb294fb6be3a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/result.json",
+      "bytes": 8837,
+      "sha256": "862f5c6f2fdf2b9fee55665415ffb695905e5083b90381fc43bd882b0b7cd0b7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/worker_summary.json",
+      "bytes": 732,
+      "sha256": "09017f444f18f20e45fc7f3911494e298d68fab827f2841e12883c9832b85bf1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/case_state.json",
+      "bytes": 32713,
+      "sha256": "e4d6c4c7f239447649e3718b5ee374e91d4430cfc1330b58c3c40799c3c59bb0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/api_calls.jsonl",
+      "bytes": 3756,
+      "sha256": "f93eb337fbe51d79904604f6220c9e1eb4434ec42c64ac29f9ab7b9c4f05a0e7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/events.jsonl",
+      "bytes": 7838,
+      "sha256": "0e3a1024781451e2be2e56914cea981b9ea08ba347f6694d9bbfe2e2811799f4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/version.json",
+      "bytes": 4993,
+      "sha256": "4b26ab9ba8ff1cdc54ba4df2bed68ec19e3d783f8177330a77539dda6c0ac32e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/solver/001_base_ir.json",
+      "bytes": 3720,
+      "sha256": "f545c49744e0230da43f10f72077b4ce8a332ca828ca5900d48a8b51cb3c6373"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/solver/001_base_result.json",
+      "bytes": 433,
+      "sha256": "31b302c2d01cad6d6ace1d00e08fba2b54a2271a55774cdec1ba9610603f23f9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/solver/002_final_ir.json",
+      "bytes": 3720,
+      "sha256": "f545c49744e0230da43f10f72077b4ce8a332ca828ca5900d48a8b51cb3c6373"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00289/case/solver/002_final_result.json",
+      "bytes": 432,
+      "sha256": "0b0c63dab7f79efced30e61f58a7c842d9494a6e393a5ab336c7c6c733fe773d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/execution.json",
+      "bytes": 142,
+      "sha256": "dc5cafaa891fdd5b516bd5fb338563705ca9eab8e156abecf46c789009336287"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/manifest.json",
+      "bytes": 4549,
+      "sha256": "289c111b92874c7edfc238cde5d76884ed8b8db533c6374b219b8bf1449b9d9c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/result.json",
+      "bytes": 17573,
+      "sha256": "a2678bdf2f068c65d211a797c7962486692cc480625f826bd691d5b77a4eba53"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/worker_summary.json",
+      "bytes": 1085,
+      "sha256": "0697ecc98c69ea7389c5aa912d18456ee108ee7ea357df0cbe33b15a77cf34cb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/case_state.json",
+      "bytes": 47828,
+      "sha256": "683312c1ffe96ea0ccec37667fa64567a2cce32f0f5b8e5047135f8e0c07de71"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/api_calls.jsonl",
+      "bytes": 3735,
+      "sha256": "8770ed6206c61049d4ccf6b4aa7fbfcef354424052c2c1b70a4d91ed997ee3cc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/events.jsonl",
+      "bytes": 12268,
+      "sha256": "4c6303ed2a1fa51facf93a568b165a5d4aba328b9801a6af2b86ca7d202247f1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/version.json",
+      "bytes": 4992,
+      "sha256": "91d870af05c435dbb726aa601fe9ff30c8c41df7ccc4788402f76789546e3ab6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/solver/001_base_ir.json",
+      "bytes": 11220,
+      "sha256": "1d936dfbb2d229eea7de5d2d934a8c6ccf35826f5d648d984a5aefc9b29595fd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/solver/001_base_result.json",
+      "bytes": 751,
+      "sha256": "75db5c6b7b12bf515a90a6cc837e3df3ab17246defb5984d38125bc899d36a2b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/solver/002_final_ir.json",
+      "bytes": 11220,
+      "sha256": "1d936dfbb2d229eea7de5d2d934a8c6ccf35826f5d648d984a5aefc9b29595fd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-B03_00461/case/solver/002_final_result.json",
+      "bytes": 751,
+      "sha256": "839acb4250d13070cba72d7dfffc2f75f8ac7df06ce5b93a1228ab61093d3b41"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/execution.json",
+      "bytes": 143,
+      "sha256": "5e8aa6f2b582727406533d345d5a95a6cd7add7d9ad19c6d4865095bb88455eb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/manifest.json",
+      "bytes": 4549,
+      "sha256": "c4677a5f2d0901bbc0eb8e8862cb322a480c8e531f1966599c3d481107445998"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/result.json",
+      "bytes": 35250,
+      "sha256": "03457a54da7d5ed1159a70a5bf2c5b81ed68fc0f53e01fbee1ab97ea94e268fa"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/worker_summary.json",
+      "bytes": 1698,
+      "sha256": "561139ba9e6254ffc5fd79ddbabd1e9f31f9ffb8d8ee12820c7d9bfa439be0e9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/case_state.json",
+      "bytes": 92388,
+      "sha256": "00c0edfba2710a96e691167567d1a84e0e6e37462113cfe3b1aed77ed86b6805"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/api_calls.jsonl",
+      "bytes": 3759,
+      "sha256": "c620b72e25c83a233b1bebb3c088f364b8c820d68de13688097d34fac462a946"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/events.jsonl",
+      "bytes": 22086,
+      "sha256": "a1aaead82e62ce9e7d29fa35923792225b9c738f18aa1e45c272a675e8a11784"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/version.json",
+      "bytes": 4993,
+      "sha256": "2159d88595a7f97fb6b7da631526c3a9c8c466ffee03d7d7694a58d7731b3257"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/solver/001_base_ir.json",
+      "bytes": 25856,
+      "sha256": "03ea4b513cd70359dc74e7823df7447d4b7659a18f40242d816c4e6076f57278"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/solver/001_base_result.json",
+      "bytes": 1318,
+      "sha256": "d48fe65f55e2bda57e0d8e44dea663f105f484f83103d01df4816439f1101b73"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/solver/002_final_ir.json",
+      "bytes": 25856,
+      "sha256": "03ea4b513cd70359dc74e7823df7447d4b7659a18f40242d816c4e6076f57278"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P009_high/case/solver/002_final_result.json",
+      "bytes": 1318,
+      "sha256": "d48fe65f55e2bda57e0d8e44dea663f105f484f83103d01df4816439f1101b73"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/execution.json",
+      "bytes": 143,
+      "sha256": "7eec7a0adbc6b66b107c592b9aefb0674183b1c698dd47f6e0c7f90c6e1513d0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/manifest.json",
+      "bytes": 4549,
+      "sha256": "7efd1fc3cebbf2d87ee36c1adfdff02b5ebc7d3f61a574f14b4a2b2d30da65b2"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/result.json",
+      "bytes": 76096,
+      "sha256": "a98df233a7901393a8147bf0a6feae2d6c68485564d6b56a2d392b55c7c2ad32"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/worker_summary.json",
+      "bytes": 4036,
+      "sha256": "a3ce5e89e43d8f9ddfb4b58bb05a5a307a1ca3345b7491a73164dea3fcf21d08"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/case_state.json",
+      "bytes": 188043,
+      "sha256": "2e02ab2cdb641112840face0512c39c706c9c5fd290791b64c7f14ac0bfc481f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/api_calls.jsonl",
+      "bytes": 3761,
+      "sha256": "266522850624cb15da97adcca63cadfe020b2e776a8c4ba46bbd07f7e1241748"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/events.jsonl",
+      "bytes": 45464,
+      "sha256": "fe4818b2623033809d08cb868b8adda9c9cdb5e0b851641ed9763631c60d2e92"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/version.json",
+      "bytes": 4993,
+      "sha256": "3d234b8b0a1c4bfbe37ce50199d5b2297cfb28715fd72c4af0c01cf250e22024"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/solver/001_base_ir.json",
+      "bytes": 59059,
+      "sha256": "0b1998eed6610845d28543353c79a1ff92c6231c911765ec9a3e8bb34aa18d85"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/solver/001_base_result.json",
+      "bytes": 3445,
+      "sha256": "f8bf855d8481de740b9a7f17f884ac81df316c13f9a523b936de7e099b7720ce"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/solver/002_final_ir.json",
+      "bytes": 59059,
+      "sha256": "0b1998eed6610845d28543353c79a1ff92c6231c911765ec9a3e8bb34aa18d85"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P122_high/case/solver/002_final_result.json",
+      "bytes": 3446,
+      "sha256": "ebdcc77e9005cedbc5e7604ef0c9534cc516943d90da5a4e5c118e238d65b48f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/execution.json",
+      "bytes": 152,
+      "sha256": "ec90949ef130608eaeb4f59f7b3290a1ff5fa59e5aeea172495830738ef6c54e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/manifest.json",
+      "bytes": 4558,
+      "sha256": "5fa42ab79515e86c4b341d0d39ac7bcc4212962b7b182762218bb92cbb2db10d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/result.json",
+      "bytes": 3191,
+      "sha256": "d2f1c5e448c1f49e664c8b05fc3925e93fcc7a6aecbfda4bbc2a67fe805fd192"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/worker_summary.json",
+      "bytes": 271,
+      "sha256": "14b837c3680919a5702066bf44c92562e15aba7da042ffd19c1ccf919958edb9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/case_state.json",
+      "bytes": 23014,
+      "sha256": "9bb46299780fd067ecbae4faa70d5349bdcaa3a0fb9ab2d738c4fdef9d7dacc9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/api_calls.jsonl",
+      "bytes": 1309,
+      "sha256": "f58b548133ac83f30398d5c02788c1ca34dc5281873f3fd09a4e7f272bb3d034"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/events.jsonl",
+      "bytes": 3036,
+      "sha256": "d69e23b9ee6bbaed07762a31cf85e1568ba1bc323bc156fa61a58ed5864dfef4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B04_L0055_high/case/version.json",
+      "bytes": 5002,
+      "sha256": "eee5317a76770b4ddcd75e35044b563d379e63615cb68bd5f257c144aaab669d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/execution.json",
+      "bytes": 154,
+      "sha256": "d54324484135514b52fc14951943a399f366982375711bdf873abaac7e8fda30"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/manifest.json",
+      "bytes": 4560,
+      "sha256": "28c8275ef5e0effe83a2cf4bb09151649ce4aa9ae664b9a3c28ccb388636f32e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/result.json",
+      "bytes": 67237,
+      "sha256": "efab8afa1bef22e993a983d3710742208844df0855330a0b88fd754d569c5bf1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/worker_summary.json",
+      "bytes": 3371,
+      "sha256": "024cbd85805f7065e4b9b5eba5ae8a4470f24f32395a3cbe143b8b79700b449a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/case_state.json",
+      "bytes": 166929,
+      "sha256": "543ce62926017017b763732b4e8fc5cfaca0f85a0dda262633f96c822173d2b4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/api_calls.jsonl",
+      "bytes": 3849,
+      "sha256": "29ab08f81a6e87ce7bffba1868771084be55af594bcbface699b724cee423d9f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/events.jsonl",
+      "bytes": 39915,
+      "sha256": "b0a07ffed8b7187967d9fda24e268a3ec29427ce37c0471410633fcffaf48ec4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/version.json",
+      "bytes": 5004,
+      "sha256": "cc5b8a075251c0421e9baf68c7e8723cfc2cbc09bfe20fb24400da50cf520281"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/001_base_ir.json",
+      "bytes": 51168,
+      "sha256": "3a06db219454a874b70bac1bdeca8a999e35fb123ce947f4b79b4e384069446c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/001_base_result.json",
+      "bytes": 2828,
+      "sha256": "110a929f4ba92de6c44885a3c2a9612e089aa5775758ed80c9b5f81bb63750b8"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/002_final_ir.json",
+      "bytes": 52191,
+      "sha256": "75a9d5a029009aea55aeb6ae9d1e936fa0ddc58cc1555cc553697b579821cbc6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/002_final_result.json",
+      "bytes": 2828,
+      "sha256": "cccf74d91f870a6c81248ea7b2efa73060e24e845ee0f3bee5f9b724d95c8b55"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/execution.json",
+      "bytes": 153,
+      "sha256": "978a3cd0fdf9a1adef0fccc81e5b64ca668f56d4d06eb0470ccb5d20895c8e03"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/manifest.json",
+      "bytes": 4560,
+      "sha256": "16b476f44ea03675af86e984ca3cf3a31a4727dcceb8fb9066d0b5333644f116"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/result.json",
+      "bytes": 75966,
+      "sha256": "875b61c5942345ff83af9e292559a3e65d79d550b7bb40af715a2c968302e833"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/worker_summary.json",
+      "bytes": 3506,
+      "sha256": "b7e8962ddb75952d68efda9bb419eea50f67390dd392c59c66c9a77c5613ea01"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/case_state.json",
+      "bytes": 185031,
+      "sha256": "7872c070f00c69217969fc17f1b4a77f0a2a4396238ae76ecb8b79d388d0ad55"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/api_calls.jsonl",
+      "bytes": 3845,
+      "sha256": "0abf252a725f059f091d48c7b6691a8682de099a4404046b5419ac3e19f1d494"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/events.jsonl",
+      "bytes": 42224,
+      "sha256": "6ec17818d3600aa5070f93d21e96201b0d3fb4cfda72bb66c8d326a73d0a2584"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/version.json",
+      "bytes": 5003,
+      "sha256": "771c98abe34519c4654706534b8e31a6a69e2a85003f2204edbcc62280fc98d7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/001_base_ir.json",
+      "bytes": 59704,
+      "sha256": "4025663c8c419cf7cb1daa79033815c2422715fa29297099f0cb9559e22a7fa4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/001_base_result.json",
+      "bytes": 2911,
+      "sha256": "70ede0897e5322238225ed8fe7720c09270e7455f86a189ada5b382ff6a91453"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/002_final_ir.json",
+      "bytes": 59704,
+      "sha256": "4025663c8c419cf7cb1daa79033815c2422715fa29297099f0cb9559e22a7fa4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/002_final_result.json",
+      "bytes": 2911,
+      "sha256": "7bb2a721fd455013d1cab9a9834e69ea1db0e2306e27f904ee743696808c3cd0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/execution.json",
+      "bytes": 152,
+      "sha256": "a551898968a7d6023d07e8a049846b216faf859dad0197a5f531bce9d5a31945"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/manifest.json",
+      "bytes": 4558,
+      "sha256": "af5519c0d9a1e7560f50a4cc9df971c32d64dd6487a4355bedf87624cc9db6e1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/result.json",
+      "bytes": 113864,
+      "sha256": "5029f8d4ac51e3a6aa14cd6c47a9025c1a7c577b1c484f32ebac088845459bf7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/worker_summary.json",
+      "bytes": 5945,
+      "sha256": "cb9fa76ae194961de3a2bf09b9243409e5d77df22046deb76fca312d47f46c7f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/case_state.json",
+      "bytes": 266055,
+      "sha256": "bb525f0270a10c323619c5529cd976a71a5eb1a5afae29805a717ad401867ed1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/api_calls.jsonl",
+      "bytes": 3828,
+      "sha256": "071af87662fdd1ec7e67f5318f5fa83ab5a06776a8c9c608f933d3787632b0f1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/events.jsonl",
+      "bytes": 66686,
+      "sha256": "1d0227ac95325d6c6093237427e4ac1b80ac28f928567b4aa0b9a428783e036f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/version.json",
+      "bytes": 5001,
+      "sha256": "f066ccf31365c2d24c69594ebfaf36a89ac971bdbb54e9b93de8f3ee4398938b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/solver/001_base_ir.json",
+      "bytes": 89910,
+      "sha256": "59ac4fccd03ad83f374680101c99143f616a353903624bd6f4f1a212f3c74b82"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/solver/001_base_result.json",
+      "bytes": 5177,
+      "sha256": "c199dbf1f15e0044c9ec80199cb5ebedce8510997a5b4b5a0a6c803bf15b52b9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/solver/002_final_ir.json",
+      "bytes": 89910,
+      "sha256": "59ac4fccd03ad83f374680101c99143f616a353903624bd6f4f1a212f3c74b82"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-P52_B09_L0055_high/case/solver/002_final_result.json",
+      "bytes": 5182,
+      "sha256": "a345e9d35b5db3e67fcad02da5657798f41c2e6e859d7b49fce848b337b33716"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/execution.json",
+      "bytes": 166,
+      "sha256": "1f4e23345927577b733cab7146d3fb4b8830ff801721ebb222ec13ddf48cc058"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/manifest.json",
+      "bytes": 4573,
+      "sha256": "03be34fd948cfb8c147e42556e2f451cf49029ee548f56cdfcdd76038759ec27"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/result.json",
+      "bytes": 42056,
+      "sha256": "8fbcd4bb4dc841f8de85de10a78bbbb241c20fbd5db672d20b216480449d5192"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/worker_summary.json",
+      "bytes": 1987,
+      "sha256": "aee6037bb37c5093aa02471d49440a77a7596c128f90c8d09f57e9ed55416854"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/case_state.json",
+      "bytes": 107872,
+      "sha256": "9fb7fa1bb73c33e04490f229cdc0c44dc66e377e357938abe7c924ee9c4d4334"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/api_calls.jsonl",
+      "bytes": 3976,
+      "sha256": "a3d1c1cc80bbf9d03ba704c9e3705688393adf255d3f7453ad56b01b6c0e2b06"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/events.jsonl",
+      "bytes": 26387,
+      "sha256": "21ac01c28694e258864f4130467c0859e811782633ade9057d6e709f3112829b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/version.json",
+      "bytes": 5017,
+      "sha256": "16be3bc308bc8410fabdee7e26be8c5033ecaf41932c4973d04a579f4f482bd3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/001_base_ir.json",
+      "bytes": 31539,
+      "sha256": "388e35e141ab48edd6d3fcc58d3010a3fb485e4c6a0d8fed3326245e37b2713f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/001_base_result.json",
+      "bytes": 1567,
+      "sha256": "5d6c258239ff2f61fc797b4bcc4b22d61e3d494e8e1fe3213c9c0d1ed255f4c6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/002_final_ir.json",
+      "bytes": 31539,
+      "sha256": "388e35e141ab48edd6d3fcc58d3010a3fb485e4c6a0d8fed3326245e37b2713f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/002_final_result.json",
+      "bytes": 1567,
+      "sha256": "79329d74d62a2eeaac801db67f245778369ed46db6b139f77c9cb9f55cfe6ea0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/execution.json",
+      "bytes": 187,
+      "sha256": "82ca694e8020ae5d49e3b6980510074978676b9545115618bd966863b4c62d18"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/manifest.json",
+      "bytes": 4593,
+      "sha256": "17b9880f382a30200cf76dd5573f4de882cebe2d65a8c952122e198cef6799fc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/result.json",
+      "bytes": 32460,
+      "sha256": "ed5edc134e45817971352f565e593cf5bcd735b196e35faad67912584cb4dfd4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/worker_summary.json",
+      "bytes": 2212,
+      "sha256": "ab6de24544ecaf82900e8fdec848e22d87dc1ecb9df57e413c4d642a529d855a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/case_state.json",
+      "bytes": 85847,
+      "sha256": "c961227009dea3cb83c648c0020a7ee59c1be93359ad366758503be0c2477b9f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/api_calls.jsonl",
+      "bytes": 4153,
+      "sha256": "eb1d62dd36cf0f3bb73154f09b16579030401d6c80f31a532f2de5e0e6b36e17"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/events.jsonl",
+      "bytes": 22806,
+      "sha256": "6f9ed5e9f4d33408cbb410d8781dbf92846ab23b96a54822c449fb558b03924f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/version.json",
+      "bytes": 5036,
+      "sha256": "5be22e7f0fcd3ac3f51d63c683b55dcfb7e0c5981332f18f4f9f6ca22a54d6ef"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/001_base_ir.json",
+      "bytes": 22666,
+      "sha256": "bfdc159b62d2c5f44528546330d621f81bf62f7789e03ec6a746c5060730b5e6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/001_base_result.json",
+      "bytes": 1773,
+      "sha256": "b233527662da4653736c66857aca557f2ec9c6308451fd6d99afd471571dae69"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/002_final_ir.json",
+      "bytes": 22666,
+      "sha256": "bfdc159b62d2c5f44528546330d621f81bf62f7789e03ec6a746c5060730b5e6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/002_final_result.json",
+      "bytes": 1770,
+      "sha256": "e88df601881c4e34903ad3b0af65455e375dfa6d696d16f8baa36c1d680eb72e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/execution.json",
+      "bytes": 155,
+      "sha256": "a4afd83da3e628c68cbcca670c934485d37cd295119dff29b44bcb8d0c0bf42d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/manifest.json",
+      "bytes": 4561,
+      "sha256": "6f3ca7d71ad3a732bf67d15ec57d09380035f9b1b1f7127f4e3ea94b0c4f4aa5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/result.json",
+      "bytes": 3047,
+      "sha256": "c11f5609e789ddbdab55e92fba63e470f000651f2ca2df502ed862ddb7eb5f42"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/worker_summary.json",
+      "bytes": 270,
+      "sha256": "db495483bcc4b8e3ef271aa5f7d79706450b335d349bd3ba1a62c1188ea202f5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/case_state.json",
+      "bytes": 14960,
+      "sha256": "03254f3b8f932cb2c1c366371c37dceed895ffeefdb3d5db4cf8ca930da6f823"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/api_calls.jsonl",
+      "bytes": 1290,
+      "sha256": "e54161ec26c4ea00e4811be4e8ffb7fe65caa591c2e744131b2fbce2c3210082"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/events.jsonl",
+      "bytes": 2867,
+      "sha256": "55a05e0960678afdb8637be6785b22532426a3c4996f163c55abe252ab45c89a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/version.json",
+      "bytes": 5005,
+      "sha256": "060a8fa5753c4bfa25082244cdb051330215bb3b065613e00b26a12886da3d1b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/execution.json",
+      "bytes": 183,
+      "sha256": "0e49f6649b7edfc21813537a328e5046c2c7f77c6f1e803232c0bfe39f6854e8"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/manifest.json",
+      "bytes": 4589,
+      "sha256": "264d906afa7bd1e6feed7ed03192d2a56f8558ceed2cfedd188fd2786ddf43a1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/result.json",
+      "bytes": 62383,
+      "sha256": "b30bfa34dd9eda9548f5b42f2d03dc373c65062e97608c7fc649629c0961e578"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/worker_summary.json",
+      "bytes": 4341,
+      "sha256": "c50bf099a8a0684d2b71434c378b1c7381dadd2786c213b9f0f6017f5c339b0b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/case_state.json",
+      "bytes": 148962,
+      "sha256": "5b280a7613409bcc9b36a339167478a8eded097dca5845ba00e0d22a5c450259"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/api_calls.jsonl",
+      "bytes": 4120,
+      "sha256": "b05322145eff783ee2bee4c3b0051c6da77d53c47407e170a795273ae652b00c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/events.jsonl",
+      "bytes": 42995,
+      "sha256": "350ad95ada9fb6471d01cddc52e6e75028d7eab5ccc88651471cb97b29f0fcca"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/version.json",
+      "bytes": 5033,
+      "sha256": "569cfb526c2b3fe9c04825dca09120e198b6c2ca430be6f4a79dfd26c211a012"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/001_base_ir.json",
+      "bytes": 46622,
+      "sha256": "39e1caaaa709e345e4b49d461d8a96e2845090d4db55f48d812b619f16f22cb6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/001_base_result.json",
+      "bytes": 3750,
+      "sha256": "d477cd5b76c72c975205e43da5e32269b531a6a467b0db9112672465f949724b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/002_final_ir.json",
+      "bytes": 46622,
+      "sha256": "39e1caaaa709e345e4b49d461d8a96e2845090d4db55f48d812b619f16f22cb6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/standard/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/002_final_result.json",
+      "bytes": 3751,
+      "sha256": "d79fda912d08f1071acdc2e691e00b2cd9110af234ffe3bf1990797d075ac1ff"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/execution.json",
+      "bytes": 141,
+      "sha256": "2e91148310d92f7ba37353ad28051f205fe6f11aec23e61f5ba2fa505a3ac2a9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/manifest.json",
+      "bytes": 4548,
+      "sha256": "5a1e9062975eee3a859e1bab4ae6d0f2acd67f99563da08ad2f3defffa82deed"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/result.json",
+      "bytes": 4458,
+      "sha256": "9eb21d52af42a0caa9b5d0a3b450b7583e4663166bf5466b87fdec2e9dd7f7f6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/worker_summary.json",
+      "bytes": 1392,
+      "sha256": "d0b0738dc3c99575b21e66d8945a1ededa2238ce17f9c8d63dfbd71c41c84745"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/case_state.json",
+      "bytes": 32793,
+      "sha256": "b44500d85f5b3248192604ed6318d3f6734feaaeefafa4b2e726df9ae0b348f5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/api_calls.jsonl",
+      "bytes": 2492,
+      "sha256": "26089cbe92caeebf3beda8f32c8580fdd81ef9e32db6398de84655fe0c5ca2fe"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/events.jsonl",
+      "bytes": 914,
+      "sha256": "dbe9d812555687c787618e5bf1157f68f6d39f6a4eecf50ef5f822dcd8cd4397"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/version.json",
+      "bytes": 4991,
+      "sha256": "63a6952064e2fb9f8b1395a52fa08c496003573a0276ff22bce4e8f277b8decf"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/solver/001_base_ir.json",
+      "bytes": 17456,
+      "sha256": "c9db14a172f0006c37e1a98d641226a00b2b1d24e5700e93f73be8b499b55783"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B01_00413/case/solver/001_base_result.json",
+      "bytes": 1025,
+      "sha256": "453a8f9dabc7795f532052cfec93aa17213eae34550d80ead949e4b8d348eae0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/execution.json",
+      "bytes": 141,
+      "sha256": "61d5f088091b096293f766e65df44175fce7fbd55347b56473a000fc8a7eb7b7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/manifest.json",
+      "bytes": 4548,
+      "sha256": "2893fefd0c4157fee9cc1586ebc17c5c45ecb531afaaaba40fa9309e5695a8c0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/result.json",
+      "bytes": 2235,
+      "sha256": "c22ce4cf7a24a72ed6330744698fb69db80b49943ba741496e727547c792bb00"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/worker_summary.json",
+      "bytes": 257,
+      "sha256": "2a2b68e10023e05c018b5901d944ce421c4af4d297849b83d8d7c0a5831f303d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/case_state.json",
+      "bytes": 15966,
+      "sha256": "83c13e7f3f3d39bcc88ed50ce90aed2fe415b2a288c928cabe6cd48d3e40196f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/api_calls.jsonl",
+      "bytes": 1248,
+      "sha256": "9132df279b149d2403ce5551a98a6c8b08e7538803ad881725301e9e34067979"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/events.jsonl",
+      "bytes": 339,
+      "sha256": "52cea98336fb1afb0d4c809dfa6759545669aa93748d11d1045865179f93b8e6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00054/case/version.json",
+      "bytes": 4991,
+      "sha256": "8eefda0eb356112624272347b84b2faf16c46d36d34cf513093c4bc24457ef4c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/execution.json",
+      "bytes": 142,
+      "sha256": "6aa1582dde9c5bbc277279aa781586f0cb6eba188ee291d08db7a3e92093bcb2"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/manifest.json",
+      "bytes": 4548,
+      "sha256": "333f83c93e68c5c17b8a99f10118c2c5c87289a0501307e7d618bffc75fa728c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/result.json",
+      "bytes": 5991,
+      "sha256": "c19d724275890388725f3fa1630826b3713dfbcffa563616c558f73cd139e757"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/worker_summary.json",
+      "bytes": 2159,
+      "sha256": "8629dc9f1c97fce9009d6ac33a1e01bab7b46db8c06f2423c3f0bf79de52d1c7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/case_state.json",
+      "bytes": 64274,
+      "sha256": "46fb3caa0af62293c3900b31bf82f5097f9d218f14662042436c2c28116e5db1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/api_calls.jsonl",
+      "bytes": 2495,
+      "sha256": "03b7690c22c85f7b7b32bae90b1c0c9990978f5e560badcc1c9c3909d077250c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/events.jsonl",
+      "bytes": 899,
+      "sha256": "3ddc9c25a257b56d50e2d7a44042fa91745bb90ea02a8c1d0ad7408c3f2542d4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/version.json",
+      "bytes": 4992,
+      "sha256": "abd4bdc78d0bcd4d3089455d83623d6db69da0a58e2420fb5f111f1e7a31e9c3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/solver/001_base_ir.json",
+      "bytes": 43912,
+      "sha256": "d0d99b5c488f43df4312e231e55b5105a167d41d9789dd2e9f764a5961147c56"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00182/case/solver/001_base_result.json",
+      "bytes": 1750,
+      "sha256": "68abd30de020073335126987561b83431c17becb591fce1a7b89ca2b322e7f18"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/execution.json",
+      "bytes": 142,
+      "sha256": "5555104fdcd66a11a70bc8da0f818c3e042224bd5f274378a83b0f0896954da2"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/manifest.json",
+      "bytes": 4548,
+      "sha256": "cc2ef33c3bf620b6c49bbe897250ca0a60d5495ac26a002427fa5a1dd251b5b8"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/result.json",
+      "bytes": 3937,
+      "sha256": "86e7a721649955f238ee84d8c4f30d1f2689396ce4a50eb0125e453613a2bfbb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/worker_summary.json",
+      "bytes": 1137,
+      "sha256": "697368fce5231b64669a504447cd55904c45b05a5ddff8b4abdd05caa26e56ca"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/case_state.json",
+      "bytes": 20640,
+      "sha256": "89446d3c1be8c45b0534e383a89575bb37a815d623415362d4719cffed4bcc2b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/api_calls.jsonl",
+      "bytes": 2489,
+      "sha256": "102cb6eb9893b87e87d8287e3b3789d1ce3e293c5baf98eef16f401485c81e88"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/events.jsonl",
+      "bytes": 838,
+      "sha256": "35123bca1ad4de341d0ad9013b6424fefad9375189e880c606777f9e63c2e980"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/version.json",
+      "bytes": 4992,
+      "sha256": "4f724befc13216968b448f4bdf37fb64849185cffcbc68f44eb8fe782f88ca32"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/solver/001_base_ir.json",
+      "bytes": 10320,
+      "sha256": "70c19885ef409c6b6321de237c72618317d89c50b1262ce31932bc68692726dc"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B02_00197/case/solver/001_base_result.json",
+      "bytes": 796,
+      "sha256": "1fda8f80c35c56447526bb2b5aea43a38cc9f201c72a495fcf8a364f33e44af4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/execution.json",
+      "bytes": 142,
+      "sha256": "c468ef5ca9dae75a380963c0674ee8fa4bac7992ebfad9721eda1c4c0eba54e4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/manifest.json",
+      "bytes": 4548,
+      "sha256": "edee293397bb026a95304a4cea537be28bf216bac04bdb2d08520c62e3a2906d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/result.json",
+      "bytes": 4332,
+      "sha256": "0f45792adbc430cd63ba7270b5b962a98a008921780afb7937b8912008ae45fa"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/worker_summary.json",
+      "bytes": 1334,
+      "sha256": "e5edcd032c1a43c8ce801de57aebb7320b8c0ba67a0a60472db4480f7198fa69"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/case_state.json",
+      "bytes": 31384,
+      "sha256": "238899d9b1399692c044f2880c795873d3fedaac84f51b15329f4e058b1e26f9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/api_calls.jsonl",
+      "bytes": 2479,
+      "sha256": "81990f5e4812123a9121fcc7a15fa16d80a1538bb219f218e5df6caad71f141a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/events.jsonl",
+      "bytes": 810,
+      "sha256": "03f11c74c21d624b234430978799de955187bf127edc80d6cc8eef5ad00f1dbb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/version.json",
+      "bytes": 4992,
+      "sha256": "397f7bd8c9af728c8ff0f5d94e936dd6e2872714da290777a0741634a354de88"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/solver/001_base_ir.json",
+      "bytes": 17310,
+      "sha256": "9dbc2b9a587c4da6aa86cc8c0620e8b4a3e82502099c7a17a32830c23f45fe8f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00149/case/solver/001_base_result.json",
+      "bytes": 975,
+      "sha256": "f2063224c489f4180445872576cffb49a66d6c55de56ddf55fc713e54806fc14"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/execution.json",
+      "bytes": 142,
+      "sha256": "bc0ed74d82eddc088b10e7e9f2a09baf60d14a2a52d7c4e2a12cdb1f795c871d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/manifest.json",
+      "bytes": 4548,
+      "sha256": "08ad6c3d6da7590a2fe134e2247cf922c568b00e12f203ea1f08eeefcfdb5442"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/result.json",
+      "bytes": 13678,
+      "sha256": "ec710429104059f4762f18c3fc39f7438ccb52c73bb4b38d2cbaf1ed3ec04c74"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/worker_summary.json",
+      "bytes": 6000,
+      "sha256": "2a959c23174b5b87aeb6021e4827100cf3767b02c78b987942b612f74f993c8a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/case_state.json",
+      "bytes": 154658,
+      "sha256": "da14ebe636b373e8effd2c2243187ce03d493e7de09713fe0d56975c64b24ccd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/api_calls.jsonl",
+      "bytes": 2494,
+      "sha256": "1911cc5c97d0fdcd73723c25f9f93c47d28f0dd205665ee8408c1df87be3e26f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/events.jsonl",
+      "bytes": 1044,
+      "sha256": "6631e30325225128a8fd3402e09b2b97c428a6cf2731074d62cda38f7c17aed9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/version.json",
+      "bytes": 4992,
+      "sha256": "6655c8f271e88709593a12b6c708f92050a84ef524a5924f3d2df593eb43d10a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/solver/001_base_ir.json",
+      "bytes": 137298,
+      "sha256": "03a7a655cc69538aa5060d9308f34c7275ff8e65e44b156bb3bbb223d376f1c3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/solver/001_base_result.json",
+      "bytes": 211,
+      "sha256": "1d5fd8379bd5b44cdf55af308476c170fac3f9f8fdf9ebb0e4cd04cd8321f570"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/solver/002_updated_ir.json",
+      "bytes": 124673,
+      "sha256": "c463f2919d3762f26bbf21543890ae7ef8362023f3a060708481f03687b86acb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00206/case/solver/002_updated_result.json",
+      "bytes": 5259,
+      "sha256": "383f5540a5c3a667a43fab0b165ea527f1f8934f90854991bf9493b2594af9ae"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/execution.json",
+      "bytes": 142,
+      "sha256": "c127c5a623e72f5ff2b0aae8c31239b73e648ee4bfd9945df8459bbf359b0736"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/manifest.json",
+      "bytes": 4548,
+      "sha256": "edfd9c6ebd5f9c4c4dfde93cad5bc7753a755d52df8b997755e0f0b585ed2625"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/result.json",
+      "bytes": 5277,
+      "sha256": "896fdabbf2aecc0cf5ff552aa398200295f439f4f74e366729ba3161213be473"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/worker_summary.json",
+      "bytes": 1802,
+      "sha256": "335bc0eb2b916190ea1f7f53f76660d58bf474ce49cdd99877d9b9708a348200"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/case_state.json",
+      "bytes": 44090,
+      "sha256": "bc190da4b514de172231e3b5d7cca72a4338fc555c8012f91cc8b0efbe1763f1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/api_calls.jsonl",
+      "bytes": 2492,
+      "sha256": "44bf35a2918d5eb05388095755bd276e6e43bca418e689a7396ad9486a3d66a3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/events.jsonl",
+      "bytes": 881,
+      "sha256": "1165e4a64b3d5a44d7aeea13c22e0b7d4bd0b75c17ab462317b4764c3386c9de"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/version.json",
+      "bytes": 4992,
+      "sha256": "2bf337b3c3f18ed19d2c96a7585aff46d6227572d63eb2d643931b2410aa3d3c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/solver/001_base_ir.json",
+      "bytes": 26811,
+      "sha256": "f46f0fa4340ac2d2e2c4323a2c5f48ea767c072400297ccafff0ba8f1cdf5c5b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00230/case/solver/001_base_result.json",
+      "bytes": 1397,
+      "sha256": "a899876be789d0f7286c06366e03f9023eeeb9d3c44c939c643648ef2ebec620"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/execution.json",
+      "bytes": 142,
+      "sha256": "ddbda40ed0e649536bfb4601b4f6a7b53cf6944084fefa766c9042bbd5d81b3e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/manifest.json",
+      "bytes": 4548,
+      "sha256": "8a0176733d89fe40077806de862e09ed93457ca3c38ffbac8fe6bb9e432dd413"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/result.json",
+      "bytes": 5401,
+      "sha256": "c797faf8c4736c6f6689a007fa4de8bc951309d3f0f8fd5d5f4eedd03379ea04"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/worker_summary.json",
+      "bytes": 1863,
+      "sha256": "811fe42d40c808b92399363ae27e3d31e1f386c621a9f7dd4a2ea13bdf0b08a1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/case_state.json",
+      "bytes": 39701,
+      "sha256": "0379c599c31994bdded7770d5e48f4dd5b2b52038f6342609d8b950f0662c18e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/api_calls.jsonl",
+      "bytes": 2495,
+      "sha256": "2380bfbf94ad214c4c44b3b7e80e8cfb47b76f863bc922c8bcc91b1c08e8d42d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/events.jsonl",
+      "bytes": 871,
+      "sha256": "ec05ca669afea404ec352c754d7aa4f6d8516c5452beebda67e0a4b4ef8c1641"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/version.json",
+      "bytes": 4992,
+      "sha256": "31282a6850c7be8ffd48f0ed3ce5d9900937412d17ae50726a1db9bb92a40e3b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/solver/001_base_ir.json",
+      "bytes": 22493,
+      "sha256": "11050e8d46666110ff9a371184e02b1697a874df14f4a4ae0a268d44f0df0744"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00275/case/solver/001_base_result.json",
+      "bytes": 1512,
+      "sha256": "d75d85ca2f5f44ecd9689473e9a38ffe4bd1dfd30485f7d9bb5c21ad8cfb10f8"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/execution.json",
+      "bytes": 142,
+      "sha256": "de9287faa646fd3d70ac72266e7a20145fef9e28915ad57c366a4ccdfb29c04c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/manifest.json",
+      "bytes": 4548,
+      "sha256": "8366e8d4af35156d0ee81422f9ce30623a8d2bbf2e1fc325777e792aa70de82d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/result.json",
+      "bytes": 3138,
+      "sha256": "cb770897573f61dde130f3c35a67e63fbec5023db02d9c971d125d29b4fcbc07"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/worker_summary.json",
+      "bytes": 732,
+      "sha256": "85c6ba6519e51289ab74ce003a71d116a8144d52f306e64f0fac3cbd56ac5fa4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/case_state.json",
+      "bytes": 21795,
+      "sha256": "905a991bcb377b83f2298848363e1460f31f954dd0e4546789f45158d8a5b265"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/api_calls.jsonl",
+      "bytes": 2482,
+      "sha256": "4e6fe541e607ee9bdff1d6b5e1118b3966b29f0ff87f7bd6fa4b9eee889a46a0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/events.jsonl",
+      "bytes": 845,
+      "sha256": "a4c0e6e7f3741372ebf818f832fe45b67d03182f0cc2baf47fa3c7810132f2dd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/version.json",
+      "bytes": 4992,
+      "sha256": "ed8cacc155737bf6e3b23ea166df306fff52b7ad72973e160ec82d81d6bcdb1c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/solver/001_base_ir.json",
+      "bytes": 4233,
+      "sha256": "514802d8f27cc8864260f32d0eadb4c9cc57af0d968bcf7385fa18dc2862b4e5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00289/case/solver/001_base_result.json",
+      "bytes": 433,
+      "sha256": "49b520dd14ebdd3cbe6ffda9c155f7088115f7d1d657aae27aa0bd8345b8523a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/execution.json",
+      "bytes": 142,
+      "sha256": "d57312548d04e4c2ae52df341e1c897745054b2e77810bc31a94ee50a820198a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/manifest.json",
+      "bytes": 4548,
+      "sha256": "babd95da5ceab4b8b04b8757bcf6bdbd2990ad039e143bd5e976f9beb249d101"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/result.json",
+      "bytes": 3843,
+      "sha256": "22c386639f43b85e1311293c4d33b35cf2e3a98b8bbe7be331a92a9e53537c07"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/worker_summary.json",
+      "bytes": 1084,
+      "sha256": "34b061805eb59ee4c1f2f453ff707a590a51f27a99e26c7589c6b25549e6ac88"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/case_state.json",
+      "bytes": 25298,
+      "sha256": "fb428561d5aa0cacc8e30b3dd51f44d10689f58fa03b63183cd2423fbcb3cde3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/api_calls.jsonl",
+      "bytes": 2491,
+      "sha256": "faabd23b3fe5b414be5cff4fc56f64d007b7c3c04bd39d26ad40fa8776bb96f6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/events.jsonl",
+      "bytes": 878,
+      "sha256": "c731e15d2565209153353429165167ed1d7bbbf2e4cbfe4b526e0ee2c8bdebcd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/version.json",
+      "bytes": 4992,
+      "sha256": "d1f731604e96650e1445ef2f167c7af3890f48fc3c5540feab59560dd97a0563"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/solver/001_base_ir.json",
+      "bytes": 12459,
+      "sha256": "4531834bd7f371b955c398d051e0dafa2baab33148cdc4525102b5ba9d67d61c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-B03_00461/case/solver/001_base_result.json",
+      "bytes": 751,
+      "sha256": "75db5c6b7b12bf515a90a6cc837e3df3ab17246defb5984d38125bc899d36a2b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/execution.json",
+      "bytes": 142,
+      "sha256": "82d9e3819d0a1e81b1c675b96fd446e3dccebfc1fab92009b760ad9263e7c38e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/manifest.json",
+      "bytes": 4548,
+      "sha256": "73225b4b420e49f6d40e3f6183b1554ef88acc76fefc6f696e42676395352e8c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/result.json",
+      "bytes": 5574,
+      "sha256": "ce7edfeb85911a40570dcd8f35f92fbcd4450a811361867359496368d7780c12"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/worker_summary.json",
+      "bytes": 1949,
+      "sha256": "fefd3180ae5325395628d9cdc356153e3a7b280bf2ad247a93ce9eafabb0dd53"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/case_state.json",
+      "bytes": 52032,
+      "sha256": "70e5d402baca4d1acba5eafaef78af977122feba299a4e2055e9a67648870e76"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/api_calls.jsonl",
+      "bytes": 2495,
+      "sha256": "2caaae507ae7b14e959f39e1a372cd6c9063e8dbc7a105f98051c9295efff30c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/events.jsonl",
+      "bytes": 856,
+      "sha256": "226f72041a9b3d183035a76ad9b5c0e620256ffffc051d61e81c6f810bd22447"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/version.json",
+      "bytes": 4992,
+      "sha256": "8f03d594e8642f31d4fadcc2d38cb83c8f1b99c95b222019dca6af2222c66023"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/solver/001_base_ir.json",
+      "bytes": 29694,
+      "sha256": "effb33fbb00fc7ae0ddc830876afbb331f3ff7acac686fee85bc18b4803ab714"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P009_high/case/solver/001_base_result.json",
+      "bytes": 1562,
+      "sha256": "5e5d2b91ac7e8ea170820d7c97bd014285af2e06ce098249870dddeb847c4e42"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/execution.json",
+      "bytes": 141,
+      "sha256": "b8d2167709396709321d8ce7b8919bb8f31c09666000a78c7654f5ded350aca5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/manifest.json",
+      "bytes": 4548,
+      "sha256": "7c854d1e006906e91e145ec471182051bc28cc60c809ad607a72d23910132822"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/result.json",
+      "bytes": 10727,
+      "sha256": "0144965725010b2748dfddb23248c7ae7900836bda04ccd7efd1238e9bd76a29"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/worker_summary.json",
+      "bytes": 4528,
+      "sha256": "4693d86b12d19d3967b353faf1215cf09e9b5ce96e1606db06c1266973951d67"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/case_state.json",
+      "bytes": 110773,
+      "sha256": "208ae5239637ebff00051585dadbd9119ded4c975c09d463e8497c11ae38185c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/api_calls.jsonl",
+      "bytes": 3791,
+      "sha256": "40e75d4f35f5fa5b80efa9768c4e33b96286db7a4bee64f59042c32e8a06a713"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/events.jsonl",
+      "bytes": 1488,
+      "sha256": "436a9a0fc52fedc981de99ef04df989f23accdb1991c5be59020003863b56807"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/version.json",
+      "bytes": 4992,
+      "sha256": "810ae9aa76e0a8d332a3df0f34a21f7d042272ed7daefb2331067a42649592c1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/solver/001_base_ir.json",
+      "bytes": 84702,
+      "sha256": "516418e7ef1d4daf57f4dce7cd8da04b74b6a16c0c7c07c5d4e2e85f45afb439"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P122_high/case/solver/001_base_result.json",
+      "bytes": 3875,
+      "sha256": "cb1490820caf8eacffd8d990c4cef2e923477222cb5ff9aa1fd41adee8ea9c0c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/execution.json",
+      "bytes": 151,
+      "sha256": "37ba8491a741e8252ae9cea7da02a672a9e62e4ec15393501aa0fa6ed4c7e1d3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/manifest.json",
+      "bytes": 4557,
+      "sha256": "78e8b230605d59e53925173f68b92c4f1cf3a2e777a91569f9b4026b6cd52197"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/result.json",
+      "bytes": 2252,
+      "sha256": "c38b8d63b607b99729432aeab789fbc5b2961b52fa69e3324cc8520fd9bc8ae0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/worker_summary.json",
+      "bytes": 270,
+      "sha256": "181abf07b9afa8c58310ed479c73f7beba8cee2e286d6f12c1c0b80e39eea019"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/case_state.json",
+      "bytes": 19286,
+      "sha256": "61311b8c20f78d8408bef6c277546ed17821e4b49181c68978adfd3ec2cf1e9d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/api_calls.jsonl",
+      "bytes": 1312,
+      "sha256": "dc711a980c40abd44c0147a55dff530c14723f2cae02ab67860681a33fa465aa"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/events.jsonl",
+      "bytes": 341,
+      "sha256": "888184e06fd43f561d4759e2b49150152abb4d830ecf4d661ca421939f541247"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B04_L0055_high/case/version.json",
+      "bytes": 5000,
+      "sha256": "abfa9ffb4622811518ba862f4a1caea1e8e16394e8f333d4dc29ad8b72a1f8fb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/execution.json",
+      "bytes": 153,
+      "sha256": "9b4dbb2d1a77ece8964a25558102efac6e57218183b3c9114759532bfdb3d58f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/manifest.json",
+      "bytes": 4559,
+      "sha256": "0b783cd2bb8649eae8046bfa5051e2f7c186ad6a2136026dbda10c6ce5af5575"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/result.json",
+      "bytes": 9116,
+      "sha256": "016e0d43ec1c5f6d459fc8b43b023b62e75e9810f6cbcc62c7603ecaaa499896"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/worker_summary.json",
+      "bytes": 3730,
+      "sha256": "de355a253996f1317eaa4e484f58fa24b99508b967196f9aaedaf0eb54e68cc9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/case_state.json",
+      "bytes": 93986,
+      "sha256": "e9a03af60b40f59ef01ebbc94ae06a99881b84538bb1378ce2df4ce26162387c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/api_calls.jsonl",
+      "bytes": 2549,
+      "sha256": "631a943b2fffa83030a28d85f81387bd0c606d1bd14b682619094f993b3f0393"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/events.jsonl",
+      "bytes": 857,
+      "sha256": "ae34de2a4d74cf7b7cf7f100f7a1f9f8a1a7f536e8a795f355b6964a00ce746e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/version.json",
+      "bytes": 5003,
+      "sha256": "0998e4c77f73855a027826aa7216f70eb65b74c282b77d69e540b9427c63815a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/001_base_ir.json",
+      "bytes": 67540,
+      "sha256": "b96ae3d17801980cb65b5dd6a27a5214901507cb7cab49b33f4caaeb22dcea20"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B07_L0138_expert/case/solver/001_base_result.json",
+      "bytes": 3162,
+      "sha256": "a42f7d2a3eae5c8201f579c1c1d34245ec652dd37730a76f43fb193c2fbfbe3e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/execution.json",
+      "bytes": 153,
+      "sha256": "10f4be7e18590ab985452bb7a4305f5f26b1dcd7a3755aada31b1f3fc32d0471"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/manifest.json",
+      "bytes": 4559,
+      "sha256": "1b2a829dfc2ca08eed8cb52b139f0505e4f36535bb3d9240d18067c109c85d66"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/result.json",
+      "bytes": 21272,
+      "sha256": "33444b436f9ae241d5492788c92d01254b8ce1ad96cf032cda79a1821c9dbca7"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/worker_summary.json",
+      "bytes": 9809,
+      "sha256": "3dc2ff60debe9b9639bf32604e167c46ab58da214cde9e9e8f47041e7e0031ca"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/case_state.json",
+      "bytes": 167175,
+      "sha256": "cdb49312fe80c4b4a46cf209f123e97d4b727108ed8b0653ced2ba69fc3e6dc3"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/api_calls.jsonl",
+      "bytes": 2556,
+      "sha256": "4a27dc9eca5c3412bd41b4b776f03b991769325577209ee41c582443c807e00d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/events.jsonl",
+      "bytes": 898,
+      "sha256": "31e1f69e71430f08a963259f7c4bbfd0106d0b0d94fc5c92f1358c5f7afa5138"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/version.json",
+      "bytes": 5002,
+      "sha256": "c0e65bea09a6469f6e867b36fa3a469ca8196ae424101f1182f53ed85e8506be"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/001_base_ir.json",
+      "bytes": 1942678,
+      "sha256": "74038b0c9e6da31221a01b35ba073173cf327d11ba1dc8db4a69f596cbe52063"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B08_L0122_expert/case/solver/001_base_result.json",
+      "bytes": 8823,
+      "sha256": "f62e21acd5b450a2bd54abb4915c7be4d63d9afd5589fe63019bfe259a75f2f6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/execution.json",
+      "bytes": 151,
+      "sha256": "26da37b90377fc9f0f664af1146416f97174463f55adacb911b45a437e6b199e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/manifest.json",
+      "bytes": 4557,
+      "sha256": "9569e64905273726878a67461e9614f04d62627f402d558f99690caca902b7c1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/result.json",
+      "bytes": 12558,
+      "sha256": "8ae28e4138666c0adad2365b03dddc144bec86fa48ec7c2fa64599785daa9d9d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/worker_summary.json",
+      "bytes": 5450,
+      "sha256": "73f77ade6cbb1e23fad3a9de89949b3a0a1a77cea449bcb1cce8a214b0c77999"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/case_state.json",
+      "bytes": 126197,
+      "sha256": "907b0a498bc6fdb13d6c4ddfef885d9b09a3f72576f92589ff68b72ad6a47687"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/api_calls.jsonl",
+      "bytes": 2548,
+      "sha256": "313691e8c94a309aaff9a849ec21d0e7dddc802b1f0d66063df116ae1653e829"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/events.jsonl",
+      "bytes": 868,
+      "sha256": "5bf2e6d13398b15cfb531511d822f28fb30def11dc5edd725ec2ed1e77a6a852"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/version.json",
+      "bytes": 5001,
+      "sha256": "7d6ed19f910e3e9038b651b149b6222a810ec81a0804e1c10f627cc756fb9b3a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/solver/001_base_ir.json",
+      "bytes": 95427,
+      "sha256": "760cbe57d6ab49de7fac47914fee0e0744be035dca27b2c8f330eb8f1297315c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-P52_B09_L0055_high/case/solver/001_base_result.json",
+      "bytes": 4712,
+      "sha256": "a3607b022ab99ab76dc4d92a4d04fdd2f1590eaf49eace6b8ab490e8faadde65"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/execution.json",
+      "bytes": 166,
+      "sha256": "c4b0694e3c60d2c45ce09169f70840b6eb56505425f844dd203eb7676b09a573"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/manifest.json",
+      "bytes": 4572,
+      "sha256": "4c29a23b9c47376b1e4e134861c03b6099f4824aa17d882169fdf3e461e3c1d5"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/result.json",
+      "bytes": 5377,
+      "sha256": "76c260f4395f16485d7df9285de186c45d013d645cbafe5d8d69e4ebc4d2f10c"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/worker_summary.json",
+      "bytes": 1881,
+      "sha256": "50cfbfc7cbd70abbb4cebef8b448b7c70a6299d9a5e0fb08ce864e449bf4a82e"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/case_state.json",
+      "bytes": 51410,
+      "sha256": "95db487b87d77b04dcf79229681285025b80350a9ad81c90579b3e889253b5be"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/api_calls.jsonl",
+      "bytes": 2637,
+      "sha256": "a9420f67261fcf21ad93d46b63a8ae5f4ec22c0cff8e5c04927f3a0faeee244d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/events.jsonl",
+      "bytes": 863,
+      "sha256": "8524402cf46ec07adb8ba397d48001a2b635319f9661c6b667a95defbe35de9d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/version.json",
+      "bytes": 5016,
+      "sha256": "1f86a6da15883338c85a6adc81e18236a2b909af20e4791ccf760a183b65cec9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/001_base_ir.json",
+      "bytes": 30440,
+      "sha256": "64963c50f9f8f6e382174cf5522e1800020842103d8173a4de8b6757bdfd14cd"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert/case/solver/001_base_result.json",
+      "bytes": 1468,
+      "sha256": "e6a9ed7875d349be038dd46a8b0017efa99dac9f74b687e38ee4fa10d01c77a6"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/execution.json",
+      "bytes": 186,
+      "sha256": "2e8447893f7598aca5fd7f6cb26b9ae1593e9f7e9096c23eff139e9a047fd870"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/manifest.json",
+      "bytes": 4592,
+      "sha256": "efd70ad9fb0735f41ee62cf8ec8514771ce7e9538427528148c8dd44f7161237"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/result.json",
+      "bytes": 5921,
+      "sha256": "46de26ee08dd3bcabfbebe78126f038660bf93b7ebbe70223e6ae925ffb5b295"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/worker_summary.json",
+      "bytes": 2167,
+      "sha256": "fe584fb1d0e57c27068ae21b9985156c0a1a792823f0c9ca0b8712d35a4ede0d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/case_state.json",
+      "bytes": 50851,
+      "sha256": "94fcd06518315f26ff7f4b82a7ae0118a743abf9d5a416d025320ea3b9ca965a"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/api_calls.jsonl",
+      "bytes": 2757,
+      "sha256": "f5b220b6610a444c775d05f5a59cf91c6fa816887702da891071a628fd2086a2"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/events.jsonl",
+      "bytes": 892,
+      "sha256": "c1e82325d937fbd6741e2e5b0a33ebfb72a17810be50d73dd785990aafbb163f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/version.json",
+      "bytes": 5035,
+      "sha256": "8660790de6746c4915a76501e890c494a276209af4ce2d5c498f3a0bd8cbd586"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/001_base_ir.json",
+      "bytes": 24534,
+      "sha256": "693b121c9f46101c015b38aa15ce2a7655a6b9b73200ff21b4e4b21bd61786d1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life/case/solver/001_base_result.json",
+      "bytes": 1726,
+      "sha256": "227ccb2f13e3abd7b796b1af56ee58ca1fb9a6d9a25d9b9d12739dba23e83fe1"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/execution.json",
+      "bytes": 154,
+      "sha256": "d397626ec2cd3b49b7837c8126c8b31d0a114ad411412d60c0d5dc4234d7ca94"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/manifest.json",
+      "bytes": 4560,
+      "sha256": "ff382eef067807e11406f5bcc3763a3c3e0ac991a25081b52fb3b1ca6fad8121"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/result.json",
+      "bytes": 7885,
+      "sha256": "22c385232fdbd0c0329e840c2ff11efc46c213380e2d7970d08d755902c73375"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/worker_summary.json",
+      "bytes": 3119,
+      "sha256": "9905560623c9a4c0a823eb152dbd8b5425d7253f4808f32be952876e04cc7130"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/case_state.json",
+      "bytes": 86251,
+      "sha256": "b0851df30cc79c2b82aefea7387c5edfc93b8404664347a908684a0e504704f9"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/api_calls.jsonl",
+      "bytes": 3885,
+      "sha256": "6f5cc4757f8eb6a20059443e2eb1fb752d9985c75237ce858a02177247e75e6b"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/events.jsonl",
+      "bytes": 1518,
+      "sha256": "657a1a02e2827ca29aabd48c209732b433570ebf90b76ba1a20a4402455b6fd4"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/version.json",
+      "bytes": 5004,
+      "sha256": "e9e89a8915e673ec6f519094f28019070312c7dba3b2f9b2d684a166cb6b5d5d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/solver/001_base_ir.json",
+      "bytes": 62347,
+      "sha256": "7c5bf1405527122325175c60868ed2fc8bb4c4e77eca793fdb0735c7e3f9787f"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2607_001/case/solver/001_base_result.json",
+      "bytes": 2604,
+      "sha256": "9e290d9b57a137e29e5153c930f9f3688f81e99c068ca140082955ae12cad786"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/execution.json",
+      "bytes": 182,
+      "sha256": "8ce45ae4cd726d8ead35ee3e04314025b884ccb3892543c46d0447cf91db8c18"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/manifest.json",
+      "bytes": 4588,
+      "sha256": "74bf15c3590ef12199405ff61e457075b4f260da6eed27c70d42030686e23d17"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/result.json",
+      "bytes": 11006,
+      "sha256": "ef203813d998ef167ab002de637f76816f3bc240df9645159c04fd66a7bfb874"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/worker_summary.json",
+      "bytes": 4711,
+      "sha256": "9ae93320cd8fcab7367a49ac914c34263fd32c5913fd4c5a86c0133587155e42"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/isolation_verified.json",
+      "bytes": 313,
+      "sha256": "3bfb1dc5e1a66c5592d02e3fa58b9dc930cb9d2f4aee2f74a3617b36c5ecc97d"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/case_state.json",
+      "bytes": 67899,
+      "sha256": "1aec05ad320cf83596c15e22d6ebd6d335577f705dc64ac045ea9d9c6092f5fa"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/api_calls.jsonl",
+      "bytes": 2735,
+      "sha256": "fa80f4e6ca43118c008bd27e23f5f033784ec62490d469ab774a9ac897b74e63"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/events.jsonl",
+      "bytes": 910,
+      "sha256": "3dd297c8c1c2ed56359ec9512f43149e16b6c182400babaa6dd086d97de0dc25"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/version.json",
+      "bytes": 5032,
+      "sha256": "e1ff99c38c044154f5ff2ad92b8849e7ead1b6414f19c57b06682e2f313acedb"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/001_base_ir.json",
+      "bytes": 52562,
+      "sha256": "a38584191b669c64db97bcd1722bb069e108f1b2e72249b6c2396b97d32ceaa0"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/swagent/ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee/case/solver/001_base_result.json",
+      "bytes": 4110,
+      "sha256": "c092d1d3783e1224ee738db1f6794a962322af859e66266b63d6cc82fbe50f0d"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/batch_manifest.json",
+      "bytes": 4626,
+      "sha256": "fdad82033aececd3886f93d5d175cca5cb522be4c7a1a27fbc998b92504bb86d"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/completion.json",
+      "bytes": 390,
+      "sha256": "897be17fb317fa064b976b994dfe402701ad43e2843c547b3afb2838832ae28a"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/objective_scores.json",
+      "bytes": 4056,
+      "sha256": "26180503c457609f98f4cb09b247754351ea38a15f4e608e25050ffeff0ba39f"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/objective_scores.csv",
+      "bytes": 518,
+      "sha256": "2a25c55f9fafb733d26eaa3dd9fc40c9bee94b8483eafd338b308ee14ca5bf49"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/objective_summary.json",
+      "bytes": 890,
+      "sha256": "d76cf494fca6e45590fa1ce6b9570639238835e5edc59e8187fda0cc66570d1f"
+    },
+    {
+      "file": "orlm_c3/batches/smoke_b01_v1/verification.json",
+      "bytes": 1673,
+      "sha256": "6fb895a57185c51025d0246ababd0e0f969275bb2b2079694ed31f30e8327f96"
+    },
+    {
+      "file": "orlm_c3/batches/main20_v1/runtime_review.md",
+      "bytes": 4310,
+      "sha256": "97e92da27a0797086b700a258e7ea7620cca8c427137f69afb2c2ba43ab50abe"
+    }
+  ]
+}

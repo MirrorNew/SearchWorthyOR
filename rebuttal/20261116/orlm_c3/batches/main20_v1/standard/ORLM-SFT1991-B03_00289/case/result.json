@@ -1,0 +1,367 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "F1": 10,
+      "F2": 10,
+      "F3": 20,
+      "P1": 0,
+      "P2": 10,
+      "P3": 10,
+      "Y1": 0,
+      "Y2": 1,
+      "Y3": 1,
+      "Q": 5
+    },
+    "objective": {
+      "value": 690.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.006000518798828125
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "F1": 10,
+      "F2": 10,
+      "F3": 20,
+      "P1": 0,
+      "P2": 10,
+      "P3": 10,
+      "Y1": 0,
+      "Y2": 1,
+      "Y3": 1,
+      "Q": 5
+    },
+    "objective": {
+      "value": 690.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.006000518798828125
+  },
+  "base_solution": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "F1": 10,
+      "F2": 10,
+      "F3": 20,
+      "P1": 0,
+      "P2": 10,
+      "P3": 10,
+      "Y1": 0,
+      "Y2": 1,
+      "Y3": 1,
+      "Q": 5
+    },
+    "objective": {
+      "value": 690.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0049991607666015625
+  },
+  "model": {
+    "variables": [
+      {
+        "id": "F1",
+        "type": "INTEGER",
+        "lb": 10,
+        "ub": 24
+      },
+      {
+        "id": "F2",
+        "type": "INTEGER",
+        "lb": 10,
+        "ub": 24
+      },
+      {
+        "id": "F3",
+        "type": "INTEGER",
+        "lb": 10,
+        "ub": 24
+      },
+      {
+        "id": "P1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 10
+      },
+      {
+        "id": "P2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 10
+      },
+      {
+        "id": "P3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 10
+      },
+      {
+        "id": "Y1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "Y2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "Y3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "Q",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 10
+      }
+    ],
+    "objective": {
+      "sense": "max",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "F1": 12,
+        "F2": 12,
+        "F3": 12,
+        "P1": 11,
+        "P2": 11,
+        "P3": 11,
+        "Q": -2
+      }
+    },
+    "constraints": [
+      {
+        "name": "P1_ge_3Y1",
+        "coefficients": {
+          "P1": 1,
+          "Y1": -3
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "P1_le_10Y1",
+        "coefficients": {
+          "P1": 1,
+          "Y1": -10
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "P2_ge_3Y2",
+        "coefficients": {
+          "P2": 1,
+          "Y2": -3
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "P2_le_10Y2",
+        "coefficients": {
+          "P2": 1,
+          "Y2": -10
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "P3_ge_3Y3",
+        "coefficients": {
+          "P3": 1,
+          "Y3": -3
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "P3_le_10Y3",
+        "coefficients": {
+          "P3": 1,
+          "Y3": -10
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "minimum_total_input",
+        "coefficients": {
+          "F1": 1,
+          "F2": 1,
+          "F3": 1,
+          "P1": 1,
+          "P2": 1,
+          "P3": 1
+        },
+        "sense": ">=",
+        "rhs": 50
+      },
+      {
+        "name": "environment_limit",
+        "coefficients": {
+          "F1": 1,
+          "F2": 1,
+          "F3": 1,
+          "P1": 1,
+          "P2": 1,
+          "P3": 1
+        },
+        "sense": "<=",
+        "rhs": 60
+      },
+      {
+        "name": "minimum_fertilizer_gap",
+        "coefficients": {
+          "F1": 1,
+          "F2": 1,
+          "F3": 1,
+          "P1": -1,
+          "P2": -1,
+          "P3": -1
+        },
+        "sense": ">=",
+        "rhs": 10
+      },
+      {
+        "name": "budget_limit",
+        "coefficients": {
+          "F1": 7,
+          "F2": 7,
+          "F3": 7,
+          "P1": 9,
+          "P2": 9,
+          "P3": 9
+        },
+        "sense": "<=",
+        "rhs": 520
+      },
+      {
+        "name": "weekly_water_limit",
+        "coefficients": {
+          "F1": 2,
+          "F2": 2,
+          "F3": 2,
+          "P1": 1,
+          "P2": 1,
+          "P3": 1
+        },
+        "sense": "<=",
+        "rhs": 100
+      },
+      {
+        "name": "pesticide_risk_excess",
+        "coefficients": {
+          "P1": 1,
+          "P2": 1,
+          "P3": 1,
+          "Q": -1
+        },
+        "sense": "<=",
+        "rhs": 15
+      }
+    ]
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": {
+    "search_needed": false,
+    "reason": "The task is a self-contained operations research optimization problem with all parameters, data files, constraints, and objective supplied in the prompt and base model; no external public-web information is required to build the final model.",
+    "queries": []
+  },
+  "unresolved": [
+    "逐小时作业排程的显式槽位约束未纳入最终MILP；本模型聚焦与目标直接相关的投入品分配，且已给出的最优投入方案存在可行排程，不影响最优净收益。"
+  ],
+  "final_modeling_attempted": true,
+  "final_modeling_completed": true,
+  "resources": {
+    "model": 3,
+    "search": 0,
+    "read": 0,
+    "solve": 2,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 480.3279999999795,
+  "usage": {
+    "calls": 3,
+    "model_calls": 3,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 480.2029999999795,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 18493,
+    "known_prompt_tokens": 18493,
+    "completion_tokens": 61739,
+    "known_completion_tokens": 61739,
+    "total_tokens": 80232,
+    "known_total_tokens": 80232,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 80232,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

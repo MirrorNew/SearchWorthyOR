@@ -1,0 +1,119 @@
+{
+  "version": "i01-lite-007-c2fix-002-format001",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "F1": 10,
+      "F2": 10,
+      "F3": 20,
+      "P1": 0,
+      "P2": 10,
+      "P3": 10,
+      "y1": 0,
+      "y2": 1,
+      "y3": 1,
+      "E": 5
+    },
+    "objective": {
+      "value": 690.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0039997100830078125
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "F1": 10,
+      "F2": 10,
+      "F3": 20,
+      "P1": 0,
+      "P2": 10,
+      "P3": 10,
+      "y1": 0,
+      "y2": 1,
+      "y3": 1,
+      "E": 5
+    },
+    "objective": {
+      "value": 690.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0039997100830078125
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "unresolved": [],
+  "update_completed": true,
+  "pending_update_feedback": null,
+  "acquisition_stop": null,
+  "final_modeling_attempted": false,
+  "final_modeling_completed": false,
+  "maintenance_errors": [],
+  "resources": {
+    "model": 2,
+    "search": 0,
+    "read": 0,
+    "solve": 1,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 341.85899999999674,
+  "usage": {
+    "calls": 2,
+    "model_calls": 2,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 341.7179999999935,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 31197,
+    "known_prompt_tokens": 31197,
+    "completion_tokens": 46724,
+    "known_completion_tokens": 46724,
+    "total_tokens": 77921,
+    "known_total_tokens": 77921,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 77921,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "acquisition_mode": "online",
+  "acquisition_enabled": true,
+  "acquisition_disabled": false,
+  "disabled_acquisition_requests": 0,
+  "acquisition_stop_cause": null
+}

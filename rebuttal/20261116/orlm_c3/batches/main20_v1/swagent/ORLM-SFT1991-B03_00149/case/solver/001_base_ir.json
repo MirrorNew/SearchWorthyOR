@@ -1,0 +1,1004 @@
+{
+  "variables": [
+    {
+      "id": "q1",
+      "type": "INTEGER",
+      "lb": 19.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "q2",
+      "type": "INTEGER",
+      "lb": 19.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "q3",
+      "type": "INTEGER",
+      "lb": 19.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "q4",
+      "type": "INTEGER",
+      "lb": 19.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "q5",
+      "type": "INTEGER",
+      "lb": 19.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "new1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 9.0,
+      "unit": "1"
+    },
+    {
+      "id": "new2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 10.0,
+      "unit": "1"
+    },
+    {
+      "id": "new3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 11.0,
+      "unit": "1"
+    },
+    {
+      "id": "new4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 9.0,
+      "unit": "1"
+    },
+    {
+      "id": "new5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 12.0,
+      "unit": "1"
+    },
+    {
+      "id": "old1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "old2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "old3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "old4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "old5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 71.0,
+      "unit": "1"
+    },
+    {
+      "id": "acc1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 0.0,
+      "unit": "1"
+    },
+    {
+      "id": "acc2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "acc3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "acc4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "acc5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "tot1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "tot2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "tot3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "tot4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "tot5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "avail1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "avail2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "avail3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "avail4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "avail5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "pend1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "pend2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "pend3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "pend4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "pend5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 367.0,
+      "unit": "1"
+    },
+    {
+      "id": "cash1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 140.0,
+      "unit": "1"
+    },
+    {
+      "id": "cash2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 210.0,
+      "unit": "1"
+    },
+    {
+      "id": "cash3",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 300.0,
+      "unit": "1"
+    },
+    {
+      "id": "cash4",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 395.0,
+      "unit": "1"
+    },
+    {
+      "id": "cash5",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 525.0,
+      "unit": "1"
+    }
+  ],
+  "objective": {
+    "direction": "min",
+    "terms": {
+      "q1": 1.0,
+      "q2": 1.0,
+      "q3": 1.0,
+      "q4": 1.0,
+      "q5": 1.0
+    },
+    "constant": 0.0,
+    "unit": "objective_units"
+  },
+  "constraints": [
+    {
+      "name": "C001",
+      "terms": {
+        "q1": 1.0,
+        "new1": -1.0,
+        "old1": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C001"
+    },
+    {
+      "name": "C002",
+      "terms": {
+        "q2": 1.0,
+        "new2": -1.0,
+        "old2": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C002"
+    },
+    {
+      "name": "C003",
+      "terms": {
+        "q3": 1.0,
+        "new3": -1.0,
+        "old3": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C003"
+    },
+    {
+      "name": "C004",
+      "terms": {
+        "q4": 1.0,
+        "new4": -1.0,
+        "old4": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C004"
+    },
+    {
+      "name": "C005",
+      "terms": {
+        "q5": 1.0,
+        "new5": -1.0,
+        "old5": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C005"
+    },
+    {
+      "name": "C006",
+      "terms": {
+        "new1": 5.0,
+        "q1": -2.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C006"
+    },
+    {
+      "name": "C007",
+      "terms": {
+        "new2": 5.0,
+        "q2": -2.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C007"
+    },
+    {
+      "name": "C008",
+      "terms": {
+        "new3": 5.0,
+        "q3": -2.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C008"
+    },
+    {
+      "name": "C009",
+      "terms": {
+        "new4": 5.0,
+        "q4": -2.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C009"
+    },
+    {
+      "name": "C010",
+      "terms": {
+        "new5": 5.0,
+        "q5": -2.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C010"
+    },
+    {
+      "name": "C011",
+      "terms": {
+        "new1": 1.0
+      },
+      "sense": "<=",
+      "rhs": 9.0,
+      "source": "C011"
+    },
+    {
+      "name": "C012",
+      "terms": {
+        "new2": 1.0
+      },
+      "sense": "<=",
+      "rhs": 10.0,
+      "source": "C012"
+    },
+    {
+      "name": "C013",
+      "terms": {
+        "new3": 1.0
+      },
+      "sense": "<=",
+      "rhs": 11.0,
+      "source": "C013"
+    },
+    {
+      "name": "C014",
+      "terms": {
+        "new4": 1.0
+      },
+      "sense": "<=",
+      "rhs": 9.0,
+      "source": "C014"
+    },
+    {
+      "name": "C015",
+      "terms": {
+        "new5": 1.0
+      },
+      "sense": "<=",
+      "rhs": 12.0,
+      "source": "C015"
+    },
+    {
+      "name": "C016",
+      "terms": {
+        "new1": 1.0,
+        "acc1": 1.0
+      },
+      "sense": "<=",
+      "rhs": 14.0,
+      "source": "C016"
+    },
+    {
+      "name": "C017",
+      "terms": {
+        "new2": 1.0,
+        "acc2": 1.0
+      },
+      "sense": "<=",
+      "rhs": 19.0,
+      "source": "C017"
+    },
+    {
+      "name": "C018",
+      "terms": {
+        "new3": 1.0,
+        "acc3": 1.0
+      },
+      "sense": "<=",
+      "rhs": 22.0,
+      "source": "C018"
+    },
+    {
+      "name": "C019",
+      "terms": {
+        "new4": 1.0,
+        "acc4": 1.0
+      },
+      "sense": "<=",
+      "rhs": 21.0,
+      "source": "C019"
+    },
+    {
+      "name": "C020",
+      "terms": {
+        "new5": 1.0,
+        "acc5": 1.0
+      },
+      "sense": "<=",
+      "rhs": 24.0,
+      "source": "C020"
+    },
+    {
+      "name": "C021",
+      "terms": {
+        "avail1": 1.0
+      },
+      "sense": ">=",
+      "rhs": 20.0,
+      "source": "C021"
+    },
+    {
+      "name": "C022",
+      "terms": {
+        "avail2": 1.0
+      },
+      "sense": ">=",
+      "rhs": 38.0,
+      "source": "C022"
+    },
+    {
+      "name": "C023",
+      "terms": {
+        "avail3": 1.0
+      },
+      "sense": ">=",
+      "rhs": 58.0,
+      "source": "C023"
+    },
+    {
+      "name": "C024",
+      "terms": {
+        "avail4": 1.0
+      },
+      "sense": ">=",
+      "rhs": 78.0,
+      "source": "C024"
+    },
+    {
+      "name": "C025",
+      "terms": {
+        "avail5": 1.0
+      },
+      "sense": ">=",
+      "rhs": 105.0,
+      "source": "C025"
+    },
+    {
+      "name": "C026",
+      "terms": {
+        "avail1": 1.0,
+        "new1": -1.0,
+        "acc1": -1.0
+      },
+      "sense": "==",
+      "rhs": 12.0,
+      "source": "C026"
+    },
+    {
+      "name": "C027",
+      "terms": {
+        "avail2": 1.0,
+        "avail1": -1.0,
+        "new2": -1.0,
+        "acc2": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C027"
+    },
+    {
+      "name": "C028",
+      "terms": {
+        "avail3": 1.0,
+        "avail2": -1.0,
+        "new3": -1.0,
+        "acc3": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C028"
+    },
+    {
+      "name": "C029",
+      "terms": {
+        "avail4": 1.0,
+        "avail3": -1.0,
+        "new4": -1.0,
+        "acc4": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C029"
+    },
+    {
+      "name": "C030",
+      "terms": {
+        "avail5": 1.0,
+        "avail4": -1.0,
+        "new5": -1.0,
+        "acc5": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C030"
+    },
+    {
+      "name": "C031",
+      "terms": {
+        "pend1": 1.0,
+        "old1": -1.0,
+        "acc1": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C031"
+    },
+    {
+      "name": "C032",
+      "terms": {
+        "pend2": 1.0,
+        "pend1": -1.0,
+        "old2": -1.0,
+        "acc2": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C032"
+    },
+    {
+      "name": "C033",
+      "terms": {
+        "pend3": 1.0,
+        "pend2": -1.0,
+        "old3": -1.0,
+        "acc3": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C033"
+    },
+    {
+      "name": "C034",
+      "terms": {
+        "pend4": 1.0,
+        "pend3": -1.0,
+        "old4": -1.0,
+        "acc4": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C034"
+    },
+    {
+      "name": "C035",
+      "terms": {
+        "pend5": 1.0,
+        "pend4": -1.0,
+        "old5": -1.0,
+        "acc5": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C035"
+    },
+    {
+      "name": "C036",
+      "terms": {
+        "tot1": 1.0,
+        "q1": -1.0
+      },
+      "sense": "==",
+      "rhs": 12.0,
+      "source": "C036"
+    },
+    {
+      "name": "C037",
+      "terms": {
+        "tot2": 1.0,
+        "tot1": -1.0,
+        "q2": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C037"
+    },
+    {
+      "name": "C038",
+      "terms": {
+        "tot3": 1.0,
+        "tot2": -1.0,
+        "q3": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C038"
+    },
+    {
+      "name": "C039",
+      "terms": {
+        "tot4": 1.0,
+        "tot3": -1.0,
+        "q4": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C039"
+    },
+    {
+      "name": "C040",
+      "terms": {
+        "tot5": 1.0,
+        "tot4": -1.0,
+        "q5": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C040"
+    },
+    {
+      "name": "C041",
+      "terms": {
+        "tot1": 1.0,
+        "avail1": -1.0,
+        "pend1": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C041"
+    },
+    {
+      "name": "C042",
+      "terms": {
+        "tot2": 1.0,
+        "avail2": -1.0,
+        "pend2": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C042"
+    },
+    {
+      "name": "C043",
+      "terms": {
+        "tot3": 1.0,
+        "avail3": -1.0,
+        "pend3": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C043"
+    },
+    {
+      "name": "C044",
+      "terms": {
+        "tot4": 1.0,
+        "avail4": -1.0,
+        "pend4": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C044"
+    },
+    {
+      "name": "C045",
+      "terms": {
+        "tot5": 1.0,
+        "avail5": -1.0,
+        "pend5": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C045"
+    },
+    {
+      "name": "C046",
+      "terms": {
+        "acc1": 1.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C046"
+    },
+    {
+      "name": "C047",
+      "terms": {
+        "acc2": 1.0,
+        "pend1": -1.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C047"
+    },
+    {
+      "name": "C048",
+      "terms": {
+        "acc3": 1.0,
+        "pend2": -1.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C048"
+    },
+    {
+      "name": "C049",
+      "terms": {
+        "acc4": 1.0,
+        "pend3": -1.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C049"
+    },
+    {
+      "name": "C050",
+      "terms": {
+        "acc5": 1.0,
+        "pend4": -1.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C050"
+    },
+    {
+      "name": "C051",
+      "terms": {
+        "cash1": 1.0,
+        "new1": 5.0,
+        "old1": 3.0,
+        "acc1": 1.0
+      },
+      "sense": "==",
+      "rhs": 140.0,
+      "source": "C051"
+    },
+    {
+      "name": "C052",
+      "terms": {
+        "cash2": 1.0,
+        "cash1": -1.0,
+        "new2": 5.0,
+        "old2": 3.0,
+        "acc2": 1.0
+      },
+      "sense": "==",
+      "rhs": 70.0,
+      "source": "C052"
+    },
+    {
+      "name": "C053",
+      "terms": {
+        "cash3": 1.0,
+        "cash2": -1.0,
+        "new3": 5.0,
+        "old3": 3.0,
+        "acc3": 1.0
+      },
+      "sense": "==",
+      "rhs": 90.0,
+      "source": "C053"
+    },
+    {
+      "name": "C054",
+      "terms": {
+        "cash4": 1.0,
+        "cash3": -1.0,
+        "new4": 5.0,
+        "old4": 3.0,
+        "acc4": 1.0
+      },
+      "sense": "==",
+      "rhs": 95.0,
+      "source": "C054"
+    },
+    {
+      "name": "C055",
+      "terms": {
+        "cash5": 1.0,
+        "cash4": -1.0,
+        "new5": 5.0,
+        "old5": 3.0,
+        "acc5": 1.0
+      },
+      "sense": "==",
+      "rhs": 130.0,
+      "source": "C055"
+    },
+    {
+      "name": "C056",
+      "terms": {
+        "cash1": 1.0
+      },
+      "sense": ">=",
+      "rhs": 50.0,
+      "source": "C056"
+    },
+    {
+      "name": "C057",
+      "terms": {
+        "cash2": 1.0
+      },
+      "sense": ">=",
+      "rhs": 40.0,
+      "source": "C057"
+    },
+    {
+      "name": "C058",
+      "terms": {
+        "cash3": 1.0
+      },
+      "sense": ">=",
+      "rhs": 35.0,
+      "source": "C058"
+    },
+    {
+      "name": "C059",
+      "terms": {
+        "cash4": 1.0
+      },
+      "sense": ">=",
+      "rhs": 35.0,
+      "source": "C059"
+    },
+    {
+      "name": "C060",
+      "terms": {
+        "cash5": 1.0
+      },
+      "sense": ">=",
+      "rhs": 70.0,
+      "source": "C060"
+    },
+    {
+      "name": "C061",
+      "terms": {
+        "tot5": 1.0
+      },
+      "sense": ">=",
+      "rhs": 60.0,
+      "source": "C061"
+    }
+  ],
+  "parameters": {},
+  "derivations": [],
+  "contribution_ids": [
+    "direction",
+    "objective",
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C006",
+    "C007",
+    "C008",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C013",
+    "C014",
+    "C015",
+    "C016",
+    "C017",
+    "C018",
+    "C019",
+    "C020",
+    "C021",
+    "C022",
+    "C023",
+    "C024",
+    "C025",
+    "C026",
+    "C027",
+    "C028",
+    "C029",
+    "C030",
+    "C031",
+    "C032",
+    "C033",
+    "C034",
+    "C035",
+    "C036",
+    "C037",
+    "C038",
+    "C039",
+    "C040",
+    "C041",
+    "C042",
+    "C043",
+    "C044",
+    "C045",
+    "C046",
+    "C047",
+    "C048",
+    "C049",
+    "C050",
+    "C051",
+    "C052",
+    "C053",
+    "C054",
+    "C055",
+    "C056",
+    "C057",
+    "C058",
+    "C059",
+    "C060",
+    "C061"
+  ]
+}

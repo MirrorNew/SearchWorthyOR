@@ -1,0 +1,10 @@
+{
+  "status": "INFEASIBLE",
+  "solver_status": 2,
+  "feasible": false,
+  "actions": null,
+  "objective": null,
+  "conflict_constraints": [],
+  "solver": "COPT",
+  "solver_seconds": 0.00099945068359375
+}

@@ -1,0 +1,551 @@
+{
+  "batch": "main20_v1",
+  "pass": true,
+  "attempts": 40,
+  "all_attempts_terminated": true,
+  "unchanged_code_files": 38,
+  "unchanged_public_source_files": 130,
+  "paired_inputs_and_configs_match": true,
+  "unchanged_reference_answer_files": 20,
+  "public_cases_sha256": "e7818e7338a9bc24170f86d256640fe6e7fa7a7141a3f6608c7bd4e0bc7c2bae",
+  "observed_model_calls": {
+    "deepseek-flash": 90
+  },
+  "scope": "Checks recorded project-root file access after public input loading; not an OS-wide filesystem sandbox or business-feasibility certificate.",
+  "runs": [
+    {
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00054",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00182",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00197",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00149",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00206",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 1
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00230",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00275",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00289",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00461",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P009_high",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P122_high",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {}
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B07_L0138_expert",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 6,
+      "additional_denied_accesses": [
+        {
+          "event": "os.listdir",
+          "path": "D:\\LLM-CodexProject\\SWAgent-for-ICLR\\rebuttal\\20261116\\orlm_c3",
+          "allowed": false
+        }
+      ],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B08_L0122_expert",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B09_L0055_high",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 1
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "method": "standard",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 3
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B01_00413",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00054",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 1
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00182",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B02_00197",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00149",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00206",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00230",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00275",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00289",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-B03_00461",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P009_high",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P122_high",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 6,
+      "additional_denied_accesses": [
+        {
+          "event": "os.listdir",
+          "path": "D:\\LLM-CodexProject\\SWAgent-for-ICLR\\rebuttal\\20261116\\orlm_c3",
+          "allowed": false
+        }
+      ],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {}
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B07_L0138_expert",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 6,
+      "additional_denied_accesses": [
+        {
+          "event": "os.listdir",
+          "path": "D:\\LLM-CodexProject\\SWAgent-for-ICLR\\rebuttal\\20261116\\orlm_c3",
+          "allowed": false
+        }
+      ],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B08_L0122_expert",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-P52_B09_L0055_high",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    },
+    {
+      "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+      "method": "swagent",
+      "input_match": true,
+      "isolation_probes_passed": true,
+      "denied_accesses": 5,
+      "additional_denied_accesses": [],
+      "execution_returncode": 0,
+      "watchdog_timeout": false,
+      "observed_models": {
+        "deepseek-flash": 2
+      }
+    }
+  ]
+}

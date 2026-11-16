@@ -1,0 +1,794 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "x_P1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P1_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P1_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P2_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P2_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P3_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P3_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P4_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P4_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P5_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P5_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P6_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P6_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P7_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P7_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P8_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P8_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "direction": "max",
+      "terms": {
+        "x_P1": 245,
+        "x_P2": 315,
+        "x_P3": 285,
+        "x_P4": 230,
+        "x_P5": 300,
+        "x_P6": 175,
+        "x_P7": 290,
+        "x_P8": 270
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T014",
+        "T017",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "x_P1": 180,
+          "x_P2": 240,
+          "x_P3": 210,
+          "x_P4": 160,
+          "x_P5": 260,
+          "x_P6": 140,
+          "x_P7": 220,
+          "x_P8": 190
+        },
+        "sense": "<=",
+        "rhs": 1150,
+        "citations": [
+          "T030",
+          "T037",
+          "T200"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "x_P1": 18,
+          "x_P2": 30,
+          "x_P3": 16,
+          "x_P4": 12,
+          "x_P5": 25,
+          "x_P6": 10,
+          "x_P7": 20,
+          "x_P8": 14
+        },
+        "sense": "<=",
+        "rhs": 110,
+        "citations": [
+          "T031",
+          "T037",
+          "T201"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "x_P1": 12,
+          "x_P2": 8,
+          "x_P3": 28,
+          "x_P4": 24,
+          "x_P5": 15,
+          "x_P6": 18,
+          "x_P7": 6,
+          "x_P8": 10
+        },
+        "sense": "<=",
+        "rhs": 92,
+        "citations": [
+          "T032",
+          "T037",
+          "T202"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "x_P1": 6,
+          "x_P2": 10,
+          "x_P3": 4,
+          "x_P4": 8,
+          "x_P5": 3,
+          "x_P6": 5,
+          "x_P7": 26,
+          "x_P8": 30
+        },
+        "sense": "<=",
+        "rhs": 68,
+        "citations": [
+          "T033",
+          "T037",
+          "T203"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "x_P1": 7,
+          "x_P2": 6,
+          "x_P3": 5,
+          "x_P4": 8,
+          "x_P5": 3,
+          "x_P6": 2,
+          "x_P7": 7,
+          "x_P8": 9
+        },
+        "sense": "<=",
+        "rhs": 31,
+        "citations": [
+          "T034",
+          "T037",
+          "T204"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "x_P1": 1,
+          "x_P2": 1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T044"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "x_P3": 1,
+          "x_P4": 1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T045"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "x_P5": 1,
+          "x_P6": 1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T046"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "x_P7": 1,
+          "x_P8": 1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T047"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "x_P2": 1,
+          "x_P3": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T048",
+          "T054"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "x_P5": 1,
+          "x_P8": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T049",
+          "T054"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "x_P1": 1,
+          "x_P2": 1,
+          "x_P3": 1,
+          "x_P4": 1,
+          "x_P5": 1,
+          "x_P6": 1,
+          "x_P7": 1,
+          "x_P8": 1
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T051"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "z_P1_A": 1,
+          "z_P1_B": 1,
+          "x_P1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "z_P2_A": 1,
+          "z_P2_B": 1,
+          "x_P2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "z_P3_A": 1,
+          "z_P3_C": 1,
+          "x_P3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "z_P4_B": 1,
+          "z_P4_C": 1,
+          "x_P4": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "z_P5_A": 1,
+          "z_P5_C": 1,
+          "x_P5": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "z_P6_A": 1,
+          "z_P6_C": 1,
+          "x_P6": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "z_P7_B": 1,
+          "z_P7_C": 1,
+          "x_P7": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "z_P8_B": 1,
+          "z_P8_C": 1,
+          "x_P8": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060",
+          "T066",
+          "T119"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "z_P1_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "z_P1_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "z_P2_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "z_P2_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "z_P3_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "z_P3_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "z_P4_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "z_P4_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "z_P5_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "z_P5_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "z_P6_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "z_P6_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "z_P7_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "z_P7_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "z_P8_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "z_P8_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T063",
+          "T070"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "y_A": 1,
+          "y_B": 1,
+          "y_C": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T058",
+          "T074"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "z_P1_A": 6,
+          "z_P2_A": 10,
+          "z_P3_A": 8,
+          "z_P5_A": 7,
+          "z_P6_A": 4
+        },
+        "sense": "<=",
+        "rhs": 16,
+        "citations": [
+          "T081",
+          "T084",
+          "T088",
+          "T185"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "z_P1_B": 4,
+          "z_P2_B": 9,
+          "z_P4_B": 6,
+          "z_P7_B": 8,
+          "z_P8_B": 9
+        },
+        "sense": "<=",
+        "rhs": 16,
+        "citations": [
+          "T081",
+          "T084",
+          "T088",
+          "T186"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "z_P3_C": 5,
+          "z_P4_C": 7,
+          "z_P5_C": 9,
+          "z_P6_C": 6,
+          "z_P7_C": 5,
+          "z_P8_C": 8
+        },
+        "sense": "<=",
+        "rhs": 18,
+        "citations": [
+          "T081",
+          "T084",
+          "T088",
+          "T187"
+        ],
+        "name": "C040"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 年度项目投资组合与外部验收资源联合规划需求\n\n## 1. 任务与决策范围\n\n使用 Python 调用 COPT，建立并求解混合整数规划模型，联合决定本年度：\n\n- 8个候选项目中哪些项目完整实施；\n- A、B、C三个外部验收中心中哪些中心启用；\n- 每个入选项目由哪个具备资格且已启用的中心完成全部外部技术验收。\n\n候选项目集合为 \\(P=\\{P1,\\ldots,P8\\}\\)，中心集合为 \\(C=\\{A,B,C\\}\\)。项目属性从 `./data/projects.csv` 读取，内部资源及风险上限从 `./data/resource_limits.csv` 读取，中心信息从 `./data/centers.csv` 读取，允许分配的组合与验收消耗从 `./data/acceptance_options.csv` 读取。\n\n项目与中心均只能选择或不选择，不能部分实施或部分启用。项目入选后，其预算、人力、风险和收益均按表列值完整计入，不得缩减或拆分。\n\n## 2. 唯一优化目标\n\n唯一目标是最大化入选项目的年度预期净收益总和。\n\n令 \\(x_p\\) 为项目 \\(p\\) 是否入选的二元变量，\\(v_p\\) 为该项目的 `annual_net_return`，则：\n\n$$\n\\max \\sum_{p\\in P}v_p x_p\n$$\n\n收益单位为万元。中心启用不新增投资支出；接入及验收费用已包含在各项目投资预算中。中心分配不改变项目的预算、人力、风险或预期净收益。\n\n不得对中心启用数量、资源余量或中心间工作量差异增加目标、奖励或惩罚。若多个方案达到相同最大净收益，可输出其中任意一个。\n\n## 3. 投资资源与战略组合要求\n\n### 3.1 内部资源和风险上限\n\n所选项目的以下指标分别累加，均不得超过对应年度上限：\n\n| 指标 | 项目字段 | 上限表中的 resource_id | 年度上限 |\n| --- | --- | --- | --- |\n| 投资预算 | investment_budget | investment_budget | 1150万元 |\n| 产品研发投入 | product_person_months | product_person_months | 110人月 |\n| 数据团队投入 | data_person_months | data_person_months | 92人月 |\n| 市场团队投入 | market_person_months | market_person_months | 68人月 |\n| 风险分值 | risk_score | risk_score | 31风险分值 |\n\n令 \\(K\\) 为上表5项指标的集合，\\(r_{pk}\\) 为项目 \\(p\\) 对指标 \\(k\\) 的表列需求，\\(L_k\\) 为上限表的 `capacity`，要求：\n\n$$\n\\sum_{p\\in P}r_{pk}x_p\\le L_k\n\\qquad(k\\in K)\n$$\n\n内部产品研发、数据和市场团队是不同资源池。外部验收专家人日不计入这些内部人月，内部人月也不能转换成验收专家人日。\n\n### 3.2 战略覆盖和项目关系\n\n投资组合必须同时满足：\n\n- 客户体验类P1、P2中至少选择1个。\n- 数据能力类P3、P4中至少选择1个。\n- 合规安全类P5、P6中至少选择1个。\n- 市场增长类P7、P8中至少选择1个。\n- 选择P2时必须同时选择P3。\n- P5和P8至多选择1个；将它们分配给不同验收中心不能解除该限制。\n- 入选项目总数不得超过6个。\n\n其中，依赖与互斥关系分别为：\n\n$$\nx_{P2}\\le x_{P3},\\qquad x_{P5}+x_{P8}\\le1\n$$\n\n## 4. 外部验收安排\n\n### 4.1 中心启用与完整分配\n\n公司最多启用2个验收中心。允许启用中心后不安排任务，但该中心仍占用1个启用名额。\n\n每个入选项目必须且只能分配给1个中心，在该中心完成全部验收；不能拆给多个中心。未入选项目不得安排验收，也不消耗验收资源。未启用中心不得承担任务。\n\n令 \\(y_c\\) 为中心 \\(c\\) 是否启用的二元变量，\\(z_{pc}\\) 为项目 \\(p\\) 是否分配给中心 \\(c\\) 的二元变量：\n\n$$\n\\sum_{c\\in C}z_{pc}=x_p\n\\qquad(p\\in P)\n$$\n\n$$\nz_{pc}\\le y_c\n\\qquad((p,c)\\in E)\n$$\n\n$$\n\\sum_{c\\in C}y_c\\le2\n$$\n\n这里 \\(E\\) 是 `acceptance_options.csv` 中列出的允许组合集合。未出现在该文件中的项目—中心组合一律禁止分配，不代表零消耗；对应变量应固定为0，或不建立并在汇总时视为0。\n\n### 4.2 资格与年度容量\n\nA为安全与数据基础验收中心，B为客户与商业应用验收中心，C为跨系统集成验收中心。三个中心的年度验收容量分别为16、16、18专家人日，具体读取 `centers.csv`。\n\n令 \\(a_{pc}\\) 为允许组合的 `expert_person_days`，\\(H_c\\) 为中心的 `annual_capacity`，中心实际使用量为：\n\n$$\nU_c=\\sum_{p:(p,c)\\in E}a_{pc}z_{pc}\n$$\n\n各中心实际使用量不得超过自身年度容量：\n\n$$\nU_c\\le H_c\n\\qquad(c\\in C)\n$$\n\n未启用中心通过分配与启用关系保证使用量为0。启用后获得完整年度容量，但不要求用满。\n\n不同中心的容量不得转移、借用或合并。验收消耗是项目与中心组合对应的确定值，不因同一中心承接其他项目而改变，不存在批量折扣。\n\n验收只按全年累计工作量考核，不需要决定具体开始日期、结束日期或先后顺序。满足分配、资格及年度容量要求，即视为入选项目能够在本年度完成验收。\n\n## 5. 结果输出\n\n输出内容应包括：\n\n1. 求解状态；只有在确认最优时，才将收益称为最大年度预期净收益。\n2. 入选项目编号、名称及项目总数。\n3. 最大年度预期净收益，单位万元。\n4. 投资预算、产品研发人月、数据人月、市场人月和风险分值的实际使用总量，以及各项上限减去实际使用量所得的剩余容量。\n5. 启用的验收中心，以及每个入选项目对应的验收中心。\n6. 所有中心的验收专家人日使用量和可用剩余容量。未启用中心须标明“未启用”，可用剩余容量为0；启用中心的可用剩余容量为年度容量减去使用量，即：\n   \n   $$\n   R_c=H_c y_c-U_c\n   $$\n7. 每个战略类别的入选项目，以及项目依赖、互斥、中心启用数量、验收资格和各中心验收容量限制的满足情况。\n\n如模型不可行，应明确报告不可行，不得通过放宽资源限制、取消战略覆盖或允许不完整实施来提供替代方案。无可行解时不得输出虚构的项目安排或最优收益。\n\n## 6. 输入 CSV 文件定义\n\n所有文件均使用 UTF-8 编码，第一行为字段名。文件在运行时提供，以下定义无需依赖其他题面或代码。各表不含重复主键；所有字段均为必填且无空值。项目—中心资格采用仅列允许组合的形式，未列出的组合均禁止分配。\n\n### ./data/projects.csv\n\n每行代表一个候选项目，共8行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| project_id | 项目编号 | string | P1至P8 |\n| project_name | 项目名称 | string | 不适用 |\n| category | 战略类别 | string | 客户体验、数据能力、合规安全、市场增长 |\n| investment_budget | 完整实施所需投资预算 | integer | 万元 |\n| product_person_months | 产品研发团队投入 | integer | 人月 |\n| data_person_months | 数据团队投入 | integer | 人月 |\n| market_person_months | 市场团队投入 | integer | 人月 |\n| risk_score | 项目风险分值 | integer | 风险分值 |\n| annual_net_return | 年度预期净收益 | integer | 万元 |\n\n`project_id` 是唯一标识，并作为验收组合表的项目关联键。\n\n### ./data/resource_limits.csv\n\n每行代表一项内部资源或风险指标的年度上限，共5行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| resource_id | 资源或风险指标标识 | string | investment_budget、product_person_months、data_person_months、market_person_months、risk_score |\n| capacity | 年度上限 | integer | investment_budget为万元；三个人力指标为人月；risk_score为风险分值 |\n\n`resource_id` 是唯一标识，其值对应项目表中同名的需求字段。\n\n### ./data/centers.csv\n\n每行代表一个可启用的外部验收中心，共3行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| center_id | 中心编号 | string | A、B、C |\n| center_name | 中心名称 | string | 不适用 |\n| annual_capacity | 本年度可用于本组合的验收专家容量 | integer | 专家人日 |\n\n`center_id` 是唯一标识，并作为验收组合表的中心关联键。\n\n### ./data/acceptance_options.csv\n\n每行代表一个允许的项目—中心验收组合及完整验收消耗，共16行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| project_id | 待验收项目编号 | string | 关联projects.csv的project_id |\n| center_id | 具备该项目验收资格的中心编号 | string | 关联centers.csv的center_id |\n| expert_person_days | 该项目在该中心完成全部验收的资源消耗 | integer | 专家人日 |\n\n`(project_id, center_id)` 为联合唯一标识。8个项目与3个中心共有24种组合，文件仅列16种允许组合，其余8种全部禁止，不得将缺失组合解释为零消耗。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：acceptance_options.csv\nproject_id,center_id,expert_person_days\r\nP1,A,6\r\nP1,B,4\r\nP2,A,10\r\nP2,B,9\r\nP3,A,8\r\nP3,C,5\r\nP4,B,6\r\nP4,C,7\r\nP5,A,7\r\nP5,C,9\r\nP6,A,4\r\nP6,C,6\r\nP7,B,8\r\nP7,C,5\r\nP8,B,9\r\nP8,C,8\r\n\n\n数据文件：centers.csv\ncenter_id,center_name,annual_capacity\r\nA,安全与数据基础验收中心,16\r\nB,客户与商业应用验收中心,16\r\nC,跨系统集成验收中心,18\r\n\n\n数据文件：projects.csv\nproject_id,project_name,category,investment_budget,product_person_months,data_person_months,market_person_months,risk_score,annual_net_return\r\nP1,智能客服升级,客户体验,180,18,12,6,7,245\r\nP2,移动端重构,客户体验,240,30,8,10,6,315\r\nP3,数据治理平台,数据能力,210,16,28,4,5,285\r\nP4,销售预测系统,数据能力,160,12,24,8,8,230\r\nP5,零信任安全改造,合规安全,260,25,15,3,3,300\r\nP6,隐私合规自动化,合规安全,140,10,18,5,2,175\r\nP7,渠道伙伴平台,市场增长,220,20,6,26,7,290\r\nP8,海外营销系统,市场增长,190,14,10,30,9,270\r\n\n\n数据文件：resource_limits.csv\nresource_id,capacity\r\ninvestment_budget,1150\r\nproduct_person_months,110\r\ndata_person_months,92\r\nmarket_person_months,68\r\nrisk_score,31",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-22c42e7ed9c0e835",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

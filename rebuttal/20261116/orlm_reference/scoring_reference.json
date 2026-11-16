@@ -1,0 +1,142 @@
+[
+  {
+    "source_id": "B01_00413",
+    "eval_id": "ORLM-SFT1991-B01_00413",
+    "status": "optimal",
+    "value": 355.1,
+    "direction": "min"
+  },
+  {
+    "source_id": "B02_00054",
+    "eval_id": "ORLM-SFT1991-B02_00054",
+    "status": "optimal",
+    "value": 660200.0,
+    "direction": "max"
+  },
+  {
+    "source_id": "B02_00182",
+    "eval_id": "ORLM-SFT1991-B02_00182",
+    "status": "optimal",
+    "value": 210.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "B02_00197",
+    "eval_id": "ORLM-SFT1991-B02_00197",
+    "status": "optimal",
+    "value": 191500.0,
+    "direction": "max"
+  },
+  {
+    "source_id": "B03_00149",
+    "eval_id": "ORLM-SFT1991-B03_00149",
+    "status": "optimal",
+    "value": 100.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "B03_00206",
+    "eval_id": "ORLM-SFT1991-B03_00206",
+    "status": "optimal",
+    "value": 3.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "B03_00230",
+    "eval_id": "ORLM-SFT1991-B03_00230",
+    "status": "optimal",
+    "value": 2.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "B03_00275",
+    "eval_id": "ORLM-SFT1991-B03_00275",
+    "status": "optimal",
+    "value": 34093.75000000001,
+    "direction": "max"
+  },
+  {
+    "source_id": "B03_00289",
+    "eval_id": "ORLM-SFT1991-B03_00289",
+    "status": "optimal",
+    "value": 690.0,
+    "direction": "max"
+  },
+  {
+    "source_id": "B03_00461",
+    "eval_id": "ORLM-SFT1991-B03_00461",
+    "status": "optimal",
+    "value": 1350,
+    "direction": "max"
+  },
+  {
+    "source_id": "P009_high",
+    "eval_id": "ORLM-SFT1991-P009_high",
+    "status": "optimal",
+    "value": 28400.0,
+    "direction": "max"
+  },
+  {
+    "source_id": "P122_high",
+    "eval_id": "ORLM-SFT1991-P122_high",
+    "status": "optimal",
+    "value": 708.47,
+    "direction": "min"
+  },
+  {
+    "source_id": "P52_B04_L0055_high",
+    "eval_id": "ORLM-SFT1991-P52_B04_L0055_high",
+    "status": "optimal",
+    "value": 9,
+    "direction": "min"
+  },
+  {
+    "source_id": "P52_B07_L0138_expert",
+    "eval_id": "ORLM-SFT1991-P52_B07_L0138_expert",
+    "status": "optimal",
+    "value": 354.0,
+    "direction": "max"
+  },
+  {
+    "source_id": "P52_B08_L0122_expert",
+    "eval_id": "ORLM-SFT1991-P52_B08_L0122_expert",
+    "status": "optimal",
+    "value": 25.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "P52_B09_L0055_high",
+    "eval_id": "ORLM-SFT1991-P52_B09_L0055_high",
+    "status": "optimal",
+    "value": 0.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "REUSE_expert_P52_B03_L0028_expert",
+    "eval_id": "ORLM-SFT1991-REUSE_expert_P52_B03_L0028_expert",
+    "status": "optimal",
+    "value": 1610.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+    "eval_id": "ORLM-SFT1991-SFTREAL_OP_R400007_cream_procurement_lot_two_day_life",
+    "status": "optimal",
+    "value": 149.665,
+    "direction": "min"
+  },
+  {
+    "source_id": "SFTREAL_OP_RB2607_001",
+    "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2607_001",
+    "status": "optimal",
+    "value": 2644.0,
+    "direction": "min"
+  },
+  {
+    "source_id": "SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+    "eval_id": "ORLM-SFT1991-SFTREAL_OP_RB2610_individual_monthly_overtime_fee",
+    "status": "optimal",
+    "value": 1162.3999999999967,
+    "direction": "min"
+  }
+]

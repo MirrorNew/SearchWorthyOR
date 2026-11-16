@@ -1,0 +1,1704 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "z_1_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_1_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_1_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_2_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_3_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_1_X",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_1_Y",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_1_Z",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_2_X",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_2_Y",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_2_Z",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_3_X",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_3_Y",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_3_Z",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "u_X",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "u_Y",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "u_Z",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "m_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "m_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "m_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "s_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "s_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "s_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "d_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "d_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "d_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "p_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "p_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "p_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "P_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 58
+      },
+      {
+        "id": "P_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 58
+      },
+      {
+        "id": "P_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 58
+      },
+      {
+        "id": "a_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "a_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "a_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "Ipre_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "Ipre_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "Ipre_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "Ipost_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "Ipost_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "Ipost_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 60
+      },
+      {
+        "id": "h_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "h_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "h_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "q_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 6
+      },
+      {
+        "id": "q_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 6
+      },
+      {
+        "id": "q_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 6
+      },
+      {
+        "id": "B0_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "B0_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "B0_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bminus_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bminus_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bminus_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bplus_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bplus_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "Bplus_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 24
+      },
+      {
+        "id": "E_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 16
+      },
+      {
+        "id": "E_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 16
+      },
+      {
+        "id": "E_3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 16
+      }
+    ],
+    "objective": {
+      "direction": "min",
+      "terms": {
+        "u_X": 1,
+        "u_Y": 1,
+        "u_Z": 1
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T009",
+        "T028",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "z_1_A": 1,
+          "z_1_B": 1,
+          "z_1_C": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T034"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "z_2_A": 1,
+          "z_2_B": 1,
+          "z_2_C": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T034"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "z_3_A": 1,
+          "z_3_B": 1,
+          "z_3_C": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T034"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "y_1_X": 1,
+          "y_1_Y": 1,
+          "y_1_Z": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T030"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "y_2_X": 1,
+          "y_2_Y": 1,
+          "y_2_Z": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T030"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "y_3_X": 1,
+          "y_3_Y": 1,
+          "y_3_Z": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T007",
+          "T030"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "y_1_X": 1,
+          "u_X": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "y_1_Y": 1,
+          "u_Y": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "y_1_Z": 1,
+          "u_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "y_2_X": 1,
+          "u_X": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "y_2_Y": 1,
+          "u_Y": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "y_2_Z": 1,
+          "u_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "y_3_X": 1,
+          "u_X": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "y_3_Y": 1,
+          "u_Y": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "y_3_Z": 1,
+          "u_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T023",
+          "T031"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "u_X": 1,
+          "y_1_X": -1,
+          "y_2_X": -1,
+          "y_3_X": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T024",
+          "T031"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "u_Y": 1,
+          "y_1_Y": -1,
+          "y_2_Y": -1,
+          "y_3_Y": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T024",
+          "T031"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "u_Z": 1,
+          "y_1_Z": -1,
+          "y_2_Z": -1,
+          "y_3_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T024",
+          "T031"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "y_1_Y": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "y_2_Z": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "y_3_X": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T060"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "y_1_X": 1,
+          "z_1_C": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "y_1_Z": 1,
+          "z_1_A": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "y_2_X": 1,
+          "z_2_C": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "y_2_Z": 1,
+          "z_2_A": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "y_3_X": 1,
+          "z_3_C": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "y_3_Z": 1,
+          "z_3_A": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T061",
+          "T067"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "y_1_Y": 1,
+          "m_1": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T063",
+          "T064",
+          "T067"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "y_2_Y": 1,
+          "m_2": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T063",
+          "T064",
+          "T067"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "y_3_Y": 1,
+          "m_3": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T063",
+          "T064",
+          "T067"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "z_1_B": 1,
+          "m_1": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T065",
+          "T068"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "z_2_B": 1,
+          "m_2": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T065",
+          "T068"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "z_2_C": 1,
+          "m_2": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T065",
+          "T068"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "z_3_B": 1,
+          "m_3": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T065",
+          "T068"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "s_1": 1
+        },
+        "sense": ">=",
+        "rhs": 40,
+        "citations": [
+          "T038"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "s_1": 1,
+          "z_1_A": -50,
+          "z_1_B": -30,
+          "z_1_C": -40
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T038",
+          "T253",
+          "T254",
+          "T255"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "s_2": 1,
+          "z_2_A": -40,
+          "z_2_B": -24,
+          "z_2_C": -32
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T041",
+          "T253",
+          "T254",
+          "T255"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "s_3": 1,
+          "z_3_A": -40,
+          "z_3_B": -24,
+          "z_3_C": -32
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T041",
+          "T253",
+          "T254",
+          "T255"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "d_1": 1,
+          "m_1": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T051",
+          "T053"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "d_1": 1,
+          "s_1": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T054"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "d_1": 1,
+          "s_1": -1,
+          "m_1": -50
+        },
+        "sense": ">=",
+        "rhs": -50,
+        "citations": [
+          "T050",
+          "T055"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "p_1": 1,
+          "s_1": -1,
+          "d_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T056"
+        ],
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "d_2": 1,
+          "m_2": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T051",
+          "T053"
+        ],
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "d_2": 1,
+          "s_2": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T054"
+        ],
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "d_2": 1,
+          "s_2": -1,
+          "m_2": -50
+        },
+        "sense": ">=",
+        "rhs": -50,
+        "citations": [
+          "T050",
+          "T055"
+        ],
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "p_2": 1,
+          "s_2": -1,
+          "d_2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T056"
+        ],
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "d_3": 1,
+          "m_3": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T051",
+          "T053"
+        ],
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "d_3": 1,
+          "s_3": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T054"
+        ],
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "d_3": 1,
+          "s_3": -1,
+          "m_3": -50
+        },
+        "sense": ">=",
+        "rhs": -50,
+        "citations": [
+          "T050",
+          "T055"
+        ],
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "p_3": 1,
+          "s_3": -1,
+          "d_3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T050",
+          "T056"
+        ],
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "P_1": 1,
+          "m_1": 8,
+          "p_1": -1
+        },
+        "sense": "==",
+        "rhs": 8,
+        "citations": [
+          "T072",
+          "T076"
+        ],
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "P_2": 1,
+          "m_2": 8,
+          "p_2": -1
+        },
+        "sense": "==",
+        "rhs": 8,
+        "citations": [
+          "T072",
+          "T076"
+        ],
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "P_3": 1,
+          "m_3": 8,
+          "p_3": -1
+        },
+        "sense": "==",
+        "rhs": 8,
+        "citations": [
+          "T072",
+          "T076"
+        ],
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "a_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T083",
+          "T085"
+        ],
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "a_2": 1,
+          "a_3": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T083",
+          "T085"
+        ],
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "a_1": 1,
+          "z_1_A": -1,
+          "z_1_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T087",
+          "T088"
+        ],
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "a_2": 1,
+          "z_2_A": -1,
+          "z_2_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T087",
+          "T088"
+        ],
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "a_3": 1,
+          "z_3_A": -1,
+          "z_3_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T087",
+          "T088"
+        ],
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "Ipre_1": 1,
+          "a_1": -12
+        },
+        "sense": "==",
+        "rhs": 54,
+        "citations": [
+          "T092",
+          "T094"
+        ],
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "Ipost_1": 1,
+          "Ipre_1": -1,
+          "P_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T094",
+          "T095"
+        ],
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "Ipre_2": 1,
+          "Ipost_1": -1,
+          "a_2": -12
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T094",
+          "T095"
+        ],
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "Ipost_2": 1,
+          "Ipre_2": -1,
+          "P_2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T094",
+          "T095"
+        ],
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "Ipre_3": 1,
+          "Ipost_2": -1,
+          "a_3": -12
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T094",
+          "T095"
+        ],
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "Ipost_3": 1,
+          "Ipre_3": -1,
+          "P_3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T094",
+          "T095"
+        ],
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "Ipost_3": 1
+        },
+        "sense": ">=",
+        "rhs": 6,
+        "citations": [
+          "T100"
+        ],
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "E_1": 1,
+          "m_1": -6,
+          "d_1": -0.2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T107",
+          "T111"
+        ],
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "E_2": 1,
+          "m_2": -6,
+          "d_2": -0.2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T107",
+          "T111"
+        ],
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "E_3": 1,
+          "m_3": -6,
+          "d_3": -0.2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T107",
+          "T111"
+        ],
+        "name": "C068"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "h_1": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C069"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "h_1": -6
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C070"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "z_1_A": -6,
+          "z_1_C": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T129"
+        ],
+        "name": "C071"
+      },
+      {
+        "terms": {
+          "h_1": 1,
+          "z_1_A": -1,
+          "z_1_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T130"
+        ],
+        "name": "C072"
+      },
+      {
+        "terms": {
+          "h_1": 1,
+          "y_1_X": -1,
+          "y_1_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T118",
+          "T119",
+          "T130"
+        ],
+        "name": "C073"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "h_2": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C074"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "h_2": -6
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C075"
+      },
+      {
+        "terms": {
+          "q_2": 1,
+          "z_2_A": -6,
+          "z_2_C": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T129"
+        ],
+        "name": "C076"
+      },
+      {
+        "terms": {
+          "h_2": 1,
+          "z_2_A": -1,
+          "z_2_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T130"
+        ],
+        "name": "C077"
+      },
+      {
+        "terms": {
+          "h_2": 1,
+          "y_2_X": -1,
+          "y_2_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T118",
+          "T119",
+          "T130"
+        ],
+        "name": "C078"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "h_3": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C079"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "h_3": -6
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T124",
+          "T126"
+        ],
+        "name": "C080"
+      },
+      {
+        "terms": {
+          "q_3": 1,
+          "z_3_A": -6,
+          "z_3_C": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T129"
+        ],
+        "name": "C081"
+      },
+      {
+        "terms": {
+          "h_3": 1,
+          "z_3_A": -1,
+          "z_3_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T121",
+          "T130"
+        ],
+        "name": "C082"
+      },
+      {
+        "terms": {
+          "h_3": 1,
+          "y_3_X": -1,
+          "y_3_Z": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T118",
+          "T119",
+          "T130"
+        ],
+        "name": "C083"
+      },
+      {
+        "terms": {
+          "h_1": 1,
+          "h_2": 1,
+          "h_3": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T133"
+        ],
+        "name": "C084"
+      },
+      {
+        "terms": {
+          "q_1": 1,
+          "q_2": 1,
+          "q_3": 1
+        },
+        "sense": "<=",
+        "rhs": 8,
+        "citations": [
+          "T134"
+        ],
+        "name": "C085"
+      },
+      {
+        "terms": {
+          "B0_1": 1
+        },
+        "sense": "==",
+        "rhs": 18,
+        "citations": [
+          "T143",
+          "T146"
+        ],
+        "name": "C086"
+      },
+      {
+        "terms": {
+          "B0_2": 1,
+          "Bplus_1": -1
+        },
+        "sense": "==",
+        "rhs": -1,
+        "citations": [
+          "T114",
+          "T146",
+          "T249"
+        ],
+        "name": "C087"
+      },
+      {
+        "terms": {
+          "B0_3": 1,
+          "Bplus_2": -1
+        },
+        "sense": "==",
+        "rhs": -1,
+        "citations": [
+          "T114",
+          "T146",
+          "T250"
+        ],
+        "name": "C088"
+      },
+      {
+        "terms": {
+          "Bminus_1": 1,
+          "B0_1": -1,
+          "q_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T147"
+        ],
+        "name": "C089"
+      },
+      {
+        "terms": {
+          "Bminus_2": 1,
+          "B0_2": -1,
+          "q_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T147"
+        ],
+        "name": "C090"
+      },
+      {
+        "terms": {
+          "Bminus_3": 1,
+          "B0_3": -1,
+          "q_3": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T147"
+        ],
+        "name": "C091"
+      },
+      {
+        "terms": {
+          "Bplus_1": 1,
+          "Bminus_1": -1,
+          "E_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T148"
+        ],
+        "name": "C092"
+      },
+      {
+        "terms": {
+          "Bplus_2": 1,
+          "Bminus_2": -1,
+          "E_2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T148"
+        ],
+        "name": "C093"
+      },
+      {
+        "terms": {
+          "Bplus_3": 1,
+          "Bminus_3": -1,
+          "E_3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T148"
+        ],
+        "name": "C094"
+      },
+      {
+        "terms": {
+          "Bplus_3": 1
+        },
+        "sense": ">=",
+        "rhs": 4,
+        "citations": [
+          "T154"
+        ],
+        "name": "C095"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 高校期末考试安排与移动考务资源调度需求\n\n## 1. 任务与求解要求\n\n使用 Python 调用 COPT，建立并求解线性混合整数规划模型，联合安排三场不同科目的考试和一套移动考务工作站。\n\n场次编号为1、2、3，严格按编号顺序进行，互不重叠。每场考试必须选用一个教室、安排恰好一名监考教师，并选择一种考试模式。同一教室、同一教师可以在不同场次重复使用，但必须满足各场的全部资格和兼容性条件。\n\n唯一优化目标是最小化至少监考一场考试的不同教师人数。不设置材料消耗、充电次数、补给次数或学生人数等次级目标；多个最优方案中输出任意一个即可。\n\n所有输入 CSV 在运行时提供，路径及字段见文档最后。固定业务参数在正文中定义，不需要额外参数文件。\n\n## 2. 考试安排、人数与模式\n\n### 2.1 决策与教师使用口径\n\n需要决定每场的教室、监考教师、考试模式、计划人数、材料补给、充电，以及材料库存和电池电量的全过程状态。\n\n教室分配、教师分配、教师使用状态、模式选择、补给选择和充电选择采用二元变量。计划人数、按模式划分的人数、材料消耗与库存、电量消耗与状态、充电量采用连续变量。\n\n为说明目标，令 \\(y_{it}\\) 表示教师 \\(t\\) 是否监考场次 \\(i\\)，令 \\(u_t\\) 表示教师 \\(t\\) 是否实际被使用。教师集合 \\(T\\) 来自 `teachers.csv`。必须保证：\n\n$$\ny_{it}\\le u_t\\quad\\text{对所有场次和教师},\\qquad\nu_t\\le\\sum_{i=1}^{3}y_{it}.\n$$\n\n目标为：\n\n$$\n\\min\\sum_{t\\in T}u_t.\n$$\n\n每场恰好安排一名教师。上述使用状态必须与实际分配一致，不能把没有监考任务的教师标记为已使用。\n\n### 2.2 教室与计划人数\n\n教室集合来自 `rooms.csv`，其 `capacity` 为人数容量。每场恰好选择一个教室，不要求不同场次选不同教室。\n\n令 \\(s_i\\) 为第 \\(i\\) 场计划参与人数，\\(C_i\\) 为该场所选教室的容量。\\(s_i\\) 是非负连续变量，不施加整数限制。\n\n$$\n40\\le s_1\\le C_1,\n$$\n\n$$\n0\\le s_i\\le0.8C_i,\\qquad i\\in\\{2,3\\}.\n$$\n\n第二、三场没有额外最低人数要求，也没有三场总人数要求。即使计划人数为0，该场仍必须安排教室、教师和考试模式，且仍承担所选模式的固定准备消耗。\n\n### 2.3 模式与人数分解\n\n模式标识 `paper` 表示纸笔，`electronic` 表示电子。每场只能采用其中一种模式，不能混用。\n\n令 \\(m_i=1\\) 表示电子模式，\\(m_i=0\\) 表示纸笔模式；\\(d_i\\) 为电子模式人数，\\(p_i\\) 为纸笔模式人数。需要精确表达 \\(d_i=s_im_i\\)、\\(p_i=s_i-d_i\\)，不得保留非线性乘积。\n\n全部场次可使用有效人数上界 \\(U=50\\)，以如下线性关系实现：\n\n$$\n0\\le d_i\\le50m_i,\\qquad\nd_i\\le s_i,\\qquad\nd_i\\ge s_i-50(1-m_i),\\qquad\np_i=s_i-d_i,\\quad p_i\\ge0.\n$$\n\n### 2.4 必须同时满足的兼容性\n\n各场的教师、教室和模式选择必须同时符合：\n\n- **教师时间可用性**：只允许 `teacher_availability.csv` 中列出的教师—场次组合。\n- **教师教室授权**：只允许 `teacher_rooms.csv` 中列出的教师—教室组合；该授权对两种模式均适用。\n- **教师模式资格**：只允许 `teacher_modes.csv` 中列出的教师—模式组合。教师Y只能监考纸笔模式。\n- **电子模式的设备与科目软件条件**：电子模式只允许 `electronic_rooms.csv` 中列出的场次—教室组合。\n- 纸笔模式允许在全部教室进行，但仍须满足教师时间、教室授权和模式资格。\n\n未列出的前三类组合一律禁止。未列出的电子场次—教室组合仅禁止电子模式，不禁止纸笔模式。所有兼容性应通过线性约束落实。\n\n## 3. 纸质材料的补给、消耗与结转\n\n纸质材料以“标准材料单位”计量。每位纸笔考生消耗1单位，每场纸笔考试额外消耗8单位；电子考试不消耗纸质材料。\n\n令 \\(P_i\\) 为第 \\(i\\) 场材料消耗：\n\n$$\nP_i=8(1-m_i)+p_i.\n$$\n\n工作站在第一场准备开始前有54单位材料，存放容量为60单位。没有材料丢弃或其他流入、流出。\n\n### 3.1 补给选择\n\n令二元变量 \\(a_i\\) 表示场次 \\(i\\) 准备阶段是否接收一批材料。每批固定为12单位，不得拆分。第一场不能补给，第二、三场合计最多接收一批：\n\n$$\na_1=0,\\qquad a_2+a_3\\le1.\n$$\n\n只有所选教室的 `can_receive_supply` 为 true 时才能接收补给，即只能在A或B接收；C不能接收。接收补给不增加监考教师人数，也不需要另行安排工作人员。\n\n### 3.2 库存平衡与保留量\n\n令 \\(I_i^-\\) 为该场补给完成后、考试开始前的库存，\\(I_i^+\\) 为该场考试结束后的库存。初始结转状态为 \\(I_0^+=54\\)。\n\n$$\nI_i^-=I_{i-1}^++12a_i,\\qquad\nI_i^+=I_i^--P_i,\\qquad i\\in\\{1,2,3\\}.\n$$\n\n$$\n0\\le I_i^-\\le60,\\qquad\n0\\le I_i^+\\le60,\\qquad\nI_3^+\\ge6.\n$$\n\n当场纸笔考试的材料必须在当场开始前备齐。不能使用未来场次的补给支持当前考试。\n\n## 4. 电池、转运与充电\n\n三场共用同一电池，不允许更换电池，也不允许使用模型外的备用电源。电量单位为kWh。\n\n每场电子考试有6 kWh固定启动消耗，每位电子考生再消耗0.2 kWh；纸笔考试本身不耗电。令 \\(E_i\\) 为考试用电量：\n\n$$\nE_i=6m_i+0.2d_i.\n$$\n\n第一场准备开始前电量为18 kWh，电池容量为24 kWh。场次 \\(i\\) 的转运损耗 \\(\\ell_i\\) 对应 `exams.csv` 的 `transfer_loss`，第一场为0，第二、三场各为1 kWh。转运损耗与教室和考试模式无关。\n\n### 4.1 充电地点、人员和额度\n\n每场准备阶段最多安排一次充电，也可以不充电。充电必须在该场所选教室内，由该场实际选中的监考教师操作，不得调用其他教师。\n\n- 所选教师的 `can_charge` 必须为 true，才能实施充电。只有X、Z有此资格。\n- 教室单场充电上限使用 `rooms.csv` 的 `max_charge`：A为6 kWh，B为0，C为4 kWh。\n- 纸笔考试的准备阶段也可以充电。\n- 充电资格不替代教师时间可用性、教室授权或模式资格。\n\n令 \\(h_i\\) 为是否实施充电的二元变量，\\(q_i\\) 为实际充入电池的连续电量：\n\n$$\n2h_i\\le q_i\\le6h_i.\n$$\n\n因此不充电时电量为0，充电时至少2 kWh、最多6 kWh。\\(q_i\\) 同时不得超过所选教室的单场充电上限。\\(h_i=1\\) 时，所选教室必须为A或C，所选教师必须为X或Z。\n\n整个考试周期满足：\n\n$$\n\\sum_{i=1}^{3}h_i\\le2,\\qquad\n\\sum_{i=1}^{3}q_i\\le8.\n$$\n\n充电量按实际进入电池的电量计量，不另设效率或其他充电损耗。\n\n### 4.2 电量事件顺序与状态\n\n每场的电量事件顺序固定为：上一场结转、扣除转运损耗、充电、考试耗电。\n\n令：\n\n- \\(B_i^0\\)：扣除转运损耗后、充电前的电量；\n- \\(B_i^-\\)：充电后、考试开始前的电量；\n- \\(B_i^+\\)：考试结束后的电量。\n\n初始状态为 \\(B_0^+=18\\)。各场满足：\n\n$$\nB_i^0=B_{i-1}^+-\\ell_i,\\qquad\nB_i^-=B_i^0+q_i,\\qquad\nB_i^+=B_i^--E_i.\n$$\n\n$$\n0\\le B_i^0\\le24,\\qquad\n0\\le B_i^-\\le24,\\qquad\n0\\le B_i^+\\le24,\\qquad\nB_3^+\\ge4.\n$$\n\n转运后、充电前的电量也必须非负，不能用随后发生的充电弥补转运时已经出现的电量不足。不能用后续场次的充电支持当前考试。\n\n## 5. 结果输出与核验\n\n程序应输出：\n\n1. COPT求解状态；若不可行或未获得最优解，明确说明，不能把未证明最优的结果称为最优方案。\n2. 获得最优解时，输出最少使用的教师人数及实际使用教师名单。\n3. 按场次顺序逐场输出：\n   - 教室、教师、纸笔或电子模式；\n   - 计划参与人数；\n   - 是否补给及补给数量；\n   - 是否充电及实际充电量；\n   - 材料消耗、考试前库存、考试后库存；\n   - 考试用电量、转运后充电前电量、充电后电量、考试后电量。\n4. 输出总补给批次数、总充电次数、累计充电量，以及第三场结束后的材料库存、电池电量。\n5. 简要核验人数容量限制、教师时间与教室及模式兼容性、电子软件条件、跨场次库存和电量平衡、期末保留量，以及补给和充电限制。\n\n连续数值可以适当精度展示，但核验必须使用未四舍五入的求解值和合理数值容差。\n\n## 6. 输入文件与 CSV schema\n\n所有文件均为UTF-8编码，首行为表头。以下文件由配套导出脚本生成，读取路径均相对于程序运行的当前工作目录。\n\n所有字段均非空。实体表的主键唯一，关系表的组合键唯一，不存在重复记录。关系表只列出允许的组合，缺少某个组合表示不允许，不表示数据缺失。\n\n### ./data/exams.csv\n\n每行代表一场考试及其准备阶段发生的转运损耗。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| exam_id | 场次编号及执行顺序 | integer | 1、2、3 |\n| transfer_loss | 本场充电前扣除的转运损耗 | number | kWh |\n\n`exam_id` 为唯一标识。所有其他文件的 `exam_id` 均关联此字段。\n\n### ./data/rooms.csv\n\n每行代表一个可选教室及其容量、充电和补给接收条件。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| room_id | 教室标识 | string | A、B、C |\n| capacity | 教室人数容量 | integer | 人 |\n| max_charge | 单场准备阶段最大充电量 | number | kWh |\n| can_receive_supply | 是否允许接收材料补给 | boolean | true表示允许，false表示禁止 |\n\n`room_id` 为唯一标识。其他文件的 `room_id` 均关联此字段。\n\n### ./data/teachers.csv\n\n每行代表一名教师及其充电操作资格。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| teacher_id | 教师标识 | string | X、Y、Z |\n| can_charge | 是否具有充电操作资格 | boolean | true表示有资格，false表示无资格 |\n\n`teacher_id` 为唯一标识。其他文件的 `teacher_id` 均关联此字段。\n\n### ./data/teacher_availability.csv\n\n每行代表一个允许的教师—场次可用组合。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| teacher_id | 教师标识 | string | 关联教师表 |\n| exam_id | 教师可以监考的场次 | integer | 关联场次表 |\n\n组合键为 `(teacher_id, exam_id)`。\n\n### ./data/teacher_rooms.csv\n\n每行代表一个已授权的教师—教室组合，对两种考试模式均适用。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| teacher_id | 教师标识 | string | 关联教师表 |\n| room_id | 教师获得考务操作授权的教室 | string | 关联教室表 |\n\n组合键为 `(teacher_id, room_id)`。\n\n### ./data/teacher_modes.csv\n\n每行代表一个允许的教师—考试模式组合。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| teacher_id | 教师标识 | string | 关联教师表 |\n| mode | 教师可以监考的考试模式 | string | paper表示纸笔，electronic表示电子 |\n\n组合键为 `(teacher_id, mode)`。\n\n### ./data/electronic_rooms.csv\n\n每行代表一个满足电子设备及对应科目软件条件的场次—教室组合。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| exam_id | 场次编号 | integer | 关联场次表 |\n| room_id | 本场允许采用电子模式的教室 | string | 关联教室表 |\n\n组合键为 `(exam_id, room_id)`。本表不限制纸笔模式的教室选择。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：electronic_rooms.csv\nexam_id,room_id\r\n1,A\r\n1,C\r\n2,A\r\n3,A\r\n3,C\r\n\n\n数据文件：exams.csv\nexam_id,transfer_loss\r\n1,0\r\n2,1\r\n3,1\r\n\n\n数据文件：rooms.csv\nroom_id,capacity,max_charge,can_receive_supply\r\nA,50,6,true\r\nB,30,0,true\r\nC,40,4,false\r\n\n\n数据文件：teacher_availability.csv\nteacher_id,exam_id\r\nX,1\r\nX,2\r\nY,2\r\nY,3\r\nZ,1\r\nZ,3\r\n\n\n数据文件：teacher_modes.csv\nteacher_id,mode\r\nX,paper\r\nX,electronic\r\nY,paper\r\nZ,paper\r\nZ,electronic\r\n\n\n数据文件：teacher_rooms.csv\nteacher_id,room_id\r\nX,A\r\nX,B\r\nY,A\r\nY,B\r\nY,C\r\nZ,B\r\nZ,C\r\n\n\n数据文件：teachers.csv\nteacher_id,can_charge\r\nX,true\r\nY,false\r\nZ,true",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-fffce0def473e408",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

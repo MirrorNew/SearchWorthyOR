@@ -1,0 +1,7305 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "server_config",
+        "type": "INTEGER",
+        "lb": 6,
+        "ub": 25
+      },
+      {
+        "id": "cooling_config",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "backup_config",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "start_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_C",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_D",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_E",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_F",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_G",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_H",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_I",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_J",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_K",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "start_L",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 19
+      },
+      {
+        "id": "win_A_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_B_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_C_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_D_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_E_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_F_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_F_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_G_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_H_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_I_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_J_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_K_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "win_L_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_A_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_B_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_C_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_D_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_E_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_F_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_G_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_H_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_I_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_J_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_K_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_9",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_10",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_11",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_12",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_13",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_14",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_15",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_16",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_17",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_18",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "startbin_L_19",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "server_load_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "server_load_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "critical_load_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 25
+      },
+      {
+        "id": "cooling_slot_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "cooling_slot_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 8
+      },
+      {
+        "id": "backup_slot_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_6",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_7",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_8",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_9",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_10",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_11",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_12",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_13",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_14",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_15",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_16",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_17",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_18",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      },
+      {
+        "id": "backup_slot_19",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 3
+      }
+    ],
+    "objective": {
+      "direction": "min",
+      "terms": {
+        "server_config": 2,
+        "cooling_config": 4,
+        "backup_config": 5
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "server_config": 2,
+          "cooling_config": 4,
+          "backup_config": 5
+        },
+        "sense": "<=",
+        "rhs": 50,
+        "citations": [
+          "T018",
+          "T145",
+          "T224",
+          "T225",
+          "T226"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "server_config": 1,
+          "cooling_config": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T036",
+          "T146",
+          "T258"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "cooling_config": 2,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T036",
+          "T147",
+          "T258"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "server_config": 1,
+          "backup_config": -8
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T037",
+          "T148",
+          "T258"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "backup_config": 4,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T037",
+          "T149",
+          "T258"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "startbin_A_0": 1,
+          "startbin_A_1": 1,
+          "startbin_A_2": 1,
+          "startbin_A_3": 1,
+          "startbin_A_4": 1,
+          "startbin_A_5": 1,
+          "startbin_A_6": 1,
+          "startbin_A_7": 1,
+          "startbin_A_8": 1,
+          "startbin_A_9": 1,
+          "startbin_A_10": 1,
+          "startbin_A_11": 1,
+          "startbin_A_12": 1,
+          "startbin_A_13": 1,
+          "startbin_A_14": 1,
+          "startbin_A_15": 1,
+          "startbin_A_16": 1,
+          "startbin_A_17": 1,
+          "startbin_A_18": 1,
+          "startbin_A_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "startbin_B_0": 1,
+          "startbin_B_1": 1,
+          "startbin_B_2": 1,
+          "startbin_B_3": 1,
+          "startbin_B_4": 1,
+          "startbin_B_5": 1,
+          "startbin_B_6": 1,
+          "startbin_B_7": 1,
+          "startbin_B_8": 1,
+          "startbin_B_9": 1,
+          "startbin_B_10": 1,
+          "startbin_B_11": 1,
+          "startbin_B_12": 1,
+          "startbin_B_13": 1,
+          "startbin_B_14": 1,
+          "startbin_B_15": 1,
+          "startbin_B_16": 1,
+          "startbin_B_17": 1,
+          "startbin_B_18": 1,
+          "startbin_B_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "startbin_C_0": 1,
+          "startbin_C_1": 1,
+          "startbin_C_2": 1,
+          "startbin_C_3": 1,
+          "startbin_C_4": 1,
+          "startbin_C_5": 1,
+          "startbin_C_6": 1,
+          "startbin_C_7": 1,
+          "startbin_C_8": 1,
+          "startbin_C_9": 1,
+          "startbin_C_10": 1,
+          "startbin_C_11": 1,
+          "startbin_C_12": 1,
+          "startbin_C_13": 1,
+          "startbin_C_14": 1,
+          "startbin_C_15": 1,
+          "startbin_C_16": 1,
+          "startbin_C_17": 1,
+          "startbin_C_18": 1,
+          "startbin_C_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "startbin_D_0": 1,
+          "startbin_D_1": 1,
+          "startbin_D_2": 1,
+          "startbin_D_3": 1,
+          "startbin_D_4": 1,
+          "startbin_D_5": 1,
+          "startbin_D_6": 1,
+          "startbin_D_7": 1,
+          "startbin_D_8": 1,
+          "startbin_D_9": 1,
+          "startbin_D_10": 1,
+          "startbin_D_11": 1,
+          "startbin_D_12": 1,
+          "startbin_D_13": 1,
+          "startbin_D_14": 1,
+          "startbin_D_15": 1,
+          "startbin_D_16": 1,
+          "startbin_D_17": 1,
+          "startbin_D_18": 1,
+          "startbin_D_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "startbin_E_0": 1,
+          "startbin_E_1": 1,
+          "startbin_E_2": 1,
+          "startbin_E_3": 1,
+          "startbin_E_4": 1,
+          "startbin_E_5": 1,
+          "startbin_E_6": 1,
+          "startbin_E_7": 1,
+          "startbin_E_8": 1,
+          "startbin_E_9": 1,
+          "startbin_E_10": 1,
+          "startbin_E_11": 1,
+          "startbin_E_12": 1,
+          "startbin_E_13": 1,
+          "startbin_E_14": 1,
+          "startbin_E_15": 1,
+          "startbin_E_16": 1,
+          "startbin_E_17": 1,
+          "startbin_E_18": 1,
+          "startbin_E_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "startbin_F_0": 1,
+          "startbin_F_1": 1,
+          "startbin_F_2": 1,
+          "startbin_F_3": 1,
+          "startbin_F_4": 1,
+          "startbin_F_5": 1,
+          "startbin_F_6": 1,
+          "startbin_F_7": 1,
+          "startbin_F_8": 1,
+          "startbin_F_9": 1,
+          "startbin_F_10": 1,
+          "startbin_F_11": 1,
+          "startbin_F_12": 1,
+          "startbin_F_13": 1,
+          "startbin_F_14": 1,
+          "startbin_F_15": 1,
+          "startbin_F_16": 1,
+          "startbin_F_17": 1,
+          "startbin_F_18": 1,
+          "startbin_F_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "startbin_G_0": 1,
+          "startbin_G_1": 1,
+          "startbin_G_2": 1,
+          "startbin_G_3": 1,
+          "startbin_G_4": 1,
+          "startbin_G_5": 1,
+          "startbin_G_6": 1,
+          "startbin_G_7": 1,
+          "startbin_G_8": 1,
+          "startbin_G_9": 1,
+          "startbin_G_10": 1,
+          "startbin_G_11": 1,
+          "startbin_G_12": 1,
+          "startbin_G_13": 1,
+          "startbin_G_14": 1,
+          "startbin_G_15": 1,
+          "startbin_G_16": 1,
+          "startbin_G_17": 1,
+          "startbin_G_18": 1,
+          "startbin_G_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "startbin_H_0": 1,
+          "startbin_H_1": 1,
+          "startbin_H_2": 1,
+          "startbin_H_3": 1,
+          "startbin_H_4": 1,
+          "startbin_H_5": 1,
+          "startbin_H_6": 1,
+          "startbin_H_7": 1,
+          "startbin_H_8": 1,
+          "startbin_H_9": 1,
+          "startbin_H_10": 1,
+          "startbin_H_11": 1,
+          "startbin_H_12": 1,
+          "startbin_H_13": 1,
+          "startbin_H_14": 1,
+          "startbin_H_15": 1,
+          "startbin_H_16": 1,
+          "startbin_H_17": 1,
+          "startbin_H_18": 1,
+          "startbin_H_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "startbin_I_0": 1,
+          "startbin_I_1": 1,
+          "startbin_I_2": 1,
+          "startbin_I_3": 1,
+          "startbin_I_4": 1,
+          "startbin_I_5": 1,
+          "startbin_I_6": 1,
+          "startbin_I_7": 1,
+          "startbin_I_8": 1,
+          "startbin_I_9": 1,
+          "startbin_I_10": 1,
+          "startbin_I_11": 1,
+          "startbin_I_12": 1,
+          "startbin_I_13": 1,
+          "startbin_I_14": 1,
+          "startbin_I_15": 1,
+          "startbin_I_16": 1,
+          "startbin_I_17": 1,
+          "startbin_I_18": 1,
+          "startbin_I_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "startbin_J_0": 1,
+          "startbin_J_1": 1,
+          "startbin_J_2": 1,
+          "startbin_J_3": 1,
+          "startbin_J_4": 1,
+          "startbin_J_5": 1,
+          "startbin_J_6": 1,
+          "startbin_J_7": 1,
+          "startbin_J_8": 1,
+          "startbin_J_9": 1,
+          "startbin_J_10": 1,
+          "startbin_J_11": 1,
+          "startbin_J_12": 1,
+          "startbin_J_13": 1,
+          "startbin_J_14": 1,
+          "startbin_J_15": 1,
+          "startbin_J_16": 1,
+          "startbin_J_17": 1,
+          "startbin_J_18": 1,
+          "startbin_J_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "startbin_K_0": 1,
+          "startbin_K_1": 1,
+          "startbin_K_2": 1,
+          "startbin_K_3": 1,
+          "startbin_K_4": 1,
+          "startbin_K_5": 1,
+          "startbin_K_6": 1,
+          "startbin_K_7": 1,
+          "startbin_K_8": 1,
+          "startbin_K_9": 1,
+          "startbin_K_10": 1,
+          "startbin_K_11": 1,
+          "startbin_K_12": 1,
+          "startbin_K_13": 1,
+          "startbin_K_14": 1,
+          "startbin_K_15": 1,
+          "startbin_K_16": 1,
+          "startbin_K_17": 1,
+          "startbin_K_18": 1,
+          "startbin_K_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "startbin_L_0": 1,
+          "startbin_L_1": 1,
+          "startbin_L_2": 1,
+          "startbin_L_3": 1,
+          "startbin_L_4": 1,
+          "startbin_L_5": 1,
+          "startbin_L_6": 1,
+          "startbin_L_7": 1,
+          "startbin_L_8": 1,
+          "startbin_L_9": 1,
+          "startbin_L_10": 1,
+          "startbin_L_11": 1,
+          "startbin_L_12": 1,
+          "startbin_L_13": 1,
+          "startbin_L_14": 1,
+          "startbin_L_15": 1,
+          "startbin_L_16": 1,
+          "startbin_L_17": 1,
+          "startbin_L_18": 1,
+          "startbin_L_19": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T046",
+          "T048",
+          "T049"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "start_A": 1,
+          "startbin_A_1": -1,
+          "startbin_A_2": -2,
+          "startbin_A_3": -3,
+          "startbin_A_4": -4,
+          "startbin_A_5": -5,
+          "startbin_A_6": -6,
+          "startbin_A_7": -7,
+          "startbin_A_8": -8,
+          "startbin_A_9": -9,
+          "startbin_A_10": -10,
+          "startbin_A_11": -11,
+          "startbin_A_12": -12,
+          "startbin_A_13": -13,
+          "startbin_A_14": -14,
+          "startbin_A_15": -15,
+          "startbin_A_16": -16,
+          "startbin_A_17": -17,
+          "startbin_A_18": -18,
+          "startbin_A_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "start_B": 1,
+          "startbin_B_1": -1,
+          "startbin_B_2": -2,
+          "startbin_B_3": -3,
+          "startbin_B_4": -4,
+          "startbin_B_5": -5,
+          "startbin_B_6": -6,
+          "startbin_B_7": -7,
+          "startbin_B_8": -8,
+          "startbin_B_9": -9,
+          "startbin_B_10": -10,
+          "startbin_B_11": -11,
+          "startbin_B_12": -12,
+          "startbin_B_13": -13,
+          "startbin_B_14": -14,
+          "startbin_B_15": -15,
+          "startbin_B_16": -16,
+          "startbin_B_17": -17,
+          "startbin_B_18": -18,
+          "startbin_B_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "start_C": 1,
+          "startbin_C_1": -1,
+          "startbin_C_2": -2,
+          "startbin_C_3": -3,
+          "startbin_C_4": -4,
+          "startbin_C_5": -5,
+          "startbin_C_6": -6,
+          "startbin_C_7": -7,
+          "startbin_C_8": -8,
+          "startbin_C_9": -9,
+          "startbin_C_10": -10,
+          "startbin_C_11": -11,
+          "startbin_C_12": -12,
+          "startbin_C_13": -13,
+          "startbin_C_14": -14,
+          "startbin_C_15": -15,
+          "startbin_C_16": -16,
+          "startbin_C_17": -17,
+          "startbin_C_18": -18,
+          "startbin_C_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "start_D": 1,
+          "startbin_D_1": -1,
+          "startbin_D_2": -2,
+          "startbin_D_3": -3,
+          "startbin_D_4": -4,
+          "startbin_D_5": -5,
+          "startbin_D_6": -6,
+          "startbin_D_7": -7,
+          "startbin_D_8": -8,
+          "startbin_D_9": -9,
+          "startbin_D_10": -10,
+          "startbin_D_11": -11,
+          "startbin_D_12": -12,
+          "startbin_D_13": -13,
+          "startbin_D_14": -14,
+          "startbin_D_15": -15,
+          "startbin_D_16": -16,
+          "startbin_D_17": -17,
+          "startbin_D_18": -18,
+          "startbin_D_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "start_E": 1,
+          "startbin_E_1": -1,
+          "startbin_E_2": -2,
+          "startbin_E_3": -3,
+          "startbin_E_4": -4,
+          "startbin_E_5": -5,
+          "startbin_E_6": -6,
+          "startbin_E_7": -7,
+          "startbin_E_8": -8,
+          "startbin_E_9": -9,
+          "startbin_E_10": -10,
+          "startbin_E_11": -11,
+          "startbin_E_12": -12,
+          "startbin_E_13": -13,
+          "startbin_E_14": -14,
+          "startbin_E_15": -15,
+          "startbin_E_16": -16,
+          "startbin_E_17": -17,
+          "startbin_E_18": -18,
+          "startbin_E_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "start_F": 1,
+          "startbin_F_1": -1,
+          "startbin_F_2": -2,
+          "startbin_F_3": -3,
+          "startbin_F_4": -4,
+          "startbin_F_5": -5,
+          "startbin_F_6": -6,
+          "startbin_F_7": -7,
+          "startbin_F_8": -8,
+          "startbin_F_9": -9,
+          "startbin_F_10": -10,
+          "startbin_F_11": -11,
+          "startbin_F_12": -12,
+          "startbin_F_13": -13,
+          "startbin_F_14": -14,
+          "startbin_F_15": -15,
+          "startbin_F_16": -16,
+          "startbin_F_17": -17,
+          "startbin_F_18": -18,
+          "startbin_F_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "start_G": 1,
+          "startbin_G_1": -1,
+          "startbin_G_2": -2,
+          "startbin_G_3": -3,
+          "startbin_G_4": -4,
+          "startbin_G_5": -5,
+          "startbin_G_6": -6,
+          "startbin_G_7": -7,
+          "startbin_G_8": -8,
+          "startbin_G_9": -9,
+          "startbin_G_10": -10,
+          "startbin_G_11": -11,
+          "startbin_G_12": -12,
+          "startbin_G_13": -13,
+          "startbin_G_14": -14,
+          "startbin_G_15": -15,
+          "startbin_G_16": -16,
+          "startbin_G_17": -17,
+          "startbin_G_18": -18,
+          "startbin_G_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "start_H": 1,
+          "startbin_H_1": -1,
+          "startbin_H_2": -2,
+          "startbin_H_3": -3,
+          "startbin_H_4": -4,
+          "startbin_H_5": -5,
+          "startbin_H_6": -6,
+          "startbin_H_7": -7,
+          "startbin_H_8": -8,
+          "startbin_H_9": -9,
+          "startbin_H_10": -10,
+          "startbin_H_11": -11,
+          "startbin_H_12": -12,
+          "startbin_H_13": -13,
+          "startbin_H_14": -14,
+          "startbin_H_15": -15,
+          "startbin_H_16": -16,
+          "startbin_H_17": -17,
+          "startbin_H_18": -18,
+          "startbin_H_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "start_I": 1,
+          "startbin_I_1": -1,
+          "startbin_I_2": -2,
+          "startbin_I_3": -3,
+          "startbin_I_4": -4,
+          "startbin_I_5": -5,
+          "startbin_I_6": -6,
+          "startbin_I_7": -7,
+          "startbin_I_8": -8,
+          "startbin_I_9": -9,
+          "startbin_I_10": -10,
+          "startbin_I_11": -11,
+          "startbin_I_12": -12,
+          "startbin_I_13": -13,
+          "startbin_I_14": -14,
+          "startbin_I_15": -15,
+          "startbin_I_16": -16,
+          "startbin_I_17": -17,
+          "startbin_I_18": -18,
+          "startbin_I_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "start_J": 1,
+          "startbin_J_1": -1,
+          "startbin_J_2": -2,
+          "startbin_J_3": -3,
+          "startbin_J_4": -4,
+          "startbin_J_5": -5,
+          "startbin_J_6": -6,
+          "startbin_J_7": -7,
+          "startbin_J_8": -8,
+          "startbin_J_9": -9,
+          "startbin_J_10": -10,
+          "startbin_J_11": -11,
+          "startbin_J_12": -12,
+          "startbin_J_13": -13,
+          "startbin_J_14": -14,
+          "startbin_J_15": -15,
+          "startbin_J_16": -16,
+          "startbin_J_17": -17,
+          "startbin_J_18": -18,
+          "startbin_J_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "start_K": 1,
+          "startbin_K_1": -1,
+          "startbin_K_2": -2,
+          "startbin_K_3": -3,
+          "startbin_K_4": -4,
+          "startbin_K_5": -5,
+          "startbin_K_6": -6,
+          "startbin_K_7": -7,
+          "startbin_K_8": -8,
+          "startbin_K_9": -9,
+          "startbin_K_10": -10,
+          "startbin_K_11": -11,
+          "startbin_K_12": -12,
+          "startbin_K_13": -13,
+          "startbin_K_14": -14,
+          "startbin_K_15": -15,
+          "startbin_K_16": -16,
+          "startbin_K_17": -17,
+          "startbin_K_18": -18,
+          "startbin_K_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "start_L": 1,
+          "startbin_L_1": -1,
+          "startbin_L_2": -2,
+          "startbin_L_3": -3,
+          "startbin_L_4": -4,
+          "startbin_L_5": -5,
+          "startbin_L_6": -6,
+          "startbin_L_7": -7,
+          "startbin_L_8": -8,
+          "startbin_L_9": -9,
+          "startbin_L_10": -10,
+          "startbin_L_11": -11,
+          "startbin_L_12": -12,
+          "startbin_L_13": -13,
+          "startbin_L_14": -14,
+          "startbin_L_15": -15,
+          "startbin_L_16": -16,
+          "startbin_L_17": -17,
+          "startbin_L_18": -18,
+          "startbin_L_19": -19
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T008",
+          "T028",
+          "T048",
+          "T049"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "win_A_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "win_B_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "win_C_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "win_D_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "win_E_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "win_F_1": 1,
+          "win_F_2": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T058"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "win_G_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "win_H_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "win_I_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "win_J_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "win_K_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "win_L_1": 1
+        },
+        "sense": "==",
+        "rhs": 1,
+        "citations": [
+          "T054",
+          "T059"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "start_A": 1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T055",
+          "T057",
+          "T229"
+        ],
+        "when": {
+          "variable": "win_A_1",
+          "equals": 1
+        },
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "start_A": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T056",
+          "T057",
+          "T229"
+        ],
+        "when": {
+          "variable": "win_A_1",
+          "equals": 1
+        },
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "start_B": 1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T055",
+          "T057",
+          "T230"
+        ],
+        "when": {
+          "variable": "win_B_1",
+          "equals": 1
+        },
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "start_B": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T056",
+          "T057",
+          "T230"
+        ],
+        "when": {
+          "variable": "win_B_1",
+          "equals": 1
+        },
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "start_C": 1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T055",
+          "T057",
+          "T231"
+        ],
+        "when": {
+          "variable": "win_C_1",
+          "equals": 1
+        },
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "start_C": 1
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T056",
+          "T057",
+          "T231"
+        ],
+        "when": {
+          "variable": "win_C_1",
+          "equals": 1
+        },
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "start_D": 1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T055",
+          "T057",
+          "T232"
+        ],
+        "when": {
+          "variable": "win_D_1",
+          "equals": 1
+        },
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "start_D": 1
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T056",
+          "T057",
+          "T232"
+        ],
+        "when": {
+          "variable": "win_D_1",
+          "equals": 1
+        },
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "start_E": 1
+        },
+        "sense": ">=",
+        "rhs": 4,
+        "citations": [
+          "T055",
+          "T057",
+          "T233"
+        ],
+        "when": {
+          "variable": "win_E_1",
+          "equals": 1
+        },
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "start_E": 1
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T056",
+          "T057",
+          "T233"
+        ],
+        "when": {
+          "variable": "win_E_1",
+          "equals": 1
+        },
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "start_F": 1
+        },
+        "sense": ">=",
+        "rhs": 4,
+        "citations": [
+          "T055",
+          "T057",
+          "T234"
+        ],
+        "when": {
+          "variable": "win_F_1",
+          "equals": 1
+        },
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "start_F": 1
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T056",
+          "T057",
+          "T234"
+        ],
+        "when": {
+          "variable": "win_F_1",
+          "equals": 1
+        },
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "start_F": 1
+        },
+        "sense": ">=",
+        "rhs": 9,
+        "citations": [
+          "T055",
+          "T057",
+          "T235"
+        ],
+        "when": {
+          "variable": "win_F_2",
+          "equals": 1
+        },
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "start_F": 1
+        },
+        "sense": "<=",
+        "rhs": 10,
+        "citations": [
+          "T056",
+          "T057",
+          "T235"
+        ],
+        "when": {
+          "variable": "win_F_2",
+          "equals": 1
+        },
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "start_G": 1
+        },
+        "sense": ">=",
+        "rhs": 7,
+        "citations": [
+          "T055",
+          "T057",
+          "T236"
+        ],
+        "when": {
+          "variable": "win_G_1",
+          "equals": 1
+        },
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "start_G": 1
+        },
+        "sense": "<=",
+        "rhs": 12,
+        "citations": [
+          "T056",
+          "T057",
+          "T236"
+        ],
+        "when": {
+          "variable": "win_G_1",
+          "equals": 1
+        },
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "start_H": 1
+        },
+        "sense": ">=",
+        "rhs": 7,
+        "citations": [
+          "T055",
+          "T057",
+          "T237"
+        ],
+        "when": {
+          "variable": "win_H_1",
+          "equals": 1
+        },
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "start_H": 1
+        },
+        "sense": "<=",
+        "rhs": 12,
+        "citations": [
+          "T056",
+          "T057",
+          "T237"
+        ],
+        "when": {
+          "variable": "win_H_1",
+          "equals": 1
+        },
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "start_I": 1
+        },
+        "sense": ">=",
+        "rhs": 9,
+        "citations": [
+          "T055",
+          "T057",
+          "T238"
+        ],
+        "when": {
+          "variable": "win_I_1",
+          "equals": 1
+        },
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "start_I": 1
+        },
+        "sense": "<=",
+        "rhs": 14,
+        "citations": [
+          "T056",
+          "T057",
+          "T238"
+        ],
+        "when": {
+          "variable": "win_I_1",
+          "equals": 1
+        },
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "start_J": 1
+        },
+        "sense": ">=",
+        "rhs": 11,
+        "citations": [
+          "T055",
+          "T057",
+          "T239"
+        ],
+        "when": {
+          "variable": "win_J_1",
+          "equals": 1
+        },
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "start_J": 1
+        },
+        "sense": "<=",
+        "rhs": 16,
+        "citations": [
+          "T056",
+          "T057",
+          "T239"
+        ],
+        "when": {
+          "variable": "win_J_1",
+          "equals": 1
+        },
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "start_K": 1
+        },
+        "sense": ">=",
+        "rhs": 12,
+        "citations": [
+          "T055",
+          "T057",
+          "T240"
+        ],
+        "when": {
+          "variable": "win_K_1",
+          "equals": 1
+        },
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "start_K": 1
+        },
+        "sense": "<=",
+        "rhs": 16,
+        "citations": [
+          "T056",
+          "T057",
+          "T240"
+        ],
+        "when": {
+          "variable": "win_K_1",
+          "equals": 1
+        },
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "start_L": 1
+        },
+        "sense": ">=",
+        "rhs": 13,
+        "citations": [
+          "T055",
+          "T057",
+          "T241"
+        ],
+        "when": {
+          "variable": "win_L_1",
+          "equals": 1
+        },
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "start_L": 1
+        },
+        "sense": "<=",
+        "rhs": 18,
+        "citations": [
+          "T056",
+          "T057",
+          "T241"
+        ],
+        "when": {
+          "variable": "win_L_1",
+          "equals": 1
+        },
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "start_E": 1,
+          "start_A": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T210"
+        ],
+        "name": "C068"
+      },
+      {
+        "terms": {
+          "start_E": 1,
+          "start_A": -1
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T062",
+          "T210"
+        ],
+        "name": "C069"
+      },
+      {
+        "terms": {
+          "start_E": 1,
+          "start_B": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T211"
+        ],
+        "name": "C070"
+      },
+      {
+        "terms": {
+          "start_E": 1,
+          "start_B": -1
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T062",
+          "T211"
+        ],
+        "name": "C071"
+      },
+      {
+        "terms": {
+          "start_F": 1,
+          "start_C": -1
+        },
+        "sense": ">=",
+        "rhs": 3,
+        "citations": [
+          "T062",
+          "T212"
+        ],
+        "name": "C072"
+      },
+      {
+        "terms": {
+          "start_F": 1,
+          "start_C": -1
+        },
+        "sense": "<=",
+        "rhs": 9,
+        "citations": [
+          "T062",
+          "T212"
+        ],
+        "name": "C073"
+      },
+      {
+        "terms": {
+          "start_F": 1,
+          "start_D": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T213"
+        ],
+        "name": "C074"
+      },
+      {
+        "terms": {
+          "start_F": 1,
+          "start_D": -1
+        },
+        "sense": "<=",
+        "rhs": 8,
+        "citations": [
+          "T062",
+          "T213"
+        ],
+        "name": "C075"
+      },
+      {
+        "terms": {
+          "start_G": 1,
+          "start_E": -1
+        },
+        "sense": ">=",
+        "rhs": 3,
+        "citations": [
+          "T062",
+          "T214"
+        ],
+        "name": "C076"
+      },
+      {
+        "terms": {
+          "start_G": 1,
+          "start_E": -1
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T062",
+          "T214"
+        ],
+        "name": "C077"
+      },
+      {
+        "terms": {
+          "start_H": 1,
+          "start_F": -1
+        },
+        "sense": ">=",
+        "rhs": 3,
+        "citations": [
+          "T062",
+          "T215"
+        ],
+        "name": "C078"
+      },
+      {
+        "terms": {
+          "start_H": 1,
+          "start_F": -1
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T062",
+          "T215"
+        ],
+        "name": "C079"
+      },
+      {
+        "terms": {
+          "start_I": 1,
+          "start_G": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T216"
+        ],
+        "name": "C080"
+      },
+      {
+        "terms": {
+          "start_I": 1,
+          "start_G": -1
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T062",
+          "T216"
+        ],
+        "name": "C081"
+      },
+      {
+        "terms": {
+          "start_I": 1,
+          "start_H": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T217"
+        ],
+        "name": "C082"
+      },
+      {
+        "terms": {
+          "start_I": 1,
+          "start_H": -1
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T062",
+          "T217"
+        ],
+        "name": "C083"
+      },
+      {
+        "terms": {
+          "start_J": 1,
+          "start_I": -1
+        },
+        "sense": ">=",
+        "rhs": 1,
+        "citations": [
+          "T062",
+          "T218"
+        ],
+        "name": "C084"
+      },
+      {
+        "terms": {
+          "start_J": 1,
+          "start_I": -1
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T062",
+          "T218"
+        ],
+        "name": "C085"
+      },
+      {
+        "terms": {
+          "start_K": 1,
+          "start_I": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T219"
+        ],
+        "name": "C086"
+      },
+      {
+        "terms": {
+          "start_K": 1,
+          "start_I": -1
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T062",
+          "T219"
+        ],
+        "name": "C087"
+      },
+      {
+        "terms": {
+          "start_L": 1,
+          "start_J": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T220"
+        ],
+        "name": "C088"
+      },
+      {
+        "terms": {
+          "start_L": 1,
+          "start_J": -1
+        },
+        "sense": "<=",
+        "rhs": 4,
+        "citations": [
+          "T062",
+          "T220"
+        ],
+        "name": "C089"
+      },
+      {
+        "terms": {
+          "start_L": 1,
+          "start_K": -1
+        },
+        "sense": ">=",
+        "rhs": 2,
+        "citations": [
+          "T062",
+          "T221"
+        ],
+        "name": "C090"
+      },
+      {
+        "terms": {
+          "start_L": 1,
+          "start_K": -1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T062",
+          "T221"
+        ],
+        "name": "C091"
+      },
+      {
+        "terms": {
+          "server_load_0": 1,
+          "startbin_A_0": -2,
+          "startbin_B_0": -3,
+          "startbin_C_0": -2,
+          "startbin_D_0": -2,
+          "startbin_E_0": -4,
+          "startbin_F_0": -3,
+          "startbin_G_0": -2,
+          "startbin_H_0": -3,
+          "startbin_I_0": -2,
+          "startbin_J_0": -2,
+          "startbin_K_0": -3,
+          "startbin_L_0": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C092"
+      },
+      {
+        "terms": {
+          "server_load_1": 1,
+          "startbin_A_0": -2,
+          "startbin_A_1": -2,
+          "startbin_B_0": -3,
+          "startbin_B_1": -3,
+          "startbin_C_0": -2,
+          "startbin_C_1": -2,
+          "startbin_D_0": -2,
+          "startbin_D_1": -2,
+          "startbin_E_0": -4,
+          "startbin_E_1": -4,
+          "startbin_F_0": -3,
+          "startbin_F_1": -3,
+          "startbin_G_0": -2,
+          "startbin_G_1": -2,
+          "startbin_H_0": -3,
+          "startbin_H_1": -3,
+          "startbin_I_1": -2,
+          "startbin_J_0": -2,
+          "startbin_J_1": -2,
+          "startbin_K_0": -3,
+          "startbin_K_1": -3,
+          "startbin_L_0": -2,
+          "startbin_L_1": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C093"
+      },
+      {
+        "terms": {
+          "server_load_2": 1,
+          "startbin_A_1": -2,
+          "startbin_A_2": -2,
+          "startbin_B_1": -3,
+          "startbin_B_2": -3,
+          "startbin_C_0": -2,
+          "startbin_C_1": -2,
+          "startbin_C_2": -2,
+          "startbin_D_1": -2,
+          "startbin_D_2": -2,
+          "startbin_E_0": -4,
+          "startbin_E_1": -4,
+          "startbin_E_2": -4,
+          "startbin_F_0": -3,
+          "startbin_F_1": -3,
+          "startbin_F_2": -3,
+          "startbin_G_1": -2,
+          "startbin_G_2": -2,
+          "startbin_H_1": -3,
+          "startbin_H_2": -3,
+          "startbin_I_2": -2,
+          "startbin_J_1": -2,
+          "startbin_J_2": -2,
+          "startbin_K_1": -3,
+          "startbin_K_2": -3,
+          "startbin_L_1": -2,
+          "startbin_L_2": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C094"
+      },
+      {
+        "terms": {
+          "server_load_3": 1,
+          "startbin_A_2": -2,
+          "startbin_A_3": -2,
+          "startbin_B_2": -3,
+          "startbin_B_3": -3,
+          "startbin_C_1": -2,
+          "startbin_C_2": -2,
+          "startbin_C_3": -2,
+          "startbin_D_2": -2,
+          "startbin_D_3": -2,
+          "startbin_E_1": -4,
+          "startbin_E_2": -4,
+          "startbin_E_3": -4,
+          "startbin_F_1": -3,
+          "startbin_F_2": -3,
+          "startbin_F_3": -3,
+          "startbin_G_2": -2,
+          "startbin_G_3": -2,
+          "startbin_H_2": -3,
+          "startbin_H_3": -3,
+          "startbin_I_3": -2,
+          "startbin_J_2": -2,
+          "startbin_J_3": -2,
+          "startbin_K_2": -3,
+          "startbin_K_3": -3,
+          "startbin_L_2": -2,
+          "startbin_L_3": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C095"
+      },
+      {
+        "terms": {
+          "server_load_4": 1,
+          "startbin_A_3": -2,
+          "startbin_A_4": -2,
+          "startbin_B_3": -3,
+          "startbin_B_4": -3,
+          "startbin_C_2": -2,
+          "startbin_C_3": -2,
+          "startbin_C_4": -2,
+          "startbin_D_3": -2,
+          "startbin_D_4": -2,
+          "startbin_E_2": -4,
+          "startbin_E_3": -4,
+          "startbin_E_4": -4,
+          "startbin_F_2": -3,
+          "startbin_F_3": -3,
+          "startbin_F_4": -3,
+          "startbin_G_3": -2,
+          "startbin_G_4": -2,
+          "startbin_H_3": -3,
+          "startbin_H_4": -3,
+          "startbin_I_4": -2,
+          "startbin_J_3": -2,
+          "startbin_J_4": -2,
+          "startbin_K_3": -3,
+          "startbin_K_4": -3,
+          "startbin_L_3": -2,
+          "startbin_L_4": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C096"
+      },
+      {
+        "terms": {
+          "server_load_5": 1,
+          "startbin_A_4": -2,
+          "startbin_A_5": -2,
+          "startbin_B_4": -3,
+          "startbin_B_5": -3,
+          "startbin_C_3": -2,
+          "startbin_C_4": -2,
+          "startbin_C_5": -2,
+          "startbin_D_4": -2,
+          "startbin_D_5": -2,
+          "startbin_E_3": -4,
+          "startbin_E_4": -4,
+          "startbin_E_5": -4,
+          "startbin_F_3": -3,
+          "startbin_F_4": -3,
+          "startbin_F_5": -3,
+          "startbin_G_4": -2,
+          "startbin_G_5": -2,
+          "startbin_H_4": -3,
+          "startbin_H_5": -3,
+          "startbin_I_5": -2,
+          "startbin_J_4": -2,
+          "startbin_J_5": -2,
+          "startbin_K_4": -3,
+          "startbin_K_5": -3,
+          "startbin_L_4": -2,
+          "startbin_L_5": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C097"
+      },
+      {
+        "terms": {
+          "server_load_6": 1,
+          "startbin_A_5": -2,
+          "startbin_A_6": -2,
+          "startbin_B_5": -3,
+          "startbin_B_6": -3,
+          "startbin_C_4": -2,
+          "startbin_C_5": -2,
+          "startbin_C_6": -2,
+          "startbin_D_5": -2,
+          "startbin_D_6": -2,
+          "startbin_E_4": -4,
+          "startbin_E_5": -4,
+          "startbin_E_6": -4,
+          "startbin_F_4": -3,
+          "startbin_F_5": -3,
+          "startbin_F_6": -3,
+          "startbin_G_5": -2,
+          "startbin_G_6": -2,
+          "startbin_H_5": -3,
+          "startbin_H_6": -3,
+          "startbin_I_6": -2,
+          "startbin_J_5": -2,
+          "startbin_J_6": -2,
+          "startbin_K_5": -3,
+          "startbin_K_6": -3,
+          "startbin_L_5": -2,
+          "startbin_L_6": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C098"
+      },
+      {
+        "terms": {
+          "server_load_7": 1,
+          "startbin_A_6": -2,
+          "startbin_A_7": -2,
+          "startbin_B_6": -3,
+          "startbin_B_7": -3,
+          "startbin_C_5": -2,
+          "startbin_C_6": -2,
+          "startbin_C_7": -2,
+          "startbin_D_6": -2,
+          "startbin_D_7": -2,
+          "startbin_E_5": -4,
+          "startbin_E_6": -4,
+          "startbin_E_7": -4,
+          "startbin_F_5": -3,
+          "startbin_F_6": -3,
+          "startbin_F_7": -3,
+          "startbin_G_6": -2,
+          "startbin_G_7": -2,
+          "startbin_H_6": -3,
+          "startbin_H_7": -3,
+          "startbin_I_7": -2,
+          "startbin_J_6": -2,
+          "startbin_J_7": -2,
+          "startbin_K_6": -3,
+          "startbin_K_7": -3,
+          "startbin_L_6": -2,
+          "startbin_L_7": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C099"
+      },
+      {
+        "terms": {
+          "server_load_8": 1,
+          "startbin_A_7": -2,
+          "startbin_A_8": -2,
+          "startbin_B_7": -3,
+          "startbin_B_8": -3,
+          "startbin_C_6": -2,
+          "startbin_C_7": -2,
+          "startbin_C_8": -2,
+          "startbin_D_7": -2,
+          "startbin_D_8": -2,
+          "startbin_E_6": -4,
+          "startbin_E_7": -4,
+          "startbin_E_8": -4,
+          "startbin_F_6": -3,
+          "startbin_F_7": -3,
+          "startbin_F_8": -3,
+          "startbin_G_7": -2,
+          "startbin_G_8": -2,
+          "startbin_H_7": -3,
+          "startbin_H_8": -3,
+          "startbin_I_8": -2,
+          "startbin_J_7": -2,
+          "startbin_J_8": -2,
+          "startbin_K_7": -3,
+          "startbin_K_8": -3,
+          "startbin_L_7": -2,
+          "startbin_L_8": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C100"
+      },
+      {
+        "terms": {
+          "server_load_9": 1,
+          "startbin_A_8": -2,
+          "startbin_A_9": -2,
+          "startbin_B_8": -3,
+          "startbin_B_9": -3,
+          "startbin_C_7": -2,
+          "startbin_C_8": -2,
+          "startbin_C_9": -2,
+          "startbin_D_8": -2,
+          "startbin_D_9": -2,
+          "startbin_E_7": -4,
+          "startbin_E_8": -4,
+          "startbin_E_9": -4,
+          "startbin_F_7": -3,
+          "startbin_F_8": -3,
+          "startbin_F_9": -3,
+          "startbin_G_8": -2,
+          "startbin_G_9": -2,
+          "startbin_H_8": -3,
+          "startbin_H_9": -3,
+          "startbin_I_9": -2,
+          "startbin_J_8": -2,
+          "startbin_J_9": -2,
+          "startbin_K_8": -3,
+          "startbin_K_9": -3,
+          "startbin_L_8": -2,
+          "startbin_L_9": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C101"
+      },
+      {
+        "terms": {
+          "server_load_10": 1,
+          "startbin_A_9": -2,
+          "startbin_A_10": -2,
+          "startbin_B_9": -3,
+          "startbin_B_10": -3,
+          "startbin_C_8": -2,
+          "startbin_C_9": -2,
+          "startbin_C_10": -2,
+          "startbin_D_9": -2,
+          "startbin_D_10": -2,
+          "startbin_E_8": -4,
+          "startbin_E_9": -4,
+          "startbin_E_10": -4,
+          "startbin_F_8": -3,
+          "startbin_F_9": -3,
+          "startbin_F_10": -3,
+          "startbin_G_9": -2,
+          "startbin_G_10": -2,
+          "startbin_H_9": -3,
+          "startbin_H_10": -3,
+          "startbin_I_10": -2,
+          "startbin_J_9": -2,
+          "startbin_J_10": -2,
+          "startbin_K_9": -3,
+          "startbin_K_10": -3,
+          "startbin_L_9": -2,
+          "startbin_L_10": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C102"
+      },
+      {
+        "terms": {
+          "server_load_11": 1,
+          "startbin_A_10": -2,
+          "startbin_A_11": -2,
+          "startbin_B_10": -3,
+          "startbin_B_11": -3,
+          "startbin_C_9": -2,
+          "startbin_C_10": -2,
+          "startbin_C_11": -2,
+          "startbin_D_10": -2,
+          "startbin_D_11": -2,
+          "startbin_E_9": -4,
+          "startbin_E_10": -4,
+          "startbin_E_11": -4,
+          "startbin_F_9": -3,
+          "startbin_F_10": -3,
+          "startbin_F_11": -3,
+          "startbin_G_10": -2,
+          "startbin_G_11": -2,
+          "startbin_H_10": -3,
+          "startbin_H_11": -3,
+          "startbin_I_11": -2,
+          "startbin_J_10": -2,
+          "startbin_J_11": -2,
+          "startbin_K_10": -3,
+          "startbin_K_11": -3,
+          "startbin_L_10": -2,
+          "startbin_L_11": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C103"
+      },
+      {
+        "terms": {
+          "server_load_12": 1,
+          "startbin_A_11": -2,
+          "startbin_A_12": -2,
+          "startbin_B_11": -3,
+          "startbin_B_12": -3,
+          "startbin_C_10": -2,
+          "startbin_C_11": -2,
+          "startbin_C_12": -2,
+          "startbin_D_11": -2,
+          "startbin_D_12": -2,
+          "startbin_E_10": -4,
+          "startbin_E_11": -4,
+          "startbin_E_12": -4,
+          "startbin_F_10": -3,
+          "startbin_F_11": -3,
+          "startbin_F_12": -3,
+          "startbin_G_11": -2,
+          "startbin_G_12": -2,
+          "startbin_H_11": -3,
+          "startbin_H_12": -3,
+          "startbin_I_12": -2,
+          "startbin_J_11": -2,
+          "startbin_J_12": -2,
+          "startbin_K_11": -3,
+          "startbin_K_12": -3,
+          "startbin_L_11": -2,
+          "startbin_L_12": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C104"
+      },
+      {
+        "terms": {
+          "server_load_13": 1,
+          "startbin_A_12": -2,
+          "startbin_A_13": -2,
+          "startbin_B_12": -3,
+          "startbin_B_13": -3,
+          "startbin_C_11": -2,
+          "startbin_C_12": -2,
+          "startbin_C_13": -2,
+          "startbin_D_12": -2,
+          "startbin_D_13": -2,
+          "startbin_E_11": -4,
+          "startbin_E_12": -4,
+          "startbin_E_13": -4,
+          "startbin_F_11": -3,
+          "startbin_F_12": -3,
+          "startbin_F_13": -3,
+          "startbin_G_12": -2,
+          "startbin_G_13": -2,
+          "startbin_H_12": -3,
+          "startbin_H_13": -3,
+          "startbin_I_13": -2,
+          "startbin_J_12": -2,
+          "startbin_J_13": -2,
+          "startbin_K_12": -3,
+          "startbin_K_13": -3,
+          "startbin_L_12": -2,
+          "startbin_L_13": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C105"
+      },
+      {
+        "terms": {
+          "server_load_14": 1,
+          "startbin_A_13": -2,
+          "startbin_A_14": -2,
+          "startbin_B_13": -3,
+          "startbin_B_14": -3,
+          "startbin_C_12": -2,
+          "startbin_C_13": -2,
+          "startbin_C_14": -2,
+          "startbin_D_13": -2,
+          "startbin_D_14": -2,
+          "startbin_E_12": -4,
+          "startbin_E_13": -4,
+          "startbin_E_14": -4,
+          "startbin_F_12": -3,
+          "startbin_F_13": -3,
+          "startbin_F_14": -3,
+          "startbin_G_13": -2,
+          "startbin_G_14": -2,
+          "startbin_H_13": -3,
+          "startbin_H_14": -3,
+          "startbin_I_14": -2,
+          "startbin_J_13": -2,
+          "startbin_J_14": -2,
+          "startbin_K_13": -3,
+          "startbin_K_14": -3,
+          "startbin_L_13": -2,
+          "startbin_L_14": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C106"
+      },
+      {
+        "terms": {
+          "server_load_15": 1,
+          "startbin_A_14": -2,
+          "startbin_A_15": -2,
+          "startbin_B_14": -3,
+          "startbin_B_15": -3,
+          "startbin_C_13": -2,
+          "startbin_C_14": -2,
+          "startbin_C_15": -2,
+          "startbin_D_14": -2,
+          "startbin_D_15": -2,
+          "startbin_E_13": -4,
+          "startbin_E_14": -4,
+          "startbin_E_15": -4,
+          "startbin_F_13": -3,
+          "startbin_F_14": -3,
+          "startbin_F_15": -3,
+          "startbin_G_14": -2,
+          "startbin_G_15": -2,
+          "startbin_H_14": -3,
+          "startbin_H_15": -3,
+          "startbin_I_15": -2,
+          "startbin_J_14": -2,
+          "startbin_J_15": -2,
+          "startbin_K_14": -3,
+          "startbin_K_15": -3,
+          "startbin_L_14": -2,
+          "startbin_L_15": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C107"
+      },
+      {
+        "terms": {
+          "server_load_16": 1,
+          "startbin_A_15": -2,
+          "startbin_A_16": -2,
+          "startbin_B_15": -3,
+          "startbin_B_16": -3,
+          "startbin_C_14": -2,
+          "startbin_C_15": -2,
+          "startbin_C_16": -2,
+          "startbin_D_15": -2,
+          "startbin_D_16": -2,
+          "startbin_E_14": -4,
+          "startbin_E_15": -4,
+          "startbin_E_16": -4,
+          "startbin_F_14": -3,
+          "startbin_F_15": -3,
+          "startbin_F_16": -3,
+          "startbin_G_15": -2,
+          "startbin_G_16": -2,
+          "startbin_H_15": -3,
+          "startbin_H_16": -3,
+          "startbin_I_16": -2,
+          "startbin_J_15": -2,
+          "startbin_J_16": -2,
+          "startbin_K_15": -3,
+          "startbin_K_16": -3,
+          "startbin_L_15": -2,
+          "startbin_L_16": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C108"
+      },
+      {
+        "terms": {
+          "server_load_17": 1,
+          "startbin_A_16": -2,
+          "startbin_A_17": -2,
+          "startbin_B_16": -3,
+          "startbin_B_17": -3,
+          "startbin_C_15": -2,
+          "startbin_C_16": -2,
+          "startbin_C_17": -2,
+          "startbin_D_16": -2,
+          "startbin_D_17": -2,
+          "startbin_E_15": -4,
+          "startbin_E_16": -4,
+          "startbin_E_17": -4,
+          "startbin_F_15": -3,
+          "startbin_F_16": -3,
+          "startbin_F_17": -3,
+          "startbin_G_16": -2,
+          "startbin_G_17": -2,
+          "startbin_H_16": -3,
+          "startbin_H_17": -3,
+          "startbin_I_17": -2,
+          "startbin_J_16": -2,
+          "startbin_J_17": -2,
+          "startbin_K_16": -3,
+          "startbin_K_17": -3,
+          "startbin_L_16": -2,
+          "startbin_L_17": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C109"
+      },
+      {
+        "terms": {
+          "server_load_18": 1,
+          "startbin_A_17": -2,
+          "startbin_A_18": -2,
+          "startbin_B_17": -3,
+          "startbin_B_18": -3,
+          "startbin_C_16": -2,
+          "startbin_C_17": -2,
+          "startbin_C_18": -2,
+          "startbin_D_17": -2,
+          "startbin_D_18": -2,
+          "startbin_E_16": -4,
+          "startbin_E_17": -4,
+          "startbin_E_18": -4,
+          "startbin_F_16": -3,
+          "startbin_F_17": -3,
+          "startbin_F_18": -3,
+          "startbin_G_17": -2,
+          "startbin_G_18": -2,
+          "startbin_H_17": -3,
+          "startbin_H_18": -3,
+          "startbin_I_18": -2,
+          "startbin_J_17": -2,
+          "startbin_J_18": -2,
+          "startbin_K_17": -3,
+          "startbin_K_18": -3,
+          "startbin_L_17": -2,
+          "startbin_L_18": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C110"
+      },
+      {
+        "terms": {
+          "server_load_19": 1,
+          "startbin_A_18": -2,
+          "startbin_A_19": -2,
+          "startbin_B_18": -3,
+          "startbin_B_19": -3,
+          "startbin_C_17": -2,
+          "startbin_C_18": -2,
+          "startbin_C_19": -2,
+          "startbin_D_18": -2,
+          "startbin_D_19": -2,
+          "startbin_E_17": -4,
+          "startbin_E_18": -4,
+          "startbin_E_19": -4,
+          "startbin_F_17": -3,
+          "startbin_F_18": -3,
+          "startbin_F_19": -3,
+          "startbin_G_18": -2,
+          "startbin_G_19": -2,
+          "startbin_H_18": -3,
+          "startbin_H_19": -3,
+          "startbin_I_19": -2,
+          "startbin_J_18": -2,
+          "startbin_J_19": -2,
+          "startbin_K_18": -3,
+          "startbin_K_19": -3,
+          "startbin_L_18": -2,
+          "startbin_L_19": -2
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T049",
+          "T068"
+        ],
+        "name": "C111"
+      },
+      {
+        "terms": {
+          "critical_load_0": 1,
+          "startbin_E_0": -4,
+          "startbin_G_0": -2,
+          "startbin_K_0": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C112"
+      },
+      {
+        "terms": {
+          "critical_load_1": 1,
+          "startbin_E_0": -4,
+          "startbin_E_1": -4,
+          "startbin_G_0": -2,
+          "startbin_G_1": -2,
+          "startbin_K_0": -3,
+          "startbin_K_1": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C113"
+      },
+      {
+        "terms": {
+          "critical_load_2": 1,
+          "startbin_E_0": -4,
+          "startbin_E_1": -4,
+          "startbin_E_2": -4,
+          "startbin_G_1": -2,
+          "startbin_G_2": -2,
+          "startbin_K_1": -3,
+          "startbin_K_2": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C114"
+      },
+      {
+        "terms": {
+          "critical_load_3": 1,
+          "startbin_E_1": -4,
+          "startbin_E_2": -4,
+          "startbin_E_3": -4,
+          "startbin_G_2": -2,
+          "startbin_G_3": -2,
+          "startbin_K_2": -3,
+          "startbin_K_3": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C115"
+      },
+      {
+        "terms": {
+          "critical_load_4": 1,
+          "startbin_E_2": -4,
+          "startbin_E_3": -4,
+          "startbin_E_4": -4,
+          "startbin_G_3": -2,
+          "startbin_G_4": -2,
+          "startbin_K_3": -3,
+          "startbin_K_4": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C116"
+      },
+      {
+        "terms": {
+          "critical_load_5": 1,
+          "startbin_E_3": -4,
+          "startbin_E_4": -4,
+          "startbin_E_5": -4,
+          "startbin_G_4": -2,
+          "startbin_G_5": -2,
+          "startbin_K_4": -3,
+          "startbin_K_5": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C117"
+      },
+      {
+        "terms": {
+          "critical_load_6": 1,
+          "startbin_E_4": -4,
+          "startbin_E_5": -4,
+          "startbin_E_6": -4,
+          "startbin_G_5": -2,
+          "startbin_G_6": -2,
+          "startbin_K_5": -3,
+          "startbin_K_6": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C118"
+      },
+      {
+        "terms": {
+          "critical_load_7": 1,
+          "startbin_E_5": -4,
+          "startbin_E_6": -4,
+          "startbin_E_7": -4,
+          "startbin_G_6": -2,
+          "startbin_G_7": -2,
+          "startbin_K_6": -3,
+          "startbin_K_7": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C119"
+      },
+      {
+        "terms": {
+          "critical_load_8": 1,
+          "startbin_E_6": -4,
+          "startbin_E_7": -4,
+          "startbin_E_8": -4,
+          "startbin_G_7": -2,
+          "startbin_G_8": -2,
+          "startbin_K_7": -3,
+          "startbin_K_8": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C120"
+      },
+      {
+        "terms": {
+          "critical_load_9": 1,
+          "startbin_E_7": -4,
+          "startbin_E_8": -4,
+          "startbin_E_9": -4,
+          "startbin_G_8": -2,
+          "startbin_G_9": -2,
+          "startbin_K_8": -3,
+          "startbin_K_9": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C121"
+      },
+      {
+        "terms": {
+          "critical_load_10": 1,
+          "startbin_E_8": -4,
+          "startbin_E_9": -4,
+          "startbin_E_10": -4,
+          "startbin_G_9": -2,
+          "startbin_G_10": -2,
+          "startbin_K_9": -3,
+          "startbin_K_10": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C122"
+      },
+      {
+        "terms": {
+          "critical_load_11": 1,
+          "startbin_E_9": -4,
+          "startbin_E_10": -4,
+          "startbin_E_11": -4,
+          "startbin_G_10": -2,
+          "startbin_G_11": -2,
+          "startbin_K_10": -3,
+          "startbin_K_11": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C123"
+      },
+      {
+        "terms": {
+          "critical_load_12": 1,
+          "startbin_E_10": -4,
+          "startbin_E_11": -4,
+          "startbin_E_12": -4,
+          "startbin_G_11": -2,
+          "startbin_G_12": -2,
+          "startbin_K_11": -3,
+          "startbin_K_12": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C124"
+      },
+      {
+        "terms": {
+          "critical_load_13": 1,
+          "startbin_E_11": -4,
+          "startbin_E_12": -4,
+          "startbin_E_13": -4,
+          "startbin_G_12": -2,
+          "startbin_G_13": -2,
+          "startbin_K_12": -3,
+          "startbin_K_13": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C125"
+      },
+      {
+        "terms": {
+          "critical_load_14": 1,
+          "startbin_E_12": -4,
+          "startbin_E_13": -4,
+          "startbin_E_14": -4,
+          "startbin_G_13": -2,
+          "startbin_G_14": -2,
+          "startbin_K_13": -3,
+          "startbin_K_14": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C126"
+      },
+      {
+        "terms": {
+          "critical_load_15": 1,
+          "startbin_E_13": -4,
+          "startbin_E_14": -4,
+          "startbin_E_15": -4,
+          "startbin_G_14": -2,
+          "startbin_G_15": -2,
+          "startbin_K_14": -3,
+          "startbin_K_15": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C127"
+      },
+      {
+        "terms": {
+          "critical_load_16": 1,
+          "startbin_E_14": -4,
+          "startbin_E_15": -4,
+          "startbin_E_16": -4,
+          "startbin_G_15": -2,
+          "startbin_G_16": -2,
+          "startbin_K_15": -3,
+          "startbin_K_16": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C128"
+      },
+      {
+        "terms": {
+          "critical_load_17": 1,
+          "startbin_E_15": -4,
+          "startbin_E_16": -4,
+          "startbin_E_17": -4,
+          "startbin_G_16": -2,
+          "startbin_G_17": -2,
+          "startbin_K_16": -3,
+          "startbin_K_17": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C129"
+      },
+      {
+        "terms": {
+          "critical_load_18": 1,
+          "startbin_E_16": -4,
+          "startbin_E_17": -4,
+          "startbin_E_18": -4,
+          "startbin_G_17": -2,
+          "startbin_G_18": -2,
+          "startbin_K_17": -3,
+          "startbin_K_18": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C130"
+      },
+      {
+        "terms": {
+          "critical_load_19": 1,
+          "startbin_E_17": -4,
+          "startbin_E_18": -4,
+          "startbin_E_19": -4,
+          "startbin_G_18": -2,
+          "startbin_G_19": -2,
+          "startbin_K_18": -3,
+          "startbin_K_19": -3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T085",
+          "T086"
+        ],
+        "name": "C131"
+      },
+      {
+        "terms": {
+          "server_load_0": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C132"
+      },
+      {
+        "terms": {
+          "server_load_1": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C133"
+      },
+      {
+        "terms": {
+          "server_load_2": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C134"
+      },
+      {
+        "terms": {
+          "server_load_3": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C135"
+      },
+      {
+        "terms": {
+          "server_load_4": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C136"
+      },
+      {
+        "terms": {
+          "server_load_5": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C137"
+      },
+      {
+        "terms": {
+          "server_load_6": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C138"
+      },
+      {
+        "terms": {
+          "server_load_7": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C139"
+      },
+      {
+        "terms": {
+          "server_load_8": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C140"
+      },
+      {
+        "terms": {
+          "server_load_9": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C141"
+      },
+      {
+        "terms": {
+          "server_load_10": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C142"
+      },
+      {
+        "terms": {
+          "server_load_11": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C143"
+      },
+      {
+        "terms": {
+          "server_load_12": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C144"
+      },
+      {
+        "terms": {
+          "server_load_13": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C145"
+      },
+      {
+        "terms": {
+          "server_load_14": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C146"
+      },
+      {
+        "terms": {
+          "server_load_15": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C147"
+      },
+      {
+        "terms": {
+          "server_load_16": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C148"
+      },
+      {
+        "terms": {
+          "server_load_17": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C149"
+      },
+      {
+        "terms": {
+          "server_load_18": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C150"
+      },
+      {
+        "terms": {
+          "server_load_19": 1,
+          "server_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T068"
+        ],
+        "name": "C151"
+      },
+      {
+        "terms": {
+          "cooling_slot_0": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C152"
+      },
+      {
+        "terms": {
+          "cooling_slot_1": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C153"
+      },
+      {
+        "terms": {
+          "cooling_slot_2": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C154"
+      },
+      {
+        "terms": {
+          "cooling_slot_3": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C155"
+      },
+      {
+        "terms": {
+          "cooling_slot_4": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C156"
+      },
+      {
+        "terms": {
+          "cooling_slot_5": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C157"
+      },
+      {
+        "terms": {
+          "cooling_slot_6": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C158"
+      },
+      {
+        "terms": {
+          "cooling_slot_7": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C159"
+      },
+      {
+        "terms": {
+          "cooling_slot_8": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C160"
+      },
+      {
+        "terms": {
+          "cooling_slot_9": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C161"
+      },
+      {
+        "terms": {
+          "cooling_slot_10": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C162"
+      },
+      {
+        "terms": {
+          "cooling_slot_11": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C163"
+      },
+      {
+        "terms": {
+          "cooling_slot_12": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C164"
+      },
+      {
+        "terms": {
+          "cooling_slot_13": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C165"
+      },
+      {
+        "terms": {
+          "cooling_slot_14": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C166"
+      },
+      {
+        "terms": {
+          "cooling_slot_15": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C167"
+      },
+      {
+        "terms": {
+          "cooling_slot_16": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C168"
+      },
+      {
+        "terms": {
+          "cooling_slot_17": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C169"
+      },
+      {
+        "terms": {
+          "cooling_slot_18": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C170"
+      },
+      {
+        "terms": {
+          "cooling_slot_19": 1,
+          "cooling_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T071",
+          "T072"
+        ],
+        "name": "C171"
+      },
+      {
+        "terms": {
+          "cooling_slot_0": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T261"
+        ],
+        "name": "C172"
+      },
+      {
+        "terms": {
+          "cooling_slot_1": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T262"
+        ],
+        "name": "C173"
+      },
+      {
+        "terms": {
+          "cooling_slot_2": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T263"
+        ],
+        "name": "C174"
+      },
+      {
+        "terms": {
+          "cooling_slot_3": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T264"
+        ],
+        "name": "C175"
+      },
+      {
+        "terms": {
+          "cooling_slot_4": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T265"
+        ],
+        "name": "C176"
+      },
+      {
+        "terms": {
+          "cooling_slot_5": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T266"
+        ],
+        "name": "C177"
+      },
+      {
+        "terms": {
+          "cooling_slot_6": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T267"
+        ],
+        "name": "C178"
+      },
+      {
+        "terms": {
+          "cooling_slot_7": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T268"
+        ],
+        "name": "C179"
+      },
+      {
+        "terms": {
+          "cooling_slot_8": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T269"
+        ],
+        "name": "C180"
+      },
+      {
+        "terms": {
+          "cooling_slot_9": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T270"
+        ],
+        "name": "C181"
+      },
+      {
+        "terms": {
+          "cooling_slot_10": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T271"
+        ],
+        "name": "C182"
+      },
+      {
+        "terms": {
+          "cooling_slot_11": 1
+        },
+        "sense": "<=",
+        "rhs": 3,
+        "citations": [
+          "T073",
+          "T272"
+        ],
+        "name": "C183"
+      },
+      {
+        "terms": {
+          "cooling_slot_12": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T273"
+        ],
+        "name": "C184"
+      },
+      {
+        "terms": {
+          "cooling_slot_13": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T274"
+        ],
+        "name": "C185"
+      },
+      {
+        "terms": {
+          "cooling_slot_14": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T275"
+        ],
+        "name": "C186"
+      },
+      {
+        "terms": {
+          "cooling_slot_15": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T276"
+        ],
+        "name": "C187"
+      },
+      {
+        "terms": {
+          "cooling_slot_16": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T277"
+        ],
+        "name": "C188"
+      },
+      {
+        "terms": {
+          "cooling_slot_17": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T278"
+        ],
+        "name": "C189"
+      },
+      {
+        "terms": {
+          "cooling_slot_18": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T279"
+        ],
+        "name": "C190"
+      },
+      {
+        "terms": {
+          "cooling_slot_19": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T073",
+          "T280"
+        ],
+        "name": "C191"
+      },
+      {
+        "terms": {
+          "server_load_0": 1,
+          "cooling_slot_0": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C192"
+      },
+      {
+        "terms": {
+          "server_load_0": 1,
+          "cooling_slot_0": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C193"
+      },
+      {
+        "terms": {
+          "server_load_1": 1,
+          "cooling_slot_1": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C194"
+      },
+      {
+        "terms": {
+          "server_load_1": 1,
+          "cooling_slot_1": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C195"
+      },
+      {
+        "terms": {
+          "server_load_2": 1,
+          "cooling_slot_2": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C196"
+      },
+      {
+        "terms": {
+          "server_load_2": 1,
+          "cooling_slot_2": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C197"
+      },
+      {
+        "terms": {
+          "server_load_3": 1,
+          "cooling_slot_3": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C198"
+      },
+      {
+        "terms": {
+          "server_load_3": 1,
+          "cooling_slot_3": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C199"
+      },
+      {
+        "terms": {
+          "server_load_4": 1,
+          "cooling_slot_4": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C200"
+      },
+      {
+        "terms": {
+          "server_load_4": 1,
+          "cooling_slot_4": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C201"
+      },
+      {
+        "terms": {
+          "server_load_5": 1,
+          "cooling_slot_5": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C202"
+      },
+      {
+        "terms": {
+          "server_load_5": 1,
+          "cooling_slot_5": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C203"
+      },
+      {
+        "terms": {
+          "server_load_6": 1,
+          "cooling_slot_6": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C204"
+      },
+      {
+        "terms": {
+          "server_load_6": 1,
+          "cooling_slot_6": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C205"
+      },
+      {
+        "terms": {
+          "server_load_7": 1,
+          "cooling_slot_7": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C206"
+      },
+      {
+        "terms": {
+          "server_load_7": 1,
+          "cooling_slot_7": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C207"
+      },
+      {
+        "terms": {
+          "server_load_8": 1,
+          "cooling_slot_8": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C208"
+      },
+      {
+        "terms": {
+          "server_load_8": 1,
+          "cooling_slot_8": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C209"
+      },
+      {
+        "terms": {
+          "server_load_9": 1,
+          "cooling_slot_9": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C210"
+      },
+      {
+        "terms": {
+          "server_load_9": 1,
+          "cooling_slot_9": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C211"
+      },
+      {
+        "terms": {
+          "server_load_10": 1,
+          "cooling_slot_10": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C212"
+      },
+      {
+        "terms": {
+          "server_load_10": 1,
+          "cooling_slot_10": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C213"
+      },
+      {
+        "terms": {
+          "server_load_11": 1,
+          "cooling_slot_11": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C214"
+      },
+      {
+        "terms": {
+          "server_load_11": 1,
+          "cooling_slot_11": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C215"
+      },
+      {
+        "terms": {
+          "server_load_12": 1,
+          "cooling_slot_12": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C216"
+      },
+      {
+        "terms": {
+          "server_load_12": 1,
+          "cooling_slot_12": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C217"
+      },
+      {
+        "terms": {
+          "server_load_13": 1,
+          "cooling_slot_13": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C218"
+      },
+      {
+        "terms": {
+          "server_load_13": 1,
+          "cooling_slot_13": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C219"
+      },
+      {
+        "terms": {
+          "server_load_14": 1,
+          "cooling_slot_14": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C220"
+      },
+      {
+        "terms": {
+          "server_load_14": 1,
+          "cooling_slot_14": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C221"
+      },
+      {
+        "terms": {
+          "server_load_15": 1,
+          "cooling_slot_15": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C222"
+      },
+      {
+        "terms": {
+          "server_load_15": 1,
+          "cooling_slot_15": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C223"
+      },
+      {
+        "terms": {
+          "server_load_16": 1,
+          "cooling_slot_16": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C224"
+      },
+      {
+        "terms": {
+          "server_load_16": 1,
+          "cooling_slot_16": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C225"
+      },
+      {
+        "terms": {
+          "server_load_17": 1,
+          "cooling_slot_17": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C226"
+      },
+      {
+        "terms": {
+          "server_load_17": 1,
+          "cooling_slot_17": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C227"
+      },
+      {
+        "terms": {
+          "server_load_18": 1,
+          "cooling_slot_18": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C228"
+      },
+      {
+        "terms": {
+          "server_load_18": 1,
+          "cooling_slot_18": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C229"
+      },
+      {
+        "terms": {
+          "server_load_19": 1,
+          "cooling_slot_19": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C230"
+      },
+      {
+        "terms": {
+          "server_load_19": 1,
+          "cooling_slot_19": -3
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T080",
+          "T081"
+        ],
+        "name": "C231"
+      },
+      {
+        "terms": {
+          "backup_slot_0": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C232"
+      },
+      {
+        "terms": {
+          "backup_slot_1": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C233"
+      },
+      {
+        "terms": {
+          "backup_slot_2": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C234"
+      },
+      {
+        "terms": {
+          "backup_slot_3": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C235"
+      },
+      {
+        "terms": {
+          "backup_slot_4": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C236"
+      },
+      {
+        "terms": {
+          "backup_slot_5": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C237"
+      },
+      {
+        "terms": {
+          "backup_slot_6": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C238"
+      },
+      {
+        "terms": {
+          "backup_slot_7": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C239"
+      },
+      {
+        "terms": {
+          "backup_slot_8": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C240"
+      },
+      {
+        "terms": {
+          "backup_slot_9": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C241"
+      },
+      {
+        "terms": {
+          "backup_slot_10": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C242"
+      },
+      {
+        "terms": {
+          "backup_slot_11": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C243"
+      },
+      {
+        "terms": {
+          "backup_slot_12": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C244"
+      },
+      {
+        "terms": {
+          "backup_slot_13": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C245"
+      },
+      {
+        "terms": {
+          "backup_slot_14": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C246"
+      },
+      {
+        "terms": {
+          "backup_slot_15": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C247"
+      },
+      {
+        "terms": {
+          "backup_slot_16": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C248"
+      },
+      {
+        "terms": {
+          "backup_slot_17": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C249"
+      },
+      {
+        "terms": {
+          "backup_slot_18": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C250"
+      },
+      {
+        "terms": {
+          "backup_slot_19": 1,
+          "backup_config": -1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T089",
+          "T090"
+        ],
+        "name": "C251"
+      },
+      {
+        "terms": {
+          "backup_slot_0": 1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T091",
+          "T261"
+        ],
+        "name": "C252"
+      },
+      {
+        "terms": {
+          "backup_slot_1": 1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T091",
+          "T262"
+        ],
+        "name": "C253"
+      },
+      {
+        "terms": {
+          "backup_slot_2": 1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T091",
+          "T263"
+        ],
+        "name": "C254"
+      },
+      {
+        "terms": {
+          "backup_slot_3": 1
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T091",
+          "T264"
+        ],
+        "name": "C255"
+      },
+      {
+        "terms": {
+          "backup_slot_4": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T265"
+        ],
+        "name": "C256"
+      },
+      {
+        "terms": {
+          "backup_slot_5": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T266"
+        ],
+        "name": "C257"
+      },
+      {
+        "terms": {
+          "backup_slot_6": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T267"
+        ],
+        "name": "C258"
+      },
+      {
+        "terms": {
+          "backup_slot_7": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T268"
+        ],
+        "name": "C259"
+      },
+      {
+        "terms": {
+          "backup_slot_8": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T269"
+        ],
+        "name": "C260"
+      },
+      {
+        "terms": {
+          "backup_slot_9": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T270"
+        ],
+        "name": "C261"
+      },
+      {
+        "terms": {
+          "backup_slot_10": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T271"
+        ],
+        "name": "C262"
+      },
+      {
+        "terms": {
+          "backup_slot_11": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T272"
+        ],
+        "name": "C263"
+      },
+      {
+        "terms": {
+          "backup_slot_12": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T273"
+        ],
+        "name": "C264"
+      },
+      {
+        "terms": {
+          "backup_slot_13": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T274"
+        ],
+        "name": "C265"
+      },
+      {
+        "terms": {
+          "backup_slot_14": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T275"
+        ],
+        "name": "C266"
+      },
+      {
+        "terms": {
+          "backup_slot_15": 1
+        },
+        "sense": "<=",
+        "rhs": 2,
+        "citations": [
+          "T091",
+          "T276"
+        ],
+        "name": "C267"
+      },
+      {
+        "terms": {
+          "backup_slot_16": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T277"
+        ],
+        "name": "C268"
+      },
+      {
+        "terms": {
+          "backup_slot_17": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T278"
+        ],
+        "name": "C269"
+      },
+      {
+        "terms": {
+          "backup_slot_18": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T279"
+        ],
+        "name": "C270"
+      },
+      {
+        "terms": {
+          "backup_slot_19": 1
+        },
+        "sense": "<=",
+        "rhs": 1,
+        "citations": [
+          "T091",
+          "T280"
+        ],
+        "name": "C271"
+      },
+      {
+        "terms": {
+          "critical_load_0": 1,
+          "backup_slot_0": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C272"
+      },
+      {
+        "terms": {
+          "critical_load_0": 1,
+          "backup_slot_0": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C273"
+      },
+      {
+        "terms": {
+          "critical_load_1": 1,
+          "backup_slot_1": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C274"
+      },
+      {
+        "terms": {
+          "critical_load_1": 1,
+          "backup_slot_1": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C275"
+      },
+      {
+        "terms": {
+          "critical_load_2": 1,
+          "backup_slot_2": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C276"
+      },
+      {
+        "terms": {
+          "critical_load_2": 1,
+          "backup_slot_2": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C277"
+      },
+      {
+        "terms": {
+          "critical_load_3": 1,
+          "backup_slot_3": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C278"
+      },
+      {
+        "terms": {
+          "critical_load_3": 1,
+          "backup_slot_3": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C279"
+      },
+      {
+        "terms": {
+          "critical_load_4": 1,
+          "backup_slot_4": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C280"
+      },
+      {
+        "terms": {
+          "critical_load_4": 1,
+          "backup_slot_4": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C281"
+      },
+      {
+        "terms": {
+          "critical_load_5": 1,
+          "backup_slot_5": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C282"
+      },
+      {
+        "terms": {
+          "critical_load_5": 1,
+          "backup_slot_5": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C283"
+      },
+      {
+        "terms": {
+          "critical_load_6": 1,
+          "backup_slot_6": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C284"
+      },
+      {
+        "terms": {
+          "critical_load_6": 1,
+          "backup_slot_6": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C285"
+      },
+      {
+        "terms": {
+          "critical_load_7": 1,
+          "backup_slot_7": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C286"
+      },
+      {
+        "terms": {
+          "critical_load_7": 1,
+          "backup_slot_7": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C287"
+      },
+      {
+        "terms": {
+          "critical_load_8": 1,
+          "backup_slot_8": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C288"
+      },
+      {
+        "terms": {
+          "critical_load_8": 1,
+          "backup_slot_8": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C289"
+      },
+      {
+        "terms": {
+          "critical_load_9": 1,
+          "backup_slot_9": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C290"
+      },
+      {
+        "terms": {
+          "critical_load_9": 1,
+          "backup_slot_9": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C291"
+      },
+      {
+        "terms": {
+          "critical_load_10": 1,
+          "backup_slot_10": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C292"
+      },
+      {
+        "terms": {
+          "critical_load_10": 1,
+          "backup_slot_10": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C293"
+      },
+      {
+        "terms": {
+          "critical_load_11": 1,
+          "backup_slot_11": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C294"
+      },
+      {
+        "terms": {
+          "critical_load_11": 1,
+          "backup_slot_11": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C295"
+      },
+      {
+        "terms": {
+          "critical_load_12": 1,
+          "backup_slot_12": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C296"
+      },
+      {
+        "terms": {
+          "critical_load_12": 1,
+          "backup_slot_12": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C297"
+      },
+      {
+        "terms": {
+          "critical_load_13": 1,
+          "backup_slot_13": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C298"
+      },
+      {
+        "terms": {
+          "critical_load_13": 1,
+          "backup_slot_13": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C299"
+      },
+      {
+        "terms": {
+          "critical_load_14": 1,
+          "backup_slot_14": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C300"
+      },
+      {
+        "terms": {
+          "critical_load_14": 1,
+          "backup_slot_14": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C301"
+      },
+      {
+        "terms": {
+          "critical_load_15": 1,
+          "backup_slot_15": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C302"
+      },
+      {
+        "terms": {
+          "critical_load_15": 1,
+          "backup_slot_15": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C303"
+      },
+      {
+        "terms": {
+          "critical_load_16": 1,
+          "backup_slot_16": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C304"
+      },
+      {
+        "terms": {
+          "critical_load_16": 1,
+          "backup_slot_16": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C305"
+      },
+      {
+        "terms": {
+          "critical_load_17": 1,
+          "backup_slot_17": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C306"
+      },
+      {
+        "terms": {
+          "critical_load_17": 1,
+          "backup_slot_17": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C307"
+      },
+      {
+        "terms": {
+          "critical_load_18": 1,
+          "backup_slot_18": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C308"
+      },
+      {
+        "terms": {
+          "critical_load_18": 1,
+          "backup_slot_18": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C309"
+      },
+      {
+        "terms": {
+          "critical_load_19": 1,
+          "backup_slot_19": -2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C310"
+      },
+      {
+        "terms": {
+          "critical_load_19": 1,
+          "backup_slot_19": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C311"
+      }
+    ]
+  },
+  "table": [
+    {
+      "id": "Q1",
+      "question": "Does the current configuration and schedule meet all supplied constraints, and is 25 the minimum total power under the given data?",
+      "answer": "Yes. The submitted solution has S=6, C=2, B=1, giving objective 12+8+5=25. With S=6, the configuration ratios force C>=2 and B>=1; any S>6 or larger C/B increases the objective, and S<6 is forbidden. The listed starts satisfy windows, dependencies, server capacity, and cooling/backup service ratios.",
+      "evidence_refs": [
+        "T013",
+        "T014",
+        "T015",
+        "T016",
+        "T017",
+        "T031",
+        "T036",
+        "T037",
+        "T145",
+        "T146",
+        "T147",
+        "T148",
+        "T149",
+        "T224",
+        "T225",
+        "T226",
+        "T258"
+      ],
+      "model_effect": "No model change; the existing model and solution already attain the lower bound."
+    }
+  ],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 数据中心设备配置与限时作业调度需求\n\n## 1. 任务与求解方式\n\n使用 Python 调用 COPT，将设备配置与作业调度联合建立为混合整数线性规划并实际求解。\n\n需要决定：\n- 服务器、冷却设备、备用电源各配置多少台；\n- 每项作业的整数小时开始时间及所选允许窗口；\n- 每个时段投入服务的冷却设备和备用电源数量。\n\n全部输入从文末约定的 UTF-8 CSV 文件读取。不得引入随机数据、额外作业、虚拟负载或新的业务约束。\n\n## 2. 唯一优化目标\n\n最小化全部配置设备的额定总功率。总功率按各类设备的配置台数乘以其单台功率后求和：\n- 服务器每台2单位功率；\n- 冷却设备每台4单位功率；\n- 备用电源每台5单位功率。\n\n总功率不得超过50单位。\n\n这是为已配置设备预留的额定功率，不是按运行时间累计的电量。设备闲置、未投入服务或仅在部分时段投入，均不减少其配置功率。备用电源的保障能力也不抵扣其他设备的功率。\n\n不附加作业完成时间、设备切换次数等目标。存在多个总功率相同的最优方案时，输出任意一个即可。\n\n## 3. 计划周期与设备配置\n\n### 3.1 时间口径\n\n计划周期为20小时，分为20个1小时时段，时段编号为0至19。时段编号表示该时段的开始小时，时段覆盖该小时至下一小时的半开区间。\n\n所有作业开始时间只能为0至19之间的整数，且整个执行过程必须位于计划周期内。\n\n### 3.2 配置数量与配置比例\n\n三类设备配置数量均为非负整数：\n- 服务器至少6台，有效上限为25台；\n- 冷却设备最多8台；\n- 备用电源最多3台。\n\n服务器的25台上限来自总功率上限，不替代其他条件。\n\n配置数量还必须满足：\n- 冷却设备台数占服务器配置台数的比例为1/4至1/2，含边界；\n- 备用电源台数占服务器配置台数的比例为1/8至1/4，含边界。\n\n配置比例统计整个周期内配置的设备台数，而不是逐时投入台数。服务器至少6台，故上述比例的分母始终为正。数量限制、配置比例和总功率上限必须同时满足。\n\n同类设备性能一致。服务器可在作业完成后立即供其他作业使用，不计切换时间。冷却设备和备用电源可在整数小时边界切换投入状态，不另计启停时间或启停功率。\n\n## 4. 作业安排\n\n### 4.1 必须执行且不可中断\n\n全部12项作业都必须执行一次，不可取消、拆分或中断。\n\n每项作业的持续时间、服务器需求和关键标记从 `jobs.csv` 读取。作业完成时间等于开始时间加持续时间。作业从开始时刻起连续占用持续时间所覆盖的每个时段，但不占用完成时刻开始的时段。\n\n作业执行期间始终需要同时独占其需求数量的服务器。同一时段不同作业不得共享同一台服务器。\n\n### 4.2 完整执行窗口\n\n允许窗口从 `job_windows.csv` 读取。每项作业必须选择一个允许窗口，并使整个执行区间落在该窗口内：\n- 开始时间不得早于窗口左端；\n- 完成时间不得晚于窗口右端；\n- 可以恰好在左端开始，或恰好在右端完成。\n\n作业F有两个允许窗口，必须二选一，不得跨越两个窗口间的空档。其他作业各有一个窗口。\n\n### 4.3 依赖及等待间隔\n\n`dependencies.csv` 每行给出一条必须满足的前项到后项关系。\n\n等待时间按“后项开始时间减去前项完成时间”计算，必须落在该行规定的最小与最大等待时间之间，两端均包含。后项有多个前项时，所有对应关系都必须同时满足。\n\n未列出的作业对不增加先后关系。满足窗口、依赖和资源条件的不同作业可以并行执行。\n\n## 5. 逐时服务器与冷却服务\n\n### 5.1 实际运行服务器需求\n\n每个时段的实际运行服务器需求，为该时段所有执行中作业的服务器需求之和，不得超过服务器配置数量。\n\n闲置服务器不计入实际运行需求，也不得增加虚拟负载来改变冷却配比。\n\n### 5.2 冷却投入限制\n\n每个时段实际投入服务的冷却设备台数必须为非负整数，且同时不得超过：\n- 冷却设备配置数量；\n- `time_slots.csv` 给出的该时段冷却支路投入上限。\n\n冷却支路上限为：\n- 时段0至3：2台；\n- 时段4至11：3台；\n- 时段12至19：2台。\n\n该上限不是必须投入的数量，也不改变冷却设备最多配置8台的限制。\n\n### 5.3 冷却与实际服务器负载的配比\n\n有作业运行时，投入冷却设备台数占实际运行服务器需求的比例必须为1/3至1/2，含边界。等价的业务计算口径是：实际运行服务器需求至少为投入冷却设备台数的2倍，最多为其3倍。\n\n没有作业运行时，冷却投入必须为0。\n\n## 6. 逐时备用供电保障\n\n### 6.1 关键负载\n\n每个时段的关键服务器需求，为该时段执行中、关键标记为1的作业的服务器需求之和。\n\n关键作业为E、G、K。非关键作业不要求备用供电保障，也不得计入关键服务器需求来调整比例。\n\n### 6.2 备用电源投入限制\n\n每个时段实际投入关键负载保障的备用电源台数必须为非负整数，且同时不得超过：\n- 备用电源配置数量；\n- `time_slots.csv` 给出的该时段备用电源投入上限。\n\n投入上限为：\n- 时段0至3：0台；\n- 时段4至15：2台；\n- 时段16至19：1台。\n\n### 6.3 备用电源与关键负载的配比\n\n有关键负载时，投入备用电源台数占关键服务器需求的比例必须为1/4至1/2，含边界。等价的业务计算口径是：关键服务器需求至少为投入备用电源台数的2倍，最多为其4倍。\n\n没有关键负载时，备用电源投入必须为0。配置但未投入的备用电源仍计入配置总功率。\n\n## 7. 结果与核验要求\n\n程序必须实际调用 COPT，不得以预置方案或仅打印结果代替求解。\n\n输出至少包括：\n1. 求解状态；未证明最优时如实说明；\n2. 可用解中的三类设备配置数量；\n3. 配置总功率；仅在证明最优时称其为最小总功率；\n4. 每项作业的开始时间、完成时间、所选窗口编号及窗口端点；\n5. 全部20个时段的实际运行服务器需求、关键服务器需求、冷却投入台数、备用电源投入台数；\n6. 根据输出方案重新核验以下条件，并报告各类核验是否通过及违规明细：\n   - 配置数量的整数性、上下限、总功率；\n   - 两类设备的配置比例；\n   - 作业执行次数、整数开始时间、持续时间、计划周期与完整执行窗口；\n   - 所有依赖的最小和最大等待间隔；\n   - 逐时服务器容量；\n   - 冷却和备用电源的整数投入数量、配置数量上限、时段投入上限及负载配比；\n   - 无运行负载时冷却投入为0，无关键负载时备用电源投入为0。\n\n实际求解后必须打印一行以 `RESULT_JSON` 开头、后接 JSON 对象的结果。该对象至少包含：\n- `status`：只能为 `optimal`、`feasible`、`infeasible`、`unbounded`、`unknown` 或 `error`；\n- `objective_value`：有可用解时为该解的配置总功率数值，保持自然最小化方向；无可用解时为 `null`。\n\n状态口径：\n- `optimal`：已证明最优；\n- `feasible`：有可用解，但未证明最优；\n- `infeasible`：已证明不可行；\n- `unbounded`：求解器报告无界；\n- `unknown`：未获得可用解，也未确定不可行或无界；\n- `error`：程序或求解调用发生错误。\n\n方案和核验结果可放入该 JSON 的附加字段，也可另行输出。没有可用解时，不得编造配置、调度或最优值。\n\n## 8. CSV 输入接口\n\n所有文件均采用 UTF-8 编码，首行为字段名。所有字段均不得为空；各表不得存在重复唯一标识。所有输入均为完整定义，不需要补充外部数据。\n\n### ./data/planning.csv\n\n每行代表本问题的计划周期、功率预算及配比参数；本文件恰有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| horizon_hours | 计划周期长度 | integer | 小时，20 |\n| slot_hours | 每个时段长度 | integer | 小时，1 |\n| total_power_limit | 配置总功率上限 | integer | 功率单位，50 |\n| cooling_config_min_ratio | 冷却配置台数占服务器配置台数的最小比例 | number | 无量纲，1/4 |\n| cooling_config_max_ratio | 冷却配置台数占服务器配置台数的最大比例 | number | 无量纲，1/2 |\n| backup_config_min_ratio | 备用电源配置台数占服务器配置台数的最小比例 | number | 无量纲，1/8 |\n| backup_config_max_ratio | 备用电源配置台数占服务器配置台数的最大比例 | number | 无量纲，1/4 |\n| cooling_min_servers_per_unit | 实际运行服务器需求相对冷却投入台数的最小倍数 | integer | 台服务器/台冷却设备，2 |\n| cooling_max_servers_per_unit | 实际运行服务器需求相对冷却投入台数的最大倍数 | integer | 台服务器/台冷却设备，3 |\n| backup_min_critical_servers_per_unit | 关键服务器需求相对备用电源投入台数的最小倍数 | integer | 台关键服务器/台备用电源，2 |\n| backup_max_critical_servers_per_unit | 关键服务器需求相对备用电源投入台数的最大倍数 | integer | 台关键服务器/台备用电源，4 |\n\n### ./data/equipment.csv\n\n每行代表一类设备的配置参数，共三行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| equipment_type | 设备类别标识 | string | server、cooling、backup分别表示服务器、冷却设备、备用电源 |\n| power_per_unit | 单台设备的额定功率 | integer | 功率单位/台 |\n| min_count | 配置台数下限 | integer | 台 |\n| max_count | 配置台数上限 | integer | 台；服务器为由功率预算得到的有效上限25 |\n\n`equipment_type` 为唯一标识。\n\n### ./data/jobs.csv\n\n每行代表一项必须执行的作业，共12行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| job_id | 作业编号 | string | A至L |\n| job_name | 业务名称 | string | 不适用 |\n| duration_hours | 连续执行持续时间 | integer | 小时 |\n| server_demand | 执行期间每个时段独占的服务器台数 | integer | 台 |\n| critical_flag | 是否属于关键作业 | integer | 1表示关键，0表示非关键 |\n\n`job_id` 为唯一标识。\n\n### ./data/job_windows.csv\n\n每行代表一项作业的一个允许执行窗口，共13行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| job_id | 所属作业编号 | string | 关联jobs.csv的job_id |\n| window_id | 作业内的窗口编号 | integer | 从1开始；F为1、2，其他作业为1 |\n| start_hour | 窗口左端 | integer | 从计划周期起点计的小时，可在此开始 |\n| end_hour | 窗口右端 | integer | 从计划周期起点计的小时，可在此完成，不占用此后的时段 |\n\n`job_id` 与 `window_id` 的组合为唯一标识。窗口为半开区间，必须容纳作业的整个执行过程。\n\n### ./data/dependencies.csv\n\n每行代表一条必须满足的作业依赖，共12行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| predecessor_id | 前项作业编号 | string | 关联jobs.csv的job_id |\n| successor_id | 后项作业编号 | string | 关联jobs.csv的job_id |\n| min_wait_hours | 前项完成至后项开始的最小等待时间 | integer | 小时，含边界 |\n| max_wait_hours | 前项完成至后项开始的最大等待时间 | integer | 小时，含边界 |\n\n`predecessor_id` 与 `successor_id` 的组合为唯一标识。\n\n### ./data/time_slots.csv\n\n每行代表一个1小时时段的冷却和备用电源投入上限，共20行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| slot_id | 时段编号，也是时段开始小时 | integer | 0至19 |\n| cooling_service_limit | 该时段最多可投入服务的冷却设备台数 | integer | 台 |\n| backup_service_limit | 该时段最多可投入关键负载保障的备用电源台数 | integer | 台 |\n\n`slot_id` 为唯一标识。每行覆盖从 `slot_id` 到 `slot_id+1` 的半开时间区间。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：dependencies.csv\npredecessor_id,successor_id,min_wait_hours,max_wait_hours\r\nA,E,0,3\r\nB,E,0,4\r\nC,F,0,6\r\nD,F,0,6\r\nE,G,0,2\r\nF,H,0,2\r\nG,I,0,4\r\nH,I,0,2\r\nI,J,0,3\r\nI,K,1,3\r\nJ,L,0,2\r\nK,L,0,1\r\n\n\n数据文件：equipment.csv\nequipment_type,power_per_unit,min_count,max_count\r\nserver,2,6,25\r\ncooling,4,0,8\r\nbackup,5,0,3\r\n\n\n数据文件：job_windows.csv\njob_id,window_id,start_hour,end_hour\r\nA,1,0,4\r\nB,1,0,5\r\nC,1,1,7\r\nD,1,2,8\r\nE,1,4,8\r\nF,1,4,8\r\nF,2,9,13\r\nG,1,7,14\r\nH,1,7,14\r\nI,1,9,15\r\nJ,1,11,18\r\nK,1,12,18\r\nL,1,13,20\r\n\n\n数据文件：jobs.csv\njob_id,job_name,duration_hours,server_demand,critical_flag\r\nA,数据接入,2,2,0\r\nB,索引装载,2,3,0\r\nC,样本预处理,3,2,0\r\nD,环境校验,2,2,0\r\nE,核心模型计算,3,4,1\r\nF,批量特征计算,3,3,0\r\nG,核心结果验证,2,2,1\r\nH,批量结果合并,2,3,0\r\nI,一致性检查点,1,2,0\r\nJ,报告生成,2,2,0\r\nK,关键结果提交,2,3,1\r\nL,最终归档,2,2,0\r\n\n\n数据文件：planning.csv\nhorizon_hours,slot_hours,total_power_limit,cooling_config_min_ratio,cooling_config_max_ratio,backup_config_min_ratio,backup_config_max_ratio,cooling_min_servers_per_unit,cooling_max_servers_per_unit,backup_min_critical_servers_per_unit,backup_max_critical_servers_per_unit\r\n20,1,50,0.25,0.5,0.125,0.25,2,3,2,4\r\n\n\n数据文件：time_slots.csv\nslot_id,cooling_service_limit,backup_service_limit\r\n0,2,0\r\n1,2,0\r\n2,2,0\r\n3,2,0\r\n4,3,2\r\n5,3,2\r\n6,3,2\r\n7,3,2\r\n8,3,2\r\n9,3,2\r\n10,3,2\r\n11,3,2\r\n12,2,2\r\n13,2,2\r\n14,2,2\r\n15,2,2\r\n16,2,1\r\n17,2,1\r\n18,2,1\r\n19,2,1",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-60cd59a87d82dd9c",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

@@ -1,0 +1,2426 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "model": {
+    "variables": [
+      {
+        "id": "lith_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "lith_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "etch_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "insp_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w1_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p1_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r1_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r1_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r2_A",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "w2_p2_r2_B",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "route2_active_p1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "route2_active_p2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "clean_p1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "dirty_p1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "clean_p2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "dirty_p2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 52
+      },
+      {
+        "id": "clean_qty_N",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 42
+      },
+      {
+        "id": "clean_qty_F",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "clean_on_N",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "clean_on_F",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "sense": "max",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "insp_p1_r1_A": 8200,
+        "insp_p1_r1_B": 5600,
+        "insp_p1_r2_A": 9000,
+        "insp_p1_r2_B": 5900,
+        "insp_p2_r1_A": 8200,
+        "insp_p2_r1_B": 5600,
+        "insp_p2_r2_A": 9000,
+        "insp_p2_r2_B": 5900,
+        "route2_active_p1": -18000,
+        "route2_active_p2": -18000
+      }
+    },
+    "constraints": [
+      {
+        "name": "lith_demand_p1_A",
+        "coefficients": {
+          "lith_p1_r1_A": 1,
+          "lith_p1_r2_A": 1
+        },
+        "sense": ">=",
+        "rhs": 19.8
+      },
+      {
+        "name": "lith_demand_p1_B",
+        "coefficients": {
+          "lith_p1_r1_B": 1,
+          "lith_p1_r2_B": 1
+        },
+        "sense": ">=",
+        "rhs": 26.4
+      },
+      {
+        "name": "lith_demand_p2_A",
+        "coefficients": {
+          "lith_p2_r1_A": 1,
+          "lith_p2_r2_A": 1
+        },
+        "sense": ">=",
+        "rhs": 19.8
+      },
+      {
+        "name": "lith_demand_p2_B",
+        "coefficients": {
+          "lith_p2_r1_B": 1,
+          "lith_p2_r2_B": 1
+        },
+        "sense": ">=",
+        "rhs": 26.4
+      },
+      {
+        "name": "qual_demand_p1_A",
+        "coefficients": {
+          "insp_p1_r1_A": 0.96,
+          "insp_p1_r2_A": 0.98
+        },
+        "sense": ">=",
+        "rhs": 17.1
+      },
+      {
+        "name": "qual_demand_p1_B",
+        "coefficients": {
+          "insp_p1_r1_B": 0.94,
+          "insp_p1_r2_B": 0.95
+        },
+        "sense": ">=",
+        "rhs": 22.8
+      },
+      {
+        "name": "qual_demand_p2_A",
+        "coefficients": {
+          "insp_p2_r1_A": 0.96,
+          "insp_p2_r2_A": 0.98
+        },
+        "sense": ">=",
+        "rhs": 17.1
+      },
+      {
+        "name": "qual_demand_p2_B",
+        "coefficients": {
+          "insp_p2_r1_B": 0.94,
+          "insp_p2_r2_B": 0.95
+        },
+        "sense": ">=",
+        "rhs": 22.8
+      },
+      {
+        "name": "wip_balance_p1_r1_A_etch",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "lith_p1_r1_A": -1,
+          "etch_p1_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_A_insp",
+        "coefficients": {
+          "w2_p1_r1_A": 1,
+          "etch_p1_r1_A": -1,
+          "insp_p1_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_B_etch",
+        "coefficients": {
+          "w1_p1_r1_B": 1,
+          "lith_p1_r1_B": -1,
+          "etch_p1_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r1_B_insp",
+        "coefficients": {
+          "w2_p1_r1_B": 1,
+          "etch_p1_r1_B": -1,
+          "insp_p1_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_A_etch",
+        "coefficients": {
+          "w1_p1_r2_A": 1,
+          "lith_p1_r2_A": -1,
+          "etch_p1_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_A_insp",
+        "coefficients": {
+          "w2_p1_r2_A": 1,
+          "etch_p1_r2_A": -1,
+          "insp_p1_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_B_etch",
+        "coefficients": {
+          "w1_p1_r2_B": 1,
+          "lith_p1_r2_B": -1,
+          "etch_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p1_r2_B_insp",
+        "coefficients": {
+          "w2_p1_r2_B": 1,
+          "etch_p1_r2_B": -1,
+          "insp_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_A_etch",
+        "coefficients": {
+          "w1_p2_r1_A": 1,
+          "w1_p1_r1_A": -1,
+          "lith_p2_r1_A": -1,
+          "etch_p2_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_A_insp",
+        "coefficients": {
+          "w2_p2_r1_A": 1,
+          "w2_p1_r1_A": -1,
+          "etch_p2_r1_A": -1,
+          "insp_p2_r1_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_B_etch",
+        "coefficients": {
+          "w1_p2_r1_B": 1,
+          "w1_p1_r1_B": -1,
+          "lith_p2_r1_B": -1,
+          "etch_p2_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r1_B_insp",
+        "coefficients": {
+          "w2_p2_r1_B": 1,
+          "w2_p1_r1_B": -1,
+          "etch_p2_r1_B": -1,
+          "insp_p2_r1_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_A_etch",
+        "coefficients": {
+          "w1_p2_r2_A": 1,
+          "w1_p1_r2_A": -1,
+          "lith_p2_r2_A": -1,
+          "etch_p2_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_A_insp",
+        "coefficients": {
+          "w2_p2_r2_A": 1,
+          "w2_p1_r2_A": -1,
+          "etch_p2_r2_A": -1,
+          "insp_p2_r2_A": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_B_etch",
+        "coefficients": {
+          "w1_p2_r2_B": 1,
+          "w1_p1_r2_B": -1,
+          "lith_p2_r2_B": -1,
+          "etch_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "wip_balance_p2_r2_B_insp",
+        "coefficients": {
+          "w2_p2_r2_B": 1,
+          "w2_p1_r2_B": -1,
+          "etch_p2_r2_B": -1,
+          "insp_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "equip_lith_p1_r1",
+        "coefficients": {
+          "lith_p1_r1_A": 1,
+          "lith_p1_r1_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "equip_etch_p1_r1",
+        "coefficients": {
+          "etch_p1_r1_A": 0.8,
+          "etch_p1_r1_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "equip_insp_p1_r1",
+        "coefficients": {
+          "insp_p1_r1_A": 0.5,
+          "insp_p1_r1_B": 0.4
+        },
+        "sense": "<=",
+        "rhs": 13
+      },
+      {
+        "name": "equip_lith_p1_r2",
+        "coefficients": {
+          "lith_p1_r2_A": 0.8,
+          "lith_p1_r2_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "equip_etch_p1_r2",
+        "coefficients": {
+          "etch_p1_r2_A": 1,
+          "etch_p1_r2_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 23
+      },
+      {
+        "name": "equip_insp_p1_r2",
+        "coefficients": {
+          "insp_p1_r2_A": 0.6,
+          "insp_p1_r2_B": 0.5
+        },
+        "sense": "<=",
+        "rhs": 15
+      },
+      {
+        "name": "equip_lith_p2_r1",
+        "coefficients": {
+          "lith_p2_r1_A": 1,
+          "lith_p2_r1_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "equip_etch_p2_r1",
+        "coefficients": {
+          "etch_p2_r1_A": 0.8,
+          "etch_p2_r1_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "equip_insp_p2_r1",
+        "coefficients": {
+          "insp_p2_r1_A": 0.5,
+          "insp_p2_r1_B": 0.4
+        },
+        "sense": "<=",
+        "rhs": 13
+      },
+      {
+        "name": "equip_lith_p2_r2",
+        "coefficients": {
+          "lith_p2_r2_A": 0.8,
+          "lith_p2_r2_B": 0.6
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "equip_etch_p2_r2",
+        "coefficients": {
+          "etch_p2_r2_A": 1,
+          "etch_p2_r2_B": 0.7
+        },
+        "sense": "<=",
+        "rhs": 23
+      },
+      {
+        "name": "equip_insp_p2_r2",
+        "coefficients": {
+          "insp_p2_r2_A": 0.6,
+          "insp_p2_r2_B": 0.5
+        },
+        "sense": "<=",
+        "rhs": 15
+      },
+      {
+        "name": "route2_activation_p1_lith_A",
+        "coefficients": {
+          "lith_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_lith_B",
+        "coefficients": {
+          "lith_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_etch_A",
+        "coefficients": {
+          "etch_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_etch_B",
+        "coefficients": {
+          "etch_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_insp_A",
+        "coefficients": {
+          "insp_p1_r2_A": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p1_insp_B",
+        "coefficients": {
+          "insp_p1_r2_B": 1,
+          "route2_active_p1": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_lith_A",
+        "coefficients": {
+          "lith_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_lith_B",
+        "coefficients": {
+          "lith_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_etch_A",
+        "coefficients": {
+          "etch_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_etch_B",
+        "coefficients": {
+          "etch_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_insp_A",
+        "coefficients": {
+          "insp_p2_r2_A": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "route2_activation_p2_insp_B",
+        "coefficients": {
+          "insp_p2_r2_B": 1,
+          "route2_active_p2": -52
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "personnel_p1",
+        "coefficients": {
+          "etch_p1_r1_A": 0.5,
+          "etch_p1_r2_A": 0.5,
+          "etch_p1_r1_B": 0.3,
+          "etch_p1_r2_B": 0.3
+        },
+        "sense": "<=",
+        "rhs": 20
+      },
+      {
+        "name": "personnel_p2",
+        "coefficients": {
+          "etch_p2_r1_A": 0.5,
+          "etch_p2_r2_A": 0.5,
+          "etch_p2_r1_B": 0.3,
+          "etch_p2_r2_B": 0.3,
+          "clean_qty_N": 0.2,
+          "clean_qty_F": 0.3,
+          "clean_on_N": 2,
+          "clean_on_F": 3
+        },
+        "sense": "<=",
+        "rhs": 35
+      },
+      {
+        "name": "clean_at_most_one",
+        "coefficients": {
+          "clean_on_N": 1,
+          "clean_on_F": 1
+        },
+        "sense": "<=",
+        "rhs": 1
+      },
+      {
+        "name": "clean_N_upper",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_on_N": -42
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_N_lower",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_on_N": -1
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_F_upper",
+        "coefficients": {
+          "clean_qty_F": 1,
+          "clean_on_F": -50
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_F_lower",
+        "coefficients": {
+          "clean_qty_F": 1,
+          "clean_on_F": -1
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "clean_total_le_dirty_p1",
+        "coefficients": {
+          "clean_qty_N": 1,
+          "clean_qty_F": 1,
+          "dirty_p1": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_clean_p1",
+        "coefficients": {
+          "clean_p1": 1,
+          "lith_p1_r1_A": 1,
+          "lith_p1_r1_B": 1,
+          "lith_p1_r2_A": 1,
+          "lith_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "carrier_dirty_p1",
+        "coefficients": {
+          "dirty_p1": 1,
+          "insp_p1_r1_A": -1,
+          "insp_p1_r1_B": -1,
+          "insp_p1_r2_A": -1,
+          "insp_p1_r2_B": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_clean_p2",
+        "coefficients": {
+          "clean_p2": 1,
+          "clean_p1": -1,
+          "clean_qty_N": -1,
+          "clean_qty_F": -1,
+          "lith_p2_r1_A": 1,
+          "lith_p2_r1_B": 1,
+          "lith_p2_r2_A": 1,
+          "lith_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_dirty_p2",
+        "coefficients": {
+          "dirty_p2": 1,
+          "dirty_p1": -1,
+          "clean_qty_N": 1,
+          "clean_qty_F": 1,
+          "insp_p2_r1_A": -1,
+          "insp_p2_r1_B": -1,
+          "insp_p2_r2_A": -1,
+          "insp_p2_r2_B": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "carrier_conservation_p1",
+        "coefficients": {
+          "clean_p1": 1,
+          "dirty_p1": 1,
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "carrier_conservation_p2",
+        "coefficients": {
+          "clean_p2": 1,
+          "dirty_p2": 1,
+          "w1_p2_r1_A": 1,
+          "w1_p2_r1_B": 1,
+          "w1_p2_r2_A": 1,
+          "w1_p2_r2_B": 1,
+          "w2_p2_r1_A": 1,
+          "w2_p2_r1_B": 1,
+          "w2_p2_r2_A": 1,
+          "w2_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 52
+      },
+      {
+        "name": "wip_p1_storage_limit",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "<=",
+        "rhs": 4
+      },
+      {
+        "name": "wip_p1_receipt_limit",
+        "coefficients": {
+          "w1_p1_r1_A": 1,
+          "w1_p1_r1_B": 1,
+          "w1_p1_r2_A": 1,
+          "w1_p1_r2_B": 1,
+          "w2_p1_r1_A": 1,
+          "w2_p1_r1_B": 1,
+          "w2_p1_r2_A": 1,
+          "w2_p1_r2_B": 1
+        },
+        "sense": "<=",
+        "rhs": 3
+      },
+      {
+        "name": "final_wip_zero",
+        "coefficients": {
+          "w1_p2_r1_A": 1,
+          "w1_p2_r1_B": 1,
+          "w1_p2_r2_A": 1,
+          "w1_p2_r2_B": 1,
+          "w2_p2_r1_A": 1,
+          "w2_p2_r1_B": 1,
+          "w2_p2_r2_A": 1,
+          "w2_p2_r2_B": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      }
+    ]
+  },
+  "revision": 1,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 两周期半导体生产与周转载具清洗联合优化需求\n\n## 1. 任务范围\n\n使用 Python 调用 COPT 建立并求解混合整数线性规划，联合安排两个相邻生产周期的晶圆批次加工、路线2启用、在制品结转、载具清洗与载具库存，使两个周期的总净利润最大。\n\n生产涉及两类批次A、B及两条固定工艺路线：\n\n- 路线1：光刻设备L1 → 刻蚀设备E1 → 检测设备I1；\n- 路线2：光刻设备L2 → 刻蚀设备E2 → 检测设备I2。\n\n批次不可拆分。所有加工完成批数、在制品批数、载具库存及清洗套数均为非负整数。路线2和清洗单元的启用状态只能为启用或不启用。批次确定路线后，后续加工和跨周期结转均不得改变类型或路线。\n\n本任务只安排各周期的数量，不需要建立周期内逐批开始、结束时间或人员排班。\n\n## 2. 需要确定的计划\n\n分别确定：\n\n1. 每个周期、每条路线、每类批次的光刻、刻蚀、检测完成批数。\n2. 每个周期末、每条路线、每类批次的两类在制品：\n   - 已完成光刻、尚未完成刻蚀；\n   - 已完成刻蚀、尚未完成检测。\n3. 每个周期是否启用路线2。\n4. 周期2开始时是否启用常规清洗单元N或高通量清洗单元F，以及各单元的实际清洗量。\n5. 每个周期末的洁净载具与待清洗载具库存。\n\n需求和刻蚀支持人员工时读取 `batch_types.csv`；加工时间、检测良率与贡献利润读取 `route_processing.csv`；设备容量读取 `routes.csv`；各周期人员预算读取 `periods.csv`；清洗单元参数读取 `cleaning_units.csv`；其他全局规则参数读取 `parameters.csv`。完整相对路径和字段定义见文末。\n\n## 3. 生产保障和工艺流转\n\n### 3.1 每周期需求保障\n\n两个周期分别考核需求，不允许把某周期的产出用于抵补另一周期的保障要求。\n\n对每个周期、每一类批次：\n\n- 两条路线的新完成光刻批数合计至少达到该类型当期需求的110%。\n- 两条路线的期望合格检测产出合计至少达到该类型当期需求的95%。\n\n每条路线的期望合格产出按该路线检测完成批数乘以该路线、该类型的检测良率计算，再跨路线汇总。该值可以是小数，不能先取整再考核。\n\n需求是上述保障条件的依据，不构成加工完成量的上限。\n\n### 3.2 在制品流转\n\n周期1期初，各路线、各类型的两类在制品均为零。\n\n每个周期、每条路线、每类批次分别核算：\n\n- 期末待刻蚀在制品等于期初待刻蚀在制品，加当期光刻完成量，减当期刻蚀完成量。\n- 期末待检测在制品等于期初待检测在制品，加当期刻蚀完成量，减当期检测完成量。\n- 两类期末在制品均不得为负数。\n\n周期2的期初在制品就是周期1同路线、同类型的期末在制品。因此，周期2刻蚀可以处理上周期结转的待刻蚀批次，检测可以处理上周期结转的待检测批次，不能只用当期上游工序完成量限制后续加工。\n\n周期1末，汇总全部路线、类型和两类在制品后，必须同时满足：\n\n- 周期1期末暂存政策：不超过4批；\n- 周期2期初接收政策：不超过3批。\n\n两个周期之间不得报废、搁置、外协或转移在制品，全部在制品必须结转，因而实际结转总量不超过3批。不得把这两项政策理解为可以择一执行。\n\n周期2末全部路线、类型的两类在制品均须清零。\n\n### 3.3 设备容量\n\n每个周期、每条路线、每道工序分别核算设备使用时间：\n\n- 光刻时间按当期实际完成光刻的批数计提；\n- 刻蚀时间按当期实际完成刻蚀的批数计提；\n- 检测时间按当期实际完成检测的批数计提。\n\n每类批次的设备时间等于该工序完成批数乘以对应的小时/批参数；同设备上各类型的时间相加后，不得超过该设备的周期可用小时数。六台设备的可用时间在两个周期中相同。\n\n### 3.4 路线启用\n\n路线1始终启用。\n\n路线2逐周期决定是否启用。某周期路线2只要进行任何光刻、刻蚀或检测加工，该周期就必须启用；未启用时，三个工序的完成量均为零。每个启用周期支付18000元固定设备切换费用。\n\n跨周期结转的批次仍保留路线，路线2处理该路线的结转批次时，也必须在处理发生的周期启用。路线启用要求针对当期加工，不得另行增加“持有在制品就必须启用”的条件。\n\n## 4. 载具领取、释放与库存\n\n### 4.1 载具占用规则\n\n每批在光刻开始前领取1套洁净载具。载具随批次经过光刻、刻蚀和检测，检测完成后释放为1套待清洗载具。\n\n- 两条路线、两类批次共用集中管理的载具。\n- 在制批次的载具不能脱离批次或提供给其他批次。\n- 无论检测结果是否合格，每批检测完成都释放1套待清洗载具。释放量按检测完成批数计算，不按期望合格产出计算。\n- 两周期内不采购、不借入、不报废载具，不允许外协清洗，也没有其他载具流入。\n\n周期1开始时有52套洁净载具、0套待清洗载具。\n\n### 4.2 唯一清洗时点\n\n清洗只能在周期2开始、周期2生产前进行一次。周期1内以及两个周期的生产过程中均不进行清洗。\n\n周期1检测释放的待清洗载具可以用于本次清洗；周期2检测释放的载具不能参加本次清洗。\n\n清洗1套待清洗载具得到1套洁净载具，没有数量损失。总清洗量不得超过周期1末待清洗库存。\n\n### 4.3 库存核算和守恒\n\n跨全部路线、类型汇总后：\n\n- 周期1末洁净库存等于初始52套减周期1光刻完成总批数。\n- 周期1末待清洗库存等于周期1检测完成总批数。\n- 周期2末洁净库存等于周期1末洁净库存，加周期2开始的总清洗量，减周期2光刻完成总批数。\n- 周期2末待清洗库存等于周期1末待清洗库存，减周期2开始的总清洗量，加周期2检测完成总批数。\n\n所有库存必须非负。周期2光刻只能使用周期1结转的洁净载具和周期2开始清洗完成的洁净载具。\n\n每个周期末，洁净库存、待清洗库存与全部在制品携带的载具套数之和必须为52套。在制品占用载具套数等于两类在制品的总批数。必须保留这一占用含义和守恒关系。\n\n载具库存和清洗量均可使用52套作为统一有效上界。期末允许洁净、待清洗载具留存，不要求全部清洗，也不要求任一类载具库存清零。\n\n## 5. 清洗单元选择\n\n周期2开始时，常规单元N和高通量单元F共用同一隔离作业区，至多启用一个，也可以都不启用。\n\n每个单元：\n\n- 不启用时清洗量必须为零。\n- 启用时至少清洗1套，不得超过其最大清洗量。\n- 启用产生一次准备人员工时。\n- 实际清洗量产生相应的单位清洗人员工时。\n\n总清洗量等于两个单元实际清洗量之和。若都不启用，总清洗量为零，周期2只可使用结转洁净载具。\n\n两个单元的区别仅为最大清洗量、单位清洗人员工时和准备人员工时。清洗不占用六台加工设备，不改变其可用时间、加工时间、检测良率或贡献利润。清洗单元没有额外费用项。\n\n## 6. 共享技术人员预算\n\n技术人员同时支持刻蚀和清洗。这是独立于设备小时的人员小时资源，不得混为同一容量。\n\n每批刻蚀的支持人员工时只与批次类型有关，与路线无关。按当期实际刻蚀完成量计提，包括对上期结转在制品的刻蚀，不按光刻量或检测量重复计提。\n\n- 周期1没有清洗，只汇总该周期两条路线、两类批次的刻蚀支持人员工时，不得超过20人员小时。\n- 周期2将刻蚀支持人员工时、实际清洗量对应的人员工时、启用单元的一次准备人员工时相加，不得超过35人员小时。\n\n周期2清洗虽在生产前完成，仍与后续刻蚀支持共用同一份周期2预算。人员工时不可跨周期结转，不允许加班或外包。\n\n## 7. 优化目标\n\n唯一目标是最大化两个周期的总净利润：\n\n- 各周期、路线、类型的贡献利润，按检测完成批数乘以对应的元/批贡献利润计算。\n- 从贡献利润总额中扣除各周期路线2启用产生的固定设备切换费用。\n\n不得按光刻量或期望合格产出计提贡献利润。不得增加清洗成本、库存成本、人工成本、奖励、惩罚或次级优化目标。\n\n## 8. 结果报告\n\n报告求解状态。若获得最优解，报告最大总净利润和以下计划及核对信息：\n\n1. 每个周期、路线、类型的光刻、刻蚀、检测完成批数。\n2. 每个周期末、路线、类型的待刻蚀和待检测在制品批数、二者合计，以及周期末全厂合计。\n3. 每个周期路线2启用状态和对应固定费用。\n4. 周期2开始时各清洗单元的启用状态、实际清洗量及总清洗量。\n5. 每个周期末洁净载具库存、待清洗载具库存、在制品占用载具套数。\n6. 每个周期六台设备的使用小时数。\n7. 每个周期技术人员使用工时和剩余工时；周期2须能区分刻蚀支持、清洗作业和清洗准备的消耗。\n8. 每个周期、类型的新完成光刻总批数和期望合格批次数，用于核对需求保障。\n\n如不可行或未获得最优解，应如实报告状态。若输出未证明最优的可行方案，必须明确其性质，不得称为最优方案。\n\n## 9. 输入 CSV 约定\n\n所有文件均以 UTF-8 编码存储，从当前工作目录下的 `./data/` 读取。字段不含空值，主键无重复；不得通过删除重复记录或自行补值改变输入。各表中的路线和批次类型关联必须一致。\n\n### ./data/periods.csv\n\n每行代表一个生产周期及其技术人员工时预算。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| period | 周期编号 | integer | 1、2，按时间先后排列 |\n| technician_capacity | 当期可用技术人员工时 | number | 人员小时/周期 |\n\n`period` 为唯一标识，共2行。\n\n### ./data/batch_types.csv\n\n每行代表一种批次的每周期需求与刻蚀支持人员工时。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| batch_type | 批次类型 | string | A、B |\n| demand | 每周期当期需求 | integer | 批/周期 |\n| etch_support_hours | 每批刻蚀所需技术人员工时 | number | 人员小时/批 |\n\n`batch_type` 为唯一标识，共2行。需求在两个周期中相同。\n\n### ./data/routes.csv\n\n每行代表一条路线的三个工序设备容量。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| route | 路线编号 | integer | 1、2 |\n| lithography_capacity | 光刻设备可用时间 | number | 小时/周期 |\n| etching_capacity | 刻蚀设备可用时间 | number | 小时/周期 |\n| inspection_capacity | 检测设备可用时间 | number | 小时/周期 |\n\n`route` 为唯一标识，共2行。每条路线各工序使用该路线对应的独立设备，容量在两个周期中相同。\n\n### ./data/route_processing.csv\n\n每行代表一个路线与批次类型组合的加工、良率及利润参数。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| route | 路线编号 | integer | 1、2 |\n| batch_type | 批次类型 | string | A、B |\n| lithography_hours | 每批光刻设备占用时间 | number | 小时/批 |\n| etching_hours | 每批刻蚀设备占用时间 | number | 小时/批 |\n| inspection_hours | 每批检测设备占用时间 | number | 小时/批 |\n| inspection_yield | 检测良率 | number | 比例，不取整 |\n| contribution_profit | 每批检测完成对应的贡献利润 | number | 元/批 |\n\n`route` 与 `batch_type` 联合唯一，共4行，覆盖全部路线与类型组合；分别关联 `routes.csv` 与 `batch_types.csv`。\n\n### ./data/cleaning_units.csv\n\n每行代表一个可选清洗单元。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| unit | 清洗单元标识 | string | N为常规单元，F为高通量单元 |\n| max_quantity | 启用后的最大清洗量 | integer | 套 |\n| cleaning_hours | 每套清洗所需技术人员工时 | number | 人员小时/套 |\n| setup_hours | 每次启用准备所需技术人员工时 | number | 人员小时 |\n\n`unit` 为唯一标识，共2行。单元启用时至少清洗1套，未启用时清洗量为零，两个单元至多启用一个。\n\n### ./data/parameters.csv\n\n唯一一行代表本任务的全局业务参数。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| lithography_demand_ratio | 每周期光刻完成量相对需求的最低比例 | number | 比例 |\n| qualified_demand_ratio | 每周期期望合格产出相对需求的最低比例 | number | 比例 |\n| period1_storage_limit | 周期1末暂存在制品总量上限 | integer | 批 |\n| period2_receipt_limit | 周期2期初接收结转在制品总量上限 | integer | 批 |\n| final_wip_limit | 周期2末在制品总量上限 | integer | 批；0表示必须清零 |\n| initial_lithography_wip | 周期1期初每个路线、类型的待刻蚀在制品 | integer | 批 |\n| initial_etching_wip | 周期1期初每个路线、类型的待检测在制品 | integer | 批 |\n| initial_clean_carriers | 周期1期初洁净载具库存 | integer | 套 |\n| initial_dirty_carriers | 周期1期初待清洗载具库存 | integer | 套 |\n| carrier_upper_bound | 载具库存及清洗量的统一有效上界 | integer | 套 |\n| route2_activation_fee | 路线2每个启用周期的固定设备切换费用 | number | 元/启用周期 |\n\n该文件恰有1行，不设额外编号。两个在制品结转上限同时生效。初始两类在制品参数分别应用于全部路线、类型组合，不是全厂合计。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：batch_types.csv\nbatch_type,demand,etch_support_hours\r\nA,18,0.5\r\nB,24,0.3\r\n\n\n数据文件：cleaning_units.csv\nunit,max_quantity,cleaning_hours,setup_hours\r\nN,42,0.2,2\r\nF,50,0.3,3\r\n\n\n数据文件：parameters.csv\nlithography_demand_ratio,qualified_demand_ratio,period1_storage_limit,period2_receipt_limit,final_wip_limit,initial_lithography_wip,initial_etching_wip,initial_clean_carriers,initial_dirty_carriers,carrier_upper_bound,route2_activation_fee\r\n1.1,0.95,4,3,0,0,0,52,0,52,18000\r\n\n\n数据文件：periods.csv\nperiod,technician_capacity\r\n1,20\r\n2,35\r\n\n\n数据文件：route_processing.csv\nroute,batch_type,lithography_hours,etching_hours,inspection_hours,inspection_yield,contribution_profit\r\n1,A,1.0,0.8,0.5,0.96,8200\r\n1,B,0.7,0.6,0.4,0.94,5600\r\n2,A,0.8,1.0,0.6,0.98,9000\r\n2,B,0.6,0.7,0.5,0.95,5900\r\n\n\n数据文件：routes.csv\nroute,lithography_capacity,etching_capacity,inspection_capacity\r\n1,24,22,13\r\n2,21,23,15",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-da5c2aa51b42d993",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "diagnostics": [
+    {
+      "kind": "BASE_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "lith_p1_r1_A": 0,
+          "lith_p1_r1_B": 28,
+          "lith_p1_r2_A": 23,
+          "lith_p1_r2_B": 0,
+          "lith_p2_r1_A": 0,
+          "lith_p2_r1_B": 23,
+          "lith_p2_r2_A": 20,
+          "lith_p2_r2_B": 4,
+          "etch_p1_r1_A": 0,
+          "etch_p1_r1_B": 28,
+          "etch_p1_r2_A": 23,
+          "etch_p1_r2_B": 0,
+          "etch_p2_r1_A": 0,
+          "etch_p2_r1_B": 23,
+          "etch_p2_r2_A": 20,
+          "etch_p2_r2_B": 4,
+          "insp_p1_r1_A": 0,
+          "insp_p1_r1_B": 28,
+          "insp_p1_r2_A": 23,
+          "insp_p1_r2_B": 0,
+          "insp_p2_r1_A": 0,
+          "insp_p2_r1_B": 23,
+          "insp_p2_r2_A": 20,
+          "insp_p2_r2_B": 4,
+          "w1_p1_r1_A": 0,
+          "w1_p1_r1_B": 0,
+          "w1_p1_r2_A": 0,
+          "w1_p1_r2_B": 0,
+          "w1_p2_r1_A": 0,
+          "w1_p2_r1_B": 0,
+          "w1_p2_r2_A": 0,
+          "w1_p2_r2_B": 0,
+          "w2_p1_r1_A": 0,
+          "w2_p1_r1_B": 0,
+          "w2_p1_r2_A": 0,
+          "w2_p1_r2_B": 0,
+          "w2_p2_r1_A": 0,
+          "w2_p2_r1_B": 0,
+          "w2_p2_r2_A": 0,
+          "w2_p2_r2_B": 0,
+          "route2_active_p1": 1,
+          "route2_active_p2": 1,
+          "clean_p1": 1,
+          "dirty_p1": 51,
+          "clean_p2": 0,
+          "dirty_p2": 52,
+          "clean_qty_N": 0,
+          "clean_qty_F": 46,
+          "clean_on_N": 0,
+          "clean_on_F": 1
+        },
+        "objective": {
+          "value": 660200.0,
+          "unit": "objective_units",
+          "direction": "max"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.30700111389160156
+      }
+    },
+    {
+      "kind": "SEARCH_GATE",
+      "gate": {
+        "search_needed": false,
+        "reason": "The optimization problem, all input data, the model formulation, and solver output are fully supplied; no external public-web information is required.",
+        "queries": []
+      }
+    },
+    {
+      "kind": "FINAL_SOLVE",
+      "solution": {
+        "status": "OPTIMAL",
+        "solver_status": 1,
+        "feasible": true,
+        "actions": {
+          "lith_p1_r1_A": 0,
+          "lith_p1_r1_B": 28,
+          "lith_p1_r2_A": 23,
+          "lith_p1_r2_B": 0,
+          "lith_p2_r1_A": 0,
+          "lith_p2_r1_B": 23,
+          "lith_p2_r2_A": 20,
+          "lith_p2_r2_B": 4,
+          "etch_p1_r1_A": 0,
+          "etch_p1_r1_B": 28,
+          "etch_p1_r2_A": 23,
+          "etch_p1_r2_B": 0,
+          "etch_p2_r1_A": 0,
+          "etch_p2_r1_B": 23,
+          "etch_p2_r2_A": 20,
+          "etch_p2_r2_B": 4,
+          "insp_p1_r1_A": 0,
+          "insp_p1_r1_B": 28,
+          "insp_p1_r2_A": 23,
+          "insp_p1_r2_B": 0,
+          "insp_p2_r1_A": 0,
+          "insp_p2_r1_B": 23,
+          "insp_p2_r2_A": 20,
+          "insp_p2_r2_B": 4,
+          "w1_p1_r1_A": 0,
+          "w1_p1_r1_B": 0,
+          "w1_p1_r2_A": 0,
+          "w1_p1_r2_B": 0,
+          "w1_p2_r1_A": 0,
+          "w1_p2_r1_B": 0,
+          "w1_p2_r2_A": 0,
+          "w1_p2_r2_B": 0,
+          "w2_p1_r1_A": 0,
+          "w2_p1_r1_B": 0,
+          "w2_p1_r2_A": 0,
+          "w2_p1_r2_B": 0,
+          "w2_p2_r1_A": 0,
+          "w2_p2_r1_B": 0,
+          "w2_p2_r2_A": 0,
+          "w2_p2_r2_B": 0,
+          "route2_active_p1": 1,
+          "route2_active_p2": 1,
+          "clean_p1": 1,
+          "dirty_p1": 51,
+          "clean_p2": 0,
+          "dirty_p2": 52,
+          "clean_qty_N": 0,
+          "clean_qty_F": 46,
+          "clean_on_N": 0,
+          "clean_on_F": 1
+        },
+        "objective": {
+          "value": 660200.0,
+          "unit": "objective_units",
+          "direction": "max"
+        },
+        "conflict_constraints": [],
+        "solver": "COPT",
+        "solver_seconds": 0.3189983367919922
+      }
+    },
+    {
+      "kind": "FINALIZE",
+      "result": {
+        "method": "standard_legacy_knowledge_v1",
+        "version": "standard_legacy_knowledge_v1",
+        "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+        "decision": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "lith_p1_r1_A": 0,
+            "lith_p1_r1_B": 28,
+            "lith_p1_r2_A": 23,
+            "lith_p1_r2_B": 0,
+            "lith_p2_r1_A": 0,
+            "lith_p2_r1_B": 23,
+            "lith_p2_r2_A": 20,
+            "lith_p2_r2_B": 4,
+            "etch_p1_r1_A": 0,
+            "etch_p1_r1_B": 28,
+            "etch_p1_r2_A": 23,
+            "etch_p1_r2_B": 0,
+            "etch_p2_r1_A": 0,
+            "etch_p2_r1_B": 23,
+            "etch_p2_r2_A": 20,
+            "etch_p2_r2_B": 4,
+            "insp_p1_r1_A": 0,
+            "insp_p1_r1_B": 28,
+            "insp_p1_r2_A": 23,
+            "insp_p1_r2_B": 0,
+            "insp_p2_r1_A": 0,
+            "insp_p2_r1_B": 23,
+            "insp_p2_r2_A": 20,
+            "insp_p2_r2_B": 4,
+            "w1_p1_r1_A": 0,
+            "w1_p1_r1_B": 0,
+            "w1_p1_r2_A": 0,
+            "w1_p1_r2_B": 0,
+            "w1_p2_r1_A": 0,
+            "w1_p2_r1_B": 0,
+            "w1_p2_r2_A": 0,
+            "w1_p2_r2_B": 0,
+            "w2_p1_r1_A": 0,
+            "w2_p1_r1_B": 0,
+            "w2_p1_r2_A": 0,
+            "w2_p1_r2_B": 0,
+            "w2_p2_r1_A": 0,
+            "w2_p2_r1_B": 0,
+            "w2_p2_r2_A": 0,
+            "w2_p2_r2_B": 0,
+            "route2_active_p1": 1,
+            "route2_active_p2": 1,
+            "clean_p1": 1,
+            "dirty_p1": 51,
+            "clean_p2": 0,
+            "dirty_p2": 52,
+            "clean_qty_N": 0,
+            "clean_qty_F": 46,
+            "clean_on_N": 0,
+            "clean_on_F": 1
+          },
+          "objective": {
+            "value": 660200.0,
+            "unit": "objective_units",
+            "direction": "max"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.3189983367919922
+        },
+        "last_solve": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "lith_p1_r1_A": 0,
+            "lith_p1_r1_B": 28,
+            "lith_p1_r2_A": 23,
+            "lith_p1_r2_B": 0,
+            "lith_p2_r1_A": 0,
+            "lith_p2_r1_B": 23,
+            "lith_p2_r2_A": 20,
+            "lith_p2_r2_B": 4,
+            "etch_p1_r1_A": 0,
+            "etch_p1_r1_B": 28,
+            "etch_p1_r2_A": 23,
+            "etch_p1_r2_B": 0,
+            "etch_p2_r1_A": 0,
+            "etch_p2_r1_B": 23,
+            "etch_p2_r2_A": 20,
+            "etch_p2_r2_B": 4,
+            "insp_p1_r1_A": 0,
+            "insp_p1_r1_B": 28,
+            "insp_p1_r2_A": 23,
+            "insp_p1_r2_B": 0,
+            "insp_p2_r1_A": 0,
+            "insp_p2_r1_B": 23,
+            "insp_p2_r2_A": 20,
+            "insp_p2_r2_B": 4,
+            "w1_p1_r1_A": 0,
+            "w1_p1_r1_B": 0,
+            "w1_p1_r2_A": 0,
+            "w1_p1_r2_B": 0,
+            "w1_p2_r1_A": 0,
+            "w1_p2_r1_B": 0,
+            "w1_p2_r2_A": 0,
+            "w1_p2_r2_B": 0,
+            "w2_p1_r1_A": 0,
+            "w2_p1_r1_B": 0,
+            "w2_p1_r2_A": 0,
+            "w2_p1_r2_B": 0,
+            "w2_p2_r1_A": 0,
+            "w2_p2_r1_B": 0,
+            "w2_p2_r2_A": 0,
+            "w2_p2_r2_B": 0,
+            "route2_active_p1": 1,
+            "route2_active_p2": 1,
+            "clean_p1": 1,
+            "dirty_p1": 51,
+            "clean_p2": 0,
+            "dirty_p2": 52,
+            "clean_qty_N": 0,
+            "clean_qty_F": 46,
+            "clean_on_N": 0,
+            "clean_on_F": 1
+          },
+          "objective": {
+            "value": 660200.0,
+            "unit": "objective_units",
+            "direction": "max"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.3189983367919922
+        },
+        "base_solution": {
+          "status": "OPTIMAL",
+          "solver_status": 1,
+          "feasible": true,
+          "actions": {
+            "lith_p1_r1_A": 0,
+            "lith_p1_r1_B": 28,
+            "lith_p1_r2_A": 23,
+            "lith_p1_r2_B": 0,
+            "lith_p2_r1_A": 0,
+            "lith_p2_r1_B": 23,
+            "lith_p2_r2_A": 20,
+            "lith_p2_r2_B": 4,
+            "etch_p1_r1_A": 0,
+            "etch_p1_r1_B": 28,
+            "etch_p1_r2_A": 23,
+            "etch_p1_r2_B": 0,
+            "etch_p2_r1_A": 0,
+            "etch_p2_r1_B": 23,
+            "etch_p2_r2_A": 20,
+            "etch_p2_r2_B": 4,
+            "insp_p1_r1_A": 0,
+            "insp_p1_r1_B": 28,
+            "insp_p1_r2_A": 23,
+            "insp_p1_r2_B": 0,
+            "insp_p2_r1_A": 0,
+            "insp_p2_r1_B": 23,
+            "insp_p2_r2_A": 20,
+            "insp_p2_r2_B": 4,
+            "w1_p1_r1_A": 0,
+            "w1_p1_r1_B": 0,
+            "w1_p1_r2_A": 0,
+            "w1_p1_r2_B": 0,
+            "w1_p2_r1_A": 0,
+            "w1_p2_r1_B": 0,
+            "w1_p2_r2_A": 0,
+            "w1_p2_r2_B": 0,
+            "w2_p1_r1_A": 0,
+            "w2_p1_r1_B": 0,
+            "w2_p1_r2_A": 0,
+            "w2_p1_r2_B": 0,
+            "w2_p2_r1_A": 0,
+            "w2_p2_r1_B": 0,
+            "w2_p2_r2_A": 0,
+            "w2_p2_r2_B": 0,
+            "route2_active_p1": 1,
+            "route2_active_p2": 1,
+            "clean_p1": 1,
+            "dirty_p1": 51,
+            "clean_p2": 0,
+            "dirty_p2": 52,
+            "clean_qty_N": 0,
+            "clean_qty_F": 46,
+            "clean_on_N": 0,
+            "clean_on_F": 1
+          },
+          "objective": {
+            "value": 660200.0,
+            "unit": "objective_units",
+            "direction": "max"
+          },
+          "conflict_constraints": [],
+          "solver": "COPT",
+          "solver_seconds": 0.30700111389160156
+        },
+        "model": {
+          "variables": [
+            {
+              "id": "lith_p1_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p1_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p1_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p1_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p2_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p2_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p2_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "lith_p2_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p1_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p1_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p1_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p1_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p2_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p2_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p2_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "etch_p2_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p1_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p1_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p1_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p1_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p2_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p2_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p2_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "insp_p2_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p1_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p1_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p1_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p1_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p2_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p2_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p2_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w1_p2_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p1_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p1_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p1_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p1_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p2_r1_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p2_r1_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p2_r2_A",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "w2_p2_r2_B",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "route2_active_p1",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "route2_active_p2",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "clean_p1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "dirty_p1",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "clean_p2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "dirty_p2",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 52
+            },
+            {
+              "id": "clean_qty_N",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 42
+            },
+            {
+              "id": "clean_qty_F",
+              "type": "INTEGER",
+              "lb": 0,
+              "ub": 50
+            },
+            {
+              "id": "clean_on_N",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            },
+            {
+              "id": "clean_on_F",
+              "type": "BINARY",
+              "lb": 0,
+              "ub": 1
+            }
+          ],
+          "objective": {
+            "sense": "max",
+            "unit": "objective_units",
+            "constant": 0,
+            "coefficients": {
+              "insp_p1_r1_A": 8200,
+              "insp_p1_r1_B": 5600,
+              "insp_p1_r2_A": 9000,
+              "insp_p1_r2_B": 5900,
+              "insp_p2_r1_A": 8200,
+              "insp_p2_r1_B": 5600,
+              "insp_p2_r2_A": 9000,
+              "insp_p2_r2_B": 5900,
+              "route2_active_p1": -18000,
+              "route2_active_p2": -18000
+            }
+          },
+          "constraints": [
+            {
+              "name": "lith_demand_p1_A",
+              "coefficients": {
+                "lith_p1_r1_A": 1,
+                "lith_p1_r2_A": 1
+              },
+              "sense": ">=",
+              "rhs": 19.8
+            },
+            {
+              "name": "lith_demand_p1_B",
+              "coefficients": {
+                "lith_p1_r1_B": 1,
+                "lith_p1_r2_B": 1
+              },
+              "sense": ">=",
+              "rhs": 26.4
+            },
+            {
+              "name": "lith_demand_p2_A",
+              "coefficients": {
+                "lith_p2_r1_A": 1,
+                "lith_p2_r2_A": 1
+              },
+              "sense": ">=",
+              "rhs": 19.8
+            },
+            {
+              "name": "lith_demand_p2_B",
+              "coefficients": {
+                "lith_p2_r1_B": 1,
+                "lith_p2_r2_B": 1
+              },
+              "sense": ">=",
+              "rhs": 26.4
+            },
+            {
+              "name": "qual_demand_p1_A",
+              "coefficients": {
+                "insp_p1_r1_A": 0.96,
+                "insp_p1_r2_A": 0.98
+              },
+              "sense": ">=",
+              "rhs": 17.1
+            },
+            {
+              "name": "qual_demand_p1_B",
+              "coefficients": {
+                "insp_p1_r1_B": 0.94,
+                "insp_p1_r2_B": 0.95
+              },
+              "sense": ">=",
+              "rhs": 22.8
+            },
+            {
+              "name": "qual_demand_p2_A",
+              "coefficients": {
+                "insp_p2_r1_A": 0.96,
+                "insp_p2_r2_A": 0.98
+              },
+              "sense": ">=",
+              "rhs": 17.1
+            },
+            {
+              "name": "qual_demand_p2_B",
+              "coefficients": {
+                "insp_p2_r1_B": 0.94,
+                "insp_p2_r2_B": 0.95
+              },
+              "sense": ">=",
+              "rhs": 22.8
+            },
+            {
+              "name": "wip_balance_p1_r1_A_etch",
+              "coefficients": {
+                "w1_p1_r1_A": 1,
+                "lith_p1_r1_A": -1,
+                "etch_p1_r1_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r1_A_insp",
+              "coefficients": {
+                "w2_p1_r1_A": 1,
+                "etch_p1_r1_A": -1,
+                "insp_p1_r1_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r1_B_etch",
+              "coefficients": {
+                "w1_p1_r1_B": 1,
+                "lith_p1_r1_B": -1,
+                "etch_p1_r1_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r1_B_insp",
+              "coefficients": {
+                "w2_p1_r1_B": 1,
+                "etch_p1_r1_B": -1,
+                "insp_p1_r1_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r2_A_etch",
+              "coefficients": {
+                "w1_p1_r2_A": 1,
+                "lith_p1_r2_A": -1,
+                "etch_p1_r2_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r2_A_insp",
+              "coefficients": {
+                "w2_p1_r2_A": 1,
+                "etch_p1_r2_A": -1,
+                "insp_p1_r2_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r2_B_etch",
+              "coefficients": {
+                "w1_p1_r2_B": 1,
+                "lith_p1_r2_B": -1,
+                "etch_p1_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p1_r2_B_insp",
+              "coefficients": {
+                "w2_p1_r2_B": 1,
+                "etch_p1_r2_B": -1,
+                "insp_p1_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r1_A_etch",
+              "coefficients": {
+                "w1_p2_r1_A": 1,
+                "w1_p1_r1_A": -1,
+                "lith_p2_r1_A": -1,
+                "etch_p2_r1_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r1_A_insp",
+              "coefficients": {
+                "w2_p2_r1_A": 1,
+                "w2_p1_r1_A": -1,
+                "etch_p2_r1_A": -1,
+                "insp_p2_r1_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r1_B_etch",
+              "coefficients": {
+                "w1_p2_r1_B": 1,
+                "w1_p1_r1_B": -1,
+                "lith_p2_r1_B": -1,
+                "etch_p2_r1_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r1_B_insp",
+              "coefficients": {
+                "w2_p2_r1_B": 1,
+                "w2_p1_r1_B": -1,
+                "etch_p2_r1_B": -1,
+                "insp_p2_r1_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r2_A_etch",
+              "coefficients": {
+                "w1_p2_r2_A": 1,
+                "w1_p1_r2_A": -1,
+                "lith_p2_r2_A": -1,
+                "etch_p2_r2_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r2_A_insp",
+              "coefficients": {
+                "w2_p2_r2_A": 1,
+                "w2_p1_r2_A": -1,
+                "etch_p2_r2_A": -1,
+                "insp_p2_r2_A": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r2_B_etch",
+              "coefficients": {
+                "w1_p2_r2_B": 1,
+                "w1_p1_r2_B": -1,
+                "lith_p2_r2_B": -1,
+                "etch_p2_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "wip_balance_p2_r2_B_insp",
+              "coefficients": {
+                "w2_p2_r2_B": 1,
+                "w2_p1_r2_B": -1,
+                "etch_p2_r2_B": -1,
+                "insp_p2_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "equip_lith_p1_r1",
+              "coefficients": {
+                "lith_p1_r1_A": 1,
+                "lith_p1_r1_B": 0.7
+              },
+              "sense": "<=",
+              "rhs": 24
+            },
+            {
+              "name": "equip_etch_p1_r1",
+              "coefficients": {
+                "etch_p1_r1_A": 0.8,
+                "etch_p1_r1_B": 0.6
+              },
+              "sense": "<=",
+              "rhs": 22
+            },
+            {
+              "name": "equip_insp_p1_r1",
+              "coefficients": {
+                "insp_p1_r1_A": 0.5,
+                "insp_p1_r1_B": 0.4
+              },
+              "sense": "<=",
+              "rhs": 13
+            },
+            {
+              "name": "equip_lith_p1_r2",
+              "coefficients": {
+                "lith_p1_r2_A": 0.8,
+                "lith_p1_r2_B": 0.6
+              },
+              "sense": "<=",
+              "rhs": 21
+            },
+            {
+              "name": "equip_etch_p1_r2",
+              "coefficients": {
+                "etch_p1_r2_A": 1,
+                "etch_p1_r2_B": 0.7
+              },
+              "sense": "<=",
+              "rhs": 23
+            },
+            {
+              "name": "equip_insp_p1_r2",
+              "coefficients": {
+                "insp_p1_r2_A": 0.6,
+                "insp_p1_r2_B": 0.5
+              },
+              "sense": "<=",
+              "rhs": 15
+            },
+            {
+              "name": "equip_lith_p2_r1",
+              "coefficients": {
+                "lith_p2_r1_A": 1,
+                "lith_p2_r1_B": 0.7
+              },
+              "sense": "<=",
+              "rhs": 24
+            },
+            {
+              "name": "equip_etch_p2_r1",
+              "coefficients": {
+                "etch_p2_r1_A": 0.8,
+                "etch_p2_r1_B": 0.6
+              },
+              "sense": "<=",
+              "rhs": 22
+            },
+            {
+              "name": "equip_insp_p2_r1",
+              "coefficients": {
+                "insp_p2_r1_A": 0.5,
+                "insp_p2_r1_B": 0.4
+              },
+              "sense": "<=",
+              "rhs": 13
+            },
+            {
+              "name": "equip_lith_p2_r2",
+              "coefficients": {
+                "lith_p2_r2_A": 0.8,
+                "lith_p2_r2_B": 0.6
+              },
+              "sense": "<=",
+              "rhs": 21
+            },
+            {
+              "name": "equip_etch_p2_r2",
+              "coefficients": {
+                "etch_p2_r2_A": 1,
+                "etch_p2_r2_B": 0.7
+              },
+              "sense": "<=",
+              "rhs": 23
+            },
+            {
+              "name": "equip_insp_p2_r2",
+              "coefficients": {
+                "insp_p2_r2_A": 0.6,
+                "insp_p2_r2_B": 0.5
+              },
+              "sense": "<=",
+              "rhs": 15
+            },
+            {
+              "name": "route2_activation_p1_lith_A",
+              "coefficients": {
+                "lith_p1_r2_A": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p1_lith_B",
+              "coefficients": {
+                "lith_p1_r2_B": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p1_etch_A",
+              "coefficients": {
+                "etch_p1_r2_A": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p1_etch_B",
+              "coefficients": {
+                "etch_p1_r2_B": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p1_insp_A",
+              "coefficients": {
+                "insp_p1_r2_A": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p1_insp_B",
+              "coefficients": {
+                "insp_p1_r2_B": 1,
+                "route2_active_p1": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_lith_A",
+              "coefficients": {
+                "lith_p2_r2_A": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_lith_B",
+              "coefficients": {
+                "lith_p2_r2_B": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_etch_A",
+              "coefficients": {
+                "etch_p2_r2_A": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_etch_B",
+              "coefficients": {
+                "etch_p2_r2_B": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_insp_A",
+              "coefficients": {
+                "insp_p2_r2_A": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "route2_activation_p2_insp_B",
+              "coefficients": {
+                "insp_p2_r2_B": 1,
+                "route2_active_p2": -52
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "personnel_p1",
+              "coefficients": {
+                "etch_p1_r1_A": 0.5,
+                "etch_p1_r2_A": 0.5,
+                "etch_p1_r1_B": 0.3,
+                "etch_p1_r2_B": 0.3
+              },
+              "sense": "<=",
+              "rhs": 20
+            },
+            {
+              "name": "personnel_p2",
+              "coefficients": {
+                "etch_p2_r1_A": 0.5,
+                "etch_p2_r2_A": 0.5,
+                "etch_p2_r1_B": 0.3,
+                "etch_p2_r2_B": 0.3,
+                "clean_qty_N": 0.2,
+                "clean_qty_F": 0.3,
+                "clean_on_N": 2,
+                "clean_on_F": 3
+              },
+              "sense": "<=",
+              "rhs": 35
+            },
+            {
+              "name": "clean_at_most_one",
+              "coefficients": {
+                "clean_on_N": 1,
+                "clean_on_F": 1
+              },
+              "sense": "<=",
+              "rhs": 1
+            },
+            {
+              "name": "clean_N_upper",
+              "coefficients": {
+                "clean_qty_N": 1,
+                "clean_on_N": -42
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "clean_N_lower",
+              "coefficients": {
+                "clean_qty_N": 1,
+                "clean_on_N": -1
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "clean_F_upper",
+              "coefficients": {
+                "clean_qty_F": 1,
+                "clean_on_F": -50
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "clean_F_lower",
+              "coefficients": {
+                "clean_qty_F": 1,
+                "clean_on_F": -1
+              },
+              "sense": ">=",
+              "rhs": 0
+            },
+            {
+              "name": "clean_total_le_dirty_p1",
+              "coefficients": {
+                "clean_qty_N": 1,
+                "clean_qty_F": 1,
+                "dirty_p1": -1
+              },
+              "sense": "<=",
+              "rhs": 0
+            },
+            {
+              "name": "carrier_clean_p1",
+              "coefficients": {
+                "clean_p1": 1,
+                "lith_p1_r1_A": 1,
+                "lith_p1_r1_B": 1,
+                "lith_p1_r2_A": 1,
+                "lith_p1_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 52
+            },
+            {
+              "name": "carrier_dirty_p1",
+              "coefficients": {
+                "dirty_p1": 1,
+                "insp_p1_r1_A": -1,
+                "insp_p1_r1_B": -1,
+                "insp_p1_r2_A": -1,
+                "insp_p1_r2_B": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "carrier_clean_p2",
+              "coefficients": {
+                "clean_p2": 1,
+                "clean_p1": -1,
+                "clean_qty_N": -1,
+                "clean_qty_F": -1,
+                "lith_p2_r1_A": 1,
+                "lith_p2_r1_B": 1,
+                "lith_p2_r2_A": 1,
+                "lith_p2_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "carrier_dirty_p2",
+              "coefficients": {
+                "dirty_p2": 1,
+                "dirty_p1": -1,
+                "clean_qty_N": 1,
+                "clean_qty_F": 1,
+                "insp_p2_r1_A": -1,
+                "insp_p2_r1_B": -1,
+                "insp_p2_r2_A": -1,
+                "insp_p2_r2_B": -1
+              },
+              "sense": "==",
+              "rhs": 0
+            },
+            {
+              "name": "carrier_conservation_p1",
+              "coefficients": {
+                "clean_p1": 1,
+                "dirty_p1": 1,
+                "w1_p1_r1_A": 1,
+                "w1_p1_r1_B": 1,
+                "w1_p1_r2_A": 1,
+                "w1_p1_r2_B": 1,
+                "w2_p1_r1_A": 1,
+                "w2_p1_r1_B": 1,
+                "w2_p1_r2_A": 1,
+                "w2_p1_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 52
+            },
+            {
+              "name": "carrier_conservation_p2",
+              "coefficients": {
+                "clean_p2": 1,
+                "dirty_p2": 1,
+                "w1_p2_r1_A": 1,
+                "w1_p2_r1_B": 1,
+                "w1_p2_r2_A": 1,
+                "w1_p2_r2_B": 1,
+                "w2_p2_r1_A": 1,
+                "w2_p2_r1_B": 1,
+                "w2_p2_r2_A": 1,
+                "w2_p2_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 52
+            },
+            {
+              "name": "wip_p1_storage_limit",
+              "coefficients": {
+                "w1_p1_r1_A": 1,
+                "w1_p1_r1_B": 1,
+                "w1_p1_r2_A": 1,
+                "w1_p1_r2_B": 1,
+                "w2_p1_r1_A": 1,
+                "w2_p1_r1_B": 1,
+                "w2_p1_r2_A": 1,
+                "w2_p1_r2_B": 1
+              },
+              "sense": "<=",
+              "rhs": 4
+            },
+            {
+              "name": "wip_p1_receipt_limit",
+              "coefficients": {
+                "w1_p1_r1_A": 1,
+                "w1_p1_r1_B": 1,
+                "w1_p1_r2_A": 1,
+                "w1_p1_r2_B": 1,
+                "w2_p1_r1_A": 1,
+                "w2_p1_r1_B": 1,
+                "w2_p1_r2_A": 1,
+                "w2_p1_r2_B": 1
+              },
+              "sense": "<=",
+              "rhs": 3
+            },
+            {
+              "name": "final_wip_zero",
+              "coefficients": {
+                "w1_p2_r1_A": 1,
+                "w1_p2_r1_B": 1,
+                "w1_p2_r2_A": 1,
+                "w1_p2_r2_B": 1,
+                "w2_p2_r1_A": 1,
+                "w2_p2_r1_B": 1,
+                "w2_p2_r2_A": 1,
+                "w2_p2_r2_B": 1
+              },
+              "sense": "==",
+              "rhs": 0
+            }
+          ]
+        },
+        "stop_reason": "FINISHED",
+        "error": null,
+        "delivery_status": "PROVISIONAL",
+        "information_complete": null,
+        "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+        "acquisition_enabled": true,
+        "acquisition_stop": null,
+        "search_gate": {
+          "search_needed": false,
+          "reason": "The optimization problem, all input data, the model formulation, and solver output are fully supplied; no external public-web information is required.",
+          "queries": []
+        },
+        "unresolved": [],
+        "final_modeling_attempted": true,
+        "final_modeling_completed": true,
+        "resources": {
+          "model": 3,
+          "search": 0,
+          "read": 0,
+          "solve": 2,
+          "format_repairs": 0,
+          "schedule": 0
+        },
+        "elapsed_seconds": 191.59299999999348,
+        "usage": {
+          "calls": 3,
+          "model_calls": 3,
+          "search_calls": 0,
+          "read_calls": 0,
+          "channel": "RESPONSES_COMPATIBLE_API",
+          "retrieval_channel": "DEEPSEEK_SEARCH_API",
+          "read_channel": "BASELINE_HTTP",
+          "read_http_requests": 0,
+          "usage_complete": true,
+          "actual_temperature": 1.0,
+          "strict_token_budget_verified": false,
+          "wall_seconds": 190.81200000003446,
+          "actual_models": [
+            "deepseek-flash"
+          ],
+          "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+          "prompt_tokens": 29119,
+          "known_prompt_tokens": 29119,
+          "completion_tokens": 33731,
+          "known_completion_tokens": 33731,
+          "total_tokens": 62850,
+          "known_total_tokens": 62850,
+          "search_backend": "DEEPSEEK_SEARCH_API",
+          "search_http_requests": 0,
+          "search_successful_nonempty": 0,
+          "search_empty_results": 0,
+          "search_cost_usd": 0,
+          "search_known_cost_usd": 0,
+          "search_unknown_cost": false,
+          "search_cost_basis": "official_published_rate_not_invoice",
+          "search_price_usd_per_1000": 0.75,
+          "model_total_tokens": 62850,
+          "search_billing_unit": "successful_nonempty_request",
+          "acquisition_enabled": true,
+          "blocked_external_operations": {
+            "search": 0,
+            "read": 0
+          }
+        },
+        "standard_protocol": "legacy_knowledge_v1",
+        "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+        "legacy_source_sha256": {
+          "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+          "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+          "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+        },
+        "model_ir_contract": "archived_variables_objective_constraints",
+        "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+        "model_format_repair_policy": "none; strict archived parser and validator",
+        "solver_scope": "current shared solver, not archived solver.py"
+      }
+    }
+  ]
+}

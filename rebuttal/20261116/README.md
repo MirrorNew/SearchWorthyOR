@@ -25,3 +25,12 @@
 目标仓库为 https://github.com/MirrorNew/SearchWorthyOR，使用 `github_delivery/` 中的独立工作树，在现有 `main` 分支按验证后的里程碑提交推送。活动项目本身不是 Git 工作树。
 
 第二点的扩展材料见 `dqz1_第二点扩展数据分析_侧重有利证据.md`；对外重点见 `dqz1_第二点有利证据摘要.md`，对应中英文草稿为 `dqz1_followup_model_reply_EN.md` 与 `dqz1_followup_model_reply_ZH.md`。完整审计与全部反例独立保留。
+
+## 完成交付
+
+- `dqz1_followup_complete_EN.md`、`dqz1_followup_complete_ZH.md`：整合两项疑问的最终中英文草稿。
+- `dqz1_第一点_业务描述还原示例.md`：来自REAL6材料的排产描述改写及规则获取示例，非已运行成绩。
+- `orlm_c3/RESULTS_20261116.md`：40次正式实验全部完成，Standard 17/20、SWAgent 18/20，口径为最优目标值匹配。
+- `orlm_c3/batches/main20_v1/verification.json`：完成后的输入、代码、来源及实际模型核查。
+
+GitHub提交包不含本机凭据配置和大体积原始API载荷；这些原始轨迹在本地保留。原始SFT数据包与REAL6材料也在本地保留，公开包提供转换输入和来源清单。

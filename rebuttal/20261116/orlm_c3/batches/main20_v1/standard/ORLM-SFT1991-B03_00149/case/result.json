@@ -1,0 +1,1081 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "p1": 22,
+      "p2": 19,
+      "p3": 20,
+      "p4": 20,
+      "p5": 19,
+      "n1": 9,
+      "n2": 10,
+      "n3": 11,
+      "n4": 9,
+      "n5": 12,
+      "o1": 13,
+      "o2": 9,
+      "o3": 9,
+      "o4": 11,
+      "o5": 7,
+      "a1": 0,
+      "a2": 9,
+      "a3": 11,
+      "a4": 11,
+      "a5": 11,
+      "u1": 21,
+      "u2": 40,
+      "u3": 62,
+      "u4": 82,
+      "u5": 105,
+      "v1": 13,
+      "v2": 13,
+      "v3": 11,
+      "v4": 11,
+      "v5": 7,
+      "tot1": 34,
+      "tot2": 53,
+      "tot3": 73,
+      "tot4": 93,
+      "tot5": 112,
+      "cash1": 56,
+      "cash2": 40,
+      "cash3": 37,
+      "cash4": 43,
+      "cash5": 81
+    },
+    "objective": {
+      "value": 100.0,
+      "unit": "objective_units",
+      "direction": "min"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0039997100830078125
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "p1": 22,
+      "p2": 19,
+      "p3": 20,
+      "p4": 20,
+      "p5": 19,
+      "n1": 9,
+      "n2": 10,
+      "n3": 11,
+      "n4": 9,
+      "n5": 12,
+      "o1": 13,
+      "o2": 9,
+      "o3": 9,
+      "o4": 11,
+      "o5": 7,
+      "a1": 0,
+      "a2": 9,
+      "a3": 11,
+      "a4": 11,
+      "a5": 11,
+      "u1": 21,
+      "u2": 40,
+      "u3": 62,
+      "u4": 82,
+      "u5": 105,
+      "v1": 13,
+      "v2": 13,
+      "v3": 11,
+      "v4": 11,
+      "v5": 7,
+      "tot1": 34,
+      "tot2": 53,
+      "tot3": 73,
+      "tot4": 93,
+      "tot5": 112,
+      "cash1": 56,
+      "cash2": 40,
+      "cash3": 37,
+      "cash4": 43,
+      "cash5": 81
+    },
+    "objective": {
+      "value": 100.0,
+      "unit": "objective_units",
+      "direction": "min"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0039997100830078125
+  },
+  "base_solution": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "p1": 22,
+      "p2": 19,
+      "p3": 20,
+      "p4": 20,
+      "p5": 19,
+      "n1": 9,
+      "n2": 10,
+      "n3": 11,
+      "n4": 9,
+      "n5": 12,
+      "o1": 13,
+      "o2": 9,
+      "o3": 9,
+      "o4": 11,
+      "o5": 7,
+      "a1": 0,
+      "a2": 9,
+      "a3": 11,
+      "a4": 11,
+      "a5": 11,
+      "u1": 21,
+      "u2": 40,
+      "u3": 62,
+      "u4": 82,
+      "u5": 105,
+      "v1": 13,
+      "v2": 13,
+      "v3": 11,
+      "v4": 11,
+      "v5": 7,
+      "tot1": 34,
+      "tot2": 53,
+      "tot3": 73,
+      "tot4": 93,
+      "tot5": 112,
+      "cash1": 56,
+      "cash2": 40,
+      "cash3": 37,
+      "cash4": 43,
+      "cash5": 81
+    },
+    "objective": {
+      "value": 100.0,
+      "unit": "objective_units",
+      "direction": "min"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0049991607666015625
+  },
+  "model": {
+    "variables": [
+      {
+        "id": "p1",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p2",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p3",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p4",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "p5",
+        "type": "INTEGER",
+        "lb": 19,
+        "ub": 71
+      },
+      {
+        "id": "n1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "n5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "o5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 71
+      },
+      {
+        "id": "a1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "a5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "u5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "v5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "tot5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 367
+      },
+      {
+        "id": "cash1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 140
+      },
+      {
+        "id": "cash2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 210
+      },
+      {
+        "id": "cash3",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 300
+      },
+      {
+        "id": "cash4",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 395
+      },
+      {
+        "id": "cash5",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 525
+      }
+    ],
+    "objective": {
+      "sense": "min",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "p1": 1,
+        "p2": 1,
+        "p3": 1,
+        "p4": 1,
+        "p5": 1
+      }
+    },
+    "constraints": [
+      {
+        "name": "purchase_link_1",
+        "coefficients": {
+          "p1": 1,
+          "n1": -1,
+          "o1": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_2",
+        "coefficients": {
+          "p2": 1,
+          "n2": -1,
+          "o2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_3",
+        "coefficients": {
+          "p3": 1,
+          "n3": -1,
+          "o3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_4",
+        "coefficients": {
+          "p4": 1,
+          "n4": -1,
+          "o4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "purchase_link_5",
+        "coefficients": {
+          "p5": 1,
+          "n5": -1,
+          "o5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_1",
+        "coefficients": {
+          "n1": 5,
+          "p1": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_2",
+        "coefficients": {
+          "n2": 5,
+          "p2": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_3",
+        "coefficients": {
+          "n3": 5,
+          "p3": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_4",
+        "coefficients": {
+          "n4": 5,
+          "p4": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_ratio_5",
+        "coefficients": {
+          "n5": 5,
+          "p5": -2
+        },
+        "sense": ">=",
+        "rhs": 0
+      },
+      {
+        "name": "new_supply_1",
+        "coefficients": {
+          "n1": 1
+        },
+        "sense": "<=",
+        "rhs": 9
+      },
+      {
+        "name": "new_supply_2",
+        "coefficients": {
+          "n2": 1
+        },
+        "sense": "<=",
+        "rhs": 10
+      },
+      {
+        "name": "new_supply_3",
+        "coefficients": {
+          "n3": 1
+        },
+        "sense": "<=",
+        "rhs": 11
+      },
+      {
+        "name": "new_supply_4",
+        "coefficients": {
+          "n4": 1
+        },
+        "sense": "<=",
+        "rhs": 9
+      },
+      {
+        "name": "new_supply_5",
+        "coefficients": {
+          "n5": 1
+        },
+        "sense": "<=",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_usable_1",
+        "coefficients": {
+          "u1": 1,
+          "n1": -1,
+          "a1": -1
+        },
+        "sense": "==",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_pending_1",
+        "coefficients": {
+          "v1": 1,
+          "o1": -1,
+          "a1": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_1",
+        "coefficients": {
+          "tot1": 1,
+          "p1": -1
+        },
+        "sense": "==",
+        "rhs": 12
+      },
+      {
+        "name": "inventory_total_identity_1",
+        "coefficients": {
+          "tot1": 1,
+          "u1": -1,
+          "v1": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_2",
+        "coefficients": {
+          "u2": 1,
+          "u1": -1,
+          "n2": -1,
+          "a2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_2",
+        "coefficients": {
+          "v2": 1,
+          "v1": -1,
+          "o2": -1,
+          "a2": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_2",
+        "coefficients": {
+          "tot2": 1,
+          "tot1": -1,
+          "p2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_2",
+        "coefficients": {
+          "tot2": 1,
+          "u2": -1,
+          "v2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_3",
+        "coefficients": {
+          "u3": 1,
+          "u2": -1,
+          "n3": -1,
+          "a3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_3",
+        "coefficients": {
+          "v3": 1,
+          "v2": -1,
+          "o3": -1,
+          "a3": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_3",
+        "coefficients": {
+          "tot3": 1,
+          "tot2": -1,
+          "p3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_3",
+        "coefficients": {
+          "tot3": 1,
+          "u3": -1,
+          "v3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_4",
+        "coefficients": {
+          "u4": 1,
+          "u3": -1,
+          "n4": -1,
+          "a4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_4",
+        "coefficients": {
+          "v4": 1,
+          "v3": -1,
+          "o4": -1,
+          "a4": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_4",
+        "coefficients": {
+          "tot4": 1,
+          "tot3": -1,
+          "p4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_4",
+        "coefficients": {
+          "tot4": 1,
+          "u4": -1,
+          "v4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_usable_5",
+        "coefficients": {
+          "u5": 1,
+          "u4": -1,
+          "n5": -1,
+          "a5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_pending_5",
+        "coefficients": {
+          "v5": 1,
+          "v4": -1,
+          "o5": -1,
+          "a5": 1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_flow_5",
+        "coefficients": {
+          "tot5": 1,
+          "tot4": -1,
+          "p5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "inventory_total_identity_5",
+        "coefficients": {
+          "tot5": 1,
+          "u5": -1,
+          "v5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_1",
+        "coefficients": {
+          "a1": 1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_2",
+        "coefficients": {
+          "a2": 1,
+          "v1": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_3",
+        "coefficients": {
+          "a3": 1,
+          "v2": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_4",
+        "coefficients": {
+          "a4": 1,
+          "v3": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "accept_limit_5",
+        "coefficients": {
+          "a5": 1,
+          "v4": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "quality_capacity_1",
+        "coefficients": {
+          "n1": 1,
+          "a1": 1
+        },
+        "sense": "<=",
+        "rhs": 14
+      },
+      {
+        "name": "quality_capacity_2",
+        "coefficients": {
+          "n2": 1,
+          "a2": 1
+        },
+        "sense": "<=",
+        "rhs": 19
+      },
+      {
+        "name": "quality_capacity_3",
+        "coefficients": {
+          "n3": 1,
+          "a3": 1
+        },
+        "sense": "<=",
+        "rhs": 22
+      },
+      {
+        "name": "quality_capacity_4",
+        "coefficients": {
+          "n4": 1,
+          "a4": 1
+        },
+        "sense": "<=",
+        "rhs": 21
+      },
+      {
+        "name": "quality_capacity_5",
+        "coefficients": {
+          "n5": 1,
+          "a5": 1
+        },
+        "sense": "<=",
+        "rhs": 24
+      },
+      {
+        "name": "usable_inventory_min_1",
+        "coefficients": {
+          "u1": 1
+        },
+        "sense": ">=",
+        "rhs": 20
+      },
+      {
+        "name": "usable_inventory_min_2",
+        "coefficients": {
+          "u2": 1
+        },
+        "sense": ">=",
+        "rhs": 38
+      },
+      {
+        "name": "usable_inventory_min_3",
+        "coefficients": {
+          "u3": 1
+        },
+        "sense": ">=",
+        "rhs": 58
+      },
+      {
+        "name": "usable_inventory_min_4",
+        "coefficients": {
+          "u4": 1
+        },
+        "sense": ">=",
+        "rhs": 78
+      },
+      {
+        "name": "usable_inventory_min_5",
+        "coefficients": {
+          "u5": 1
+        },
+        "sense": ">=",
+        "rhs": 105
+      },
+      {
+        "name": "final_total_inventory_min",
+        "coefficients": {
+          "tot5": 1
+        },
+        "sense": ">=",
+        "rhs": 60
+      },
+      {
+        "name": "cash_balance_1",
+        "coefficients": {
+          "cash1": 1,
+          "n1": 5,
+          "o1": 3,
+          "a1": 1
+        },
+        "sense": "==",
+        "rhs": 140
+      },
+      {
+        "name": "cash_balance_2",
+        "coefficients": {
+          "cash2": 1,
+          "cash1": -1,
+          "n2": 5,
+          "o2": 3,
+          "a2": 1
+        },
+        "sense": "==",
+        "rhs": 70
+      },
+      {
+        "name": "cash_balance_3",
+        "coefficients": {
+          "cash3": 1,
+          "cash2": -1,
+          "n3": 5,
+          "o3": 3,
+          "a3": 1
+        },
+        "sense": "==",
+        "rhs": 90
+      },
+      {
+        "name": "cash_balance_4",
+        "coefficients": {
+          "cash4": 1,
+          "cash3": -1,
+          "n4": 5,
+          "o4": 3,
+          "a4": 1
+        },
+        "sense": "==",
+        "rhs": 95
+      },
+      {
+        "name": "cash_balance_5",
+        "coefficients": {
+          "cash5": 1,
+          "cash4": -1,
+          "n5": 5,
+          "o5": 3,
+          "a5": 1
+        },
+        "sense": "==",
+        "rhs": 130
+      },
+      {
+        "name": "cash_min_1",
+        "coefficients": {
+          "cash1": 1
+        },
+        "sense": ">=",
+        "rhs": 50
+      },
+      {
+        "name": "cash_min_2",
+        "coefficients": {
+          "cash2": 1
+        },
+        "sense": ">=",
+        "rhs": 40
+      },
+      {
+        "name": "cash_min_3",
+        "coefficients": {
+          "cash3": 1
+        },
+        "sense": ">=",
+        "rhs": 35
+      },
+      {
+        "name": "cash_min_4",
+        "coefficients": {
+          "cash4": 1
+        },
+        "sense": ">=",
+        "rhs": 35
+      },
+      {
+        "name": "cash_min_5",
+        "coefficients": {
+          "cash5": 1
+        },
+        "sense": ">=",
+        "rhs": 70
+      }
+    ]
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": {
+    "search_needed": false,
+    "reason": "The task is a fully specified mixed-integer optimization problem with all parameters, constraints, base model, and data files supplied; solving it does not require external public information.",
+    "queries": []
+  },
+  "unresolved": [],
+  "final_modeling_attempted": true,
+  "final_modeling_completed": true,
+  "resources": {
+    "model": 3,
+    "search": 0,
+    "read": 0,
+    "solve": 2,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 112.90700000000652,
+  "usage": {
+    "calls": 3,
+    "model_calls": 3,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 112.75,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 20493,
+    "known_prompt_tokens": 20493,
+    "completion_tokens": 16261,
+    "known_completion_tokens": 16261,
+    "total_tokens": 36754,
+    "known_total_tokens": 36754,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 36754,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

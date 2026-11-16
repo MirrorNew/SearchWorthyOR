@@ -1,0 +1,807 @@
+{
+  "method": "standard_legacy_knowledge_v1",
+  "version": "standard_legacy_knowledge_v1",
+  "reproduction_scope": "Archived Standard prompt/parser/IR contract aligned; current Responses transport, shared budgets and solver retained. Not an exact historical replay.",
+  "decision": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "x_P1": 1,
+      "x_P2": 0,
+      "x_P3": 1,
+      "x_P4": 1,
+      "x_P5": 1,
+      "x_P6": 0,
+      "x_P7": 1,
+      "x_P8": 0,
+      "y_A": 1,
+      "y_B": 0,
+      "y_C": 1,
+      "z_P1_A": 1,
+      "z_P1_B": 0,
+      "z_P2_A": 0,
+      "z_P2_B": 0,
+      "z_P3_A": 0,
+      "z_P3_C": 1,
+      "z_P4_B": 0,
+      "z_P4_C": 1,
+      "z_P5_A": 1,
+      "z_P5_C": 0,
+      "z_P6_A": 0,
+      "z_P6_C": 0,
+      "z_P7_B": 0,
+      "z_P7_C": 1,
+      "z_P8_B": 0,
+      "z_P8_C": 0
+    },
+    "objective": {
+      "value": 1350.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0030002593994140625
+  },
+  "last_solve": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "x_P1": 1,
+      "x_P2": 0,
+      "x_P3": 1,
+      "x_P4": 1,
+      "x_P5": 1,
+      "x_P6": 0,
+      "x_P7": 1,
+      "x_P8": 0,
+      "y_A": 1,
+      "y_B": 0,
+      "y_C": 1,
+      "z_P1_A": 1,
+      "z_P1_B": 0,
+      "z_P2_A": 0,
+      "z_P2_B": 0,
+      "z_P3_A": 0,
+      "z_P3_C": 1,
+      "z_P4_B": 0,
+      "z_P4_C": 1,
+      "z_P5_A": 1,
+      "z_P5_C": 0,
+      "z_P6_A": 0,
+      "z_P6_C": 0,
+      "z_P7_B": 0,
+      "z_P7_C": 1,
+      "z_P8_B": 0,
+      "z_P8_C": 0
+    },
+    "objective": {
+      "value": 1350.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0030002593994140625
+  },
+  "base_solution": {
+    "status": "OPTIMAL",
+    "solver_status": 1,
+    "feasible": true,
+    "actions": {
+      "x_P1": 1,
+      "x_P2": 0,
+      "x_P3": 1,
+      "x_P4": 1,
+      "x_P5": 1,
+      "x_P6": 0,
+      "x_P7": 1,
+      "x_P8": 0,
+      "y_A": 1,
+      "y_B": 0,
+      "y_C": 1,
+      "z_P1_A": 1,
+      "z_P1_B": 0,
+      "z_P2_A": 0,
+      "z_P2_B": 0,
+      "z_P3_A": 0,
+      "z_P3_C": 1,
+      "z_P4_B": 0,
+      "z_P4_C": 1,
+      "z_P5_A": 1,
+      "z_P5_C": 0,
+      "z_P6_A": 0,
+      "z_P6_C": 0,
+      "z_P7_B": 0,
+      "z_P7_C": 1,
+      "z_P8_B": 0,
+      "z_P8_C": 0
+    },
+    "objective": {
+      "value": 1350.0,
+      "unit": "objective_units",
+      "direction": "max"
+    },
+    "conflict_constraints": [],
+    "solver": "COPT",
+    "solver_seconds": 0.0039997100830078125
+  },
+  "model": {
+    "variables": [
+      {
+        "id": "x_P1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P5",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P6",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P7",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "x_P8",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "y_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P1_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P1_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P2_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P2_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P3_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P3_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P4_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P4_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P5_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P5_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P6_A",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P6_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P7_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P7_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P8_B",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "z_P8_C",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      }
+    ],
+    "objective": {
+      "sense": "max",
+      "unit": "objective_units",
+      "constant": 0,
+      "coefficients": {
+        "x_P1": 245,
+        "x_P2": 315,
+        "x_P3": 285,
+        "x_P4": 230,
+        "x_P5": 300,
+        "x_P6": 175,
+        "x_P7": 290,
+        "x_P8": 270
+      }
+    },
+    "constraints": [
+      {
+        "name": "resource_investment_budget",
+        "coefficients": {
+          "x_P1": 180,
+          "x_P2": 240,
+          "x_P3": 210,
+          "x_P4": 160,
+          "x_P5": 260,
+          "x_P6": 140,
+          "x_P7": 220,
+          "x_P8": 190
+        },
+        "sense": "<=",
+        "rhs": 1150
+      },
+      {
+        "name": "resource_product_person_months",
+        "coefficients": {
+          "x_P1": 18,
+          "x_P2": 30,
+          "x_P3": 16,
+          "x_P4": 12,
+          "x_P5": 25,
+          "x_P6": 10,
+          "x_P7": 20,
+          "x_P8": 14
+        },
+        "sense": "<=",
+        "rhs": 110
+      },
+      {
+        "name": "resource_data_person_months",
+        "coefficients": {
+          "x_P1": 12,
+          "x_P2": 8,
+          "x_P3": 28,
+          "x_P4": 24,
+          "x_P5": 15,
+          "x_P6": 18,
+          "x_P7": 6,
+          "x_P8": 10
+        },
+        "sense": "<=",
+        "rhs": 92
+      },
+      {
+        "name": "resource_market_person_months",
+        "coefficients": {
+          "x_P1": 6,
+          "x_P2": 10,
+          "x_P3": 4,
+          "x_P4": 8,
+          "x_P5": 3,
+          "x_P6": 5,
+          "x_P7": 26,
+          "x_P8": 30
+        },
+        "sense": "<=",
+        "rhs": 68
+      },
+      {
+        "name": "resource_risk_score",
+        "coefficients": {
+          "x_P1": 7,
+          "x_P2": 6,
+          "x_P3": 5,
+          "x_P4": 8,
+          "x_P5": 3,
+          "x_P6": 2,
+          "x_P7": 7,
+          "x_P8": 9
+        },
+        "sense": "<=",
+        "rhs": 31
+      },
+      {
+        "name": "category_customer_experience",
+        "coefficients": {
+          "x_P1": 1,
+          "x_P2": 1
+        },
+        "sense": ">=",
+        "rhs": 1
+      },
+      {
+        "name": "category_data_capability",
+        "coefficients": {
+          "x_P3": 1,
+          "x_P4": 1
+        },
+        "sense": ">=",
+        "rhs": 1
+      },
+      {
+        "name": "category_compliance_security",
+        "coefficients": {
+          "x_P5": 1,
+          "x_P6": 1
+        },
+        "sense": ">=",
+        "rhs": 1
+      },
+      {
+        "name": "category_market_growth",
+        "coefficients": {
+          "x_P7": 1,
+          "x_P8": 1
+        },
+        "sense": ">=",
+        "rhs": 1
+      },
+      {
+        "name": "dependency_P2_P3",
+        "coefficients": {
+          "x_P2": 1,
+          "x_P3": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "mutual_exclusion_P5_P8",
+        "coefficients": {
+          "x_P5": 1,
+          "x_P8": 1
+        },
+        "sense": "<=",
+        "rhs": 1
+      },
+      {
+        "name": "max_selected_projects",
+        "coefficients": {
+          "x_P1": 1,
+          "x_P2": 1,
+          "x_P3": 1,
+          "x_P4": 1,
+          "x_P5": 1,
+          "x_P6": 1,
+          "x_P7": 1,
+          "x_P8": 1
+        },
+        "sense": "<=",
+        "rhs": 6
+      },
+      {
+        "name": "assign_P1",
+        "coefficients": {
+          "z_P1_A": 1,
+          "z_P1_B": 1,
+          "x_P1": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P2",
+        "coefficients": {
+          "z_P2_A": 1,
+          "z_P2_B": 1,
+          "x_P2": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P3",
+        "coefficients": {
+          "z_P3_A": 1,
+          "z_P3_C": 1,
+          "x_P3": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P4",
+        "coefficients": {
+          "z_P4_B": 1,
+          "z_P4_C": 1,
+          "x_P4": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P5",
+        "coefficients": {
+          "z_P5_A": 1,
+          "z_P5_C": 1,
+          "x_P5": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P6",
+        "coefficients": {
+          "z_P6_A": 1,
+          "z_P6_C": 1,
+          "x_P6": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P7",
+        "coefficients": {
+          "z_P7_B": 1,
+          "z_P7_C": 1,
+          "x_P7": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "assign_P8",
+        "coefficients": {
+          "z_P8_B": 1,
+          "z_P8_C": 1,
+          "x_P8": -1
+        },
+        "sense": "==",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P1_A",
+        "coefficients": {
+          "z_P1_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P1_B",
+        "coefficients": {
+          "z_P1_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P2_A",
+        "coefficients": {
+          "z_P2_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P2_B",
+        "coefficients": {
+          "z_P2_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P3_A",
+        "coefficients": {
+          "z_P3_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P3_C",
+        "coefficients": {
+          "z_P3_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P4_B",
+        "coefficients": {
+          "z_P4_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P4_C",
+        "coefficients": {
+          "z_P4_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P5_A",
+        "coefficients": {
+          "z_P5_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P5_C",
+        "coefficients": {
+          "z_P5_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P6_A",
+        "coefficients": {
+          "z_P6_A": 1,
+          "y_A": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P6_C",
+        "coefficients": {
+          "z_P6_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P7_B",
+        "coefficients": {
+          "z_P7_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P7_C",
+        "coefficients": {
+          "z_P7_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P8_B",
+        "coefficients": {
+          "z_P8_B": 1,
+          "y_B": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "eligibility_P8_C",
+        "coefficients": {
+          "z_P8_C": 1,
+          "y_C": -1
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "max_enabled_centers",
+        "coefficients": {
+          "y_A": 1,
+          "y_B": 1,
+          "y_C": 1
+        },
+        "sense": "<=",
+        "rhs": 2
+      },
+      {
+        "name": "capacity_A",
+        "coefficients": {
+          "z_P1_A": 6,
+          "z_P2_A": 10,
+          "z_P3_A": 8,
+          "z_P5_A": 7,
+          "z_P6_A": 4,
+          "y_A": -16
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_B",
+        "coefficients": {
+          "z_P1_B": 4,
+          "z_P2_B": 9,
+          "z_P4_B": 6,
+          "z_P7_B": 8,
+          "z_P8_B": 9,
+          "y_B": -16
+        },
+        "sense": "<=",
+        "rhs": 0
+      },
+      {
+        "name": "capacity_C",
+        "coefficients": {
+          "z_P3_C": 5,
+          "z_P4_C": 7,
+          "z_P5_C": 9,
+          "z_P6_C": 6,
+          "z_P7_C": 5,
+          "z_P8_C": 8,
+          "y_C": -18
+        },
+        "sense": "<=",
+        "rhs": 0
+      }
+    ]
+  },
+  "stop_reason": "FINISHED",
+  "error": null,
+  "delivery_status": "PROVISIONAL",
+  "information_complete": null,
+  "completeness_scope": "NO_GLOBAL_COMPLETENESS_CLAIM",
+  "acquisition_enabled": true,
+  "acquisition_stop": null,
+  "search_gate": {
+    "search_needed": false,
+    "reason": "The optimization problem, all required data, the mixed-integer programming formulation, and the base model are fully provided; solving it requires no external public-web information.",
+    "queries": []
+  },
+  "unresolved": [],
+  "final_modeling_attempted": true,
+  "final_modeling_completed": true,
+  "resources": {
+    "model": 3,
+    "search": 0,
+    "read": 0,
+    "solve": 2,
+    "format_repairs": 0,
+    "schedule": 0
+  },
+  "elapsed_seconds": 89.18800000002375,
+  "usage": {
+    "calls": 3,
+    "model_calls": 3,
+    "search_calls": 0,
+    "read_calls": 0,
+    "channel": "RESPONSES_COMPATIBLE_API",
+    "retrieval_channel": "DEEPSEEK_SEARCH_API",
+    "read_channel": "BASELINE_HTTP",
+    "read_http_requests": 0,
+    "usage_complete": true,
+    "actual_temperature": 1.0,
+    "strict_token_budget_verified": false,
+    "wall_seconds": 89.04700000002049,
+    "actual_models": [
+      "deepseek-flash"
+    ],
+    "usage_scope": "Model API token usage and separate standalone search request billing; READ uses original HTTP",
+    "prompt_tokens": 18801,
+    "known_prompt_tokens": 18801,
+    "completion_tokens": 12357,
+    "known_completion_tokens": 12357,
+    "total_tokens": 31158,
+    "known_total_tokens": 31158,
+    "search_backend": "DEEPSEEK_SEARCH_API",
+    "search_http_requests": 0,
+    "search_successful_nonempty": 0,
+    "search_empty_results": 0,
+    "search_cost_usd": 0,
+    "search_known_cost_usd": 0,
+    "search_unknown_cost": false,
+    "search_cost_basis": "official_published_rate_not_invoice",
+    "search_price_usd_per_1000": 0.75,
+    "model_total_tokens": 31158,
+    "search_billing_unit": "successful_nonempty_request",
+    "acquisition_enabled": true,
+    "blocked_external_operations": {
+      "search": 0,
+      "read": 0
+    }
+  },
+  "standard_protocol": "legacy_knowledge_v1",
+  "legacy_source_directory": "SearchWorthy_Submission_20260923/code/e1_three_models",
+  "legacy_source_sha256": {
+    "prompt_zh.txt": "6a4397f49fc08efb16e70d18abfaf345275b4f75316f93dd116bf597b3f03a29",
+    "runner.py": "914f611e057e5accc6139b143e8c2f27334a604fd7ca22996aedf7baf69d87aa",
+    "solver.py": "951334cfe4ff3a60d05c37242d9afaec9de017d9e2f4d1f3d3809901453f6bfe"
+  },
+  "model_ir_contract": "archived_variables_objective_constraints",
+  "knowledge_policy": "task_facts_and_parametric_knowledge; observed_sources_when_available",
+  "model_format_repair_policy": "none; strict archived parser and validator",
+  "solver_scope": "current shared solver, not archived solver.py"
+}

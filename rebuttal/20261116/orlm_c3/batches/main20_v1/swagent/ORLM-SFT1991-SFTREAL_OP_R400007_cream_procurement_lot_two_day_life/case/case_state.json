@@ -1,0 +1,1753 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "q_buy_skim_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "q_buy_skim_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "q_buy_skim_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 50
+      },
+      {
+        "id": "q_buy_cream_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_buy_cream_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_buy_cream_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L1_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L1_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L1_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_lowfat_L1_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_lowfat_L1_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_lowfat_L1_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L2_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L2_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_whole_L2_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_rich_L2_0",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_rich_L2_1",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "q_rich_L2_2",
+        "type": "INTEGER",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "o_buy_skim_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_buy_skim_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_buy_skim_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_buy_cream_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_buy_cream_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_buy_cream_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L1_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L1_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L1_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_lowfat_L1_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_lowfat_L1_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_lowfat_L1_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L2_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L2_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_whole_L2_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_rich_L2_0",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_rich_L2_1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "o_rich_L2_2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "I_skim_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_skim_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_skim_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_cream_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_cream_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_cream_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_whole_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_whole_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_whole_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_lowfat_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_lowfat_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_lowfat_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_rich_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_rich_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "I_rich_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "u_0_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "u_0_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "u_1_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "u_1_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "u_2_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "R_0_0",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "R_1_1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      },
+      {
+        "id": "R_2_2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 20
+      }
+    ],
+    "objective": {
+      "direction": "min",
+      "terms": {
+        "q_buy_skim_0": 0.8,
+        "q_buy_skim_1": 0.8,
+        "q_buy_skim_2": 0.8,
+        "q_buy_cream_0": 1.5,
+        "q_buy_cream_1": 1.5,
+        "q_buy_cream_2": 1.5,
+        "q_whole_L1_0": 1,
+        "q_whole_L1_1": 4,
+        "q_whole_L1_2": 5,
+        "q_lowfat_L1_0": 1,
+        "q_lowfat_L1_1": 4,
+        "q_lowfat_L1_2": 5,
+        "q_whole_L2_0": 1.2,
+        "q_whole_L2_1": 4.8,
+        "q_whole_L2_2": 6,
+        "q_rich_L2_0": 1.5,
+        "q_rich_L2_1": 6,
+        "q_rich_L2_2": 7.5,
+        "o_whole_L1_0": 2,
+        "o_whole_L1_1": 2,
+        "o_whole_L1_2": 2,
+        "o_lowfat_L1_0": 2,
+        "o_lowfat_L1_1": 2,
+        "o_lowfat_L1_2": 2,
+        "o_whole_L2_0": 2,
+        "o_whole_L2_1": 2,
+        "o_whole_L2_2": 2,
+        "o_rich_L2_0": 2,
+        "o_rich_L2_1": 2,
+        "o_rich_L2_2": 2,
+        "I_skim_0": 0.08,
+        "I_skim_1": 0.08,
+        "I_skim_2": 0.08,
+        "I_cream_0": 0.08,
+        "I_cream_1": 0.08,
+        "I_cream_2": 0.08,
+        "I_whole_0": 0.08,
+        "I_whole_1": 0.08,
+        "I_whole_2": 0.08,
+        "I_lowfat_0": 0.08,
+        "I_lowfat_1": 0.08,
+        "I_lowfat_2": 0.08,
+        "I_rich_0": 0.08,
+        "I_rich_1": 0.08,
+        "I_rich_2": 0.08
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T137",
+        "T139",
+        "T140",
+        "T141",
+        "T142",
+        "T143",
+        "T144",
+        "T147",
+        "T148",
+        "T149",
+        "T150",
+        "T151",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "q_buy_skim_0": 1,
+          "o_buy_skim_0": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T280",
+          "T330"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "q_buy_skim_0": 1,
+          "o_buy_skim_0": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T280",
+          "T330"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "q_buy_skim_1": 1,
+          "o_buy_skim_1": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T281",
+          "T330"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "q_buy_skim_1": 1,
+          "o_buy_skim_1": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T281",
+          "T330"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "q_buy_skim_2": 1,
+          "o_buy_skim_2": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T282",
+          "T330"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "q_buy_skim_2": 1,
+          "o_buy_skim_2": -50
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T282",
+          "T330"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "q_buy_cream_0": 1,
+          "o_buy_cream_0": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T283",
+          "T331"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "q_buy_cream_0": 1,
+          "o_buy_cream_0": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T283",
+          "T331"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "q_buy_cream_1": 1,
+          "o_buy_cream_1": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T284",
+          "T331"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "q_buy_cream_1": 1,
+          "o_buy_cream_1": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T284",
+          "T331"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "q_buy_cream_2": 1,
+          "o_buy_cream_2": -0.1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T285",
+          "T331"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "q_buy_cream_2": 1,
+          "o_buy_cream_2": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T285",
+          "T331"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "q_whole_L1_0": 1,
+          "o_whole_L1_0": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T286",
+          "T332"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "q_whole_L1_0": 1,
+          "o_whole_L1_0": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T286",
+          "T332"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "q_whole_L1_1": 1,
+          "o_whole_L1_1": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T287",
+          "T332"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "q_whole_L1_1": 1,
+          "o_whole_L1_1": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T287",
+          "T332"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "q_whole_L1_2": 1,
+          "o_whole_L1_2": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T288",
+          "T332"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "q_whole_L1_2": 1,
+          "o_whole_L1_2": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T288",
+          "T332"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_0": 1,
+          "o_lowfat_L1_0": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T289",
+          "T333"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_0": 1,
+          "o_lowfat_L1_0": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T289",
+          "T333"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_1": 1,
+          "o_lowfat_L1_1": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T290",
+          "T333"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_1": 1,
+          "o_lowfat_L1_1": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T290",
+          "T333"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_2": 1,
+          "o_lowfat_L1_2": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T291",
+          "T333"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "q_lowfat_L1_2": 1,
+          "o_lowfat_L1_2": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T291",
+          "T333"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "q_whole_L2_0": 1,
+          "o_whole_L2_0": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T292",
+          "T334"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "q_whole_L2_0": 1,
+          "o_whole_L2_0": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T292",
+          "T334"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "q_whole_L2_1": 1,
+          "o_whole_L2_1": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T293",
+          "T334"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "q_whole_L2_1": 1,
+          "o_whole_L2_1": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T293",
+          "T334"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "q_whole_L2_2": 1,
+          "o_whole_L2_2": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T294",
+          "T334"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "q_whole_L2_2": 1,
+          "o_whole_L2_2": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T294",
+          "T334"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "q_rich_L2_0": 1,
+          "o_rich_L2_0": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T295",
+          "T335"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "q_rich_L2_0": 1,
+          "o_rich_L2_0": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T295",
+          "T335"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "q_rich_L2_1": 1,
+          "o_rich_L2_1": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T296",
+          "T335"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "q_rich_L2_1": 1,
+          "o_rich_L2_1": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T296",
+          "T335"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "q_rich_L2_2": 1,
+          "o_rich_L2_2": -1
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T036",
+          "T037",
+          "T297",
+          "T335"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "q_rich_L2_2": 1,
+          "o_rich_L2_2": -20
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T033",
+          "T035",
+          "T037",
+          "T297",
+          "T335"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "q_whole_L1_0": 0.7,
+          "o_whole_L1_0": 0.5,
+          "q_lowfat_L1_0": 0.6,
+          "o_lowfat_L1_0": 0.5
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T320",
+          "T322",
+          "T338"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "q_whole_L1_1": 0.7,
+          "o_whole_L1_1": 0.5,
+          "q_lowfat_L1_1": 0.6,
+          "o_lowfat_L1_1": 0.5
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T320",
+          "T322",
+          "T339"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "q_whole_L1_2": 0.7,
+          "o_whole_L1_2": 0.5,
+          "q_lowfat_L1_2": 0.6,
+          "o_lowfat_L1_2": 0.5
+        },
+        "sense": "<=",
+        "rhs": 6,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T320",
+          "T322",
+          "T340"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "q_whole_L2_0": 0.6,
+          "o_whole_L2_0": 0.5,
+          "q_rich_L2_0": 0.8,
+          "o_rich_L2_0": 0.5
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T325",
+          "T327",
+          "T341"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "q_whole_L2_1": 0.6,
+          "o_whole_L2_1": 0.5,
+          "q_rich_L2_1": 0.8,
+          "o_rich_L2_1": 0.5
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T325",
+          "T327",
+          "T342"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "q_whole_L2_2": 0.6,
+          "o_whole_L2_2": 0.5,
+          "q_rich_L2_2": 0.8,
+          "o_rich_L2_2": 0.5
+        },
+        "sense": "<=",
+        "rhs": 5,
+        "citations": [
+          "T040",
+          "T041",
+          "T042",
+          "T043",
+          "T325",
+          "T327",
+          "T343"
+        ],
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "I_skim_0": 1,
+          "q_buy_skim_0": -1,
+          "q_whole_L1_0": 0.8,
+          "q_lowfat_L1_0": 0.95,
+          "q_whole_L2_0": 0.8,
+          "q_rich_L2_0": 0.7
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T300",
+          "T302",
+          "T303",
+          "T305",
+          "T306",
+          "T308",
+          "T309",
+          "T311",
+          "T312",
+          "T256"
+        ],
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "I_skim_1": 1,
+          "I_skim_0": -1,
+          "q_buy_skim_1": -1,
+          "q_whole_L1_1": 0.8,
+          "q_lowfat_L1_1": 0.95,
+          "q_whole_L2_1": 0.8,
+          "q_rich_L2_1": 0.7
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T300",
+          "T302",
+          "T303",
+          "T305",
+          "T306",
+          "T308",
+          "T309",
+          "T311",
+          "T312",
+          "T257"
+        ],
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "I_skim_2": 1,
+          "I_skim_1": -1,
+          "q_buy_skim_2": -1,
+          "q_whole_L1_2": 0.8,
+          "q_lowfat_L1_2": 0.95,
+          "q_whole_L2_2": 0.8,
+          "q_rich_L2_2": 0.7
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T300",
+          "T302",
+          "T303",
+          "T305",
+          "T306",
+          "T308",
+          "T309",
+          "T311",
+          "T312",
+          "T258"
+        ],
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "I_cream_0": 1,
+          "q_buy_cream_0": -1,
+          "q_whole_L1_0": 0.2,
+          "q_lowfat_L1_0": 0.05,
+          "q_whole_L2_0": 0.2,
+          "q_rich_L2_0": 0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T074",
+          "T301",
+          "T303",
+          "T306",
+          "T309",
+          "T312",
+          "T259"
+        ],
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "I_cream_1": 1,
+          "I_cream_0": -1,
+          "q_buy_cream_1": -1,
+          "q_whole_L1_1": 0.2,
+          "q_lowfat_L1_1": 0.05,
+          "q_whole_L2_1": 0.2,
+          "q_rich_L2_1": 0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T074",
+          "T301",
+          "T303",
+          "T306",
+          "T309",
+          "T312",
+          "T260"
+        ],
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "I_cream_2": 1,
+          "I_cream_1": -1,
+          "q_buy_cream_2": -1,
+          "q_whole_L1_2": 0.2,
+          "q_lowfat_L1_2": 0.05,
+          "q_whole_L2_2": 0.2,
+          "q_rich_L2_2": 0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T074",
+          "T301",
+          "T303",
+          "T306",
+          "T309",
+          "T312",
+          "T261"
+        ],
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "I_whole_0": 1,
+          "q_whole_L1_0": -1,
+          "q_whole_L2_0": -1
+        },
+        "sense": "==",
+        "rhs": -4,
+        "citations": [
+          "T059",
+          "T060",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T262",
+          "T304",
+          "T310"
+        ],
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "I_whole_1": 1,
+          "I_whole_0": -1,
+          "q_whole_L1_1": -1,
+          "q_whole_L2_1": -1
+        },
+        "sense": "==",
+        "rhs": -5,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T263",
+          "T304",
+          "T310"
+        ],
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "I_whole_2": 1,
+          "I_whole_1": -1,
+          "q_whole_L1_2": -1,
+          "q_whole_L2_2": -1
+        },
+        "sense": "==",
+        "rhs": -4,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T264",
+          "T304",
+          "T310"
+        ],
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "I_lowfat_0": 1,
+          "q_lowfat_L1_0": -1
+        },
+        "sense": "==",
+        "rhs": -3,
+        "citations": [
+          "T059",
+          "T060",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T265",
+          "T307"
+        ],
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "I_lowfat_1": 1,
+          "I_lowfat_0": -1,
+          "q_lowfat_L1_1": -1
+        },
+        "sense": "==",
+        "rhs": -4,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T266",
+          "T307"
+        ],
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "I_lowfat_2": 1,
+          "I_lowfat_1": -1,
+          "q_lowfat_L1_2": -1
+        },
+        "sense": "==",
+        "rhs": -4,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T267",
+          "T307"
+        ],
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "I_rich_0": 1,
+          "q_rich_L2_0": -1
+        },
+        "sense": "==",
+        "rhs": -2,
+        "citations": [
+          "T059",
+          "T060",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T268",
+          "T313"
+        ],
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "I_rich_1": 1,
+          "I_rich_0": -1,
+          "q_rich_L2_1": -1
+        },
+        "sense": "==",
+        "rhs": -3,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T269",
+          "T313"
+        ],
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "I_rich_2": 1,
+          "I_rich_1": -1,
+          "q_rich_L2_2": -1
+        },
+        "sense": "==",
+        "rhs": -3,
+        "citations": [
+          "T059",
+          "T060",
+          "T062",
+          "T064",
+          "T065",
+          "T066",
+          "T070",
+          "T071",
+          "T073",
+          "T270",
+          "T313"
+        ],
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "R_0_0": 1,
+          "q_buy_cream_0": -1,
+          "u_0_0": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T077",
+          "T087",
+          "T093",
+          "T096"
+        ],
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "u_0_1": 1,
+          "R_0_0": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T097",
+          "T098"
+        ],
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "R_1_1": 1,
+          "q_buy_cream_1": -1,
+          "u_1_1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T077",
+          "T087",
+          "T093",
+          "T101"
+        ],
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "u_1_2": 1,
+          "R_1_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T102",
+          "T103"
+        ],
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "R_2_2": 1,
+          "q_buy_cream_2": -1,
+          "u_2_2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T077",
+          "T087",
+          "T093",
+          "T106",
+          "T107"
+        ],
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "u_0_0": 1,
+          "q_whole_L1_0": -0.2,
+          "q_lowfat_L1_0": -0.05,
+          "q_whole_L2_0": -0.2,
+          "q_rich_L2_0": -0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T115",
+          "T117",
+          "T119",
+          "T120",
+          "T121",
+          "T122",
+          "T123",
+          "T303",
+          "T306",
+          "T309",
+          "T312"
+        ],
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "u_0_1": 1,
+          "u_1_1": 1,
+          "q_whole_L1_1": -0.2,
+          "q_lowfat_L1_1": -0.05,
+          "q_whole_L2_1": -0.2,
+          "q_rich_L2_1": -0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T115",
+          "T117",
+          "T119",
+          "T120",
+          "T121",
+          "T122",
+          "T123",
+          "T303",
+          "T306",
+          "T309",
+          "T312"
+        ],
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "u_1_2": 1,
+          "u_2_2": 1,
+          "q_whole_L1_2": -0.2,
+          "q_lowfat_L1_2": -0.05,
+          "q_whole_L2_2": -0.2,
+          "q_rich_L2_2": -0.3
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T115",
+          "T117",
+          "T119",
+          "T120",
+          "T121",
+          "T122",
+          "T123",
+          "T303",
+          "T306",
+          "T309",
+          "T312"
+        ],
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "I_cream_0": 1,
+          "R_0_0": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T126",
+          "T128"
+        ],
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "I_cream_1": 1,
+          "R_1_1": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T126",
+          "T129"
+        ],
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "I_cream_2": 1,
+          "R_2_2": -1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T126",
+          "T130"
+        ],
+        "name": "C068"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 乳品三日采购、固定配方生产与奶油批次计划需求\n\n## 1. 任务范围\n\n使用 Python 调用 COPT，建立混合整数规划模型，为唯一节点 `Dairy` 制定日0、日1、日2的采购、生产及库存计划，最小化总费用。\n\n计划涉及两种原料 `skim`（脱脂乳）、`cream`（奶油），以及三种成品 `whole`、`lowfat`、`rich`。两条灌装线为 `L1`、`L2`。\n\n需要联动决定：\n\n- 每个模式每天是否启用及执行多少次；\n- 各物料每天的日末库存；\n- 各采购日奶油批次在允许日期的实际耗用量及日末余量。\n\n数量使用标准原料单位或成品标准件；生产模式每执行一次产出一件对应成品。工时使用题设工时单位，费用使用统一货币单位。奶油的两日有效期为本题的合成管理政策，不代表实际食品安全建议。\n\n全部输入文件及字段定义集中列于文档最后。运行时从这些 CSV 读取数据，不依赖其他输入数据。\n\n## 2. 模式执行与灌装线\n\n### 2.1 采购和固定配方\n\n全部模式在 `Dairy` 执行。模式包括：\n\n- `buy_skim`、`buy_cream`：分别采购脱脂乳和奶油；\n- `whole_L1`、`lowfat_L1`：分别在 L1 生产 whole 和 lowfat；\n- `whole_L2`、`rich_L2`：分别在 L2 生产 whole 和 rich。\n\n只能使用输入文件规定的模式及固定消耗、产出系数。未列出的模式—物料系数为零，不能替换原料、改变配方或增加生产模式。相同产品在不同兼容线上的产出可合并交付或入库。\n\n令 \\(q_{m,t}\\) 表示模式 \\(m\\) 在日 \\(t\\) 的执行量，\\(o_{m,t}\\) 表示其二元启用状态。采购模式执行量为非负连续数，生产模式执行量为非负整数；执行量类型见 `modes.csv` 的 `quantity_type`。\n\n启用规则为：\n\n$$\nq_m^{\\min}o_{m,t}\\le q_{m,t}\\le q_{m,t}^{\\max}o_{m,t}.\n$$\n\n其中 \\(q_m^{\\min}\\) 对应 `modes.csv.min_quantity`，\\(q_{m,t}^{\\max}\\) 对应 `mode_days.csv.max_quantity`。不启用时执行量必须为零；启用时执行量须达到最小值并不超过当日上限。没有任何模式必须启用。\n\n### 2.2 工时使用\n\n每条线每天的工时使用量为所有模式的“每次执行工时×执行量＋每日启用准备工时×启用状态”之和，不得超过该线当天可用工时。\n\n执行工时和准备工时来自 `mode_resources.csv`，每日可用工时来自 `resource_days.csv`。不同模式分别计入准备工时，即使使用同一条线，也不得合并准备工时。两条线的工时不可互换。采购模式不占用灌装线工时。\n\n## 3. 每日物料流与库存\n\n### 3.1 交付与库存口径\n\n所有物料首日前库存均为零，期初没有奶油采购批次。每天外生入库均为零，原料只能由采购模式取得。\n\n需求必须在指定当天全额交付，不得欠交，也不得提前交付未来需求；可以提前生产成品并保存在库存中。当天采购的原料可当天用于生产，当天生产的成品可当天交付，日内可按采购、固定配方生产及灌装、当天交付的顺序执行。\n\n所有日末库存非负，且不超过输入的日末库存上限。日2末还须满足各物料的期末库存下限。脱脂乳和三种成品不设置有效期或批龄限制。\n\n没有运输弧、物料转换循环、额外质量加权上下界约束，也没有报废、退货或其他未列明的物料流入流出。\n\n### 3.2 库存平衡\n\n令 \\(I_{i,t}\\) 为物料 \\(i\\) 在日 \\(t\\) 的日末库存。对所有物料和计划日：\n\n$$\nI_{i,t}\n=\nI_{i,t-1}\n+s_{i,t}\n+\\sum_m a^{\\mathrm{produce}}_{m,i}q_{m,t}\n-\\sum_m a^{\\mathrm{consume}}_{m,i}q_{m,t}\n-d_{i,t}.\n$$\n\n符号与输入对应如下：\n\n- \\(I_{i,-1}\\)：`materials.csv.initial`；\n- \\(s_{i,t}\\)、\\(d_{i,t}\\)：`material_days.csv.supply`、`demand`；\n- \\(a^{\\mathrm{produce}}_{m,i}\\)、\\(a^{\\mathrm{consume}}_{m,i}\\)：`mode_materials.csv.produce`、`consume`；\n- 日末库存上限、日2末库存下限：`materials.csv.storage`、`final_min`。\n\n采购也属于模式产出，须在以上平衡中计入。奶油除满足总库存平衡外，还必须满足下一节的全部批次规则。\n\n## 4. 奶油采购日批次与两日有效期\n\n### 4.1 批次形成与有效日期\n\n令 \\(P_b=q_{\\mathrm{buy\\_cream},b}\\)，表示采购日 \\(b\\) 的奶油采购量，\\(b=0,1,2\\)。同一天全部采购形成一个批次，不得拆成多个采购批次。不同采购日的奶油必须独立追踪，不能更改批次日期或把旧批次余量改记为新采购。\n\n有效日期及到期规则为：\n\n- 日0批次只能在日0、日1耗用，日1结束必须耗尽，日2不得使用或持有；\n- 日1批次只能在日1、日2耗用，日2结束必须耗尽；\n- 日2批次可在日2及期外日3耗用。本计划不设置日3的采购、生产或交付决策，日2末可保留该批次有效余料，不强制清零。\n\n日2末有效余料正常计入奶油库存并计持有费，无残值。\n\n### 4.2 连续耗用与批次余量\n\n令 \\(u_{b,t}\\) 为采购日 \\(b\\) 的奶油在日 \\(t\\) 实际投入生产的数量，为非负连续数。仅允许以下耗用组合：\n\n$$\n(b,t)\\in\\{(0,0),(0,1),(1,1),(1,2),(2,2)\\}.\n$$\n\n其他日期组合耗用量一律为零。令 \\(R_{b,t}\\) 为该批次日末剩余量。采购日前的余量为零，批次关系必须满足：\n\n$$\nR_{0,0}=P_0-u_{0,0}\\ge0,\\qquad\nu_{0,1}=R_{0,0},\\qquad\nR_{0,1}=R_{0,2}=0.\n$$\n\n$$\nR_{1,1}=P_1-u_{1,1}\\ge0,\\qquad\nu_{1,2}=R_{1,1},\\qquad\nR_{1,0}=R_{1,2}=0.\n$$\n\n$$\nR_{2,2}=P_2-u_{2,2}\\ge0,\\qquad\nR_{2,0}=R_{2,1}=0.\n$$\n\n每批采购量、任一日耗用量和任一日剩余量均不超过20标准原料单位。若某批采购量为零，其所有耗用量和余量均为零。不得耗用尚未采购、已经用完或已经到期的奶油。\n\n同一天可以同时耗用两个仍有效的批次，不要求先进先出。批次耗用量可以连续分配，不要求某一件成品的奶油全部来自同一批次。\n\n### 4.3 与配方和总库存衔接\n\n每天各批次耗用量之和必须严格等于固定配方所需奶油量：\n\n$$\n\\sum_{b:(b,t)\\text{允许耗用}}u_{b,t}\n=\n0.2q_{\\mathrm{whole\\_L1},t}\n+0.05q_{\\mathrm{lowfat\\_L1},t}\n+0.2q_{\\mathrm{whole\\_L2},t}\n+0.3q_{\\mathrm{rich\\_L2},t},\n\\quad t=0,1,2.\n$$\n\n上述系数对应 `mode_materials.csv` 中各生产模式对 `Dairy|cream` 的 `consume`。\n\n批次日末余量合计必须等于奶油日末库存：\n\n$$\nI_{\\mathrm{cream},0}=R_{0,0},\\qquad\nI_{\\mathrm{cream},1}=R_{1,1},\\qquad\nI_{\\mathrm{cream},2}=R_{2,2}.\n$$\n\n批次耗用只是对配方奶油消耗来源的划分，不是额外消耗，不能在总库存平衡中重复扣除。奶油投入成品后不再按奶油批次追踪。\n\n不得设置到期报废、退货、额外采购单耗或批次专属费用。不能在到期前全部投入生产的采购计划不可行。\n\n## 5. 优化目标与费用口径\n\n仅最小化总费用，没有其他目标或隐含优先级：\n\n$$\n\\min\\left[\n\\sum_{t=0}^{2}\\sum_m\n\\left(c_{m,t}q_{m,t}+f_m o_{m,t}\\right)\n+\n\\sum_{t=0}^{2}\\sum_i h_i I_{i,t}\n\\right].\n$$\n\n其中：\n\n- \\(c_{m,t}\\) 为 `mode_days.csv.unit_cost`，分别代表单位采购费用或生产执行费用；\n- \\(f_m\\) 为 `modes.csv.open_cost`，每个模式每天独立计费，不因共用灌装线而合并；\n- \\(h_i\\) 为 `materials.csv.holding`，本题所有物料均为0.08。\n\n每个计划日的全部物料日末库存均计持有费，包括日2末库存。奶油批次余量仅通过合计奶油库存计一次持有费，不另计费用。期末原料和成品均无残值。\n\n## 6. 结果输出\n\n报告以下内容：\n\n1. 六个采购及生产模式在日0、日1、日2的 `quantity` 和 `open`。\n2. 全部五个 `Dairy|item` 的三天日末库存。\n3. 三个奶油采购日批次的采购量、各允许日期耗用量及三天日末余量；同时将不允许日期的耗用量，以及采购前和到期后的余量明确报告为零。\n4. L1、L2每天的总工时使用量，包含执行工时与逐模式准备工时。\n5. 分别报告采购费用、生产执行费用、启用费用、库存持有费用及总费用。采购和生产的划分按 `modes.csv.mode_kind`。\n6. COPT求解状态；若证明最优，报告最优目标值。仅在存在可用解时报告对应计划，不将未证明最优的解宣称为最优。\n7. 运输计划输出为空集合。\n\n## 7. 输入 CSV 结构\n\n全部文件采用 UTF-8 编码，读取路径相对于程序当前工作目录。所有字段均无空值。各表主键唯一，不存在重复记录。日编号均为整数0、1、2。\n\n`node_item` 使用 `node|item` 格式。所有模式、物料都属于唯一节点 `Dairy`。除 `mode_materials.csv` 未列出的系数表示零外，其他表按下述范围完整提供记录。\n\n### ./data/materials.csv\n\n每行代表一个节点—物料及其库存参数，共5行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| node_item | 节点—物料唯一键 | string | 格式为 node\\|item |\n| node | 节点标识 | string | Dairy |\n| item | 物料标识 | string | skim、cream、whole、lowfat、rich |\n| initial | 首日前库存 | number | 原料为标准原料单位，成品为标准件 |\n| storage | 每天日末库存上限 | number | 原料为标准原料单位，成品为标准件 |\n| holding | 每单位日末库存持有费 | number | 统一货币单位/数量单位/日 |\n| final_min | 日2末库存下限 | number | 原料为标准原料单位，成品为标准件 |\n\n主键为 `node_item`。\n\n### ./data/material_days.csv\n\n每行代表一个节点—物料在一个计划日的外生入库和需求，共15行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| node_item | 节点—物料键 | string | 关联 materials.csv.node_item |\n| day | 计划日 | integer | 0、1、2 |\n| supply | 当天外生入库量 | number | 原料为标准原料单位，成品为标准件 |\n| demand | 必须当天交付的需求量 | number | 原料为标准原料单位，成品为标准件 |\n\n主键为 `(node_item, day)`，每种物料覆盖全部三天。\n\n### ./data/modes.csv\n\n每行代表一个采购或生产模式的固定参数，共6行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| mode | 模式唯一标识 | string | 不适用 |\n| node | 执行节点 | string | Dairy |\n| mode_kind | 模式业务类别 | string | purchase 为采购，production 为生产 |\n| quantity_type | 执行量数值类型 | string | continuous 为非负连续，integer 为非负整数 |\n| min_quantity | 每日启用时最小执行量 | number | 模式执行次数；采购一次取得一标准原料单位 |\n| open_cost | 每日启用费 | number | 统一货币单位/启用日 |\n\n主键为 `mode`；`node` 与物料表中的节点一致。\n\n### ./data/mode_days.csv\n\n每行代表一个模式在一个计划日的执行上限和单位费用，共18行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| mode | 模式标识 | string | 关联 modes.csv.mode |\n| day | 计划日 | integer | 0、1、2 |\n| max_quantity | 当天最大执行量 | number | 模式执行次数 |\n| unit_cost | 每次执行费用 | number | 统一货币单位/模式执行次 |\n\n主键为 `(mode, day)`，每个模式覆盖全部三天。\n\n### ./data/mode_materials.csv\n\n每行代表一个模式对一种物料的固定消耗和产出系数，共14行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| mode | 模式标识 | string | 关联 modes.csv.mode |\n| node_item | 节点—物料键 | string | 关联 materials.csv.node_item |\n| consume | 每次执行消耗量 | number | 对应物料数量单位/模式执行次 |\n| produce | 每次执行产出量 | number | 对应物料数量单位/模式执行次 |\n\n主键为 `(mode, node_item)`。只列出至少一个系数非零的模式—物料组合；未列出组合的两个系数均为零。列出组合中无消耗或无产出的一侧明确填写0。\n\n### ./data/mode_resources.csv\n\n每行代表一个模式对一条灌装线的执行工时和启用准备工时，共12行，包含零工时组合。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| mode | 模式标识 | string | 关联 modes.csv.mode |\n| resource | 灌装线标识 | string | L1、L2 |\n| unit_time | 每次执行占用工时 | number | 题设工时单位/模式执行次 |\n| setup_time | 每日启用额外占用工时 | number | 题设工时单位/启用日 |\n\n主键为 `(mode, resource)`。每个模式均有L1、L2两条记录。`resource` 与 `resource_days.csv.resource` 关联。\n\n### ./data/resource_days.csv\n\n每行代表一条灌装线在一个计划日的可用工时，共6行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| resource | 灌装线标识 | string | L1、L2 |\n| day | 计划日 | integer | 0、1、2 |\n| capacity | 当天工时上限 | number | 题设工时单位 |\n\n主键为 `(resource, day)`，两条线均覆盖全部三天。奶油批次的允许耗用日期及到期关系采用正文中明确给出的固定规则，无额外批次输入文件。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：material_days.csv\nnode_item,day,supply,demand\r\nDairy|skim,0,0,0\r\nDairy|skim,1,0,0\r\nDairy|skim,2,0,0\r\nDairy|cream,0,0,0\r\nDairy|cream,1,0,0\r\nDairy|cream,2,0,0\r\nDairy|whole,0,0,4\r\nDairy|whole,1,0,5\r\nDairy|whole,2,0,4\r\nDairy|lowfat,0,0,3\r\nDairy|lowfat,1,0,4\r\nDairy|lowfat,2,0,4\r\nDairy|rich,0,0,2\r\nDairy|rich,1,0,3\r\nDairy|rich,2,0,3\r\n\n\n数据文件：materials.csv\nnode_item,node,item,initial,storage,holding,final_min\r\nDairy|skim,Dairy,skim,0,100,0.08,0\r\nDairy|cream,Dairy,cream,0,100,0.08,0\r\nDairy|whole,Dairy,whole,0,100,0.08,0\r\nDairy|lowfat,Dairy,lowfat,0,100,0.08,0\r\nDairy|rich,Dairy,rich,0,100,0.08,0\r\n\n\n数据文件：mode_days.csv\nmode,day,max_quantity,unit_cost\r\nbuy_skim,0,50,0.8\r\nbuy_skim,1,50,0.8\r\nbuy_skim,2,50,0.8\r\nbuy_cream,0,20,1.5\r\nbuy_cream,1,20,1.5\r\nbuy_cream,2,20,1.5\r\nwhole_L1,0,20,1\r\nwhole_L1,1,20,4\r\nwhole_L1,2,20,5\r\nlowfat_L1,0,20,1\r\nlowfat_L1,1,20,4\r\nlowfat_L1,2,20,5\r\nwhole_L2,0,20,1.2\r\nwhole_L2,1,20,4.8\r\nwhole_L2,2,20,6.0\r\nrich_L2,0,20,1.5\r\nrich_L2,1,20,6.0\r\nrich_L2,2,20,7.5\r\n\n\n数据文件：mode_materials.csv\nmode,node_item,consume,produce\r\nbuy_skim,Dairy|skim,0,1\r\nbuy_cream,Dairy|cream,0,1\r\nwhole_L1,Dairy|skim,0.8,0\r\nwhole_L1,Dairy|cream,0.2,0\r\nwhole_L1,Dairy|whole,0,1\r\nlowfat_L1,Dairy|skim,0.95,0\r\nlowfat_L1,Dairy|cream,0.05,0\r\nlowfat_L1,Dairy|lowfat,0,1\r\nwhole_L2,Dairy|skim,0.8,0\r\nwhole_L2,Dairy|cream,0.2,0\r\nwhole_L2,Dairy|whole,0,1\r\nrich_L2,Dairy|skim,0.7,0\r\nrich_L2,Dairy|cream,0.3,0\r\nrich_L2,Dairy|rich,0,1\r\n\n\n数据文件：mode_resources.csv\nmode,resource,unit_time,setup_time\r\nbuy_skim,L1,0,0\r\nbuy_skim,L2,0,0\r\nbuy_cream,L1,0,0\r\nbuy_cream,L2,0,0\r\nwhole_L1,L1,0.7,0.5\r\nwhole_L1,L2,0,0\r\nlowfat_L1,L1,0.6,0.5\r\nlowfat_L1,L2,0,0\r\nwhole_L2,L1,0,0\r\nwhole_L2,L2,0.6,0.5\r\nrich_L2,L1,0,0\r\nrich_L2,L2,0.8,0.5\r\n\n\n数据文件：modes.csv\nmode,node,mode_kind,quantity_type,min_quantity,open_cost\r\nbuy_skim,Dairy,purchase,continuous,0.1,0\r\nbuy_cream,Dairy,purchase,continuous,0.1,0\r\nwhole_L1,Dairy,production,integer,1,2\r\nlowfat_L1,Dairy,production,integer,1,2\r\nwhole_L2,Dairy,production,integer,1,2\r\nrich_L2,Dairy,production,integer,1,2\r\n\n\n数据文件：resource_days.csv\nresource,day,capacity\r\nL1,0,6\r\nL1,1,5\r\nL1,2,6\r\nL2,0,5\r\nL2,1,5\r\nL2,2,5",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-ee1e470c82c56897",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

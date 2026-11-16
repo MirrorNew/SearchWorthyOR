@@ -1,0 +1,51 @@
+{
+  "batch": "main20_v1",
+  "condition": "C3-style",
+  "metric": "delivered optimal objective match, not full-model or independently verified business feasibility",
+  "absolute_tolerance": 1e-05,
+  "n_per_method": 20,
+  "recorded_monetary_cost": null,
+  "complete": true,
+  "methods": {
+    "standard-online": {
+      "matches": 17,
+      "denominator": 20,
+      "match_percent": 85.0,
+      "completed": 20,
+      "normal_finish": 17,
+      "stop_reasons": {
+        "FINISHED": 17,
+        "ValueError": 2,
+        "HandoffFailure": 1
+      },
+      "model_calls": 55,
+      "search_calls": 0,
+      "read_calls": 0,
+      "known_total_tokens": 1405062,
+      "runs_with_complete_token_usage": 18,
+      "observed_models": [
+        "deepseek-flash"
+      ]
+    },
+    "swagent-online": {
+      "matches": 18,
+      "denominator": 20,
+      "match_percent": 90.0,
+      "completed": 20,
+      "normal_finish": 18,
+      "stop_reasons": {
+        "FINISHED": 18,
+        "ValueError": 1,
+        "HandoffFailure": 1
+      },
+      "model_calls": 40,
+      "search_calls": 0,
+      "read_calls": 0,
+      "known_total_tokens": 1644152,
+      "runs_with_complete_token_usage": 17,
+      "observed_models": [
+        "deepseek-flash"
+      ]
+    }
+  }
+}

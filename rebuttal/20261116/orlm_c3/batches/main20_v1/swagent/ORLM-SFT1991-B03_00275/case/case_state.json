@@ -1,0 +1,1282 @@
+{
+  "model": {
+    "variables": [
+      {
+        "id": "area_pine",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 200
+      },
+      {
+        "id": "area_banana",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 200
+      },
+      {
+        "id": "plant_pine",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "plant_banana",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "q_pine_buyA_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_pine_buyA_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_pine_buyA_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_pine_buyA_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_banana_buyA_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_banana_buyA_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_banana_buyA_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_banana_buyA_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 340
+      },
+      {
+        "id": "q_pine_buyB_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_pine_buyB_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_pine_buyB_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_pine_buyB_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_banana_buyB_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_banana_buyB_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_banana_buyB_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "q_banana_buyB_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 260
+      },
+      {
+        "id": "select_buyA_m1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyA_m2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyA_m3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyA_m4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyB_m1",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyB_m2",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyB_m3",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "select_buyB_m4",
+        "type": "BINARY",
+        "lb": 0,
+        "ub": 1
+      },
+      {
+        "id": "inv_pine_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_pine_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_pine_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_pine_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 120
+      },
+      {
+        "id": "inv_banana_m1",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_banana_m2",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_banana_m3",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      },
+      {
+        "id": "inv_banana_m4",
+        "type": "CONTINUOUS",
+        "lb": 0,
+        "ub": 100
+      }
+    ],
+    "objective": {
+      "direction": "max",
+      "terms": {
+        "area_pine": 200,
+        "area_banana": 150,
+        "plant_pine": -500,
+        "plant_banana": -500
+      },
+      "unit": "objective_units",
+      "citations": [
+        "T028",
+        "T029",
+        "T030",
+        "T033",
+        "output_schema"
+      ]
+    },
+    "constraints": [
+      {
+        "terms": {
+          "area_pine": 1,
+          "area_banana": 1
+        },
+        "sense": "<=",
+        "rhs": 200,
+        "citations": [
+          "T020"
+        ],
+        "name": "C001"
+      },
+      {
+        "terms": {
+          "area_pine": 1
+        },
+        "sense": ">=",
+        "rhs": 40,
+        "citations": [
+          "T021"
+        ],
+        "name": "C002"
+      },
+      {
+        "terms": {
+          "area_banana": 1
+        },
+        "sense": ">=",
+        "rhs": 60,
+        "citations": [
+          "T021"
+        ],
+        "name": "C003"
+      },
+      {
+        "terms": {
+          "area_banana": 1,
+          "area_pine": -4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T022"
+        ],
+        "name": "C004"
+      },
+      {
+        "terms": {
+          "area_pine": 1,
+          "plant_pine": -200
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T024",
+          "T025",
+          "T146"
+        ],
+        "name": "C005"
+      },
+      {
+        "terms": {
+          "area_banana": 1,
+          "plant_banana": -200
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T024",
+          "T025",
+          "T146"
+        ],
+        "name": "C006"
+      },
+      {
+        "terms": {
+          "inv_pine_m1": 1,
+          "area_pine": -1.5,
+          "q_pine_buyA_m1": 1,
+          "q_pine_buyB_m1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C007"
+      },
+      {
+        "terms": {
+          "inv_pine_m2": 1,
+          "inv_pine_m1": -1,
+          "area_pine": -2.5,
+          "q_pine_buyA_m2": 1,
+          "q_pine_buyB_m2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C008"
+      },
+      {
+        "terms": {
+          "inv_pine_m3": 1,
+          "inv_pine_m2": -1,
+          "area_pine": -3.5,
+          "q_pine_buyA_m3": 1,
+          "q_pine_buyB_m3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C009"
+      },
+      {
+        "terms": {
+          "inv_pine_m4": 1,
+          "inv_pine_m3": -1,
+          "area_pine": -2.5,
+          "q_pine_buyA_m4": 1,
+          "q_pine_buyB_m4": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C010"
+      },
+      {
+        "terms": {
+          "inv_banana_m1": 1,
+          "area_banana": -3,
+          "q_banana_buyA_m1": 1,
+          "q_banana_buyB_m1": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C011"
+      },
+      {
+        "terms": {
+          "inv_banana_m2": 1,
+          "inv_banana_m1": -1,
+          "area_banana": -3,
+          "q_banana_buyA_m2": 1,
+          "q_banana_buyB_m2": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C012"
+      },
+      {
+        "terms": {
+          "inv_banana_m3": 1,
+          "inv_banana_m2": -1,
+          "area_banana": -2.5,
+          "q_banana_buyA_m3": 1,
+          "q_banana_buyB_m3": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C013"
+      },
+      {
+        "terms": {
+          "inv_banana_m4": 1,
+          "inv_banana_m3": -1,
+          "area_banana": -1.5,
+          "q_banana_buyA_m4": 1,
+          "q_banana_buyB_m4": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T039",
+          "T040",
+          "T044",
+          "T047"
+        ],
+        "name": "C014"
+      },
+      {
+        "terms": {
+          "inv_pine_m1": 1
+        },
+        "sense": "<=",
+        "rhs": 120,
+        "citations": [
+          "T054"
+        ],
+        "name": "C015"
+      },
+      {
+        "terms": {
+          "inv_pine_m2": 1
+        },
+        "sense": "<=",
+        "rhs": 120,
+        "citations": [
+          "T054"
+        ],
+        "name": "C016"
+      },
+      {
+        "terms": {
+          "inv_pine_m3": 1
+        },
+        "sense": "<=",
+        "rhs": 120,
+        "citations": [
+          "T054"
+        ],
+        "name": "C017"
+      },
+      {
+        "terms": {
+          "inv_pine_m4": 1
+        },
+        "sense": "<=",
+        "rhs": 120,
+        "citations": [
+          "T054"
+        ],
+        "name": "C018"
+      },
+      {
+        "terms": {
+          "inv_banana_m1": 1
+        },
+        "sense": "<=",
+        "rhs": 100,
+        "citations": [
+          "T054"
+        ],
+        "name": "C019"
+      },
+      {
+        "terms": {
+          "inv_banana_m2": 1
+        },
+        "sense": "<=",
+        "rhs": 100,
+        "citations": [
+          "T054"
+        ],
+        "name": "C020"
+      },
+      {
+        "terms": {
+          "inv_banana_m3": 1
+        },
+        "sense": "<=",
+        "rhs": 100,
+        "citations": [
+          "T054"
+        ],
+        "name": "C021"
+      },
+      {
+        "terms": {
+          "inv_banana_m4": 1
+        },
+        "sense": "<=",
+        "rhs": 100,
+        "citations": [
+          "T054"
+        ],
+        "name": "C022"
+      },
+      {
+        "terms": {
+          "inv_pine_m1": 1,
+          "inv_banana_m1": 1
+        },
+        "sense": "<=",
+        "rhs": 160,
+        "citations": [
+          "T054"
+        ],
+        "name": "C023"
+      },
+      {
+        "terms": {
+          "inv_pine_m2": 1,
+          "inv_banana_m2": 1
+        },
+        "sense": "<=",
+        "rhs": 160,
+        "citations": [
+          "T054"
+        ],
+        "name": "C024"
+      },
+      {
+        "terms": {
+          "inv_pine_m3": 1,
+          "inv_banana_m3": 1
+        },
+        "sense": "<=",
+        "rhs": 160,
+        "citations": [
+          "T054"
+        ],
+        "name": "C025"
+      },
+      {
+        "terms": {
+          "inv_pine_m4": 1,
+          "inv_banana_m4": 1
+        },
+        "sense": "<=",
+        "rhs": 160,
+        "citations": [
+          "T054"
+        ],
+        "name": "C026"
+      },
+      {
+        "terms": {
+          "inv_pine_m2": 1,
+          "inv_banana_m2": 1
+        },
+        "sense": ">=",
+        "rhs": 40,
+        "citations": [
+          "T057"
+        ],
+        "name": "C027"
+      },
+      {
+        "terms": {
+          "inv_pine_m2": 1,
+          "inv_banana_m2": 1
+        },
+        "sense": "<=",
+        "rhs": 120,
+        "citations": [
+          "T057"
+        ],
+        "name": "C028"
+      },
+      {
+        "terms": {
+          "inv_banana_m2": 1
+        },
+        "sense": ">=",
+        "rhs": 25,
+        "citations": [
+          "T058"
+        ],
+        "name": "C029"
+      },
+      {
+        "terms": {
+          "inv_pine_m4": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061"
+        ],
+        "name": "C030"
+      },
+      {
+        "terms": {
+          "inv_banana_m4": 1
+        },
+        "sense": "==",
+        "rhs": 0,
+        "citations": [
+          "T061"
+        ],
+        "name": "C031"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m1": 1,
+          "q_banana_buyA_m1": 1,
+          "select_buyA_m1": -120
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C032"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m2": 1,
+          "q_banana_buyA_m2": 1,
+          "select_buyA_m2": -120
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C033"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m3": 1,
+          "q_banana_buyA_m3": 1,
+          "select_buyA_m3": -120
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C034"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m4": 1,
+          "q_banana_buyA_m4": 1,
+          "select_buyA_m4": -120
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C035"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m1": 1,
+          "q_banana_buyA_m1": 1,
+          "select_buyA_m1": -340
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C036"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m2": 1,
+          "q_banana_buyA_m2": 1,
+          "select_buyA_m2": -340
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C037"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m3": 1,
+          "q_banana_buyA_m3": 1,
+          "select_buyA_m3": -340
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C038"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m4": 1,
+          "q_banana_buyA_m4": 1,
+          "select_buyA_m4": -340
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T066"
+        ],
+        "name": "C039"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m1": 1,
+          "q_banana_buyB_m1": 1,
+          "select_buyB_m1": -100
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C040"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m2": 1,
+          "q_banana_buyB_m2": 1,
+          "select_buyB_m2": -100
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C041"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m3": 1,
+          "q_banana_buyB_m3": 1,
+          "select_buyB_m3": -100
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C042"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m4": 1,
+          "q_banana_buyB_m4": 1,
+          "select_buyB_m4": -100
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C043"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m1": 1,
+          "q_banana_buyB_m1": 1,
+          "select_buyB_m1": -260
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C044"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m2": 1,
+          "q_banana_buyB_m2": 1,
+          "select_buyB_m2": -260
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C045"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m3": 1,
+          "q_banana_buyB_m3": 1,
+          "select_buyB_m3": -260
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C046"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m4": 1,
+          "q_banana_buyB_m4": 1,
+          "select_buyB_m4": -260
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T065",
+          "T067"
+        ],
+        "name": "C047"
+      },
+      {
+        "terms": {
+          "select_buyA_m1": 1,
+          "select_buyA_m2": 1,
+          "select_buyA_m3": 1,
+          "select_buyA_m4": 1
+        },
+        "sense": ">=",
+        "rhs": 3,
+        "citations": [
+          "T068"
+        ],
+        "name": "C048"
+      },
+      {
+        "terms": {
+          "select_buyB_m1": 1,
+          "select_buyB_m2": 1,
+          "select_buyB_m3": 1,
+          "select_buyB_m4": 1
+        },
+        "sense": ">=",
+        "rhs": 3,
+        "citations": [
+          "T068"
+        ],
+        "name": "C049"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m1": 1,
+          "q_banana_buyA_m1": 1,
+          "q_pine_buyA_m2": 1,
+          "q_banana_buyA_m2": 1,
+          "q_pine_buyA_m3": 1,
+          "q_banana_buyA_m3": 1,
+          "q_pine_buyA_m4": 1,
+          "q_banana_buyA_m4": 1
+        },
+        "sense": ">=",
+        "rhs": 800,
+        "citations": [
+          "T069"
+        ],
+        "name": "C050"
+      },
+      {
+        "terms": {
+          "q_pine_buyA_m1": 1,
+          "q_banana_buyA_m1": 1,
+          "q_pine_buyA_m2": 1,
+          "q_banana_buyA_m2": 1,
+          "q_pine_buyA_m3": 1,
+          "q_banana_buyA_m3": 1,
+          "q_pine_buyA_m4": 1,
+          "q_banana_buyA_m4": 1
+        },
+        "sense": "<=",
+        "rhs": 1200,
+        "citations": [
+          "T069"
+        ],
+        "name": "C051"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m1": 1,
+          "q_banana_buyB_m1": 1,
+          "q_pine_buyB_m2": 1,
+          "q_banana_buyB_m2": 1,
+          "q_pine_buyB_m3": 1,
+          "q_banana_buyB_m3": 1,
+          "q_pine_buyB_m4": 1,
+          "q_banana_buyB_m4": 1
+        },
+        "sense": ">=",
+        "rhs": 600,
+        "citations": [
+          "T070"
+        ],
+        "name": "C052"
+      },
+      {
+        "terms": {
+          "q_pine_buyB_m1": 1,
+          "q_banana_buyB_m1": 1,
+          "q_pine_buyB_m2": 1,
+          "q_banana_buyB_m2": 1,
+          "q_pine_buyB_m3": 1,
+          "q_banana_buyB_m3": 1,
+          "q_pine_buyB_m4": 1,
+          "q_banana_buyB_m4": 1
+        },
+        "sense": "<=",
+        "rhs": 900,
+        "citations": [
+          "T070"
+        ],
+        "name": "C053"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m1": 0.8,
+          "q_pine_buyA_m1": -0.2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C054"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m2": 0.8,
+          "q_pine_buyA_m2": -0.2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C055"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m3": 0.8,
+          "q_pine_buyA_m3": -0.2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C056"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m4": 0.8,
+          "q_pine_buyA_m4": -0.2
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C057"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m1": 0.6,
+          "q_pine_buyA_m1": -0.4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C058"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m2": 0.6,
+          "q_pine_buyA_m2": -0.4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C059"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m3": 0.6,
+          "q_pine_buyA_m3": -0.4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C060"
+      },
+      {
+        "terms": {
+          "q_banana_buyA_m4": 0.6,
+          "q_pine_buyA_m4": -0.4
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T074",
+          "T078"
+        ],
+        "name": "C061"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m1": 0.7,
+          "q_pine_buyB_m1": -0.3
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C062"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m2": 0.7,
+          "q_pine_buyB_m2": -0.3
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C063"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m3": 0.7,
+          "q_pine_buyB_m3": -0.3
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C064"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m4": 0.7,
+          "q_pine_buyB_m4": -0.3
+        },
+        "sense": ">=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C065"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m1": 0.45,
+          "q_pine_buyB_m1": -0.55
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C066"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m2": 0.45,
+          "q_pine_buyB_m2": -0.55
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C067"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m3": 0.45,
+          "q_pine_buyB_m3": -0.55
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C068"
+      },
+      {
+        "terms": {
+          "q_banana_buyB_m4": 0.45,
+          "q_pine_buyB_m4": -0.55
+        },
+        "sense": "<=",
+        "rhs": 0,
+        "citations": [
+          "T075",
+          "T078"
+        ],
+        "name": "C069"
+      },
+      {
+        "terms": {
+          "area_pine": 2,
+          "area_banana": 5,
+          "q_pine_buyA_m1": 0.4,
+          "q_banana_buyA_m1": 0.6,
+          "q_pine_buyB_m1": 0.4,
+          "q_banana_buyB_m1": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800,
+        "citations": [
+          "T082",
+          "T084",
+          "T085",
+          "T088",
+          "T089",
+          "T092"
+        ],
+        "name": "C070"
+      },
+      {
+        "terms": {
+          "area_pine": 2,
+          "area_banana": 5,
+          "q_pine_buyA_m2": 0.4,
+          "q_banana_buyA_m2": 0.6,
+          "q_pine_buyB_m2": 0.4,
+          "q_banana_buyB_m2": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800,
+        "citations": [
+          "T082",
+          "T084",
+          "T085",
+          "T088",
+          "T089",
+          "T092"
+        ],
+        "name": "C071"
+      },
+      {
+        "terms": {
+          "area_pine": 2,
+          "area_banana": 5,
+          "q_pine_buyA_m3": 0.4,
+          "q_banana_buyA_m3": 0.6,
+          "q_pine_buyB_m3": 0.4,
+          "q_banana_buyB_m3": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800,
+        "citations": [
+          "T082",
+          "T084",
+          "T085",
+          "T088",
+          "T089",
+          "T092"
+        ],
+        "name": "C072"
+      },
+      {
+        "terms": {
+          "area_pine": 2,
+          "area_banana": 5,
+          "q_pine_buyA_m4": 0.4,
+          "q_banana_buyA_m4": 0.6,
+          "q_pine_buyB_m4": 0.4,
+          "q_banana_buyB_m4": 0.6
+        },
+        "sense": "<=",
+        "rhs": 800,
+        "citations": [
+          "T082",
+          "T084",
+          "T085",
+          "T088",
+          "T089",
+          "T092"
+        ],
+        "name": "C073"
+      }
+    ]
+  },
+  "table": [],
+  "revision": 0,
+  "documents": [
+    {
+      "id": "task",
+      "url": "public:task",
+      "text": "请解决以下运筹优化问题。\n\n<需求文档>\n# 四个月果园种植、库存与配送联合规划需求\n\n## 1. 任务与求解要求\n\n使用 Python 调用 COPT，建立并求解混合整数规划，制定一个四个月经营季的统一种植、库存和配送方案，最大化经营季总利润。\n\n规划对象包括菠萝、香蕉和采购商 A、B。水果编号 `P` 代表菠萝，水果编号 `B` 代表香蕉；采购商编号 `B` 代表采购商 B，与香蕉不是同一对象，程序中必须区分水果索引和采购商索引。\n\n需要共同决定：\n\n- 季初两种水果的种植面积及是否启用种植。\n- 每个月是否向每家采购商安排一次联合配送。\n- 每个月配送给每家采购商的各品种数量。\n- 每个月配送完成后的各品种库存。\n\n种植启用和月度配送选择只能取 0 或 1。种植面积、配送数量和库存数量允许为非负实数，不要求取整。\n\n所有输入从文末约定的 CSV 读取。不得改变数据规模、放宽业务条件或增加优化目标。\n\n## 2. 季初种植与经营季收益\n\n农民共有 200 英亩土地，两种水果共用这块土地。两种水果的面积合计不得超过土地容量。\n\n- 菠萝至少种植 40 英亩，香蕉至少种植 60 英亩。\n- 香蕉种植面积不得超过菠萝种植面积的 4 倍。\n- 面积在整个四个月内保持不变，不允许在季内重复利用同一块土地种植其他批次。\n- 未启用某种水果时，其种植面积必须为零；启用时，其面积仍受总土地容量和其他种植条件限制。\n- 最低面积要求无条件生效，因此本题最终必须启用两种水果，不能通过关闭种植来规避最低面积要求。\n\n经营季总利润按以下业务口径计算：\n\n- 菠萝种植面积乘以其每英亩经营季利润 200 美元。\n- 香蕉种植面积乘以其每英亩经营季利润 150 美元。\n- 每启用一种水果，扣除一次 500 美元种植固定成本。\n\n每英亩利润适用于按全部业务要求完成收获配送的面积，不是每箱价格，也不是每月利润。固定成本只在经营季收取一次。\n\n唯一目标为最大化上述经营季总利润。不得另加销售收入、仓储现金费用、配送现金费用或采购商选择费用；不得按配送量重复计算收入，也不得把每英亩经营季利润重复计入四个月。没有次级目标。\n\n## 3. 月度收获与数量口径\n\n经营季包括第 1、2、3、4 月。每种水果每英亩经营季总收获量均为 10 标准箱当量，月度收获比例从 `./data/harvest.csv` 读取。\n\n每种水果当月收获量等于：该水果种植面积乘以每英亩经营季收获量，再乘以该水果当月收获比例。收获量完全由种植面积确定，不是独立生产决策，不能把经营季总收获量重复计入每个月。\n\n所有收获、配送和库存数量均使用标准箱当量。每个标准箱当量具有相同仓储占用体积，两种水果之间无需另加体积换算系数，数量允许为非负实数。\n\n当月收获在当月配送前入库，可直接用于当月配送。\n\n## 4. 库存衔接、容量与安全储备\n\n两种水果经营季初库存均为零。\n\n逐月、逐品种核算库存：当月期末库存等于上月期末库存，加上本月收获，再减去本月配送给两家采购商的该品种数量。第 1 月使用季初库存作为上月库存。\n\n以下要求同时适用：\n\n- 所有库存和配送数量非负。\n- 不允许外购、不允许丢弃收获、不允许配送尚未收获的水果。\n- 不考虑库存损耗。\n- 跨月保存没有额外现金成本。\n- 每月配送完成后，菠萝库存不超过 120 标准箱当量，香蕉库存不超过 100 标准箱当量，两种水果库存合计不超过 160 标准箱当量。\n- 仓储上限针对每月配送后的期末库存，不另设配送前仓储上限。\n\n第二个月末必须无条件建立安全储备：\n\n- 两种水果库存合计至少 40、至多 120 标准箱当量。\n- 其中香蕉库存至少 25 标准箱当量。\n- 这些条件只针对第二个月末，与通常的月末仓储上限同时适用。\n- 储备可在第三个月及以后正常配送，不要求永久保留。\n\n第四个月末两种水果库存均必须为零，即全部收获须在经营季内完成配送。\n\n## 5. 采购商月度配送与经营季配额\n\n两家采购商均可接收两种水果。每家采购商每个月只有一个是否安排联合配送的选择，联合配送总量为该月配送给该采购商的菠萝和香蕉数量之和。\n\n- 若某月未选择该采购商，两种水果配送数量都必须为零。\n- 若选择采购商 A，当月总配送量至少 120、至多 340 标准箱当量。\n- 若选择采购商 B，当月总配送量至少 100、至多 260 标准箱当量。\n- 每家采购商四个月内至少有三个月收到配送。\n- 采购商 A 四个月累计接收量必须在 800 至 1200 标准箱当量之间。\n- 采购商 B 四个月累计接收量必须在 600 至 900 标准箱当量之间。\n\n经营季配额分别对每家采购商无条件生效，统计该采购商四个月接收的两种水果总量，不是每种水果各自的配额。\n\n## 6. 每次配送的品种组合\n\n发生配送的每个“采购商—月份”组合必须满足该采购商的香蕉占比要求：\n\n- 采购商 A：香蕉占当月接收总量的 20% 至 40%。\n- 采购商 B：香蕉占当月接收总量的 30% 至 55%。\n\n计算口径为该采购商当月收到的香蕉数量除以其当月收到的两种水果合计数量。两个品种都使用标准箱当量，不需要额外换算。\n\n业务要求也可理解为：香蕉数量不能低于当月合计数量乘以最低占比，也不能高于合计数量乘以最高占比。未发生配送时，各品种数量均为零，不计算零分母的比例，也不要求报告香蕉占比。\n\n这些配送组合要求不能替代香蕉面积不超过菠萝面积四倍的种植限制。\n\n## 7. 月度共享劳动力\n\n每个月可用劳动力为 800 小时，没有额外雇工，月份间不得借用或结转工时。\n\n田间管理每个月都要发生：\n\n- 每英亩菠萝每月需要 2 小时。\n- 每英亩香蕉每月需要 5 小时。\n\n因此每月田间工时按固定种植面积分别乘以上述系数后合计，田间管理本身也不得超过当月可用劳动力。\n\n实际配送还消耗同一批劳动力：\n\n- 每标准箱当量菠萝需要 0.4 小时分拣、包装和装车。\n- 每标准箱当量香蕉需要 0.6 小时分拣、包装和装车。\n\n每月配送工时按该月向两家采购商配送的各品种合计数量计算。暂存库存不产生配送工时，在实际配送月份只计入一次。\n\n每个月的田间管理工时与配送作业工时之和不得超过 800 小时。不是分别给田间管理和配送各提供 800 小时。\n\n## 8. 结果输出\n\n应输出以下结果，并标明相应单位及水果、采购商、月份：\n\n1. COPT 求解状态；若达到最优，给出最大经营季总利润，单位为美元。\n2. 两种水果的种植面积，单位为英亩，以及各自的种植启用值。\n3. 每个月向每家采购商配送的菠萝数量、香蕉数量、合计数量及配送选择值。\n4. 每个月每种水果的收获量和期末库存。\n5. 每个月的田间管理工时、配送作业工时，以及可用工时减去两类实际工时后的剩余劳动力。\n6. 每家采购商的四个月累计接收量，以及其发生配送月份的香蕉占比；未配送月份注明未配送，不做比例除法。\n7. 第二个月末的两种水果合计库存、香蕉库存及安全储备条件满足情况。\n8. 第四个月末各品种库存及清库条件满足情况。\n\n数量可四舍五入显示，但用于求解和条件核查的连续面积、配送及库存不得预先取整。若不可行，应明确报告不可行，不得通过放宽种植条件、合同配额或资源限制生成替代方案。其他求解终止状态应如实报告，不得把未证最优的结果宣称为最优。\n\n## 9. 输入 CSV 文件约定\n\n所有文件相对当前工作目录读取，使用 UTF-8 编码，首行为表头。以下输入字段均无空值。每个文件的唯一标识不得重复；收获表中的每个水果与月份组合恰好出现一次。月份使用整数 1 至 4。\n\n### ./data/season.csv\n\n每行代表整个四个月经营季的公共资源、种植比例及安全储备参数；本文件只有一行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| month_count | 经营季月份数 | integer | 月 |\n| land_capacity | 可用土地总面积 | number | 英亩 |\n| monthly_labor_capacity | 每月共享劳动力上限 | number | 小时/月 |\n| banana_to_pineapple_area_max | 香蕉面积相对于菠萝面积的最大倍数 | number | 倍 |\n| total_inventory_max | 每月两种水果期末库存合计上限 | number | 标准箱当量 |\n| safety_month | 安全储备要求适用的月末 | integer | 月份编号 |\n| safety_total_min | 安全储备月末两种水果库存合计下限 | number | 标准箱当量 |\n| safety_total_max | 安全储备月末两种水果库存合计上限 | number | 标准箱当量 |\n| safety_banana_min | 安全储备月末香蕉库存下限 | number | 标准箱当量 |\n\n`safety_banana_min` 专门适用于 `fruits.csv` 中编号为 `B` 的香蕉，不能应用于采购商 B。\n\n### ./data/fruits.csv\n\n每行代表一种水果及其种植、收获、工时和库存参数，共两行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| fruit_id | 水果唯一编号 | string | P 为菠萝，B 为香蕉 |\n| fruit_name | 水果名称 | string | 不适用 |\n| min_area | 无条件最低种植面积 | number | 英亩 |\n| season_profit_per_acre | 每英亩经营季利润 | number | 美元/英亩 |\n| planting_fixed_cost | 启用种植时的一次性固定成本 | number | 美元/经营季 |\n| season_yield_per_acre | 每英亩经营季总收获量 | number | 标准箱当量/英亩 |\n| field_hours_per_acre_month | 每英亩每月田间管理工时 | number | 小时/英亩/月 |\n| dispatch_hours_per_box | 每标准箱当量实际配送作业工时 | number | 小时/标准箱当量 |\n| inventory_max | 每月该品种期末库存上限 | number | 标准箱当量 |\n| initial_inventory | 经营季开始时该品种库存 | number | 标准箱当量 |\n| final_inventory | 经营季结束时该品种必须达到的库存 | number | 标准箱当量 |\n\n`fruit_id` 为唯一标识，并由收获表引用。种植启用后的面积上界受 `season.csv` 的土地总容量限制。\n\n### ./data/harvest.csv\n\n每行代表一种水果在一个月份的收获比例，共八行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| fruit_id | 水果编号 | string | 关联 fruits.csv 的 fruit_id |\n| month | 收获月份 | integer | 1、2、3、4 |\n| harvest_share | 当月收获占该水果经营季总收获量的比例 | number | 以小数表示比例 |\n\n`fruit_id` 与 `month` 的组合为唯一标识。每种水果四个月的比例合计为 1。\n\n### ./data/buyers.csv\n\n每行代表一家采购商及其月度配送、经营季配额和香蕉占比参数，共两行。\n\n| 字段名 | 含义 | 类型 | 单位或取值说明 |\n| --- | --- | --- | --- |\n| buyer_id | 采购商唯一编号 | string | A、B |\n| monthly_delivery_min | 被选择配送时的最低月接收总量 | number | 标准箱当量 |\n| monthly_delivery_max | 被选择配送时的最高月接收总量 | number | 标准箱当量 |\n| min_delivery_months | 四个月内至少发生配送的月份数 | integer | 月 |\n| season_receipt_min | 经营季累计接收总量下限 | number | 标准箱当量 |\n| season_receipt_max | 经营季累计接收总量上限 | number | 标准箱当量 |\n| banana_share_min | 发生配送月份的香蕉最低占比 | number | 以小数表示比例 |\n| banana_share_max | 发生配送月份的香蕉最高占比 | number | 以小数表示比例 |\n\n`buyer_id` 为唯一标识。所有接收量均合计两种水果；香蕉占比针对 `fruits.csv` 中编号为 `B` 的水果。\n\n</需求文档>\n\n<运行条件>\n程序在本题工作目录下运行，可按需求文档中的相对路径读取配套数据文件。\n环境已安装 coptpy 和 pandas，可使用 Python 标准库。\n</运行条件>\n\n数据文件：buyers.csv\nbuyer_id,monthly_delivery_min,monthly_delivery_max,min_delivery_months,season_receipt_min,season_receipt_max,banana_share_min,banana_share_max\r\nA,120,340,3,800,1200,0.2,0.4\r\nB,100,260,3,600,900,0.3,0.55\r\n\n\n数据文件：fruits.csv\nfruit_id,fruit_name,min_area,season_profit_per_acre,planting_fixed_cost,season_yield_per_acre,field_hours_per_acre_month,dispatch_hours_per_box,inventory_max,initial_inventory,final_inventory\r\nP,菠萝,40,200,500,10,2,0.4,120,0,0\r\nB,香蕉,60,150,500,10,5,0.6,100,0,0\r\n\n\n数据文件：harvest.csv\nfruit_id,month,harvest_share\r\nP,1,0.15\r\nP,2,0.25\r\nP,3,0.35\r\nP,4,0.25\r\nB,1,0.3\r\nB,2,0.3\r\nB,3,0.25\r\nB,4,0.15\r\n\n\n数据文件：season.csv\nmonth_count,land_capacity,monthly_labor_capacity,banana_to_pineapple_area_max,total_inventory_max,safety_month,safety_total_min,safety_total_max,safety_banana_min\r\n4,200,800,4,160,2,40,120,25",
+      "title": "Public task",
+      "source_kind": "LOCAL",
+      "version": "version-4e946570d40f68d6",
+      "links": []
+    }
+  ],
+  "queries": [],
+  "queued_urls": [],
+  "maintenance_errors": []
+}

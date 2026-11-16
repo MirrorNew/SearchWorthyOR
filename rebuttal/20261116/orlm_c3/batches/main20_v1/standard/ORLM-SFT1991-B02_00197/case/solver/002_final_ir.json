@@ -1,0 +1,529 @@
+{
+  "variables": [
+    {
+      "id": "x_O",
+      "type": "INTEGER",
+      "lb": 5,
+      "ub": 50,
+      "visibility": "public"
+    },
+    {
+      "id": "x_C",
+      "type": "INTEGER",
+      "lb": 5,
+      "ub": 40,
+      "visibility": "public"
+    },
+    {
+      "id": "x_H",
+      "type": "INTEGER",
+      "lb": 5,
+      "ub": 33,
+      "visibility": "public"
+    },
+    {
+      "id": "z_1",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_2",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_3",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_4",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_5",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_6",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_7",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_8",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "z_9",
+      "type": "BINARY",
+      "lb": 0,
+      "ub": 1,
+      "visibility": "public"
+    },
+    {
+      "id": "y_1_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_1_C",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_2_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_2_C",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_3_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    },
+    {
+      "id": "y_3_H",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    },
+    {
+      "id": "y_4_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_4_C",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_5_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_5_C",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_5_H",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_6_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    },
+    {
+      "id": "y_6_H",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    },
+    {
+      "id": "y_7_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_7_C",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 12,
+      "visibility": "public"
+    },
+    {
+      "id": "y_8_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_8_H",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 14,
+      "visibility": "public"
+    },
+    {
+      "id": "y_9_O",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    },
+    {
+      "id": "y_9_H",
+      "type": "INTEGER",
+      "lb": 0,
+      "ub": 16,
+      "visibility": "public"
+    }
+  ],
+  "objective": {
+    "direction": "max",
+    "unit": "objective_units",
+    "constant": 0,
+    "terms": {
+      "x_O": 2500,
+      "x_C": 3500,
+      "x_H": 5000
+    }
+  },
+  "constraints": [
+    {
+      "name": "material_capacity",
+      "terms": {
+        "x_O": 5,
+        "x_C": 6,
+        "x_H": 4
+      },
+      "sense": "<=",
+      "rhs": 300
+    },
+    {
+      "name": "aluminum_capacity",
+      "terms": {
+        "x_O": 3,
+        "x_C": 4,
+        "x_H": 5
+      },
+      "sense": "<=",
+      "rhs": 200
+    },
+    {
+      "name": "max_enabled_hubs",
+      "terms": {
+        "z_1": 1,
+        "z_2": 1,
+        "z_3": 1,
+        "z_4": 1,
+        "z_5": 1,
+        "z_6": 1,
+        "z_7": 1,
+        "z_8": 1,
+        "z_9": 1
+      },
+      "sense": "<=",
+      "rhs": 4
+    },
+    {
+      "name": "balance_O",
+      "terms": {
+        "x_O": 1,
+        "y_1_O": -1,
+        "y_2_O": -1,
+        "y_3_O": -1,
+        "y_4_O": -1,
+        "y_5_O": -1,
+        "y_6_O": -1,
+        "y_7_O": -1,
+        "y_8_O": -1,
+        "y_9_O": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "balance_C",
+      "terms": {
+        "x_C": 1,
+        "y_1_C": -1,
+        "y_2_C": -1,
+        "y_4_C": -1,
+        "y_5_C": -1,
+        "y_7_C": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "balance_H",
+      "terms": {
+        "x_H": 1,
+        "y_3_H": -1,
+        "y_5_H": -1,
+        "y_6_H": -1,
+        "y_8_H": -1,
+        "y_9_H": -1
+      },
+      "sense": "==",
+      "rhs": 0
+    },
+    {
+      "name": "hub1_nonempty",
+      "terms": {
+        "y_1_O": 1,
+        "y_1_C": 1,
+        "z_1": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub1_capacity",
+      "terms": {
+        "y_1_O": 1,
+        "y_1_C": 1,
+        "z_1": -12
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub2_nonempty",
+      "terms": {
+        "y_2_O": 1,
+        "y_2_C": 1,
+        "z_2": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub2_capacity",
+      "terms": {
+        "y_2_O": 1,
+        "y_2_C": 1,
+        "z_2": -14
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub3_nonempty",
+      "terms": {
+        "y_3_O": 1,
+        "y_3_H": 1,
+        "z_3": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub3_capacity",
+      "terms": {
+        "y_3_O": 1,
+        "y_3_H": 1,
+        "z_3": -16
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub4_nonempty",
+      "terms": {
+        "y_4_O": 1,
+        "y_4_C": 1,
+        "z_4": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub4_capacity",
+      "terms": {
+        "y_4_O": 1,
+        "y_4_C": 1,
+        "z_4": -12
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub5_nonempty",
+      "terms": {
+        "y_5_O": 1,
+        "y_5_C": 1,
+        "y_5_H": 1,
+        "z_5": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub5_capacity",
+      "terms": {
+        "y_5_O": 1,
+        "y_5_C": 1,
+        "y_5_H": 1,
+        "z_5": -14
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub6_nonempty",
+      "terms": {
+        "y_6_O": 1,
+        "y_6_H": 1,
+        "z_6": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub6_capacity",
+      "terms": {
+        "y_6_O": 1,
+        "y_6_H": 1,
+        "z_6": -16
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub7_nonempty",
+      "terms": {
+        "y_7_O": 1,
+        "y_7_C": 1,
+        "z_7": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub7_capacity",
+      "terms": {
+        "y_7_O": 1,
+        "y_7_C": 1,
+        "z_7": -12
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub8_nonempty",
+      "terms": {
+        "y_8_O": 1,
+        "y_8_H": 1,
+        "z_8": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub8_capacity",
+      "terms": {
+        "y_8_O": 1,
+        "y_8_H": 1,
+        "z_8": -14
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "hub9_nonempty",
+      "terms": {
+        "y_9_O": 1,
+        "y_9_H": 1,
+        "z_9": -1
+      },
+      "sense": ">=",
+      "rhs": 0
+    },
+    {
+      "name": "hub9_capacity",
+      "terms": {
+        "y_9_O": 1,
+        "y_9_H": 1,
+        "z_9": -16
+      },
+      "sense": "<=",
+      "rhs": 0
+    },
+    {
+      "name": "shared_inspection_hours",
+      "terms": {
+        "z_1": 6,
+        "z_2": 7,
+        "z_3": 8,
+        "z_4": 6,
+        "z_5": 10,
+        "z_6": 7,
+        "z_7": 6,
+        "z_8": 10,
+        "z_9": 8,
+        "y_1_O": 2,
+        "y_1_C": 3,
+        "y_2_O": 2,
+        "y_2_C": 4,
+        "y_3_O": 3,
+        "y_3_H": 4,
+        "y_4_O": 2,
+        "y_4_C": 2,
+        "y_5_O": 3,
+        "y_5_C": 3,
+        "y_5_H": 3,
+        "y_6_O": 2,
+        "y_6_H": 5,
+        "y_7_O": 3,
+        "y_7_C": 3,
+        "y_8_O": 2,
+        "y_8_H": 3,
+        "y_9_O": 2,
+        "y_9_H": 4
+      },
+      "sense": "<=",
+      "rhs": 150
+    }
+  ]
+}

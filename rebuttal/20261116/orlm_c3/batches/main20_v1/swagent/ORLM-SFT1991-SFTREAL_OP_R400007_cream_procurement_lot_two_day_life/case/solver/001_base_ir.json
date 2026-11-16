@@ -1,0 +1,1288 @@
+{
+  "variables": [
+    {
+      "id": "q_buy_skim_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 50.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_buy_skim_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 50.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_buy_skim_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 50.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_buy_cream_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_buy_cream_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_buy_cream_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L1_0",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L1_1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L1_2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_lowfat_L1_0",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_lowfat_L1_1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_lowfat_L1_2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L2_0",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L2_1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_whole_L2_2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_rich_L2_0",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_rich_L2_1",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "q_rich_L2_2",
+      "type": "INTEGER",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_skim_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_skim_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_skim_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_cream_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_cream_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_buy_cream_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L1_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L1_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L1_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_lowfat_L1_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_lowfat_L1_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_lowfat_L1_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L2_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L2_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_whole_L2_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_rich_L2_0",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_rich_L2_1",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "o_rich_L2_2",
+      "type": "BINARY",
+      "lb": 0.0,
+      "ub": 1.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_skim_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_skim_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_skim_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_cream_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_cream_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_cream_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_whole_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_whole_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_whole_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_lowfat_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_lowfat_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_lowfat_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_rich_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_rich_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "I_rich_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 100.0,
+      "unit": "1"
+    },
+    {
+      "id": "u_0_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "u_0_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "u_1_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "u_1_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "u_2_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "R_0_0",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "R_1_1",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    },
+    {
+      "id": "R_2_2",
+      "type": "CONTINUOUS",
+      "lb": 0.0,
+      "ub": 20.0,
+      "unit": "1"
+    }
+  ],
+  "objective": {
+    "direction": "min",
+    "terms": {
+      "q_buy_skim_0": 0.8,
+      "q_buy_skim_1": 0.8,
+      "q_buy_skim_2": 0.8,
+      "q_buy_cream_0": 1.5,
+      "q_buy_cream_1": 1.5,
+      "q_buy_cream_2": 1.5,
+      "q_whole_L1_0": 1.0,
+      "q_whole_L1_1": 4.0,
+      "q_whole_L1_2": 5.0,
+      "q_lowfat_L1_0": 1.0,
+      "q_lowfat_L1_1": 4.0,
+      "q_lowfat_L1_2": 5.0,
+      "q_whole_L2_0": 1.2,
+      "q_whole_L2_1": 4.8,
+      "q_whole_L2_2": 6.0,
+      "q_rich_L2_0": 1.5,
+      "q_rich_L2_1": 6.0,
+      "q_rich_L2_2": 7.5,
+      "o_whole_L1_0": 2.0,
+      "o_whole_L1_1": 2.0,
+      "o_whole_L1_2": 2.0,
+      "o_lowfat_L1_0": 2.0,
+      "o_lowfat_L1_1": 2.0,
+      "o_lowfat_L1_2": 2.0,
+      "o_whole_L2_0": 2.0,
+      "o_whole_L2_1": 2.0,
+      "o_whole_L2_2": 2.0,
+      "o_rich_L2_0": 2.0,
+      "o_rich_L2_1": 2.0,
+      "o_rich_L2_2": 2.0,
+      "I_skim_0": 0.08,
+      "I_skim_1": 0.08,
+      "I_skim_2": 0.08,
+      "I_cream_0": 0.08,
+      "I_cream_1": 0.08,
+      "I_cream_2": 0.08,
+      "I_whole_0": 0.08,
+      "I_whole_1": 0.08,
+      "I_whole_2": 0.08,
+      "I_lowfat_0": 0.08,
+      "I_lowfat_1": 0.08,
+      "I_lowfat_2": 0.08,
+      "I_rich_0": 0.08,
+      "I_rich_1": 0.08,
+      "I_rich_2": 0.08
+    },
+    "constant": 0.0,
+    "unit": "objective_units"
+  },
+  "constraints": [
+    {
+      "name": "C001",
+      "terms": {
+        "q_buy_skim_0": 1.0,
+        "o_buy_skim_0": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C001"
+    },
+    {
+      "name": "C002",
+      "terms": {
+        "q_buy_skim_0": 1.0,
+        "o_buy_skim_0": -50.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C002"
+    },
+    {
+      "name": "C003",
+      "terms": {
+        "q_buy_skim_1": 1.0,
+        "o_buy_skim_1": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C003"
+    },
+    {
+      "name": "C004",
+      "terms": {
+        "q_buy_skim_1": 1.0,
+        "o_buy_skim_1": -50.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C004"
+    },
+    {
+      "name": "C005",
+      "terms": {
+        "q_buy_skim_2": 1.0,
+        "o_buy_skim_2": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C005"
+    },
+    {
+      "name": "C006",
+      "terms": {
+        "q_buy_skim_2": 1.0,
+        "o_buy_skim_2": -50.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C006"
+    },
+    {
+      "name": "C007",
+      "terms": {
+        "q_buy_cream_0": 1.0,
+        "o_buy_cream_0": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C007"
+    },
+    {
+      "name": "C008",
+      "terms": {
+        "q_buy_cream_0": 1.0,
+        "o_buy_cream_0": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C008"
+    },
+    {
+      "name": "C009",
+      "terms": {
+        "q_buy_cream_1": 1.0,
+        "o_buy_cream_1": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C009"
+    },
+    {
+      "name": "C010",
+      "terms": {
+        "q_buy_cream_1": 1.0,
+        "o_buy_cream_1": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C010"
+    },
+    {
+      "name": "C011",
+      "terms": {
+        "q_buy_cream_2": 1.0,
+        "o_buy_cream_2": -0.1
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C011"
+    },
+    {
+      "name": "C012",
+      "terms": {
+        "q_buy_cream_2": 1.0,
+        "o_buy_cream_2": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C012"
+    },
+    {
+      "name": "C013",
+      "terms": {
+        "q_whole_L1_0": 1.0,
+        "o_whole_L1_0": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C013"
+    },
+    {
+      "name": "C014",
+      "terms": {
+        "q_whole_L1_0": 1.0,
+        "o_whole_L1_0": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C014"
+    },
+    {
+      "name": "C015",
+      "terms": {
+        "q_whole_L1_1": 1.0,
+        "o_whole_L1_1": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C015"
+    },
+    {
+      "name": "C016",
+      "terms": {
+        "q_whole_L1_1": 1.0,
+        "o_whole_L1_1": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C016"
+    },
+    {
+      "name": "C017",
+      "terms": {
+        "q_whole_L1_2": 1.0,
+        "o_whole_L1_2": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C017"
+    },
+    {
+      "name": "C018",
+      "terms": {
+        "q_whole_L1_2": 1.0,
+        "o_whole_L1_2": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C018"
+    },
+    {
+      "name": "C019",
+      "terms": {
+        "q_lowfat_L1_0": 1.0,
+        "o_lowfat_L1_0": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C019"
+    },
+    {
+      "name": "C020",
+      "terms": {
+        "q_lowfat_L1_0": 1.0,
+        "o_lowfat_L1_0": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C020"
+    },
+    {
+      "name": "C021",
+      "terms": {
+        "q_lowfat_L1_1": 1.0,
+        "o_lowfat_L1_1": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C021"
+    },
+    {
+      "name": "C022",
+      "terms": {
+        "q_lowfat_L1_1": 1.0,
+        "o_lowfat_L1_1": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C022"
+    },
+    {
+      "name": "C023",
+      "terms": {
+        "q_lowfat_L1_2": 1.0,
+        "o_lowfat_L1_2": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C023"
+    },
+    {
+      "name": "C024",
+      "terms": {
+        "q_lowfat_L1_2": 1.0,
+        "o_lowfat_L1_2": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C024"
+    },
+    {
+      "name": "C025",
+      "terms": {
+        "q_whole_L2_0": 1.0,
+        "o_whole_L2_0": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C025"
+    },
+    {
+      "name": "C026",
+      "terms": {
+        "q_whole_L2_0": 1.0,
+        "o_whole_L2_0": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C026"
+    },
+    {
+      "name": "C027",
+      "terms": {
+        "q_whole_L2_1": 1.0,
+        "o_whole_L2_1": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C027"
+    },
+    {
+      "name": "C028",
+      "terms": {
+        "q_whole_L2_1": 1.0,
+        "o_whole_L2_1": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C028"
+    },
+    {
+      "name": "C029",
+      "terms": {
+        "q_whole_L2_2": 1.0,
+        "o_whole_L2_2": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C029"
+    },
+    {
+      "name": "C030",
+      "terms": {
+        "q_whole_L2_2": 1.0,
+        "o_whole_L2_2": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C030"
+    },
+    {
+      "name": "C031",
+      "terms": {
+        "q_rich_L2_0": 1.0,
+        "o_rich_L2_0": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C031"
+    },
+    {
+      "name": "C032",
+      "terms": {
+        "q_rich_L2_0": 1.0,
+        "o_rich_L2_0": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C032"
+    },
+    {
+      "name": "C033",
+      "terms": {
+        "q_rich_L2_1": 1.0,
+        "o_rich_L2_1": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C033"
+    },
+    {
+      "name": "C034",
+      "terms": {
+        "q_rich_L2_1": 1.0,
+        "o_rich_L2_1": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C034"
+    },
+    {
+      "name": "C035",
+      "terms": {
+        "q_rich_L2_2": 1.0,
+        "o_rich_L2_2": -1.0
+      },
+      "sense": ">=",
+      "rhs": 0.0,
+      "source": "C035"
+    },
+    {
+      "name": "C036",
+      "terms": {
+        "q_rich_L2_2": 1.0,
+        "o_rich_L2_2": -20.0
+      },
+      "sense": "<=",
+      "rhs": 0.0,
+      "source": "C036"
+    },
+    {
+      "name": "C037",
+      "terms": {
+        "q_whole_L1_0": 0.7,
+        "o_whole_L1_0": 0.5,
+        "q_lowfat_L1_0": 0.6,
+        "o_lowfat_L1_0": 0.5
+      },
+      "sense": "<=",
+      "rhs": 6.0,
+      "source": "C037"
+    },
+    {
+      "name": "C038",
+      "terms": {
+        "q_whole_L1_1": 0.7,
+        "o_whole_L1_1": 0.5,
+        "q_lowfat_L1_1": 0.6,
+        "o_lowfat_L1_1": 0.5
+      },
+      "sense": "<=",
+      "rhs": 5.0,
+      "source": "C038"
+    },
+    {
+      "name": "C039",
+      "terms": {
+        "q_whole_L1_2": 0.7,
+        "o_whole_L1_2": 0.5,
+        "q_lowfat_L1_2": 0.6,
+        "o_lowfat_L1_2": 0.5
+      },
+      "sense": "<=",
+      "rhs": 6.0,
+      "source": "C039"
+    },
+    {
+      "name": "C040",
+      "terms": {
+        "q_whole_L2_0": 0.6,
+        "o_whole_L2_0": 0.5,
+        "q_rich_L2_0": 0.8,
+        "o_rich_L2_0": 0.5
+      },
+      "sense": "<=",
+      "rhs": 5.0,
+      "source": "C040"
+    },
+    {
+      "name": "C041",
+      "terms": {
+        "q_whole_L2_1": 0.6,
+        "o_whole_L2_1": 0.5,
+        "q_rich_L2_1": 0.8,
+        "o_rich_L2_1": 0.5
+      },
+      "sense": "<=",
+      "rhs": 5.0,
+      "source": "C041"
+    },
+    {
+      "name": "C042",
+      "terms": {
+        "q_whole_L2_2": 0.6,
+        "o_whole_L2_2": 0.5,
+        "q_rich_L2_2": 0.8,
+        "o_rich_L2_2": 0.5
+      },
+      "sense": "<=",
+      "rhs": 5.0,
+      "source": "C042"
+    },
+    {
+      "name": "C043",
+      "terms": {
+        "I_skim_0": 1.0,
+        "q_buy_skim_0": -1.0,
+        "q_whole_L1_0": 0.8,
+        "q_lowfat_L1_0": 0.95,
+        "q_whole_L2_0": 0.8,
+        "q_rich_L2_0": 0.7
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C043"
+    },
+    {
+      "name": "C044",
+      "terms": {
+        "I_skim_1": 1.0,
+        "I_skim_0": -1.0,
+        "q_buy_skim_1": -1.0,
+        "q_whole_L1_1": 0.8,
+        "q_lowfat_L1_1": 0.95,
+        "q_whole_L2_1": 0.8,
+        "q_rich_L2_1": 0.7
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C044"
+    },
+    {
+      "name": "C045",
+      "terms": {
+        "I_skim_2": 1.0,
+        "I_skim_1": -1.0,
+        "q_buy_skim_2": -1.0,
+        "q_whole_L1_2": 0.8,
+        "q_lowfat_L1_2": 0.95,
+        "q_whole_L2_2": 0.8,
+        "q_rich_L2_2": 0.7
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C045"
+    },
+    {
+      "name": "C046",
+      "terms": {
+        "I_cream_0": 1.0,
+        "q_buy_cream_0": -1.0,
+        "q_whole_L1_0": 0.2,
+        "q_lowfat_L1_0": 0.05,
+        "q_whole_L2_0": 0.2,
+        "q_rich_L2_0": 0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C046"
+    },
+    {
+      "name": "C047",
+      "terms": {
+        "I_cream_1": 1.0,
+        "I_cream_0": -1.0,
+        "q_buy_cream_1": -1.0,
+        "q_whole_L1_1": 0.2,
+        "q_lowfat_L1_1": 0.05,
+        "q_whole_L2_1": 0.2,
+        "q_rich_L2_1": 0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C047"
+    },
+    {
+      "name": "C048",
+      "terms": {
+        "I_cream_2": 1.0,
+        "I_cream_1": -1.0,
+        "q_buy_cream_2": -1.0,
+        "q_whole_L1_2": 0.2,
+        "q_lowfat_L1_2": 0.05,
+        "q_whole_L2_2": 0.2,
+        "q_rich_L2_2": 0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C048"
+    },
+    {
+      "name": "C049",
+      "terms": {
+        "I_whole_0": 1.0,
+        "q_whole_L1_0": -1.0,
+        "q_whole_L2_0": -1.0
+      },
+      "sense": "==",
+      "rhs": -4.0,
+      "source": "C049"
+    },
+    {
+      "name": "C050",
+      "terms": {
+        "I_whole_1": 1.0,
+        "I_whole_0": -1.0,
+        "q_whole_L1_1": -1.0,
+        "q_whole_L2_1": -1.0
+      },
+      "sense": "==",
+      "rhs": -5.0,
+      "source": "C050"
+    },
+    {
+      "name": "C051",
+      "terms": {
+        "I_whole_2": 1.0,
+        "I_whole_1": -1.0,
+        "q_whole_L1_2": -1.0,
+        "q_whole_L2_2": -1.0
+      },
+      "sense": "==",
+      "rhs": -4.0,
+      "source": "C051"
+    },
+    {
+      "name": "C052",
+      "terms": {
+        "I_lowfat_0": 1.0,
+        "q_lowfat_L1_0": -1.0
+      },
+      "sense": "==",
+      "rhs": -3.0,
+      "source": "C052"
+    },
+    {
+      "name": "C053",
+      "terms": {
+        "I_lowfat_1": 1.0,
+        "I_lowfat_0": -1.0,
+        "q_lowfat_L1_1": -1.0
+      },
+      "sense": "==",
+      "rhs": -4.0,
+      "source": "C053"
+    },
+    {
+      "name": "C054",
+      "terms": {
+        "I_lowfat_2": 1.0,
+        "I_lowfat_1": -1.0,
+        "q_lowfat_L1_2": -1.0
+      },
+      "sense": "==",
+      "rhs": -4.0,
+      "source": "C054"
+    },
+    {
+      "name": "C055",
+      "terms": {
+        "I_rich_0": 1.0,
+        "q_rich_L2_0": -1.0
+      },
+      "sense": "==",
+      "rhs": -2.0,
+      "source": "C055"
+    },
+    {
+      "name": "C056",
+      "terms": {
+        "I_rich_1": 1.0,
+        "I_rich_0": -1.0,
+        "q_rich_L2_1": -1.0
+      },
+      "sense": "==",
+      "rhs": -3.0,
+      "source": "C056"
+    },
+    {
+      "name": "C057",
+      "terms": {
+        "I_rich_2": 1.0,
+        "I_rich_1": -1.0,
+        "q_rich_L2_2": -1.0
+      },
+      "sense": "==",
+      "rhs": -3.0,
+      "source": "C057"
+    },
+    {
+      "name": "C058",
+      "terms": {
+        "R_0_0": 1.0,
+        "q_buy_cream_0": -1.0,
+        "u_0_0": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C058"
+    },
+    {
+      "name": "C059",
+      "terms": {
+        "u_0_1": 1.0,
+        "R_0_0": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C059"
+    },
+    {
+      "name": "C060",
+      "terms": {
+        "R_1_1": 1.0,
+        "q_buy_cream_1": -1.0,
+        "u_1_1": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C060"
+    },
+    {
+      "name": "C061",
+      "terms": {
+        "u_1_2": 1.0,
+        "R_1_1": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C061"
+    },
+    {
+      "name": "C062",
+      "terms": {
+        "R_2_2": 1.0,
+        "q_buy_cream_2": -1.0,
+        "u_2_2": 1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C062"
+    },
+    {
+      "name": "C063",
+      "terms": {
+        "u_0_0": 1.0,
+        "q_whole_L1_0": -0.2,
+        "q_lowfat_L1_0": -0.05,
+        "q_whole_L2_0": -0.2,
+        "q_rich_L2_0": -0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C063"
+    },
+    {
+      "name": "C064",
+      "terms": {
+        "u_0_1": 1.0,
+        "u_1_1": 1.0,
+        "q_whole_L1_1": -0.2,
+        "q_lowfat_L1_1": -0.05,
+        "q_whole_L2_1": -0.2,
+        "q_rich_L2_1": -0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C064"
+    },
+    {
+      "name": "C065",
+      "terms": {
+        "u_1_2": 1.0,
+        "u_2_2": 1.0,
+        "q_whole_L1_2": -0.2,
+        "q_lowfat_L1_2": -0.05,
+        "q_whole_L2_2": -0.2,
+        "q_rich_L2_2": -0.3
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C065"
+    },
+    {
+      "name": "C066",
+      "terms": {
+        "I_cream_0": 1.0,
+        "R_0_0": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C066"
+    },
+    {
+      "name": "C067",
+      "terms": {
+        "I_cream_1": 1.0,
+        "R_1_1": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C067"
+    },
+    {
+      "name": "C068",
+      "terms": {
+        "I_cream_2": 1.0,
+        "R_2_2": -1.0
+      },
+      "sense": "==",
+      "rhs": 0.0,
+      "source": "C068"
+    }
+  ],
+  "parameters": {},
+  "derivations": [],
+  "contribution_ids": [
+    "direction",
+    "objective",
+    "C001",
+    "C002",
+    "C003",
+    "C004",
+    "C005",
+    "C006",
+    "C007",
+    "C008",
+    "C009",
+    "C010",
+    "C011",
+    "C012",
+    "C013",
+    "C014",
+    "C015",
+    "C016",
+    "C017",
+    "C018",
+    "C019",
+    "C020",
+    "C021",
+    "C022",
+    "C023",
+    "C024",
+    "C025",
+    "C026",
+    "C027",
+    "C028",
+    "C029",
+    "C030",
+    "C031",
+    "C032",
+    "C033",
+    "C034",
+    "C035",
+    "C036",
+    "C037",
+    "C038",
+    "C039",
+    "C040",
+    "C041",
+    "C042",
+    "C043",
+    "C044",
+    "C045",
+    "C046",
+    "C047",
+    "C048",
+    "C049",
+    "C050",
+    "C051",
+    "C052",
+    "C053",
+    "C054",
+    "C055",
+    "C056",
+    "C057",
+    "C058",
+    "C059",
+    "C060",
+    "C061",
+    "C062",
+    "C063",
+    "C064",
+    "C065",
+    "C066",
+    "C067",
+    "C068"
+  ]
+}
