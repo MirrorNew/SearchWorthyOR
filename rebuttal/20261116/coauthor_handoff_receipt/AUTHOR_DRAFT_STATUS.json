@@ -1,0 +1,12 @@
+{
+  "snapshot_time_asia_shanghai": "20261116_190611",
+  "authoritative_chinese": "01_最新中文回复_保留a_改写b.md",
+  "source_file": "rebuttal/20261116/dqz1_followup_complete_ZH.md",
+  "source_sha256": "c1e9b2c66b8d7023e24930192893ad517ca5516da6a79548c0924c32b11fb8be",
+  "section_a_and_opening_sha256_utf8": "bb8ff8f9e8e6d9483c852f24d504ce3a87a2b067cc35c67abe58c6d1fa5e70f2",
+  "instruction": "Preserve the author's (a); coauthor should revise (b)'s wording and evidence presentation. No new experiment or score changes requested.",
+  "english_status": "Reference draft; not synchronized with the author's latest Chinese edits.",
+  "c2_records": 600,
+  "c2_case_directories": 600,
+  "c3_formal_runs": 40
+}

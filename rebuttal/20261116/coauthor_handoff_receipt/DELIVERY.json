@@ -1,0 +1,25 @@
+{
+  "snapshot_time_asia_shanghai": "20261116_190611",
+  "draft_sha256": "c1e9b2c66b8d7023e24930192893ad517ca5516da6a79548c0924c32b11fb8be",
+  "packages": [
+    {
+      "kind": "writing_package",
+      "file": "dqz1_coauthor_writing_package_20261116_190611.zip",
+      "bytes": 68483995,
+      "scientific_files": 10637,
+      "uncompressed_scientific_bytes": 248266560,
+      "sha256": "6fdc2524ad50d90212ca31e16e5d13420cfcbac781141f1484e6e9b5bdb44029",
+      "crc_and_all_file_hashes_verified": true
+    },
+    {
+      "kind": "complete_evidence",
+      "file": "dqz1_coauthor_complete_evidence_20261116_190611.zip",
+      "bytes": 1042318464,
+      "scientific_files": 26100,
+      "uncompressed_scientific_bytes": 4326655845,
+      "sha256": "3e20d477e99e8994ee70c404d57beb67c5a8437e990c6688d34ee4b247494aca",
+      "crc_and_all_file_hashes_verified": true
+    }
+  ],
+  "author_draft_unchanged_at_end": true
+}

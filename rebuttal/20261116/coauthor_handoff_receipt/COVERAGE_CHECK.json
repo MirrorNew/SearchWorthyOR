@@ -1,0 +1,10 @@
+{
+  "pass": true,
+  "latest_front_documents_match_project_and_original": true,
+  "writing_package_is_subset_of_full": true,
+  "c2_required_model_and_result_files": 1299,
+  "c2_records": 600,
+  "c3_final_results": 40,
+  "business_configuration_csvs_preserved": true,
+  "original_chinese_unchanged": true
+}
